@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:37:27.829Z",
+  "latencyMs": 13383,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 5896,
+    "total_tokens": 8096,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5716,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | facing camera, holding apple and blue umbrella | back to camera, walking away, holding umbrella and apple | Turns and walks away",
+    "Man in white shirt | walking left to right | walking away from camera | Passes woman",
+    "Woman in light blue shirt | walking left to right | exits frame right | Passes woman",
+    "Man in blue shirt | walking left to right | exits frame right | Passes woman"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | facing camera, holding apple and blue umbrella | back to camera, walking away, holding umbrella and apple | Turns and walks away\",\n    \"Man in white shirt | walking left to right | walking away from camera | Passes woman\",\n    \"Woman in light blue shirt | walking left to right | exits frame right | Passes woman\",\n    \"Man in blue shirt | walking left to right | exits frame right | Passes woman\"\n  ],\n  \"findings\": []\n}"
+}

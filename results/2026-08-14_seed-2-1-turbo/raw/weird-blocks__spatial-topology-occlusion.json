@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:15:02.506Z",
+  "latencyMs": 6238,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 16420,
+    "total_tokens": 23331,
+    "cost": 0.0445055,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0445055,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.04105
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 16204,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden table | flat light brown tabletop spanning full frame width, top edge at ~14% of frame height | unchanged throughout | fixed static surface, all cubes rest on it",
+    "Background | dark wall with diagonal and vertical chair leg silhouettes visible above table | silhouettes remain in same relative positions | static, consistent with fixed camera viewpoint",
+    "Hand | enters from top-left of frame, manipulating leftmost cube | moves rightward along table adding cubes, then moves left to adjust first two cubes, moves upward out of frame at end | continuous motion, always partially visible at top edge of frame",
+    "Cube row | 2 cubes placed side-by-side on left half of table | 8 cubes in a contiguous row spanning ~85% of table width | grows incrementally with 6 additional cubes added to the right end by the hand; leftmost two cubes are shifted left by the hand in the final seconds"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden table | flat light brown tabletop spanning full frame width, top edge at ~14% of frame height | unchanged throughout | fixed static surface, all cubes rest on it\",\n    \"Background | dark wall with diagonal and vertical chair leg silhouettes visible above table | silhouettes remain in same relative positions | static, consistent with fixed camera viewpoint\",\n    \"Hand | enters from top-left of frame, manipulating leftmost cube | moves rightward along table adding cubes, then moves left to adjust first two cubes, moves upward out of frame at end | continuous motion, always partially visible at top edge of frame\",\n    \"Cube row | 2 cubes placed side-by-side on left half of table | 8 cubes in a contiguous row spanning ~85% of table width | grows incrementally with 6 additional cubes added to the right end by the hand; leftmost two cubes are shifted left by the hand in the final seconds\"\n  ],\n  \"findings\": []\n}"
+}

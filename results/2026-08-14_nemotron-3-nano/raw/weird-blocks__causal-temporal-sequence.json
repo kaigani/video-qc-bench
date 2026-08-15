@@ -1,0 +1,39 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:26:38.601Z",
+  "latencyMs": 1706,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 9145,
+    "total_tokens": 11345,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8250,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | reaching for cubes | adjusting cubes | places cubes sequentially and rearranges them",
+    "cubes | none initially | line of 10 colored cubes (2,2,3,3,2,3,5,2,6,2) arranged in order"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | reaching for cubes | adjusting cubes | places cubes sequentially and rearranges them\",\n    \"cubes | none initially | line of 10 colored cubes (2,2,3,3,2,3,5,2,6,2) arranged in order\"\n  ],\n  \"findings\": []\n}"
+}

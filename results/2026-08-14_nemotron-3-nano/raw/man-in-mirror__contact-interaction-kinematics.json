@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:06:12.024Z",
+  "latencyMs": 2308,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 3385,
+    "total_tokens": 5612,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3419,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | gripping razor, hand near chin | gripping razor, hand near forehead | continuous motion across face",
+    "left hand | gripping comb, hand near ear | gripping comb, hand near forehead/hair | continuous motion across head",
+    "razor | contacting skin at chin | contacting skin at forehead | smooth upward motion",
+    "comb | contacting hair near ear | contacting hair near ear after moving to forehead | continuous motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | gripping razor, hand near chin | gripping razor, hand near forehead | continuous motion across face\",\n    \"left hand | gripping comb, hand near ear | gripping comb, hand near forehead/hair | continuous motion across head\",\n    \"razor | contacting skin at chin | contacting skin at forehead | smooth upward motion\",\n    \"comb | contacting hair near ear | contacting hair near ear after moving to forehead | continuous motion\"\n  ],\n  \"findings\": []\n}"
+}

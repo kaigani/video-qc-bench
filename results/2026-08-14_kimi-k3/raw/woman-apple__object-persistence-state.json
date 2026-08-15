@@ -1,0 +1,45 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:47:07.001Z",
+  "latencyMs": 8051,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 1177,
+    "total_tokens": 25843,
+    "cost": 0.0902706,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0902706,
+      "upstream_inference_prompt_cost": 0.0726156,
+      "upstream_inference_completions_cost": 0.017655
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 882,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | open, held overhead by woman's right hand, blue canopy | open, still held by woman as she walks/turns | no state change; position shifts only because the woman carries it",
+    "red apple | whole, held in woman's right hand at chest level | whole, cupped between her clasped hands near the umbrella shaft (occluded in rear view) | no state change; never bitten or set down; moves only with her hands",
+    "fruit stall crates and produce piles (left side: limes, tomatoes, oranges, teal-colored fruit in blue crate, purple trays) | stacked on stall tables | unchanged | apparent changes are due to camera/woman moving past successive stalls, not object motion",
+    "hanging strings of red produce (tomatoes/peppers) | suspended from stall awnings | unchanged | none",
+    "lit hanging bulbs at stalls | lit, mounted under awnings | lit, same positions | none",
+    "blue tote bag carried by pedestrian in red shirt | in her left hand | in her left hand | none",
+    "dark shoulder bag carried by pedestrian in light-blue shirt | over her shoulder | over her shoulder | none",
+    "cardboard produce boxes | stacked on/under stall tables | unchanged | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | open, held overhead by woman's right hand, blue canopy | open, still held by woman as she walks/turns | no state change; position shifts only because the woman carries it\",\n    \"red apple | whole, held in woman's right hand at chest level | whole, cupped between her clasped hands near the umbrella shaft (occluded in rear view) | no state change; never bitten or set down; moves only with her hands\",\n    \"fruit stall crates and produce piles (left side: limes, tomatoes, oranges, teal-colored fruit in blue crate, purple trays) | stacked on stall tables | unchanged | apparent changes are due to camera/woman moving past successive stalls, not object motion\",\n    \"hanging strings of red produce (tomatoes/peppers) | suspended from stall awnings | unchanged | none\",\n    \"lit hanging bulbs at stalls | lit, mounted under awnings | lit, same positions | none\",\n    \"blue tote bag carried by pedestrian in red shirt | in her left hand | in her left hand | none\",\n    \"dark shoulder bag carried by pedestrian in light-blue shirt | over her shoulder | over her shoulder | none\",\n    \"cardboard produce boxes | stacked on/under stall tables | unchanged | none\"\n  ],\n  \"findings\": []\n}"
+}

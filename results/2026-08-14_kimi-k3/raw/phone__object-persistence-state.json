@@ -1,0 +1,40 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:22:17.652Z",
+  "latencyMs": 6802,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 2531,
+    "total_tokens": 27197,
+    "cost": 0.1105806,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1105806,
+      "upstream_inference_prompt_cost": 0.0726156,
+      "upstream_inference_completions_cost": 0.037965
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2287,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | start: black smartphone held in two hands in foreground, screen on showing teal app with 'A7.42' text | end: tilted and lowered out of the bottom of the frame at ~00:09.1 | transitions: right thumb taps/swipes screen ~00:03.0-00:08.6 causing on-screen content to scroll/shift; phone rotated and moved downward by the hands at ~00:09.1; remains intact, no duplication or vanishing",
+    "red bag (soft bag with yellow logo) | start: carried in left hand of person in blue walking in background | end: carried away as person walks into distance and exits top of frame ~00:03.0 | transitions: swings naturally with walking motion; remains in person's possession; no unexplained disappearance confirmed (brief low-visibility moments consistent with occlusion behind the person)",
+    "staircase, metal railing, plants | start: static built environment | end: unchanged | transitions: none; not manipulable objects"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | start: black smartphone held in two hands in foreground, screen on showing teal app with 'A7.42' text | end: tilted and lowered out of the bottom of the frame at ~00:09.1 | transitions: right thumb taps/swipes screen ~00:03.0-00:08.6 causing on-screen content to scroll/shift; phone rotated and moved downward by the hands at ~00:09.1; remains intact, no duplication or vanishing\",\n    \"red bag (soft bag with yellow logo) | start: carried in left hand of person in blue walking in background | end: carried away as person walks into distance and exits top of frame ~00:03.0 | transitions: swings naturally with walking motion; remains in person's possession; no unexplained disappearance confirmed (brief low-visibility moments consistent with occlusion behind the person)\",\n    \"staircase, metal railing, plants | start: static built environment | end: unchanged | transitions: none; not manipulable objects\"\n  ],\n  \"findings\": []\n}"
+}

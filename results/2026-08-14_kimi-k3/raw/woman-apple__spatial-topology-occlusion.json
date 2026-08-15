@@ -1,0 +1,47 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:59:10.985Z",
+  "latencyMs": 7573,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 8430,
+    "total_tokens": 33082,
+    "cost": 0.1990236,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1990236,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.12645
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7873,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Market street corridor | stalls line both sides of a straight pedestrian street receding to a distant vanishing point with red vendor umbrellas | layout unchanged at end | camera travels down-corridor, confirming a single consistent street axis",
+    "Left-row stalls (stall side) | red awnings, hanging Edison bulbs, hanging tomato/pepper strings; up-street produce: green apples in dark crates, boxed tomatoes | down-street section revealed: oranges in red crate, teal produce in blue crate, purple trays, limes in white boxes, packaged-goods tables | produce sequence appears in strict forward-travel order with no reordering or mirroring; hanging bulbs/strings stay on this row throughout",
+    "Right-row stalls | red awnings, blue crate of green produce, boxed apples in up-street section | down-street section: purple trays with oranges, greens, white boxes of apples/tomatoes | consistent forward progression; always opposite the left row across the street",
+    "Subject (woman, blue umbrella, red apple) | walking down-street toward camera position, left-row stalls on her left | continues down-street away from camera, same side of street | continuous walk; no teleportation or side-swapping relative to stalls",
+    "Camera path | starts ahead of subject facing her (front view) | orbits to her right side (profile, down-street = frame right) then settles behind her (back view) | orbit direction is geometrically coherent: left-row stalls transition frame-left foreground → background across frame → frame-left again; down-street pedestrians appear frame-right in profile phase as required",
+    "Light-blue-shirt pedestrian | enters left foreground, browses left stall, turns, walks down-street ahead of subject | seen from behind further down-street | trajectory continuous and physically plausible",
+    "White-shirt man | enters left foreground near camera, walks down-street along stall front | ahead of subject, seen from behind in right background | consistent overtake-and-recede motion",
+    "Blue-t-shirt man | enters left foreground mid-sequence | ahead of subject walking away down-street | plausible faster same-direction walker",
+    "Glasses man (light blue polo) | standing at left-row packaged-goods stall | crosses behind subject toward right row as she passes | fast but physically possible crossing; not flagged",
+    "Occlusion ordering | foreground passersby and umbrella canopy correctly occlude subject/stalls; stalls occlude street background; no background-over-foreground inversions observed | same ordering maintained at end | occlusion edges track motion smoothly"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Market street corridor | stalls line both sides of a straight pedestrian street receding to a distant vanishing point with red vendor umbrellas | layout unchanged at end | camera travels down-corridor, confirming a single consistent street axis\",\n    \"Left-row stalls (stall side) | red awnings, hanging Edison bulbs, hanging tomato/pepper strings; up-street produce: green apples in dark crates, boxed tomatoes | down-street section revealed: oranges in red crate, teal produce in blue crate, purple trays, limes in white boxes, packaged-goods tables | produce sequence appears in strict forward-travel order with no reordering or mirroring; hanging bulbs/strings stay on this row throughout\",\n    \"Right-row stalls | red awnings, blue crate of green produce, boxed apples in up-street section | down-street section: purple trays with oranges, greens, white boxes of apples/tomatoes | consistent forward progression; always opposite the left row across the street\",\n    \"Subject (woman, blue umbrella, red apple) | walking down-street toward camera position, left-row stalls on her left | continues down-street away from camera, same side of street | continuous walk; no teleportation or side-swapping relative to stalls\",\n    \"Camera path | starts ahead of subject facing her (front view) | orbits to her right side (profile, down-street = frame right) then settles behind her (back view) | orbit direction is geometrically coherent: left-row stalls transition frame-left foreground → background across frame → frame-left again; down-street pedestrians appear frame-right in profile phase as required\",\n    \"Light-blue-shirt pedestrian | enters left foreground, browses left stall, turns, walks down-street ahead of subject | seen from behind further down-street | trajectory continuous and physically plausible\",\n    \"White-shirt man | enters left foreground near camera, walks down-street along stall front | ahead of subject, seen from behind in right background | consistent overtake-and-recede motion\",\n    \"Blue-t-shirt man | enters left foreground mid-sequence | ahead of subject walking away down-street | plausible faster same-direction walker\",\n    \"Glasses man (light blue polo) | standing at left-row packaged-goods stall | crosses behind subject toward right row as she passes | fast but physically possible crossing; not flagged\",\n    \"Occlusion ordering | foreground passersby and umbrella canopy correctly occlude subject/stalls; stalls occlude street background; no background-over-foreground inversions observed | same ordering maintained at end | occlusion edges track motion smoothly\"\n  ],\n  \"findings\": []\n}"
+}

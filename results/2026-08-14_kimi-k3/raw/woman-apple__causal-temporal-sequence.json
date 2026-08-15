@@ -1,0 +1,45 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:56:29.700Z",
+  "latencyMs": 11739,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 2874,
+    "total_tokens": 27522,
+    "cost": 0.1156716,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1156716,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.04311
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2365,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (subject) | walking toward camera in market aisle, holding blue umbrella overhead and red apple at chest, smiling | walking away from camera, umbrella still held overhead, apple in hand | continuous forward walking 00:00:00–00:00:09.6; head turns toward left stalls ~00:00:04.5–00:00:05.5; camera orbits smoothly around her, transitioning view front → side → back",
+    "blue umbrella | held open above subject's head | still held open above her head | moves only with the subject's grip and body motion; no uncased displacement or tilt",
+    "red apple | held in subject's left hand at chest | still held in her hands | no independent motion; occlusion by her own hands in later frames is consistent with her turning",
+    "pedestrian woman (light blue shirt, black bag) | off-screen left | walking away down aisle in background | enters frame left ~00:00:00.5, passes in front of subject ~00:00:02.0, continues into background right by ~00:00:04.5 — one continuous walk, plausible speed",
+    "pedestrian man (white shirt, glasses) | off-screen left | walking away in background past stalls | enters ~00:00:02.5, passes close beside subject ~00:00:03.5–00:00:04.5, recedes into background by ~00:00:06.0 — continuous trajectory",
+    "pedestrian man (blue t-shirt) | off-screen left | walking away in background right | enters ~00:00:05.5, passes behind subject ~00:00:06.5–00:00:08.0 — continuous trajectory",
+    "background pedestrians (woman in red with blue bag, man in green shirt/sunglasses, man in light blue with glasses, woman in purple) | mid-background walking toward/along aisle | progressed along aisle or passed behind subject | all approach/pass at steady walking speeds consistent with parallax from the orbiting camera; no teleporting or frozen figures",
+    "market stalls, produce, hanging bulbs | stocked tables, bulbs lit | unchanged | static throughout; no object moves without an agent, lighting constant with no uncased change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (subject) | walking toward camera in market aisle, holding blue umbrella overhead and red apple at chest, smiling | walking away from camera, umbrella still held overhead, apple in hand | continuous forward walking 00:00:00–00:00:09.6; head turns toward left stalls ~00:00:04.5–00:00:05.5; camera orbits smoothly around her, transitioning view front → side → back\",\n    \"blue umbrella | held open above subject's head | still held open above her head | moves only with the subject's grip and body motion; no uncased displacement or tilt\",\n    \"red apple | held in subject's left hand at chest | still held in her hands | no independent motion; occlusion by her own hands in later frames is consistent with her turning\",\n    \"pedestrian woman (light blue shirt, black bag) | off-screen left | walking away down aisle in background | enters frame left ~00:00:00.5, passes in front of subject ~00:00:02.0, continues into background right by ~00:00:04.5 — one continuous walk, plausible speed\",\n    \"pedestrian man (white shirt, glasses) | off-screen left | walking away in background past stalls | enters ~00:00:02.5, passes close beside subject ~00:00:03.5–00:00:04.5, recedes into background by ~00:00:06.0 — continuous trajectory\",\n    \"pedestrian man (blue t-shirt) | off-screen left | walking away in background right | enters ~00:00:05.5, passes behind subject ~00:00:06.5–00:00:08.0 — continuous trajectory\",\n    \"background pedestrians (woman in red with blue bag, man in green shirt/sunglasses, man in light blue with glasses, woman in purple) | mid-background walking toward/along aisle | progressed along aisle or passed behind subject | all approach/pass at steady walking speeds consistent with parallax from the orbiting camera; no teleporting or frozen figures\",\n    \"market stalls, produce, hanging bulbs | stocked tables, bulbs lit | unchanged | static throughout; no object moves without an agent, lighting constant with no uncased change\"\n  ],\n  \"findings\": []\n}"
+}

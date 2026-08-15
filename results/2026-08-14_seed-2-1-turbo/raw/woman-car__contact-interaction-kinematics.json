@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:18:44.047Z",
+  "latencyMs": 6845,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 2504,
+    "total_tokens": 9434,
+    "cost": 0.009725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009725,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.00626
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2365,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning out of car window, arms crossed resting on car exterior, hair static | leaning out of car window, arms crossed resting on car exterior, hair blown back by wind | full contact with car maintained across all frames; no limb position shift",
+    "station wagon | stationary on paved desert road, front facing viewer's left | stationary on paved desert road, driver side facing viewer | all tires in contact with ground throughout; no object clipping",
+    "desert road surface | supports station wagon weight | supports station wagon weight | continuous contact with car tires"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning out of car window, arms crossed resting on car exterior, hair static | leaning out of car window, arms crossed resting on car exterior, hair blown back by wind | full contact with car maintained across all frames; no limb position shift\",\n    \"station wagon | stationary on paved desert road, front facing viewer's left | stationary on paved desert road, driver side facing viewer | all tires in contact with ground throughout; no object clipping\",\n    \"desert road surface | supports station wagon weight | supports station wagon weight | continuous contact with car tires\"\n  ],\n  \"findings\": []\n}"
+}

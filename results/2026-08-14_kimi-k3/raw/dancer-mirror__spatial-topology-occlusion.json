@@ -1,0 +1,45 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:00:45.762Z",
+  "latencyMs": 5123,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 2087,
+    "total_tokens": 26739,
+    "cost": 0.1038786,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1038786,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.031305
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1770,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer (woman, black athletic wear) | starts center-left of frame facing mirror, back to camera, arms low | ends same region, right arm raised overhead in curved position | continuous slow port de bras, weight shifts, small steps; reflection in mirror mirrors every movement with correct left/right correspondence and timing",
+    "mirror wall | spans front wall of studio from just right of door to frame right edge | unchanged | consistently reflects dancer, far wall, barres, poster, bin, ceiling lights, and the side door at a plausible oblique angle",
+    "black door with vertical window + green EXIT sign | on left wall, immediately left of mirror edge | unchanged | also visible as a reflection inside the mirror at geometrically consistent depth; view through window (parked cars outside) stable",
+    "ballet barres (double, wall-mounted) | visible only in mirror reflection along reflected far wall | unchanged | static throughout, correct perspective",
+    "framed poster | reflected on far wall, right portion of mirror | unchanged | static",
+    "blue storage bin | reflected in mirror, corner of far wall | unchanged | static",
+    "ceiling light panels | reflected grid of rectangular fixtures in mirror | unchanged | static, consistent spacing",
+    "camera | fixed wide shot from behind dancer, slightly left of her axis | unchanged | no cuts, pans, or zooms across entire clip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer (woman, black athletic wear) | starts center-left of frame facing mirror, back to camera, arms low | ends same region, right arm raised overhead in curved position | continuous slow port de bras, weight shifts, small steps; reflection in mirror mirrors every movement with correct left/right correspondence and timing\",\n    \"mirror wall | spans front wall of studio from just right of door to frame right edge | unchanged | consistently reflects dancer, far wall, barres, poster, bin, ceiling lights, and the side door at a plausible oblique angle\",\n    \"black door with vertical window + green EXIT sign | on left wall, immediately left of mirror edge | unchanged | also visible as a reflection inside the mirror at geometrically consistent depth; view through window (parked cars outside) stable\",\n    \"ballet barres (double, wall-mounted) | visible only in mirror reflection along reflected far wall | unchanged | static throughout, correct perspective\",\n    \"framed poster | reflected on far wall, right portion of mirror | unchanged | static\",\n    \"blue storage bin | reflected in mirror, corner of far wall | unchanged | static\",\n    \"ceiling light panels | reflected grid of rectangular fixtures in mirror | unchanged | static, consistent spacing\",\n    \"camera | fixed wide shot from behind dancer, slightly left of her axis | unchanged | no cuts, pans, or zooms across entire clip\"\n  ],\n  \"findings\": []\n}"
+}

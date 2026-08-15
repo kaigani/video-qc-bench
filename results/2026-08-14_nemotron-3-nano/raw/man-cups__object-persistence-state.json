@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:02:02.665Z",
+  "latencyMs": 3046,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 11651,
+    "total_tokens": 13871,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11197,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cup L | empty on table, upright | contains coin(s), position moved during shuffle",
+    "Cup M | contains coin(s) initially, upright | contains additional coin, position moved during shuffle",
+    "Cup R | empty on table, upright | contains coin, position moved during shuffle",
+    "Coin A | held in hand, not on surface | inside Cup M, upright (placed)",
+    "Coin B | held in hand, not on surface | inside Cup L, upright (placed)",
+    "Coin C | held in hand, not on surface | inside Cup R, upright (placed)",
+    "Coin D | on table, then inside Cup L (placed)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Cup L | empty on table, upright | contains coin(s), position moved during shuffle\",\n    \"Cup M | contains coin(s) initially, upright | contains additional coin, position moved during shuffle\",\n    \"Cup R | empty on table, upright | contains coin, position moved during shuffle\",\n    \"Coin A | held in hand, not on surface | inside Cup M, upright (placed)\",\n    \"Coin B | held in hand, not on surface | inside Cup L, upright (placed)\",\n    \"Coin C | held in hand, not on surface | inside Cup R, upright (placed)\",\n    \"Coin D | on table, then inside Cup L (placed)\"\n  ],\n  \"findings\": []\n}"
+}

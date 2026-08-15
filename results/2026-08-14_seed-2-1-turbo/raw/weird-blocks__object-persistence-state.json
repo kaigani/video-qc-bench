@@ -1,0 +1,94 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:14:23.151Z",
+  "latencyMs": 6508,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 16965,
+    "total_tokens": 23891,
+    "cost": 0.0458755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0458755,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.0424125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 15660,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Original left number cube | green, front '2', metal nut on top, on left table | becomes dark blue '3' cube (position 2) | duplicated at ~1.3s, leaving a dark blue '2' copy in its original position",
+    "Original right number cube | green, front '2', metal nut on top, on right table | becomes dark blue '6' cube (rightmost) | duplicated 5 times between 3.3s and 7.3s; each time it is moved right, a copy of its prior state is left in place",
+    "Dark blue '2' number cube | not present at start | position 1 (leftmost), dark blue, front '2', nut on top | appears at ~1.3s as an unexplained duplicate",
+    "Green '2' (position 3) number cube | not present at start | position 3, green, front '2', nut on top | appears at ~3.3s as an unexplained duplicate",
+    "Orange '2' number cube | not present at start | position 4, orange, front '2', nut on top | appears at ~4.7s as an unexplained duplicate",
+    "Light blue '3' number cube | not present at start | position 5, light blue, front '3', nut on top | appears at ~5.3s as an unexplained duplicate",
+    "Green '5' number cube | not present at start | position 6, green, front '5', nut on top | appears at ~6.0s as an unexplained duplicate",
+    "Green '2' (position 7) number cube | not present at start | position 7, green, front '2', nut on top | appears at ~7.3s as an unexplained duplicate"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "original left number cube / dark blue '2' cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Initial count of number cubes is 2. After the hand moves the original left green cube, 3 cubes are visible. A new dark blue '2' cube appears in the original left position, while the moved cube is now a dark blue '3' cube. One cube was duplicated into two with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "original right number cube / green '2' (position 3) cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Total cube count was 3 before the hand picked up the rightmost green '2' cube. After moving it right, total count is 4: a new green '2' cube remains in the original rightmost position, while the hand holds the original cube (now showing green '3'). Duplication with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "original right number cube / orange '2' cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Total cube count was 4 before the hand picked up the rightmost green '3' cube. After moving it right, total count is 5: a new orange '2' cube remains in the original rightmost position, while the hand holds the original cube (now showing light blue '3'). Duplication with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "original right number cube / light blue '3' cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Total cube count was 5 before the hand picked up the rightmost light blue '3' cube. After moving it right, total count is 6: a new light blue '3' cube remains in the original rightmost position, while the hand holds the original cube (now showing dark blue '3'). Duplication with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "original right number cube / green '5' cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Total cube count was 6 before the hand picked up the rightmost dark blue '3' cube. After moving it right, total count is 7: a new green '5' cube remains in the original rightmost position, while the hand holds the original cube (now showing green '3'). Duplication with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "original right number cube / green '2' (position 7) cube",
+      "invariant_violated": "identity & persistence (object duplication)",
+      "description": "Total cube count was 7 before the hand picked up the rightmost green '3' cube. After moving it right, total count is 8: a new green '2' cube remains in the original rightmost position, while the hand holds the original cube (later rotated to dark blue '6'). Duplication with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Original left number cube | green, front '2', metal nut on top, on left table | becomes dark blue '3' cube (position 2) | duplicated at ~1.3s, leaving a dark blue '2' copy in its original position\",\n    \"Original right number cube | green, front '2', metal nut on top, on right table | becomes dark blue '6' cube (rightmost) | duplicated 5 times between 3.3s and 7.3s; each time it is moved right, a copy of its prior state is left in place\",\n    \"Dark blue '2' number cube | not present at start | position 1 (leftmost), dark blue, front '2', nut on top | appears at ~1.3s as an unexplained duplicate\",\n    \"Green '2' (position 3) number cube | not present at start | position 3, green, front '2', nut on top | appears at ~3.3s as an unexplained duplicate\",\n    \"Orange '2' number cube | not present at start | position 4, orange, front '2', nut on top | appears at ~4.7s as an unexplained duplicate\",\n    \"Light blue '3' number cube | not present at start | position 5, light blue, front '3', nut on top | appears at ~5.3s as an unexplained duplicate\",\n    \"Green '5' number cube | not present at start | position 6, green, front '5', nut on top | appears at ~6.0s as an unexplained duplicate\",\n    \"Green '2' (position 7) number cube | not present at start | position 7, green, front '2', nut on top | appears at ~7.3s as an unexplained duplicate\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"original left number cube / dark blue '2' cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Initial count of number cubes is 2. After the hand moves the original left green cube, 3 cubes are visible. A new dark blue '2' cube appears in the original left position, while the moved cube is now a dark blue '3' cube. One cube was duplicated into two with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"original right number cube / green '2' (position 3) cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Total cube count was 3 before the hand picked up the rightmost green '2' cube. After moving it right, total count is 4: a new green '2' cube remains in the original rightmost position, while the hand holds the original cube (now showing green '3'). Duplication with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"original right number cube / orange '2' cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Total cube count was 4 before the hand picked up the rightmost green '3' cube. After moving it right, total count is 5: a new orange '2' cube remains in the original rightmost position, while the hand holds the original cube (now showing light blue '3'). Duplication with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"original right number cube / light blue '3' cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Total cube count was 5 before the hand picked up the rightmost light blue '3' cube. After moving it right, total count is 6: a new light blue '3' cube remains in the original rightmost position, while the hand holds the original cube (now showing dark blue '3'). Duplication with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"original right number cube / green '5' cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Total cube count was 6 before the hand picked up the rightmost dark blue '3' cube. After moving it right, total count is 7: a new green '5' cube remains in the original rightmost position, while the hand holds the original cube (now showing green '3'). Duplication with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"original right number cube / green '2' (position 7) cube\",\n      \"invariant_violated\": \"identity & persistence (object duplication)\",\n      \"description\": \"Total cube count was 7 before the hand picked up the rightmost green '3' cube. After moving it right, total count is 8: a new green '2' cube remains in the original rightmost position, while the hand holds the original cube (later rotated to dark blue '6'). Duplication with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

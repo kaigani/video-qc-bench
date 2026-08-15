@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:36.118Z",
+  "latencyMs": 7184,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 482,
+    "total_tokens": 1908,
+    "cost": 0.0014385,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0014385,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.00090375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 366,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table | wooden surface occupying foreground and midground | unchanged throughout | static support surface",
+    "background wall/chairs | dark blurred interior background | unchanged throughout | static background",
+    "numbered cubes | placed sequentially in a horizontal line left-to-right | 8 aligned cubes | placed one by one by hand",
+    "hand | moves from left to right placing cubes | reaches right side and returns to adjust | maintains consistent depth in front of table"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"table | wooden surface occupying foreground and midground | unchanged throughout | static support surface\",\n    \"background wall/chairs | dark blurred interior background | unchanged throughout | static background\",\n    \"numbered cubes | placed sequentially in a horizontal line left-to-right | 8 aligned cubes | placed one by one by hand\",\n    \"hand | moves from left to right placing cubes | reaches right side and returns to adjust | maintains consistent depth in front of table\"\n  ],\n  \"findings\": []\n}"
+}

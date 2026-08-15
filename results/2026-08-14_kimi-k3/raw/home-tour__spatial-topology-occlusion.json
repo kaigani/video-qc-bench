@@ -1,0 +1,44 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:18:42.358Z",
+  "latencyMs": 5262,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 9251,
+    "total_tokens": 33903,
+    "cost": 0.1494411,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23437,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1494411,
+      "upstream_inference_prompt_cost": 0.0106761,
+      "upstream_inference_completions_cost": 0.138765
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8685,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (moving) | starts in kitchen 1, profile facing the hallway opening | ends in kitchen 2 walking toward its far door | single continuous path: kitchen 1 → hallway 1 → right turn into bedroom → around foot of bed → exit to hallway 2 → kitchen 2; consistently occludes door jambs, furniture, and fixtures she passes",
+    "Kitchen 1 (start) | light oak cabinets w/ black knobs, brick-tile backsplash, countertop microwave on right run, white range + stainless hood + red mixer/kettle on left run, window over sink, dark counters | unchanged when last seen | galley corridor terminates in a cased opening into hallway 1; brick backsplash ends at that opening",
+    "Hallway 1 | gray walls; right wall carries large floral print, small gold frame, dark-framed pictures; left side is open kitchen run; white multi-lite glass door at far end; flush ceiling light | consistent every time visible | connects kitchen 1 to bedroom entry (right wall, just before the end door); view of it through kitchen opening at 00:00 matches later interior views",
+    "Bedroom | bed against far wall w/ nightstand + lit lamp and framed art above, chandelier, bench at foot, dresser, windows w/ beige curtains on two walls, small table w/ framed photos + striped art beside exit | consistent throughout | two openings: entry from hallway 1 (she enters, bed ahead-left, window wall right) and exit to hallway 2 (she rounds the foot of the bed, bed on her right, windows on her left, exits ahead) — geometry of the circuit around the bed is coherent",
+    "Hallway 2 | reached via bedroom exit; side door w/ lever handle on right, framed print on end wall, glass-panel door at far end, semi-flush ceiling fixture | consistent | kitchen 2 opens on its left side; view through bedroom exit at 00:07 matches what is found when she arrives",
+    "Kitchen 2 (end) | dark wood cabinets w/ open upper cubbies, stainless microwave mounted over gas range, brown counters, white bowl, window w/ peach curtain on right wall | end state | visually a distinct room from kitchen 1 (different cabinetry, microwave placement, no brick); no view asserts it is the same room, so the difference is not a contradiction",
+    "Floral portrait print | hangs on hallway 1 right wall | a second instance hangs inside the bedroom beside the exit opening | duplicate decor in two separate locations — plausible, not a layout change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (moving) | starts in kitchen 1, profile facing the hallway opening | ends in kitchen 2 walking toward its far door | single continuous path: kitchen 1 → hallway 1 → right turn into bedroom → around foot of bed → exit to hallway 2 → kitchen 2; consistently occludes door jambs, furniture, and fixtures she passes\",\n    \"Kitchen 1 (start) | light oak cabinets w/ black knobs, brick-tile backsplash, countertop microwave on right run, white range + stainless hood + red mixer/kettle on left run, window over sink, dark counters | unchanged when last seen | galley corridor terminates in a cased opening into hallway 1; brick backsplash ends at that opening\",\n    \"Hallway 1 | gray walls; right wall carries large floral print, small gold frame, dark-framed pictures; left side is open kitchen run; white multi-lite glass door at far end; flush ceiling light | consistent every time visible | connects kitchen 1 to bedroom entry (right wall, just before the end door); view of it through kitchen opening at 00:00 matches later interior views\",\n    \"Bedroom | bed against far wall w/ nightstand + lit lamp and framed art above, chandelier, bench at foot, dresser, windows w/ beige curtains on two walls, small table w/ framed photos + striped art beside exit | consistent throughout | two openings: entry from hallway 1 (she enters, bed ahead-left, window wall right) and exit to hallway 2 (she rounds the foot of the bed, bed on her right, windows on her left, exits ahead) — geometry of the circuit around the bed is coherent\",\n    \"Hallway 2 | reached via bedroom exit; side door w/ lever handle on right, framed print on end wall, glass-panel door at far end, semi-flush ceiling fixture | consistent | kitchen 2 opens on its left side; view through bedroom exit at 00:07 matches what is found when she arrives\",\n    \"Kitchen 2 (end) | dark wood cabinets w/ open upper cubbies, stainless microwave mounted over gas range, brown counters, white bowl, window w/ peach curtain on right wall | end state | visually a distinct room from kitchen 1 (different cabinetry, microwave placement, no brick); no view asserts it is the same room, so the difference is not a contradiction\",\n    \"Floral portrait print | hangs on hallway 1 right wall | a second instance hangs inside the bedroom beside the exit opening | duplicate decor in two separate locations — plausible, not a layout change\"\n  ],\n  \"findings\": []\n}"
+}

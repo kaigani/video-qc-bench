@@ -1,0 +1,64 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:26.979Z",
+  "latencyMs": 4269,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1123,
+    "total_tokens": 2361,
+    "cost": 0.002569875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002569875,
+      "upstream_inference_prompt_cost": 0.00046425,
+      "upstream_inference_completions_cost": 0.002105625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 773,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | human hand manipulating blocks | human hand adjusting blocks | moves across frame from left to right",
+    "number blocks | row of modular toy number blocks | row of seven number blocks | blocks duplicate and change numbers dynamically"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "green number block on the left",
+      "invariant_violated": "object_rigidity",
+      "description": "The green block unnaturally deforms and squishes elastically at the base like rubber instead of maintaining rigid toy block geometry.",
+      "severity": "minor",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "third green number block",
+      "invariant_violated": "surface_texture_constancy",
+      "description": "The green block with numeral '3' mutates its printed number into '2' as another block is pulled out from it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "rightmost blue number block",
+      "invariant_violated": "surface_texture_constancy",
+      "description": "The rightmost blue block with numeral '3' spontaneously mutates its printed number to '6'.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | human hand manipulating blocks | human hand adjusting blocks | moves across frame from left to right\",\n    \"number blocks | row of modular toy number blocks | row of seven number blocks | blocks duplicate and change numbers dynamically\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"green number block on the left\",\n      \"invariant_violated\": \"object_rigidity\",\n      \"description\": \"The green block unnaturally deforms and squishes elastically at the base like rubber instead of maintaining rigid toy block geometry.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"third green number block\",\n      \"invariant_violated\": \"surface_texture_constancy\",\n      \"description\": \"The green block with numeral '3' mutates its printed number into '2' as another block is pulled out from it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"rightmost blue number block\",\n      \"invariant_violated\": \"surface_texture_constancy\",\n      \"description\": \"The rightmost blue block with numeral '3' spontaneously mutates its printed number to '6'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

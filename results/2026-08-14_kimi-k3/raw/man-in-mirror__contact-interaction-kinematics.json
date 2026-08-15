@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:18:39.868Z",
+  "latencyMs": 5428,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 1703,
+    "total_tokens": 26368,
+    "cost": 0.0981576,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0981576,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.025545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1475,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing facing bathroom mirror, tool in right hand at chin | standing, tool in right hand at cheek/upper-lip area | continuous grooming strokes; right hand only; no steps or support shifts",
+    "razor/trimmer | gripped in right hand, blade at chin/upper lip | gripped in right hand, blade at cheek | contact sequence: chin/lip (00:00-00:01.5) → right temple/hairline (00:02.0-00:04.0) → nose/cheek (00:04.5) → chin/jaw (00:05.0-00:09.6); grip maintained, never released",
+    "right hand | pinched grip on tool handle | same grip | fingers stay wrapped on tool through all strokes; no handedness change",
+    "mirror | no physical contact | no physical contact | reflection tracks hand/tool position with plausible mirrored geometry throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing facing bathroom mirror, tool in right hand at chin | standing, tool in right hand at cheek/upper-lip area | continuous grooming strokes; right hand only; no steps or support shifts\",\n    \"razor/trimmer | gripped in right hand, blade at chin/upper lip | gripped in right hand, blade at cheek | contact sequence: chin/lip (00:00-00:01.5) → right temple/hairline (00:02.0-00:04.0) → nose/cheek (00:04.5) → chin/jaw (00:05.0-00:09.6); grip maintained, never released\",\n    \"right hand | pinched grip on tool handle | same grip | fingers stay wrapped on tool through all strokes; no handedness change\",\n    \"mirror | no physical contact | no physical contact | reflection tracks hand/tool position with plausible mirrored geometry throughout\"\n  ],\n  \"findings\": []\n}"
+}

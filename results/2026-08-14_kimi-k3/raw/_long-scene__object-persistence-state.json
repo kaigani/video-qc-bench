@@ -1,0 +1,67 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T07:28:59.005Z",
+  "latencyMs": 20755,
+  "usage": {
+    "prompt_tokens": 42724,
+    "completion_tokens": 7116,
+    "total_tokens": 49840,
+    "cost": 0.1225434,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 41618,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1225434,
+      "upstream_inference_prompt_cost": 0.0158034,
+      "upstream_inference_completions_cost": 0.10674
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6327,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white-cab semi truck with white box trailer | parked left of diner at night, cab facing right, intact | last seen 00:09 still parked in same spot | none; replaced in later daylight scenes by a different truck",
+    "dark green Freightliner semi with dark green trailer (silver stripe) | first visible 01:41 parked outside window in daylight | man walks to it and climbs into cab | appears with no arrival shown; mismatches the white truck established at the diner",
+    "red neon OPEN sign | lit, front window | lit in every subsequent interior/exterior view, day and night | none",
+    "white ceramic mug (customer) | empty on counter | filled with black coffee 00:27-00:31 via visible pour from carafe; later left on counter next to cash | empty->full explained by pour",
+    "glass coffee carafe | approx half full of black coffee, held by waitress | approx same level after one-mug pour | tilted to pour (explained action); level change negligible",
+    "gray wiping rag | waitress's hand, counter surface | carried and moved along counters/pass shelf throughout | position changes all caused by her wiping",
+    "plate with fried eggs and toast | first visible 00:31 as a steaming close-up on the counter; no one is shown placing it | sits in front of customer 00:36-00:43; a second, similar plate is visibly served by the waitress at 01:08 | initial appearance lacks a visible placement action",
+    "fork and knife | beside plate on counter | unchanged | none",
+    "condiment caddy (salt, pepper, sugar dispenser, ketchup/mustard bottles) | on counter and windowsill | unchanged | none",
+    "small stack of US bills (top note $100) | absent | placed on counter beside mug by customer's hands at 01:37-01:39 and left there | appearance explained by visible action",
+    "counter stools (row) | fixed along counter | unchanged | none",
+    "stacked white plates at kitchen pass | two stacks on shelf | unchanged | none",
+    "espresso/coffee machine, napkin dispensers, wall clock, microwaves, menu boards | fixed positions | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "parked semi truck",
+      "invariant_violated": "identity persistence",
+      "description": "The truck established outside the diner in the night sequence (00:00-00:09) has a white cab and white box trailer. When the customer leaves and walks to his truck in daylight, it is a dark green Freightliner cab with a dark green trailer. No action (repaint, swap, departure/arrival of a different rig) accounts for the change, and the narrative implies it is the same vehicle the trucker arrived in.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:31",
+      "entity": "plate with eggs and toast",
+      "invariant_violated": "unexplained appearance (count/state)",
+      "description": "The plate of eggs and toast materializes on the counter with no visible serving action: at 00:26 the counter holds only the mug and rag, and at 00:31 the finished, steaming plate is present. The only on-screen food service occurs later (01:08), when the waitress visibly places a similar plate, meaning the dish effectively exists before it is ever served.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white-cab semi truck with white box trailer | parked left of diner at night, cab facing right, intact | last seen 00:09 still parked in same spot | none; replaced in later daylight scenes by a different truck\",\n    \"dark green Freightliner semi with dark green trailer (silver stripe) | first visible 01:41 parked outside window in daylight | man walks to it and climbs into cab | appears with no arrival shown; mismatches the white truck established at the diner\",\n    \"red neon OPEN sign | lit, front window | lit in every subsequent interior/exterior view, day and night | none\",\n    \"white ceramic mug (customer) | empty on counter | filled with black coffee 00:27-00:31 via visible pour from carafe; later left on counter next to cash | empty->full explained by pour\",\n    \"glass coffee carafe | approx half full of black coffee, held by waitress | approx same level after one-mug pour | tilted to pour (explained action); level change negligible\",\n    \"gray wiping rag | waitress's hand, counter surface | carried and moved along counters/pass shelf throughout | position changes all caused by her wiping\",\n    \"plate with fried eggs and toast | first visible 00:31 as a steaming close-up on the counter; no one is shown placing it | sits in front of customer 00:36-00:43; a second, similar plate is visibly served by the waitress at 01:08 | initial appearance lacks a visible placement action\",\n    \"fork and knife | beside plate on counter | unchanged | none\",\n    \"condiment caddy (salt, pepper, sugar dispenser, ketchup/mustard bottles) | on counter and windowsill | unchanged | none\",\n    \"small stack of US bills (top note $100) | absent | placed on counter beside mug by customer's hands at 01:37-01:39 and left there | appearance explained by visible action\",\n    \"counter stools (row) | fixed along counter | unchanged | none\",\n    \"stacked white plates at kitchen pass | two stacks on shelf | unchanged | none\",\n    \"espresso/coffee machine, napkin dispensers, wall clock, microwaves, menu boards | fixed positions | unchanged | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"parked semi truck\",\n      \"invariant_violated\": \"identity persistence\",\n      \"description\": \"The truck established outside the diner in the night sequence (00:00-00:09) has a white cab and white box trailer. When the customer leaves and walks to his truck in daylight, it is a dark green Freightliner cab with a dark green trailer. No action (repaint, swap, departure/arrival of a different rig) accounts for the change, and the narrative implies it is the same vehicle the trucker arrived in.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:31\",\n      \"entity\": \"plate with eggs and toast\",\n      \"invariant_violated\": \"unexplained appearance (count/state)\",\n      \"description\": \"The plate of eggs and toast materializes on the counter with no visible serving action: at 00:26 the counter holds only the mug and rag, and at 00:31 the finished, steaming plate is present. The only on-screen food service occurs later (01:08), when the waitress visibly places a similar plate, meaning the dish effectively exists before it is ever served.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

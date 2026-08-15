@@ -1,0 +1,43 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:03:41.248Z",
+  "latencyMs": 5276,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 3629,
+    "total_tokens": 28281,
+    "cost": 0.1270086,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1270086,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.054435
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3261,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (green/white striped shirt) | standing center-frame facing camera, hallway behind him | standing at left-side wooden door, knocking | at ~00:07 he turns screen-left and walks left; camera pans left to track him; he arrives at the door that was at the dark far-left edge of the initial frame",
+    "glass-paneled wooden door with circular ornament above | center-background directly behind the man | shifts to right side of frame as camera pans left | parallax consistent with a leftward camera pan; ornament stays above the panel throughout",
+    "blue garment on brass hook | hanging on paneling just left of the glass-paneled door, behind the man | hangs to the man's right after he reaches the knocking door | man walks past it moving left, so it correctly ends up behind/right of him; relative order (knocking door → garment → glass door) preserved",
+    "framed picture and small wooden wall box | on wall section right of the glass-paneled door | exit frame right during the pan | consistent with leftward camera movement",
+    "knocking door with adjacent vintage fixtures (brass bell, old switch plates) | only its dark frame edge visible at far left in opening frames | fully revealed at left of frame; man stands before it and knocks | position matches the dark door frame hinted at the left edge of the initial wide view",
+    "occlusion relationships | man occludes background door/garment while centered | man occludes the knocking door's surface with his body/hand; garment never crosses in front of him | occlusion edges evolve smoothly during the walk; no background element ever renders over the man"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man (green/white striped shirt) | standing center-frame facing camera, hallway behind him | standing at left-side wooden door, knocking | at ~00:07 he turns screen-left and walks left; camera pans left to track him; he arrives at the door that was at the dark far-left edge of the initial frame\",\n    \"glass-paneled wooden door with circular ornament above | center-background directly behind the man | shifts to right side of frame as camera pans left | parallax consistent with a leftward camera pan; ornament stays above the panel throughout\",\n    \"blue garment on brass hook | hanging on paneling just left of the glass-paneled door, behind the man | hangs to the man's right after he reaches the knocking door | man walks past it moving left, so it correctly ends up behind/right of him; relative order (knocking door → garment → glass door) preserved\",\n    \"framed picture and small wooden wall box | on wall section right of the glass-paneled door | exit frame right during the pan | consistent with leftward camera movement\",\n    \"knocking door with adjacent vintage fixtures (brass bell, old switch plates) | only its dark frame edge visible at far left in opening frames | fully revealed at left of frame; man stands before it and knocks | position matches the dark door frame hinted at the left edge of the initial wide view\",\n    \"occlusion relationships | man occludes background door/garment while centered | man occludes the knocking door's surface with his body/hand; garment never crosses in front of him | occlusion edges evolve smoothly during the walk; no background element ever renders over the man\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:50.843Z",
+  "latencyMs": 5296,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 493,
+    "total_tokens": 1919,
+    "cost": 0.001459125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001459125,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.000924375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 379,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "cutting board | foreground wooden surface on kitchen counter | unchanged | stable support base throughout",
+    "large glass jar | center foreground on cutting board | filled with olives | maintains static 3D placement",
+    "olive bowls | to the right of jar on counter/board | filled/emptied partially | positions remain consistent relative to jar",
+    "kitchen background | stove, oven, cabinets behind counter | static background | consistent spatial relationship to foreground"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"cutting board | foreground wooden surface on kitchen counter | unchanged | stable support base throughout\",\n    \"large glass jar | center foreground on cutting board | filled with olives | maintains static 3D placement\",\n    \"olive bowls | to the right of jar on counter/board | filled/emptied partially | positions remain consistent relative to jar\",\n    \"kitchen background | stove, oven, cabinets behind counter | static background | consistent spatial relationship to foreground\"\n  ],\n  \"findings\": []\n}"
+}

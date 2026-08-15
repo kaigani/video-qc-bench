@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:52:17.412Z",
+  "latencyMs": 2048,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 2986,
+    "total_tokens": 5186,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2982,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | standing, arms down, facing mirror | standing, arms down, facing mirror | raises right arm, lowers right arm, raises left arm",
+    "right arm | down at start | down at end | raises to above head (0-3), lowers (4-5)",
+    "left arm | down at start | down at end | raises (10-11)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | standing, arms down, facing mirror | standing, arms down, facing mirror | raises right arm, lowers right arm, raises left arm\",\n    \"right arm | down at start | down at end | raises to above head (0-3), lowers (4-5)\",\n    \"left arm | down at start | down at end | raises (10-11)\"\n  ],\n  \"findings\": []\n}"
+}

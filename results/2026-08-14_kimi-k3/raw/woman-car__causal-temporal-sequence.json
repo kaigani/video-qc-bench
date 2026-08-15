@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T07:02:10.538Z",
+  "latencyMs": 12637,
+  "usage": {
+    "prompt_tokens": 19128,
+    "completion_tokens": 4509,
+    "total_tokens": 23637,
+    "cost": 0.1236366,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1236366,
+      "upstream_inference_prompt_cost": 0.0560016,
+      "upstream_inference_completions_cost": 0.067635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4073,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning out driver's window, arms crossed on door, hair settled, slight smile | same pose, hair fully streaming backward | hair begins lifting ~00:04.5 and escalates to full wind-stream by ~00:07 while her posture and expression stay constant; no external event prompts a reaction",
+    "station wagon | cream wood-paneled wagon on desert highway shoulder, front-left 3/4 view | same vehicle in side profile | background scroll (dashes, poles) from ~00:03.5 onward implies steady forward motion; no wheel-rotation visible in early frames to confirm motion; windshield/hood sun flare grows as viewpoint changes",
+    "camera | wide front-quarter framing | tight side close-up | slow continuous push-in/orbit for the full shot — the sole cause of changing parallax and lens flare",
+    "background (road, utility poles, desert) | near-static with slow drift | steady leftward stream | scroll starts ~00:03.5 and stays roughly constant, implying near-constant vehicle speed from then on"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "proportionality & completion (effect scale outpaces its cause)",
+      "description": "From 00:03.5 onward the background scrolls at a roughly constant rate, implying constant vehicle speed and therefore constant wind. Yet the hair goes from nearly motionless (00:00-00:04, including frames where the car already appears to be in motion) to fully horizontal streaming by 00:07-00:09, a several-fold increase in wind effect with no corresponding increase in vehicle speed, no gust cue (desert brush stays still), and no acceleration cue on the car body. Either the early calm hair lacks its wind cause or the late escalation lacks a proportional one.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning out driver's window, arms crossed on door, hair settled, slight smile | same pose, hair fully streaming backward | hair begins lifting ~00:04.5 and escalates to full wind-stream by ~00:07 while her posture and expression stay constant; no external event prompts a reaction\",\n    \"station wagon | cream wood-paneled wagon on desert highway shoulder, front-left 3/4 view | same vehicle in side profile | background scroll (dashes, poles) from ~00:03.5 onward implies steady forward motion; no wheel-rotation visible in early frames to confirm motion; windshield/hood sun flare grows as viewpoint changes\",\n    \"camera | wide front-quarter framing | tight side close-up | slow continuous push-in/orbit for the full shot — the sole cause of changing parallax and lens flare\",\n    \"background (road, utility poles, desert) | near-static with slow drift | steady leftward stream | scroll starts ~00:03.5 and stays roughly constant, implying near-constant vehicle speed from then on\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"woman's hair\",\n      \"invariant_violated\": \"proportionality & completion (effect scale outpaces its cause)\",\n      \"description\": \"From 00:03.5 onward the background scrolls at a roughly constant rate, implying constant vehicle speed and therefore constant wind. Yet the hair goes from nearly motionless (00:00-00:04, including frames where the car already appears to be in motion) to fully horizontal streaming by 00:07-00:09, a several-fold increase in wind effect with no corresponding increase in vehicle speed, no gust cue (desert brush stays still), and no acceleration cue on the car body. Either the early calm hair lacks its wind cause or the late escalation lacks a proportional one.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

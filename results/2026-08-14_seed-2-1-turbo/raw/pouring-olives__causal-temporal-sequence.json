@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:03:19.986Z",
+  "latencyMs": 9776,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 6351,
+    "total_tokens": 13262,
+    "cost": 0.019333,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019333,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0158775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6153,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "small glass jar | contains green olives at opening | empty after pouring | tilts and pours olives into large jar in two separate pouring actions",
+    "large glass jar | empty at start | filled with mixed green and dark olives at end | receives olives poured from small jar, olives accumulate at bottom",
+    "person's hands / arms | hold small jar above large jar | move small jar away after pouring | perform controlled tilting motion to pour, two separate pour sequences",
+    "olives (green and dark) | contained in small jar | settled in large jar | fall under gravity when small jar is tilted, land and pile up in large jar",
+    "metal bowl of olives | contains green olives | contains fewer green olives plus brown items | person reaches toward it between pours, some olives removed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"small glass jar | contains green olives at opening | empty after pouring | tilts and pours olives into large jar in two separate pouring actions\",\n    \"large glass jar | empty at start | filled with mixed green and dark olives at end | receives olives poured from small jar, olives accumulate at bottom\",\n    \"person's hands / arms | hold small jar above large jar | move small jar away after pouring | perform controlled tilting motion to pour, two separate pour sequences\",\n    \"olives (green and dark) | contained in small jar | settled in large jar | fall under gravity when small jar is tilted, land and pile up in large jar\",\n    \"metal bowl of olives | contains green olives | contains fewer green olives plus brown items | person reaches toward it between pours, some olives removed\"\n  ],\n  \"findings\": []\n}"
+}

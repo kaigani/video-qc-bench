@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:16:04.867Z",
+  "latencyMs": 9840,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 6775,
+    "total_tokens": 8995,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6699,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass jar | empty, upright on wooden board | full of olives and liquid, upright on board | olives poured in, liquid poured",
+    "small glass bowl | full of olives, held in hand | empty (or partially empty) after pouring | olives poured into jar",
+    "metal bowl | full of olives, on table | full of olives, on table | none",
+    "clear glass bottle | contains liquid, held in hand | empty (or partially empty) after pouring | liquid poured into jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"glass jar | empty, upright on wooden board | full of olives and liquid, upright on board | olives poured in, liquid poured\",\n    \"small glass bowl | full of olives, held in hand | empty (or partially empty) after pouring | olives poured into jar\",\n    \"metal bowl | full of olives, on table | full of olives, on table | none\",\n    \"clear glass bottle | contains liquid, held in hand | empty (or partially empty) after pouring | liquid poured into jar\"\n  ],\n  \"findings\": []\n}"
+}

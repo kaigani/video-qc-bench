@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:51.350Z",
+  "latencyMs": 5059,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 810,
+    "total_tokens": 2254,
+    "cost": 0.00206025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00206025,
+      "upstream_inference_prompt_cost": 0.0005415,
+      "upstream_inference_completions_cost": 0.00151875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 627,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | held overhead by woman by the metal shaft | held overhead by woman | moves with woman through market",
+    "red fruit (apple/tomato) | held in woman's hands in front of chest | vanished from hands at 00:08 | held in hands until abruptly disappearing"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red fruit (apple/tomato)",
+      "invariant_violated": "object persistence",
+      "description": "The red fruit held continuously in the woman's hands vanishes without being dropped, put away, or hidden as the camera moves past her side.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | held overhead by woman by the metal shaft | held overhead by woman | moves with woman through market\",\n    \"red fruit (apple/tomato) | held in woman's hands in front of chest | vanished from hands at 00:08 | held in hands until abruptly disappearing\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red fruit (apple/tomato)\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"The red fruit held continuously in the woman's hands vanishes without being dropped, put away, or hidden as the camera moves past her side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

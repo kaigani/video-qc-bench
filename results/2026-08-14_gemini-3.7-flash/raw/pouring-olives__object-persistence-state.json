@@ -1,0 +1,59 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:46.373Z",
+  "latencyMs": 5073,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1124,
+    "total_tokens": 2568,
+    "cost": 0.002649,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002649,
+      "upstream_inference_prompt_cost": 0.0005415,
+      "upstream_inference_completions_cost": 0.0021075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 756,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, standing on cutting board | filled with green and black olives, on cutting board | receives olives poured from small jar",
+    "small glass jar | held in hands, containing only green olives | held in hands, empty | poured into large jar twice",
+    "green olives in small jar | green, in small jar | inside large jar | transform into/spawn black olives upon pouring at 00:01 and 00:07",
+    "metal bowl | containing green olives on cutting board | partially emptied | used to refill small jar",
+    "ceramic bowl | containing green olives on counter | unchanged | resting on counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives poured into large glass jar",
+      "invariant_violated": "identity & persistence",
+      "description": "The small glass jar contains exclusively bright green olives, but upon pouring into the large jar, numerous dark purple/black olives spontaneously appear and fill the bottom of the large jar.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives poured from small glass jar",
+      "invariant_violated": "identity & persistence",
+      "description": "The small jar is filled only with green olives from the bowl, but when poured, dark purple/black olives emerge from the small jar into the large jar.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, standing on cutting board | filled with green and black olives, on cutting board | receives olives poured from small jar\",\n    \"small glass jar | held in hands, containing only green olives | held in hands, empty | poured into large jar twice\",\n    \"green olives in small jar | green, in small jar | inside large jar | transform into/spawn black olives upon pouring at 00:01 and 00:07\",\n    \"metal bowl | containing green olives on cutting board | partially emptied | used to refill small jar\",\n    \"ceramic bowl | containing green olives on counter | unchanged | resting on counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives poured into large glass jar\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The small glass jar contains exclusively bright green olives, but upon pouring into the large jar, numerous dark purple/black olives spontaneously appear and fill the bottom of the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives poured from small glass jar\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The small jar is filled only with green olives from the bowl, but when poured, dark purple/black olives emerge from the small jar into the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

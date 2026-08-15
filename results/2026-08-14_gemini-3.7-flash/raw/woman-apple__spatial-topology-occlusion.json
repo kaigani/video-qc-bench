@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:58.059Z",
+  "latencyMs": 7714,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 729,
+    "total_tokens": 2155,
+    "cost": 0.001901625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001901625,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.001366875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 613,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "market aisle | lined with fruit and vegetable stalls under red/blue awnings | consistent corridor layout throughout | camera orbits 180 degrees around central subject smoothly",
+    "woman with umbrella | center aisle walking toward camera, holding red fruit | seen from back-right angle at end | continuous trajectory and realistic occlusion with surroundings",
+    "pedestrians | walking up and down aisle | move consistently relative to stalls and main subject | natural occlusion and depth ordering"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"market aisle | lined with fruit and vegetable stalls under red/blue awnings | consistent corridor layout throughout | camera orbits 180 degrees around central subject smoothly\",\n    \"woman with umbrella | center aisle walking toward camera, holding red fruit | seen from back-right angle at end | continuous trajectory and realistic occlusion with surroundings\",\n    \"pedestrians | walking up and down aisle | move consistently relative to stalls and main subject | natural occlusion and depth ordering\"\n  ],\n  \"findings\": []\n}"
+}

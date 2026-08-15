@@ -1,0 +1,43 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:32:33.332Z",
+  "latencyMs": 6254,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 3164,
+    "total_tokens": 27812,
+    "cost": 0.1200216,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1200216,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.04746
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2776,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person's hands + small jar | small jar full of olives held above large jar mouth | first jar emptied and set down right, second olive container picked up and emptied | tilt action at ~00:00:00.0 precedes first olive fall; re-tilt of second container at ~00:00:06.5 precedes second fall; every release follows a visible tilt/hand cue",
+    "large glass jar | empty on cutting board | roughly half full of settled olives | fill level rises only during the two pouring windows (00:00:00–00:00:03.5, 00:00:06.5–00:00:09.0); no level change when no pour is occurring",
+    "falling olives | at rest in source container | accumulated pile in large jar | fall begins only after container tilts over the mouth; mid-air trajectories are continuous, downward, gravity-consistent; olives bounce/settle on impact with plausible timing (~0.25s fall time for the drop height)",
+    "metal bowl (right) | holds green olives | contents visually altered later | no causal interaction with bowl observed — appearance change is object-state bookkeeping, out of scope for this observer",
+    "small glass bottle on counter | not visible early | visible beside bowls at ~00:00:04.5 | person's hand moved to that exact area at ~00:00:04.0–00:00:04.5, providing a plausible placement cause",
+    "camera / background | stove, cabinets, oven window | same layout, mild handheld shake, oven-window sheen varies | sheen variation tracks with camera motion, so light change has a plausible cause; no frozen frames or repeated motion beats detected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person's hands + small jar | small jar full of olives held above large jar mouth | first jar emptied and set down right, second olive container picked up and emptied | tilt action at ~00:00:00.0 precedes first olive fall; re-tilt of second container at ~00:00:06.5 precedes second fall; every release follows a visible tilt/hand cue\",\n    \"large glass jar | empty on cutting board | roughly half full of settled olives | fill level rises only during the two pouring windows (00:00:00–00:00:03.5, 00:00:06.5–00:00:09.0); no level change when no pour is occurring\",\n    \"falling olives | at rest in source container | accumulated pile in large jar | fall begins only after container tilts over the mouth; mid-air trajectories are continuous, downward, gravity-consistent; olives bounce/settle on impact with plausible timing (~0.25s fall time for the drop height)\",\n    \"metal bowl (right) | holds green olives | contents visually altered later | no causal interaction with bowl observed — appearance change is object-state bookkeeping, out of scope for this observer\",\n    \"small glass bottle on counter | not visible early | visible beside bowls at ~00:00:04.5 | person's hand moved to that exact area at ~00:00:04.0–00:00:04.5, providing a plausible placement cause\",\n    \"camera / background | stove, cabinets, oven window | same layout, mild handheld shake, oven-window sheen varies | sheen variation tracks with camera motion, so light change has a plausible cause; no frozen frames or repeated motion beats detected\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:09.472Z",
+  "latencyMs": 4564,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 386,
+    "total_tokens": 1811,
+    "cost": 0.001258125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001258125,
+      "upstream_inference_prompt_cost": 0.000534375,
+      "upstream_inference_completions_cost": 0.00072375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 276,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater | riding skateboard on park surface | completing consecutive skateboard tricks on transitions | crouches and pops at 00:01, lands at 00:03, crouches and pops again at 00:07, lands cleanly at 00:09",
+    "Skateboard | rolling beneath skater | popped into air, rotated, caught, landed twice | follows physical momentum and foot forces accurately"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skater | riding skateboard on park surface | completing consecutive skateboard tricks on transitions | crouches and pops at 00:01, lands at 00:03, crouches and pops again at 00:07, lands cleanly at 00:09\",\n    \"Skateboard | rolling beneath skater | popped into air, rotated, caught, landed twice | follows physical momentum and foot forces accurately\"\n  ],\n  \"findings\": []\n}"
+}

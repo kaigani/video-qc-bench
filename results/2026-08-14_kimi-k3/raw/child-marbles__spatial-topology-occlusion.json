@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:55:07.424Z",
+  "latencyMs": 8012,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 2097,
+    "total_tokens": 26749,
+    "cost": 0.105411,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.105411,
+      "upstream_inference_prompt_cost": 0.073956,
+      "upstream_inference_completions_cost": 0.031455
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1730,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child (blue hoodie) | seated at left/near side of table, hands above bowl | same position, right hand stirring inside bowl, left hand steadying far rim | continuous, no cuts; body stays on the same side of the table throughout",
+    "glass bowl | center of table, containing ~8-10 red/yellow/green balls | same location, slightly shifted/rotated by child's grip | remains the central anchor as camera pushes in",
+    "wooden table | fills foreground, plank seams and dark knots establish a fixed surface map | same grain features track consistently as framing tightens | table edges recede out of frame only as camera zooms, never jump",
+    "small decorative pot (green/white wrapped item) | on table to the right of the bowl | exits frame right by ~00:04 due to camera push-in | static on table while visible; disappearance explained by framing, not teleportation",
+    "loose balls on table (red/green/yellow cluster) | bottom-right/right edge of table in early frames | exit frame right ~00:03-00:04 as camera tightens | consistent with push-in; never reappear in wrong location",
+    "patio background (pavers, stacked terracotta pots, white door frame) | visible upper-left/upper-right in wider frames | exits frame as camera closes on bowl | background parallax matches a slow forward orbit; no layout contradictions",
+    "camera | medium shot of child + bowl | close-up of hands + bowl | single smooth push-in with slight leftward drift; all exits/entries of fixed objects match this motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child (blue hoodie) | seated at left/near side of table, hands above bowl | same position, right hand stirring inside bowl, left hand steadying far rim | continuous, no cuts; body stays on the same side of the table throughout\",\n    \"glass bowl | center of table, containing ~8-10 red/yellow/green balls | same location, slightly shifted/rotated by child's grip | remains the central anchor as camera pushes in\",\n    \"wooden table | fills foreground, plank seams and dark knots establish a fixed surface map | same grain features track consistently as framing tightens | table edges recede out of frame only as camera zooms, never jump\",\n    \"small decorative pot (green/white wrapped item) | on table to the right of the bowl | exits frame right by ~00:04 due to camera push-in | static on table while visible; disappearance explained by framing, not teleportation\",\n    \"loose balls on table (red/green/yellow cluster) | bottom-right/right edge of table in early frames | exit frame right ~00:03-00:04 as camera tightens | consistent with push-in; never reappear in wrong location\",\n    \"patio background (pavers, stacked terracotta pots, white door frame) | visible upper-left/upper-right in wider frames | exits frame as camera closes on bowl | background parallax matches a slow forward orbit; no layout contradictions\",\n    \"camera | medium shot of child + bowl | close-up of hands + bowl | single smooth push-in with slight leftward drift; all exits/entries of fixed objects match this motion\"\n  ],\n  \"findings\": []\n}"
+}

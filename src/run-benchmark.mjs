@@ -13,7 +13,7 @@ import { getRoles } from './roles.mjs';
 let VIDEOS_DIR = join(PROJECT_ROOT, '00 test videos');
 const RESULTS_DIR = join(PROJECT_ROOT, 'results');
 const DEFAULT_MODEL = 'google/gemini-3.6-flash';
-const CONCURRENCY = 3;
+let CONCURRENCY = 3;
 
 function parseArgs(argv) {
   const args = { model: DEFAULT_MODEL, videos: null, roles: null, runId: null, force: false, reasoning: false };
@@ -22,6 +22,7 @@ function parseArgs(argv) {
     if (a === '--model') args.model = argv[++i];
     else if (a === '--reasoning') args.reasoning = true;
     else if (a === '--videos-dir') VIDEOS_DIR = argv[++i];
+    else if (a === '--concurrency') CONCURRENCY = Number(argv[++i]);
     else if (a === '--videos') args.videos = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--roles') args.roles = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--run-id') args.runId = argv[++i];

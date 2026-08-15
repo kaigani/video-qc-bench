@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:34:50.678Z",
+  "latencyMs": 12595,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 6027,
+    "total_tokens": 8254,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6166,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | apple | grip established at 00:00, fingers wrapped around apple, continuous hold; still holding at end",
+    "left hand | umbrella | grip established at 00:00, fingers wrapped around handle, continuous hold; still holding at end",
+    "feet | ground | contact established at 00:00, weight transferred before each step, continuous walking; contact maintained throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | apple | grip established at 00:00, fingers wrapped around apple, continuous hold; still holding at end\",\n    \"left hand | umbrella | grip established at 00:00, fingers wrapped around handle, continuous hold; still holding at end\",\n    \"feet | ground | contact established at 00:00, weight transferred before each step, continuous walking; contact maintained throughout\"\n  ],\n  \"findings\": []\n}"
+}

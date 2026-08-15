@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:40:30.933Z",
+  "latencyMs": 17828,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 436,
+    "total_tokens": 1861,
+    "cost": 0.001351875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001351875,
+      "upstream_inference_prompt_cost": 0.000534375,
+      "upstream_inference_completions_cost": 0.0008175
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 339,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on car hood with arms crossed | leaning on car hood with hair blowing | hair reacts naturally to desert breeze over time",
+    "station wagon | parked on road side | parked on road side | stationary throughout shot",
+    "camera & lighting | medium shot moving forward/right | closer shot with sun flare | optical flare matches perspective shift toward the sun"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on car hood with arms crossed | leaning on car hood with hair blowing | hair reacts naturally to desert breeze over time\",\n    \"station wagon | parked on road side | parked on road side | stationary throughout shot\",\n    \"camera & lighting | medium shot moving forward/right | closer shot with sun flare | optical flare matches perspective shift toward the sun\"\n  ],\n  \"findings\": []\n}"
+}

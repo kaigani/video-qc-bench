@@ -1,0 +1,43 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:16:49.408Z",
+  "latencyMs": 2943,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 6615,
+    "total_tokens": 8842,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7031,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | firm grip on first small jar | releases grip after pouring | contact established at start (00:00), olives poured, grip released (00:02)",
+    "Olives (green) | inside first small jar | inside large jar | contact with large jar interior as they fall (00:01-00:02)",
+    "Large jar | empty on board | contains olives, weight added | olives poured in, weight transferred (00:01-00:09)",
+    "Left hand | holds bottle | places bottle on board | contact with bottle then board, weight transferred (00:05)",
+    "Right hand | firm grip on second small container | releases after pouring | tilts container, olives fall into large jar, contact released (00:06-00:09)",
+    "Second small container | held, contains olives | placed on board, empty | contact with board then released (00:10)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | firm grip on first small jar | releases grip after pouring | contact established at start (00:00), olives poured, grip released (00:02)\",\n    \"Olives (green) | inside first small jar | inside large jar | contact with large jar interior as they fall (00:01-00:02)\",\n    \"Large jar | empty on board | contains olives, weight added | olives poured in, weight transferred (00:01-00:09)\",\n    \"Left hand | holds bottle | places bottle on board | contact with bottle then board, weight transferred (00:05)\",\n    \"Right hand | firm grip on second small container | releases after pouring | tilts container, olives fall into large jar, contact released (00:06-00:09)\",\n    \"Second small container | held, contains olives | placed on board, empty | contact with board then released (00:10)\"\n  ],\n  \"findings\": []\n}"
+}

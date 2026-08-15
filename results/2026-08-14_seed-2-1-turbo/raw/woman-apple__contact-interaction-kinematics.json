@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:17:03.478Z",
+  "latencyMs": 8757,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 8020,
+    "total_tokens": 14950,
+    "cost": 0.023515,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023515,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.02005
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7744,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground woman | walking toward camera, right hand contacts red fruit, left hand grips open blue umbrella | facing away from camera, left hand grips umbrella (red fruit held in left hand, obscured), right hand rests on umbrella handle | continuous forward walking motion, transfers red fruit from bimanual hold to left-hand-only hold, turns 180 degrees leftward while walking, maintains foot-ground contact throughout",
+    "red fruit | held between right and left hands at chest height | held in left hand (obscured by umbrella/body) | contact maintained continuously, right hand releases contact ~6-7s, no loss of support",
+    "blue umbrella | gripped in left hand, open above head | gripped in left hand, open above head | grip maintained throughout, position shifts with woman's movement, no release",
+    "background pedestrians | walking in opposite direction to foreground woman | pass by foreground woman and recede | all maintain foot-ground contact, natural walking kinematics, no clipping with other people or stalls",
+    "market produce stalls | line both sides of walkway, stationary relative to ground | pass by foreground woman via camera motion | no contact with foreground woman, no object clipping between stall items"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground woman | walking toward camera, right hand contacts red fruit, left hand grips open blue umbrella | facing away from camera, left hand grips umbrella (red fruit held in left hand, obscured), right hand rests on umbrella handle | continuous forward walking motion, transfers red fruit from bimanual hold to left-hand-only hold, turns 180 degrees leftward while walking, maintains foot-ground contact throughout\",\n    \"red fruit | held between right and left hands at chest height | held in left hand (obscured by umbrella/body) | contact maintained continuously, right hand releases contact ~6-7s, no loss of support\",\n    \"blue umbrella | gripped in left hand, open above head | gripped in left hand, open above head | grip maintained throughout, position shifts with woman's movement, no release\",\n    \"background pedestrians | walking in opposite direction to foreground woman | pass by foreground woman and recede | all maintain foot-ground contact, natural walking kinematics, no clipping with other people or stalls\",\n    \"market produce stalls | line both sides of walkway, stationary relative to ground | pass by foreground woman via camera motion | no contact with foreground woman, no object clipping between stall items\"\n  ],\n  \"findings\": []\n}"
+}

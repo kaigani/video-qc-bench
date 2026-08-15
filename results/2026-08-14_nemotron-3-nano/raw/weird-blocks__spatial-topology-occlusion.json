@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:26:33.305Z",
+  "latencyMs": 2270,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 10752,
+    "total_tokens": 12955,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10089,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "green 2 (initial) | green 2, present initially | green 2, present later | removed early, re-placed later",
+    "green 6 | green 6, present initially | green 6, present throughout | none",
+    "blue 3 (first) | absent initially | blue 3, present | placed early, stays",
+    "green 3 | absent initially | green 3, present | placed early, stays",
+    "tan 2 | absent initially | tan 2, present | placed later, stays",
+    "light blue 3 | absent initially | light blue 3, present | placed later, stays",
+    "green 5 | absent initially | green 5, present | placed later, stays",
+    "green 2 (later) | absent initially | green 2, present | placed later, stays",
+    "blue 3 (second) | absent initially | blue 3, present | placed later, stays",
+    "blue 6 | absent initially | blue 6, present | placed last, stays"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"green 2 (initial) | green 2, present initially | green 2, present later | removed early, re-placed later\",\n    \"green 6 | green 6, present initially | green 6, present throughout | none\",\n    \"blue 3 (first) | absent initially | blue 3, present | placed early, stays\",\n    \"green 3 | absent initially | green 3, present | placed early, stays\",\n    \"tan 2 | absent initially | tan 2, present | placed later, stays\",\n    \"light blue 3 | absent initially | light blue 3, present | placed later, stays\",\n    \"green 5 | absent initially | green 5, present | placed later, stays\",\n    \"green 2 (later) | absent initially | green 2, present | placed later, stays\",\n    \"blue 3 (second) | absent initially | blue 3, present | placed later, stays\",\n    \"blue 6 | absent initially | blue 6, present | placed last, stays\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:19:05.730Z",
+  "latencyMs": 4021,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 5825,
+    "total_tokens": 8052,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5607,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "feet | on ground (standing) | off ground (mid-air) | contact with ground released at 00:02 (takeoff)",
+    "skateboard | on ground (rolling) | off ground (mid-air) | contact with ground released at 00:02-00:03 (board lifts)",
+    "feet | on skateboard (standing) | on skateboard (mid-air) | contact maintained throughout jump (no release)",
+    "skateboard | on ground (post-landing) | on ground (riding) | contact re-established at 00:04 (landing)",
+    "feet | on skateboard (riding) | off ground (mid-air) | contact maintained during jump (no release)",
+    "skateboard | off ground (mid-air) | on ground (riding) | contact re-established at 00:09 (landing)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"feet | on ground (standing) | off ground (mid-air) | contact with ground released at 00:02 (takeoff)\",\n    \"skateboard | on ground (rolling) | off ground (mid-air) | contact with ground released at 00:02-00:03 (board lifts)\",\n    \"feet | on skateboard (standing) | on skateboard (mid-air) | contact maintained throughout jump (no release)\",\n    \"skateboard | on ground (post-landing) | on ground (riding) | contact re-established at 00:04 (landing)\",\n    \"feet | on skateboard (riding) | off ground (mid-air) | contact maintained during jump (no release)\",\n    \"skateboard | off ground (mid-air) | on ground (riding) | contact re-established at 00:09 (landing)\"\n  ],\n  \"findings\": []\n}"
+}

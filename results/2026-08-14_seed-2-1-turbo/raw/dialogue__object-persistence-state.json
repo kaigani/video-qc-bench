@@ -1,0 +1,44 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:43:53.666Z",
+  "latencyMs": 5497,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 7392,
+    "total_tokens": 14318,
+    "cost": 0.021943,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021943,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.01848
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7006,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "navy blue jacket with white sleeve stripe | hanging on brass coat hook on middle wooden door (Door A), lower portion obscured by man | hanging on same brass hook, fully visible from the side | no position/state change; lower striped portion revealed as man moves left and camera pans",
+    "round decorative wheel medallion | mounted on upper section of Door A, left of man's head | mounted on upper section of Door A, above the framed picture | no position/state change; shifted right in frame due to left camera pan",
+    "framed picture (circular eye/clock design) | mounted on Door A below the medallion, mostly obscured by man's body | mounted on Door A below the medallion, fully visible | no position/state change; revealed as man moves away and camera pans left",
+    "wooden square light switch plate | mounted on wall between Door A and right door (Door B) | mounted on same wall, near right edge of frame | no position/state change; shifted right in frame due to left camera pan",
+    "framed picture (dog with 'V' text) | mounted on right door (Door B), far right of initial frame | out of frame to the right | no position/state change; exits frame due to left camera pan",
+    "left wooden entry door (Door C) | out of frame to the left | closed, set in left door frame | no state change; enters frame due to left camera pan; man knocks on it with no visible change to the door",
+    "left wall light fixtures/switch panels | out of frame to the left | mounted on left wall adjacent to Door C | no position/state change; revealed by left camera pan"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"navy blue jacket with white sleeve stripe | hanging on brass coat hook on middle wooden door (Door A), lower portion obscured by man | hanging on same brass hook, fully visible from the side | no position/state change; lower striped portion revealed as man moves left and camera pans\",\n    \"round decorative wheel medallion | mounted on upper section of Door A, left of man's head | mounted on upper section of Door A, above the framed picture | no position/state change; shifted right in frame due to left camera pan\",\n    \"framed picture (circular eye/clock design) | mounted on Door A below the medallion, mostly obscured by man's body | mounted on Door A below the medallion, fully visible | no position/state change; revealed as man moves away and camera pans left\",\n    \"wooden square light switch plate | mounted on wall between Door A and right door (Door B) | mounted on same wall, near right edge of frame | no position/state change; shifted right in frame due to left camera pan\",\n    \"framed picture (dog with 'V' text) | mounted on right door (Door B), far right of initial frame | out of frame to the right | no position/state change; exits frame due to left camera pan\",\n    \"left wooden entry door (Door C) | out of frame to the left | closed, set in left door frame | no state change; enters frame due to left camera pan; man knocks on it with no visible change to the door\",\n    \"left wall light fixtures/switch panels | out of frame to the left | mounted on left wall adjacent to Door C | no position/state change; revealed by left camera pan\"\n  ],\n  \"findings\": []\n}"
+}

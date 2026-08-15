@@ -1,0 +1,47 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:39:22.977Z",
+  "latencyMs": 36359,
+  "usage": {
+    "prompt_tokens": 20254,
+    "completion_tokens": 16040,
+    "total_tokens": 36294,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12033,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | Brown jacket, plaid shirt, blue jeans, grey hair/beard | Sitting at counter, facing window | Sitting at counter, facing window (after disappearing and returning)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Man",
+      "invariant_violated": "placement_continuity",
+      "description": "The man is seated at the counter in the shot at 00:36. Between 00:36 and 00:58, he is not visible in the background (00:44) and the counter appears empty (00:51), yet he is shown sitting again at 00:58 without visible movement of him leaving or returning, indicating a discontinuity in his presence and position.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | Brown jacket, plaid shirt, blue jeans, grey hair/beard | Sitting at counter, facing window | Sitting at counter, facing window (after disappearing and returning)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Man\",\n      \"invariant_violated\": \"placement_continuity\",\n      \"description\": \"The man is seated at the counter in the shot at 00:36. Between 00:36 and 00:58, he is not visible in the background (00:44) and the counter appears empty (00:51), yet he is shown sitting again at 00:58 without visible movement of him leaving or returning, indicating a discontinuity in his presence and position.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

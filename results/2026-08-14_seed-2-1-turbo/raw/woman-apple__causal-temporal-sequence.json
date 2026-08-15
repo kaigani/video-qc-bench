@@ -1,0 +1,44 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:15:22.105Z",
+  "latencyMs": 8125,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 748,
+    "total_tokens": 7659,
+    "cost": 0.0053255,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0053255,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.00187
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 513,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman with blue umbrella | walking forward holding red fruit in left hand | turned left, still holding fruit and umbrella | continuous forward walking, gradual left turn, right hand moves to touch red fruit smoothly",
+    "woman in light blue shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace",
+    "man in white shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace",
+    "man in blue t-shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace",
+    "background pedestrians | walking in market aisle | continue walking | consistent forward/backward motion, no sudden speed changes",
+    "market stalls with produce | left side has green/red/yellow fruit | left side shows more fruit varieties as camera moves | static produce displays, no unexpected changes to objects",
+    "blue umbrella | open, held by woman | open, held by woman | remains upright, no sudden state changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman with blue umbrella | walking forward holding red fruit in left hand | turned left, still holding fruit and umbrella | continuous forward walking, gradual left turn, right hand moves to touch red fruit smoothly\",\n    \"woman in light blue shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace\",\n    \"man in white shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace\",\n    \"man in blue t-shirt | enters frame left walking right | exits frame right walking away | continuous walking motion at consistent pace\",\n    \"background pedestrians | walking in market aisle | continue walking | consistent forward/backward motion, no sudden speed changes\",\n    \"market stalls with produce | left side has green/red/yellow fruit | left side shows more fruit varieties as camera moves | static produce displays, no unexpected changes to objects\",\n    \"blue umbrella | open, held by woman | open, held by woman | remains upright, no sudden state changes\"\n  ],\n  \"findings\": []\n}"
+}

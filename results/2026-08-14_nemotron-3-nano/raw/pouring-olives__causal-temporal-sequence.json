@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:17:19.159Z",
+  "latencyMs": 2510,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 2662,
+    "total_tokens": 4862,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2530,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | standing, hands holding small jar, wearing blue shirt | standing, hands moving, olives poured into large jar | continuous pouring action",
+    "small jar (green) | filled with green olives, held above large jar | empty, placed on table | emptied into large jar",
+    "large jar | empty, on wooden board | contains mixed olives (green and black) | filled with olives",
+    "olives (green) | inside small jar | inside large jar | transferred into large jar",
+    "olives (black) | inside small jar | inside large jar | transferred into large jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | standing, hands holding small jar, wearing blue shirt | standing, hands moving, olives poured into large jar | continuous pouring action\",\n    \"small jar (green) | filled with green olives, held above large jar | empty, placed on table | emptied into large jar\",\n    \"large jar | empty, on wooden board | contains mixed olives (green and black) | filled with olives\",\n    \"olives (green) | inside small jar | inside large jar | transferred into large jar\",\n    \"olives (black) | inside small jar | inside large jar | transferred into large jar\"\n  ],\n  \"findings\": []\n}"
+}

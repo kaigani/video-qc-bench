@@ -1,0 +1,47 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:39:01.522Z",
+  "latencyMs": 7174,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 10106,
+    "total_tokens": 34758,
+    "cost": 0.1622661,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23437,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1622661,
+      "upstream_inference_prompt_cost": 0.0106761,
+      "upstream_inference_completions_cost": 0.15159
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9629,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass bail-top jar | empty, centered on cutting board, wire hinge on its right side | ~half full of olives, same board position, hinge still frame-right | progressively filled; position and orientation never change",
+    "small glass container/ramekin | held above jar mouth, full of olives, tilted pouring | emptied and carried off frame-right ~00:00:04, returns refilled ~00:00:05.5, emptied again by 00:00:09 | motion continuous, re-enters on the same side it exited",
+    "stainless steel bowl | on counter right of jar, full of green olives | same location throughout | contents scooped from (state change, out of scope); bowl never moves",
+    "white ceramic bowl with dark rim | far right of counter, heaped with olives | same location at right/bottom-right edge | stationary; partially cropped as camera orbits",
+    "small clear bottle | not visible in opening frames (occluded behind white bowl) | visible right of steel bowl from ~00:00:04.0 onward | revealed by camera parallax, geometrically consistent",
+    "stove/oven | background center: knob row, oven handle, dark window | background right-of-frame as camera orbits; cooktop grates visible from higher angle | same appliance, perspective shift only; window glow is lighting (out of scope)",
+    "wooden cabinet banks | right of stove in opening view | drawer bank appears frame-left in later frames | consistent with camera orbiting west; wood base visible at frame-left edge from start",
+    "cutting board | under jar, distinctive stain right of jar base | identical stains, identical position | stationary anchor; confirms no set rearrangement",
+    "person | standing behind counter, arms raised over jar | same standing position | reaches right to steel bowl, scoops, returns to pour — all emergences on correct sides",
+    "camera | frontal view of person/jar/stove | orbited leftward and slightly raised by end | smooth continuous move; background pans right in frame revealing west counter (honey jar, yellow wall) — parallax direction is consistent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass bail-top jar | empty, centered on cutting board, wire hinge on its right side | ~half full of olives, same board position, hinge still frame-right | progressively filled; position and orientation never change\",\n    \"small glass container/ramekin | held above jar mouth, full of olives, tilted pouring | emptied and carried off frame-right ~00:00:04, returns refilled ~00:00:05.5, emptied again by 00:00:09 | motion continuous, re-enters on the same side it exited\",\n    \"stainless steel bowl | on counter right of jar, full of green olives | same location throughout | contents scooped from (state change, out of scope); bowl never moves\",\n    \"white ceramic bowl with dark rim | far right of counter, heaped with olives | same location at right/bottom-right edge | stationary; partially cropped as camera orbits\",\n    \"small clear bottle | not visible in opening frames (occluded behind white bowl) | visible right of steel bowl from ~00:00:04.0 onward | revealed by camera parallax, geometrically consistent\",\n    \"stove/oven | background center: knob row, oven handle, dark window | background right-of-frame as camera orbits; cooktop grates visible from higher angle | same appliance, perspective shift only; window glow is lighting (out of scope)\",\n    \"wooden cabinet banks | right of stove in opening view | drawer bank appears frame-left in later frames | consistent with camera orbiting west; wood base visible at frame-left edge from start\",\n    \"cutting board | under jar, distinctive stain right of jar base | identical stains, identical position | stationary anchor; confirms no set rearrangement\",\n    \"person | standing behind counter, arms raised over jar | same standing position | reaches right to steel bowl, scoops, returns to pour — all emergences on correct sides\",\n    \"camera | frontal view of person/jar/stove | orbited leftward and slightly raised by end | smooth continuous move; background pans right in frame revealing west counter (honey jar, yellow wall) — parallax direction is consistent\"\n  ],\n  \"findings\": []\n}"
+}

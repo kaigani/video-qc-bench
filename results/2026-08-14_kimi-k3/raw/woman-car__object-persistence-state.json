@@ -1,0 +1,55 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:58:47.344Z",
+  "latencyMs": 7334,
+  "usage": {
+    "prompt_tokens": 19146,
+    "completion_tokens": 3070,
+    "total_tokens": 22216,
+    "cost": 0.1021056,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1021056,
+      "upstream_inference_prompt_cost": 0.0560556,
+      "upstream_inference_completions_cost": 0.04605
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2565,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (cream, wood-paneled, chrome trim) | parked/rolling on desert highway, intact | same vehicle, intact, moving along highway | continuous forward motion evidenced by scrolling road/background; no unexplained jumps",
+    "front license plate 'STF197' | mounted on front bumper, legible at 00:00 | cropped out of frame by ~00:02 as camera zooms | no violation",
+    "chrome roof rack | fixed on roof | unchanged throughout | no violation",
+    "radio antenna | thin vertical whip, front-left fender area | unchanged, persists until cropped by zoom | no violation",
+    "driver-side chrome mirror | mounted on driver door | cropped from right edge ~00:05 due to zoom | no violation",
+    "chrome hood ornament/stalk | front edge of hood | cropped by zoom ~00:03.5 | no violation",
+    "windshield wipers | resting at base of windshield | appear at raised/angled positions on glass in later frames | positions vary between frames; consistent with wipers operating (self-powered motion), low concern",
+    "interior object behind windshield (rearview mirror region) | at 00:00 appears as a large dark cross/figure-shaped silhouette occupying center of windshield | by ~00:03–00:04 appears as an ordinary small rectangular rearview mirror at top of windshield | shape/size morph with no visible cause — flagged",
+    "telephone poles (background) | not present at start | enter frame from left as car advances | appearance fully explained by car's forward motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "object behind windshield (rearview mirror / dark silhouette)",
+      "invariant_violated": "identity & persistence (no unexplained transformation)",
+      "description": "At 00:00–00:02 a large dark cross/figure-shaped mass fills the center of the windshield; over the following seconds it shrinks and resolves into a small standard rectangular rearview mirror mounted at the top of the glass. No visible action causes this change in size, shape, or position; the camera zoom alone cannot account for the object's proportions changing relative to the windshield.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (cream, wood-paneled, chrome trim) | parked/rolling on desert highway, intact | same vehicle, intact, moving along highway | continuous forward motion evidenced by scrolling road/background; no unexplained jumps\",\n    \"front license plate 'STF197' | mounted on front bumper, legible at 00:00 | cropped out of frame by ~00:02 as camera zooms | no violation\",\n    \"chrome roof rack | fixed on roof | unchanged throughout | no violation\",\n    \"radio antenna | thin vertical whip, front-left fender area | unchanged, persists until cropped by zoom | no violation\",\n    \"driver-side chrome mirror | mounted on driver door | cropped from right edge ~00:05 due to zoom | no violation\",\n    \"chrome hood ornament/stalk | front edge of hood | cropped by zoom ~00:03.5 | no violation\",\n    \"windshield wipers | resting at base of windshield | appear at raised/angled positions on glass in later frames | positions vary between frames; consistent with wipers operating (self-powered motion), low concern\",\n    \"interior object behind windshield (rearview mirror region) | at 00:00 appears as a large dark cross/figure-shaped silhouette occupying center of windshield | by ~00:03–00:04 appears as an ordinary small rectangular rearview mirror at top of windshield | shape/size morph with no visible cause — flagged\",\n    \"telephone poles (background) | not present at start | enter frame from left as car advances | appearance fully explained by car's forward motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"object behind windshield (rearview mirror / dark silhouette)\",\n      \"invariant_violated\": \"identity & persistence (no unexplained transformation)\",\n      \"description\": \"At 00:00–00:02 a large dark cross/figure-shaped mass fills the center of the windshield; over the following seconds it shrinks and resolves into a small standard rectangular rearview mirror mounted at the top of the glass. No visible action causes this change in size, shape, or position; the camera zoom alone cannot account for the object's proportions changing relative to the windshield.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

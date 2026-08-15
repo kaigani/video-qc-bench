@@ -1,0 +1,52 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:41:26.304Z",
+  "latencyMs": 8579,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 13804,
+    "total_tokens": 20730,
+    "cost": 0.037973,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037973,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.03451
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13386,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Clear glass bowl | resting on wooden table, open/intact, no hands gripping | resting on wooden table, open/intact, rim held by child's left hand | child's left hand grips bowl rim; child's right hand manipulates balls inside",
+    "Red plastic balls | 2 units, all inside glass bowl | 3 units, all inside glass bowl | 1 unit lifted out of bowl by child then replaced; 1 additional unit appears with no visible cause",
+    "Green plastic balls | 3 units, all inside glass bowl | 3 units, all inside glass bowl | stirred and repositioned by child's hand",
+    "Yellow plastic balls | 3 units, all inside glass bowl | 3 units, all inside glass bowl | stirred and repositioned by child's hand",
+    "Small metal cup with decorated egg and green leaves | resting on wooden table right of bowl | resting on wooden table (out of frame at end) | no state change; moves out of view due to camera pan",
+    "Loose plastic balls (red, green, yellow) on far right table | resting on wooden table, partially visible | resting on wooden table, more visible due to camera pan | no movement or state change; increased visibility from camera motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01.3",
+      "entity": "red plastic ball",
+      "invariant_violated": "identity & persistence (no duplication)",
+      "description": "Initially 2 red balls are visible inside the glass bowl. When the child lifts one red ball out of the bowl, 2 red balls remain inside the bowl, resulting in 3 total red balls with no visible action adding a red ball to the system.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Clear glass bowl | resting on wooden table, open/intact, no hands gripping | resting on wooden table, open/intact, rim held by child's left hand | child's left hand grips bowl rim; child's right hand manipulates balls inside\",\n    \"Red plastic balls | 2 units, all inside glass bowl | 3 units, all inside glass bowl | 1 unit lifted out of bowl by child then replaced; 1 additional unit appears with no visible cause\",\n    \"Green plastic balls | 3 units, all inside glass bowl | 3 units, all inside glass bowl | stirred and repositioned by child's hand\",\n    \"Yellow plastic balls | 3 units, all inside glass bowl | 3 units, all inside glass bowl | stirred and repositioned by child's hand\",\n    \"Small metal cup with decorated egg and green leaves | resting on wooden table right of bowl | resting on wooden table (out of frame at end) | no state change; moves out of view due to camera pan\",\n    \"Loose plastic balls (red, green, yellow) on far right table | resting on wooden table, partially visible | resting on wooden table, more visible due to camera pan | no movement or state change; increased visibility from camera motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01.3\",\n      \"entity\": \"red plastic ball\",\n      \"invariant_violated\": \"identity & persistence (no duplication)\",\n      \"description\": \"Initially 2 red balls are visible inside the glass bowl. When the child lifts one red ball out of the bowl, 2 red balls remain inside the bowl, resulting in 3 total red balls with no visible action adding a red ball to the system.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

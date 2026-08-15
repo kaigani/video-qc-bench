@@ -1,0 +1,63 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:59:03.194Z",
+  "latencyMs": 14494,
+  "usage": {
+    "prompt_tokens": 42706,
+    "completion_tokens": 8839,
+    "total_tokens": 51545,
+    "cost": 0.1513179,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 40513,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1513179,
+      "upstream_inference_prompt_cost": 0.0187329,
+      "upstream_inference_completions_cost": 0.132585
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8007,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white semi-truck | parked beside diner at night, stationary | unchanged through exterior shot (00:00-00:09) | smoke drifts past it; no visible ignition/source on screen, consistent with off-frame exhaust or vent",
+    "smoke plume | present at ground level left of truck at 00:00 | thins and drifts across lot, dissipating by ~00:06 | drift direction and dissipation rate plausible for cold-air exhaust",
+    "waitress | wiping counter at night (00:09) | duplicated and dissolved by end (01:52-01:58) | wipes counter → pours coffee for customer (00:23) → serves plate (01:08) → sits beside customer (01:21) → rises from stool and splits into two overlapping instances that both fade out",
+    "male customer | enters from rear of diner (00:19), sits at counter (00:24) | leaves cash, exits, boards dark semi-truck (01:37-01:45) | sits after approaching stool (plausible), receives coffee and food, still seated through night-to-dawn transition",
+    "coffee pot & mug | pot lifted and tilted (00:23-00:26) → stream begins (00:28) → mug filled, pot withdrawn (00:31) | pour onset follows tilt with plausible delay; stream continuous and proportional",
+    "plate (toast, fried egg) | steaming close-up (00:32) | served to customer (01:08-01:14) | steam plausibly caused by hot food; plate placement follows waitress's hands",
+    "cash (bills, $100 on top) | placed on counter by man's hands (01:37-01:39) | left beside mug as hands withdraw | visible cause for money's appearance; order correct",
+    "time-of-day / light | night (00:00-00:50) → window glows warm and kitchen light shifts (00:50-00:59) → bright morning (00:59) → low golden sun (01:26-01:58) | forward-only progression; sunrise is an implied off-screen source, so light change has a cause",
+    "dark semi-truck | parked outside in golden light (01:40) | man walks to it and opens cab door (01:45) | color/identity change vs. opening white truck noted but out of scope"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "temporal flow / action completion (no duplication, no dissolve)",
+      "description": "Within one continuous static wide shot, the waitress rises from a counter stool and is simultaneously visible in two locations: one instance walks behind the counter toward the coffee machine while a second, increasingly transparent instance lingers near the kitchen pass-through. Both copies then gradually fade out until the diner is empty (01:56-01:58). A person cannot split into two concurrent instances, and the initiated walking motions neither complete nor are interrupted — they dissolve.",
+      "severity": "severe",
+      "confidence": 0.82
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "window reflection of the man",
+      "invariant_violated": "effect without cause (reflection-source mismatch)",
+      "description": "As the man walks away from the diner toward the truck with his back to the glass, the window displays a front-facing image of his face. No source facing the glass exists to produce that reflection — his back is to the window and no one inside matches the image. Possibly an intentional double-exposure stylistic device, but as a reflection it has no physical cause.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white semi-truck | parked beside diner at night, stationary | unchanged through exterior shot (00:00-00:09) | smoke drifts past it; no visible ignition/source on screen, consistent with off-frame exhaust or vent\",\n    \"smoke plume | present at ground level left of truck at 00:00 | thins and drifts across lot, dissipating by ~00:06 | drift direction and dissipation rate plausible for cold-air exhaust\",\n    \"waitress | wiping counter at night (00:09) | duplicated and dissolved by end (01:52-01:58) | wipes counter → pours coffee for customer (00:23) → serves plate (01:08) → sits beside customer (01:21) → rises from stool and splits into two overlapping instances that both fade out\",\n    \"male customer | enters from rear of diner (00:19), sits at counter (00:24) | leaves cash, exits, boards dark semi-truck (01:37-01:45) | sits after approaching stool (plausible), receives coffee and food, still seated through night-to-dawn transition\",\n    \"coffee pot & mug | pot lifted and tilted (00:23-00:26) → stream begins (00:28) → mug filled, pot withdrawn (00:31) | pour onset follows tilt with plausible delay; stream continuous and proportional\",\n    \"plate (toast, fried egg) | steaming close-up (00:32) | served to customer (01:08-01:14) | steam plausibly caused by hot food; plate placement follows waitress's hands\",\n    \"cash (bills, $100 on top) | placed on counter by man's hands (01:37-01:39) | left beside mug as hands withdraw | visible cause for money's appearance; order correct\",\n    \"time-of-day / light | night (00:00-00:50) → window glows warm and kitchen light shifts (00:50-00:59) → bright morning (00:59) → low golden sun (01:26-01:58) | forward-only progression; sunrise is an implied off-screen source, so light change has a cause\",\n    \"dark semi-truck | parked outside in golden light (01:40) | man walks to it and opens cab door (01:45) | color/identity change vs. opening white truck noted but out of scope\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"temporal flow / action completion (no duplication, no dissolve)\",\n      \"description\": \"Within one continuous static wide shot, the waitress rises from a counter stool and is simultaneously visible in two locations: one instance walks behind the counter toward the coffee machine while a second, increasingly transparent instance lingers near the kitchen pass-through. Both copies then gradually fade out until the diner is empty (01:56-01:58). A person cannot split into two concurrent instances, and the initiated walking motions neither complete nor are interrupted — they dissolve.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.82\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"window reflection of the man\",\n      \"invariant_violated\": \"effect without cause (reflection-source mismatch)\",\n      \"description\": \"As the man walks away from the diner toward the truck with his back to the glass, the window displays a front-facing image of his face. No source facing the glass exists to produce that reflection — his back is to the window and no one inside matches the image. Possibly an intentional double-exposure stylistic device, but as a reflection it has no physical cause.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

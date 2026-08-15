@@ -1,0 +1,59 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:06:53.275Z",
+  "latencyMs": 11224,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 7584,
+    "total_tokens": 32051,
+    "cost": 0.1864698,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1864698,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.11376
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7005,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | short wavy brown-blonde bob, teal 3/4-sleeve dress with puff shoulders, dangling earrings | identical appearance at end | walks in one continuous take from kitchen 1, down a hallway, across a bedroom, through a second hallway, into kitchen 2; no wardrobe or appearance changes",
+    "Kitchen 1 | light wood cabinets with black knobs, brick backsplash, countertop microwave with items on top, stove with red kettle, gray walls | exited by 00:01 | consistent within its own shots",
+    "Framed print (figure amid blue foliage, dark frame) | hangs on hallway-1 wall beside light switches at 00:00-00:03 | reappears inside the bedroom next to the exit doorway at 00:07 | identical print, frame, and nearby switch arrangement seen in two distinct locations",
+    "Bedroom | large bed with white linens, lit bedside lamps, brass chandelier, tan-curtained windows on two walls, bench with leaning framed photos | crossed and exited by 00:08 | internally consistent",
+    "Kitchen 2 | dark wood cabinets, stainless over-range microwave above gas stove, cream walls | entered at 00:09 | second visually distinct full kitchen reached on the same uninterrupted path"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Framed artwork (figure with blue foliage)",
+      "invariant_violated": "set-dressing duplication",
+      "description": "The same large dark-framed print (a figure surrounded by blue leaf shapes), with the same adjacent light-switch arrangement, is visible on the hallway wall outside the kitchen (00:00-00:03) and again inside the bedroom beside the exit doorway (00:07). The walk is continuous and forward, so these are two different walls; the identical artwork appearing in both places is unexplained and suggests reused/duplicated assets.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "House floor plan (two kitchens)",
+      "invariant_violated": "plausible architecture",
+      "description": "A single uninterrupted walk connects two clearly different full kitchens — light-wood cabinets, brick backsplash and a countertop microwave at 00:00, then dark-wood cabinets with an over-range microwave at 00:09 — with the only route between them passing straight through a bedroom. Reaching a second kitchen by walking through a bedroom is an implausible residential layout.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | short wavy brown-blonde bob, teal 3/4-sleeve dress with puff shoulders, dangling earrings | identical appearance at end | walks in one continuous take from kitchen 1, down a hallway, across a bedroom, through a second hallway, into kitchen 2; no wardrobe or appearance changes\",\n    \"Kitchen 1 | light wood cabinets with black knobs, brick backsplash, countertop microwave with items on top, stove with red kettle, gray walls | exited by 00:01 | consistent within its own shots\",\n    \"Framed print (figure amid blue foliage, dark frame) | hangs on hallway-1 wall beside light switches at 00:00-00:03 | reappears inside the bedroom next to the exit doorway at 00:07 | identical print, frame, and nearby switch arrangement seen in two distinct locations\",\n    \"Bedroom | large bed with white linens, lit bedside lamps, brass chandelier, tan-curtained windows on two walls, bench with leaning framed photos | crossed and exited by 00:08 | internally consistent\",\n    \"Kitchen 2 | dark wood cabinets, stainless over-range microwave above gas stove, cream walls | entered at 00:09 | second visually distinct full kitchen reached on the same uninterrupted path\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Framed artwork (figure with blue foliage)\",\n      \"invariant_violated\": \"set-dressing duplication\",\n      \"description\": \"The same large dark-framed print (a figure surrounded by blue leaf shapes), with the same adjacent light-switch arrangement, is visible on the hallway wall outside the kitchen (00:00-00:03) and again inside the bedroom beside the exit doorway (00:07). The walk is continuous and forward, so these are two different walls; the identical artwork appearing in both places is unexplained and suggests reused/duplicated assets.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"House floor plan (two kitchens)\",\n      \"invariant_violated\": \"plausible architecture\",\n      \"description\": \"A single uninterrupted walk connects two clearly different full kitchens — light-wood cabinets, brick backsplash and a countertop microwave at 00:00, then dark-wood cabinets with an over-range microwave at 00:09 — with the only route between them passing straight through a bedroom. Reaching a second kitchen by walking through a bedroom is an implausible residential layout.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.3\n    }\n  ]\n}"
+}

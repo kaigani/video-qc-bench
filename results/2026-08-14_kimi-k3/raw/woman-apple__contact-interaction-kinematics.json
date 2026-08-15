@@ -1,0 +1,53 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:55:04.188Z",
+  "latencyMs": 6794,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 5428,
+    "total_tokens": 30093,
+    "cost": 0.0921,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23450,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0921,
+      "upstream_inference_prompt_cost": 0.01068,
+      "upstream_inference_completions_cost": 0.08142
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4801,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "subject woman (navy shirt, gray shorts) | start: walking toward camera, left hand (watch wrist) gripping umbrella shaft, right hand cradling red apple at chest | end: seen from behind, both hands clasped around umbrella shaft at chest height, apple no longer visible | transitions: umbrella grip maintained continuously in same (left, watch-wearing) hand; apple contact lost between ~00:07.5 and ~00:08.6 with no visible release, transfer, or pocketing motion",
+    "blue umbrella | start: canopy overhead, shaft visibly gripped in subject's left hand | end: still overhead, shaft clasped by both hands | transitions: stays above head throughout camera orbit; no floating or detachment observed",
+    "red apple | start: resting in subject's right palm with fingers curled around it, continuous visible contact frames 00:00–00:07.0 | end: not visible in or near either hand from 00:08.6 onward | transitions: hands close around shaft while apple vanishes; no drop, hand-off, or stowing observed",
+    "passerby woman (light blue tee, black shoulder bag) | start: enters left foreground | end: walks past subject toward left stalls, exits behind her | transitions: gait continuous, feet contact ground plausibly, occlusion ordering vs. subject correct",
+    "passerby man (white polo) | start: enters left foreground | end: passes in front of subject, then behind her, continues away down the aisle | transitions: occlusion layering correct (in front then behind); no clipping into subject or umbrella",
+    "passerby man (blue tee) | start: crosses foreground left | end: exits right behind subject | transitions: normal gait, motion blur consistent with speed",
+    "background pedestrians (red-shirt woman, green-shirt man, others) | start: walking market aisle in both directions | end: exit frame or recede | transitions: strides continuous, no sliding or pass-through observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.625",
+      "entity": "red apple in subject's hand",
+      "invariant_violated": "contact release without release event",
+      "description": "The apple is continuously cradled in the subject's right palm with clear finger contact through ~00:07.0. Her hands then clasp around the umbrella shaft, and by 00:08.6 (rear view) both hands are visibly wrapped on the shaft with the apple absent. No dropping motion, transfer to a pocket, or hand-off occurs; the held object simply ceases to exist while grip configuration changes. Partial occlusion by her clasped fingers is possible but the apple (~8 cm red sphere) would likely remain partially visible given the open finger spacing.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"subject woman (navy shirt, gray shorts) | start: walking toward camera, left hand (watch wrist) gripping umbrella shaft, right hand cradling red apple at chest | end: seen from behind, both hands clasped around umbrella shaft at chest height, apple no longer visible | transitions: umbrella grip maintained continuously in same (left, watch-wearing) hand; apple contact lost between ~00:07.5 and ~00:08.6 with no visible release, transfer, or pocketing motion\",\n    \"blue umbrella | start: canopy overhead, shaft visibly gripped in subject's left hand | end: still overhead, shaft clasped by both hands | transitions: stays above head throughout camera orbit; no floating or detachment observed\",\n    \"red apple | start: resting in subject's right palm with fingers curled around it, continuous visible contact frames 00:00–00:07.0 | end: not visible in or near either hand from 00:08.6 onward | transitions: hands close around shaft while apple vanishes; no drop, hand-off, or stowing observed\",\n    \"passerby woman (light blue tee, black shoulder bag) | start: enters left foreground | end: walks past subject toward left stalls, exits behind her | transitions: gait continuous, feet contact ground plausibly, occlusion ordering vs. subject correct\",\n    \"passerby man (white polo) | start: enters left foreground | end: passes in front of subject, then behind her, continues away down the aisle | transitions: occlusion layering correct (in front then behind); no clipping into subject or umbrella\",\n    \"passerby man (blue tee) | start: crosses foreground left | end: exits right behind subject | transitions: normal gait, motion blur consistent with speed\",\n    \"background pedestrians (red-shirt woman, green-shirt man, others) | start: walking market aisle in both directions | end: exit frame or recede | transitions: strides continuous, no sliding or pass-through observed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08.625\",\n      \"entity\": \"red apple in subject's hand\",\n      \"invariant_violated\": \"contact release without release event\",\n      \"description\": \"The apple is continuously cradled in the subject's right palm with clear finger contact through ~00:07.0. Her hands then clasp around the umbrella shaft, and by 00:08.6 (rear view) both hands are visibly wrapped on the shaft with the apple absent. No dropping motion, transfer to a pocket, or hand-off occurs; the held object simply ceases to exist while grip configuration changes. Partial occlusion by her clasped fingers is possible but the apple (~8 cm red sphere) would likely remain partially visible given the open finger spacing.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

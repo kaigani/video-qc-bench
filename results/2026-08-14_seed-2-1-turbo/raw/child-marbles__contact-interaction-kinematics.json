@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:40:30.188Z",
+  "latencyMs": 12640,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 1262,
+    "total_tokens": 8192,
+    "cost": 0.00662,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00662,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.003155
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1048,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child | both hands raised above bowl, no contact with objects | right hand inside bowl stirring balls, left hand gripping bowl rim | hands lower into bowl, grasp and release a red ball, left hand establishes grip on bowl rim, right hand stirs ball contents",
+    "glass bowl | resting stationary on wooden table, holds colored balls | resting on table, gripped at rim by left hand, contents stirred | left hand makes contact with rim, remains supported by table throughout",
+    "bowl colored balls | stationary at bottom of bowl | in motion, stirred by right hand | first contact with child's hands at ~0.7s, one red ball is lifted then released, all balls are agitated by stirring motion",
+    "wooden table | supports bowl, small decorative object, and loose balls on right side | supports same objects | all objects remain in contact with table surface, no unintended sliding or lifting of table-supported items"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child | both hands raised above bowl, no contact with objects | right hand inside bowl stirring balls, left hand gripping bowl rim | hands lower into bowl, grasp and release a red ball, left hand establishes grip on bowl rim, right hand stirs ball contents\",\n    \"glass bowl | resting stationary on wooden table, holds colored balls | resting on table, gripped at rim by left hand, contents stirred | left hand makes contact with rim, remains supported by table throughout\",\n    \"bowl colored balls | stationary at bottom of bowl | in motion, stirred by right hand | first contact with child's hands at ~0.7s, one red ball is lifted then released, all balls are agitated by stirring motion\",\n    \"wooden table | supports bowl, small decorative object, and loose balls on right side | supports same objects | all objects remain in contact with table surface, no unintended sliding or lifting of table-supported items\"\n  ],\n  \"findings\": []\n}"
+}

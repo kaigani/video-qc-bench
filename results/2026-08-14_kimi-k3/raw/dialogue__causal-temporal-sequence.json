@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:03:28.338Z",
+  "latencyMs": 5240,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 2454,
+    "total_tokens": 27102,
+    "cost": 0.1093716,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1093716,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.03681
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2098,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (green/white striped shirt) | standing facing camera mid-speech at 00:00:00 | standing at left-side door, hands raised to door at 00:00:09.6 | speaks continuously (00:00:00–00:00:05.5) → pauses, closes mouth, slight smile (00:00:05.5–00:00:07) → head turns left (00:00:07.0) → body rotates and walks left (00:00:07.5–00:00:08.6) → arrives at door and raises hands to knock (00:00:08.6–00:00:09.6); each phase begins only after the previous completes, motion continuous with natural blur",
+    "left-side wooden door | closed, untouched | closed, man's hands in contact/near contact mid-knock | door state unchanged within clip; knock action initiated at 00:00:08.6 and still in progress at clip end — no opening expected yet, no uncaused movement",
+    "rear door + blue coat + wall fixtures | static background | static background | no state changes, no interactions; man's walk passes the coat door with consistent spatial ordering (coat appears behind him to the right after he moves left)",
+    "man's shadow on door | absent (man far from door) | present on door panel once he stands before it (00:00:09.1) | shadow appears only after he positions himself between light and door — cause precedes effect, direction consistent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man (green/white striped shirt) | standing facing camera mid-speech at 00:00:00 | standing at left-side door, hands raised to door at 00:00:09.6 | speaks continuously (00:00:00–00:00:05.5) → pauses, closes mouth, slight smile (00:00:05.5–00:00:07) → head turns left (00:00:07.0) → body rotates and walks left (00:00:07.5–00:00:08.6) → arrives at door and raises hands to knock (00:00:08.6–00:00:09.6); each phase begins only after the previous completes, motion continuous with natural blur\",\n    \"left-side wooden door | closed, untouched | closed, man's hands in contact/near contact mid-knock | door state unchanged within clip; knock action initiated at 00:00:08.6 and still in progress at clip end — no opening expected yet, no uncaused movement\",\n    \"rear door + blue coat + wall fixtures | static background | static background | no state changes, no interactions; man's walk passes the coat door with consistent spatial ordering (coat appears behind him to the right after he moves left)\",\n    \"man's shadow on door | absent (man far from door) | present on door panel once he stands before it (00:00:09.1) | shadow appears only after he positions himself between light and door — cause precedes effect, direction consistent\"\n  ],\n  \"findings\": []\n}"
+}

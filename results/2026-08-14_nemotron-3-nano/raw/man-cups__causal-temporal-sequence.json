@@ -1,0 +1,42 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:04:20.410Z",
+  "latencyMs": 9052,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 4706,
+    "total_tokens": 6906,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4518,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | hand positioned over middle cup holding coin | hand manipulating cups and coins, lifting left cup | continuous motion",
+    "Coin | coin held above middle cup initially | coin placed inside left cup by end | transferred from hand to cup",
+    "Middle cup | stationary on table initially | remains stationary throughout | none",
+    "Left cup | stationary initially | lifted and moved to new position by end | repositioned by hand",
+    "Right cup | stationary initially | remains stationary throughout | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | hand positioned over middle cup holding coin | hand manipulating cups and coins, lifting left cup | continuous motion\",\n    \"Coin | coin held above middle cup initially | coin placed inside left cup by end | transferred from hand to cup\",\n    \"Middle cup | stationary on table initially | remains stationary throughout | none\",\n    \"Left cup | stationary initially | lifted and moved to new position by end | repositioned by hand\",\n    \"Right cup | stationary initially | remains stationary throughout | none\"\n  ],\n  \"findings\": []\n}"
+}

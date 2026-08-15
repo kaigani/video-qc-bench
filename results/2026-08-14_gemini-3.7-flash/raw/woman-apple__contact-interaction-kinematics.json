@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:54.237Z",
+  "latencyMs": 6818,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 453,
+    "total_tokens": 1905,
+    "cost": 0.001393875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001393875,
+      "upstream_inference_prompt_cost": 0.0005445,
+      "upstream_inference_completions_cost": 0.000849375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 304,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman with umbrella | walking forward holding blue umbrella in right hand and red fruit in both hands | turning/continuing to walk as camera orbits behind her | continuous gait, natural hand grips",
+    "blue umbrella | held firmly by umbrella shaft in woman's right hand | held throughout video | stable contact with hand",
+    "red fruit | held cupped between woman's hands in front of chest | held throughout until camera moves behind | continuous contact with palms/fingers",
+    "pedestrians | walking along market alley in both directions | passing subject smoothly | continuous ground-contact mechanics and valid obstacle avoidance"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman with umbrella | walking forward holding blue umbrella in right hand and red fruit in both hands | turning/continuing to walk as camera orbits behind her | continuous gait, natural hand grips\",\n    \"blue umbrella | held firmly by umbrella shaft in woman's right hand | held throughout video | stable contact with hand\",\n    \"red fruit | held cupped between woman's hands in front of chest | held throughout until camera moves behind | continuous contact with palms/fingers\",\n    \"pedestrians | walking along market alley in both directions | passing subject smoothly | continuous ground-contact mechanics and valid obstacle avoidance\"\n  ],\n  \"findings\": []\n}"
+}

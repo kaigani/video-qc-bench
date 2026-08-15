@@ -1,0 +1,40 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:23:25.109Z",
+  "latencyMs": 5839,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 3646,
+    "total_tokens": 28311,
+    "cost": 0.1273026,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1273026,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.05469
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3401,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "phone-holder's hands + smartphone | two-handed grip: left thumb/fingers on left edge, right fingers wrapped on right edge, phone held up in foreground | phone rotated and lowered out of bottom-right of frame, hands still in contact | continuous grip throughout; right thumb/index taps and swipes the screen ~00:06.5–00:08.6 with visible finger-screen contact; phone pivots and exits frame at ~00:09.1 in one continuous motion",
+    "background pedestrian (blue clothing) | walking away from camera up the paved path, arms swinging with gait | continues away, shrinking with distance, partially occluded by phone after ~00:02.0 | feet alternately contact pavement in a normal walking cadence; no visible skating, clipping through railing, or planting violations; railing bars correctly occlude the body",
+    "red bag | carried in pedestrian's right hand, hanging at their side | still carried as pedestrian recedes | grip maintained; bag swings naturally with the walking motion; no release or floating"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"phone-holder's hands + smartphone | two-handed grip: left thumb/fingers on left edge, right fingers wrapped on right edge, phone held up in foreground | phone rotated and lowered out of bottom-right of frame, hands still in contact | continuous grip throughout; right thumb/index taps and swipes the screen ~00:06.5–00:08.6 with visible finger-screen contact; phone pivots and exits frame at ~00:09.1 in one continuous motion\",\n    \"background pedestrian (blue clothing) | walking away from camera up the paved path, arms swinging with gait | continues away, shrinking with distance, partially occluded by phone after ~00:02.0 | feet alternately contact pavement in a normal walking cadence; no visible skating, clipping through railing, or planting violations; railing bars correctly occlude the body\",\n    \"red bag | carried in pedestrian's right hand, hanging at their side | still carried as pedestrian recedes | grip maintained; bag swings naturally with the walking motion; no release or floating\"\n  ],\n  \"findings\": []\n}"
+}

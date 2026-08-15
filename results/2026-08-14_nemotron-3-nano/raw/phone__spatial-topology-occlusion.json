@@ -1,0 +1,45 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:16:56.970Z",
+  "latencyMs": 9834,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 3055,
+    "total_tokens": 5258,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3151,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Stairs | ascending flight with railing on right and wall on left | same configuration, person walking up | no change",
+    "Railing | metal bars along right side of stairs | unchanged | no change",
+    "Wall | light-colored wall on left side of stairs | unchanged | no change",
+    "Floor | tiled pavement visible throughout | unchanged | no change",
+    "Greenery | small bushes near railing base | unchanged | no change",
+    "Phone | handheld device, screen shows numbers then blank, then removed | screen content changes, device removed | consistent with camera movement",
+    "Person | individual in blue shirt and jeans carrying red bag, walking up stairs on left side of railing | person exits frame | consistent with stairs geometry",
+    "Red bag | red bag carried by person | visible at start, not visible later | person moved out of frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Stairs | ascending flight with railing on right and wall on left | same configuration, person walking up | no change\",\n    \"Railing | metal bars along right side of stairs | unchanged | no change\",\n    \"Wall | light-colored wall on left side of stairs | unchanged | no change\",\n    \"Floor | tiled pavement visible throughout | unchanged | no change\",\n    \"Greenery | small bushes near railing base | unchanged | no change\",\n    \"Phone | handheld device, screen shows numbers then blank, then removed | screen content changes, device removed | consistent with camera movement\",\n    \"Person | individual in blue shirt and jeans carrying red bag, walking up stairs on left side of railing | person exits frame | consistent with stairs geometry\",\n    \"Red bag | red bag carried by person | visible at start, not visible later | person moved out of frame\"\n  ],\n  \"findings\": []\n}"
+}

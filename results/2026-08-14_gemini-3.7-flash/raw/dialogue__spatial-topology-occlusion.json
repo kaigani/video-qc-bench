@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:37:22.457Z",
+  "latencyMs": 6722,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 408,
+    "total_tokens": 1834,
+    "cost": 0.00129975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00129975,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.000765
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 279,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | foreground center facing camera | turned left, knocking on door at left | turns left and approaches door (00:06-00:09)",
+    "rear wooden door/panel | directly behind man with coat hook to left | visible to the right as camera pans left | continuously tracks correctly",
+    "left wooden door with switches | off-camera left initially | in front of man on left of frame | smoothly revealed as camera pans left (00:07-00:09)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | foreground center facing camera | turned left, knocking on door at left | turns left and approaches door (00:06-00:09)\",\n    \"rear wooden door/panel | directly behind man with coat hook to left | visible to the right as camera pans left | continuously tracks correctly\",\n    \"left wooden door with switches | off-camera left initially | in front of man on left of frame | smoothly revealed as camera pans left (00:07-00:09)\"\n  ],\n  \"findings\": []\n}"
+}

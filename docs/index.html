@@ -231,17 +231,17 @@ $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="labe
   $('lb-chart').appendChild(svg);
 
   $('lb-table').innerHTML = `<table>
-    <tr><th>System</th><th>Model id</th><th class="num">Score</th><th class="num">Detection</th><th class="num">Defects</th><th class="num">TP</th><th class="num">Extra</th><th class="num">FP</th><th class="num">Avg latency</th><th class="num">Run cost</th></tr>
+    <tr><th>System</th><th>Model id</th><th class="num">Score</th><th class="num">Detection</th><th class="num">Defects</th><th class="num">TP</th><th class="num">Extra</th><th class="num">FP</th><th class="num">Run cost</th></tr>
     ${sorted.map((m) => `<tr><td>${m.label}${m.reasoning ? ' <span class="chip">reasoning</span>' : ''}</td><td><code>${m.model}</code></td>
       <td class="num"><b>${m.detection - m.fp}</b></td><td class="num">${m.detection}/${DATA.maxScore}</td><td class="num">${m.defectsFound}/${DATA.defectsTotal}</td>
-      <td class="num">${m.tp}</td><td class="num">${m.extra}</td><td class="num">${m.fp}</td><td class="num">${m.avgLatencyS}s</td><td class="num">${fmt$(m.cost)}${m.costEstimated ? '*' : ''}</td></tr>`).join('')}
+      <td class="num">${m.tp}</td><td class="num">${m.extra}</td><td class="num">${m.fp}</td><td class="num">${fmt$(m.cost)}${m.costEstimated ? '*' : ''}</td></tr>`).join('')}
   </table><p style="color:var(--muted);font-size:12px;margin-top:6px">*estimated from TwelveLabs per-minute pricing; not metered per call.</p>`;
 })();
 
 // ---- cost vs detection scatter ----
 (function () {
   const W = 940, H = 320, mL = 60, mB = 44, mT = 14, mR = 30;
-  const maxC = 5, maxD = Math.ceil(Math.max(...M.map((m) => m.detection)) / 10) * 10;
+  const maxC = Math.ceil(Math.max(...M.map((m) => m.cost)) + 0.5), maxD = Math.ceil(Math.max(...M.map((m) => m.detection)) / 10) * 10;
   const x = (v) => mL + (W - mL - mR) * (v / maxC);
   const y = (v) => H - mB - (H - mB - mT) * (v / maxD);
   const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%' }, null);
@@ -256,11 +256,16 @@ $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="labe
   const xl = el('text', { x: (mL + W - mR) / 2, y: H - 6, 'text-anchor': 'middle' }, svg);
   xl.textContent = 'Full-run cost (84 calls)';
   const yl = el('text', { x: 14, y: mT + 10 }, svg); yl.textContent = 'Detection credit';
-  M.forEach((m) => {
+  const placed = [];
+  [...M].sort((a, b) => y(a.detection) - y(b.detection)).forEach((m) => {
     const c = el('circle', { cx: x(m.cost), cy: y(m.detection), r: 7, fill: css('--blue'), stroke: css('--surface'), 'stroke-width': 2 }, svg);
-    hover(c, `<div class="t">${m.label}</div><div class="d">${fmt$(m.cost)}${m.costEstimated ? ' (est.)' : ''} · detection ${m.detection} · ${m.fp} FPs · ~${m.avgLatencyS}s/call</div>`);
-    const anchor = m.key === 'gemma' ? 'start' : m.key === 'flash' ? 'start' : 'start';
-    const lbl = el('text', { x: x(m.cost) + 11, y: y(m.detection) + 4, 'text-anchor': anchor, class: 'val' }, svg);
+    hover(c, `<div class="t">${m.label}</div><div class="d">${fmt$(m.cost)}${m.costEstimated ? ' (est.)' : ''} · detection ${m.detection} · ${m.fp} FPs</div>`);
+    // nudge labels down until they don't collide with an already-placed label
+    let ly = y(m.detection) + 4;
+    const lx = x(m.cost) + 11, w = m.label.length * 7;
+    while (placed.some((p) => Math.abs(p.y - ly) < 14 && lx < p.x + p.w && p.x < lx + w)) ly += 14;
+    placed.push({ x: lx, y: ly, w });
+    const lbl = el('text', { x: lx, y: ly, class: 'val' }, svg);
     lbl.textContent = m.label;
   });
   $('cost-chart').appendChild(svg);

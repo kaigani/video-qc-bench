@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:15:15.557Z",
+  "latencyMs": 9016,
+  "usage": {
+    "prompt_tokens": 6722,
+    "completion_tokens": 13713,
+    "total_tokens": 20435,
+    "cost": 0.0376435,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0376435,
+      "upstream_inference_prompt_cost": 0.003361,
+      "upstream_inference_completions_cost": 0.0342825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13419,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman with blue umbrella | holds red fruit in right hand, umbrella in left, facing camera | holds umbrella with both hands, no red fruit visible, facing away from camera | transfers fruit to left hand, turns body to her right, fruit disappears from view",
+    "red fruit (apple/tomato) | held in woman's right hand | not visible in any hand | transferred to left hand, then vanishes without visible disposal",
+    "blue umbrella | held in woman's left hand, open above her | held in both of woman's hands, open above her | woman moves right hand to grip umbrella shaft"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red fruit held by the woman",
+      "invariant_violated": "unexplained object disappearance",
+      "description": "The red round fruit (apple/tomato) the woman is holding vanishes from her hand between 0:07 and 0:08. There is no visible motion of her placing the fruit in a pocket, bag, or elsewhere, and both of her hands are subsequently visible gripping the umbrella shaft with no sign of the fruit.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman with blue umbrella | holds red fruit in right hand, umbrella in left, facing camera | holds umbrella with both hands, no red fruit visible, facing away from camera | transfers fruit to left hand, turns body to her right, fruit disappears from view\",\n    \"red fruit (apple/tomato) | held in woman's right hand | not visible in any hand | transferred to left hand, then vanishes without visible disposal\",\n    \"blue umbrella | held in woman's left hand, open above her | held in both of woman's hands, open above her | woman moves right hand to grip umbrella shaft\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"red fruit held by the woman\",\n      \"invariant_violated\": \"unexplained object disappearance\",\n      \"description\": \"The red round fruit (apple/tomato) the woman is holding vanishes from her hand between 0:07 and 0:08. There is no visible motion of her placing the fruit in a pocket, bag, or elsewhere, and both of her hands are subsequently visible gripping the umbrella shaft with no sign of the fruit.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

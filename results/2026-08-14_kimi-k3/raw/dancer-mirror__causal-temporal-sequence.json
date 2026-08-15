@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:00:21.571Z",
+  "latencyMs": 6191,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 744,
+    "total_tokens": 25392,
+    "cost": 0.0837216,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0837216,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.01116
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 496,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer | standing facing mirror, arms relaxed at sides, feet together | standing in held pose, right arm raised overhead with curved wrist, left arm at side, feet in wide stance | right arm sweeps continuously outward and up (00:00-00:02), reaches overhead apex ~00:02, lowers through second position toward hip (00:02.5-00:04.5), steps into wider stance with weight shift (00:04.5-00:05.5), arm sweeps out and up again (00:06-00:07), holds final pose with subtle foot/heel adjustment ~00:08.6",
+    "mirror reflection | matches dancer's starting pose | matches dancer's ending pose | reflection moves synchronously with every arm sweep, step, and pose hold throughout — no lag, lead, or mismatch detected",
+    "studio environment (doors, exit signs, ceiling lights, barre, poster) | static, lights on, doors closed | unchanged | no interactions, no light changes, no door motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer | standing facing mirror, arms relaxed at sides, feet together | standing in held pose, right arm raised overhead with curved wrist, left arm at side, feet in wide stance | right arm sweeps continuously outward and up (00:00-00:02), reaches overhead apex ~00:02, lowers through second position toward hip (00:02.5-00:04.5), steps into wider stance with weight shift (00:04.5-00:05.5), arm sweeps out and up again (00:06-00:07), holds final pose with subtle foot/heel adjustment ~00:08.6\",\n    \"mirror reflection | matches dancer's starting pose | matches dancer's ending pose | reflection moves synchronously with every arm sweep, step, and pose hold throughout — no lag, lead, or mismatch detected\",\n    \"studio environment (doors, exit signs, ceiling lights, barre, poster) | static, lights on, doors closed | unchanged | no interactions, no light changes, no door motion\"\n  ],\n  \"findings\": []\n}"
+}

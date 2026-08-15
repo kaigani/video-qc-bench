@@ -1,0 +1,75 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:46:23.801Z",
+  "latencyMs": 14256,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 3142,
+    "total_tokens": 27609,
+    "cost": 0.1198398,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1198398,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.04713
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2418,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman | navy cardigan, light gray shorts, ponytail, silver watch, holding blue umbrella and red apple | same outfit, but apple no longer in hands | apple vanishes from clasped hands around 00:08 without any discard motion",
+    "Blue umbrella | light sky-blue canopy | dark navy canopy mid-video, light blue again by 00:09 | canopy color shifts darker ~00:03.5 and reverts ~00:09 with no matching lighting change",
+    "Red apple | held in right hand, gestured with | absent from both hands | present through 00:07.5, gone by 00:08.1 while hands stay clasped at chest",
+    "Background pedestrians (man in green shirt/sunglasses, woman in red polo, passersby) | walking through market aisle | continue walking | mostly plausible motion; some background figures hold near-constant size/position relative to camera for extended spans",
+    "Produce stalls | crates of tomatoes, peppers, limes; hanging produce bags; price sign upper-left | includes crates of vivid teal/cyan round fruit; sign text illegible | teal-colored produce and garbled signage persist in later frames"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.083",
+      "entity": "Red apple in woman's hands",
+      "invariant_violated": "object permanence / continuity",
+      "description": "The woman clasps both hands around the apple at ~00:07.5, but by 00:08.1 the apple is gone from her clasped hands with no dropping, pocketing, or handoff motion shown; it remains absent through the end of the clip.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03.541",
+      "entity": "Blue umbrella canopy",
+      "invariant_violated": "color consistency",
+      "description": "The umbrella canopy shifts from light sky-blue to dark navy around 00:03.5, stays dark through ~00:08.6, then appears light blue again at 00:09.1; the ambient lighting on the subject does not change enough to explain the fabric color flip.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:04.041",
+      "entity": "Fruit in lower-left crates",
+      "invariant_violated": "plausible object appearance",
+      "description": "A crate of uniformly teal/cyan-colored round fruit appears at the lower-left stall (also visible at 00:04.5 and 00:05.5); no common produce matches that saturated cyan hue, suggesting a color-generation artifact.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00.000",
+      "entity": "Hanging sign, upper-left stall",
+      "invariant_violated": "legible text",
+      "description": "The white hanging sign shows garbled, non-readable pseudo-text/symbols (persists in multiple frames), a typical text-rendering artifact that would need cleanup for publishable footage.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman | navy cardigan, light gray shorts, ponytail, silver watch, holding blue umbrella and red apple | same outfit, but apple no longer in hands | apple vanishes from clasped hands around 00:08 without any discard motion\",\n    \"Blue umbrella | light sky-blue canopy | dark navy canopy mid-video, light blue again by 00:09 | canopy color shifts darker ~00:03.5 and reverts ~00:09 with no matching lighting change\",\n    \"Red apple | held in right hand, gestured with | absent from both hands | present through 00:07.5, gone by 00:08.1 while hands stay clasped at chest\",\n    \"Background pedestrians (man in green shirt/sunglasses, woman in red polo, passersby) | walking through market aisle | continue walking | mostly plausible motion; some background figures hold near-constant size/position relative to camera for extended spans\",\n    \"Produce stalls | crates of tomatoes, peppers, limes; hanging produce bags; price sign upper-left | includes crates of vivid teal/cyan round fruit; sign text illegible | teal-colored produce and garbled signage persist in later frames\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08.083\",\n      \"entity\": \"Red apple in woman's hands\",\n      \"invariant_violated\": \"object permanence / continuity\",\n      \"description\": \"The woman clasps both hands around the apple at ~00:07.5, but by 00:08.1 the apple is gone from her clasped hands with no dropping, pocketing, or handoff motion shown; it remains absent through the end of the clip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:03.541\",\n      \"entity\": \"Blue umbrella canopy\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The umbrella canopy shifts from light sky-blue to dark navy around 00:03.5, stays dark through ~00:08.6, then appears light blue again at 00:09.1; the ambient lighting on the subject does not change enough to explain the fabric color flip.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"00:04.041\",\n      \"entity\": \"Fruit in lower-left crates\",\n      \"invariant_violated\": \"plausible object appearance\",\n      \"description\": \"A crate of uniformly teal/cyan-colored round fruit appears at the lower-left stall (also visible at 00:04.5 and 00:05.5); no common produce matches that saturated cyan hue, suggesting a color-generation artifact.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"00:00.000\",\n      \"entity\": \"Hanging sign, upper-left stall\",\n      \"invariant_violated\": \"legible text\",\n      \"description\": \"The white hanging sign shows garbled, non-readable pseudo-text/symbols (persists in multiple frames), a typical text-rendering artifact that would need cleanup for publishable footage.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

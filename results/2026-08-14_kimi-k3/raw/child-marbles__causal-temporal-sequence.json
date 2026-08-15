@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:55:34.065Z",
+  "latencyMs": 7534,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 789,
+    "total_tokens": 25437,
+    "cost": 0.085779,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.085779,
+      "upstream_inference_prompt_cost": 0.073944,
+      "upstream_inference_completions_cost": 0.011835
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 492,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's right hand | raised above bowl | stirring balls inside bowl | reaches down (~00:00.500), grasps two red balls (~00:01.000), lifts and holds them (~00:01.500-00:02.041), releases them back into bowl (~00:02.041-00:02.541), then swirls/stirs the balls continuously (~00:05.083 onward)",
+    "child's left hand | raised above bowl | resting on bowl rim | enters bowl with right hand (~00:00.500), assists holding red balls (~00:01.000-00:02.041), releases and settles on rim (~00:02.541)",
+    "two red balls | resting in bowl | resting in bowl | lifted by hands (~00:01.000), held suspended (~00:01.500-00:02.041), dropped back into bowl and settle among other balls (~00:02.541) — release precedes fall, fall precedes settling",
+    "ball cluster in bowl | settled at bottom | circulating/rolling around bowl | remain settled until hand contacts them (~00:02.541 gentle repositioning; ~00:05.083 onward vigorous stirring), motion begins only on hand contact and scales with hand speed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child's right hand | raised above bowl | stirring balls inside bowl | reaches down (~00:00.500), grasps two red balls (~00:01.000), lifts and holds them (~00:01.500-00:02.041), releases them back into bowl (~00:02.041-00:02.541), then swirls/stirs the balls continuously (~00:05.083 onward)\",\n    \"child's left hand | raised above bowl | resting on bowl rim | enters bowl with right hand (~00:00.500), assists holding red balls (~00:01.000-00:02.041), releases and settles on rim (~00:02.541)\",\n    \"two red balls | resting in bowl | resting in bowl | lifted by hands (~00:01.000), held suspended (~00:01.500-00:02.041), dropped back into bowl and settle among other balls (~00:02.541) — release precedes fall, fall precedes settling\",\n    \"ball cluster in bowl | settled at bottom | circulating/rolling around bowl | remain settled until hand contacts them (~00:02.541 gentle repositioning; ~00:05.083 onward vigorous stirring), motion begins only on hand contact and scales with hand speed\"\n  ],\n  \"findings\": []\n}"
+}

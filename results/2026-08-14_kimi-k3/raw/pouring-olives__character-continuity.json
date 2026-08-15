@@ -1,0 +1,47 @@
+{
+  "key": "pouring-olives__character-continuity",
+  "video": "pouring-olives.mp4",
+  "role": "character-continuity",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:29:05.248Z",
+  "latencyMs": 6218,
+  "usage": {
+    "prompt_tokens": 24646,
+    "completion_tokens": 5840,
+    "total_tokens": 30486,
+    "cost": 0.1601556,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1601556,
+      "upstream_inference_prompt_cost": 0.0725556,
+      "upstream_inference_completions_cost": 0.0876
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5541,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person (olive pourer, face never in frame) | navy blue button-up overshirt over white t-shirt, rolled sleeves, khaki pants; standing behind wooden counter facing camera/jar | same wardrobe and position at end; silver chain bracelet visible on left wrist in later frames | left wrist appears bare in 00:00-00:04 frames, bracelet present from ~00:04.5 onward; body stays behind jar throughout, actions continuous across camera angle shifts at ~00:04.5 and ~00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Person's left wrist (accessory)",
+      "invariant_violated": "identity/accessory continuity",
+      "description": "A silver chain bracelet is clearly visible on the person's left wrist from ~00:04.5 onward (reaching to the bowl, then holding the container). In the earlier pouring sequence (00:00.0-00:04.0) the same left wrist and forearm are bare with rolled sleeves and no bracelet is visible. No on-screen action shows the bracelet being put on, and the pouring task is continuous, so its sudden appearance is unexplained.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Person (olive pourer, face never in frame) | navy blue button-up overshirt over white t-shirt, rolled sleeves, khaki pants; standing behind wooden counter facing camera/jar | same wardrobe and position at end; silver chain bracelet visible on left wrist in later frames | left wrist appears bare in 00:00-00:04 frames, bracelet present from ~00:04.5 onward; body stays behind jar throughout, actions continuous across camera angle shifts at ~00:04.5 and ~00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Person's left wrist (accessory)\",\n      \"invariant_violated\": \"identity/accessory continuity\",\n      \"description\": \"A silver chain bracelet is clearly visible on the person's left wrist from ~00:04.5 onward (reaching to the bowl, then holding the container). In the earlier pouring sequence (00:00.0-00:04.0) the same left wrist and forearm are bare with rolled sleeves and no bracelet is visible. No on-screen action shows the bracelet being put on, and the pouring task is continuous, so its sudden appearance is unexplained.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

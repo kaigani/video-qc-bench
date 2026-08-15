@@ -1,0 +1,41 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:36:37.345Z",
+  "latencyMs": 15228,
+  "usage": {
+    "prompt_tokens": 10631,
+    "completion_tokens": 1310,
+    "total_tokens": 11941,
+    "cost": 0.006442875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006442875,
+      "upstream_inference_prompt_cost": 0.003986625,
+      "upstream_inference_completions_cost": 0.00245625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1156,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner building | standalone diner with front glass windows, counter on right, booths on left | same consistent spatial layout | interior and exterior established consistently",
+    "diner counter & stools | foreground-to-midground curved counter with swivel stools on customer side | consistent position relative to booths and rear service area | tracked across multiple interior angles",
+    "kitchen pass-through window | opening in rear wall behind counter connecting kitchen to dining room | consistent position relative to coffee machines and counter | maintained across wide and reverse shots",
+    "truck | semi-truck parked outside diner lot | positioned consistently outside diner windows | seen from exterior and through windows"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"diner building | standalone diner with front glass windows, counter on right, booths on left | same consistent spatial layout | interior and exterior established consistently\",\n    \"diner counter & stools | foreground-to-midground curved counter with swivel stools on customer side | consistent position relative to booths and rear service area | tracked across multiple interior angles\",\n    \"kitchen pass-through window | opening in rear wall behind counter connecting kitchen to dining room | consistent position relative to coffee machines and counter | maintained across wide and reverse shots\",\n    \"truck | semi-truck parked outside diner lot | positioned consistently outside diner windows | seen from exterior and through windows\"\n  ],\n  \"findings\": []\n}"
+}

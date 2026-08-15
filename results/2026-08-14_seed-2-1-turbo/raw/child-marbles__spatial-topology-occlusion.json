@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:43:12.727Z",
+  "latencyMs": 6174,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 13968,
+    "total_tokens": 20879,
+    "cost": 0.0383755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0383755,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.03492
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13659,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden outdoor table | fixed, left edge adjacent to child, holds bowl and decorative cup | remains stationary relative to background | camera dollys in toward bowl over sequence, reducing visible table area",
+    "Glass mixing bowl | on left-center of table, contains colored balls | stays fixed on table surface | appears larger as camera moves closer, eventually filling most of the frame",
+    "Decorative small cup (metal base, leaf-wrapped egg) | on right side of table, right of bowl | remains in fixed position on table | moves out of right frame as camera zooms in",
+    "Patio stone paving | background behind/left of table | consistent layout across all shots | visible in background, more area seen when camera is wider",
+    "Terracotta plant pots | far background, against right wall | fixed positions | visible in wider shots, out of frame in close-ups",
+    "Child (torso/arms/hands) | positioned left of table, reaching into bowl | stays left of table, moves hands inside bowl | arms/hands move closer to camera as shot progresses",
+    "Colored plastic balls (red, green, yellow) | start inside bowl, 8 total (2 red, 3 green, 3 yellow) | remain inside bowl (except when briefly held by child) | moved around by child's hands, stirred in later shots"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden outdoor table | fixed, left edge adjacent to child, holds bowl and decorative cup | remains stationary relative to background | camera dollys in toward bowl over sequence, reducing visible table area\",\n    \"Glass mixing bowl | on left-center of table, contains colored balls | stays fixed on table surface | appears larger as camera moves closer, eventually filling most of the frame\",\n    \"Decorative small cup (metal base, leaf-wrapped egg) | on right side of table, right of bowl | remains in fixed position on table | moves out of right frame as camera zooms in\",\n    \"Patio stone paving | background behind/left of table | consistent layout across all shots | visible in background, more area seen when camera is wider\",\n    \"Terracotta plant pots | far background, against right wall | fixed positions | visible in wider shots, out of frame in close-ups\",\n    \"Child (torso/arms/hands) | positioned left of table, reaching into bowl | stays left of table, moves hands inside bowl | arms/hands move closer to camera as shot progresses\",\n    \"Colored plastic balls (red, green, yellow) | start inside bowl, 8 total (2 red, 3 green, 3 yellow) | remain inside bowl (except when briefly held by child) | moved around by child's hands, stirred in later shots\"\n  ],\n  \"findings\": []\n}"
+}

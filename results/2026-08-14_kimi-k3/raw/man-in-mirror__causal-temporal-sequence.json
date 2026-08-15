@@ -1,0 +1,42 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:19:36.556Z",
+  "latencyMs": 4659,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 1664,
+    "total_tokens": 26312,
+    "cost": 0.0975216,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0975216,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.02496
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1366,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | white shirt, dark hair, standing at bathroom mirror, holding small white applicator at his chin | same posture, still grooming, applicator in right hand | hand travels chin/jaw (00:00-00:02) → forehead/hairline (00:02-00:04.5) → jaw/upper lip (00:05-00:09) → hairline again (00:09.6); each arc is continuous and completes",
+    "applicator tool | in right hand, contact with chin | in right hand, rising toward temple | never leaves the hand; position at every frame lies on a continuous path between face and hairline",
+    "mirror reflection | shows man's front with applicator at chin | shows applicator at temple | reflection hand position matches the real hand's lateral position (both near frame center when raised) with no perceptible delay at any sampled frame",
+    "product on face | white patch at chin/lower lip at 00:00 | spread along jaw and upper-lip area by 00:08 | changes only where and when the applicator makes contact; no appearance of product away from the tool's path",
+    "background (door, shelves, light switch, walls) | static | static | no changes; lighting constant throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | white shirt, dark hair, standing at bathroom mirror, holding small white applicator at his chin | same posture, still grooming, applicator in right hand | hand travels chin/jaw (00:00-00:02) → forehead/hairline (00:02-00:04.5) → jaw/upper lip (00:05-00:09) → hairline again (00:09.6); each arc is continuous and completes\",\n    \"applicator tool | in right hand, contact with chin | in right hand, rising toward temple | never leaves the hand; position at every frame lies on a continuous path between face and hairline\",\n    \"mirror reflection | shows man's front with applicator at chin | shows applicator at temple | reflection hand position matches the real hand's lateral position (both near frame center when raised) with no perceptible delay at any sampled frame\",\n    \"product on face | white patch at chin/lower lip at 00:00 | spread along jaw and upper-lip area by 00:08 | changes only where and when the applicator makes contact; no appearance of product away from the tool's path\",\n    \"background (door, shelves, light switch, walls) | static | static | no changes; lighting constant throughout\"\n  ],\n  \"findings\": []\n}"
+}

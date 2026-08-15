@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:20:06.391Z",
+  "latencyMs": 3520,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 11663,
+    "total_tokens": 13866,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11587,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "bowl | concave concrete structure visible to right of skateboarder | not visible (out of view) | camera pans away from bowl",
+    "bench | low concrete bench visible to right of skateboarder | not visible (out of view) | camera pans away from bench",
+    "light pole | tall pole on left side of scene | visible throughout | consistent position",
+    "ramp | quarter pipe ramp visible after frame 0.4 | visible throughout later frames | skateboarder rides on ramp",
+    "ground | flat concrete surface | visible throughout | consistent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"bowl | concave concrete structure visible to right of skateboarder | not visible (out of view) | camera pans away from bowl\",\n    \"bench | low concrete bench visible to right of skateboarder | not visible (out of view) | camera pans away from bench\",\n    \"light pole | tall pole on left side of scene | visible throughout | consistent position\",\n    \"ramp | quarter pipe ramp visible after frame 0.4 | visible throughout later frames | skateboarder rides on ramp\",\n    \"ground | flat concrete surface | visible throughout | consistent\"\n  ],\n  \"findings\": []\n}"
+}

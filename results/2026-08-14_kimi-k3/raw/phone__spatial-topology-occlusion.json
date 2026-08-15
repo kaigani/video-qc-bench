@@ -1,0 +1,44 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:26:18.423Z",
+  "latencyMs": 5495,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 7915,
+    "total_tokens": 32567,
+    "cost": 0.1912986,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1912986,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.118725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7587,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Staircase | descends from camera position, visible lower-left at start with tread edges stacked | centered in frame at end after camera tilts down | apparent positional shift fully explained by camera pan/tilt; geometry consistent",
+    "Building wall (light brick) | runs along left side of staircase | still on left in final frame | static; consistent across all angles",
+    "Green metal railing | right side of staircase, diagonal top rail with evenly spaced vertical balusters | same configuration at end, descending parallel to stairs | static; consistent spacing and attachment",
+    "Planter with shrubs | at base of railing on right, between stairs and plaza | same location at end | static; consistent",
+    "Paved plaza | lies beyond the stairs/railing, seen upper-frame early | out of frame at end due to downward camera tilt | consistent stone-paver pattern throughout",
+    "Woman in blue carrying red bags | enters top-right of frame, close, partially cropped | far down plaza near building wall, small | walks continuously right-to-left away from camera, shrinking smoothly with distance; after ~00:03 she is occluded by the raised phone, which geometrically covers her expected position",
+    "Smartphone held in two hands | foreground center-left, occluding stairs and plaza | pushed toward camera 00:03-00:09, then lowered out of frame bottom | always renders in front of background; no depth-ordering inversions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Staircase | descends from camera position, visible lower-left at start with tread edges stacked | centered in frame at end after camera tilts down | apparent positional shift fully explained by camera pan/tilt; geometry consistent\",\n    \"Building wall (light brick) | runs along left side of staircase | still on left in final frame | static; consistent across all angles\",\n    \"Green metal railing | right side of staircase, diagonal top rail with evenly spaced vertical balusters | same configuration at end, descending parallel to stairs | static; consistent spacing and attachment\",\n    \"Planter with shrubs | at base of railing on right, between stairs and plaza | same location at end | static; consistent\",\n    \"Paved plaza | lies beyond the stairs/railing, seen upper-frame early | out of frame at end due to downward camera tilt | consistent stone-paver pattern throughout\",\n    \"Woman in blue carrying red bags | enters top-right of frame, close, partially cropped | far down plaza near building wall, small | walks continuously right-to-left away from camera, shrinking smoothly with distance; after ~00:03 she is occluded by the raised phone, which geometrically covers her expected position\",\n    \"Smartphone held in two hands | foreground center-left, occluding stairs and plaza | pushed toward camera 00:03-00:09, then lowered out of frame bottom | always renders in front of background; no depth-ordering inversions\"\n  ],\n  \"findings\": []\n}"
+}

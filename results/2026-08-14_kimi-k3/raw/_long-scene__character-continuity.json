@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:48:33.009Z",
+  "latencyMs": 12033,
+  "usage": {
+    "prompt_tokens": 42704,
+    "completion_tokens": 9461,
+    "total_tokens": 52165,
+    "cost": 0.1591893,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 41051,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1591893,
+      "upstream_inference_prompt_cost": 0.0172743,
+      "upstream_inference_completions_cost": 0.141915
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8613,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | first seen 00:10 behind the counter wiping it: graying brown hair in a bun, light blue short-sleeve polo, white apron, glasses hanging on a cord at her chest | identical wardrobe/hair at final sighting 01:58 | positions: behind counter near coffee machines (00:10-00:18) -> behind counter right side as man enters (00:18-00:26) -> pours coffee for him (00:24-00:31) -> at kitchen pass-through wiping, man visible behind her at front-end stool (00:45-00:50) -> behind counter right side, morning (00:59-01:16) -> comes around counter and sits on stool to the man's right (his right/frame-left in reverse angle) with her own mug (01:20-01:34) -> standing at front window watching him leave (01:45-01:49) -> clears his counter spot, walks toward back (01:50-01:58); in the final static shot she is visible in two places at once and then fades out of the frame entirely",
+    "Trucker (male customer) | first seen 00:19 emerging from a rear door: gray hair, gray goatee/stubble, tan-brown jacket over plaid shirt, blue jeans | identical wardrobe/build at final sighting 01:49 climbing into truck cab | positions: enters from back-right door, walks down dining-side aisle toward front (00:19-00:24, one continuous take) -> sits on front-end counter stool (00:24-00:26) -> seated same spot while coffee is poured, his left hand on counter (00:26-00:31) -> seated same end with mug and plate, facing camera (00:35-00:44) -> still at front-end stool seen through pass-through behind waitress (00:45-00:50) -> absent during night-to-dawn empty time-lapse (00:51-00:58) -> seated at counter, morning (00:59-01:16) -> seated with waitress on his right (01:26-01:34) -> his hands place folded bills by his mug (01:37-01:40) -> outside walking away from diner toward semi truck, seen through window (01:41-01:44) -> climbs into cab (01:45-01:49); during the walk a translucent duplicate of him trails his body"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:42",
+      "entity": "Trucker (man in brown jacket)",
+      "invariant_violated": "single-instance identity (no duplication)",
+      "description": "In one continuous shot through the diner window, as the man walks toward the truck, a semi-transparent second copy of him (face and torso clearly offset behind his body) trails his movement, so the character occupies two positions simultaneously within the same take. There is no in-scene explanation; it reads as a deliberate ghosting/long-exposure effect rather than a tracking error.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "single-instance placement / unexplained disappearance",
+      "description": "In a static wide shot the same waitress is visible in two places at once: one instance wipes near the kitchen pass-through at the back while a second, simultaneously visible instance works at the coffee-machine counter on the right. Both instances then converge toward the rear and progressively fade to transparency until no person remains in frame by ~01:58, all within a single held shot. A person cannot be duplicated or dematerialize on camera; unexplained except as a stylized time-lapse/ghost effect.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | first seen 00:10 behind the counter wiping it: graying brown hair in a bun, light blue short-sleeve polo, white apron, glasses hanging on a cord at her chest | identical wardrobe/hair at final sighting 01:58 | positions: behind counter near coffee machines (00:10-00:18) -> behind counter right side as man enters (00:18-00:26) -> pours coffee for him (00:24-00:31) -> at kitchen pass-through wiping, man visible behind her at front-end stool (00:45-00:50) -> behind counter right side, morning (00:59-01:16) -> comes around counter and sits on stool to the man's right (his right/frame-left in reverse angle) with her own mug (01:20-01:34) -> standing at front window watching him leave (01:45-01:49) -> clears his counter spot, walks toward back (01:50-01:58); in the final static shot she is visible in two places at once and then fades out of the frame entirely\",\n    \"Trucker (male customer) | first seen 00:19 emerging from a rear door: gray hair, gray goatee/stubble, tan-brown jacket over plaid shirt, blue jeans | identical wardrobe/build at final sighting 01:49 climbing into truck cab | positions: enters from back-right door, walks down dining-side aisle toward front (00:19-00:24, one continuous take) -> sits on front-end counter stool (00:24-00:26) -> seated same spot while coffee is poured, his left hand on counter (00:26-00:31) -> seated same end with mug and plate, facing camera (00:35-00:44) -> still at front-end stool seen through pass-through behind waitress (00:45-00:50) -> absent during night-to-dawn empty time-lapse (00:51-00:58) -> seated at counter, morning (00:59-01:16) -> seated with waitress on his right (01:26-01:34) -> his hands place folded bills by his mug (01:37-01:40) -> outside walking away from diner toward semi truck, seen through window (01:41-01:44) -> climbs into cab (01:45-01:49); during the walk a translucent duplicate of him trails his body\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:42\",\n      \"entity\": \"Trucker (man in brown jacket)\",\n      \"invariant_violated\": \"single-instance identity (no duplication)\",\n      \"description\": \"In one continuous shot through the diner window, as the man walks toward the truck, a semi-transparent second copy of him (face and torso clearly offset behind his body) trails his movement, so the character occupies two positions simultaneously within the same take. There is no in-scene explanation; it reads as a deliberate ghosting/long-exposure effect rather than a tracking error.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"single-instance placement / unexplained disappearance\",\n      \"description\": \"In a static wide shot the same waitress is visible in two places at once: one instance wipes near the kitchen pass-through at the back while a second, simultaneously visible instance works at the coffee-machine counter on the right. Both instances then converge toward the rear and progressively fade to transparency until no person remains in frame by ~01:58, all within a single held shot. A person cannot be duplicated or dematerialize on camera; unexplained except as a stylized time-lapse/ghost effect.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

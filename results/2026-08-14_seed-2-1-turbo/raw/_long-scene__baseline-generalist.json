@@ -1,0 +1,57 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:40:26.968Z",
+  "latencyMs": 25464,
+  "usage": {
+    "prompt_tokens": 30035,
+    "completion_tokens": 12385,
+    "total_tokens": 42420,
+    "cost": 0.04598,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 30008,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04598,
+      "upstream_inference_prompt_cost": 0.0150175,
+      "upstream_inference_completions_cost": 0.0309625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11994,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "trucker (man in brown jacket) | enters diner at night | leaves for truck at dawn | drinks coffee, eats meal, interacts with waitress",
+    "waitress (woman in blue shirt, apron) | wiping counter at night | cleaning diner at dawn | serves trucker, sits and talks with him",
+    "semi truck | white aerodynamic cab, dark unstriped trailer (dusk, opening) | dark green long-hood cab, green trailer with white horizontal stripe (dawn, ending) | inconsistent appearance between opening and closing scenes"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "trucker's semi truck",
+      "invariant_violated": "vehicle continuity",
+      "description": "The truck outside the diner changes from a white aerodynamic-cab semi with a dark unstriped trailer (visible at the opening of the video) to a dark green long-hood semi with a green trailer and white horizontal stripe when the man leaves at dawn, with no narrative explanation for the change.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:09",
+      "entity": "waitress and food plate",
+      "invariant_violated": "implausible character action",
+      "description": "The waitress places a full plate of food in front of the customer, then immediately picks it up and carries it away with no visible indication the customer rejected the food or asked for it to be removed, which is inconsistent with normal diner service.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"trucker (man in brown jacket) | enters diner at night | leaves for truck at dawn | drinks coffee, eats meal, interacts with waitress\",\n    \"waitress (woman in blue shirt, apron) | wiping counter at night | cleaning diner at dawn | serves trucker, sits and talks with him\",\n    \"semi truck | white aerodynamic cab, dark unstriped trailer (dusk, opening) | dark green long-hood cab, green trailer with white horizontal stripe (dawn, ending) | inconsistent appearance between opening and closing scenes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"trucker's semi truck\",\n      \"invariant_violated\": \"vehicle continuity\",\n      \"description\": \"The truck outside the diner changes from a white aerodynamic-cab semi with a dark unstriped trailer (visible at the opening of the video) to a dark green long-hood semi with a green trailer and white horizontal stripe when the man leaves at dawn, with no narrative explanation for the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:09\",\n      \"entity\": \"waitress and food plate\",\n      \"invariant_violated\": \"implausible character action\",\n      \"description\": \"The waitress places a full plate of food in front of the customer, then immediately picks it up and carries it away with no visible indication the customer rejected the food or asked for it to be removed, which is inconsistent with normal diner service.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

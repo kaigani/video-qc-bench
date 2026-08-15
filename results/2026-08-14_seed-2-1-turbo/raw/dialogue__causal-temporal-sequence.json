@@ -1,0 +1,42 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:44:33.333Z",
+  "latencyMs": 4608,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 3680,
+    "total_tokens": 10591,
+    "cost": 0.0126555,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0126555,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0092
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3513,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (green/white striped shirt) | standing facing camera, speaking | standing at left wooden door, knocking on it | transitions: speaks → stops speaking → turns head left → turns body left → walks left → stops at door → raises hands → knocks on door",
+    "Left interior wooden door | closed, stationary | closed, stationary | impacted by man's hands during knocking (no visible displacement, proportional to force)",
+    "Blue jacket on wall hook | hanging stationary | hanging stationary | no movement",
+    "Rear wooden door (with glass insert) | closed, stationary | closed, stationary | no movement",
+    "Wall fixtures / framed artwork | stationary | stationary | no visible changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (green/white striped shirt) | standing facing camera, speaking | standing at left wooden door, knocking on it | transitions: speaks → stops speaking → turns head left → turns body left → walks left → stops at door → raises hands → knocks on door\",\n    \"Left interior wooden door | closed, stationary | closed, stationary | impacted by man's hands during knocking (no visible displacement, proportional to force)\",\n    \"Blue jacket on wall hook | hanging stationary | hanging stationary | no movement\",\n    \"Rear wooden door (with glass insert) | closed, stationary | closed, stationary | no movement\",\n    \"Wall fixtures / framed artwork | stationary | stationary | no visible changes\"\n  ],\n  \"findings\": []\n}"
+}

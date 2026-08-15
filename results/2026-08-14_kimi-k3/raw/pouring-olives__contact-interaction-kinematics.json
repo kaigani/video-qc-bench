@@ -1,0 +1,51 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:30:59.043Z",
+  "latencyMs": 7851,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 7220,
+    "total_tokens": 31885,
+    "cost": 0.1809126,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1809126,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.1083
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6711,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person (hands/arms) | start: both hands hold a small glass bowl of olives above the large jar | end: hands finishing emptying the refilled bowl into the jar | transitions: pour #1 (right hand guides olives, left hand holds bowl), bowl carried off-frame right ~00:00:04.0, hands scoop olives from metal bowl ~00:00:05.0, pour #2 with bowl back in hand ~00:00:06.0-00:00:09.6",
+    "small glass bowl | start: full of olives, held tilted over jar mouth | end: emptied again, lifted away from jar | transitions: drained during pour #1, moved off-frame right ~00:00:04.0, reappears in hand full of olives ~00:00:06.0 (refill occurs between frames/off-screen), drained during pour #2",
+    "large glass jar | start: empty, resting on wooden board | end: filled with green and dark olives | transitions: olives drop in under gravity during both pours; jar remains stationary and supported on the board throughout",
+    "metal bowl | start: full of green olives on counter | end: partially emptied | transitions: hands cup and lift a portion of olives from it ~00:00:05.0 with visible contact",
+    "olives (loose) | start: heaped in small bowl and metal bowl | end: settled inside large jar | transitions: fall in a continuous stream from bowl rim into jar; last olives pushed out by fingers; individual drops released from fingers ~00:00:03.5"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02.041",
+      "entity": "dark olives inside large jar",
+      "invariant_violated": "weight & support",
+      "description": "A vertical column of dark olives stands roughly 4-5 olives high in the center of the jar, rising well above the surrounding fill level with no lateral support on its upper half. Round, smooth spheres cannot remain stacked in a free-standing vertical tower; the column persists unchanged through 00:04.541 instead of toppling, indicating the objects are holding position without physical support.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person (hands/arms) | start: both hands hold a small glass bowl of olives above the large jar | end: hands finishing emptying the refilled bowl into the jar | transitions: pour #1 (right hand guides olives, left hand holds bowl), bowl carried off-frame right ~00:00:04.0, hands scoop olives from metal bowl ~00:00:05.0, pour #2 with bowl back in hand ~00:00:06.0-00:00:09.6\",\n    \"small glass bowl | start: full of olives, held tilted over jar mouth | end: emptied again, lifted away from jar | transitions: drained during pour #1, moved off-frame right ~00:00:04.0, reappears in hand full of olives ~00:00:06.0 (refill occurs between frames/off-screen), drained during pour #2\",\n    \"large glass jar | start: empty, resting on wooden board | end: filled with green and dark olives | transitions: olives drop in under gravity during both pours; jar remains stationary and supported on the board throughout\",\n    \"metal bowl | start: full of green olives on counter | end: partially emptied | transitions: hands cup and lift a portion of olives from it ~00:00:05.0 with visible contact\",\n    \"olives (loose) | start: heaped in small bowl and metal bowl | end: settled inside large jar | transitions: fall in a continuous stream from bowl rim into jar; last olives pushed out by fingers; individual drops released from fingers ~00:00:03.5\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02.041\",\n      \"entity\": \"dark olives inside large jar\",\n      \"invariant_violated\": \"weight & support\",\n      \"description\": \"A vertical column of dark olives stands roughly 4-5 olives high in the center of the jar, rising well above the surrounding fill level with no lateral support on its upper half. Round, smooth spheres cannot remain stacked in a free-standing vertical tower; the column persists unchanged through 00:04.541 instead of toppling, indicating the objects are holding position without physical support.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

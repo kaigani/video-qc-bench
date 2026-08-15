@@ -1,0 +1,48 @@
+{
+  "key": "phone__character-continuity",
+  "video": "phone.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:10:46.418Z",
+  "latencyMs": 8050,
+  "usage": {
+    "prompt_tokens": 2205,
+    "completion_tokens": 4787,
+    "total_tokens": 6992,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4750,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Phone holder | dark skin hands, holding phone, facing phone | dark skin hands, holding phone, facing phone | no notable transitions",
+    "Person with red bag | blue shirt, jeans, red bag, walking up stairs, facing away | blue shirt, jeans, red bag, walking down stairs, facing towards camera | direction reversal without visible turn"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Person with red bag",
+      "invariant_violated": "movement continuity",
+      "description": "The person was walking up the stairs (away from camera) and then is seen walking down the stairs (towards camera) without any visible turn or time lapse, indicating an unexplained change in direction.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Phone holder | dark skin hands, holding phone, facing phone | dark skin hands, holding phone, facing phone | no notable transitions\",\n    \"Person with red bag | blue shirt, jeans, red bag, walking up stairs, facing away | blue shirt, jeans, red bag, walking down stairs, facing towards camera | direction reversal without visible turn\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Person with red bag\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"The person was walking up the stairs (away from camera) and then is seen walking down the stairs (towards camera) without any visible turn or time lapse, indicating an unexplained change in direction.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

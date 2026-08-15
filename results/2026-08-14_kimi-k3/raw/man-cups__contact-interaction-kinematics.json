@@ -1,0 +1,59 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:13:00.371Z",
+  "latencyMs": 6512,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 7276,
+    "total_tokens": 31941,
+    "cost": 0.1817526,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1817526,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.10914
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6632,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "magician's right hand | holding one coin above table at start | holding one coin above cups at end | coin no longer visible at ~00:01.000 with no placement event; reaches into front-left cup and extracts a coin ~00:01.500-00:02.541; re-inserts coin ~00:03.541; grips and slides cups 00:04.041-00:07.583; extracts coin from leftmost cup ~00:08.625",
+    "magician's left hand | off-frame, enters sweeping across table ~00:00.500 | resting near rightmost cup at end | holds a coin near back-center cup 00:03.041-00:04.541; grips and slides cups during rearrangement 00:04.541-00:07.583; contacts look consistent",
+    "front-left cup | contains one coin, plain copper wall | leftmost in row, gold disc visible on exterior wall | emptied at ~00:02.041; coin inserted ~00:03.541; gripped and relocated ~00:04.041 onward",
+    "three other cups | one filled with coins, two empty, stationary | arranged in a row | slid across cloth while gripped by both hands 00:04.041-00:07.583; motion always tied to visible hand contact",
+    "loose coins on cloth | scattered around cups | redistributed, some near his left hand | mostly stationary; minor positional shifts during hand sweeps, confounded by camera orbit"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "coin held by right hand",
+      "invariant_violated": "missing release event",
+      "description": "The right hand clearly pinches a coin at 00:00.000-00:00.500; by 00:01.000 the hand is open/loosely curled and the coin is gone, with no visible placement, drop, or transfer to the other hand. Palming could explain it, but the fingers are open enough that concealment is not visually supported.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "coin inserted into front-left cup",
+      "invariant_violated": "solidity / pass-through",
+      "description": "A large gold coin is pushed below the rim into the opaque front-left cup at ~00:03.541. From ~00:04.041 the coin is visible lodged at the rim at an angle, and from 00:04.541 onward a gold disc is clearly rendered on the cup's EXTERIOR side wall (the early cups show plain copper walls). The coin appears to have passed through or fused with the cup wall rather than resting inside.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"magician's right hand | holding one coin above table at start | holding one coin above cups at end | coin no longer visible at ~00:01.000 with no placement event; reaches into front-left cup and extracts a coin ~00:01.500-00:02.541; re-inserts coin ~00:03.541; grips and slides cups 00:04.041-00:07.583; extracts coin from leftmost cup ~00:08.625\",\n    \"magician's left hand | off-frame, enters sweeping across table ~00:00.500 | resting near rightmost cup at end | holds a coin near back-center cup 00:03.041-00:04.541; grips and slides cups during rearrangement 00:04.541-00:07.583; contacts look consistent\",\n    \"front-left cup | contains one coin, plain copper wall | leftmost in row, gold disc visible on exterior wall | emptied at ~00:02.041; coin inserted ~00:03.541; gripped and relocated ~00:04.041 onward\",\n    \"three other cups | one filled with coins, two empty, stationary | arranged in a row | slid across cloth while gripped by both hands 00:04.041-00:07.583; motion always tied to visible hand contact\",\n    \"loose coins on cloth | scattered around cups | redistributed, some near his left hand | mostly stationary; minor positional shifts during hand sweeps, confounded by camera orbit\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"coin held by right hand\",\n      \"invariant_violated\": \"missing release event\",\n      \"description\": \"The right hand clearly pinches a coin at 00:00.000-00:00.500; by 00:01.000 the hand is open/loosely curled and the coin is gone, with no visible placement, drop, or transfer to the other hand. Palming could explain it, but the fingers are open enough that concealment is not visually supported.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.35\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"coin inserted into front-left cup\",\n      \"invariant_violated\": \"solidity / pass-through\",\n      \"description\": \"A large gold coin is pushed below the rim into the opaque front-left cup at ~00:03.541. From ~00:04.041 the coin is visible lodged at the rim at an angle, and from 00:04.541 onward a gold disc is clearly rendered on the cup's EXTERIOR side wall (the early cups show plain copper walls). The coin appears to have passed through or fused with the cup wall rather than resting inside.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:37:47.097Z",
+  "latencyMs": 7181,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 666,
+    "total_tokens": 2092,
+    "cost": 0.0017835,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0017835,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.00124875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 517,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen | counters and stove on left, hallway ahead | counters on left, exterior door ahead | connected via doorway loop to bedroom",
+    "hallway wall / partition | separates kitchen/hall from bedroom with framed pictures | visible from both kitchen and bedroom sides | consistent wall thickness and door frames",
+    "bedroom | contains bed, chandelier, windows, two access doorways | viewed from entry doorway then reverse view toward exit doorway | consistent interior layout and circular connectivity",
+    "woman in blue dress | walks from kitchen into bedroom and loops back toward kitchen doorway | moving through continuous doorways | correctly occluded by doorframes during transitions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen | counters and stove on left, hallway ahead | counters on left, exterior door ahead | connected via doorway loop to bedroom\",\n    \"hallway wall / partition | separates kitchen/hall from bedroom with framed pictures | visible from both kitchen and bedroom sides | consistent wall thickness and door frames\",\n    \"bedroom | contains bed, chandelier, windows, two access doorways | viewed from entry doorway then reverse view toward exit doorway | consistent interior layout and circular connectivity\",\n    \"woman in blue dress | walks from kitchen into bedroom and loops back toward kitchen doorway | moving through continuous doorways | correctly occluded by doorframes during transitions\"\n  ],\n  \"findings\": []\n}"
+}

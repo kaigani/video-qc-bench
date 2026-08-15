@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:20:28.092Z",
+  "latencyMs": 6162,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 5606,
+    "total_tokens": 12517,
+    "cost": 0.0174705,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0174705,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.014015
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5421,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon | parked on desert road, front facing left, wood paneling, roof rack | stationary, same physical appearance | camera orbits around the vehicle, no internal movement of car components",
+    "woman (passenger) | arms crossed on car door, hair relatively still, looking toward camera | arms still crossed, hair blowing backward, looking toward car front | gradual leftward head turn, hair progressively lifted by wind",
+    "desert landscape/road | sandy terrain with sparse bushes, distant mountains, paved two-lane road | same landscape, viewed from shifted perspective | parallax movement consistent with camera orbiting the stationary car",
+    "atmospheric wind | not visibly apparent (hair undisturbed) | noticeable effect on hair | increases in intensity over the course of the shot"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon | parked on desert road, front facing left, wood paneling, roof rack | stationary, same physical appearance | camera orbits around the vehicle, no internal movement of car components\",\n    \"woman (passenger) | arms crossed on car door, hair relatively still, looking toward camera | arms still crossed, hair blowing backward, looking toward car front | gradual leftward head turn, hair progressively lifted by wind\",\n    \"desert landscape/road | sandy terrain with sparse bushes, distant mountains, paved two-lane road | same landscape, viewed from shifted perspective | parallax movement consistent with camera orbiting the stationary car\",\n    \"atmospheric wind | not visibly apparent (hair undisturbed) | noticeable effect on hair | increases in intensity over the course of the shot\"\n  ],\n  \"findings\": []\n}"
+}

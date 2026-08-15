@@ -1,0 +1,46 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:37:31.738Z",
+  "latencyMs": 72898,
+  "usage": {
+    "prompt_tokens": 30243,
+    "completion_tokens": 5185,
+    "total_tokens": 35428,
+    "cost": 0.028084,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028084,
+      "upstream_inference_prompt_cost": 0.0151215,
+      "upstream_inference_completions_cost": 0.0129625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4759,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner building | stationary nighttime exterior with lit interior/OPEN sign | stationary daytime exterior with lit interior/OPEN sign | transitions from night to day, interior counter/booths/kitchen remain static structure",
+    "First semi-truck (white cab, dark trailer) | parked left of diner at night, smoke near front wheel | remains parked through opening exterior night shots | stationary, smoke gradually dissipates",
+    "Waitress (blue shirt, white apron) | wiping diner counter at night | walking to kitchen area at daytime | transitions: wiping counter, pouring coffee, serving plate, sitting at counter, cleaning post-customer, walking to back; maintains contact with surfaces/objects during interactions",
+    "Male customer (brown jacket, jeans) | entering diner from back area at night | approaching green semi-truck outside at daytime | transitions: walking to counter, sitting, holding coffee mug, paying cash, exiting diner, walking to truck; feet contact ground, hands contact objects/surfaces appropriately",
+    "Glass coffee carafe | held by waitress | moved out of frame after pouring | gripped by waitress's hand, positioned over mug during pour, no unsupported movement",
+    "White ceramic coffee mug | resting on counter in front of customer | left on counter after customer departs | rests on counter, filled with coffee, held by customer's hands, set back down without floating",
+    "Breakfast plate (food) | carried by waitress | returned to kitchen by waitress | held by waitress's hands, set on counter briefly, picked up again, maintains contact with supporting surface or hands",
+    "Second semi-truck (green cab, striped trailer) | parked outside diner at daytime | remains parked as customer approaches | stationary, customer makes hand contact with door handle to open it",
+    "Cash (US dollar bills) | held by customer's hand | resting on counter next to mug | placed on counter by customer, rests on surface with full contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner building | stationary nighttime exterior with lit interior/OPEN sign | stationary daytime exterior with lit interior/OPEN sign | transitions from night to day, interior counter/booths/kitchen remain static structure\",\n    \"First semi-truck (white cab, dark trailer) | parked left of diner at night, smoke near front wheel | remains parked through opening exterior night shots | stationary, smoke gradually dissipates\",\n    \"Waitress (blue shirt, white apron) | wiping diner counter at night | walking to kitchen area at daytime | transitions: wiping counter, pouring coffee, serving plate, sitting at counter, cleaning post-customer, walking to back; maintains contact with surfaces/objects during interactions\",\n    \"Male customer (brown jacket, jeans) | entering diner from back area at night | approaching green semi-truck outside at daytime | transitions: walking to counter, sitting, holding coffee mug, paying cash, exiting diner, walking to truck; feet contact ground, hands contact objects/surfaces appropriately\",\n    \"Glass coffee carafe | held by waitress | moved out of frame after pouring | gripped by waitress's hand, positioned over mug during pour, no unsupported movement\",\n    \"White ceramic coffee mug | resting on counter in front of customer | left on counter after customer departs | rests on counter, filled with coffee, held by customer's hands, set back down without floating\",\n    \"Breakfast plate (food) | carried by waitress | returned to kitchen by waitress | held by waitress's hands, set on counter briefly, picked up again, maintains contact with supporting surface or hands\",\n    \"Second semi-truck (green cab, striped trailer) | parked outside diner at daytime | remains parked as customer approaches | stationary, customer makes hand contact with door handle to open it\",\n    \"Cash (US dollar bills) | held by customer's hand | resting on counter next to mug | placed on counter by customer, rests on surface with full contact\"\n  ],\n  \"findings\": []\n}"
+}

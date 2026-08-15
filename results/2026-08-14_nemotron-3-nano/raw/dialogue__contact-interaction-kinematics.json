@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__contact-interaction-kinematics",
+  "video": "dialogue.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:53:18.776Z",
+  "latencyMs": 3372,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 4509,
+    "total_tokens": 6736,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4006,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | no contact with door | contacts door knob at 0:09, maintains grip until 1:02, releases | hand grips knob and turns",
+    "feet | standing on floor, weight supported | continuous support while walking | continuous contact",
+    "door | closed, no contact | man's hand contacts knob at 0:09, pushes/turns, contact ends at 1:02 | door receives hand contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | no contact with door | contacts door knob at 0:09, maintains grip until 1:02, releases | hand grips knob and turns\",\n    \"feet | standing on floor, weight supported | continuous support while walking | continuous contact\",\n    \"door | closed, no contact | man's hand contacts knob at 0:09, pushes/turns, contact ends at 1:02 | door receives hand contact\"\n  ],\n  \"findings\": []\n}"
+}

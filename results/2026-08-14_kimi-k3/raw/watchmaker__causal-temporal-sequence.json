@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:39:38.478Z",
+  "latencyMs": 6661,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 1823,
+    "total_tokens": 26471,
+    "cost": 0.0999066,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0999066,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.027345
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1517,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "metal tool (tweezers/rod) | held in right hand, tip in contact with small metal object at start | absent from frame (set down) by 00:04 | slow insertion/adjustment 00:00–00:03.5, rapid withdrawal with motion blur at 00:03.5, hand exits downward carrying it out of frame",
+    "small circular metal object (charm/watch component) | held in left hand, probed by tool | held between both hands, being manually turned/wound | tool contact 00:00–00:03.5, transferred to two-hand finger manipulation 00:04.5–00:06.5, repeated twisting motion 00:06.5–00:09.6",
+    "right hand | gripping tool | empty, then gripping object directly | releases tool off-screen ~00:03.5–00:04, re-enters upward to join left hand at 00:04.5, begins winding motion at 00:06.5",
+    "left hand | stabilizing object throughout | stabilizing object throughout | continuous grip; no unexplained release or repositioning",
+    "accessories (wristwatch, rings, necklace) | worn, static | worn, static | no state changes; no causal events involving them"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"metal tool (tweezers/rod) | held in right hand, tip in contact with small metal object at start | absent from frame (set down) by 00:04 | slow insertion/adjustment 00:00–00:03.5, rapid withdrawal with motion blur at 00:03.5, hand exits downward carrying it out of frame\",\n    \"small circular metal object (charm/watch component) | held in left hand, probed by tool | held between both hands, being manually turned/wound | tool contact 00:00–00:03.5, transferred to two-hand finger manipulation 00:04.5–00:06.5, repeated twisting motion 00:06.5–00:09.6\",\n    \"right hand | gripping tool | empty, then gripping object directly | releases tool off-screen ~00:03.5–00:04, re-enters upward to join left hand at 00:04.5, begins winding motion at 00:06.5\",\n    \"left hand | stabilizing object throughout | stabilizing object throughout | continuous grip; no unexplained release or repositioning\",\n    \"accessories (wristwatch, rings, necklace) | worn, static | worn, static | no state changes; no causal events involving them\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,87 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T07:33:21.549Z",
+  "latencyMs": 5919,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 8849,
+    "total_tokens": 33515,
+    "cost": 0.1434153,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23451,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1434153,
+      "upstream_inference_prompt_cost": 0.0106803,
+      "upstream_inference_completions_cost": 0.132735
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7670,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "green cube A (left at start) | green body, front '2', side digit, gray stud on top, resting on wooden table, held by hand | sits far left as a BLUE '2' cube from 00:01 onward, static thereafter | rotated by hand at 00:00.5 (reveals green '2' + blue '3' faces); body color green→blue by 00:01 with no recoloring action",
+    "green cube B (right at start) | green body, front '2', side '6', gray stud, on table | green '2' sitting 3rd from left in final row | rotated by hand at 00:02.5 (face 2→3); at 00:03 a green '2' rests on the table while the hand simultaneously holds another green cube",
+    "blue '3' cube (spawn #1) | absent at start, appears in hand at 00:01 | placed 2nd from left, static | materializes while the hand already holds one cube and never leaves frame",
+    "yellow '2' cube (spawn #2) | absent at start, appears on table at 00:04 | 4th from left, static | materializes while the hand holds a different cube",
+    "light-blue '3' cube (spawn #3) | absent at start, placed at right end at 00:04.5 | 5th from left, static | set down by hand that was holding a green-faced cube moments earlier",
+    "green '5' cube (spawn #4) | absent at start, appears/placed at 00:06 | 6th from left, static | held cube was blue at 00:05.0, green at 00:05.5",
+    "green '2' cube #2 (spawn #5) | absent at start, placed at 00:06.5 | 7th from left, static | materializes during placement sequence",
+    "blue '6' cube (spawn #6) | absent at start, appears in hand at 00:07 showing '3' | 8th from left showing '6', static | face 3→6 at 00:07.5 is explained by visible hand rotation; its appearance is not",
+    "wooden table | flat support surface, empty except 2 cubes at start | supports 8 cubes in a row at end | no state changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "cube pair / left green cube",
+      "invariant_violated": "no duplication; identity persistence",
+      "description": "Two cubes at 00:00 become three at 00:01. The hand continuously holds the single left cube and never exits the frame, yet a blue '2' cube is suddenly sitting on the table and the held cube is now a blue '3'. Additionally the original cube's body color changed green→blue with no visible recoloring cause.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "right green cube",
+      "invariant_violated": "no duplication",
+      "description": "Hand rotates the right green cube (face 2→3) at 00:02.5; at 00:03 a green '2' cube rests on the table while the hand still holds a green '3' cube. One cube has become two (count 3→4) with no external source.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "held cube and new yellow cube",
+      "invariant_violated": "no duplication; no spontaneous transformation",
+      "description": "Count rises 4→5: a yellow '2' cube materializes on the table, and the cube in the hand changes body color from green (00:03) through yellowish (00:03.5) to blue (00:04) with no visible cause.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "rightmost cubes",
+      "invariant_violated": "no duplication; no spontaneous transformation",
+      "description": "Count rises 5→6: a light-blue '3' cube is newly placed at the right end while the hand holds yet another cube, and the held cube changes body color blue→green between 00:05.0 and 00:05.5 with no visible cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "cube row (positions 6-8)",
+      "invariant_violated": "no duplication; no spontaneous transformation",
+      "description": "Count rises 6→8 across 00:06-00:07: green '5', green '2', and blue '3' cubes appear in succession while the hand always retains a cube, and the held cube again changes green→blue. Overall the clip goes from 2 cubes to 8 with no cube ever fetched from off-screen or introduced from a container.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"green cube A (left at start) | green body, front '2', side digit, gray stud on top, resting on wooden table, held by hand | sits far left as a BLUE '2' cube from 00:01 onward, static thereafter | rotated by hand at 00:00.5 (reveals green '2' + blue '3' faces); body color green→blue by 00:01 with no recoloring action\",\n    \"green cube B (right at start) | green body, front '2', side '6', gray stud, on table | green '2' sitting 3rd from left in final row | rotated by hand at 00:02.5 (face 2→3); at 00:03 a green '2' rests on the table while the hand simultaneously holds another green cube\",\n    \"blue '3' cube (spawn #1) | absent at start, appears in hand at 00:01 | placed 2nd from left, static | materializes while the hand already holds one cube and never leaves frame\",\n    \"yellow '2' cube (spawn #2) | absent at start, appears on table at 00:04 | 4th from left, static | materializes while the hand holds a different cube\",\n    \"light-blue '3' cube (spawn #3) | absent at start, placed at right end at 00:04.5 | 5th from left, static | set down by hand that was holding a green-faced cube moments earlier\",\n    \"green '5' cube (spawn #4) | absent at start, appears/placed at 00:06 | 6th from left, static | held cube was blue at 00:05.0, green at 00:05.5\",\n    \"green '2' cube #2 (spawn #5) | absent at start, placed at 00:06.5 | 7th from left, static | materializes during placement sequence\",\n    \"blue '6' cube (spawn #6) | absent at start, appears in hand at 00:07 showing '3' | 8th from left showing '6', static | face 3→6 at 00:07.5 is explained by visible hand rotation; its appearance is not\",\n    \"wooden table | flat support surface, empty except 2 cubes at start | supports 8 cubes in a row at end | no state changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"cube pair / left green cube\",\n      \"invariant_violated\": \"no duplication; identity persistence\",\n      \"description\": \"Two cubes at 00:00 become three at 00:01. The hand continuously holds the single left cube and never exits the frame, yet a blue '2' cube is suddenly sitting on the table and the held cube is now a blue '3'. Additionally the original cube's body color changed green→blue with no visible recoloring cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"right green cube\",\n      \"invariant_violated\": \"no duplication\",\n      \"description\": \"Hand rotates the right green cube (face 2→3) at 00:02.5; at 00:03 a green '2' cube rests on the table while the hand still holds a green '3' cube. One cube has become two (count 3→4) with no external source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"held cube and new yellow cube\",\n      \"invariant_violated\": \"no duplication; no spontaneous transformation\",\n      \"description\": \"Count rises 4→5: a yellow '2' cube materializes on the table, and the cube in the hand changes body color from green (00:03) through yellowish (00:03.5) to blue (00:04) with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"rightmost cubes\",\n      \"invariant_violated\": \"no duplication; no spontaneous transformation\",\n      \"description\": \"Count rises 5→6: a light-blue '3' cube is newly placed at the right end while the hand holds yet another cube, and the held cube changes body color blue→green between 00:05.0 and 00:05.5 with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"cube row (positions 6-8)\",\n      \"invariant_violated\": \"no duplication; no spontaneous transformation\",\n      \"description\": \"Count rises 6→8 across 00:06-00:07: green '5', green '2', and blue '3' cubes appear in succession while the hand always retains a cube, and the held cube again changes green→blue. Overall the clip goes from 2 cubes to 8 with no cube ever fetched from off-screen or introduced from a container.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

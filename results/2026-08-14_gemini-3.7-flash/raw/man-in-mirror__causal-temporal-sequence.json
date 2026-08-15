@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:20.925Z",
+  "latencyMs": 4107,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 374,
+    "total_tokens": 1799,
+    "cost": 0.001235625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001235625,
+      "upstream_inference_prompt_cost": 0.000534375,
+      "upstream_inference_completions_cost": 0.00070125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 243,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing in front of mirror grooming hair/face | standing in front of mirror observing face | raises comb to hair at 00:02, combs hair at 00:03, lowers comb at 00:05",
+    "comb | held in right hand | held near chin | lifted to forehead and pulled through hair, affecting hair alignment continuously",
+    "mirror reflection | reflects man and bathroom scene | reflects man and bathroom scene | synchronizes in real time with the man's physical actions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing in front of mirror grooming hair/face | standing in front of mirror observing face | raises comb to hair at 00:02, combs hair at 00:03, lowers comb at 00:05\",\n    \"comb | held in right hand | held near chin | lifted to forehead and pulled through hair, affecting hair alignment continuously\",\n    \"mirror reflection | reflects man and bathroom scene | reflects man and bathroom scene | synchronizes in real time with the man's physical actions\"\n  ],\n  \"findings\": []\n}"
+}

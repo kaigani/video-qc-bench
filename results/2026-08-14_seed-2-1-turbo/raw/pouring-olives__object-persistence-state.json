@@ -1,0 +1,76 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:03:16.681Z",
+  "latencyMs": 9487,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 6713,
+    "total_tokens": 13639,
+    "cost": 0.0202455,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0202455,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.0167825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5954,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large clear glass jar | empty, resting on wooden cutting board | partially filled with green + dark purple olives, resting on cutting board | filled by pouring from small glass pouring jars",
+    "small glass pouring jar 1 | held by person's hands, contains only green olives | no longer visible in frame | poured contents into large jar; dark olives emerged that were not visible initially; vanished from view without being placed on a visible surface",
+    "small glass pouring jar 2 | not present/visible in scene | held by person's hands, contains green + dark purple olives | appeared inside the stainless steel bowl; poured contents into large jar",
+    "stainless steel mixing bowl | on counter right of large jar, contains only loose green olives | on counter right of large jar, contains loose green olives + brown oval objects | a small glass jar and brown objects appeared inside it with no visible placement action",
+    "white ceramic bowl | on counter far right, contains green olives | on counter far right, contains green olives | no state changes",
+    "wooden cutting board | on counter, supports large glass jar | on counter, supports large glass jar | no state changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "dark purple olives in small glass jar 1",
+      "invariant_violated": "identity & persistence (object appearance)",
+      "description": "The first small pouring jar initially contains only green olives (clearly visible through the glass at 0s), yet dark purple olives fall out of it into the large jar during the first pour. No action is shown adding dark olives to the jar.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small glass pouring jar 1",
+      "invariant_violated": "identity & persistence (object disappearance)",
+      "description": "The first small glass jar is visible in the person's hand at 4s, but disappears from view without being placed on any visible surface by 4.7s. No visible action shows the jar being set down.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "small glass pouring jar 2",
+      "invariant_violated": "identity & persistence (object appearance)",
+      "description": "A small glass jar is pulled out of the stainless steel bowl at ~5s, but the bowl contained only loose green olives at the start of the video and no jar was observed being placed into the bowl.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "brown oval objects in stainless steel bowl",
+      "invariant_violated": "identity & persistence (object appearance)",
+      "description": "Brown oval objects are visible in the stainless steel bowl after the small jar is removed, but these objects were not present in the bowl at the start of the video and no action is shown adding them.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large clear glass jar | empty, resting on wooden cutting board | partially filled with green + dark purple olives, resting on cutting board | filled by pouring from small glass pouring jars\",\n    \"small glass pouring jar 1 | held by person's hands, contains only green olives | no longer visible in frame | poured contents into large jar; dark olives emerged that were not visible initially; vanished from view without being placed on a visible surface\",\n    \"small glass pouring jar 2 | not present/visible in scene | held by person's hands, contains green + dark purple olives | appeared inside the stainless steel bowl; poured contents into large jar\",\n    \"stainless steel mixing bowl | on counter right of large jar, contains only loose green olives | on counter right of large jar, contains loose green olives + brown oval objects | a small glass jar and brown objects appeared inside it with no visible placement action\",\n    \"white ceramic bowl | on counter far right, contains green olives | on counter far right, contains green olives | no state changes\",\n    \"wooden cutting board | on counter, supports large glass jar | on counter, supports large glass jar | no state changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"dark purple olives in small glass jar 1\",\n      \"invariant_violated\": \"identity & persistence (object appearance)\",\n      \"description\": \"The first small pouring jar initially contains only green olives (clearly visible through the glass at 0s), yet dark purple olives fall out of it into the large jar during the first pour. No action is shown adding dark olives to the jar.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"small glass pouring jar 1\",\n      \"invariant_violated\": \"identity & persistence (object disappearance)\",\n      \"description\": \"The first small glass jar is visible in the person's hand at 4s, but disappears from view without being placed on any visible surface by 4.7s. No visible action shows the jar being set down.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"small glass pouring jar 2\",\n      \"invariant_violated\": \"identity & persistence (object appearance)\",\n      \"description\": \"A small glass jar is pulled out of the stainless steel bowl at ~5s, but the bowl contained only loose green olives at the start of the video and no jar was observed being placed into the bowl.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"brown oval objects in stainless steel bowl\",\n      \"invariant_violated\": \"identity & persistence (object appearance)\",\n      \"description\": \"Brown oval objects are visible in the stainless steel bowl after the small jar is removed, but these objects were not present in the bowl at the start of the video and no action is shown adding them.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

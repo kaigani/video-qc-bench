@@ -1,0 +1,45 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:36:15.709Z",
+  "latencyMs": 9498,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 2477,
+    "total_tokens": 27129,
+    "cost": 0.1097286,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1097286,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.037155
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2032,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skatepark concrete bowls/banks/ledges | street-course ramps left, bowl edge left-front, ledges mid-ground at start | bowl corner and transition under skater at end | geometry remains coherent as camera travels; coping edge occludes skater's lower body correctly when he drops in",
+    "perimeter tree line | dense green trees ringing the park, behind ramps in all directions | same continuous ring at end | trees sweep across frame in the direction opposite camera travel, consistent with a circling fisheye follow-cam",
+    "tall light poles | cluster of gray poles behind skater at start, one thick pole right-of-center mid-clip | poles shift to frame-left as camera circles | apparent 'splitting' of one pole into two around 00:05.5 is ordinary parallax separation of two depth-offset poles, not a layout change",
+    "round concrete tables (2) | visible right of frame at 00:00 only | out of frame thereafter | camera advances past them; never reappear, no contradiction",
+    "distant low buildings | visible through trees left and right at start | same buildings reappear across the bowl at 00:08.6-00:09.6 | background through/behind the bowl matches established perimeter",
+    "skater (moving entity) | riding toward camera, center-frame | riding down bowl transition, center-frame | continuous trajectory; emerges on correct sides as camera orbits; occludes poles/trees behind him correctly",
+    "skateboard (moving entity) | under skater's feet at start | under skater's feet at end | occludes ground and is occluded by skater's legs plausibly through both flip tricks; never renders behind background elements it passes in front of",
+    "camera path | low fisheye follow, front-facing skater | low fisheye, trailing/side view at bowl | single continuous take, no cuts; all background panning is consistent with smooth camera translation and rotation"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skatepark concrete bowls/banks/ledges | street-course ramps left, bowl edge left-front, ledges mid-ground at start | bowl corner and transition under skater at end | geometry remains coherent as camera travels; coping edge occludes skater's lower body correctly when he drops in\",\n    \"perimeter tree line | dense green trees ringing the park, behind ramps in all directions | same continuous ring at end | trees sweep across frame in the direction opposite camera travel, consistent with a circling fisheye follow-cam\",\n    \"tall light poles | cluster of gray poles behind skater at start, one thick pole right-of-center mid-clip | poles shift to frame-left as camera circles | apparent 'splitting' of one pole into two around 00:05.5 is ordinary parallax separation of two depth-offset poles, not a layout change\",\n    \"round concrete tables (2) | visible right of frame at 00:00 only | out of frame thereafter | camera advances past them; never reappear, no contradiction\",\n    \"distant low buildings | visible through trees left and right at start | same buildings reappear across the bowl at 00:08.6-00:09.6 | background through/behind the bowl matches established perimeter\",\n    \"skater (moving entity) | riding toward camera, center-frame | riding down bowl transition, center-frame | continuous trajectory; emerges on correct sides as camera orbits; occludes poles/trees behind him correctly\",\n    \"skateboard (moving entity) | under skater's feet at start | under skater's feet at end | occludes ground and is occluded by skater's legs plausibly through both flip tricks; never renders behind background elements it passes in front of\",\n    \"camera path | low fisheye follow, front-facing skater | low fisheye, trailing/side view at bowl | single continuous take, no cuts; all background panning is consistent with smooth camera translation and rotation\"\n  ],\n  \"findings\": []\n}"
+}

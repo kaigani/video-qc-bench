@@ -1,0 +1,45 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:17:24.091Z",
+  "latencyMs": 9878,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 3833,
+    "total_tokens": 6036,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3949,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | centered on wooden board, empty initially | contains green and dark olives, remains centered",
+    "Small glass jar | held above jar, pouring olives | placed aside (off-screen) after pouring",
+    "Metal bowl (right) | stationary to the right of jar | lifted and poured into jar",
+    "Metal bowl (far right) | stationary far right of jar | lifted and poured into jar",
+    "Person (hands/torso) | behind jar, arms reaching over board | remains behind jar, handling containers",
+    "Wooden countertop | static surface under jar and bowls | unchanged",
+    "Stainless steel stove/oven | background left of cabinets, knobs visible | unchanged",
+    "Wooden cabinets | background left side | unchanged"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | centered on wooden board, empty initially | contains green and dark olives, remains centered\",\n    \"Small glass jar | held above jar, pouring olives | placed aside (off-screen) after pouring\",\n    \"Metal bowl (right) | stationary to the right of jar | lifted and poured into jar\",\n    \"Metal bowl (far right) | stationary far right of jar | lifted and poured into jar\",\n    \"Person (hands/torso) | behind jar, arms reaching over board | remains behind jar, handling containers\",\n    \"Wooden countertop | static surface under jar and bowls | unchanged\",\n    \"Stainless steel stove/oven | background left of cabinets, knobs visible | unchanged\",\n    \"Wooden cabinets | background left side | unchanged\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,46 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:46:17.409Z",
+  "latencyMs": 4421,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 20289,
+    "total_tokens": 27200,
+    "cost": 0.054178,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.054178,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0507225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 19970,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Front left door (real) | black with glass window, brass handle, exit sign above, on left wall near camera | unchanged | fixed position, no transition",
+    "Back left door (real) | black with glass window, exit sign above, on left wall further from camera near mirror corner | unchanged | fixed position, no transition",
+    "Full-wall mirror | mounted on far wall, left edge at left wall/far wall corner, black base trim | unchanged | fixed position, no transition",
+    "Blue storage crate | reflected in mirror, against reflected right wall | unchanged position in reflection | fixed real position, no transition",
+    "Double ballet barre (reflected) | black metal supports, two horizontal bars, on reflected right wall | unchanged | fixed real position, no transition",
+    "Framed wall art (reflected) | dark frame, on reflected right wall adjacent to barre | unchanged | fixed real position, no transition",
+    "Wooden dance floor | polished light brown, spans real room and reflected space | unchanged | fixed, no transition",
+    "Woman (real) | standing facing mirror (back to camera), arms at sides | performs continuous dance sequence (arm raises, weight shifts, torso rotation) | smooth movement, no discontinuities",
+    "Woman's reflection | mirror image of real woman, facing camera | moves in left-right reversed sync with real woman | consistent with planar mirror reflection"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Front left door (real) | black with glass window, brass handle, exit sign above, on left wall near camera | unchanged | fixed position, no transition\",\n    \"Back left door (real) | black with glass window, exit sign above, on left wall further from camera near mirror corner | unchanged | fixed position, no transition\",\n    \"Full-wall mirror | mounted on far wall, left edge at left wall/far wall corner, black base trim | unchanged | fixed position, no transition\",\n    \"Blue storage crate | reflected in mirror, against reflected right wall | unchanged position in reflection | fixed real position, no transition\",\n    \"Double ballet barre (reflected) | black metal supports, two horizontal bars, on reflected right wall | unchanged | fixed real position, no transition\",\n    \"Framed wall art (reflected) | dark frame, on reflected right wall adjacent to barre | unchanged | fixed real position, no transition\",\n    \"Wooden dance floor | polished light brown, spans real room and reflected space | unchanged | fixed, no transition\",\n    \"Woman (real) | standing facing mirror (back to camera), arms at sides | performs continuous dance sequence (arm raises, weight shifts, torso rotation) | smooth movement, no discontinuities\",\n    \"Woman's reflection | mirror image of real woman, facing camera | moves in left-right reversed sync with real woman | consistent with planar mirror reflection\"\n  ],\n  \"findings\": []\n}"
+}

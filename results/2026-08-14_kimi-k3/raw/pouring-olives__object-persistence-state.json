@@ -1,0 +1,53 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:34:00.477Z",
+  "latencyMs": 6552,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 4081,
+    "total_tokens": 28747,
+    "cost": 0.0718953,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23451,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0718953,
+      "upstream_inference_prompt_cost": 0.0106803,
+      "upstream_inference_completions_cost": 0.061215
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3591,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass storage jar | empty, open (no lid), centered on wooden cutting board | filled ~halfway with mixed green and dark olives, same position | filled incrementally by visible pouring from small jar (00:00-00:04 and 00:06-00:09)",
+    "small glass jar (source) | held in person's hands above large jar, full of green olives | held in hand, mostly emptied | olives poured into large jar 00:00-00:04; visibly refilled with olives scooped from metal bowl ~00:05-00:06; poured again 00:06-00:09",
+    "loose olives (green + dark) | inside small jar and in two bowls on counter | bulk of them transferred into large jar | moved only via visible pouring/scooping actions",
+    "stainless steel bowl | on counter right of large jar, full of green olives | same location, noticeably fewer olives, remainder mixed green/brown | person removed a handful ~00:05 to refill small jar",
+    "white ceramic bowl with dark rim | far right of counter, full of green olives | unchanged in position and contents | no transitions",
+    "small clear glass bottle (narrow neck) | not present anywhere in frame at start | standing on counter between metal bowl and white bowl from ~00:04.5 onward, never touched again | appeared with no visible placing action",
+    "wooden cutting board | on counter under large jar | unchanged | no transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "small clear glass bottle",
+      "invariant_violated": "identity & persistence / unexplained appearance",
+      "description": "Between 00:04.0 and 00:04.5 a small clear glass bottle materializes on the counter between the metal bowl and the white bowl. The area is visible in the prior frame and contains no bottle, and neither of the person's hands (one holding the small jar, one reaching toward the metal bowl) performs a visible placing action. The bottle then persists untouched for the rest of the clip.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass storage jar | empty, open (no lid), centered on wooden cutting board | filled ~halfway with mixed green and dark olives, same position | filled incrementally by visible pouring from small jar (00:00-00:04 and 00:06-00:09)\",\n    \"small glass jar (source) | held in person's hands above large jar, full of green olives | held in hand, mostly emptied | olives poured into large jar 00:00-00:04; visibly refilled with olives scooped from metal bowl ~00:05-00:06; poured again 00:06-00:09\",\n    \"loose olives (green + dark) | inside small jar and in two bowls on counter | bulk of them transferred into large jar | moved only via visible pouring/scooping actions\",\n    \"stainless steel bowl | on counter right of large jar, full of green olives | same location, noticeably fewer olives, remainder mixed green/brown | person removed a handful ~00:05 to refill small jar\",\n    \"white ceramic bowl with dark rim | far right of counter, full of green olives | unchanged in position and contents | no transitions\",\n    \"small clear glass bottle (narrow neck) | not present anywhere in frame at start | standing on counter between metal bowl and white bowl from ~00:04.5 onward, never touched again | appeared with no visible placing action\",\n    \"wooden cutting board | on counter under large jar | unchanged | no transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"small clear glass bottle\",\n      \"invariant_violated\": \"identity & persistence / unexplained appearance\",\n      \"description\": \"Between 00:04.0 and 00:04.5 a small clear glass bottle materializes on the counter between the metal bowl and the white bowl. The area is visible in the prior frame and contains no bottle, and neither of the person's hands (one holding the small jar, one reaching toward the metal bowl) performs a visible placing action. The bottle then persists untouched for the rest of the clip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

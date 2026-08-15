@@ -1,0 +1,40 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:28.909Z",
+  "latencyMs": 3938,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 254,
+    "total_tokens": 1706,
+    "cost": 0.00102075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00102075,
+      "upstream_inference_prompt_cost": 0.0005445,
+      "upstream_inference_completions_cost": 0.00047625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 166,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground hands | gripping smartphone with both hands | holding smartphone, right thumb interacting with screen | continuous contact and grip throughout",
+    "background pedestrian | walking down stairs onto pavement | walking away in distance | natural footstep contacts and weight transfer",
+    "smartphone | supported by foreground hands | supported and manipulated | continuous physical support"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground hands | gripping smartphone with both hands | holding smartphone, right thumb interacting with screen | continuous contact and grip throughout\",\n    \"background pedestrian | walking down stairs onto pavement | walking away in distance | natural footstep contacts and weight transfer\",\n    \"smartphone | supported by foreground hands | supported and manipulated | continuous physical support\"\n  ],\n  \"findings\": []\n}"
+}

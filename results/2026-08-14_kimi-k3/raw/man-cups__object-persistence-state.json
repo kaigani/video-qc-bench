@@ -1,0 +1,53 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:12:48.635Z",
+  "latencyMs": 6541,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 10753,
+    "total_tokens": 35419,
+    "cost": 0.2339106,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.2339106,
+      "upstream_inference_prompt_cost": 0.0726156,
+      "upstream_inference_completions_cost": 0.161295
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10074,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Metal cup A (back-center) | empty, upright on cloth | empty, upright in 4-cup line | received a coin from the right hand ~00:00:03.5-00:00:04; slid into line by hand ~00:00:04-00:00:06",
+    "Metal cup B (center) | upright, containing a tall stack of ~4-5 embossed gold coins | upright in line, interior reads empty | stack visible 00:00:00-00:00:02.5, partial glint 00:00:03.5, gone by 00:00:04.5 with no visible emptying action",
+    "Metal cup C (right) | empty, upright | empty, upright at right end of line | repositioned by performer's hands ~00:00:04-00:00:08; yellow coin held/placed beside it ~00:00:06-00:00:07.5",
+    "Metal cup D (front-left) | upright, held 1-2 coins | upright at left of line | hand placed a coin in (00:00:01), rummaged and removed coin(s) (00:00:01.5-00:00:02.5), placed a coin back (00:00:03.5), then cup carried into line",
+    "Coin stack (gold, embossed, ~4-5 coins) | stacked inside cup B | not visibly accounted for in any cup or as a distinct table pile | vanished from cup B between ~00:00:03.5 and ~00:00:04.5",
+    "Loose coins (mixed gold/silver) | scattered on cloth: left-edge column, right cluster (~3 dark coins + 1 gold), center singles | scattered in shifted positions; some dropped into cups | picked up, carried, and placed by hands throughout (e.g., coin into back cup ~00:00:04, yellow coin carried right-to-left and dropped into leftmost cup ~00:00:08.5-00:00:09)",
+    "Printed red tablecloth | static support surface under all objects | unchanged | none (pattern shifts in frame are consistent with camera orbit)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "coin stack inside center metal cup (cup B)",
+      "invariant_violated": "physical state transition without visible cause (contents vanish)",
+      "description": "The center cup clearly holds a tall stack of ~4-5 embossed coins from 00:00:00 through 00:00:02.5 (top coin face and multiple coin edges visible). By 00:00:04.5 the same cup reads empty as the cups are lined up, yet no hand is ever shown entering that cup, removing the stack, or dumping it; during the disappearance window both hands are visibly occupied with other cups/coins, and no new pile matching the stack appears on the cloth.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Metal cup A (back-center) | empty, upright on cloth | empty, upright in 4-cup line | received a coin from the right hand ~00:00:03.5-00:00:04; slid into line by hand ~00:00:04-00:00:06\",\n    \"Metal cup B (center) | upright, containing a tall stack of ~4-5 embossed gold coins | upright in line, interior reads empty | stack visible 00:00:00-00:00:02.5, partial glint 00:00:03.5, gone by 00:00:04.5 with no visible emptying action\",\n    \"Metal cup C (right) | empty, upright | empty, upright at right end of line | repositioned by performer's hands ~00:00:04-00:00:08; yellow coin held/placed beside it ~00:00:06-00:00:07.5\",\n    \"Metal cup D (front-left) | upright, held 1-2 coins | upright at left of line | hand placed a coin in (00:00:01), rummaged and removed coin(s) (00:00:01.5-00:00:02.5), placed a coin back (00:00:03.5), then cup carried into line\",\n    \"Coin stack (gold, embossed, ~4-5 coins) | stacked inside cup B | not visibly accounted for in any cup or as a distinct table pile | vanished from cup B between ~00:00:03.5 and ~00:00:04.5\",\n    \"Loose coins (mixed gold/silver) | scattered on cloth: left-edge column, right cluster (~3 dark coins + 1 gold), center singles | scattered in shifted positions; some dropped into cups | picked up, carried, and placed by hands throughout (e.g., coin into back cup ~00:00:04, yellow coin carried right-to-left and dropped into leftmost cup ~00:00:08.5-00:00:09)\",\n    \"Printed red tablecloth | static support surface under all objects | unchanged | none (pattern shifts in frame are consistent with camera orbit)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"coin stack inside center metal cup (cup B)\",\n      \"invariant_violated\": \"physical state transition without visible cause (contents vanish)\",\n      \"description\": \"The center cup clearly holds a tall stack of ~4-5 embossed coins from 00:00:00 through 00:00:02.5 (top coin face and multiple coin edges visible). By 00:00:04.5 the same cup reads empty as the cups are lined up, yet no hand is ever shown entering that cup, removing the stack, or dumping it; during the disappearance window both hands are visibly occupied with other cups/coins, and no new pile matching the stack appears on the cloth.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

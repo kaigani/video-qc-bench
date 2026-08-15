@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:52:20.151Z",
+  "latencyMs": 6723,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 2436,
+    "total_tokens": 9366,
+    "cost": 0.009555,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009555,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.00609
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2272,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (real) | standing facing mirror, right hand gripping razor at chin | standing facing mirror, right hand gripping razor at hair | moves razor between chin, cheek, and hair; continuous arm motion; maintains grip on razor throughout",
+    "Razor | gripped in man's right hand, contacting chin skin | gripped in man's right hand, contacting hair | remains secured in hand for full sequence; makes repeated surface contact with face and hair, no loss of grip",
+    "Mirror | stationary wall-mounted, no physical contact with man/razor | stationary wall-mounted, no physical contact with man/razor | reflects reversed front view of man consistently, no physical interaction with other bodies"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (real) | standing facing mirror, right hand gripping razor at chin | standing facing mirror, right hand gripping razor at hair | moves razor between chin, cheek, and hair; continuous arm motion; maintains grip on razor throughout\",\n    \"Razor | gripped in man's right hand, contacting chin skin | gripped in man's right hand, contacting hair | remains secured in hand for full sequence; makes repeated surface contact with face and hair, no loss of grip\",\n    \"Mirror | stationary wall-mounted, no physical contact with man/razor | stationary wall-mounted, no physical contact with man/razor | reflects reversed front view of man consistently, no physical interaction with other bodies\"\n  ],\n  \"findings\": []\n}"
+}

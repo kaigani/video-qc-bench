@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:13:34.254Z",
+  "latencyMs": 2493,
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 7315,
+    "total_tokens": 9515,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7232,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand holding phone | hand visible, screen shows 'A742' | hand holding, screen black, stairs visible | screen content changes, screen goes black",
+    "person in background | person walking up stairs with red bag, visible | person out of view at top of stairs | person moves upward, disappears",
+    "smartphone screen | screen displays 'A742' | screen black (off) | content changes (scribbles, 'A7', 'A742'), screen goes black",
+    "stairs and railing | stairs and railing visible in background | stairs and railing more prominent after phone screen black | camera view shifts, stairs become main focus"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"hand holding phone | hand visible, screen shows 'A742' | hand holding, screen black, stairs visible | screen content changes, screen goes black\",\n    \"person in background | person walking up stairs with red bag, visible | person out of view at top of stairs | person moves upward, disappears\",\n    \"smartphone screen | screen displays 'A742' | screen black (off) | content changes (scribbles, 'A7', 'A742'), screen goes black\",\n    \"stairs and railing | stairs and railing visible in background | stairs and railing more prominent after phone screen black | camera view shifts, stairs become main focus\"\n  ],\n  \"findings\": []\n}"
+}

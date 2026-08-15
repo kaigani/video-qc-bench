@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:35:27.775Z",
+  "latencyMs": 21424,
+  "usage": {
+    "prompt_tokens": 30221,
+    "completion_tokens": 15800,
+    "total_tokens": 46021,
+    "cost": 0.0546105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 30008,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0546105,
+      "upstream_inference_prompt_cost": 0.0151105,
+      "upstream_inference_completions_cost": 0.0395
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 15472,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress (older female diner employee) | gray hair in bun, light blue short-sleeve polo, white apron, eyeglasses hanging from apron neckline, wiping counter behind bar | same appearance, exits to kitchen area | serves customer coffee and food, sits at customer-side counter with the man, appears duplicated in two locations behind the counter simultaneously at 112s",
+    "Male customer (truck driver) | gray hair, beard, brown jacket, plaid button-up shirt, blue jeans, enters diner from back area | same appearance, exits diner to walk to his truck | sits at counter, eats and drinks, pays, leaves the diner"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "multi-character consistency / identity duplication",
+      "description": "In a continuous wide shot of the diner interior, the waitress is visible in two separate, distinct locations behind the counter at the same time: one in the foreground (near end of the counter, walking toward the kitchen area) and one in the background (far end of the counter, wiping the counter surface). Both figures have identical hair, wardrobe, and build, with no on-screen movement, established second character, or plausible reflection/set feature to explain the duplicate appearance.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress (older female diner employee) | gray hair in bun, light blue short-sleeve polo, white apron, eyeglasses hanging from apron neckline, wiping counter behind bar | same appearance, exits to kitchen area | serves customer coffee and food, sits at customer-side counter with the man, appears duplicated in two locations behind the counter simultaneously at 112s\",\n    \"Male customer (truck driver) | gray hair, beard, brown jacket, plaid button-up shirt, blue jeans, enters diner from back area | same appearance, exits diner to walk to his truck | sits at counter, eats and drinks, pays, leaves the diner\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"multi-character consistency / identity duplication\",\n      \"description\": \"In a continuous wide shot of the diner interior, the waitress is visible in two separate, distinct locations behind the counter at the same time: one in the foreground (near end of the counter, walking toward the kitchen area) and one in the background (far end of the counter, wiping the counter surface). Both figures have identical hair, wardrobe, and build, with no on-screen movement, established second character, or plausible reflection/set feature to explain the duplicate appearance.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

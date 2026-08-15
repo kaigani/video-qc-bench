@@ -1,0 +1,42 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:24:21.696Z",
+  "latencyMs": 5571,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 1735,
+    "total_tokens": 26383,
+    "cost": 0.0985866,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0985866,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.026025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1458,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in two hands in foreground, screen showing 'A7.42'-style text with glare patches | lowered out of bottom of frame | camera zooms in ~00:03.0; right-hand fingers tap/swipe screen ~00:06.5-00:08.5; hands lower phone ~00:09.1 with plausible motion blur",
+    "background walker (blue clothing, red bag) | mid-frame on upper path, walking away up steps | exits top of frame ~00:03.0 | continuous forward walking motion, bag swinging in step; motion is smooth with no teleporting or frozen beats",
+    "phone screen content | text visible under glare | text remains on screen until phone is lowered | glare/shadow bands sweep across screen in step with phone tilt and handling; finger swipe produces no dramatic content change, consistent with a static readout",
+    "sunlight/shadow on device | strong directional glare on screen | glare position shifts across frames | shifts correlate with slight phone reorientation and camera movement — plausible physical cause",
+    "staircase/railing environment | static background with long shadows | unchanged in final empty frame | no motion expected, none observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in two hands in foreground, screen showing 'A7.42'-style text with glare patches | lowered out of bottom of frame | camera zooms in ~00:03.0; right-hand fingers tap/swipe screen ~00:06.5-00:08.5; hands lower phone ~00:09.1 with plausible motion blur\",\n    \"background walker (blue clothing, red bag) | mid-frame on upper path, walking away up steps | exits top of frame ~00:03.0 | continuous forward walking motion, bag swinging in step; motion is smooth with no teleporting or frozen beats\",\n    \"phone screen content | text visible under glare | text remains on screen until phone is lowered | glare/shadow bands sweep across screen in step with phone tilt and handling; finger swipe produces no dramatic content change, consistent with a static readout\",\n    \"sunlight/shadow on device | strong directional glare on screen | glare position shifts across frames | shifts correlate with slight phone reorientation and camera movement — plausible physical cause\",\n    \"staircase/railing environment | static background with long shadows | unchanged in final empty frame | no motion expected, none observed\"\n  ],\n  \"findings\": []\n}"
+}

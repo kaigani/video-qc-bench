@@ -1,0 +1,66 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:17:45.274Z",
+  "latencyMs": 7494,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 6695,
+    "total_tokens": 31162,
+    "cost": 0.1731348,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1731348,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.100425
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6066,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (foreground, back of head) | white dress shirt, dark slicked-back hair, clean-shaven, holds a straight-razor-like tool in his right hand | same appearance, still grooming | moves tool from chin/upper lip up to hairline and forehead ~00:02, back down to chin ~00:05, up to sideburn/temple ~00:09",
+    "mirror reflection | matches the man's face, shirt, hair, and grooming motions | still largely in sync at clip end | reflected tool position diverges from the real hand around 00:04 and 00:09; reflected hair stays neatly slicked when foreground hair appears lifted",
+    "grooming tool (straight razor?) | thin metallic blade in the foreground hand; appears as a white cylindrical stick in the mirror during the first ~1.5s | reads as a flat silver blade again near 00:09 | apparent shape/color instability between white tube and metal blade",
+    "bathroom background | wooden door with brass knob (center), wall-mounted light switch, wooden shelves with bottles/glasses (right, in mirror) | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "mirror reflection",
+      "invariant_violated": "mirror_sync",
+      "description": "The real hand holds the razor at the man's right temple/sideburn, while the mirror at the same instant shows the razor held horizontally in front of his nose/upper lip. A reflection must depict the same object at the same position at the same moment. The mismatch recurs at 00:09 (foreground tool at hairline, reflection tool at nose level).",
+      "severity": "moderate",
+      "confidence": 0.62
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "man's hair vs. its reflection",
+      "invariant_violated": "mirror_consistency",
+      "description": "As the hand passes the hairline, the foreground hair becomes visibly lifted and volumized, while the reflected hair remains flat and neatly slicked; the two simultaneous views of the same head diverge. Recurs around 00:04 and 00:09.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "grooming tool",
+      "invariant_violated": "object_identity",
+      "description": "The tool reads as a thin dark metallic blade in the foreground hand but as a white cylindrical stick (swab/pencil-like) in the mirror during the opening ~1.5 seconds, then appears as a flat silver blade again by 00:09; the object's form and color are unstable across views.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man (foreground, back of head) | white dress shirt, dark slicked-back hair, clean-shaven, holds a straight-razor-like tool in his right hand | same appearance, still grooming | moves tool from chin/upper lip up to hairline and forehead ~00:02, back down to chin ~00:05, up to sideburn/temple ~00:09\",\n    \"mirror reflection | matches the man's face, shirt, hair, and grooming motions | still largely in sync at clip end | reflected tool position diverges from the real hand around 00:04 and 00:09; reflected hair stays neatly slicked when foreground hair appears lifted\",\n    \"grooming tool (straight razor?) | thin metallic blade in the foreground hand; appears as a white cylindrical stick in the mirror during the first ~1.5s | reads as a flat silver blade again near 00:09 | apparent shape/color instability between white tube and metal blade\",\n    \"bathroom background | wooden door with brass knob (center), wall-mounted light switch, wooden shelves with bottles/glasses (right, in mirror) | unchanged | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"mirror_sync\",\n      \"description\": \"The real hand holds the razor at the man's right temple/sideburn, while the mirror at the same instant shows the razor held horizontally in front of his nose/upper lip. A reflection must depict the same object at the same position at the same moment. The mismatch recurs at 00:09 (foreground tool at hairline, reflection tool at nose level).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.62\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"man's hair vs. its reflection\",\n      \"invariant_violated\": \"mirror_consistency\",\n      \"description\": \"As the hand passes the hairline, the foreground hair becomes visibly lifted and volumized, while the reflected hair remains flat and neatly slicked; the two simultaneous views of the same head diverge. Recurs around 00:04 and 00:09.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"grooming tool\",\n      \"invariant_violated\": \"object_identity\",\n      \"description\": \"The tool reads as a thin dark metallic blade in the foreground hand but as a white cylindrical stick (swab/pencil-like) in the mirror during the opening ~1.5 seconds, then appears as a flat silver blade again by 00:09; the object's form and color are unstable across views.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

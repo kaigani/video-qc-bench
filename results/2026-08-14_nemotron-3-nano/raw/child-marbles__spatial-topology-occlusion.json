@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:50:03.671Z",
+  "latencyMs": 6001,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 9200,
+    "total_tokens": 11403,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10049,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "bowl | centered on wooden table, containing balls | unchanged | no movement",
+    "container | right of bowl on table | unchanged | no movement",
+    "balls | mixed red, green, yellow inside bowl and on table | unchanged | no movement",
+    "child | behind table reaching into bowl | hands still in bowl, mixing | continuous mixing"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"bowl | centered on wooden table, containing balls | unchanged | no movement\",\n    \"container | right of bowl on table | unchanged | no movement\",\n    \"balls | mixed red, green, yellow inside bowl and on table | unchanged | no movement\",\n    \"child | behind table reaching into bowl | hands still in bowl, mixing | continuous mixing\"\n  ],\n  \"findings\": []\n}"
+}

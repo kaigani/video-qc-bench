@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:49:41.642Z",
+  "latencyMs": 10164,
+  "usage": {
+    "prompt_tokens": 42723,
+    "completion_tokens": 9216,
+    "total_tokens": 51939,
+    "cost": 0.1555011,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 41077,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1555011,
+      "upstream_inference_prompt_cost": 0.0172611,
+      "upstream_inference_completions_cost": 0.13824
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8377,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | standing behind counter at night, wiping with cloth, coffee pot on warmer | standing at front window in morning light watching the truck leave, then resuming wiping | continuous cloth-on-counter wiping contact 00:10-00:18 and 00:45-00:50; grips pot handle and holds it over mug 00:23-00:26; sets plate and cup down in front of man 01:09-01:12; rounds counter and sits on stool beside man 01:20-01:22; stands inside window as man boards truck 01:46-01:49; wipes customer-side counter while seated on stool 01:50, then stands",
+    "male customer | outside in parked truck (implied), then enters diner | seated at counter with mug and plate, later walks out and climbs into truck cab | walks from rear of diner to counter 00:19-00:23; lowers onto stool with full seat contact 00:24-00:25; both hands wrap mug 00:36-00:43 and 01:27-01:34; places and presses bills on counter 01:37-01:39; walks across lot to truck 01:41-01:45; grips door and climbs into cab 01:47-01:49",
+    "glass coffee pot | resting at brew station | returned to station after pour | waitress hand visibly wrapped on handle 00:23-00:26; tilted and pouring in close-up 00:27-00:31 with grip point just above frame edge (established by visible grip in preceding shot)",
+    "white mug | empty on counter | filled with coffee, held by customer, left on counter | man's hand around mug at 00:26, then released to rest on counter during pour; both of man's hands around it 00:36-00:43; static on counter during bill placement 01:37-01:40",
+    "plate with food | carried by waitress | resting on counter in front of man | lowered onto counter with two-hand support 01:09-01:10; small cup set beside it 01:11; plate re-touched/adjusted 01:13-01:14",
+    "cash (bills) | in man's hand | lying flat on counter beside mug | hand enters, places, presses/smooths bills against counter 01:37-01:39; clean release, bills remain static",
+    "counter stools | empty | occupied by man (00:24 onward), then also by waitress (01:21-01:26) | man settles onto stool with visible weight transfer; waitress lowers onto adjacent stool without stool shifting",
+    "semi truck | parked beside diner, exhaust vapor drifting, wheels grounded | man boards and it prepares to depart | static and fully supported during all exterior shots; door interaction at 01:47-01:49"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress (two simultaneous instances)",
+      "invariant_violated": "solidity / body duplication",
+      "description": "During the final sunlit cleaning sequence, two figures wearing the same uniform and apron are visible at once: one stands up from the customer-side stool and moves behind the right end of the counter, while a second, already-present figure wipes the far end of the counter near the front window. Over the next ~5 seconds the near figure walks toward the back and the two converge at the kitchen doorway, after which only a single figure remains — the two bodies occupy overlapping space and merge into one with no collision, occlusion, or separation event. A single person cannot be in two places at once, and the merge is an unexplained pass-through/overlap of solid bodies.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | standing behind counter at night, wiping with cloth, coffee pot on warmer | standing at front window in morning light watching the truck leave, then resuming wiping | continuous cloth-on-counter wiping contact 00:10-00:18 and 00:45-00:50; grips pot handle and holds it over mug 00:23-00:26; sets plate and cup down in front of man 01:09-01:12; rounds counter and sits on stool beside man 01:20-01:22; stands inside window as man boards truck 01:46-01:49; wipes customer-side counter while seated on stool 01:50, then stands\",\n    \"male customer | outside in parked truck (implied), then enters diner | seated at counter with mug and plate, later walks out and climbs into truck cab | walks from rear of diner to counter 00:19-00:23; lowers onto stool with full seat contact 00:24-00:25; both hands wrap mug 00:36-00:43 and 01:27-01:34; places and presses bills on counter 01:37-01:39; walks across lot to truck 01:41-01:45; grips door and climbs into cab 01:47-01:49\",\n    \"glass coffee pot | resting at brew station | returned to station after pour | waitress hand visibly wrapped on handle 00:23-00:26; tilted and pouring in close-up 00:27-00:31 with grip point just above frame edge (established by visible grip in preceding shot)\",\n    \"white mug | empty on counter | filled with coffee, held by customer, left on counter | man's hand around mug at 00:26, then released to rest on counter during pour; both of man's hands around it 00:36-00:43; static on counter during bill placement 01:37-01:40\",\n    \"plate with food | carried by waitress | resting on counter in front of man | lowered onto counter with two-hand support 01:09-01:10; small cup set beside it 01:11; plate re-touched/adjusted 01:13-01:14\",\n    \"cash (bills) | in man's hand | lying flat on counter beside mug | hand enters, places, presses/smooths bills against counter 01:37-01:39; clean release, bills remain static\",\n    \"counter stools | empty | occupied by man (00:24 onward), then also by waitress (01:21-01:26) | man settles onto stool with visible weight transfer; waitress lowers onto adjacent stool without stool shifting\",\n    \"semi truck | parked beside diner, exhaust vapor drifting, wheels grounded | man boards and it prepares to depart | static and fully supported during all exterior shots; door interaction at 01:47-01:49\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress (two simultaneous instances)\",\n      \"invariant_violated\": \"solidity / body duplication\",\n      \"description\": \"During the final sunlit cleaning sequence, two figures wearing the same uniform and apron are visible at once: one stands up from the customer-side stool and moves behind the right end of the counter, while a second, already-present figure wipes the far end of the counter near the front window. Over the next ~5 seconds the near figure walks toward the back and the two converge at the kitchen doorway, after which only a single figure remains — the two bodies occupy overlapping space and merge into one with no collision, occlusion, or separation event. A single person cannot be in two places at once, and the merge is an unexplained pass-through/overlap of solid bodies.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

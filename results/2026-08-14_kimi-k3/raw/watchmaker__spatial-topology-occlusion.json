@@ -1,0 +1,44 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:38:44.003Z",
+  "latencyMs": 6817,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 1483,
+    "total_tokens": 26135,
+    "cost": 0.0948186,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0948186,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.022245
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1120,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (subject) | centered in static medium close-up, navy striped shirt, watch on left wrist, hands at chest level | same position and framing at end | continuous manipulation of a small metal object; no positional discontinuities",
+    "background wall | plain off-white wall filling frame | unchanged at end | static throughout; no openings or features to track",
+    "beige blurred object (frame-right edge) | visible at right edge from 00:00 to ~00:06 | out of frame by 00:07 | leaves frame due to slow leftward/downward framing drift, not a cut",
+    "metal tool (probe/tweezers) | held in right hand, tip engaged with small metal object in left hand | absent from frame after ~00:04.0 | right hand withdraws tool downward out of frame ~00:03.5-00:04.0 and returns empty; consistent with being set down off-screen",
+    "small metal object (ring/charm) | held in left hand at chest level | held between both hands at end | smoothly transfers to two-handed grip ~00:04.5; remains in front of torso, correctly occluding shirt",
+    "table surface | not visible at start | dark surface visible at bottom edge by 00:09.6 | revealed by gradual downward drift of framing; smooth and continuous",
+    "camera | static medium close-up at chest/face level | essentially same shot with slight downward/left drift | single continuous take, no cuts; occlusion order (hands/tool in front of torso, torso in front of wall) holds throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (subject) | centered in static medium close-up, navy striped shirt, watch on left wrist, hands at chest level | same position and framing at end | continuous manipulation of a small metal object; no positional discontinuities\",\n    \"background wall | plain off-white wall filling frame | unchanged at end | static throughout; no openings or features to track\",\n    \"beige blurred object (frame-right edge) | visible at right edge from 00:00 to ~00:06 | out of frame by 00:07 | leaves frame due to slow leftward/downward framing drift, not a cut\",\n    \"metal tool (probe/tweezers) | held in right hand, tip engaged with small metal object in left hand | absent from frame after ~00:04.0 | right hand withdraws tool downward out of frame ~00:03.5-00:04.0 and returns empty; consistent with being set down off-screen\",\n    \"small metal object (ring/charm) | held in left hand at chest level | held between both hands at end | smoothly transfers to two-handed grip ~00:04.5; remains in front of torso, correctly occluding shirt\",\n    \"table surface | not visible at start | dark surface visible at bottom edge by 00:09.6 | revealed by gradual downward drift of framing; smooth and continuous\",\n    \"camera | static medium close-up at chest/face level | essentially same shot with slight downward/left drift | single continuous take, no cuts; occlusion order (hands/tool in front of torso, torso in front of wall) holds throughout\"\n  ],\n  \"findings\": []\n}"
+}

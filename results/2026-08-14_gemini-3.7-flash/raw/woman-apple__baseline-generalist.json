@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:46.098Z",
+  "latencyMs": 10913,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 798,
+    "total_tokens": 2036,
+    "cost": 0.0019605,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0019605,
+      "upstream_inference_prompt_cost": 0.00046425,
+      "upstream_inference_completions_cost": 0.00149625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 618,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing navy shirt and grey skirt holding blue umbrella and red fruit | rotating/walking in market | holds umbrella as camera orbits",
+    "market stalls | fruit display on left and right | stalls in background | fruit color shifts to unnatural cyan and purple on left stalls"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "produce stall fruits (left foreground)",
+      "invariant_violated": "color_plausibility_and_consistency",
+      "description": "The fruits displayed on the left stall shift into unnatural neon cyan-blue and vibrant purple colors, an artifact of generative video synthesis.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | wearing navy shirt and grey skirt holding blue umbrella and red fruit | rotating/walking in market | holds umbrella as camera orbits\",\n    \"market stalls | fruit display on left and right | stalls in background | fruit color shifts to unnatural cyan and purple on left stalls\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"produce stall fruits (left foreground)\",\n      \"invariant_violated\": \"color_plausibility_and_consistency\",\n      \"description\": \"The fruits displayed on the left stall shift into unnatural neon cyan-blue and vibrant purple colors, an artifact of generative video synthesis.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

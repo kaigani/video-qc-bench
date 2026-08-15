@@ -1,0 +1,47 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:08:56.749Z",
+  "latencyMs": 6552,
+  "usage": {
+    "prompt_tokens": 2017,
+    "completion_tokens": 1456,
+    "total_tokens": 3473,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1226,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone screen | displays 'A742' | briefly shows 'A7' and 'A2' then returns to 'A742' | sudden text change inconsistent with prior display"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "smartphone screen",
+      "invariant_violated": "text continuity",
+      "description": "The displayed text on the phone screen abruptly changes from 'A742' to 'A7' and 'A2' before reverting, indicating a continuity error.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone screen | displays 'A742' | briefly shows 'A7' and 'A2' then returns to 'A742' | sudden text change inconsistent with prior display\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"smartphone screen\",\n      \"invariant_violated\": \"text continuity\",\n      \"description\": \"The displayed text on the phone screen abruptly changes from 'A742' to 'A7' and 'A2' before reverting, indicating a continuity error.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

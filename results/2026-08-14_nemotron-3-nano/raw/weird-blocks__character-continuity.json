@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__character-continuity",
+  "video": "weird-blocks.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:22:27.488Z",
+  "latencyMs": 2806,
+  "usage": {
+    "prompt_tokens": 2205,
+    "completion_tokens": 4821,
+    "total_tokens": 7026,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4171,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | top-left, touching green 2 cube, no accessories | top-right, placing blue 3 cube | hand jumps from far right to far left (00:08) and from left to far right (00:10)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "hand",
+      "invariant_violated": "position continuity",
+      "description": "hand appears at far right in frame 8 then instantly at far left in frame 9 without visible movement across the table",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "hand",
+      "invariant_violated": "position continuity",
+      "description": "hand lifts blue 3 cube at left side then places another blue 3 cube at far right without visible motion",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | top-left, touching green 2 cube, no accessories | top-right, placing blue 3 cube | hand jumps from far right to far left (00:08) and from left to far right (00:10)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"hand\",\n      \"invariant_violated\": \"position continuity\",\n      \"description\": \"hand appears at far right in frame 8 then instantly at far left in frame 9 without visible movement across the table\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"hand\",\n      \"invariant_violated\": \"position continuity\",\n      \"description\": \"hand lifts blue 3 cube at left side then places another blue 3 cube at far right without visible motion\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

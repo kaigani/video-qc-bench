@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:36:56.033Z",
+  "latencyMs": 7624,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 1480,
+    "total_tokens": 26128,
+    "cost": 0.0947616,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0947616,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.0222
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1105,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouched low on rolling board at 00:00:00 | standing balanced, riding away in bowl at 00:00:09.6 | crouch→pop→airborne tuck→descend→land (trick 1, 00:00:00–00:00:03.5); roll across park; crouch→pop→airborne tuck→descend→land (trick 2, 00:00:06–00:00:09.6); each landing followed by continued rolling, no stalls or teleports",
+    "skateboard | flat under feet, rolling forward | flat under feet, rolling in bowl | leaves ground only after skater's pop at ~00:00:01.0 and ~00:00:07.5; rotates (flip) only while airborne between foot-flick and foot-catch; returns under feet before each landing at ~00:00:03.0 and ~00:00:09.1; no motion without rider contact or gravity",
+    "skater's shadow | on ground beside skater | on ground beside skater | detaches visually during airborne phases (skater above it) and rejoins at landings; position/scale consistent with overhead sun throughout",
+    "arms/body balance | arms low in crouch | arms out for balance while riding | arm swings precede and accompany each pop and each landing absorption — reactions follow the jumps they stabilize",
+    "environment (ramps, trees, lights, sky) | static skatepark, sunny | unchanged | no object moves or changes state without contact; no light changes occur"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouched low on rolling board at 00:00:00 | standing balanced, riding away in bowl at 00:00:09.6 | crouch→pop→airborne tuck→descend→land (trick 1, 00:00:00–00:00:03.5); roll across park; crouch→pop→airborne tuck→descend→land (trick 2, 00:00:06–00:00:09.6); each landing followed by continued rolling, no stalls or teleports\",\n    \"skateboard | flat under feet, rolling forward | flat under feet, rolling in bowl | leaves ground only after skater's pop at ~00:00:01.0 and ~00:00:07.5; rotates (flip) only while airborne between foot-flick and foot-catch; returns under feet before each landing at ~00:00:03.0 and ~00:00:09.1; no motion without rider contact or gravity\",\n    \"skater's shadow | on ground beside skater | on ground beside skater | detaches visually during airborne phases (skater above it) and rejoins at landings; position/scale consistent with overhead sun throughout\",\n    \"arms/body balance | arms low in crouch | arms out for balance while riding | arm swings precede and accompany each pop and each landing absorption — reactions follow the jumps they stabilize\",\n    \"environment (ramps, trees, lights, sky) | static skatepark, sunny | unchanged | no object moves or changes state without contact; no light changes occur\"\n  ],\n  \"findings\": []\n}"
+}

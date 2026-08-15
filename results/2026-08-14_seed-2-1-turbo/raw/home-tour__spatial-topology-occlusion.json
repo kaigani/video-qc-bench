@@ -1,0 +1,44 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:51:56.558Z",
+  "latencyMs": 9819,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 2863,
+    "total_tokens": 9774,
+    "cost": 0.010613,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010613,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0071575
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2585,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen A | upper wooden cabinets, microwave on counter, tile backsplash, doorway to hallway on left | same | woman exits left into hallway",
+    "Hallway 1 | white door at far end, framed picture on right wall, kitchen on left | same | woman walks down and turns right into bedroom",
+    "Kitchen A left side | stove with red kettle, sink, upper cabinets with range hood | same | visible as woman enters hallway",
+    "Bedroom | bed with white bedding, chandelier, two windows with curtains, nightstand with lamp, chairs at foot of bed, framed art above bed | same | woman enters from left, walks through, exits through doorway on far left",
+    "Hallway 2 / Kitchen B area | microwave mounted on wall above stove, door at far end, window on right, framed picture on wall by door | same | woman enters from left doorway, walks forward",
+    "Framed floral/figure art | on gray wall near Kitchen A doorway | different instance visible on gray wall near exit from bedroom | two separate pieces in different locations",
+    "Woman | walking through house | continues walking | moves from Kitchen A → Hallway 1 → Bedroom → Kitchen B area"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen A | upper wooden cabinets, microwave on counter, tile backsplash, doorway to hallway on left | same | woman exits left into hallway\",\n    \"Hallway 1 | white door at far end, framed picture on right wall, kitchen on left | same | woman walks down and turns right into bedroom\",\n    \"Kitchen A left side | stove with red kettle, sink, upper cabinets with range hood | same | visible as woman enters hallway\",\n    \"Bedroom | bed with white bedding, chandelier, two windows with curtains, nightstand with lamp, chairs at foot of bed, framed art above bed | same | woman enters from left, walks through, exits through doorway on far left\",\n    \"Hallway 2 / Kitchen B area | microwave mounted on wall above stove, door at far end, window on right, framed picture on wall by door | same | woman enters from left doorway, walks forward\",\n    \"Framed floral/figure art | on gray wall near Kitchen A doorway | different instance visible on gray wall near exit from bedroom | two separate pieces in different locations\",\n    \"Woman | walking through house | continues walking | moves from Kitchen A → Hallway 1 → Bedroom → Kitchen B area\"\n  ],\n  \"findings\": []\n}"
+}

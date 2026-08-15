@@ -1,0 +1,46 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:04:24.367Z",
+  "latencyMs": 5481,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 1308,
+    "total_tokens": 8219,
+    "cost": 0.0067255,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0067255,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.00327
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1045,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "plain white wall | fixed background behind subject | unchanged | no transitions",
+    "person's torso (navy striped shirt) | centered, facing camera | same relative position to wall | slight head/upper body movement",
+    "left wrist watch (black band, white face) | on viewer's right wrist (person's left) | remains on left wrist | moves with left arm motion",
+    "right hand | holds tweezers at start | manipulates small object component later | tweezers set down out of frame ~4s",
+    "left hand | holds round work object at start | holds work object throughout | adjusts grip on object",
+    "round work object | held between hands in front of torso | stays in front of torso | passed between hands, adjusted",
+    "tweezers | held in right hand | moved out of frame | lowered out of view by ~4s",
+    "necklace with small pendant | around neck, centered on chest | stays in same position | slight movement with head tilt",
+    "dark table surface | at bottom of frame | visible at start and end | remains fixed below the subject"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"plain white wall | fixed background behind subject | unchanged | no transitions\",\n    \"person's torso (navy striped shirt) | centered, facing camera | same relative position to wall | slight head/upper body movement\",\n    \"left wrist watch (black band, white face) | on viewer's right wrist (person's left) | remains on left wrist | moves with left arm motion\",\n    \"right hand | holds tweezers at start | manipulates small object component later | tweezers set down out of frame ~4s\",\n    \"left hand | holds round work object at start | holds work object throughout | adjusts grip on object\",\n    \"round work object | held between hands in front of torso | stays in front of torso | passed between hands, adjusted\",\n    \"tweezers | held in right hand | moved out of frame | lowered out of view by ~4s\",\n    \"necklace with small pendant | around neck, centered on chest | stays in same position | slight movement with head tilt\",\n    \"dark table surface | at bottom of frame | visible at start and end | remains fixed below the subject\"\n  ],\n  \"findings\": []\n}"
+}

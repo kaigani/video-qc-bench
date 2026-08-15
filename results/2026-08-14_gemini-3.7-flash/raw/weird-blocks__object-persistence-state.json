@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:31.024Z",
+  "latencyMs": 3254,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1307,
+    "total_tokens": 2751,
+    "cost": 0.002992125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002992125,
+      "upstream_inference_prompt_cost": 0.0005415,
+      "upstream_inference_completions_cost": 0.002450625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1037,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "numbered cube blocks | set of 2 numbered blocks on wooden table at start | set of 8 numbered blocks arranged in a line at end | continuous duplication of blocks and spontaneous transformation of face numbers as the hand drags the rightmost block"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered cube blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "Additional numbered blocks spontaneously duplicate and appear in the line as the hand slides the blocks across the table, increasing the total count from 2 blocks to 8 blocks without any external source.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "rightmost cube block",
+      "invariant_violated": "physical state transitions",
+      "description": "The number printed on the front face of the rightmost cube morphs from '3' to '6' without the block being rotated or physically altered.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"numbered cube blocks | set of 2 numbered blocks on wooden table at start | set of 8 numbered blocks arranged in a line at end | continuous duplication of blocks and spontaneous transformation of face numbers as the hand drags the rightmost block\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered cube blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Additional numbered blocks spontaneously duplicate and appear in the line as the hand slides the blocks across the table, increasing the total count from 2 blocks to 8 blocks without any external source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"rightmost cube block\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"The number printed on the front face of the rightmost cube morphs from '3' to '6' without the block being rotated or physically altered.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

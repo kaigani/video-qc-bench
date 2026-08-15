@@ -1,0 +1,59 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:14:38.322Z",
+  "latencyMs": 6348,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 3774,
+    "total_tokens": 28422,
+    "cost": 0.1291716,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1291716,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.05661
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3120,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "magician (blue suit) | seated at round red-cloth table, hands entering from left | arranging cups in a line, holding/placing coins | drops coin into front-left cup (~00:01.0), extracts coin stack from same cup (~00:02.0), returns stack (~00:03.5), slides cups into a row (~00:04.0–00:08.0), places coin into leftmost cup (~00:08.6–00:09.6)",
+    "front-left cup | contains ~1 coin at bottom | holds returned coin stack | coin dropped in (cause: hand at 00:01.0), tall multi-coin stack pulled out at 00:02.0, stack reinserted at 00:03.5, cup later slid into line by hand",
+    "middle cup | visibly full, coin stack protruding above rim | nearly empty, nothing above rim | coins diminish between ~00:02.0 and ~00:03.5 while no hand contacts or approaches the cup",
+    "loose coins on table | scattered across cloth | remain scattered, some picked up | right hand picks coin near back cup (~00:03.0) and deposits it (~00:04.0); coin held over leftmost cup at 00:08.6 and dropped by 00:09.6",
+    "camera | low close-up on hands | wide high orbit revealing magician | continuous pull-back and orbit around table, motion smooth"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "middle cup's coins",
+      "invariant_violated": "effect-without-cause",
+      "description": "The middle cup starts with a stack of coins protruding above its rim (00:00.0–00:02.0). By 00:02.5–00:03.5 the protruding stack is gone and the cup appears nearly empty, yet no hand touches or even approaches that cup during the interval — the left hand is occupied at the front-left cup and the right hand works behind the back cup. Coins cannot lower themselves below the rim unaided.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "coin stack extracted from front-left cup",
+      "invariant_violated": "proportionality & completion",
+      "description": "The front-left cup's interior is visible at 00:00.0 holding roughly one coin; the hand adds one more coin at 00:01.0. At 00:02.0 the hand withdraws a thick stack of many coins from that same cup — far more than the ~2 coins the cup was shown to contain. The effect (large stack out) is disproportionate to the established contents and the single inserted coin.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"magician (blue suit) | seated at round red-cloth table, hands entering from left | arranging cups in a line, holding/placing coins | drops coin into front-left cup (~00:01.0), extracts coin stack from same cup (~00:02.0), returns stack (~00:03.5), slides cups into a row (~00:04.0–00:08.0), places coin into leftmost cup (~00:08.6–00:09.6)\",\n    \"front-left cup | contains ~1 coin at bottom | holds returned coin stack | coin dropped in (cause: hand at 00:01.0), tall multi-coin stack pulled out at 00:02.0, stack reinserted at 00:03.5, cup later slid into line by hand\",\n    \"middle cup | visibly full, coin stack protruding above rim | nearly empty, nothing above rim | coins diminish between ~00:02.0 and ~00:03.5 while no hand contacts or approaches the cup\",\n    \"loose coins on table | scattered across cloth | remain scattered, some picked up | right hand picks coin near back cup (~00:03.0) and deposits it (~00:04.0); coin held over leftmost cup at 00:08.6 and dropped by 00:09.6\",\n    \"camera | low close-up on hands | wide high orbit revealing magician | continuous pull-back and orbit around table, motion smooth\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"middle cup's coins\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"The middle cup starts with a stack of coins protruding above its rim (00:00.0–00:02.0). By 00:02.5–00:03.5 the protruding stack is gone and the cup appears nearly empty, yet no hand touches or even approaches that cup during the interval — the left hand is occupied at the front-left cup and the right hand works behind the back cup. Coins cannot lower themselves below the rim unaided.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"coin stack extracted from front-left cup\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"The front-left cup's interior is visible at 00:00.0 holding roughly one coin; the hand adds one more coin at 00:01.0. At 00:02.0 the hand withdraws a thick stack of many coins from that same cup — far more than the ~2 coins the cup was shown to contain. The effect (large stack out) is disproportionate to the established contents and the single inserted coin.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

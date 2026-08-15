@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:13:40.375Z",
+  "latencyMs": 3747,
+  "usage": {
+    "prompt_tokens": 6722,
+    "completion_tokens": 15818,
+    "total_tokens": 22540,
+    "cost": 0.042906,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042906,
+      "upstream_inference_prompt_cost": 0.003361,
+      "upstream_inference_completions_cost": 0.039545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 15555,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | positioned over left green '2' cube | positioned over rightmost blue '6' cube | sequentially moves each rightmost cube one position to the right, rotating cubes to show different faces",
+    "number cubes | 2 green cubes with '2' face forward and metal tops | 8 multicolored cubes (blue, green, orange, light blue) with numbers 2,3,5,6 face forward and metal tops | total count increases from 2 to 8 as new cubes appear in the original position of each moved cube"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "number cubes",
+      "invariant_violated": "object count consistency",
+      "description": "The total number of cubes increases repeatedly as the hand moves each rightmost cube to the right. A new cube appears in the original position of each moved cube, growing the total from 2 to 8 cubes without any new cubes being introduced from off-screen, which is physically impossible.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | positioned over left green '2' cube | positioned over rightmost blue '6' cube | sequentially moves each rightmost cube one position to the right, rotating cubes to show different faces\",\n    \"number cubes | 2 green cubes with '2' face forward and metal tops | 8 multicolored cubes (blue, green, orange, light blue) with numbers 2,3,5,6 face forward and metal tops | total count increases from 2 to 8 as new cubes appear in the original position of each moved cube\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"number cubes\",\n      \"invariant_violated\": \"object count consistency\",\n      \"description\": \"The total number of cubes increases repeatedly as the hand moves each rightmost cube to the right. A new cube appears in the original position of each moved cube, growing the total from 2 to 8 cubes without any new cubes being introduced from off-screen, which is physically impossible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

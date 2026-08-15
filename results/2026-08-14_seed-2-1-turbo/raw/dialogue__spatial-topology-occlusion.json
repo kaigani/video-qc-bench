@@ -1,0 +1,45 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:45:24.719Z",
+  "latencyMs": 4181,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 8909,
+    "total_tokens": 15820,
+    "cost": 0.025728,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025728,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0222725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8537,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "left (knock) door | wooden paneled, partially visible at left edge of initial frame | fully visible, man stands in front knocking | camera pans left to reveal full door as man walks toward it",
+    "rear (back wall) door | wooden with left panel (coat hook) and right glass panel, behind man | positioned on right side of frame, coat on left panel, picture visible through right glass | shifts to right side of frame as camera pans left",
+    "right door | wooden, partially visible at right edge of initial frame with framed dog/V art adjacent | no longer visible | exits frame right as camera pans left",
+    "navy blue coat on hook | hangs on left panel of rear door, upper portion visible above man's shoulder | hangs on left (near) side of rear door, white sleeve stripe visible from side angle | remains fixed on rear door, viewed from different angle as camera moves",
+    "decorative wheel ornament | mounted above coat hook on rear door, left of door center | visible at top left of rear door in later shots | stays fixed above coat hook, viewed from new angle",
+    "wall-mounted wooden box | on wall between rear door and right door, right of rear door | not visible | exits frame right during camera pan",
+    "left wall fixtures (sconce, light switches) | not visible in initial shot | visible on wall left of knock door | revealed as camera pans left to face left wall",
+    "man in green/white striped shirt | center foreground, facing slightly right | at left door, facing door, knocking | walks left (screen left) from center to left door, turns to face door"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"left (knock) door | wooden paneled, partially visible at left edge of initial frame | fully visible, man stands in front knocking | camera pans left to reveal full door as man walks toward it\",\n    \"rear (back wall) door | wooden with left panel (coat hook) and right glass panel, behind man | positioned on right side of frame, coat on left panel, picture visible through right glass | shifts to right side of frame as camera pans left\",\n    \"right door | wooden, partially visible at right edge of initial frame with framed dog/V art adjacent | no longer visible | exits frame right as camera pans left\",\n    \"navy blue coat on hook | hangs on left panel of rear door, upper portion visible above man's shoulder | hangs on left (near) side of rear door, white sleeve stripe visible from side angle | remains fixed on rear door, viewed from different angle as camera moves\",\n    \"decorative wheel ornament | mounted above coat hook on rear door, left of door center | visible at top left of rear door in later shots | stays fixed above coat hook, viewed from new angle\",\n    \"wall-mounted wooden box | on wall between rear door and right door, right of rear door | not visible | exits frame right during camera pan\",\n    \"left wall fixtures (sconce, light switches) | not visible in initial shot | visible on wall left of knock door | revealed as camera pans left to face left wall\",\n    \"man in green/white striped shirt | center foreground, facing slightly right | at left door, facing door, knocking | walks left (screen left) from center to left door, turns to face door\"\n  ],\n  \"findings\": []\n}"
+}

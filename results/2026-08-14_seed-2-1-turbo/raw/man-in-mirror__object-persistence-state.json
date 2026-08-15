@@ -1,0 +1,60 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:32:08.097Z",
+  "latencyMs": 7845,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 13003,
+    "total_tokens": 19929,
+    "cost": 0.0359705,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0359705,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.0325075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12535,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "handheld grooming tool | held in man's right hand at chin, razor form | held in man's right hand at forehead, comb form | moved up to forehead ~2s with unexplained identity change razor→comb; moved down to chin ~4.7s with unexplained change comb→razor; moved up to forehead ~9.5s with identity change razor→comb again",
+    "wooden-framed mirror | wall-mounted, reflective surface facing man | unchanged position and state | no state changes",
+    "wooden interior door | closed, brass doorknob, in doorway behind man | unchanged position and state | no state changes",
+    "white wall light switch | mounted on wall next to door | unchanged position and state | no state changes",
+    "wooden bathroom shelf | mounted on wall, holding jars/bottles | unchanged position and contents | no state changes",
+    "glass jars and bottles | resting on wooden shelf, various sizes/colors | unchanged positions and state | no state changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "identity & persistence",
+      "description": "The handheld grooming object transforms from a shaving razor to a comb when the man raises it from his chin to his forehead, with no visible action modifying the object to cause this identity change.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04.7",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "identity & persistence",
+      "description": "The handheld grooming object transforms back from a comb to a razor when the man lowers it from his forehead to his chin, with no visible action causing the identity change. This is also an unexplained reversal of the earlier transformation, which is physically impossible.",
+      "severity": "severe",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"handheld grooming tool | held in man's right hand at chin, razor form | held in man's right hand at forehead, comb form | moved up to forehead ~2s with unexplained identity change razor→comb; moved down to chin ~4.7s with unexplained change comb→razor; moved up to forehead ~9.5s with identity change razor→comb again\",\n    \"wooden-framed mirror | wall-mounted, reflective surface facing man | unchanged position and state | no state changes\",\n    \"wooden interior door | closed, brass doorknob, in doorway behind man | unchanged position and state | no state changes\",\n    \"white wall light switch | mounted on wall next to door | unchanged position and state | no state changes\",\n    \"wooden bathroom shelf | mounted on wall, holding jars/bottles | unchanged position and contents | no state changes\",\n    \"glass jars and bottles | resting on wooden shelf, various sizes/colors | unchanged positions and state | no state changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"handheld grooming tool\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The handheld grooming object transforms from a shaving razor to a comb when the man raises it from his chin to his forehead, with no visible action modifying the object to cause this identity change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:04.7\",\n      \"entity\": \"handheld grooming tool\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The handheld grooming object transforms back from a comb to a razor when the man lowers it from his forehead to his chin, with no visible action causing the identity change. This is also an unexplained reversal of the earlier transformation, which is physically impossible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

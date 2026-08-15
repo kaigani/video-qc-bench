@@ -1,0 +1,48 @@
+{
+  "key": "man-in-mirror__character-continuity",
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:20:39.159Z",
+  "latencyMs": 6610,
+  "usage": {
+    "prompt_tokens": 24646,
+    "completion_tokens": 6556,
+    "total_tokens": 31202,
+    "cost": 0.1708956,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1708956,
+      "upstream_inference_prompt_cost": 0.0725556,
+      "upstream_inference_completions_cost": 0.09834
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6049,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (real, back to camera) | dark slicked-back hair, clean-shaven, white button-down shirt, holding small gray comb in right hand | identical appearance; still standing at bathroom mirror facing frame-right, comb in right hand | Stays in fixed position at mirror throughout; action cycles: combing mustache/upper-lip area with head tilted back (00:00-00:01.5), raising comb to right temple/hairline and combing hair back with head bowed (00:02.0-00:04.0), returning comb to cheek/mustache/jaw (00:04.5-00:09.1), raising comb toward temple again at 00:09.6; all hand/head transitions occur within plausible motion time between frames; no wardrobe, hair, or identity changes",
+    "Man's mirror reflection (same character, front view) | matches real man's face, hair, white shirt, right-hand comb | matches at end; still synchronized in posture and action | Reflection mirrors head tilt and comb location in essentially every sampled frame (mustache 00:00-00:01.5, hairline 00:02.0-00:04.0, chin/jaw 00:05.0-00:09.1); one possible lag at 00:09.625 where the real comb has reached the temple while the reflected comb appears lower near the nose/mid-face"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Man's mirror reflection",
+      "invariant_violated": "movement continuity / multi-depiction consistency",
+      "description": "In the final frame the real man has raised the comb to his right temple/hairline (tip visibly above eye level at the hairline), while the mirror reflection shows the comb held roughly horizontal at nose/mid-face level, lagging behind the real hand position. At every earlier sampled frame the reflection matches the real comb height (e.g., 00:02.041 both at hairline), so this single-frame mismatch is unexplained by the continuous raising motion. Confidence is limited because the reflected comb is small and partially occluded by the hand.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (real, back to camera) | dark slicked-back hair, clean-shaven, white button-down shirt, holding small gray comb in right hand | identical appearance; still standing at bathroom mirror facing frame-right, comb in right hand | Stays in fixed position at mirror throughout; action cycles: combing mustache/upper-lip area with head tilted back (00:00-00:01.5), raising comb to right temple/hairline and combing hair back with head bowed (00:02.0-00:04.0), returning comb to cheek/mustache/jaw (00:04.5-00:09.1), raising comb toward temple again at 00:09.6; all hand/head transitions occur within plausible motion time between frames; no wardrobe, hair, or identity changes\",\n    \"Man's mirror reflection (same character, front view) | matches real man's face, hair, white shirt, right-hand comb | matches at end; still synchronized in posture and action | Reflection mirrors head tilt and comb location in essentially every sampled frame (mustache 00:00-00:01.5, hairline 00:02.0-00:04.0, chin/jaw 00:05.0-00:09.1); one possible lag at 00:09.625 where the real comb has reached the temple while the reflected comb appears lower near the nose/mid-face\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Man's mirror reflection\",\n      \"invariant_violated\": \"movement continuity / multi-depiction consistency\",\n      \"description\": \"In the final frame the real man has raised the comb to his right temple/hairline (tip visibly above eye level at the hairline), while the mirror reflection shows the comb held roughly horizontal at nose/mid-face level, lagging behind the real hand position. At every earlier sampled frame the reflection matches the real comb height (e.g., 00:02.041 both at hairline), so this single-frame mismatch is unexplained by the continuous raising motion. Confidence is limited because the reflected comb is small and partially occluded by the hand.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

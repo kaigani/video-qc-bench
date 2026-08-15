@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:23:47.756Z",
+  "latencyMs": 1860,
+  "usage": {
+    "prompt_tokens": 2017,
+    "completion_tokens": 12527,
+    "total_tokens": 14544,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10014,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cubes | Green 2, Green 2 | Blue 2, Blue 3, Green 2, Tan 2, LightBlue 3, Green 5, Green 2, Blue 3 | The number on the third cube changes from 3 to 2"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "cubes",
+      "invariant_violated": "number_consistency",
+      "description": "In the final lineup shown from 00:08 onwards, the third cube (green) displays the number 2, whereas in the preceding assembly sequence (00:07), it displayed the number 3.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cubes | Green 2, Green 2 | Blue 2, Blue 3, Green 2, Tan 2, LightBlue 3, Green 5, Green 2, Blue 3 | The number on the third cube changes from 3 to 2\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"cubes\",\n      \"invariant_violated\": \"number_consistency\",\n      \"description\": \"In the final lineup shown from 00:08 onwards, the third cube (green) displays the number 2, whereas in the preceding assembly sequence (00:07), it displayed the number 3.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

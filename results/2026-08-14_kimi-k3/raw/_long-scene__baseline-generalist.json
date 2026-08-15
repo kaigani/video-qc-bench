@@ -1,0 +1,92 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:39:59.861Z",
+  "latencyMs": 73381,
+  "usage": {
+    "prompt_tokens": 42525,
+    "completion_tokens": 7177,
+    "total_tokens": 49702,
+    "cost": 0.23523,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.23523,
+      "upstream_inference_prompt_cost": 0.127575,
+      "upstream_inference_completions_cost": 0.107655
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6132,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "White semi truck | parked left of diner at night, white conventional cab + white box trailer, emitting smoke/steam | gone by dawn; never shown departing | silently replaced by a different truck",
+    "Dark green Kenworth semi | first visible 01:41 parked outside the window, dark green cab + dark trailer with white stripe | customer boards it and it idles | appears with no arrival shot; completely different vehicle from opening",
+    "Waitress | light-blue shirt, white apron, hair in bun, glasses hanging from neck, wiping counters | same appearance at end | appears as TWO simultaneous instances at ~01:52 that merge back into one",
+    "Male customer (trucker) | brown canvas jacket, graying hair, enters from rear doorway at night | sits through night-to-dawn transition, pays with $100-bill stack, walks to green truck | food served with no preparation; enters from interior back room rather than front door",
+    "OPEN neon sign | red neon, reads 'OPEN' from exterior at 00:00 | still reads 'OPEN' (not mirrored) in every interior shot | sign orientation inconsistent between exterior and interior views",
+    "Diner interior / time of day | night, warm kitchen light, blue exterior | dawn, then full morning sun through windows | continuous time-lapse while customer remains seated"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "OPEN neon sign",
+      "invariant_violated": "sign orientation consistency",
+      "description": "The neon OPEN sign reads correctly ('OPEN') when viewed from inside the diner at 00:19 and in all later interior shots, and also reads correctly in the exterior shot at 00:00. A single window-mounted neon sign can only read correctly from one side; one of these views should show it mirrored.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:20",
+      "entity": "male customer",
+      "invariant_violated": "spatial continuity / entrance logic",
+      "description": "The trucker customer first appears walking out of a rear doorway behind/next to the counter (back-of-house area) rather than entering through the diner's front door. No entry from outside is shown, and a customer would not emerge from the kitchen/back room.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:33",
+      "entity": "plate of eggs and toast",
+      "invariant_violated": "causal/temporal plausibility",
+      "description": "The customer sits down at ~00:24 and coffee is poured at ~00:26-00:31; at 00:33 a fully cooked, steaming plate of fried egg and toast is already on the counter. No order was taken and no cooking occurred — the waitress had only been wiping the counter. Food appears within seconds with no explanation.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "semi truck",
+      "invariant_violated": "vehicle continuity",
+      "description": "The truck parked outside during the entire opening sequence (00:00-00:09) is a white conventional-cab tractor with a white box trailer. When the customer leaves at 01:41, the truck he boards is a dark green Kenworth with a dark trailer bearing a white stripe — a completely different vehicle, with no shot of the first truck leaving or the second arriving.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:43",
+      "entity": "window reflection of customer",
+      "invariant_violated": "reflection physics",
+      "description": "As the customer walks away from the window toward the truck (back turned to camera), the glass shows a translucent front-facing image of his face/upper body. A reflection in that glass could only show what is inside the diner, not the face of a man outside walking away — the superimposed face is physically inconsistent.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "single-instance of person / duplication",
+      "description": "Two copies of the same waitress (identical uniform, apron, hair bun) are visible simultaneously: one stands near the coffee machine on the right while the other wipes the far end of the counter by the window. Over the following seconds the two figures converge and merge into one person near the kitchen pass-through.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"White semi truck | parked left of diner at night, white conventional cab + white box trailer, emitting smoke/steam | gone by dawn; never shown departing | silently replaced by a different truck\",\n    \"Dark green Kenworth semi | first visible 01:41 parked outside the window, dark green cab + dark trailer with white stripe | customer boards it and it idles | appears with no arrival shot; completely different vehicle from opening\",\n    \"Waitress | light-blue shirt, white apron, hair in bun, glasses hanging from neck, wiping counters | same appearance at end | appears as TWO simultaneous instances at ~01:52 that merge back into one\",\n    \"Male customer (trucker) | brown canvas jacket, graying hair, enters from rear doorway at night | sits through night-to-dawn transition, pays with $100-bill stack, walks to green truck | food served with no preparation; enters from interior back room rather than front door\",\n    \"OPEN neon sign | red neon, reads 'OPEN' from exterior at 00:00 | still reads 'OPEN' (not mirrored) in every interior shot | sign orientation inconsistent between exterior and interior views\",\n    \"Diner interior / time of day | night, warm kitchen light, blue exterior | dawn, then full morning sun through windows | continuous time-lapse while customer remains seated\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"OPEN neon sign\",\n      \"invariant_violated\": \"sign orientation consistency\",\n      \"description\": \"The neon OPEN sign reads correctly ('OPEN') when viewed from inside the diner at 00:19 and in all later interior shots, and also reads correctly in the exterior shot at 00:00. A single window-mounted neon sign can only read correctly from one side; one of these views should show it mirrored.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:20\",\n      \"entity\": \"male customer\",\n      \"invariant_violated\": \"spatial continuity / entrance logic\",\n      \"description\": \"The trucker customer first appears walking out of a rear doorway behind/next to the counter (back-of-house area) rather than entering through the diner's front door. No entry from outside is shown, and a customer would not emerge from the kitchen/back room.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    },\n    {\n      \"timestamp\": \"00:33\",\n      \"entity\": \"plate of eggs and toast\",\n      \"invariant_violated\": \"causal/temporal plausibility\",\n      \"description\": \"The customer sits down at ~00:24 and coffee is poured at ~00:26-00:31; at 00:33 a fully cooked, steaming plate of fried egg and toast is already on the counter. No order was taken and no cooking occurred — the waitress had only been wiping the counter. Food appears within seconds with no explanation.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"semi truck\",\n      \"invariant_violated\": \"vehicle continuity\",\n      \"description\": \"The truck parked outside during the entire opening sequence (00:00-00:09) is a white conventional-cab tractor with a white box trailer. When the customer leaves at 01:41, the truck he boards is a dark green Kenworth with a dark trailer bearing a white stripe — a completely different vehicle, with no shot of the first truck leaving or the second arriving.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"window reflection of customer\",\n      \"invariant_violated\": \"reflection physics\",\n      \"description\": \"As the customer walks away from the window toward the truck (back turned to camera), the glass shows a translucent front-facing image of his face/upper body. A reflection in that glass could only show what is inside the diner, not the face of a man outside walking away — the superimposed face is physically inconsistent.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"single-instance of person / duplication\",\n      \"description\": \"Two copies of the same waitress (identical uniform, apron, hair bun) are visible simultaneously: one stands near the coffee machine on the right while the other wipes the far end of the counter by the window. Over the following seconds the two figures converge and merge into one person near the kitchen pass-through.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

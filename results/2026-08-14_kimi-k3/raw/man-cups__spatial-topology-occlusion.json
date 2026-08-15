@@ -1,0 +1,56 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:17:20.071Z",
+  "latencyMs": 6744,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 9884,
+    "total_tokens": 34536,
+    "cost": 0.2208336,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.2208336,
+      "upstream_inference_prompt_cost": 0.0725736,
+      "upstream_inference_completions_cost": 0.14826
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9235,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "round table with red coin-print cloth and cream center circle | fills frame at start, 4 cups clustered on cream area | same table, cloth pattern rotates smoothly in frame consistent with camera orbit | pattern orientation evolves continuously with no jumps",
+    "copper cup A (front-left at start) | holds one coin | ends in the lined-up row on the far side | picked up, coin added, slid across table by performer",
+    "copper cup B (center, full of coins at start) | stacked with coins | coins removed, cup joins the row | emptied and repositioned by performer",
+    "copper cup C (back-center, empty) | empty | in the row | repositioned by performer",
+    "copper cup D (right, empty) | empty | in the row | repositioned by performer",
+    "cup count total | exactly 4 cups visible and individually manipulated from 00:00 through ~00:07.5 | 5 cups appear in the row from ~00:08 onward | count increases 4→5 with no hand bringing a new cup into the scene",
+    "scattered coins on cloth | spread around cups and on the patterned ring | gradually consolidated/placed | moved by performer (states out of scope, positions evolve continuously)",
+    "performer (blue suit) | seated on far side of table from initial camera | remains seated at same table position, seen frontally mid-video and in left-facing profile at end | body stays fixed to table while camera orbits",
+    "room: window wall, framed pictures, doorway, audience tables | windows behind/north of performer revealed as camera tilts up ~00:02.5-00:04 | windows sweep across background (center → right → left) as camera orbits; pictures and doorway appear on schedule | background evolution is smooth and consistent with a single continuous orbit, no teleporting or mismatched openings",
+    "camera | starts low and close on cups, south side of table | ends pulled back, roughly 90° around the table showing performer's profile | continuous orbit; occlusion of cups by hands/arms and of far cups by near cups resolves correctly throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "copper cups on the table",
+      "invariant_violated": "scene layout consistency (object count permanence)",
+      "description": "From 00:00 through ~00:07.5 exactly four cups exist and are individually manipulated (front-left, center coin-filled, back-center, right); at 00:07.583 the performer arranges a row of four cups with visible gaps where nothing is hidden, but from 00:08.083 onward the row contains five distinct cups. No hand carries a fifth cup into the scene from off-table during the transition, so the extra cup materializes in the layout without any geometrically accountable action.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"round table with red coin-print cloth and cream center circle | fills frame at start, 4 cups clustered on cream area | same table, cloth pattern rotates smoothly in frame consistent with camera orbit | pattern orientation evolves continuously with no jumps\",\n    \"copper cup A (front-left at start) | holds one coin | ends in the lined-up row on the far side | picked up, coin added, slid across table by performer\",\n    \"copper cup B (center, full of coins at start) | stacked with coins | coins removed, cup joins the row | emptied and repositioned by performer\",\n    \"copper cup C (back-center, empty) | empty | in the row | repositioned by performer\",\n    \"copper cup D (right, empty) | empty | in the row | repositioned by performer\",\n    \"cup count total | exactly 4 cups visible and individually manipulated from 00:00 through ~00:07.5 | 5 cups appear in the row from ~00:08 onward | count increases 4→5 with no hand bringing a new cup into the scene\",\n    \"scattered coins on cloth | spread around cups and on the patterned ring | gradually consolidated/placed | moved by performer (states out of scope, positions evolve continuously)\",\n    \"performer (blue suit) | seated on far side of table from initial camera | remains seated at same table position, seen frontally mid-video and in left-facing profile at end | body stays fixed to table while camera orbits\",\n    \"room: window wall, framed pictures, doorway, audience tables | windows behind/north of performer revealed as camera tilts up ~00:02.5-00:04 | windows sweep across background (center → right → left) as camera orbits; pictures and doorway appear on schedule | background evolution is smooth and consistent with a single continuous orbit, no teleporting or mismatched openings\",\n    \"camera | starts low and close on cups, south side of table | ends pulled back, roughly 90° around the table showing performer's profile | continuous orbit; occlusion of cups by hands/arms and of far cups by near cups resolves correctly throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"copper cups on the table\",\n      \"invariant_violated\": \"scene layout consistency (object count permanence)\",\n      \"description\": \"From 00:00 through ~00:07.5 exactly four cups exist and are individually manipulated (front-left, center coin-filled, back-center, right); at 00:07.583 the performer arranges a row of four cups with visible gaps where nothing is hidden, but from 00:08.083 onward the row contains five distinct cups. No hand carries a fifth cup into the scene from off-table during the transition, so the extra cup materializes in the layout without any geometrically accountable action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

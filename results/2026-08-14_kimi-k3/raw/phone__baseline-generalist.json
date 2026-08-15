@@ -1,0 +1,57 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:20:59.625Z",
+  "latencyMs": 11124,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 2559,
+    "total_tokens": 27026,
+    "cost": 0.1110948,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1110948,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.038385
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2166,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "pedestrian in blue | walking away from camera carrying a red bag in left hand | still walking away but empty-handed | red bag vanishes abruptly around 00:02.5 with no drop or hand-off",
+    "smartphone | held one-handed, teal screen showing 'A7.42' with '7.42' badge top-left | screen goes dark and phone is lowered out of frame | focus pulls from background to phone; top-of-screen text flickers between '441', '4.41', '4.44'",
+    "stairwell / railing / walkway | static sunlit background throughout | unchanged | consistent geometry and lighting"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red bag carried by pedestrian",
+      "invariant_violated": "object permanence",
+      "description": "The pedestrian in blue carries a red bag in their left hand through 00:02.041; by 00:02.541 the bag has completely disappeared mid-stride with no visible dropping motion, occlusion, or hand transfer. The object simply ceases to exist between frames.",
+      "severity": "moderate",
+      "confidence": 0.72
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "phone screen top-center text",
+      "invariant_violated": "on-screen text consistency",
+      "description": "The small text at the top-center of the phone screen flickers across frames, alternating between readings like '441', '4.41', and '4.44' without any user interaction, indicating unstable rendered text rather than a coherent clock or label.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"pedestrian in blue | walking away from camera carrying a red bag in left hand | still walking away but empty-handed | red bag vanishes abruptly around 00:02.5 with no drop or hand-off\",\n    \"smartphone | held one-handed, teal screen showing 'A7.42' with '7.42' badge top-left | screen goes dark and phone is lowered out of frame | focus pulls from background to phone; top-of-screen text flickers between '441', '4.41', '4.44'\",\n    \"stairwell / railing / walkway | static sunlit background throughout | unchanged | consistent geometry and lighting\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red bag carried by pedestrian\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The pedestrian in blue carries a red bag in their left hand through 00:02.041; by 00:02.541 the bag has completely disappeared mid-stride with no visible dropping motion, occlusion, or hand transfer. The object simply ceases to exist between frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.72\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"phone screen top-center text\",\n      \"invariant_violated\": \"on-screen text consistency\",\n      \"description\": \"The small text at the top-center of the phone screen flickers across frames, alternating between readings like '441', '4.41', and '4.44' without any user interaction, indicating unstable rendered text rather than a coherent clock or label.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

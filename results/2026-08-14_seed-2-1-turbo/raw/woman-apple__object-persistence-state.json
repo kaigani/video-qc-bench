@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:14:49.968Z",
+  "latencyMs": 7219,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 3822,
+    "total_tokens": 10748,
+    "cost": 0.013018,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013018,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.009555
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3587,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red apple | whole, held by woman's right hand | whole, held by the woman (occluded by hands/umbrella at end) | transferred between hands via visible hand movement, moves with the woman as she walks and turns",
+    "blue umbrella | open, held by woman's left hand | open, held by the woman | position and orientation change as the woman walks and turns, all via visible movement",
+    "blue plastic water bottle | held in right hand of woman in purple top | held in right hand of woman in purple top (until frame exit) | moves with the walking woman, no state change",
+    "blue shoulder bag | carried on left shoulder of woman in red shirt | carried on left shoulder of woman in red shirt | moves with the walking woman, no state change",
+    "market produce (fruits/vegetables in crates/boxes) | arranged on left and right market stalls | arranged on respective stalls | only enter/exit frame due to camera motion, no persistence or state changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"red apple | whole, held by woman's right hand | whole, held by the woman (occluded by hands/umbrella at end) | transferred between hands via visible hand movement, moves with the woman as she walks and turns\",\n    \"blue umbrella | open, held by woman's left hand | open, held by the woman | position and orientation change as the woman walks and turns, all via visible movement\",\n    \"blue plastic water bottle | held in right hand of woman in purple top | held in right hand of woman in purple top (until frame exit) | moves with the walking woman, no state change\",\n    \"blue shoulder bag | carried on left shoulder of woman in red shirt | carried on left shoulder of woman in red shirt | moves with the walking woman, no state change\",\n    \"market produce (fruits/vegetables in crates/boxes) | arranged on left and right market stalls | arranged on respective stalls | only enter/exit frame due to camera motion, no persistence or state changes\"\n  ],\n  \"findings\": []\n}"
+}

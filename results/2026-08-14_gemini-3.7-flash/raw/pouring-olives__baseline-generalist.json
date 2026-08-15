@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:38.995Z",
+  "latencyMs": 4931,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 954,
+    "total_tokens": 2192,
+    "cost": 0.002253,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002253,
+      "upstream_inference_prompt_cost": 0.00046425,
+      "upstream_inference_completions_cost": 0.00178875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 623,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives in small jar | green olives held in small container | poured into large jar | dark purple olives materialize during pouring",
+    "large glass jar | empty glass jar on wooden board | half-filled with green and purple olives | filled by pouring",
+    "metal bowl in background | filled with green olives | contains fewer, mixed brownish olives | changes abruptly around 00:04-00:05"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives being poured",
+      "invariant_violated": "color_and_matter_inconsistency",
+      "description": "Only green olives are visible inside the small jar being poured, but as they fall, dark purple/black olives spontaneously appear mid-air and fill the bottom of the large jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "countertop items in background",
+      "invariant_violated": "object_permanence",
+      "description": "Between 00:04 and 00:05, a small glass dropper bottle suddenly appears on the counter next to the metal bowl, while the contents of the metal bowl abruptly change in quantity and color.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives in small jar | green olives held in small container | poured into large jar | dark purple olives materialize during pouring\",\n    \"large glass jar | empty glass jar on wooden board | half-filled with green and purple olives | filled by pouring\",\n    \"metal bowl in background | filled with green olives | contains fewer, mixed brownish olives | changes abruptly around 00:04-00:05\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives being poured\",\n      \"invariant_violated\": \"color_and_matter_inconsistency\",\n      \"description\": \"Only green olives are visible inside the small jar being poured, but as they fall, dark purple/black olives spontaneously appear mid-air and fill the bottom of the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"countertop items in background\",\n      \"invariant_violated\": \"object_permanence\",\n      \"description\": \"Between 00:04 and 00:05, a small glass dropper bottle suddenly appears on the counter next to the metal bowl, while the contents of the metal bowl abruptly change in quantity and color.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

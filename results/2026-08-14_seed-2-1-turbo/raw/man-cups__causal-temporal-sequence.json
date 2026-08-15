@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:51:28.765Z",
+  "latencyMs": 6455,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 7892,
+    "total_tokens": 14803,
+    "cost": 0.0231855,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0231855,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.01973
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7614,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Performer's right hand | holds a single gold coin above left table edge | holds a gold coin moving left along the table's left edge | lowers coin to front-left cup, inserts coin into cup, retrieves a gold coin from the cup, moves leftward as camera orbits",
+    "Performer's left hand | out of frame | holds a gold coin near the table's right-side cup | enters frame holding a gold coin, places coin into back cup, removes coin from back cup, moves toward right cup",
+    "Front-left red cup | 1 gold coin visible inside opening | 1 gold coin visible inside opening | receives a coin from the right hand, has a coin removed by the right hand",
+    "Middle red cup | stack of multiple gold coins visible inside | stack of multiple gold coins visible inside | no visible change to contents",
+    "Right red cup | empty interior visible | empty interior visible | no visible content changes",
+    "Back red cup | empty interior visible | interior obscured by hand at end | receives a coin from the left hand, has a coin removed by the left hand",
+    "Scattered table coins | stationary on red tablecloth | stationary on red tablecloth | no observed movement"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Performer's right hand | holds a single gold coin above left table edge | holds a gold coin moving left along the table's left edge | lowers coin to front-left cup, inserts coin into cup, retrieves a gold coin from the cup, moves leftward as camera orbits\",\n    \"Performer's left hand | out of frame | holds a gold coin near the table's right-side cup | enters frame holding a gold coin, places coin into back cup, removes coin from back cup, moves toward right cup\",\n    \"Front-left red cup | 1 gold coin visible inside opening | 1 gold coin visible inside opening | receives a coin from the right hand, has a coin removed by the right hand\",\n    \"Middle red cup | stack of multiple gold coins visible inside | stack of multiple gold coins visible inside | no visible change to contents\",\n    \"Right red cup | empty interior visible | empty interior visible | no visible content changes\",\n    \"Back red cup | empty interior visible | interior obscured by hand at end | receives a coin from the left hand, has a coin removed by the left hand\",\n    \"Scattered table coins | stationary on red tablecloth | stationary on red tablecloth | no observed movement\"\n  ],\n  \"findings\": []\n}"
+}

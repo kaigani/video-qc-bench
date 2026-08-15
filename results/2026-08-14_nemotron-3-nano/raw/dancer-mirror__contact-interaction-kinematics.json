@@ -1,0 +1,39 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:51:32.229Z",
+  "latencyMs": 3359,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 3640,
+    "total_tokens": 5867,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3583,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "feet | both feet planted, weight evenly distributed | left foot planted, right foot lifted on toe | left foot lifts at 00:09 (contact released), weight shifts to right foot; left foot re‑contacts floor at 00:10 (contact re‑established); right foot lifts at 00:11 (contact released)",
+    "hands | arms relaxed, hands free, no contact with objects | arms relaxed, hands free, no contact with objects | continuous arm motion without any grip or support interaction"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"feet | both feet planted, weight evenly distributed | left foot planted, right foot lifted on toe | left foot lifts at 00:09 (contact released), weight shifts to right foot; left foot re‑contacts floor at 00:10 (contact re‑established); right foot lifts at 00:11 (contact released)\",\n    \"hands | arms relaxed, hands free, no contact with objects | arms relaxed, hands free, no contact with objects | continuous arm motion without any grip or support interaction\"\n  ],\n  \"findings\": []\n}"
+}

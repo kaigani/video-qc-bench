@@ -1,0 +1,46 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:27:34.283Z",
+  "latencyMs": 4343,
+  "usage": {
+    "prompt_tokens": 24652,
+    "completion_tokens": 7670,
+    "total_tokens": 32322,
+    "cost": 0.1257261,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23437,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1257261,
+      "upstream_inference_prompt_cost": 0.0106761,
+      "upstream_inference_completions_cost": 0.11505
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7205,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (real, foreground) | back of head/shoulder occupying left foreground, facing mirror, white shirt | same position and orientation at end | head tilts up/down during application; right hand moves applicator chin→forehead/hairline→chin→temple; consistently occludes the left strip of the mirror as expected for a body between camera and mirror",
+    "Mirror with wood/gilt frame | fixed center-right of frame; left vertical frame and bottom frame rail visible | unchanged | frame edges static; frame always renders in front of reflected content (correct depth)",
+    "Man's reflection | faces camera, centered in right half of mirror | unchanged | motion synchronized with real man; correct handedness (right hand appears on image-right of reflected face); applicator positions match real hand within motion blur (hand held beside temple with applicator angled to nose/cheek reads consistently in both views)",
+    "Wooden door + brass knob (reflected) | left portion of reflection, behind the reflected man, closed | unchanged | knob position stable; intermittently occluded by the reflected man's raised arm/torso around 00:02.0–00:03.5 and reappears after — plausible, smoothly evolving occlusion",
+    "White door trim (reflected) | vertical trim at center of reflection, between door and wall switch | unchanged | none",
+    "Light switch (reflected) | on wall right of trim at shoulder height | unchanged | stable; occasionally approached/grazed by reflected head and arm without incorrect over/under rendering",
+    "Wooden shelf with bottles/glasses (reflected) | far right of reflection, three visible tiers | unchanged | contents static; never occluded incorrectly",
+    "Cream wall (real space, non-reflected) | left of frame behind/around the real man | unchanged | none",
+    "Applicator (white pad on short stick) | held in right hand at chin at start | raised to temple/nose area at end | never passes through head or hand; hidden appropriately when on far side of head in rear view, visible in reflection at corresponding location"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (real, foreground) | back of head/shoulder occupying left foreground, facing mirror, white shirt | same position and orientation at end | head tilts up/down during application; right hand moves applicator chin→forehead/hairline→chin→temple; consistently occludes the left strip of the mirror as expected for a body between camera and mirror\",\n    \"Mirror with wood/gilt frame | fixed center-right of frame; left vertical frame and bottom frame rail visible | unchanged | frame edges static; frame always renders in front of reflected content (correct depth)\",\n    \"Man's reflection | faces camera, centered in right half of mirror | unchanged | motion synchronized with real man; correct handedness (right hand appears on image-right of reflected face); applicator positions match real hand within motion blur (hand held beside temple with applicator angled to nose/cheek reads consistently in both views)\",\n    \"Wooden door + brass knob (reflected) | left portion of reflection, behind the reflected man, closed | unchanged | knob position stable; intermittently occluded by the reflected man's raised arm/torso around 00:02.0–00:03.5 and reappears after — plausible, smoothly evolving occlusion\",\n    \"White door trim (reflected) | vertical trim at center of reflection, between door and wall switch | unchanged | none\",\n    \"Light switch (reflected) | on wall right of trim at shoulder height | unchanged | stable; occasionally approached/grazed by reflected head and arm without incorrect over/under rendering\",\n    \"Wooden shelf with bottles/glasses (reflected) | far right of reflection, three visible tiers | unchanged | contents static; never occluded incorrectly\",\n    \"Cream wall (real space, non-reflected) | left of frame behind/around the real man | unchanged | none\",\n    \"Applicator (white pad on short stick) | held in right hand at chin at start | raised to temple/nose area at end | never passes through head or hand; hidden appropriately when on far side of head in rear view, visible in reflection at corresponding location\"\n  ],\n  \"findings\": []\n}"
+}

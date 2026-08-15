@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:17.793Z",
+  "latencyMs": 4283,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 349,
+    "total_tokens": 1775,
+    "cost": 0.001189125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001189125,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.000654375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 213,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | seated at table facing camera, manipulating small object | seated at table manipulating object | continuously present, natural posture shifts",
+    "craft object | held in person's hands in foreground | held in person's hands in foreground | continuous position and depth ordering",
+    "tweezers | held in person's right hand | set down to the left of the frame | moved off-screen around 00:04",
+    "background/chair | behind person, static white wall and chair back | same position behind person | static throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | seated at table facing camera, manipulating small object | seated at table manipulating object | continuously present, natural posture shifts\",\n    \"craft object | held in person's hands in foreground | held in person's hands in foreground | continuous position and depth ordering\",\n    \"tweezers | held in person's right hand | set down to the left of the frame | moved off-screen around 00:04\",\n    \"background/chair | behind person, static white wall and chair back | same position behind person | static throughout\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,55 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:11:49.812Z",
+  "latencyMs": 3344,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 5829,
+    "total_tokens": 8049,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5747,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in left hand, vertical orientation, screen lit showing 'A742' | held in left hand, vertical orientation, screen dark/off | screen content changes from 'A742' to 'A7/A2' and screen turns off (unexplained)"
+  ],
+  "findings": [
+    {
+      "timestamp": "0.4",
+      "entity": "smartphone",
+      "invariant_violated": "VisibleAction",
+      "description": "Screen content changes from 'A742' to 'A7/A2' without any visible user interaction such as a tap or swipe.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "1.0",
+      "entity": "smartphone",
+      "invariant_violated": "VisibleAction",
+      "description": "Screen turns from lit to unlit without any visible button press or other visible action causing the change.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in left hand, vertical orientation, screen lit showing 'A742' | held in left hand, vertical orientation, screen dark/off | screen content changes from 'A742' to 'A7/A2' and screen turns off (unexplained)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0.4\",\n      \"entity\": \"smartphone\",\n      \"invariant_violated\": \"VisibleAction\",\n      \"description\": \"Screen content changes from 'A742' to 'A7/A2' without any visible user interaction such as a tap or swipe.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"1.0\",\n      \"entity\": \"smartphone\",\n      \"invariant_violated\": \"VisibleAction\",\n      \"description\": \"Screen turns from lit to unlit without any visible button press or other visible action causing the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

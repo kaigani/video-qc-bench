@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:07.041Z",
+  "latencyMs": 6032,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 335,
+    "total_tokens": 1761,
+    "cost": 0.001162875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001162875,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.000628125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 239,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | riding skateboard on skatepark ramp | landing second trick on ramp transition | continuous trajectory tracked by camera",
+    "skatepark ramps | concrete curves and transitions with metal coping | consistent layout throughout motion | stable relative to surroundings",
+    "background landscape | park trees and tall light poles against blue sky | consistent parallax relative to camera movement | fixed positions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skater | riding skateboard on skatepark ramp | landing second trick on ramp transition | continuous trajectory tracked by camera\",\n    \"skatepark ramps | concrete curves and transitions with metal coping | consistent layout throughout motion | stable relative to surroundings\",\n    \"background landscape | park trees and tall light poles against blue sky | consistent parallax relative to camera movement | fixed positions\"\n  ],\n  \"findings\": []\n}"
+}

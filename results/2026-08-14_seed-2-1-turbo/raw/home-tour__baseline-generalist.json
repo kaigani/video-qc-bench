@@ -1,0 +1,48 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:46:38.141Z",
+  "latencyMs": 11320,
+  "usage": {
+    "prompt_tokens": 6722,
+    "completion_tokens": 10119,
+    "total_tokens": 16841,
+    "cost": 0.0286585,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0286585,
+      "upstream_inference_prompt_cost": 0.003361,
+      "upstream_inference_completions_cost": 0.0252975
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9822,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | short blonde bob, teal 3/4 sleeve top, dark pants, drop earrings | same attire and hair | walks from kitchen through hallway into bedroom, then through second hallway into second kitchen",
+    "framed floral portrait art + wall fixtures | dark frame, beige mat, figure in blue flower; below: white double light switch, brown + white outlets; on gray kitchen wall | appears on hallway wall (art mirrored) then bedroom wall (art original orientation) | duplicated across three distinct wall locations with matching switch/outlet arrangement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "wall decor (framed art, light switch, outlets)",
+      "invariant_violated": "set dressing spatial consistency",
+      "description": "The exact same framed artwork, white double light switch, and paired electrical outlets (one brown, one white) appear on a hallway wall, matching the arrangement previously seen on the kitchen wall (with the art horizontally flipped). This identical decor arrangement appears a third time on a bedroom wall later, indicating the same physical set wall is reused for multiple distinct room locations, which is implausible for a real residential space.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | short blonde bob, teal 3/4 sleeve top, dark pants, drop earrings | same attire and hair | walks from kitchen through hallway into bedroom, then through second hallway into second kitchen\",\n    \"framed floral portrait art + wall fixtures | dark frame, beige mat, figure in blue flower; below: white double light switch, brown + white outlets; on gray kitchen wall | appears on hallway wall (art mirrored) then bedroom wall (art original orientation) | duplicated across three distinct wall locations with matching switch/outlet arrangement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"wall decor (framed art, light switch, outlets)\",\n      \"invariant_violated\": \"set dressing spatial consistency\",\n      \"description\": \"The exact same framed artwork, white double light switch, and paired electrical outlets (one brown, one white) appear on a hallway wall, matching the arrangement previously seen on the kitchen wall (with the art horizontally flipped). This identical decor arrangement appears a third time on a bedroom wall later, indicating the same physical set wall is reused for multiple distinct room locations, which is implausible for a real residential space.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

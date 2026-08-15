@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:38:15.890Z",
+  "latencyMs": 4579,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 341,
+    "total_tokens": 1767,
+    "cost": 0.001174125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001174125,
+      "upstream_inference_prompt_cost": 0.00053475,
+      "upstream_inference_completions_cost": 0.000639375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 211,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing in foreground facing mirror, seen from back-left | standing in foreground facing mirror | combs hair with right hand",
+    "mirror reflection | reflects man, door, wall switch, and cabinet behind him | maintains accurate mirror symmetry throughout | tracks man's movements continuously",
+    "bathroom mirror & frame | fixed wooden frame mounted on wall | fixed wooden frame | static frame reference",
+    "background behind man (doorway/cabinet) | visible in mirror reflection behind man | visible in mirror reflection | static layout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing in foreground facing mirror, seen from back-left | standing in foreground facing mirror | combs hair with right hand\",\n    \"mirror reflection | reflects man, door, wall switch, and cabinet behind him | maintains accurate mirror symmetry throughout | tracks man's movements continuously\",\n    \"bathroom mirror & frame | fixed wooden frame mounted on wall | fixed wooden frame | static frame reference\",\n    \"background behind man (doorway/cabinet) | visible in mirror reflection behind man | visible in mirror reflection | static layout\"\n  ],\n  \"findings\": []\n}"
+}

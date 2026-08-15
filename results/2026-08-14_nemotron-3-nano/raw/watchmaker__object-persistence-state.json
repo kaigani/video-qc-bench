@@ -1,0 +1,48 @@
+{
+  "key": "watchmaker__object-persistence-state",
+  "video": "watchmaker.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T06:21:01.785Z",
+  "latencyMs": 5910,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 6243,
+    "total_tokens": 8463,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6282,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "metal tool | held in right hand, tip near object, angled down | held in right hand, tip near object, angled down | used to manipulate object, temporarily out of view then reappeared",
+    "small metallic object (ring) | held in left hand, closed, vertical orientation | held in left hand, open/closed after manipulation, orientation adjusted | opened by both hands, then closed by tool insertion and hand adjustment"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "metal tool",
+      "invariant_violated": "persistence",
+      "description": "Tool disappears from view between 00:04 and 00:05 with no visible cause, then reappears at 00:08.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"metal tool | held in right hand, tip near object, angled down | held in right hand, tip near object, angled down | used to manipulate object, temporarily out of view then reappeared\",\n    \"small metallic object (ring) | held in left hand, closed, vertical orientation | held in left hand, open/closed after manipulation, orientation adjusted | opened by both hands, then closed by tool insertion and hand adjustment\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"metal tool\",\n      \"invariant_violated\": \"persistence\",\n      \"description\": \"Tool disappears from view between 00:04 and 00:05 with no visible cause, then reappears at 00:08.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:40:05.120Z",
+  "latencyMs": 6268,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 931,
+    "total_tokens": 2169,
+    "cost": 0.002209875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002209875,
+      "upstream_inference_prompt_cost": 0.00046425,
+      "upstream_inference_completions_cost": 0.001745625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 730,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | blonde hair, blue jacket, leaning out of station wagon window | looking right with hair blowing in wind | consistent pose",
+    "station wagon | vintage wood-paneled station wagon parked on roadside | front left quarter view | camera zooms in",
+    "background road | empty unmarked desert road | yellow center dashed lines and utility poles materialize | spontaneous appearance of road markings and poles"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "background road and roadside environment",
+      "invariant_violated": "environmental_inconsistency",
+      "description": "Yellow dashed centerline road markings and a row of wooden utility poles suddenly materialize along the background road, which was previously unmarked and devoid of roadside poles.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | blonde hair, blue jacket, leaning out of station wagon window | looking right with hair blowing in wind | consistent pose\",\n    \"station wagon | vintage wood-paneled station wagon parked on roadside | front left quarter view | camera zooms in\",\n    \"background road | empty unmarked desert road | yellow center dashed lines and utility poles materialize | spontaneous appearance of road markings and poles\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"background road and roadside environment\",\n      \"invariant_violated\": \"environmental_inconsistency\",\n      \"description\": \"Yellow dashed centerline road markings and a row of wooden utility poles suddenly materialize along the background road, which was previously unmarked and devoid of roadside poles.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,46 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:49:10.091Z",
+  "latencyMs": 3856,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 2912,
+    "total_tokens": 5132,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2820,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | on wooden table, upright, contains 6 balls | on wooden table, upright (tilted during shake), contains 6 balls | child shakes bowl causing balls to tumble",
+    "red ball (center) | inside bowl, red | inside bowl, red | child picks up, examines, returns",
+    "green ball (top left) | inside bowl, green | inside bowl, green | moves during shake",
+    "green ball (bottom left) | inside bowl, green | inside bowl, green | moves during shake",
+    "yellow ball (top right) | inside bowl, yellow | inside bowl, yellow | moves during shake",
+    "yellow ball (bottom center) | inside bowl, yellow | inside bowl, yellow | moves during shake",
+    "red ball (bottom right) | inside bowl, red | inside bowl, red | moves during shake",
+    "metallic container with leaf | on table, upright, holds leaf | on table, unchanged | no visible interaction",
+    "wooden table | supports bowl and container | supports bowl and container | no change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | on wooden table, upright, contains 6 balls | on wooden table, upright (tilted during shake), contains 6 balls | child shakes bowl causing balls to tumble\",\n    \"red ball (center) | inside bowl, red | inside bowl, red | child picks up, examines, returns\",\n    \"green ball (top left) | inside bowl, green | inside bowl, green | moves during shake\",\n    \"green ball (bottom left) | inside bowl, green | inside bowl, green | moves during shake\",\n    \"yellow ball (top right) | inside bowl, yellow | inside bowl, yellow | moves during shake\",\n    \"yellow ball (bottom center) | inside bowl, yellow | inside bowl, yellow | moves during shake\",\n    \"red ball (bottom right) | inside bowl, red | inside bowl, red | moves during shake\",\n    \"metallic container with leaf | on table, upright, holds leaf | on table, unchanged | no visible interaction\",\n    \"wooden table | supports bowl and container | supports bowl and container | no change\"\n  ],\n  \"findings\": []\n}"
+}

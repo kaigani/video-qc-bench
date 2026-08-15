@@ -1,0 +1,674 @@
+{
+  "runId": "2026-08-14_kimi-k3",
+  "model": "moonshotai/kimi-k3",
+  "reasoning": true,
+  "started": "2026-08-15T05:33:38.547Z",
+  "calls": {
+    "man-in-mirror__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 4576,
+      "tokens": 27083,
+      "cost": 0.0469353
+    },
+    "_long-scene__baseline-generalist": {
+      "status": "ok",
+      "findings": 6,
+      "parseOk": true,
+      "latencyMs": 73381,
+      "tokens": 49702,
+      "cost": 0.23523
+    },
+    "_long-scene__character-continuity": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 12033,
+      "tokens": 52165,
+      "cost": 0.1591893
+    },
+    "_long-scene__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 10164,
+      "tokens": 51939,
+      "cost": 0.1555011
+    },
+    "_long-scene__object-persistence-state": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 20755,
+      "tokens": 49840,
+      "cost": 0.1225434
+    },
+    "child-marbles__baseline-generalist": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11860,
+      "tokens": 26318,
+      "cost": 0.101166
+    },
+    "child-marbles__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 8708,
+      "tokens": 25355,
+      "cost": 0.084573
+    },
+    "child-marbles__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7775,
+      "tokens": 26354,
+      "cost": 0.0979356
+    },
+    "child-marbles__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7966,
+      "tokens": 27141,
+      "cost": 0.111135
+    },
+    "child-marbles__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 8012,
+      "tokens": 26749,
+      "cost": 0.105411
+    },
+    "child-marbles__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7534,
+      "tokens": 25437,
+      "cost": 0.085779
+    },
+    "_long-scene__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 14494,
+      "tokens": 51545,
+      "cost": 0.1513179
+    },
+    "dancer-mirror__baseline-generalist": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11299,
+      "tokens": 32217,
+      "cost": 0.1889598
+    },
+    "dancer-mirror__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6492,
+      "tokens": 25623,
+      "cost": 0.0872106
+    },
+    "dancer-mirror__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6547,
+      "tokens": 25394,
+      "cost": 0.0835356
+    },
+    "dancer-mirror__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7328,
+      "tokens": 25117,
+      "cost": 0.0793926
+    },
+    "dancer-mirror__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6191,
+      "tokens": 25392,
+      "cost": 0.0837216
+    },
+    "dancer-mirror__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5123,
+      "tokens": 26739,
+      "cost": 0.1038786
+    },
+    "dialogue__baseline-generalist": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 10606,
+      "tokens": 27201,
+      "cost": 0.1137198
+    },
+    "dialogue__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6432,
+      "tokens": 27389,
+      "cost": 0.1137006
+    },
+    "dialogue__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5840,
+      "tokens": 25393,
+      "cost": 0.0835206
+    },
+    "dialogue__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5328,
+      "tokens": 25418,
+      "cost": 0.0839076
+    },
+    "dialogue__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5240,
+      "tokens": 27102,
+      "cost": 0.1093716
+    },
+    "_long-scene__spatial-topology-occlusion": {
+      "status": "error",
+      "error": "moonshotai/kimi-k3: non-JSON response body, HTTP 200"
+    },
+    "dialogue__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5276,
+      "tokens": 28281,
+      "cost": 0.1270086
+    },
+    "home-tour__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 9822,
+      "tokens": 25209,
+      "cost": 0.0810006
+    },
+    "home-tour__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5720,
+      "tokens": 26034,
+      "cost": 0.0931356
+    },
+    "home-tour__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6201,
+      "tokens": 26071,
+      "cost": 0.0937026
+    },
+    "home-tour__baseline-generalist": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 11224,
+      "tokens": 32051,
+      "cost": 0.1864698
+    },
+    "home-tour__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5736,
+      "tokens": 31927,
+      "cost": 0.1817466
+    },
+    "man-cups__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7461,
+      "tokens": 25451,
+      "cost": 0.0846306
+    },
+    "man-cups__baseline-generalist": {
+      "status": "ok",
+      "findings": 3,
+      "parseOk": true,
+      "latencyMs": 11679,
+      "tokens": 31285,
+      "cost": 0.1749798
+    },
+    "man-cups__object-persistence-state": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6541,
+      "tokens": 35419,
+      "cost": 0.2339106
+    },
+    "man-cups__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 6512,
+      "tokens": 31941,
+      "cost": 0.1817526
+    },
+    "man-cups__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 6348,
+      "tokens": 28422,
+      "cost": 0.1291716
+    },
+    "man-cups__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6744,
+      "tokens": 34536,
+      "cost": 0.2208336
+    },
+    "man-in-mirror__baseline-generalist": {
+      "status": "ok",
+      "findings": 3,
+      "parseOk": true,
+      "latencyMs": 7494,
+      "tokens": 31162,
+      "cost": 0.1731348
+    },
+    "man-in-mirror__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5428,
+      "tokens": 26368,
+      "cost": 0.0981576
+    },
+    "home-tour__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5262,
+      "tokens": 33903,
+      "cost": 0.1494411
+    },
+    "man-in-mirror__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 4659,
+      "tokens": 26312,
+      "cost": 0.0975216
+    },
+    "man-in-mirror__character-continuity": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6610,
+      "tokens": 31202,
+      "cost": 0.1708956
+    },
+    "phone__baseline-generalist": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 11124,
+      "tokens": 27026,
+      "cost": 0.1110948
+    },
+    "phone__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6043,
+      "tokens": 26546,
+      "cost": 0.1010556
+    },
+    "phone__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6802,
+      "tokens": 27197,
+      "cost": 0.1105806
+    },
+    "phone__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5839,
+      "tokens": 28311,
+      "cost": 0.1273026
+    },
+    "phone__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5571,
+      "tokens": 26383,
+      "cost": 0.0985866
+    },
+    "phone__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5495,
+      "tokens": 32567,
+      "cost": 0.1912986
+    },
+    "pouring-olives__baseline-generalist": {
+      "status": "ok",
+      "findings": 4,
+      "parseOk": true,
+      "latencyMs": 11317,
+      "tokens": 29611,
+      "cost": 0.1498698
+    },
+    "man-in-mirror__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 4343,
+      "tokens": 32322,
+      "cost": 0.1257261
+    },
+    "pouring-olives__character-continuity": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6218,
+      "tokens": 30486,
+      "cost": 0.1601556
+    },
+    "pouring-olives__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 7851,
+      "tokens": 31885,
+      "cost": 0.1809126
+    },
+    "pouring-olives__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6254,
+      "tokens": 27812,
+      "cost": 0.1200216
+    },
+    "pouring-olives__object-persistence-state": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6552,
+      "tokens": 28747,
+      "cost": 0.0718953
+    },
+    "skateboarder__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 10518,
+      "tokens": 25256,
+      "cost": 0.0817056
+    },
+    "skateboarder__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 9706,
+      "tokens": 25160,
+      "cost": 0.0800256
+    },
+    "skateboarder__baseline-generalist": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 13067,
+      "tokens": 28735,
+      "cost": 0.1367298
+    },
+    "skateboarder__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7749,
+      "tokens": 27234,
+      "cost": 0.1111476
+    },
+    "skateboarder__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 9498,
+      "tokens": 27129,
+      "cost": 0.1097286
+    },
+    "skateboarder__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7624,
+      "tokens": 26128,
+      "cost": 0.0947616
+    },
+    "watchmaker__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6648,
+      "tokens": 25107,
+      "cost": 0.0794706
+    },
+    "watchmaker__baseline-generalist": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 10843,
+      "tokens": 27436,
+      "cost": 0.1172448
+    },
+    "watchmaker__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5987,
+      "tokens": 25929,
+      "cost": 0.0915606
+    },
+    "watchmaker__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5825,
+      "tokens": 26220,
+      "cost": 0.0959376
+    },
+    "watchmaker__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6817,
+      "tokens": 26135,
+      "cost": 0.0948186
+    },
+    "pouring-olives__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7174,
+      "tokens": 34758,
+      "cost": 0.1622661
+    },
+    "watchmaker__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6661,
+      "tokens": 26471,
+      "cost": 0.0999066
+    },
+    "weird-blocks__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5589,
+      "tokens": 25873,
+      "cost": 0.0909606
+    },
+    "weird-blocks__baseline-generalist": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 10658,
+      "tokens": 30771,
+      "cost": 0.1672698
+    },
+    "weird-blocks__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5603,
+      "tokens": 30676,
+      "cost": 0.1627776
+    },
+    "weird-blocks__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5111,
+      "tokens": 30273,
+      "cost": 0.1568886
+    },
+    "weird-blocks__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5266,
+      "tokens": 29176,
+      "cost": 0.1404816
+    },
+    "woman-apple__baseline-generalist": {
+      "status": "ok",
+      "findings": 4,
+      "parseOk": true,
+      "latencyMs": 14256,
+      "tokens": 27609,
+      "cost": 0.1198398
+    },
+    "woman-apple__object-persistence-state": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 8051,
+      "tokens": 25843,
+      "cost": 0.0902706
+    },
+    "weird-blocks__object-persistence-state": {
+      "status": "ok",
+      "findings": 5,
+      "parseOk": true,
+      "latencyMs": 5919,
+      "tokens": 33515,
+      "cost": 0.1434153
+    },
+    "woman-apple__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 6666,
+      "tokens": 34611,
+      "cost": 0.1601493
+    },
+    "woman-apple__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 6794,
+      "tokens": 30093,
+      "cost": 0.0921
+    },
+    "woman-apple__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11739,
+      "tokens": 27522,
+      "cost": 0.1156716
+    },
+    "woman-car__character-continuity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7557,
+      "tokens": 20057,
+      "cost": 0.0699606
+    },
+    "woman-car__object-persistence-state": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 7334,
+      "tokens": 22216,
+      "cost": 0.1021056
+    },
+    "woman-apple__spatial-topology-occlusion": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7573,
+      "tokens": 33082,
+      "cost": 0.1990236
+    },
+    "woman-car__baseline-generalist": {
+      "status": "ok",
+      "findings": 7,
+      "parseOk": true,
+      "latencyMs": 14091,
+      "tokens": 26505,
+      "cost": 0.1695198
+    },
+    "woman-car__contact-interaction-kinematics": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7424,
+      "tokens": 21512,
+      "cost": 0.0915576
+    },
+    "woman-car__causal-temporal-sequence": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 12637,
+      "tokens": 23637,
+      "cost": 0.1236366
+    },
+    "woman-car__spatial-topology-occlusion": {
+      "status": "error",
+      "error": "moonshotai/kimi-k3: non-JSON response body, HTTP 200"
+    }
+  },
+  "finished": "2026-08-15T07:44:52.284Z",
+  "totalCost": 10.164560999999999
+}

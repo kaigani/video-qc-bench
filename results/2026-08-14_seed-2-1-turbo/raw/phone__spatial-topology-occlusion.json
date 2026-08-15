@@ -1,0 +1,45 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:00:36.448Z",
+  "latencyMs": 5973,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 14008,
+    "total_tokens": 20919,
+    "cost": 0.0384755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0384755,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.03502
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13649,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Concrete staircase | Ascends away from camera, left side of frame | Same position, fully visible when phone exits frame | Fixed, runs parallel to left building wall and right railing",
+    "Left building wall | Beige paneled with brick base, left of stairs | Same position, visible left of stairs at end | Fixed, consistent relative position to stairs",
+    "Black metal stair railing | Right side of stairs, vertical bars + horizontal handrail | Same position, visible right of stairs at end | Fixed, runs parallel to stairs, recedes into distance",
+    "Green shrubs | Planted bed at far end of stairs, right of landing | Same position, at base of railing far end | Fixed, between railing far end and plaza",
+    "Paved stone plaza | Flat area at far end of stairs, extends beyond railing/bushes | Same area, fully visible at end | Fixed, connects to top of stair landing",
+    "Person with red bag | Standing on right side of plaza behind railing, holding red bag | Walks left across landing then away up plaza, exits frame top | Moves from behind railing (far end) to above railing (further onto plaza), apparent size decreases as distance increases",
+    "Smartphone | Held in close foreground, out of focus, screen shows 'A742' | Lowered out of frame at end | Apparent size increases as it moves closer to camera, screen text becomes clearer over time",
+    "Hands holding phone | Two hands gripping phone sides, thumbs near screen | No longer visible as phone leaves frame | Right thumb interacts with phone screen during sequence"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Concrete staircase | Ascends away from camera, left side of frame | Same position, fully visible when phone exits frame | Fixed, runs parallel to left building wall and right railing\",\n    \"Left building wall | Beige paneled with brick base, left of stairs | Same position, visible left of stairs at end | Fixed, consistent relative position to stairs\",\n    \"Black metal stair railing | Right side of stairs, vertical bars + horizontal handrail | Same position, visible right of stairs at end | Fixed, runs parallel to stairs, recedes into distance\",\n    \"Green shrubs | Planted bed at far end of stairs, right of landing | Same position, at base of railing far end | Fixed, between railing far end and plaza\",\n    \"Paved stone plaza | Flat area at far end of stairs, extends beyond railing/bushes | Same area, fully visible at end | Fixed, connects to top of stair landing\",\n    \"Person with red bag | Standing on right side of plaza behind railing, holding red bag | Walks left across landing then away up plaza, exits frame top | Moves from behind railing (far end) to above railing (further onto plaza), apparent size decreases as distance increases\",\n    \"Smartphone | Held in close foreground, out of focus, screen shows 'A742' | Lowered out of frame at end | Apparent size increases as it moves closer to camera, screen text becomes clearer over time\",\n    \"Hands holding phone | Two hands gripping phone sides, thumbs near screen | No longer visible as phone leaves frame | Right thumb interacts with phone screen during sequence\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:56:34.472Z",
+  "latencyMs": 5726,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 1069,
+    "total_tokens": 7999,
+    "cost": 0.0061375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0061375,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.0026725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 934,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground hands | grip smartphone with visible thumb/side finger contact | maintain grip as phone is tilted and lowered out of frame | continuous solid contact, no grip loss",
+    "smartphone | held in two hands, screen facing camera | lowered out of frame at end of clip | held securely throughout, movement matches hand motion",
+    "background person + red bag | right hand grips red bag handle, stepping onto pavement from stairs | walks away from camera with bag still in right hand | consistent walking gait, foot contact with ground maintained across all steps"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground hands | grip smartphone with visible thumb/side finger contact | maintain grip as phone is tilted and lowered out of frame | continuous solid contact, no grip loss\",\n    \"smartphone | held in two hands, screen facing camera | lowered out of frame at end of clip | held securely throughout, movement matches hand motion\",\n    \"background person + red bag | right hand grips red bag handle, stepping onto pavement from stairs | walks away from camera with bag still in right hand | consistent walking gait, foot contact with ground maintained across all steps\"\n  ],\n  \"findings\": []\n}"
+}

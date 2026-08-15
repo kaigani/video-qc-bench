@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:41:11.631Z",
+  "latencyMs": 6815,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 2567,
+    "total_tokens": 9478,
+    "cost": 0.009873,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009873,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0064175
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2342,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child | hands raised above glass bowl | right hand stirring balls in bowl, left hand holding bowl rim | reaches into bowl, grasps and lifts a red ball, releases it back, initiates stirring of ball contents",
+    "glass bowl | stationary on wooden table, holds colored plastic balls | stationary on table, balls swirling inside | remains in place, rim is gripped by child's left hand during stirring",
+    "plastic balls (in bowl) | resting stationary at bowl bottom | moving rapidly in circular motion inside bowl | one red ball is briefly lifted and released, all balls are pushed into swirling motion by child's hand, colliding with each other and bowl walls",
+    "plastic balls (on right table) | partially visible at frame edge | more fully visible as camera shifts | additional balls come into view as camera angle reveals more table surface",
+    "decorative egg cup | stationary on table right of bowl | stationary on table right of bowl | no change in position or state"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child | hands raised above glass bowl | right hand stirring balls in bowl, left hand holding bowl rim | reaches into bowl, grasps and lifts a red ball, releases it back, initiates stirring of ball contents\",\n    \"glass bowl | stationary on wooden table, holds colored plastic balls | stationary on table, balls swirling inside | remains in place, rim is gripped by child's left hand during stirring\",\n    \"plastic balls (in bowl) | resting stationary at bowl bottom | moving rapidly in circular motion inside bowl | one red ball is briefly lifted and released, all balls are pushed into swirling motion by child's hand, colliding with each other and bowl walls\",\n    \"plastic balls (on right table) | partially visible at frame edge | more fully visible as camera shifts | additional balls come into view as camera angle reveals more table surface\",\n    \"decorative egg cup | stationary on table right of bowl | stationary on table right of bowl | no change in position or state\"\n  ],\n  \"findings\": []\n}"
+}

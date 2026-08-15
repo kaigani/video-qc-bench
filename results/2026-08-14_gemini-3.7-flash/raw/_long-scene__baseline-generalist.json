@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:36:16.100Z",
+  "latencyMs": 67889,
+  "usage": {
+    "prompt_tokens": 10443,
+    "completion_tokens": 1351,
+    "total_tokens": 11794,
+    "cost": 0.00644925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00644925,
+      "upstream_inference_prompt_cost": 0.003916125,
+      "upstream_inference_completions_cost": 0.002533125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1170,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | wearing blue collared shirt and white apron with hair tied back | walking into kitchen | duplicated in background and foreground simultaneously at 01:50-01:55",
+    "trucker | brown jacket and jeans | walks to green truck outside | exits diner"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "waitress",
+      "invariant_violated": "duplicate character",
+      "description": "An identical duplicate of the waitress is visible standing and wiping the counter inside the kitchen pass-through window while the original waitress is still seated at the diner counter and getting up.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | wearing blue collared shirt and white apron with hair tied back | walking into kitchen | duplicated in background and foreground simultaneously at 01:50-01:55\",\n    \"trucker | brown jacket and jeans | walks to green truck outside | exits diner\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"duplicate character\",\n      \"description\": \"An identical duplicate of the waitress is visible standing and wiping the counter inside the kitchen pass-through window while the original waitress is still seated at the diner counter and getting up.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

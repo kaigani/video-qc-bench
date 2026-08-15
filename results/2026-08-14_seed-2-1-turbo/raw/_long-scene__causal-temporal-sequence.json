@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:41:50.690Z",
+  "latencyMs": 19588,
+  "usage": {
+    "prompt_tokens": 30224,
+    "completion_tokens": 17950,
+    "total_tokens": 48174,
+    "cost": 0.059987,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 30008,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.059987,
+      "upstream_inference_prompt_cost": 0.015112,
+      "upstream_inference_completions_cost": 0.044875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 17452,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white semi truck | parked left of diner at dusk, emitting smoke | not visible after interior cut | smoke drifts rightward and dissipates over 0-10s",
+    "diner building | dusk exterior, OPEN sign lit, interior artificial lights on | dawn exterior, sun rising, OPEN sign still lit | interior lighting shifts from warm artificial light to mixed natural sunlight as night passes",
+    "waitress (blue shirt, apron) | wiping counter behind it at interior start | walks toward back of diner at end | serves coffee, serves food, sits at counter, watches customer leave",
+    "male customer (brown jacket) | enters from back door | walks to green semi truck outside | sits at counter, drinks coffee, eats meal, pays, exits diner",
+    "coffee pot | full of coffee, held by waitress | empty after pouring | tilts to pour coffee into customer's mug, then is moved away",
+    "customer coffee mug | empty on counter | filled with coffee, held by customer | coffee poured into it by waitress",
+    "breakfast plate (egg + toast) | not present initially | placed in front of customer | steam rises when fresh, gradually cools",
+    "green semi truck | not present initially | parked outside diner at dawn | customer approaches and opens its door",
+    "cash payment | not present | left on counter by customer | placed down as payment for the meal",
+    "exterior lighting | dark dusk | bright sunrise | natural light increases gradually as night progresses to dawn"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "second waitress (unaccounted staff member)",
+      "invariant_violated": "effect-without-cause",
+      "description": "A second woman in a waitress uniform appears at the front (left) end of the counter behind it at 112s with no visible entry into the frame. The only staff access to the counter area is at the back (right) end, and no person is observed walking the full length of the counter from right to left in the preceding frames of the continuous wide shot.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white semi truck | parked left of diner at dusk, emitting smoke | not visible after interior cut | smoke drifts rightward and dissipates over 0-10s\",\n    \"diner building | dusk exterior, OPEN sign lit, interior artificial lights on | dawn exterior, sun rising, OPEN sign still lit | interior lighting shifts from warm artificial light to mixed natural sunlight as night passes\",\n    \"waitress (blue shirt, apron) | wiping counter behind it at interior start | walks toward back of diner at end | serves coffee, serves food, sits at counter, watches customer leave\",\n    \"male customer (brown jacket) | enters from back door | walks to green semi truck outside | sits at counter, drinks coffee, eats meal, pays, exits diner\",\n    \"coffee pot | full of coffee, held by waitress | empty after pouring | tilts to pour coffee into customer's mug, then is moved away\",\n    \"customer coffee mug | empty on counter | filled with coffee, held by customer | coffee poured into it by waitress\",\n    \"breakfast plate (egg + toast) | not present initially | placed in front of customer | steam rises when fresh, gradually cools\",\n    \"green semi truck | not present initially | parked outside diner at dawn | customer approaches and opens its door\",\n    \"cash payment | not present | left on counter by customer | placed down as payment for the meal\",\n    \"exterior lighting | dark dusk | bright sunrise | natural light increases gradually as night progresses to dawn\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"second waitress (unaccounted staff member)\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"A second woman in a waitress uniform appears at the front (left) end of the counter behind it at 112s with no visible entry into the frame. The only staff access to the counter area is at the back (right) end, and no person is observed walking the full length of the counter from right to left in the preceding frames of the continuous wide shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

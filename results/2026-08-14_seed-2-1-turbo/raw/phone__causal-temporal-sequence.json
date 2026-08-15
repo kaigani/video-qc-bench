@@ -1,0 +1,40 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:00:31.752Z",
+  "latencyMs": 6693,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 11881,
+    "total_tokens": 18792,
+    "cost": 0.033158,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.033158,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0297025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11686,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in foreground, blurry teal screen displaying 'A742' | lowered out of frame, screen previously sharp showing 'A7.42' and 'AZ-12' | camera focus sharpens over time, sunlight glare moves across screen right-to-left then exits, hands adjust phone position, phone is lowered downward",
+    "person (blue clothing, red bag) | partially visible at top of stairs, facing camera, red bag in left hand | exits top of frame, walking away from camera | turns 180 degrees leftward, walks away from stairs onto paved area, moves continuously upward in frame",
+    "hands holding phone | grip left and right edges of phone | move phone down out of frame | right thumb rests on right bezel, hands adjust phone position, then lower the phone"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in foreground, blurry teal screen displaying 'A742' | lowered out of frame, screen previously sharp showing 'A7.42' and 'AZ-12' | camera focus sharpens over time, sunlight glare moves across screen right-to-left then exits, hands adjust phone position, phone is lowered downward\",\n    \"person (blue clothing, red bag) | partially visible at top of stairs, facing camera, red bag in left hand | exits top of frame, walking away from camera | turns 180 degrees leftward, walks away from stairs onto paved area, moves continuously upward in frame\",\n    \"hands holding phone | grip left and right edges of phone | move phone down out of frame | right thumb rests on right bezel, hands adjust phone position, then lower the phone\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:04:49.167Z",
+  "latencyMs": 5212,
+  "usage": {
+    "prompt_tokens": 6911,
+    "completion_tokens": 2465,
+    "total_tokens": 9376,
+    "cost": 0.009618,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009618,
+      "upstream_inference_prompt_cost": 0.0034555,
+      "upstream_inference_completions_cost": 0.0061625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2254,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | holds metal tweezers, positioned near small object | empty, manipulating side knob of small object | moves tweezers to contact object top, moves down out of frame to set tweezers down, returns to grasp and manipulate the object",
+    "left hand | holds small round metal object | holds small round metal object | adjusts grip on the object while it is worked on by the right hand",
+    "metal tweezers | held in right hand, not touching the object | removed from frame (set down) | moves to contact the object's top, manipulates the object's top, moves down out of view as the right hand lowers",
+    "small metal object | held in left hand, tweezers approaching its top | held in left hand, side knob being turned by right fingers | top manipulated by tweezers, grip adjusted by both hands, side knob rotated by right fingers"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | holds metal tweezers, positioned near small object | empty, manipulating side knob of small object | moves tweezers to contact object top, moves down out of frame to set tweezers down, returns to grasp and manipulate the object\",\n    \"left hand | holds small round metal object | holds small round metal object | adjusts grip on the object while it is worked on by the right hand\",\n    \"metal tweezers | held in right hand, not touching the object | removed from frame (set down) | moves to contact the object's top, manipulates the object's top, moves down out of view as the right hand lowers\",\n    \"small metal object | held in left hand, tweezers approaching its top | held in left hand, side knob being turned by right fingers | top manipulated by tweezers, grip adjusted by both hands, side knob rotated by right fingers\"\n  ],\n  \"findings\": []\n}"
+}

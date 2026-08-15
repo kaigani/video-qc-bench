@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:38:38.217Z",
+  "latencyMs": 5825,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 1555,
+    "total_tokens": 26220,
+    "cost": 0.0959376,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0959376,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.023325
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1316,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (subject) | start: seated, right hand gripping a slim metal tool, left hand pinching a small metallic object | end: both hands manipulating the small object directly with fingers | tool released off bottom of frame ~00:03.5–00:04.5; right hand returned empty and began finger manipulation of the object",
+    "metal tool (probe/rod) | start: gripped between right thumb and fingers, tip in contact with the small object | end: no longer in scene | contact with object maintained 00:00–00:03.5; carried down out of frame by right hand at ~00:03.5–00:04.0 (motion-blurred put-down)",
+    "small metallic object | start: pinched between left thumb and index finger | end: still held in left hand while right-hand fingers rotate/adjust a component | held continuously by left hand; manipulated by tool tip first, then by right-hand fingers from ~00:06.5 onward"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (subject) | start: seated, right hand gripping a slim metal tool, left hand pinching a small metallic object | end: both hands manipulating the small object directly with fingers | tool released off bottom of frame ~00:03.5–00:04.5; right hand returned empty and began finger manipulation of the object\",\n    \"metal tool (probe/rod) | start: gripped between right thumb and fingers, tip in contact with the small object | end: no longer in scene | contact with object maintained 00:00–00:03.5; carried down out of frame by right hand at ~00:03.5–00:04.0 (motion-blurred put-down)\",\n    \"small metallic object | start: pinched between left thumb and index finger | end: still held in left hand while right-hand fingers rotate/adjust a component | held continuously by left hand; manipulated by tool tip first, then by right-hand fingers from ~00:06.5 onward\"\n  ],\n  \"findings\": []\n}"
+}

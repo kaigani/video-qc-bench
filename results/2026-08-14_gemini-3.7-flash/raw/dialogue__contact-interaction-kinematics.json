@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__contact-interaction-kinematics",
+  "video": "dialogue.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:37:20.372Z",
+  "latencyMs": 8734,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 334,
+    "total_tokens": 1786,
+    "cost": 0.00117075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00117075,
+      "upstream_inference_prompt_cost": 0.0005445,
+      "upstream_inference_completions_cost": 0.00062625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 236,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing facing camera, speaking | standing facing door, knocking with right hand | turns left towards door at 00:06, reaches door and makes contact with knuckles to knock at 00:09",
+    "wooden door | static closed door | static closed door receiving knock impacts | contacted by man's knuckles at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing facing camera, speaking | standing facing door, knocking with right hand | turns left towards door at 00:06, reaches door and makes contact with knuckles to knock at 00:09\",\n    \"wooden door | static closed door | static closed door receiving knock impacts | contacted by man's knuckles at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

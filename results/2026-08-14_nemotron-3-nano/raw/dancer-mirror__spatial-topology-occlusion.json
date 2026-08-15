@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:52:00.364Z",
+  "latencyMs": 2425,
+  "usage": {
+    "prompt_tokens": 2203,
+    "completion_tokens": 2672,
+    "total_tokens": 4875,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2857,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror wall | covers back wall, reflects room, dancer stands in front | same | no change",
+    "Doors | black double doors on left wall, exit signs above, closed | same | no change",
+    "Barre | along right wall, visible in mirror, picture above | same | no change",
+    "Floor | light wood, consistent throughout | same | no change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror wall | covers back wall, reflects room, dancer stands in front | same | no change\",\n    \"Doors | black double doors on left wall, exit signs above, closed | same | no change\",\n    \"Barre | along right wall, visible in mirror, picture above | same | no change\",\n    \"Floor | light wood, consistent throughout | same | no change\"\n  ],\n  \"findings\": []\n}"
+}

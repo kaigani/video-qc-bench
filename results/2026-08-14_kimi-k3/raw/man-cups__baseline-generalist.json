@@ -1,0 +1,67 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:09:57.441Z",
+  "latencyMs": 11679,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 6818,
+    "total_tokens": 31285,
+    "cost": 0.1749798,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1749798,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.10227
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6234,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | blue suit, white shirt, red necktie, black bow tie, yellow pocket square, glasses, beard | same attire throughout | bow tie and long necktie worn simultaneously, first visible when camera pulls back at ~00:04.5",
+    "metal cups (4) | scattered on cloth, center cup holds a stack of gold coins | arranged in a neat row, all appearing empty | coin stack inside center cup disappears around 00:04 during cup shuffling without being visibly removed",
+    "coins | gold and silver coins scattered on cloth, one held in hand, stack in center cup | several placed into cups, some remain on cloth | counts and positions shift during manipulation, partially explainable as a magic routine",
+    "dark rectangular object (phone/wallet-like) | absent from table | lying on cloth to the right of the cups from ~00:07.5 onward | appears without the man ever placing it",
+    "table cloth | red with circular medallion print over beige center | unchanged | pattern drifts consistently with camera orbit, no defect"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "man's attire",
+      "invariant_violated": "wardrobe plausibility",
+      "description": "Once the camera pulls back, the man is clearly wearing a black bow tie at the collar AND a long red necktie hanging down his chest at the same time. Wearing both simultaneously is an implausible, physically inconsistent wardrobe combination that persists through the rest of the clip.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "dark object on table",
+      "invariant_violated": "object continuity",
+      "description": "A black smartphone/wallet-like object is suddenly lying on the cloth to the right of the cups. Earlier views of the same table area (00:00-00:06) show only coins there, and the man is never seen placing the object down.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "coin stack inside center cup",
+      "invariant_violated": "object permanence",
+      "description": "The center cup clearly contains a stack of gold coins from 00:00 through ~00:03.5. After the man slides the cups around, all cups appear empty (visible dark interiors) and the stack is never shown being removed or placed elsewhere.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man | blue suit, white shirt, red necktie, black bow tie, yellow pocket square, glasses, beard | same attire throughout | bow tie and long necktie worn simultaneously, first visible when camera pulls back at ~00:04.5\",\n    \"metal cups (4) | scattered on cloth, center cup holds a stack of gold coins | arranged in a neat row, all appearing empty | coin stack inside center cup disappears around 00:04 during cup shuffling without being visibly removed\",\n    \"coins | gold and silver coins scattered on cloth, one held in hand, stack in center cup | several placed into cups, some remain on cloth | counts and positions shift during manipulation, partially explainable as a magic routine\",\n    \"dark rectangular object (phone/wallet-like) | absent from table | lying on cloth to the right of the cups from ~00:07.5 onward | appears without the man ever placing it\",\n    \"table cloth | red with circular medallion print over beige center | unchanged | pattern drifts consistently with camera orbit, no defect\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"man's attire\",\n      \"invariant_violated\": \"wardrobe plausibility\",\n      \"description\": \"Once the camera pulls back, the man is clearly wearing a black bow tie at the collar AND a long red necktie hanging down his chest at the same time. Wearing both simultaneously is an implausible, physically inconsistent wardrobe combination that persists through the rest of the clip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"dark object on table\",\n      \"invariant_violated\": \"object continuity\",\n      \"description\": \"A black smartphone/wallet-like object is suddenly lying on the cloth to the right of the cups. Earlier views of the same table area (00:00-00:06) show only coins there, and the man is never seen placing the object down.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"coin stack inside center cup\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The center cup clearly contains a stack of gold coins from 00:00 through ~00:03.5. After the man slides the cups around, all cups appear empty (visible dark interiors) and the stack is never shown being removed or placed elsewhere.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

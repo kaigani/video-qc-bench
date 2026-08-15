@@ -1,0 +1,49 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:34:52.414Z",
+  "latencyMs": 13067,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 4268,
+    "total_tokens": 28735,
+    "cost": 0.1367298,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1367298,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.06402
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3902,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | black t-shirt with chest logo, black pants, green socks, red shoes, riding crouched toward camera | same outfit, riding away after landing second flip trick | two airborne flip tricks (~00:01.0–00:03.0 and ~00:08.0–00:09.5) with clean rides in between",
+    "skateboard | dark grip-tape top, tan/wood underside with graphic, gold trucks, light wheels | same board, intact | flips end-over-end (kickflip motion) twice, caught and landed both times",
+    "environment | sunny concrete skatepark, ramps/bowls, light poles, trees, scattered clouds, round table-benches at right of frame | same environment | camera pans/orbits with fisheye lens following skater; background elements remain consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "skateboarder's feet / skateboard",
+      "invariant_violated": "no ghost/duplicate limbs (frame artifact)",
+      "description": "As the skater pops the first trick, a white shoe-shaped blur appears floating above the board between his feet while both red shoes are simultaneously accounted for (one raised on the front foot, one on the board at the back). The rest of the skater's body is crisp in the same frame, so it does not match the global motion characteristics; it reads as a duplicated/ghost foot or a frame-blending artifact rather than ordinary motion blur.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | black t-shirt with chest logo, black pants, green socks, red shoes, riding crouched toward camera | same outfit, riding away after landing second flip trick | two airborne flip tricks (~00:01.0–00:03.0 and ~00:08.0–00:09.5) with clean rides in between\",\n    \"skateboard | dark grip-tape top, tan/wood underside with graphic, gold trucks, light wheels | same board, intact | flips end-over-end (kickflip motion) twice, caught and landed both times\",\n    \"environment | sunny concrete skatepark, ramps/bowls, light poles, trees, scattered clouds, round table-benches at right of frame | same environment | camera pans/orbits with fisheye lens following skater; background elements remain consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"skateboarder's feet / skateboard\",\n      \"invariant_violated\": \"no ghost/duplicate limbs (frame artifact)\",\n      \"description\": \"As the skater pops the first trick, a white shoe-shaped blur appears floating above the board between his feet while both red shoes are simultaneously accounted for (one raised on the front foot, one on the board at the back). The rest of the skater's body is crisp in the same frame, so it does not match the global motion characteristics; it reads as a duplicated/ghost foot or a frame-blending artifact rather than ordinary motion blur.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

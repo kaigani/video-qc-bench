@@ -1,0 +1,52 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T05:51:09.322Z",
+  "latencyMs": 7875,
+  "usage": {
+    "prompt_tokens": 6926,
+    "completion_tokens": 17281,
+    "total_tokens": 24207,
+    "cost": 0.0466655,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0466655,
+      "upstream_inference_prompt_cost": 0.003463,
+      "upstream_inference_completions_cost": 0.0432025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 16750,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Front-left red metal cup | upright on table, contains 1 visible gold coin | upright on table, interior not visible in final frame | 1 coin visibly added by hand (~00:01.5), 1 coin visibly removed by hand (~00:02.3), 1 coin visibly added by hand (~00:04.0); observed empty at ~00:02.7 despite 1 coin expected to remain",
+    "Middle red metal cup | upright on table, contains a stack of gold coins | upright on table, contains a stack of gold coins | no observed state changes; never directly interacted with",
+    "Right red metal cup | upright on table, empty | upright on table, empty | no observed state changes; never directly interacted with",
+    "Back red metal cup | upright on table, empty | upright on table, interior not visible in final frame | 1 coin visibly added by hand (~00:04.0)",
+    "Gold coin (initially held by performer's right hand) | held in right hand | held in right hand (final frame) | visibly placed into front-left cup (~00:01.5), visibly removed from front-left cup (~00:02.3), visibly placed back into front-left cup (~00:04.0), later removed again (implied by being held at end)",
+    "Gold coin (initially inside front-left cup) | inside front-left red metal cup | placed into back red metal cup (~00:04.0) | no visible removal from front-left cup; unexplained appearance in performer's left hand ~00:03.0"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Gold coin initially inside front-left red metal cup",
+      "invariant_violated": "location & orientation: position changes without visible movement",
+      "description": "The front-left cup started with 1 gold coin. After a second coin was visibly placed into the cup and one coin was visibly removed, the cup was observed to be empty. The original coin was no longer present in the cup with no visible removal action, and shortly after appeared in the performer's opposite hand with no visible transfer action.",
+      "severity": "severe",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Front-left red metal cup | upright on table, contains 1 visible gold coin | upright on table, interior not visible in final frame | 1 coin visibly added by hand (~00:01.5), 1 coin visibly removed by hand (~00:02.3), 1 coin visibly added by hand (~00:04.0); observed empty at ~00:02.7 despite 1 coin expected to remain\",\n    \"Middle red metal cup | upright on table, contains a stack of gold coins | upright on table, contains a stack of gold coins | no observed state changes; never directly interacted with\",\n    \"Right red metal cup | upright on table, empty | upright on table, empty | no observed state changes; never directly interacted with\",\n    \"Back red metal cup | upright on table, empty | upright on table, interior not visible in final frame | 1 coin visibly added by hand (~00:04.0)\",\n    \"Gold coin (initially held by performer's right hand) | held in right hand | held in right hand (final frame) | visibly placed into front-left cup (~00:01.5), visibly removed from front-left cup (~00:02.3), visibly placed back into front-left cup (~00:04.0), later removed again (implied by being held at end)\",\n    \"Gold coin (initially inside front-left cup) | inside front-left red metal cup | placed into back red metal cup (~00:04.0) | no visible removal from front-left cup; unexplained appearance in performer's left hand ~00:03.0\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Gold coin initially inside front-left red metal cup\",\n      \"invariant_violated\": \"location & orientation: position changes without visible movement\",\n      \"description\": \"The front-left cup started with 1 gold coin. After a second coin was visibly placed into the cup and one coin was visibly removed, the cup was observed to be empty. The original coin was no longer present in the cup with no visible removal action, and shortly after appeared in the performer's opposite hand with no visible transfer action.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

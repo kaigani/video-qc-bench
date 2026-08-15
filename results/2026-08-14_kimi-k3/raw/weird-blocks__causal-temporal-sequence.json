@@ -1,0 +1,43 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:44:58.941Z",
+  "latencyMs": 5266,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 4528,
+    "total_tokens": 29176,
+    "cost": 0.1404816,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1404816,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.06792
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4181,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | enters holding left green block | ends pressing top peg of leftmost block | continuous placing/rotating motions left-to-right (~1 block per 0.5s), then sweep back left; every block displacement coincides with visible finger contact",
+    "left green block (held) | gripped and tilted at 00:00 | placed as leftmost row block by 00:01.5 | rotation and translation occur only while gripped; motion blur matches hand movement",
+    "right green block | stationary at 00:00-00:01 | shifted left into row ~00:01.5, then grasped and rotated at 00:02-00:02.5 | movement follows finger contact; no motion while untouched",
+    "middle blocks (blue 3, green 2, yellow 2) | absent/placed sequentially 00:01-00:04 | resting stably in row | each placed by a visible hand action; no self-motion after release",
+    "right-side blocks (blue 3, green 5, green 2, blue 6) | placed sequentially 00:04-00:07.5 | resting stably at right end of row | each arrives via hand placement; faces change only while gripped/rotated",
+    "assembled 8-block row | n/a | static from 00:07.5 onward | hand sweep and light finger touches at 00:08-00:09.6 produce no block motion, consistent with light contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | enters holding left green block | ends pressing top peg of leftmost block | continuous placing/rotating motions left-to-right (~1 block per 0.5s), then sweep back left; every block displacement coincides with visible finger contact\",\n    \"left green block (held) | gripped and tilted at 00:00 | placed as leftmost row block by 00:01.5 | rotation and translation occur only while gripped; motion blur matches hand movement\",\n    \"right green block | stationary at 00:00-00:01 | shifted left into row ~00:01.5, then grasped and rotated at 00:02-00:02.5 | movement follows finger contact; no motion while untouched\",\n    \"middle blocks (blue 3, green 2, yellow 2) | absent/placed sequentially 00:01-00:04 | resting stably in row | each placed by a visible hand action; no self-motion after release\",\n    \"right-side blocks (blue 3, green 5, green 2, blue 6) | placed sequentially 00:04-00:07.5 | resting stably at right end of row | each arrives via hand placement; faces change only while gripped/rotated\",\n    \"assembled 8-block row | n/a | static from 00:07.5 onward | hand sweep and light finger touches at 00:08-00:09.6 produce no block motion, consistent with light contact\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,45 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "bytedance-seed/seed-2-1-turbo",
+  "timestamp": "2026-08-15T06:01:36.606Z",
+  "latencyMs": 8402,
+  "usage": {
+    "prompt_tokens": 6930,
+    "completion_tokens": 801,
+    "total_tokens": 7731,
+    "cost": 0.0054675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6456,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0054675,
+      "upstream_inference_prompt_cost": 0.003465,
+      "upstream_inference_completions_cost": 0.0020025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 510,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person's left hand | gripping small jar of olives | gripping empty small jar | tilts jar to pour olives, maintains continuous grip",
+    "person's right hand | gripping small jar of olives | reaching into metal bowl then gripping small jar again | assists with pouring, momentarily reaches into metal bowl then returns to hold small jar",
+    "small glass jar | full of green olives, held above large jar | mostly empty, held above large jar | tilted multiple times to release olives into large jar, always held by at least one hand",
+    "large glass jar | empty, standing on cutting board | nearly full of green and dark olives | remains stationary on cutting board, receives falling olives",
+    "olives | inside small jar / inside bowls | inside large jar / inside bowls | fall from small jar into large jar under gravity, settle at bottom of large jar",
+    "metal bowl of olives | full of green olives on counter | fewer olives plus brown objects inside | person's right hand reaches into it briefly",
+    "white bowl of olives | full of green olives on counter | unchanged | no contact, no interaction",
+    "wooden cutting board | supports large empty jar | supports large full jar | remains stationary on countertop"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person's left hand | gripping small jar of olives | gripping empty small jar | tilts jar to pour olives, maintains continuous grip\",\n    \"person's right hand | gripping small jar of olives | reaching into metal bowl then gripping small jar again | assists with pouring, momentarily reaches into metal bowl then returns to hold small jar\",\n    \"small glass jar | full of green olives, held above large jar | mostly empty, held above large jar | tilted multiple times to release olives into large jar, always held by at least one hand\",\n    \"large glass jar | empty, standing on cutting board | nearly full of green and dark olives | remains stationary on cutting board, receives falling olives\",\n    \"olives | inside small jar / inside bowls | inside large jar / inside bowls | fall from small jar into large jar under gravity, settle at bottom of large jar\",\n    \"metal bowl of olives | full of green olives on counter | fewer olives plus brown objects inside | person's right hand reaches into it briefly\",\n    \"white bowl of olives | full of green olives on counter | unchanged | no contact, no interaction\",\n    \"wooden cutting board | supports large empty jar | supports large full jar | remains stationary on countertop\"\n  ],\n  \"findings\": []\n}"
+}

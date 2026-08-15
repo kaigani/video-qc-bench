@@ -1,0 +1,48 @@
+{
+  "key": "dialogue__baseline-generalist",
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:01:46.941Z",
+  "latencyMs": 10606,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 2734,
+    "total_tokens": 27201,
+    "cost": 0.1137198,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1137198,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.04101
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2414,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (green/white striped shirt over white tee) | standing center-frame in wood-paneled hallway, facing camera | walks to door at frame left and knocks | speaks with pronounced mouth shapes 00:00–00:05, pauses with slight smile, turns and walks left ~00:07, knocks on door ~00:08.6–00:09.6",
+    "Hallway set | wooden doors, navy coat on brass hook, framed artwork, vintage doorbell/intercom panel | unchanged | background elements remain consistent throughout clip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00:00",
+      "entity": "man's face / mouth region",
+      "invariant_violated": "facial animation plausibility",
+      "description": "Throughout the speech segment the mouth deforms with overly smooth, rubbery transitions while the rest of the face (eyes, brows, jaw, head) remains almost completely static. When the mouth opens wide (notably ~00:00:01.0 and ~00:00:05.0) the interior renders as a flat dark shape lacking coherent tongue/teeth anatomy. This mouth-only articulation decoupled from the rest of the face is characteristic of AI lip-sync/face-reanimation compositing rather than natural speech performance.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (green/white striped shirt over white tee) | standing center-frame in wood-paneled hallway, facing camera | walks to door at frame left and knocks | speaks with pronounced mouth shapes 00:00–00:05, pauses with slight smile, turns and walks left ~00:07, knocks on door ~00:08.6–00:09.6\",\n    \"Hallway set | wooden doors, navy coat on brass hook, framed artwork, vintage doorbell/intercom panel | unchanged | background elements remain consistent throughout clip\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00:00\",\n      \"entity\": \"man's face / mouth region\",\n      \"invariant_violated\": \"facial animation plausibility\",\n      \"description\": \"Throughout the speech segment the mouth deforms with overly smooth, rubbery transitions while the rest of the face (eyes, brows, jaw, head) remains almost completely static. When the mouth opens wide (notably ~00:00:01.0 and ~00:00:05.0) the interior renders as a flat dark shape lacking coherent tongue/teeth anatomy. This mouth-only articulation decoupled from the rest of the face is characteristic of AI lip-sync/face-reanimation compositing rather than natural speech performance.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

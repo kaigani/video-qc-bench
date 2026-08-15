@@ -59,8 +59,8 @@ export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning
         body,
         signal: AbortSignal.timeout(timeoutMs),
       });
-      const latencyMs = Date.now() - start;
       const raw = await res.json().catch(() => null);
+      const latencyMs = Date.now() - start;
       if (raw === null && attempt < maxRetries) {
         lastErr = new Error(`${model}: non-JSON response body, HTTP ${res.status} (attempt ${attempt})`);
         await sleep(2000 * 2 ** (attempt - 1));

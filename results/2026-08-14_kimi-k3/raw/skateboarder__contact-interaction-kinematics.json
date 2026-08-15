@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:36:08.618Z",
+  "latencyMs": 7749,
+  "usage": {
+    "prompt_tokens": 24665,
+    "completion_tokens": 2569,
+    "total_tokens": 27234,
+    "cost": 0.1111476,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1111476,
+      "upstream_inference_prompt_cost": 0.0726126,
+      "upstream_inference_completions_cost": 0.038535
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2280,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouched stance, both feet planted on board, rolling on flat concrete | upright riding away after second trick, knees absorbing | two airborne flip-trick sequences (00:01.0–00:03.5, 00:07.5–00:09.6) with crouch-pop-tuck-catch-land cycle; knees and hips bend in anatomically normal directions throughout",
+    "skateboard | under both feet, wheels in contact with concrete | under both feet, rolling away | board leaves ground after back-foot pop at ~00:01.0 and ~00:07.5, rotates beneath skater, is caught by descending feet at ~00:03.0 and ~00:09.1, then rolls with wheel contact restored",
+    "feet-to-board interface | full sole contact during riding | full sole contact during riding | contact released during board rotation (intentional flip phase) and re-established visibly before landing weight is applied; no floating feet during rolling phases",
+    "board-to-ground interface | wheels rolling on concrete | wheels rolling on concrete | ground contact broken only during airborne trick phases; landings show wheels touching down as feet apply pressure, with no board clipping into the concrete"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouched stance, both feet planted on board, rolling on flat concrete | upright riding away after second trick, knees absorbing | two airborne flip-trick sequences (00:01.0–00:03.5, 00:07.5–00:09.6) with crouch-pop-tuck-catch-land cycle; knees and hips bend in anatomically normal directions throughout\",\n    \"skateboard | under both feet, wheels in contact with concrete | under both feet, rolling away | board leaves ground after back-foot pop at ~00:01.0 and ~00:07.5, rotates beneath skater, is caught by descending feet at ~00:03.0 and ~00:09.1, then rolls with wheel contact restored\",\n    \"feet-to-board interface | full sole contact during riding | full sole contact during riding | contact released during board rotation (intentional flip phase) and re-established visibly before landing weight is applied; no floating feet during rolling phases\",\n    \"board-to-ground interface | wheels rolling on concrete | wheels rolling on concrete | ground contact broken only during airborne trick phases; landings show wheels touching down as feet apply pressure, with no board clipping into the concrete\"\n  ],\n  \"findings\": []\n}"
+}

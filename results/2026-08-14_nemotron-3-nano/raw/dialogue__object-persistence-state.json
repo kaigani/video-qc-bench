@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "timestamp": "2026-08-15T05:52:56.304Z",
+  "latencyMs": 2106,
+  "usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 1290,
+    "total_tokens": 3510,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1309,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "door | closed brown wooden door centered, supported by frame | closed same position, no visible opening or closing | no state change",
+    "coat | blue coat hanging on hook, static | blue coat still hanging, static | no state change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"door | closed brown wooden door centered, supported by frame | closed same position, no visible opening or closing | no state change\",\n    \"coat | blue coat hanging on hook, static | blue coat still hanging, static | no state change\"\n  ],\n  \"findings\": []\n}"
+}

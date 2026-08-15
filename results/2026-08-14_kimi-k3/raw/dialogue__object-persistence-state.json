@@ -1,0 +1,46 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:02:10.585Z",
+  "latencyMs": 5840,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 727,
+    "total_tokens": 25393,
+    "cost": 0.0835206,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0835206,
+      "upstream_inference_prompt_cost": 0.0726156,
+      "upstream_inference_completions_cost": 0.010905
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 418,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue coat/jacket | hanging on brass hook on wooden door, still | hanging on same hook, unchanged | no transitions; remains supported by hook throughout, including while man knocks on adjacent door",
+    "brass coat hook | mounted on upper wooden door, holding blue coat | same position, still holding coat | no transitions",
+    "circular woven wall hanging (dreamcatcher) | suspended above central door frame | same position | no transitions",
+    "wooden panel doors (multiple) | all closed | all closed; man knocks on left-side door at ~00:08.6-00:09.6 but it does not open | knocking action produces no state change",
+    "brass door knob (left door) | fixed on door | fixed on door | no transitions; not visibly turned",
+    "framed artwork (right wall) | hanging on wood paneling | same position | no transitions",
+    "small wooden wall cabinet/box (right wall) | mounted beside door frame | same position | no transitions",
+    "framed print on central door (visible from ~00:07.5 as camera shifts) | mounted on door | same position | no transitions",
+    "light switches and brass wall fixtures (left wall, visible from ~00:08.6) | mounted on wall | same position | no transitions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"blue coat/jacket | hanging on brass hook on wooden door, still | hanging on same hook, unchanged | no transitions; remains supported by hook throughout, including while man knocks on adjacent door\",\n    \"brass coat hook | mounted on upper wooden door, holding blue coat | same position, still holding coat | no transitions\",\n    \"circular woven wall hanging (dreamcatcher) | suspended above central door frame | same position | no transitions\",\n    \"wooden panel doors (multiple) | all closed | all closed; man knocks on left-side door at ~00:08.6-00:09.6 but it does not open | knocking action produces no state change\",\n    \"brass door knob (left door) | fixed on door | fixed on door | no transitions; not visibly turned\",\n    \"framed artwork (right wall) | hanging on wood paneling | same position | no transitions\",\n    \"small wooden wall cabinet/box (right wall) | mounted beside door frame | same position | no transitions\",\n    \"framed print on central door (visible from ~00:07.5 as camera shifts) | mounted on door | same position | no transitions\",\n    \"light switches and brass wall fixtures (left wall, visible from ~00:08.6) | mounted on wall | same position | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

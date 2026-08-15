@@ -1,0 +1,56 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:41:54.624Z",
+  "latencyMs": 10658,
+  "usage": {
+    "prompt_tokens": 24467,
+    "completion_tokens": 6304,
+    "total_tokens": 30771,
+    "cost": 0.1672698,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1672698,
+      "upstream_inference_prompt_cost": 0.0727098,
+      "upstream_inference_completions_cost": 0.09456
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5781,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "leftmost cube | green '2' (with '3' on right side) grasped by hand at start | blue '2' resting at position 1 from ~00:00:01.0 onward | changes color green->blue while in/near the hand; a second blue '3' cube appears alongside it (2 cubes become 3)",
+    "cube row | two green '2' cubes | final row of 8 cubes reading 2-3-2-2-3-5-2-6 (colors: blue, blue, green, orange, light-blue, green, green, blue) | hand repeatedly brings cubes in from the right; several cubes shift color/face between being held and being rested (notably the 4th position cube)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost number cube (and cube count)",
+      "invariant_violated": "object identity/color permanence + count conservation",
+      "description": "At 00:00:00.0-00:00:00.5 the hand grasps the left cube, which is green showing '2'. When next seen resting at 00:00:01.0 it is blue showing '2', while the hand simultaneously holds a second blue '3' cube. The lifted green cube cannot both remain in the hand and be replaced on the table by a different-colored cube, and the scene goes from 2 cubes to 3 with no off-screen exchange shown. A touch cannot recolor a cube green->blue.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "fourth cube in the row",
+      "invariant_violated": "object color permanence",
+      "description": "The cube being placed at the 4th position is light-green showing '3' at ~00:00:03.5, but at 00:00:04.0 the cube resting in that position is orange/yellow showing '2'. Even allowing that a rotation could change the visible digit, it cannot change the body's color from green to orange; the held cube's color is not conserved across the placement.",
+      "severity": "moderate",
+      "confidence": 0.62
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"leftmost cube | green '2' (with '3' on right side) grasped by hand at start | blue '2' resting at position 1 from ~00:00:01.0 onward | changes color green->blue while in/near the hand; a second blue '3' cube appears alongside it (2 cubes become 3)\",\n    \"cube row | two green '2' cubes | final row of 8 cubes reading 2-3-2-2-3-5-2-6 (colors: blue, blue, green, orange, light-blue, green, green, blue) | hand repeatedly brings cubes in from the right; several cubes shift color/face between being held and being rested (notably the 4th position cube)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"leftmost number cube (and cube count)\",\n      \"invariant_violated\": \"object identity/color permanence + count conservation\",\n      \"description\": \"At 00:00:00.0-00:00:00.5 the hand grasps the left cube, which is green showing '2'. When next seen resting at 00:00:01.0 it is blue showing '2', while the hand simultaneously holds a second blue '3' cube. The lifted green cube cannot both remain in the hand and be replaced on the table by a different-colored cube, and the scene goes from 2 cubes to 3 with no off-screen exchange shown. A touch cannot recolor a cube green->blue.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"fourth cube in the row\",\n      \"invariant_violated\": \"object color permanence\",\n      \"description\": \"The cube being placed at the 4th position is light-green showing '3' at ~00:00:03.5, but at 00:00:04.0 the cube resting in that position is orange/yellow showing '2'. Even allowing that a rotation could change the visible digit, it cannot change the body's color from green to orange; the held cube's color is not conserved across the placement.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.62\n    }\n  ]\n}"
+}

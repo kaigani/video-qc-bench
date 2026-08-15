@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:39:42.232Z",
+  "latencyMs": 8178,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 934,
+    "total_tokens": 2359,
+    "cost": 0.002285625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002285625,
+      "upstream_inference_prompt_cost": 0.000534375,
+      "upstream_inference_completions_cost": 0.00175125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 778,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | manipulating blocks | resting on block line | repeatedly drags rightmost block across table",
+    "numbered blocks | two blocks on table | line of seven blocks | continuously duplicate and materialize from thin air as block is pulled"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered blocks",
+      "invariant_violated": "effect-without-cause",
+      "description": "Additional numbered cubes spontaneously materialize and duplicate behind the block being dragged to the right without a physical source.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | manipulating blocks | resting on block line | repeatedly drags rightmost block across table\",\n    \"numbered blocks | two blocks on table | line of seven blocks | continuously duplicate and materialize from thin air as block is pulled\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"Additional numbered cubes spontaneously materialize and duplicate behind the block being dragged to the right without a physical source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

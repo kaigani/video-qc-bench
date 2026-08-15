@@ -1,0 +1,42 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T05:34:46.673Z",
+  "latencyMs": 4576,
+  "usage": {
+    "prompt_tokens": 24666,
+    "completion_tokens": 2417,
+    "total_tokens": 27083,
+    "cost": 0.0469353,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 23451,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0469353,
+      "upstream_inference_prompt_cost": 0.0106803,
+      "upstream_inference_completions_cost": 0.036255
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2127,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Grooming tool (small razor/trimmer, white blade head with darker handle) | in man's right hand at chin/mouth at 00:00 | still in right hand at temple at 00:09.625 | single object throughout; position changes all caused by visible hand motion: chin/jaw (00:00-00:01.5) -> hairline/temple (00:02.0-00:04.0) -> sideburn/cheek (00:04.5) -> upper lip/chin/jaw (00:05.0-00:09.1) -> temple (00:09.625); never leaves the hand; the second visible instance is only its mirror reflection, not a duplicate",
+    "Bathroom mirror in wooden frame | wall-mounted, fixed | unchanged | no physical interaction; passively reflects the man and background",
+    "Wooden door with brass doorknob | closed, behind man (direct view) | closed, unchanged | no transitions",
+    "Bottles/glassware on wooden wall shelf | arranged on two shelves (seen via mirror reflection) | unchanged | no transitions",
+    "Light switch panel | on wall beside shelf (seen via mirror reflection) | unchanged | no transitions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Grooming tool (small razor/trimmer, white blade head with darker handle) | in man's right hand at chin/mouth at 00:00 | still in right hand at temple at 00:09.625 | single object throughout; position changes all caused by visible hand motion: chin/jaw (00:00-00:01.5) -> hairline/temple (00:02.0-00:04.0) -> sideburn/cheek (00:04.5) -> upper lip/chin/jaw (00:05.0-00:09.1) -> temple (00:09.625); never leaves the hand; the second visible instance is only its mirror reflection, not a duplicate\",\n    \"Bathroom mirror in wooden frame | wall-mounted, fixed | unchanged | no physical interaction; passively reflects the man and background\",\n    \"Wooden door with brass doorknob | closed, behind man (direct view) | closed, unchanged | no transitions\",\n    \"Bottles/glassware on wooden wall shelf | arranged on two shelves (seen via mirror reflection) | unchanged | no transitions\",\n    \"Light switch panel | on wall beside shelf (seen via mirror reflection) | unchanged | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

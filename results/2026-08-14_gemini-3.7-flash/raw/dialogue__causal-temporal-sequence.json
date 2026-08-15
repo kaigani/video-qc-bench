@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.7-flash",
+  "timestamp": "2026-08-15T05:37:28.108Z",
+  "latencyMs": 6215,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 351,
+    "total_tokens": 1776,
+    "cost": 0.0011925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0011925,
+      "upstream_inference_prompt_cost": 0.000534375,
+      "upstream_inference_completions_cost": 0.000658125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 254,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "character | facing forward speaking | turned toward door knocking | turns at 00:06, steps toward door and knocks at 00:08-00:10",
+    "wooden door | static background element | struck by character's knuckles | physically struck with synchronized impact sounds at 00:08-00:10"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"character | facing forward speaking | turned toward door knocking | turns at 00:06, steps toward door and knocks at 00:08-00:10\",\n    \"wooden door | static background element | struck by character's knuckles | physically struck with synchronized impact sounds at 00:08-00:10\"\n  ],\n  \"findings\": []\n}"
+}

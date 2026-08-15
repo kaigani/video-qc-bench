@@ -1,0 +1,42 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T06:08:04.793Z",
+  "latencyMs": 5736,
+  "usage": {
+    "prompt_tokens": 24648,
+    "completion_tokens": 7279,
+    "total_tokens": 31927,
+    "cost": 0.1817466,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.1817466,
+      "upstream_inference_prompt_cost": 0.0725616,
+      "upstream_inference_completions_cost": 0.109185
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6882,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (teal dress) | standing in kitchen at 00:00:00, facing hallway | walking into far kitchen at 00:00:09.6 | initiates gait ~00:00:00.3; continuous forward locomotion through kitchen→hallway→bedroom→hallway→kitchen; each stride produces proportional displacement; head turns at 00:00:05.0-00:00:06.5 precede and match her visual scan of the bedroom; no teleports, freezes, or repeated beats",
+    "hallway light switch + hallway lighting | ceiling fixture lit, hallway bright at 00:00:02.0 | hallway dimmed by 00:00:03.0 | woman's right hand reaches the switch plate at ~00:00:02.5; ambient darkening follows at ~00:00:03.0 — cause precedes effect with plausible ~0.5s delay; reach starts and arrives at the switch, action completes",
+    "interior door, right side of far hallway | ajar with bright room beyond at 00:00:08.6 | passed at 00:00:09.1, appears open | progressive reveal consistent with camera parallax of a statically open door; no visible swing event and no contact, but no clear angular change attributable to a missing cause",
+    "bedroom bedside lamp / chandelier | lamp lit when bedroom first revealed at 00:00:04.5 | unchanged at exit 00:00:07.0 | steady state; no light change requiring a cause",
+    "camera / temporal flow | tracking behind woman | continuous throughout | smooth follow with motion blur only during pans; time flows forward within the shot; no frozen moments or effects outpacing causes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (teal dress) | standing in kitchen at 00:00:00, facing hallway | walking into far kitchen at 00:00:09.6 | initiates gait ~00:00:00.3; continuous forward locomotion through kitchen→hallway→bedroom→hallway→kitchen; each stride produces proportional displacement; head turns at 00:00:05.0-00:00:06.5 precede and match her visual scan of the bedroom; no teleports, freezes, or repeated beats\",\n    \"hallway light switch + hallway lighting | ceiling fixture lit, hallway bright at 00:00:02.0 | hallway dimmed by 00:00:03.0 | woman's right hand reaches the switch plate at ~00:00:02.5; ambient darkening follows at ~00:00:03.0 — cause precedes effect with plausible ~0.5s delay; reach starts and arrives at the switch, action completes\",\n    \"interior door, right side of far hallway | ajar with bright room beyond at 00:00:08.6 | passed at 00:00:09.1, appears open | progressive reveal consistent with camera parallax of a statically open door; no visible swing event and no contact, but no clear angular change attributable to a missing cause\",\n    \"bedroom bedside lamp / chandelier | lamp lit when bedroom first revealed at 00:00:04.5 | unchanged at exit 00:00:07.0 | steady state; no light change requiring a cause\",\n    \"camera / temporal flow | tracking behind woman | continuous throughout | smooth follow with motion blur only during pans; time flows forward within the shot; no frozen moments or effects outpacing causes\"\n  ],\n  \"findings\": []\n}"
+}
