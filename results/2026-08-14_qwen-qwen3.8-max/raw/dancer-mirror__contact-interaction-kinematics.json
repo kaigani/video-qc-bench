@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:48:14.698Z",
+  "latencyMs": 5962,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 5001,
+    "total_tokens": 11670,
+    "cost": 0.043344,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.043344,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.030006
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4727,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer feet-floor | both feet planted, weight distributed, flat contact at 00:00 | right foot pointed to side with toe-floor contact, left foot flat at 00:09 | weight shifts smoothly during stance changes (~00:05, ~00:09); planted foot never slides; no floating or loss of support",
+    "dancer right arm-hand | no contact target, arm low at side | no contact target, arm overhead with flexed wrist | continuous arc low->overhead (00:00-00:02), lower (00:03-00:05), re-raise (00:06-00:09); no pose snapping; shoulder/elbow/wrist ranges anatomically plausible",
+    "dancer left arm-hand | hanging at side, no contact | at side, no contact | only small postural adjustments; no handedness swap",
+    "mirror reflection (kinematic twin of dancer) | pose and foot contact synchronous with real body | synchronous at end | reflection arm/foot states match real body in every sampled frame; no effect-before-motion or asymmetry detected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer feet-floor | both feet planted, weight distributed, flat contact at 00:00 | right foot pointed to side with toe-floor contact, left foot flat at 00:09 | weight shifts smoothly during stance changes (~00:05, ~00:09); planted foot never slides; no floating or loss of support\",\n    \"dancer right arm-hand | no contact target, arm low at side | no contact target, arm overhead with flexed wrist | continuous arc low->overhead (00:00-00:02), lower (00:03-00:05), re-raise (00:06-00:09); no pose snapping; shoulder/elbow/wrist ranges anatomically plausible\",\n    \"dancer left arm-hand | hanging at side, no contact | at side, no contact | only small postural adjustments; no handedness swap\",\n    \"mirror reflection (kinematic twin of dancer) | pose and foot contact synchronous with real body | synchronous at end | reflection arm/foot states match real body in every sampled frame; no effect-before-motion or asymmetry detected\"\n  ],\n  \"findings\": []\n}"
+}

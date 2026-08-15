@@ -1,0 +1,42 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:25:05.476Z",
+  "latencyMs": 3196,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 6484,
+    "total_tokens": 13143,
+    "cost": 0.052222,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.052222,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.038904
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6103,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table surface | light wood plane, horizontal far edge near top of frame, fills lower ~85% | unchanged | static reference plane; all blocks rest on it, reflections/shadows consistent beneath each block",
+    "background strip | dark out-of-focus zone above table edge with partial leg/tripod shapes at frame left and right | same shapes, only slight lateral drift consistent with minor reframing as the row grows | no openings/connectivity role; never occluded incorrectly by foreground",
+    "placed block row | 2 blocks at 0:00 (slot1 x~130, slot3 x~380) with empty gap between | 8 blocks at 0:08-0:09 spanning slots 1-8 (x~160-910) in a straight left-to-right line | every previously placed block keeps its x-position, spacing and left-right order across all cuts; new blocks always settle into the next empty slot at the right end; no block ever swaps sides or overlaps another",
+    "hand/arm | enters from top of frame gripping block at left | after placing rightmost block, re-enters from top-left to adjust slots 1-2 at 0:09 | always connected to arm entering from frame top; motion between cuts is compatible with off-screen travel; emerges on correct side of row each time",
+    "block-in-transit | appears only gripped by fingertips, tilted, bottom edge above table | settles into the next empty slot before the next cut | never intersects or passes through placed blocks; occluded by gripping fingers (near side) and occludes table/background behind it; occlusion edges evolve smoothly within each shot"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"table surface | light wood plane, horizontal far edge near top of frame, fills lower ~85% | unchanged | static reference plane; all blocks rest on it, reflections/shadows consistent beneath each block\",\n    \"background strip | dark out-of-focus zone above table edge with partial leg/tripod shapes at frame left and right | same shapes, only slight lateral drift consistent with minor reframing as the row grows | no openings/connectivity role; never occluded incorrectly by foreground\",\n    \"placed block row | 2 blocks at 0:00 (slot1 x~130, slot3 x~380) with empty gap between | 8 blocks at 0:08-0:09 spanning slots 1-8 (x~160-910) in a straight left-to-right line | every previously placed block keeps its x-position, spacing and left-right order across all cuts; new blocks always settle into the next empty slot at the right end; no block ever swaps sides or overlaps another\",\n    \"hand/arm | enters from top of frame gripping block at left | after placing rightmost block, re-enters from top-left to adjust slots 1-2 at 0:09 | always connected to arm entering from frame top; motion between cuts is compatible with off-screen travel; emerges on correct side of row each time\",\n    \"block-in-transit | appears only gripped by fingertips, tilted, bottom edge above table | settles into the next empty slot before the next cut | never intersects or passes through placed blocks; occluded by gripping fingers (near side) and occludes table/background behind it; occlusion edges evolve smoothly within each shot\"\n  ],\n  \"findings\": []\n}"
+}

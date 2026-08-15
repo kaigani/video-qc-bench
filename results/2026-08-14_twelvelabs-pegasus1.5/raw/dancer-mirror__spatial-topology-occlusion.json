@@ -1,0 +1,24 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "twelvelabs/pegasus1.5",
+  "timestamp": "2026-08-15T01:37:03.510Z",
+  "latencyMs": 8248,
+  "usage": {
+    "prompt_tokens": 4623,
+    "completion_tokens": 123,
+    "total_tokens": 4746
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left wall | contains two dark doors with exit signs | unchanged | no transitions",
+    "Back wall | contains a large mirror reflecting the room | unchanged | no transitions",
+    "Right wall | contains ballet barres and a framed picture | unchanged | no transitions",
+    "Floor | light wood surface | unchanged | no transitions",
+    "Subject (dancer) | moves within the foreground | occludes the mirror reflection behind her | smooth occlusion edges"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Left wall | contains two dark doors with exit signs | unchanged | no transitions\",\n    \"Back wall | contains a large mirror reflecting the room | unchanged | no transitions\",\n    \"Right wall | contains ballet barres and a framed picture | unchanged | no transitions\",\n    \"Floor | light wood surface | unchanged | no transitions\",\n    \"Subject (dancer) | moves within the foreground | occludes the mirror reflection behind her | smooth occlusion edges\"\n  ],\n  \"findings\": []\n}"
+}

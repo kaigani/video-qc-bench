@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:16:46.489Z",
+  "latencyMs": 2381,
+  "usage": {
+    "prompt_tokens": 2930,
+    "completion_tokens": 1970,
+    "total_tokens": 4900,
+    "cost": 0.0011982,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0011982,
+      "upstream_inference_prompt_cost": 0.0004102,
+      "upstream_inference_completions_cost": 0.000788
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1576,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person in background | top of stairs | out of frame | walking down stairs (00:00-00:04)",
+    "Phone | held steady | moved away | slight tremor then rapid movement (00:09)",
+    "Screen content | static A742 | static A742 | no change",
+    "Screen reflections | minimal | shifting bright patches | changes with phone orientation (00:04-00:09)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Person in background | top of stairs | out of frame | walking down stairs (00:00-00:04)\",\n    \"Phone | held steady | moved away | slight tremor then rapid movement (00:09)\",\n    \"Screen content | static A742 | static A742 | no change\",\n    \"Screen reflections | minimal | shifting bright patches | changes with phone orientation (00:04-00:09)\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:01:40.298Z",
+  "latencyMs": 4228,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 2556,
+    "total_tokens": 9209,
+    "cost": 0.028642,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028642,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.015336
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2285,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | standing in kitchen, profile left, at rest | walking away down rear hall toward second kitchen | turn-and-step initiation (0:00-0:01) causes displacement; continuous gait through hall (0:01-0:04); enters bedroom (0:04-0:05); head scan left (0:05-0:06) precedes and motivates turn toward exit doorway (0:06-0:07); exits and continues walking (0:07-0:09); cause-effect order and delays plausible",
+    "camera | tracking subject from side/behind in kitchen | following behind into rear hall | follow motion continuous and matched to subject pace; no frozen moments, no repeated beats",
+    "light sources (bedside lamp, daylight) | lamp on, daylight through windows at bedroom entry | identical states at exit | no light-state transition occurs, therefore no uncaused light change",
+    "doors/windows (entry door, bedroom doorway) | entry door closed, bedroom doorway open at first sighting | same states at end | no door motion initiated, none required; static states consistent throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | standing in kitchen, profile left, at rest | walking away down rear hall toward second kitchen | turn-and-step initiation (0:00-0:01) causes displacement; continuous gait through hall (0:01-0:04); enters bedroom (0:04-0:05); head scan left (0:05-0:06) precedes and motivates turn toward exit doorway (0:06-0:07); exits and continues walking (0:07-0:09); cause-effect order and delays plausible\",\n    \"camera | tracking subject from side/behind in kitchen | following behind into rear hall | follow motion continuous and matched to subject pace; no frozen moments, no repeated beats\",\n    \"light sources (bedside lamp, daylight) | lamp on, daylight through windows at bedroom entry | identical states at exit | no light-state transition occurs, therefore no uncaused light change\",\n    \"doors/windows (entry door, bedroom doorway) | entry door closed, bedroom doorway open at first sighting | same states at end | no door motion initiated, none required; static states consistent throughout\"\n  ],\n  \"findings\": []\n}"
+}

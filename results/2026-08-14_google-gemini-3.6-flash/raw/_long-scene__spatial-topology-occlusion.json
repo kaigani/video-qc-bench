@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:53:56.234Z",
+  "latencyMs": 11571,
+  "usage": {
+    "prompt_tokens": 10632,
+    "completion_tokens": 3278,
+    "total_tokens": 13910,
+    "cost": 0.0202665,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 10115
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0202665,
+      "upstream_inference_prompt_cost": 0.007974,
+      "upstream_inference_completions_cost": 0.0122925
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3060,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner exterior | truck parked to left of building entrance | visible in opening shot | static layout",
+    "diner interior | counter on right, booths/windows on left wall, kitchen pass-through on back wall | consistent spatial arrangement throughout | static layout",
+    "kitchen pass-through | connects kitchen to main diner area | seen from diner side and kitchen interior | spatially aligned with counter and front entrance",
+    "truck / trailer | parked outside diner windows | visible through glass windows | reflection layer incorrectly mapped onto exterior trailer body"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "waitress reflection and truck trailer surface",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "The reflection of the waitress is incorrectly rendered onto the exterior side panel of the truck trailer parked outside the window. As the man walks outside toward the truck, he occludes the reflection, showing that the reflection layer was improperly placed in 3D depth behind the man on the truck body rather than on the foreground window pane.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner exterior | truck parked to left of building entrance | visible in opening shot | static layout\",\n    \"diner interior | counter on right, booths/windows on left wall, kitchen pass-through on back wall | consistent spatial arrangement throughout | static layout\",\n    \"kitchen pass-through | connects kitchen to main diner area | seen from diner side and kitchen interior | spatially aligned with counter and front entrance\",\n    \"truck / trailer | parked outside diner windows | visible through glass windows | reflection layer incorrectly mapped onto exterior trailer body\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"waitress reflection and truck trailer surface\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"The reflection of the waitress is incorrectly rendered onto the exterior side panel of the truck trailer parked outside the window. As the man walks outside toward the truck, he occludes the reflection, showing that the reflection layer was improperly placed in 3D depth behind the man on the truck body rather than on the foreground window pane.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

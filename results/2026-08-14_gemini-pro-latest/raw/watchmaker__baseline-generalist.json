@@ -1,0 +1,50 @@
+{
+  "key": "watchmaker__baseline-generalist",
+  "video": "watchmaker.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:00.173Z",
+  "latencyMs": 5424,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 968,
+    "total_tokens": 2206,
+    "cost": 0.014092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014092,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.011616
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 767,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "studded ring | held in left hand | partially obscured in left hand | remains in hand",
+    "tweezers | held in right hand | out of frame | placed down",
+    "simple ring 1 | not present | appears in left hand | materializes over the studded ring",
+    "simple ring 2 | not present | held in right hand | picked up from out of frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "ring in left hand",
+      "invariant_violated": "object permanence",
+      "description": "A new, simple ring with a stone suddenly materializes in the woman's left hand, resting on top of the original studded ring she was holding.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"studded ring | held in left hand | partially obscured in left hand | remains in hand\",\n    \"tweezers | held in right hand | out of frame | placed down\",\n    \"simple ring 1 | not present | appears in left hand | materializes over the studded ring\",\n    \"simple ring 2 | not present | held in right hand | picked up from out of frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"ring in left hand\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"A new, simple ring with a stone suddenly materializes in the woman's left hand, resting on top of the original studded ring she was holding.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

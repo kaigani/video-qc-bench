@@ -1,0 +1,51 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:08.700Z",
+  "latencyMs": 4423,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2820,
+    "total_tokens": 4246,
+    "cost": 0.036692,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036692,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.03384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2564,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground man | standing left, facing mirror, holding comb in right hand | standing left, facing mirror | right hand moves up and back over head",
+    "mirror reflection | visible in mirror on right | visible in mirror on right | right hand moves down forehead, diverging spatially from foreground man",
+    "mirror frame | fixed vertically in center-right | fixed vertically | none",
+    "door in reflection | visible in background left of mirror | visible in background left of mirror | none",
+    "shelves in reflection | visible in background right of mirror | visible in background right of mirror | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "mirror reflection",
+      "invariant_violated": "impossible geometry",
+      "description": "The spatial trajectory of the foreground man's hand moves backwards over his head, while the reflection's hand moves downwards across the forehead. The reflection's geometric movement is completely uncoupled from the physical object it reflects.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground man | standing left, facing mirror, holding comb in right hand | standing left, facing mirror | right hand moves up and back over head\",\n    \"mirror reflection | visible in mirror on right | visible in mirror on right | right hand moves down forehead, diverging spatially from foreground man\",\n    \"mirror frame | fixed vertically in center-right | fixed vertically | none\",\n    \"door in reflection | visible in background left of mirror | visible in background left of mirror | none\",\n    \"shelves in reflection | visible in background right of mirror | visible in background right of mirror | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"impossible geometry\",\n      \"description\": \"The spatial trajectory of the foreground man's hand moves backwards over his head, while the reflection's hand moves downwards across the forehead. The reflection's geometric movement is completely uncoupled from the physical object it reflects.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

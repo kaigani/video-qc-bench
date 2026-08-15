@@ -1,0 +1,42 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:57:50.037Z",
+  "latencyMs": 3189,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 2557,
+    "total_tokens": 9210,
+    "cost": 0.028648,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028648,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.015342
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2285,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man in striped shirt | standing center-frame, speaking with continuous mouth motion, facing forward | left profile, walking toward left door, hands raised toward door panel | speech 00:00-00:06 -> closes mouth and smiles 00:06-00:07 -> lowers gaze and initiates turn 00:07-00:08 -> walks and reaches for door 00:08-00:09; action chain (finish speaking -> turn -> walk -> reach) proceeds in plausible order with natural delays",
+    "left wooden door | closed, stationary | closed, stationary, hand approaching at 00:09 | no spontaneous motion; contact/reach precedes any opening; clip ends before door responds, no effect-without-cause",
+    "hanging coat | at rest on hook | at rest on hook | no uncaused sway or displacement",
+    "ambient light | warm, steady interior illumination | identical quality | no light change occurs, hence no uncaused light change",
+    "background fixtures (wheel ornament, framed pictures, wall box) | stationary | stationary | no transitions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man in striped shirt | standing center-frame, speaking with continuous mouth motion, facing forward | left profile, walking toward left door, hands raised toward door panel | speech 00:00-00:06 -> closes mouth and smiles 00:06-00:07 -> lowers gaze and initiates turn 00:07-00:08 -> walks and reaches for door 00:08-00:09; action chain (finish speaking -> turn -> walk -> reach) proceeds in plausible order with natural delays\",\n    \"left wooden door | closed, stationary | closed, stationary, hand approaching at 00:09 | no spontaneous motion; contact/reach precedes any opening; clip ends before door responds, no effect-without-cause\",\n    \"hanging coat | at rest on hook | at rest on hook | no uncaused sway or displacement\",\n    \"ambient light | warm, steady interior illumination | identical quality | no light change occurs, hence no uncaused light change\",\n    \"background fixtures (wheel ornament, framed pictures, wall box) | stationary | stationary | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

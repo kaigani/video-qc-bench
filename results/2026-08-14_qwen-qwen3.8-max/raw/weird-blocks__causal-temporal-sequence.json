@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:26:01.039Z",
+  "latencyMs": 3796,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 6207,
+    "total_tokens": 12860,
+    "cost": 0.050548,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.050548,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.037242
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5681,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | 0:00 gripping and turning leftmost cube | 0:09 fingertips contacting cubes 1-2 at left end | turns/places cubes sequentially left-to-right; every cube rotation coincides with hand contact; lifts away to upper right by 0:08; travels back to left end and re-contacts cubes 1-2 by 0:09",
+    "cube 1 (leftmost) | 0:00 mid-turn showing '2' under hand | 0:09 settled showing '2', tilted again under re-contacting hand | turn completes, cube static by 0:01; remains static until hand touches it again at 0:09",
+    "cube 2 | 0:01 mid-turn showing '3' under hand | 0:09 static showing '3' | turn completes by 0:02; no further motion",
+    "cube 3 | 0:00 static showing '2' | 0:09 static showing '2' | briefly turned by hand 0:02-0:03, settles showing '2'; motion only during contact",
+    "cube 4 | 0:03 mid-turn under hand | 0:09 static showing '2' | turn completes by 0:04; static thereafter",
+    "cube 5 | 0:04 mid-turn under hand | 0:09 static showing '3' | turn completes by 0:05; static thereafter",
+    "cube 6 | 0:05 mid-turn under hand | 0:09 static showing '5' | turn completes by 0:06; static thereafter",
+    "cube 7 | 0:06 mid-turn under hand | 0:09 static showing '2' | turn completes by 0:07; static thereafter",
+    "cube 8 (rightmost) | 0:07 mid-turn under hand | 0:09 static showing '6' | turn completes and cube settles by 0:08 as hand lifts away",
+    "table/lighting | 0:00 constant diffuse light, static shadows under cubes | 0:09 same | shadows shift only as cubes/hand move; no uncaused light change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | 0:00 gripping and turning leftmost cube | 0:09 fingertips contacting cubes 1-2 at left end | turns/places cubes sequentially left-to-right; every cube rotation coincides with hand contact; lifts away to upper right by 0:08; travels back to left end and re-contacts cubes 1-2 by 0:09\",\n    \"cube 1 (leftmost) | 0:00 mid-turn showing '2' under hand | 0:09 settled showing '2', tilted again under re-contacting hand | turn completes, cube static by 0:01; remains static until hand touches it again at 0:09\",\n    \"cube 2 | 0:01 mid-turn showing '3' under hand | 0:09 static showing '3' | turn completes by 0:02; no further motion\",\n    \"cube 3 | 0:00 static showing '2' | 0:09 static showing '2' | briefly turned by hand 0:02-0:03, settles showing '2'; motion only during contact\",\n    \"cube 4 | 0:03 mid-turn under hand | 0:09 static showing '2' | turn completes by 0:04; static thereafter\",\n    \"cube 5 | 0:04 mid-turn under hand | 0:09 static showing '3' | turn completes by 0:05; static thereafter\",\n    \"cube 6 | 0:05 mid-turn under hand | 0:09 static showing '5' | turn completes by 0:06; static thereafter\",\n    \"cube 7 | 0:06 mid-turn under hand | 0:09 static showing '2' | turn completes by 0:07; static thereafter\",\n    \"cube 8 (rightmost) | 0:07 mid-turn under hand | 0:09 static showing '6' | turn completes and cube settles by 0:08 as hand lifts away\",\n    \"table/lighting | 0:00 constant diffuse light, static shadows under cubes | 0:09 same | shadows shift only as cubes/hand move; no uncaused light change\"\n  ],\n  \"findings\": []\n}"
+}

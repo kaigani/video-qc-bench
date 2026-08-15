@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:24:03.300Z",
+  "latencyMs": 2875,
+  "usage": {
+    "prompt_tokens": 2949,
+    "completion_tokens": 1183,
+    "total_tokens": 4132,
+    "cost": 0.00169531,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00169531,
+      "upstream_inference_prompt_cost": 0.00079623,
+      "upstream_inference_completions_cost": 0.00089908
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 910,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red apple | held by woman's right hand | vanished | 00:08: vanishes from hand without visible cause",
+    "Blue umbrella | held by woman's left hand | held by woman's both hands | 00:08: right hand grips handle",
+    "Fruit bins | on market tables | on market tables | no state change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Red apple",
+      "invariant_violated": "identity & persistence",
+      "description": "The apple held in the woman's right hand vanishes instantly without any visible action of putting it away, dropping it, or handing it over.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Red apple | held by woman's right hand | vanished | 00:08: vanishes from hand without visible cause\",\n    \"Blue umbrella | held by woman's left hand | held by woman's both hands | 00:08: right hand grips handle\",\n    \"Fruit bins | on market tables | on market tables | no state change\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Red apple\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The apple held in the woman's right hand vanishes instantly without any visible action of putting it away, dropping it, or handing it over.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

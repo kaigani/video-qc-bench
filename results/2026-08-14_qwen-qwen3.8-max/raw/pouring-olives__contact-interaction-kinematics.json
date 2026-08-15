@@ -1,0 +1,45 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:51:07.117Z",
+  "latencyMs": 4223,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 5270,
+    "total_tokens": 11939,
+    "cost": 0.034206,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6144,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.034206,
+      "upstream_inference_prompt_cost": 0.002586,
+      "upstream_inference_completions_cost": 0.03162
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4742,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person right hand | fingers wrapped over rim/top of small glass bowl, touching olives (00:00) | pulling away from emptied second container (00:09) | pours 00:01-00:03; releases and reaches toward metal bowl 00:04-00:05; fingers inserted into second container mouth to guide olives 00:06-00:08",
+    "person left hand | supporting side/base of small glass bowl (00:00) | holding tilted empty second container (00:09) | continuous grip maintained through both pouring actions; no handedness swap",
+    "small glass container #1 | held by both hands above jar, full (00:00) | inverted and empty, released by 00:04-00:05 | tilted over jar mouth 00:01-00:03 with hand contact maintained throughout tilt",
+    "small glass container #2 | held by both hands above jar (00:06) | tilted, nearly empty (00:09) | right-hand fingers enter mouth 00:07-00:08 to push olives out; left-hand grip never broken",
+    "large glass jar | empty, resting stably on cutting board (00:00) | ~1/3 full of olives, still stationary (00:09) | receives falling olives 00:01-00:03 and 00:07-00:08; no displacement or rocking on impact",
+    "olives (poured batches) | contained in small glass containers (00:00) | settled pile inside jar (00:09) | falling streams only occur while container is tilted over jar mouth; pile grows monotonically after each stream",
+    "metal bowl | resting on counter, full of olives (00:00) | resting on counter, partially emptied (00:09) | brief right-hand contact at rim ~00:05; remains supported on counter throughout",
+    "ceramic bowl | resting on counter, full (00:00) | resting on counter, full (00:09) | no contact events"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person right hand | fingers wrapped over rim/top of small glass bowl, touching olives (00:00) | pulling away from emptied second container (00:09) | pours 00:01-00:03; releases and reaches toward metal bowl 00:04-00:05; fingers inserted into second container mouth to guide olives 00:06-00:08\",\n    \"person left hand | supporting side/base of small glass bowl (00:00) | holding tilted empty second container (00:09) | continuous grip maintained through both pouring actions; no handedness swap\",\n    \"small glass container #1 | held by both hands above jar, full (00:00) | inverted and empty, released by 00:04-00:05 | tilted over jar mouth 00:01-00:03 with hand contact maintained throughout tilt\",\n    \"small glass container #2 | held by both hands above jar (00:06) | tilted, nearly empty (00:09) | right-hand fingers enter mouth 00:07-00:08 to push olives out; left-hand grip never broken\",\n    \"large glass jar | empty, resting stably on cutting board (00:00) | ~1/3 full of olives, still stationary (00:09) | receives falling olives 00:01-00:03 and 00:07-00:08; no displacement or rocking on impact\",\n    \"olives (poured batches) | contained in small glass containers (00:00) | settled pile inside jar (00:09) | falling streams only occur while container is tilted over jar mouth; pile grows monotonically after each stream\",\n    \"metal bowl | resting on counter, full of olives (00:00) | resting on counter, partially emptied (00:09) | brief right-hand contact at rim ~00:05; remains supported on counter throughout\",\n    \"ceramic bowl | resting on counter, full (00:00) | resting on counter, full (00:09) | no contact events\"\n  ],\n  \"findings\": []\n}"
+}

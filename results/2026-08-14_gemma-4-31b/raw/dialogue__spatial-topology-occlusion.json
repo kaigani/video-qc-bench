@@ -1,0 +1,42 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:11:42.914Z",
+  "latencyMs": 10611,
+  "usage": {
+    "prompt_tokens": 2934,
+    "completion_tokens": 779,
+    "total_tokens": 3713,
+    "cost": 0.0029795,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0029795,
+      "upstream_inference_prompt_cost": 0.0022005,
+      "upstream_inference_completions_cost": 0.000779
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 668,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Door | Left side of frame | Left side of frame | Static",
+    "Blue garment | Hanging between door and wall | Occluded by man as he moves left | Static",
+    "Framed picture | Right side of frame | Right side of frame | Static",
+    "Wall paneling | Background | Background | Static",
+    "Man | Center frame | Left frame, facing door | Moves from center to left"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Door | Left side of frame | Left side of frame | Static\",\n    \"Blue garment | Hanging between door and wall | Occluded by man as he moves left | Static\",\n    \"Framed picture | Right side of frame | Right side of frame | Static\",\n    \"Wall paneling | Background | Background | Static\",\n    \"Man | Center frame | Left frame, facing door | Moves from center to left\"\n  ],\n  \"findings\": []\n}"
+}

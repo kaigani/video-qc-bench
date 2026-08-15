@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:14:13.635Z",
+  "latencyMs": 6317,
+  "usage": {
+    "prompt_tokens": 2950,
+    "completion_tokens": 1738,
+    "total_tokens": 4688,
+    "cost": 0.00088592,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 544,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00088592,
+      "upstream_inference_prompt_cost": 0.000295,
+      "upstream_inference_completions_cost": 0.00059092
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1125,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cup 1 | on table, open | on table, open | moved by hand 00:04-00:07",
+    "Cup 2 | on table, open | on table, open | stationary",
+    "Cup 3 | on table, open | on table, open | stationary",
+    "Coin 1 | held by hand | inside Cup 1 | transitioned hand to Cup 1 at 00:02",
+    "Coin 2 | inside Cup 1 | inside Cup 1 | stationary",
+    "Coin 3 | inside Cup 2 | inside Cup 2 | stationary",
+    "Coin 4 | on table | held by hand | transitioned table to hand at 00:09"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Cup 1 | on table, open | on table, open | moved by hand 00:04-00:07\",\n    \"Cup 2 | on table, open | on table, open | stationary\",\n    \"Cup 3 | on table, open | on table, open | stationary\",\n    \"Coin 1 | held by hand | inside Cup 1 | transitioned hand to Cup 1 at 00:02\",\n    \"Coin 2 | inside Cup 1 | inside Cup 1 | stationary\",\n    \"Coin 3 | inside Cup 2 | inside Cup 2 | stationary\",\n    \"Coin 4 | on table | held by hand | transitioned table to hand at 00:09\"\n  ],\n  \"findings\": []\n}\n```"
+}

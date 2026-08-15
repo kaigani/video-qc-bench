@@ -1,0 +1,39 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:03.463Z",
+  "latencyMs": 5204,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 833,
+    "total_tokens": 2258,
+    "cost": 0.0041925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0041925,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00312375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 727,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person walking | walking away carrying red container at top of stairs | continues moving into distance | steady forward gait away from camera",
+    "smartphone device | held in hands showing display 'A742' | tilted down as clip ends | focus shifts from background to screen at 00:03, thumb interacts with screen at 00:07, phone lowers at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person walking | walking away carrying red container at top of stairs | continues moving into distance | steady forward gait away from camera\",\n    \"smartphone device | held in hands showing display 'A742' | tilted down as clip ends | focus shifts from background to screen at 00:03, thumb interacts with screen at 00:07, phone lowers at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

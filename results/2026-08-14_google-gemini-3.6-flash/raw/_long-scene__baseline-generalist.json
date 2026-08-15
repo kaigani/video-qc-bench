@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:53:25.461Z",
+  "latencyMs": 29117,
+  "usage": {
+    "prompt_tokens": 10444,
+    "completion_tokens": 2011,
+    "total_tokens": 12455,
+    "cost": 0.01537425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 10115
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01537425,
+      "upstream_inference_prompt_cost": 0.007833,
+      "upstream_inference_completions_cost": 0.00754125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1794,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck | white semi-truck parked outside at night | dark green semi-truck outside | vehicle color and model change completely",
+    "waitress | single waitress in blue shirt and white apron | duplicate waitress appears behind counter | character duplication artifact"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "truck",
+      "invariant_violated": "visual inconsistency",
+      "description": "The truck parked outside the diner changes from a white semi-truck at the beginning of the video (00:00) to a dark green truck.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "character duplication",
+      "description": "When the waitress stands up from the counter stool to walk behind the counter, a second identical clone of the waitress is already standing in the background near the kitchen pass-through.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"truck | white semi-truck parked outside at night | dark green semi-truck outside | vehicle color and model change completely\",\n    \"waitress | single waitress in blue shirt and white apron | duplicate waitress appears behind counter | character duplication artifact\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"truck\",\n      \"invariant_violated\": \"visual inconsistency\",\n      \"description\": \"The truck parked outside the diner changes from a white semi-truck at the beginning of the video (00:00) to a dark green truck.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"character duplication\",\n      \"description\": \"When the waitress stands up from the counter stool to walk behind the counter, a second identical clone of the waitress is already standing in the background near the kitchen pass-through.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

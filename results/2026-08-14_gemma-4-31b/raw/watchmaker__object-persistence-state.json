@@ -1,0 +1,48 @@
+{
+  "key": "watchmaker__object-persistence-state",
+  "video": "watchmaker.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:18:46.618Z",
+  "latencyMs": 3041,
+  "usage": {
+    "prompt_tokens": 2949,
+    "completion_tokens": 1622,
+    "total_tokens": 4571,
+    "cost": 0.00106166,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00106166,
+      "upstream_inference_prompt_cost": 0.00041286,
+      "upstream_inference_completions_cost": 0.0006488
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1230,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "probe | held by left hand, long thin metal tool | held by left hand, short thin metal piece | vanishes/transforms into smaller piece at 00:04 during rapid hand movement",
+    "component | held by right hand, small circular metal object | held by right hand, small circular metal object | no transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "probe",
+      "invariant_violated": "identity & persistence",
+      "description": "The long metal probe held in the left hand vanishes and is replaced by a significantly shorter metal piece during a fast motion, with no visible action explaining the change in size or identity.",
+      "severity": "severe",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"probe | held by left hand, long thin metal tool | held by left hand, short thin metal piece | vanishes/transforms into smaller piece at 00:04 during rapid hand movement\",\n    \"component | held by right hand, small circular metal object | held by right hand, small circular metal object | no transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"probe\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The long metal probe held in the left hand vanishes and is replaced by a significantly shorter metal piece during a fast motion, with no visible action explaining the change in size or identity.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__contact-interaction-kinematics",
+  "video": "dialogue.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:46:48.802Z",
+  "latencyMs": 6247,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 1341,
+    "total_tokens": 8010,
+    "cost": 0.021384,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021384,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.008046
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1186,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man in striped shirt | standing upright, talking, arms/hands below frame, no object contact | standing at left door, both hands raised with fingers touching door panel | turns left ~00:07-00:08 with continuous body rotation, walks to door, hand-door contact established ~00:09",
+    "left wooden door | closed, stationary, untouched | closed, stationary, contacted by man's hands ~00:09 | no motion before or after contact",
+    "coat on hook | hanging stationary | hanging stationary | never contacted by man, no displacement during turn or walk"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man in striped shirt | standing upright, talking, arms/hands below frame, no object contact | standing at left door, both hands raised with fingers touching door panel | turns left ~00:07-00:08 with continuous body rotation, walks to door, hand-door contact established ~00:09\",\n    \"left wooden door | closed, stationary, untouched | closed, stationary, contacted by man's hands ~00:09 | no motion before or after contact\",\n    \"coat on hook | hanging stationary | hanging stationary | never contacted by man, no displacement during turn or walk\"\n  ],\n  \"findings\": []\n}"
+}

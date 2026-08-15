@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:55:09.095Z",
+  "latencyMs": 3851,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 4607,
+    "total_tokens": 11260,
+    "cost": 0.040948,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.040948,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.027642
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4210,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer right arm | low at side, slightly out at 00:00 | held overhead in curved high position at 00:09 | raises to side (00:01), overhead (00:02-00:03), lowers through bent position (00:04) to low (00:05), re-extends to side (00:06), overhead (00:07-00:09); continuous port de bras, no dissolved or skipped motions",
+    "mirror reflection of dancer | matches real pose (arm low) at 00:00 | matches real pose (arm high, leg extended) at 00:09 | every arm transition (00:01, 00:02, 00:03, 00:04, 00:05, 00:06, 00:07, 00:08, 00:09) appears in the reflection in the same sampled frame as the real dancer; simultaneous within frame resolution, order and delay plausible",
+    "dancer legs/feet | both feet flat, neutral stance at 00:00 | right leg extended to side with pointed foot at 00:09 | gradual stance/weight shift 00:05-00:06, leg extension completed by 00:09; reflection shows matching pointed foot and weight-bearing leg",
+    "environment (doors, exit signs, ceiling lights, barre, blue bin) | static at 00:00 | static at 00:09 | no state changes observed; no causal events required"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer right arm | low at side, slightly out at 00:00 | held overhead in curved high position at 00:09 | raises to side (00:01), overhead (00:02-00:03), lowers through bent position (00:04) to low (00:05), re-extends to side (00:06), overhead (00:07-00:09); continuous port de bras, no dissolved or skipped motions\",\n    \"mirror reflection of dancer | matches real pose (arm low) at 00:00 | matches real pose (arm high, leg extended) at 00:09 | every arm transition (00:01, 00:02, 00:03, 00:04, 00:05, 00:06, 00:07, 00:08, 00:09) appears in the reflection in the same sampled frame as the real dancer; simultaneous within frame resolution, order and delay plausible\",\n    \"dancer legs/feet | both feet flat, neutral stance at 00:00 | right leg extended to side with pointed foot at 00:09 | gradual stance/weight shift 00:05-00:06, leg extension completed by 00:09; reflection shows matching pointed foot and weight-bearing leg\",\n    \"environment (doors, exit signs, ceiling lights, barre, blue bin) | static at 00:00 | static at 00:09 | no state changes observed; no causal events required\"\n  ],\n  \"findings\": []\n}"
+}

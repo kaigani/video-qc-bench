@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:18:16.342Z",
+  "latencyMs": 4067,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 936,
+    "total_tokens": 3867,
+    "cost": 0.00078474,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00078474,
+      "upstream_inference_prompt_cost": 0.00041034,
+      "upstream_inference_completions_cost": 0.0003744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 773,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skate bowl | curved concrete surface | curved concrete surface | constant",
+    "light poles | distributed vertical elements in background | distributed vertical elements in background | constant",
+    "tree line | dense greenery bordering park | dense greenery bordering park | constant",
+    "skateboarder | moving entity navigating surfaces | moving entity navigating surfaces | continuous motion through bowl"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skate bowl | curved concrete surface | curved concrete surface | constant\",\n    \"light poles | distributed vertical elements in background | distributed vertical elements in background | constant\",\n    \"tree line | dense greenery bordering park | dense greenery bordering park | constant\",\n    \"skateboarder | moving entity navigating surfaces | moving entity navigating surfaces | continuous motion through bowl\"\n  ],\n  \"findings\": []\n}"
+}

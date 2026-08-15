@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:29:18.588Z",
+  "latencyMs": 7312,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1458,
+    "total_tokens": 2884,
+    "cost": 0.020348,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020348,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.017496
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1281,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Car | stationary station wagon, facing left | same | continuous",
+    "Woman | upper body visible, arms crossed | same | continuous",
+    "Road | behind car to the left, stretches into distance | same | perspective shifts with camera pan"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and Car",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "The woman's torso is physically fused with the solid geometry of the car's hood and windshield, emerging from the solid surface rather than through an open window or door.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Car | stationary station wagon, facing left | same | continuous\",\n    \"Woman | upper body visible, arms crossed | same | continuous\",\n    \"Road | behind car to the left, stretches into distance | same | perspective shifts with camera pan\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and Car\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"The woman's torso is physically fused with the solid geometry of the car's hood and windshield, emerging from the solid surface rather than through an open window or door.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

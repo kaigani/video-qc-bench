@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:11:30.563Z",
+  "latencyMs": 4053,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 9424,
+    "total_tokens": 16083,
+    "cost": 0.069862,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.069862,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.056544
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9172,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "gilded-frame mirror | fixed, right of frame, viewed obliquely from behind subject | same | static; frame edges and oblique perspective consistent all shots",
+    "open wooden door w/ brass knob (reflected) | in mirror, left of reflected man | same | static position, hinge/knob side unchanged",
+    "light-switch plate on beige wall (reflected) | left of reflected head | same | static",
+    "shelf unit with bottles (reflected) | right edge of mirror view | same | static, item placement unchanged",
+    "man, foreground (back to camera) | left foreground, right hand raised shaving jaw | left foreground, shaving jaw/chin | raises hand to brow/hair ~00:02-00:04, returns to shaving; stays between camera and mirror",
+    "man's mirror reflection | pose mirrors foreground on same world-side (hand/razor same image side), occluded by foreground shoulder at left | same | tracks foreground through shave/hair-comb cycle; forearm emerges from below mirror edge correctly"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"gilded-frame mirror | fixed, right of frame, viewed obliquely from behind subject | same | static; frame edges and oblique perspective consistent all shots\",\n    \"open wooden door w/ brass knob (reflected) | in mirror, left of reflected man | same | static position, hinge/knob side unchanged\",\n    \"light-switch plate on beige wall (reflected) | left of reflected head | same | static\",\n    \"shelf unit with bottles (reflected) | right edge of mirror view | same | static, item placement unchanged\",\n    \"man, foreground (back to camera) | left foreground, right hand raised shaving jaw | left foreground, shaving jaw/chin | raises hand to brow/hair ~00:02-00:04, returns to shaving; stays between camera and mirror\",\n    \"man's mirror reflection | pose mirrors foreground on same world-side (hand/razor same image side), occluded by foreground shoulder at left | same | tracks foreground through shave/hair-comb cycle; forearm emerges from below mirror edge correctly\"\n  ],\n  \"findings\": []\n}"
+}

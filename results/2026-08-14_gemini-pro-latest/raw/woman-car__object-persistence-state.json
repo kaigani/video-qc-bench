@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:29:28.701Z",
+  "latencyMs": 9265,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 3470,
+    "total_tokens": 4914,
+    "cost": 0.044528,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.044528,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.04164
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3192,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car | Escher-like station wagon, front hood merges into driver's side door | unchanged structurally | none",
+    "driver's side windshield wiper | base at center cowl, blade points right towards woman | base on flat surface near woman's elbow, blade points left | spontaneous change in base location and blade orientation",
+    "passenger side windshield wiper | base at far left, points towards center | off-screen | none",
+    "antenna | thin straight rod on left side of hood | thin straight rod | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "driver's side windshield wiper",
+      "invariant_violated": "location & orientation",
+      "description": "The windshield wiper on the right side of the car spontaneously relocates its base and flips its direction. Initially, the base is near the center of the windshield cowl and the blade points to the right, towards the woman. As the camera zooms in, the base appears on the flat hood surface near her elbow, and the blade points to the left, in the opposite direction.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"car | Escher-like station wagon, front hood merges into driver's side door | unchanged structurally | none\",\n    \"driver's side windshield wiper | base at center cowl, blade points right towards woman | base on flat surface near woman's elbow, blade points left | spontaneous change in base location and blade orientation\",\n    \"passenger side windshield wiper | base at far left, points towards center | off-screen | none\",\n    \"antenna | thin straight rod on left side of hood | thin straight rod | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"driver's side windshield wiper\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The windshield wiper on the right side of the car spontaneously relocates its base and flips its direction. Initially, the base is near the center of the windshield cowl and the blade points to the right, towards the woman. As the camera zooms in, the base appears on the flat hood surface near her elbow, and the blade points to the left, in the opposite direction.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

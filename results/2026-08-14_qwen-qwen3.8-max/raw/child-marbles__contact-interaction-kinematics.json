@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:47:23.155Z",
+  "latencyMs": 8345,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 2929,
+    "total_tokens": 9598,
+    "cost": 0.030912,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.030912,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.017574
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2540,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child right hand | airborne above bowl, empty, motion-blurred at 0:00 | inside bowl stirring balls, fingers in contact with balls at 0:09 | contacts and lifts red ball ~0:01, two-hand hold 0:01-0:02, releases ball into bowl by 0:03, re-enters bowl and makes continuous ball contact 0:04-0:09",
+    "child left hand | airborne, no contact at 0:00 | hooked over bowl rim, fingertips pressing rim at 0:09 | fingertips touch held red ball 0:01-0:02, hovers near rim 0:03, establishes rim contact ~0:04 and maintains stabilizing grip through 0:09",
+    "held red ball | resting among balls in bowl at 0:00 | resting in bowl under stirring hand at 0:09 | gripped with visible finger wrap 0:01, lifted above rim 0:02 only while gripped, released and settled back in bowl by 0:03",
+    "glass bowl | stationary on table, no hand contact at 0:00 | stationary on table, rim gripped by left hand at 0:09 | rim contact established ~0:04; bowl never displaces despite internal stirring 0:06-0:09",
+    "ball cluster in bowl | at rest at bowl bottom 0:00 | in motion, blurred, colliding with hand 0:06-0:09 | remain at rest until hand contact; motion only coincides with hand-ball contact during stirring"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child right hand | airborne above bowl, empty, motion-blurred at 0:00 | inside bowl stirring balls, fingers in contact with balls at 0:09 | contacts and lifts red ball ~0:01, two-hand hold 0:01-0:02, releases ball into bowl by 0:03, re-enters bowl and makes continuous ball contact 0:04-0:09\",\n    \"child left hand | airborne, no contact at 0:00 | hooked over bowl rim, fingertips pressing rim at 0:09 | fingertips touch held red ball 0:01-0:02, hovers near rim 0:03, establishes rim contact ~0:04 and maintains stabilizing grip through 0:09\",\n    \"held red ball | resting among balls in bowl at 0:00 | resting in bowl under stirring hand at 0:09 | gripped with visible finger wrap 0:01, lifted above rim 0:02 only while gripped, released and settled back in bowl by 0:03\",\n    \"glass bowl | stationary on table, no hand contact at 0:00 | stationary on table, rim gripped by left hand at 0:09 | rim contact established ~0:04; bowl never displaces despite internal stirring 0:06-0:09\",\n    \"ball cluster in bowl | at rest at bowl bottom 0:00 | in motion, blurred, colliding with hand 0:06-0:09 | remain at rest until hand contact; motion only coincides with hand-ball contact during stirring\"\n  ],\n  \"findings\": []\n}"
+}

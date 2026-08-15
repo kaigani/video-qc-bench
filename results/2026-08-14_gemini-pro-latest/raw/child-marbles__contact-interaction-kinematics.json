@@ -1,0 +1,65 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:10.908Z",
+  "latencyMs": 5806,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 922,
+    "total_tokens": 2374,
+    "cost": 0.013968,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013968,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.011064
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 534,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands | reaching into bowl | swirling balls inside bowl | grips red ball, then fingers clip through multiple balls while swirling",
+    "colored balls | solid spheres in bowl | morphing and clipping | initially solid, then clip through each other and the child's hand",
+    "glass bowl | resting on table | resting on table | child's left hand touches rim, fingers occasionally clip through rim"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "child's left hand and colored balls",
+      "invariant_violated": "solidity",
+      "description": "As the child's left hand reaches into the bowl, the fingers pass directly through the solid structure of the red and green balls.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "child's left hand and colored balls",
+      "invariant_violated": "solidity",
+      "description": "While swirling the balls, the fingers of the child's left hand are completely submerged inside the volume of the solid balls without displacing them.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "colored balls",
+      "invariant_violated": "solidity",
+      "description": "During the swirling motion, the colored balls clip through each other and morph together, losing their solid spherical form.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands | reaching into bowl | swirling balls inside bowl | grips red ball, then fingers clip through multiple balls while swirling\",\n    \"colored balls | solid spheres in bowl | morphing and clipping | initially solid, then clip through each other and the child's hand\",\n    \"glass bowl | resting on table | resting on table | child's left hand touches rim, fingers occasionally clip through rim\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"child's left hand and colored balls\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the child's left hand reaches into the bowl, the fingers pass directly through the solid structure of the red and green balls.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"child's left hand and colored balls\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"While swirling the balls, the fingers of the child's left hand are completely submerged inside the volume of the solid balls without displacing them.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"colored balls\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"During the swirling motion, the colored balls clip through each other and morph together, losing their solid spherical form.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

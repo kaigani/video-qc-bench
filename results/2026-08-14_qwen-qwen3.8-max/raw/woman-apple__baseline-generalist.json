@@ -1,0 +1,99 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:26:45.240Z",
+  "latencyMs": 6228,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 7566,
+    "total_tokens": 14036,
+    "cost": 0.058336,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.058336,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.045396
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6437,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Protagonist woman | navy cardigan, gray shorts, watch on left wrist, ponytail, red apple in right hand, umbrella in left | same attire at end; seen from behind at 00:09 gripping umbrella with left hand; apple no longer visible | walk toward camera transitions to profile then back view",
+    "Blue umbrella | open, canopy overhead, shaft gripped at chest by left hand | gripped again at 00:09 | between 00:06-00:08 no hand clearly grips shaft; shaft jumps from in front of face to behind head and back",
+    "Red apple | bright red, held in right hand both hands nearby | at 00:08 the held object renders white/pale; at 00:09 absent | color change and disappearance with no put-down or eating action",
+    "Produce stalls | tomatoes, limes, oranges, apples in crates | same layout | teal/blue round fruit appears in crates at 00:04-00:06 and 00:08",
+    "Background pedestrians | woman in red polo and man in green tee walking toward camera | exit frame consistently | no notable inconsistency"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "blue umbrella",
+      "invariant_violated": "object support / gravity",
+      "description": "From 00:06 to 00:08 both of the woman's hands are occupied with the apple (right hand open beside it) and no hand contacts the shaft; at 00:07 the shaft ends in mid-air at chin height with a black tip while the canopy stays perfectly stable overhead, i.e. the umbrella is effectively floating.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "umbrella shaft",
+      "invariant_violated": "spatial continuity",
+      "description": "The shaft passes in front of the woman's face at 00:04-00:05, is behind her head/shoulder at 00:06 with no arm or body movement to explain the jump, and is in front again at 00:07.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "object identity / color consistency",
+      "description": "The held object is consistently a red apple from 00:00-00:07, but at 00:08 it renders as a white/pale object in her clasped hands, and by 00:09 the apple is gone entirely with no action of putting it down, eating it, or handing it off.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "produce crates",
+      "invariant_violated": "real-world plausibility",
+      "description": "Crates of teal/blue round fruit appear at the left stall at 00:04-00:06 and again on the right at 00:08; no naturally teal or blue apples/tomatoes exist, indicating hallucinated produce coloration.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "hanging price sign",
+      "invariant_violated": "text legibility",
+      "description": "The white sign at top left shows a '6' surrounded by nonsensical garbled glyphs that form no real word, a typical generated-text artifact, visible through 00:02.",
+      "severity": "minor",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "protagonist face",
+      "invariant_violated": "anatomy / artifact-free render",
+      "description": "A thin white horizontal spike protrudes from the bridge of the woman's nose at 00:07, an anatomically impossible artifact lasting about one frame.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "background man in blue shirt",
+      "invariant_violated": "facial anatomy consistency",
+      "description": "The passing man's glasses are warped and melt into his face; the frame and temple do not connect to his ear, appearing as a smeared rendering artifact.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Protagonist woman | navy cardigan, gray shorts, watch on left wrist, ponytail, red apple in right hand, umbrella in left | same attire at end; seen from behind at 00:09 gripping umbrella with left hand; apple no longer visible | walk toward camera transitions to profile then back view\",\n    \"Blue umbrella | open, canopy overhead, shaft gripped at chest by left hand | gripped again at 00:09 | between 00:06-00:08 no hand clearly grips shaft; shaft jumps from in front of face to behind head and back\",\n    \"Red apple | bright red, held in right hand both hands nearby | at 00:08 the held object renders white/pale; at 00:09 absent | color change and disappearance with no put-down or eating action\",\n    \"Produce stalls | tomatoes, limes, oranges, apples in crates | same layout | teal/blue round fruit appears in crates at 00:04-00:06 and 00:08\",\n    \"Background pedestrians | woman in red polo and man in green tee walking toward camera | exit frame consistently | no notable inconsistency\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"blue umbrella\",\n      \"invariant_violated\": \"object support / gravity\",\n      \"description\": \"From 00:06 to 00:08 both of the woman's hands are occupied with the apple (right hand open beside it) and no hand contacts the shaft; at 00:07 the shaft ends in mid-air at chin height with a black tip while the canopy stays perfectly stable overhead, i.e. the umbrella is effectively floating.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"umbrella shaft\",\n      \"invariant_violated\": \"spatial continuity\",\n      \"description\": \"The shaft passes in front of the woman's face at 00:04-00:05, is behind her head/shoulder at 00:06 with no arm or body movement to explain the jump, and is in front again at 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"object identity / color consistency\",\n      \"description\": \"The held object is consistently a red apple from 00:00-00:07, but at 00:08 it renders as a white/pale object in her clasped hands, and by 00:09 the apple is gone entirely with no action of putting it down, eating it, or handing it off.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"produce crates\",\n      \"invariant_violated\": \"real-world plausibility\",\n      \"description\": \"Crates of teal/blue round fruit appear at the left stall at 00:04-00:06 and again on the right at 00:08; no naturally teal or blue apples/tomatoes exist, indicating hallucinated produce coloration.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"hanging price sign\",\n      \"invariant_violated\": \"text legibility\",\n      \"description\": \"The white sign at top left shows a '6' surrounded by nonsensical garbled glyphs that form no real word, a typical generated-text artifact, visible through 00:02.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"protagonist face\",\n      \"invariant_violated\": \"anatomy / artifact-free render\",\n      \"description\": \"A thin white horizontal spike protrudes from the bridge of the woman's nose at 00:07, an anatomically impossible artifact lasting about one frame.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"background man in blue shirt\",\n      \"invariant_violated\": \"facial anatomy consistency\",\n      \"description\": \"The passing man's glasses are warped and melt into his face; the frame and temple do not connect to his ear, appearing as a smeared rendering artifact.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

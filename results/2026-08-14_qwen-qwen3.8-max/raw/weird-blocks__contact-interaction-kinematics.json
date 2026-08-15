@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:52:38.565Z",
+  "latencyMs": 4445,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 6123,
+    "total_tokens": 12792,
+    "cost": 0.050076,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.050076,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.036738
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5696,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | pinch grip on slot-1 block at 0:00, thumb and fingers visibly wrapped on opposing faces | at 0:09 index finger on slot-1 top stud, thumb on slot-2 top edge | sequential placements slots 1-8; each grip established before the block moves, released only after block settles on table; trajectory continuous, consistent handedness",
+    "Slot-1 block | in hand contact, resting on table | resting on table, re-contacted at 0:09 | hand contact 0:00-0:01, released, re-gripped 0:09",
+    "Slot-2 block | arrives within hand grip by 0:01 | resting, table-supported | hand contact until ~0:02, then supported by table",
+    "Slot-3 block | arrives within hand grip at 0:02 | resting | released ~0:03; brief settling wobble after release while hand moves to next slot",
+    "Slot-4 block | arrives within hand grip at 0:03 | resting | released ~0:04; residual settle motion after release, physically plausible",
+    "Slot-5 block | arrives within hand grip at 0:04 | resting | released ~0:05",
+    "Slot-6 block | arrives within hand grip at 0:05 | resting | released ~0:06",
+    "Slot-7 block | arrives within hand grip at 0:06 | resting | released ~0:07",
+    "Slot-8 block | arrives within hand grip at 0:07 | resting | light fingertip contact until ~0:08, then released",
+    "Table | bottom faces of all resting blocks in contact throughout | same | tilted blocks always simultaneously held by hand; no floating or unsupported lean observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | pinch grip on slot-1 block at 0:00, thumb and fingers visibly wrapped on opposing faces | at 0:09 index finger on slot-1 top stud, thumb on slot-2 top edge | sequential placements slots 1-8; each grip established before the block moves, released only after block settles on table; trajectory continuous, consistent handedness\",\n    \"Slot-1 block | in hand contact, resting on table | resting on table, re-contacted at 0:09 | hand contact 0:00-0:01, released, re-gripped 0:09\",\n    \"Slot-2 block | arrives within hand grip by 0:01 | resting, table-supported | hand contact until ~0:02, then supported by table\",\n    \"Slot-3 block | arrives within hand grip at 0:02 | resting | released ~0:03; brief settling wobble after release while hand moves to next slot\",\n    \"Slot-4 block | arrives within hand grip at 0:03 | resting | released ~0:04; residual settle motion after release, physically plausible\",\n    \"Slot-5 block | arrives within hand grip at 0:04 | resting | released ~0:05\",\n    \"Slot-6 block | arrives within hand grip at 0:05 | resting | released ~0:06\",\n    \"Slot-7 block | arrives within hand grip at 0:06 | resting | released ~0:07\",\n    \"Slot-8 block | arrives within hand grip at 0:07 | resting | light fingertip contact until ~0:08, then released\",\n    \"Table | bottom faces of all resting blocks in contact throughout | same | tilted blocks always simultaneously held by hand; no floating or unsupported lean observed\"\n  ],\n  \"findings\": []\n}"
+}

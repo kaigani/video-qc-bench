@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:19:25.040Z",
+  "latencyMs": 4600,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 2057,
+    "total_tokens": 8710,
+    "cost": 0.025648,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025648,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.012342
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1737,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | crouched, rolling, weight preloading (0.2s) | landing second trick on ramp transition, absorbing impact (9.2s) | pops at ~1s, airborne 2-3s with corrective arm swings, lands ~4s, rolls and pumps, second pop ~7.5s, airborne 8-9s, lands ~9s; all body reactions follow board/ground events",
+    "skateboard | flat on ground under feet (0.2s) | back under feet at landing (9.2s) | tail pop causes tilt/liftoff (1.2s), flick causes mid-air flip (2.2s), board levels for catch (3.2s), ground contact at landing (4.2s); second flick causes flip (8.2s), contact at landing (9.2s)",
+    "shadow | grounded silhouette matching skater+board (0.2s) | grounded silhouette at landing (9.2s) | shadow detaches/softens only while skater is airborne (2-3s, 8-9s) and re-grounds at each landing, matching height changes",
+    "camera | low fisheye tracking subject | low fisheye tracking subject | continuous follow motion within shots; viewpoint shifts coincide with cuts; no frozen frames, repeated beats, or motion dissolves detected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skater | crouched, rolling, weight preloading (0.2s) | landing second trick on ramp transition, absorbing impact (9.2s) | pops at ~1s, airborne 2-3s with corrective arm swings, lands ~4s, rolls and pumps, second pop ~7.5s, airborne 8-9s, lands ~9s; all body reactions follow board/ground events\",\n    \"skateboard | flat on ground under feet (0.2s) | back under feet at landing (9.2s) | tail pop causes tilt/liftoff (1.2s), flick causes mid-air flip (2.2s), board levels for catch (3.2s), ground contact at landing (4.2s); second flick causes flip (8.2s), contact at landing (9.2s)\",\n    \"shadow | grounded silhouette matching skater+board (0.2s) | grounded silhouette at landing (9.2s) | shadow detaches/softens only while skater is airborne (2-3s, 8-9s) and re-grounds at each landing, matching height changes\",\n    \"camera | low fisheye tracking subject | low fisheye tracking subject | continuous follow motion within shots; viewpoint shifts coincide with cuts; no frozen frames, repeated beats, or motion dissolves detected\"\n  ],\n  \"findings\": []\n}"
+}

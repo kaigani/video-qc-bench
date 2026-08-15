@@ -1,0 +1,57 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:24.557Z",
+  "latencyMs": 3841,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 3216,
+    "total_tokens": 4660,
+    "cost": 0.04148,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04148,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.038592
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2909,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Blue jacket | hanging on hook left of doors | hanging on hook right of doors next to picture | teleports across room between cuts",
+    "Framed picture | hanging on wall right of doors | hanging on wall right of doors | none",
+    "Brass plate | attached to wall left of picture | disappears | vanishes between cuts"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Blue jacket",
+      "invariant_violated": "location & orientation",
+      "description": "In the first shot, the blue jacket is hanging on a hook to the left of the wooden doors. After the camera cut, the jacket is suddenly hanging on a different hook on the right side of the room, immediately next to the framed picture.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Brass plate",
+      "invariant_violated": "identity & persistence",
+      "description": "The small brass plate that was on the wall to the left of the framed picture in the first shot vanishes completely after the cut, with its approximate location now occupied by the blue jacket.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Blue jacket | hanging on hook left of doors | hanging on hook right of doors next to picture | teleports across room between cuts\",\n    \"Framed picture | hanging on wall right of doors | hanging on wall right of doors | none\",\n    \"Brass plate | attached to wall left of picture | disappears | vanishes between cuts\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Blue jacket\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"In the first shot, the blue jacket is hanging on a hook to the left of the wooden doors. After the camera cut, the jacket is suddenly hanging on a different hook on the right side of the room, immediately next to the framed picture.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Brass plate\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The small brass plate that was on the wall to the left of the framed picture in the first shot vanishes completely after the cut, with its approximate location now occupied by the blue jacket.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

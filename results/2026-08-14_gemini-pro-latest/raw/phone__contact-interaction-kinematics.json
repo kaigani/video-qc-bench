@@ -1,0 +1,49 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:35.838Z",
+  "latencyMs": 5307,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1263,
+    "total_tokens": 2715,
+    "cost": 0.01806,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01806,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.015156
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1070,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left hand | Gripping left side of smartphone | Gripping left side of smartphone | No notable transitions",
+    "Right hand | Gripping right side of smartphone | Tapping screen and gripping | Right thumb clips through the edge of the phone during tapping",
+    "Background person | Walking down stairs holding red bag | Continues walking | No notable transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Right thumb and smartphone",
+      "invariant_violated": "Solidity",
+      "description": "As the right thumb moves to tap the bottom right portion of the screen, the thumb appears to clip through the solid black edge/bezel of the smartphone.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left hand | Gripping left side of smartphone | Gripping left side of smartphone | No notable transitions\",\n    \"Right hand | Gripping right side of smartphone | Tapping screen and gripping | Right thumb clips through the edge of the phone during tapping\",\n    \"Background person | Walking down stairs holding red bag | Continues walking | No notable transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Right thumb and smartphone\",\n      \"invariant_violated\": \"Solidity\",\n      \"description\": \"As the right thumb moves to tap the bottom right portion of the screen, the thumb appears to clip through the solid black edge/bezel of the smartphone.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:11:36.521Z",
+  "latencyMs": 10932,
+  "usage": {
+    "prompt_tokens": 2952,
+    "completion_tokens": 697,
+    "total_tokens": 3649,
+    "cost": 0.002911,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002911,
+      "upstream_inference_prompt_cost": 0.002214,
+      "upstream_inference_completions_cost": 0.000697
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 558,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "coat | blue, hanging on hook | blue, hanging on hook | none",
+    "picture frame | wall-mounted, right | wall-mounted, right | none",
+    "wall box | wall-mounted, small, beige/brown | wall-mounted, small, beige/brown | none",
+    "clock/dial | top left door | top left door | none",
+    "door | wooden, closed | wooden, closed | none",
+    "light switches | bottom left wall | bottom left wall | none"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"coat | blue, hanging on hook | blue, hanging on hook | none\",\n    \"picture frame | wall-mounted, right | wall-mounted, right | none\",\n    \"wall box | wall-mounted, small, beige/brown | wall-mounted, small, beige/brown | none\",\n    \"clock/dial | top left door | top left door | none\",\n    \"door | wooden, closed | wooden, closed | none\",\n    \"light switches | bottom left wall | bottom left wall | none\"\n  ],\n  \"findings\": []\n}\n```"
+}

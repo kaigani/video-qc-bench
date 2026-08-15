@@ -1,0 +1,51 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:22.598Z",
+  "latencyMs": 6999,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1869,
+    "total_tokens": 3295,
+    "cost": 0.02528,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02528,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.022428
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1614,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table | wooden surface with horizontal grain | unchanged | none",
+    "glass bowl | clear, resting on table center | unchanged | none",
+    "colored balls | distinct colors inside bowl | mixed rapidly by hands | none",
+    "background environment | paving stones meeting a bare dirt/grass edge | paving stones leading to a row of terracotta pots | completely replaced at camera cut",
+    "small object | resting on table to the right | remains in similar position | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "background environment",
+      "invariant_violated": "scene layout",
+      "description": "In the initial shot, the background visible beyond the paving stones is a flat edge of dirt or grass. After the cut to a wider angle at 00:00, the background layout changes entirely, revealing a row of large terracotta pots lined up on a ledge or step that should have been visible in the geometry of the first shot.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"table | wooden surface with horizontal grain | unchanged | none\",\n    \"glass bowl | clear, resting on table center | unchanged | none\",\n    \"colored balls | distinct colors inside bowl | mixed rapidly by hands | none\",\n    \"background environment | paving stones meeting a bare dirt/grass edge | paving stones leading to a row of terracotta pots | completely replaced at camera cut\",\n    \"small object | resting on table to the right | remains in similar position | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"background environment\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"In the initial shot, the background visible beyond the paving stones is a flat edge of dirt or grass. After the cut to a wider angle at 00:00, the background layout changes entirely, revealing a row of large terracotta pots lined up on a ledge or step that should have been visible in the geometry of the first shot.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

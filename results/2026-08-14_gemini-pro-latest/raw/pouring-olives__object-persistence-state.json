@@ -1,0 +1,67 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:26:03.690Z",
+  "latencyMs": 4714,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2747,
+    "total_tokens": 4191,
+    "cost": 0.035852,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.035852,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.032964
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2276,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large_glass_jar | empty on cutting board | partially filled with mixed green/black olives | fill level abruptly drops between scenes",
+    "small_glass_jar_1 | full of green olives, held | empty | olives change color as they fall out",
+    "small_glass_jar_2 | full of green olives, held | empty | olives change color as they fall out",
+    "background_bowl_middle | full of green olives | mostly empty with debris | contents change completely across cut",
+    "small_glass_vial | absent | sitting on counter next to middle bowl | pops into existence across cut"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "poured olives (first pour)",
+      "invariant_violated": "identity",
+      "description": "The olives in the small jar are uniformly green. As they are poured and fall through the air into the large jar, many of them instantly transform into black/dark purple olives.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "olives in large jar",
+      "invariant_violated": "persistence",
+      "description": "Across a cut, the volume of olives in the large jar abruptly decreases. The jar goes from being approximately half full at 00:03 to noticeably less full at 00:05, with no visible action of removal.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "poured olives (second pour)",
+      "invariant_violated": "identity",
+      "description": "During the second pour, the olives inside the small jar are again exclusively green, but transform into a mix of green and black olives as they fall into the large jar.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large_glass_jar | empty on cutting board | partially filled with mixed green/black olives | fill level abruptly drops between scenes\",\n    \"small_glass_jar_1 | full of green olives, held | empty | olives change color as they fall out\",\n    \"small_glass_jar_2 | full of green olives, held | empty | olives change color as they fall out\",\n    \"background_bowl_middle | full of green olives | mostly empty with debris | contents change completely across cut\",\n    \"small_glass_vial | absent | sitting on counter next to middle bowl | pops into existence across cut\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"poured olives (first pour)\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"The olives in the small jar are uniformly green. As they are poured and fall through the air into the large jar, many of them instantly transform into black/dark purple olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"olives in large jar\",\n      \"invariant_violated\": \"persistence\",\n      \"description\": \"Across a cut, the volume of olives in the large jar abruptly decreases. The jar goes from being approximately half full at 00:03 to noticeably less full at 00:05, with no visible action of removal.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"poured olives (second pour)\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"During the second pour, the olives inside the small jar are again exclusively green, but transform into a mix of green and black olives as they fall into the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

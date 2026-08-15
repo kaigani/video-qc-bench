@@ -1,0 +1,56 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:53.317Z",
+  "latencyMs": 4246,
+  "usage": {
+    "prompt_tokens": 1239,
+    "completion_tokens": 1576,
+    "total_tokens": 2815,
+    "cost": 0.00683925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00683925,
+      "upstream_inference_prompt_cost": 0.00092925,
+      "upstream_inference_completions_cost": 0.00591
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1340,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person in background | blue shirt, jeans, holding red container | walking away empty-handed | red container vanishes from hand around 00:01",
+    "smartphone screen | displaying clear text 'A742' | display warped with shifting text | UI elements morph unnaturally from 00:03 to 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red container in background",
+      "invariant_violated": "object_disappearance",
+      "description": "The red bag/container held by the person walking in the background abruptly disappears from their right hand between 00:01 and 00:02.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "smartphone screen text",
+      "invariant_violated": "text_morphing",
+      "description": "The digital text and UI elements on the phone screen warp, morph, and generate random symbols ('Ā742', 'AZ-12', 'x2') unnaturally, indicating AI generation artifacting.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person in background | blue shirt, jeans, holding red container | walking away empty-handed | red container vanishes from hand around 00:01\",\n    \"smartphone screen | displaying clear text 'A742' | display warped with shifting text | UI elements morph unnaturally from 00:03 to 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"red container in background\",\n      \"invariant_violated\": \"object_disappearance\",\n      \"description\": \"The red bag/container held by the person walking in the background abruptly disappears from their right hand between 00:01 and 00:02.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"smartphone screen text\",\n      \"invariant_violated\": \"text_morphing\",\n      \"description\": \"The digital text and UI elements on the phone screen warp, morph, and generate random symbols ('Ā742', 'AZ-12', 'x2') unnaturally, indicating AI generation artifacting.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

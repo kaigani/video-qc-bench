@@ -1,0 +1,56 @@
+{
+  "key": "phone__character-continuity",
+  "video": "phone.mp4",
+  "role": "character-continuity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:28.768Z",
+  "latencyMs": 4006,
+  "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 2371,
+    "total_tokens": 3795,
+    "cost": 0.0313,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0313,
+      "upstream_inference_prompt_cost": 0.002848,
+      "upstream_inference_completions_cost": 0.028452
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2081,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person holding phone | Hands with thumbs resting on phone edges | Hands holding phone, right thumb tapping screen | None",
+    "Background person | Blue short-sleeve shirt, blue pants, carrying a red accessory | Blue short-sleeve shirt, blue pants, empty hands | Red accessory disappears, unnatural jump in position"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Background person",
+      "invariant_violated": "Identity (accessories)",
+      "description": "The person walking away in the background is initially carrying a large red accessory in their left hand. As they move onto the flat path, the accessory vanishes entirely from their hands without being dropped.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Background person",
+      "invariant_violated": "Movement continuity",
+      "description": "The background person transitions from being midway down the stairs to several feet away on the flat pavement in a fraction of a second, resulting in a sudden, impossible jump in position.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Person holding phone | Hands with thumbs resting on phone edges | Hands holding phone, right thumb tapping screen | None\",\n    \"Background person | Blue short-sleeve shirt, blue pants, carrying a red accessory | Blue short-sleeve shirt, blue pants, empty hands | Red accessory disappears, unnatural jump in position\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Background person\",\n      \"invariant_violated\": \"Identity (accessories)\",\n      \"description\": \"The person walking away in the background is initially carrying a large red accessory in their left hand. As they move onto the flat path, the accessory vanishes entirely from their hands without being dropped.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Background person\",\n      \"invariant_violated\": \"Movement continuity\",\n      \"description\": \"The background person transitions from being midway down the stairs to several feet away on the flat pavement in a fraction of a second, resulting in a sudden, impossible jump in position.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.90\n    }\n  ]\n}"
+}

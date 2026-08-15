@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:26.912Z",
+  "latencyMs": 3831,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 1967,
+    "total_tokens": 3394,
+    "cost": 0.0084465,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0084465,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.00737625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1817,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | centered on wooden cutting board in foreground | centered on wooden cutting board in foreground | remains stationary throughout shot",
+    "stainless steel stove | located in background behind cutting board | located in background behind cutting board | remains stationary in background",
+    "metal bowl with olives | located on counter to the right behind glass jar | located on counter to the right behind glass jar | remains stationary",
+    "ceramic bowl with olives | located on far right counter | located on far right counter | remains stationary",
+    "wooden cutting board | resting on counter top in foreground | resting on counter top in foreground | remains stationary"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | centered on wooden cutting board in foreground | centered on wooden cutting board in foreground | remains stationary throughout shot\",\n    \"stainless steel stove | located in background behind cutting board | located in background behind cutting board | remains stationary in background\",\n    \"metal bowl with olives | located on counter to the right behind glass jar | located on counter to the right behind glass jar | remains stationary\",\n    \"ceramic bowl with olives | located on far right counter | located on far right counter | remains stationary\",\n    \"wooden cutting board | resting on counter top in foreground | resting on counter top in foreground | remains stationary\"\n  ],\n  \"findings\": []\n}"
+}

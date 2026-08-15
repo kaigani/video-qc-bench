@@ -1,0 +1,57 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:02:21.866Z",
+  "latencyMs": 20671,
+  "usage": {
+    "prompt_tokens": 48505,
+    "completion_tokens": 12811,
+    "total_tokens": 61316,
+    "cost": 0.173876,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.173876,
+      "upstream_inference_prompt_cost": 0.09701,
+      "upstream_inference_completions_cost": 0.076866
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12012,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white box truck (tractor + trailer) | parked left of diner at night, idling with exhaust plume (0:00-0:10) | last seen 0:10, never shown departing | exhaust dissipates naturally; truck absent from all later shots",
+    "glass coffee carafe | held by waitress, ~half full of dark coffee (0:24-0:28) | lifted away after pour, level slightly lower (0:32) | pours into white mug 0:28-0:32; liquid level falls monotonically during pour, no un-poured rise",
+    "white ceramic mug (customer's) | empty on counter (0:28) | held by man at counter through later scenes | filled by visible pour 0:28-0:32; persists on counter/in hands afterwards",
+    "plate with thick toast + sunny-side-up egg | close-up 0:33, steaming, food whole/untouched | remains whole and untouched in front of man (0:37-0:44, 1:00-1:09); plate carried/placed/removed by waitress 1:10-1:17 | every position change is via a human hand; food never consumed",
+    "fork/knife/napkin | beside plate at 0:33 (right) and 0:37 (left, on napkin) | consistent given opposite camera side | no unexplained change",
+    "cleaning cloth | in waitress hand wiping counter (0:11-0:18, 0:45-0:51) | set down on counter between wipes | moves only via waitress",
+    "counter condiment caddies (napkin dispenser, shakers, sugar/canister sets) | two caddies on counter at start | same layout in all counter shots | static throughout",
+    "plate stacks on kitchen pass shelf | two stacks visible 0:45 | stacks present in later kitchen views | static",
+    "folded banknotes ($100s) | placed on counter by man's hands (1:38) | folded stack rests beside mug (1:40) | hands place and adjust stack; count stable once hands withdraw",
+    "dark green box truck | first visible parked outside window (1:41) | man walks out and boards it (1:42-1:50) | arrival never shown; appearance differs entirely from night truck",
+    "neon OPEN sign | lit at night (exterior and interior views) | lit in daylight shots | state constant (lit); no unexplained transition"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "parked semi truck",
+      "invariant_violated": "object identity / no uncaused transformation",
+      "description": "The truck parked outside at night (0:00-0:10) is a white tractor with a white box trailer; the truck the man walks to at sunrise (1:41-1:50) is a dark green tractor with a green trailer and white stripe. The narrative framing (driver arrives at night, leaves in morning) implies one persistent vehicle, yet no shot shows the white truck departing or a green truck arriving, so the parked truck's identity changes without any visible cause. Alternative explanation (two different trucks swapping during the night ellipsis) is possible but unseen.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white box truck (tractor + trailer) | parked left of diner at night, idling with exhaust plume (0:00-0:10) | last seen 0:10, never shown departing | exhaust dissipates naturally; truck absent from all later shots\",\n    \"glass coffee carafe | held by waitress, ~half full of dark coffee (0:24-0:28) | lifted away after pour, level slightly lower (0:32) | pours into white mug 0:28-0:32; liquid level falls monotonically during pour, no un-poured rise\",\n    \"white ceramic mug (customer's) | empty on counter (0:28) | held by man at counter through later scenes | filled by visible pour 0:28-0:32; persists on counter/in hands afterwards\",\n    \"plate with thick toast + sunny-side-up egg | close-up 0:33, steaming, food whole/untouched | remains whole and untouched in front of man (0:37-0:44, 1:00-1:09); plate carried/placed/removed by waitress 1:10-1:17 | every position change is via a human hand; food never consumed\",\n    \"fork/knife/napkin | beside plate at 0:33 (right) and 0:37 (left, on napkin) | consistent given opposite camera side | no unexplained change\",\n    \"cleaning cloth | in waitress hand wiping counter (0:11-0:18, 0:45-0:51) | set down on counter between wipes | moves only via waitress\",\n    \"counter condiment caddies (napkin dispenser, shakers, sugar/canister sets) | two caddies on counter at start | same layout in all counter shots | static throughout\",\n    \"plate stacks on kitchen pass shelf | two stacks visible 0:45 | stacks present in later kitchen views | static\",\n    \"folded banknotes ($100s) | placed on counter by man's hands (1:38) | folded stack rests beside mug (1:40) | hands place and adjust stack; count stable once hands withdraw\",\n    \"dark green box truck | first visible parked outside window (1:41) | man walks out and boards it (1:42-1:50) | arrival never shown; appearance differs entirely from night truck\",\n    \"neon OPEN sign | lit at night (exterior and interior views) | lit in daylight shots | state constant (lit); no unexplained transition\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"parked semi truck\",\n      \"invariant_violated\": \"object identity / no uncaused transformation\",\n      \"description\": \"The truck parked outside at night (0:00-0:10) is a white tractor with a white box trailer; the truck the man walks to at sunrise (1:41-1:50) is a dark green tractor with a green trailer and white stripe. The narrative framing (driver arrives at night, leaves in morning) implies one persistent vehicle, yet no shot shows the white truck departing or a green truck arriving, so the parked truck's identity changes without any visible cause. Alternative explanation (two different trucks swapping during the night ellipsis) is possible but unseen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

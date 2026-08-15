@@ -1,0 +1,52 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:17:29.190Z",
+  "latencyMs": 2371,
+  "usage": {
+    "prompt_tokens": 2949,
+    "completion_tokens": 2575,
+    "total_tokens": 5524,
+    "cost": 0.00144286,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00144286,
+      "upstream_inference_prompt_cost": 0.00041286,
+      "upstream_inference_completions_cost": 0.00103
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2128,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Glass Jar | on wooden board, empty | on wooden board, contains olives | empty -> contains olives (poured)",
+    "Small Bowl | held, contains green olives | held, contains green olives | quantity decrease (poured)",
+    "Bowl 1 | on counter, contains green olives | on counter, contains green olives | none",
+    "Bowl 2 | on counter, contains green olives | on counter, contains green olives | none",
+    "Green Olives | in bowls, whole | in jar/bowls, whole | bowl -> jar (poured)",
+    "Dark Olives | absent | in jar, whole | spontaneous appearance"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Dark Olives",
+      "invariant_violated": "identity & persistence",
+      "description": "Dark purple olives spontaneously appear in the glass jar while the person is pouring green olives from a bowl that contains only green olives.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Glass Jar | on wooden board, empty | on wooden board, contains olives | empty -> contains olives (poured)\",\n    \"Small Bowl | held, contains green olives | held, contains green olives | quantity decrease (poured)\",\n    \"Bowl 1 | on counter, contains green olives | on counter, contains green olives | none\",\n    \"Bowl 2 | on counter, contains green olives | on counter, contains green olives | none\",\n    \"Green Olives | in bowls, whole | in jar/bowls, whole | bowl -> jar (poured)\",\n    \"Dark Olives | absent | in jar, whole | spontaneous appearance\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Dark Olives\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Dark purple olives spontaneously appear in the glass jar while the person is pouring green olives from a bowl that contains only green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

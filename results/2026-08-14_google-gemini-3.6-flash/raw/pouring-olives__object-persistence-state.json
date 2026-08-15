@@ -1,0 +1,58 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:17.337Z",
+  "latencyMs": 5236,
+  "usage": {
+    "prompt_tokens": 1445,
+    "completion_tokens": 1705,
+    "total_tokens": 3150,
+    "cost": 0.0074775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0074775,
+      "upstream_inference_prompt_cost": 0.00108375,
+      "upstream_inference_completions_cost": 0.00639375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1392,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | transparent, empty on wooden cutting board | filled with green and dark purple olives | filled by pouring from small glass containers",
+    "Small glass container 1 | transparent glass held in hand, filled only with green olives | empty | poured into large jar at 00:01",
+    "Small glass container 2 | transparent glass held in hand, filled only with green olives | empty | poured into large jar at 00:07",
+    "Dark olives | absent in small glass containers | present inside large jar | spontaneously appeared in pour stream at 00:01 and 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives / small glass container 1",
+      "invariant_violated": "spontaneous generation",
+      "description": "The transparent glass cup contains exclusively bright green olives, but as it is poured into the jar, dark purple/black olives unexpectedly appear in the pouring stream and land in the jar.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives / small glass container 2",
+      "invariant_violated": "spontaneous generation",
+      "description": "The second transparent glass cup shows only green olives inside, but when poured, dark purple/black olives emerge from the container alongside green olives.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | transparent, empty on wooden cutting board | filled with green and dark purple olives | filled by pouring from small glass containers\",\n    \"Small glass container 1 | transparent glass held in hand, filled only with green olives | empty | poured into large jar at 00:01\",\n    \"Small glass container 2 | transparent glass held in hand, filled only with green olives | empty | poured into large jar at 00:07\",\n    \"Dark olives | absent in small glass containers | present inside large jar | spontaneously appeared in pour stream at 00:01 and 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives / small glass container 1\",\n      \"invariant_violated\": \"spontaneous generation\",\n      \"description\": \"The transparent glass cup contains exclusively bright green olives, but as it is poured into the jar, dark purple/black olives unexpectedly appear in the pouring stream and land in the jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives / small glass container 2\",\n      \"invariant_violated\": \"spontaneous generation\",\n      \"description\": \"The second transparent glass cup shows only green olives inside, but when poured, dark purple/black olives emerge from the container alongside green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

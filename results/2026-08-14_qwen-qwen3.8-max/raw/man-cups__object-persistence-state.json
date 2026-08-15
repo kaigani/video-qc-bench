@@ -1,0 +1,59 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:06:17.844Z",
+  "latencyMs": 5297,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 9126,
+    "total_tokens": 15794,
+    "cost": 0.068092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.068092,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.054756
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8544,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "4 red cups w/ steel interiors | diamond layout on center mat (top, right, middle, front-left), all upright | row/cluster of 4 cups at end | count reads only 3 during 00:04-00:05, then 4 again at 00:06",
+    "large gold token on middle cup | resting on rim of middle cup, gold face up | appears silver-faced at 00:03; gold token seen in middle cup at 00:04 | face/color change with no visible swap action",
+    "gold coin inside front-left cup | lying inside cup | removed by performer's hand 00:02-00:03 | normal visible pick-up",
+    "gold coin pinched in hand at 00:00 | held above table | later seen held/dangled at cup rims in various shots | transferred hand-to-cup across cuts; no impossible change isolated",
+    "loose mat tokens (gold/yellow coins) | scattered on mat center | scattered on mat at end | individual tokens shift/appear between camera angles; treated as background set"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "cup set / fourth cup",
+      "invariant_violated": "object persistence (count)",
+      "description": "Four cups occupy the mat from 00:00-00:03. At 00:04-00:05 only three cups remain on the fully visible mat and no hand is shown carrying or removing a cup; at 00:06 a fourth cup is present again in the row although no hand was ever seen placing an additional cup. The cup vanishes and reappears without any visible cause.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "token resting on middle cup",
+      "invariant_violated": "identity/state consistency",
+      "description": "The token covering the middle cup shows a gold face with dark emblem at 00:00-00:02 but reads silver-white at 00:03. During that interval neither hand contacted the middle cup (one hand lifted the coin from the front-left cup, the other picked up a loose mat coin), so the token's appearance changed with no visible swapping action.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"4 red cups w/ steel interiors | diamond layout on center mat (top, right, middle, front-left), all upright | row/cluster of 4 cups at end | count reads only 3 during 00:04-00:05, then 4 again at 00:06\",\n    \"large gold token on middle cup | resting on rim of middle cup, gold face up | appears silver-faced at 00:03; gold token seen in middle cup at 00:04 | face/color change with no visible swap action\",\n    \"gold coin inside front-left cup | lying inside cup | removed by performer's hand 00:02-00:03 | normal visible pick-up\",\n    \"gold coin pinched in hand at 00:00 | held above table | later seen held/dangled at cup rims in various shots | transferred hand-to-cup across cuts; no impossible change isolated\",\n    \"loose mat tokens (gold/yellow coins) | scattered on mat center | scattered on mat at end | individual tokens shift/appear between camera angles; treated as background set\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"cup set / fourth cup\",\n      \"invariant_violated\": \"object persistence (count)\",\n      \"description\": \"Four cups occupy the mat from 00:00-00:03. At 00:04-00:05 only three cups remain on the fully visible mat and no hand is shown carrying or removing a cup; at 00:06 a fourth cup is present again in the row although no hand was ever seen placing an additional cup. The cup vanishes and reappears without any visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"token resting on middle cup\",\n      \"invariant_violated\": \"identity/state consistency\",\n      \"description\": \"The token covering the middle cup shows a gold face with dark emblem at 00:00-00:02 but reads silver-white at 00:03. During that interval neither hand contacted the middle cup (one hand lifted the coin from the front-left cup, the other picked up a loose mat coin), so the token's appearance changed with no visible swapping action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:21:10.109Z",
+  "latencyMs": 21034,
+  "usage": {
+    "prompt_tokens": 10629,
+    "completion_tokens": 1827,
+    "total_tokens": 12456,
+    "cost": 0.043182,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.043182,
+      "upstream_inference_prompt_cost": 0.021258,
+      "upstream_inference_completions_cost": 0.021924
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1594,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | 00:10 wiping counter; grey hair bun, light blue polo, white apron, glasses on cord | 01:57 walking away to the right; same attire | A duplicate of her appears in the background in the final wide shot.",
+    "Trucker | 00:19 enters diner; grey hair, light beard, brown jacket, blue jeans | 01:45 walking to his truck outside; same attire | No unexplained transitions."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress",
+      "invariant_violated": "character duplication",
+      "description": "As the main waitress stands up and walks to the right to clear the counter, a second woman wearing the exact same uniform (blue polo, white apron) and hairstyle walks from right to left in the background kitchen area.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | 00:10 wiping counter; grey hair bun, light blue polo, white apron, glasses on cord | 01:57 walking away to the right; same attire | A duplicate of her appears in the background in the final wide shot.\",\n    \"Trucker | 00:19 enters diner; grey hair, light beard, brown jacket, blue jeans | 01:45 walking to his truck outside; same attire | No unexplained transitions.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"character duplication\",\n      \"description\": \"As the main waitress stands up and walks to the right to clear the counter, a second woman wearing the exact same uniform (blue polo, white apron) and hairstyle walks from right to left in the background kitchen area.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

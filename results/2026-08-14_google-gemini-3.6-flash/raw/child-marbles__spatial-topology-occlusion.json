@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:54:12.395Z",
+  "latencyMs": 4673,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1071,
+    "total_tokens": 2497,
+    "cost": 0.00508575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00508575,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00401625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 956,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | fixed surface in foreground | same relative position | stationary throughout sequence",
+    "glass bowl | centered on table in front of child | same relative position | fixed on table surface",
+    "potted plants and patio wall | background boundary along upper frame | same spatial alignment | background layout remains consistent across camera movements",
+    "child | positioned behind and to the left of glass bowl | same relative position | reaches into bowl from behind/left"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | fixed surface in foreground | same relative position | stationary throughout sequence\",\n    \"glass bowl | centered on table in front of child | same relative position | fixed on table surface\",\n    \"potted plants and patio wall | background boundary along upper frame | same spatial alignment | background layout remains consistent across camera movements\",\n    \"child | positioned behind and to the left of glass bowl | same relative position | reaches into bowl from behind/left\"\n  ],\n  \"findings\": []\n}"
+}

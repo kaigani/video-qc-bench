@@ -1,0 +1,57 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:30:10.120Z",
+  "latencyMs": 5729,
+  "usage": {
+    "prompt_tokens": 6620,
+    "completion_tokens": 6406,
+    "total_tokens": 13026,
+    "cost": 0.051676,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.051676,
+      "upstream_inference_prompt_cost": 0.01324,
+      "upstream_inference_completions_cost": 0.038436
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5942,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | denim jacket, arms crossed, leaning out front-left window, hair calm | same pose and jacket, hair blowing strongly backward | hair transitions from still to wind-blown around 00:05, implying the car began moving",
+    "station wagon | cream paint, woodgrain sides, roof rack, fender antenna, round hood ornament, front plate | same features where visible; camera orbits and pushes in | car goes from apparently stationary on shoulder to in motion on road",
+    "front license plate | white plate, red characters reading 'STEG7' at 00:00 | plate leaves frame after ~00:02 | final glyph appears to morph between '7' and '9' between the first two frames"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "front license plate",
+      "invariant_violated": "text/object consistency",
+      "description": "The last visible character of the red plate text changes shape between the 0.2s and 1.2s frames (reads as '7' then as '9') with identical plate framing and no occlusion, i.e. the printed glyphs are not stable frame to frame.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "woman / vehicle control",
+      "invariant_violated": "driving plausibility",
+      "description": "From ~00:05 the woman's hair streams backward indicating substantial relative airflow (vehicle moving at speed), yet she occupies the driver's position of a left-hand-drive car (steering wheel rim visible behind her on the car's left side) while leaning out the window with both arms crossed and no hands on the wheel; no other occupant is visible in a driving position, so a moving car is uncontrolled.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | denim jacket, arms crossed, leaning out front-left window, hair calm | same pose and jacket, hair blowing strongly backward | hair transitions from still to wind-blown around 00:05, implying the car began moving\",\n    \"station wagon | cream paint, woodgrain sides, roof rack, fender antenna, round hood ornament, front plate | same features where visible; camera orbits and pushes in | car goes from apparently stationary on shoulder to in motion on road\",\n    \"front license plate | white plate, red characters reading 'STEG7' at 00:00 | plate leaves frame after ~00:02 | final glyph appears to morph between '7' and '9' between the first two frames\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"front license plate\",\n      \"invariant_violated\": \"text/object consistency\",\n      \"description\": \"The last visible character of the red plate text changes shape between the 0.2s and 1.2s frames (reads as '7' then as '9') with identical plate framing and no occlusion, i.e. the printed glyphs are not stable frame to frame.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"woman / vehicle control\",\n      \"invariant_violated\": \"driving plausibility\",\n      \"description\": \"From ~00:05 the woman's hair streams backward indicating substantial relative airflow (vehicle moving at speed), yet she occupies the driver's position of a left-hand-drive car (steering wheel rim visible behind her on the car's left side) while leaning out the window with both arms crossed and no hands on the wheel; no other occupant is visible in a driving position, so a moving car is uncontrolled.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

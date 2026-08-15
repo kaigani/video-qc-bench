@@ -1,0 +1,43 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:21:27.152Z",
+  "latencyMs": 4272,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 2711,
+    "total_tokens": 9370,
+    "cost": 0.029584,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.029584,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.016266
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2472,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background wall | uniform off-white plane behind subject, fills frame | same | static; only minor reframing between jump cuts",
+    "chair back | cream-colored, partially visible at frame right edge behind subject | same | remains fixed at right edge in all shots",
+    "subject torso/head | centered, frontal close-up framing | same | small posture shifts at cuts; position relative to wall and chair consistent",
+    "tweezers | held in subject's right hand (frame left), shaft horizontal, tips toward object | absent (set down off-frame) | lowered out of frame at ~4s; not visible after 5s",
+    "small metal watch part | pinched in subject's left hand (frame right), center frame, in front of shirt | same hand, now manipulated by right-hand fingers | stays in front of torso; finger occlusion edges consistent",
+    "wristwatch on wrist | left wrist (frame right), black strap, white dial | same | fixed orientation on wrist throughout all shots"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"background wall | uniform off-white plane behind subject, fills frame | same | static; only minor reframing between jump cuts\",\n    \"chair back | cream-colored, partially visible at frame right edge behind subject | same | remains fixed at right edge in all shots\",\n    \"subject torso/head | centered, frontal close-up framing | same | small posture shifts at cuts; position relative to wall and chair consistent\",\n    \"tweezers | held in subject's right hand (frame left), shaft horizontal, tips toward object | absent (set down off-frame) | lowered out of frame at ~4s; not visible after 5s\",\n    \"small metal watch part | pinched in subject's left hand (frame right), center frame, in front of shirt | same hand, now manipulated by right-hand fingers | stays in front of torso; finger occlusion edges consistent\",\n    \"wristwatch on wrist | left wrist (frame right), black strap, white dial | same | fixed orientation on wrist throughout all shots\"\n  ],\n  \"findings\": []\n}"
+}

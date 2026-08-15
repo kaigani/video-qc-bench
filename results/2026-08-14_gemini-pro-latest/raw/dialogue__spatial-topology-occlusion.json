@@ -1,0 +1,51 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:19.230Z",
+  "latencyMs": 4519,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1100,
+    "total_tokens": 2526,
+    "cost": 0.016052,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016052,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.0132
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 807,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | facing camera, centered | facing left, in profile | turns right and camera cuts",
+    "Room layout | blue garment left, picture/fixture right | blue garment, picture, fixture all on wall behind man | completely reorganizes on cut",
+    "Blue garment on hook | viewer's left, man's right | wall behind man | teleports across scene",
+    "Framed picture | viewer's right, man's left | wall behind man | teleports across scene",
+    "Brass fixture | viewer's right, man's left | wall behind man | teleports across scene"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Scene layout and background objects",
+      "invariant_violated": "Scene layout consistency",
+      "description": "Upon the camera cut when the man turns, the entire geometry of the room changes. The blue garment (previously on the viewer's left) and the framed picture and brass fixture (previously on the viewer's right) are now all located on the wall behind the man. The doors he faces were not geometrically possible given the first shot's layout.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | facing camera, centered | facing left, in profile | turns right and camera cuts\",\n    \"Room layout | blue garment left, picture/fixture right | blue garment, picture, fixture all on wall behind man | completely reorganizes on cut\",\n    \"Blue garment on hook | viewer's left, man's right | wall behind man | teleports across scene\",\n    \"Framed picture | viewer's right, man's left | wall behind man | teleports across scene\",\n    \"Brass fixture | viewer's right, man's left | wall behind man | teleports across scene\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Scene layout and background objects\",\n      \"invariant_violated\": \"Scene layout consistency\",\n      \"description\": \"Upon the camera cut when the man turns, the entire geometry of the room changes. The blue garment (previously on the viewer's left) and the framed picture and brass fixture (previously on the viewer's right) are now all located on the wall behind the man. The doors he faces were not geometrically possible given the first shot's layout.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

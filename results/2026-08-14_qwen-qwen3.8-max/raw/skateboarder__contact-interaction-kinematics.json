@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:50:27.686Z",
+  "latencyMs": 6205,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 3318,
+    "total_tokens": 9987,
+    "cost": 0.033246,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.033246,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.019908
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2960,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | both soles on deck, knees flexed, rolling on flat ground | both soles on deck, airborne above quarter coping | back-foot pop with tail contact ~00:01; airborne 00:02-00:03; catch ~00:03; landing ~00:04; continuous roll 00:04-00:07; second pop ~00:08; airborne 00:08-00:09",
+    "skateboard | wheels on ground, deck level under feet | deck tilted beneath feet in air near coping | tail-ground pivot at pop 00:01; free rotation 00:02; deck meets soles at catch 00:03; wheels-ground contact 00:04-00:07; leaves ground after second pop 00:08",
+    "feet-deck interface | full sole contact, weight supported | full sole contact, unsupported (aerial) | contact broken only during aerial phases 00:02-00:03 and 00:08-00:09; re-established at catch and landing with feet aligned to deck",
+    "wheels-ground interface | rolling contact at start | contact broken during final aerial | contact maintained 00:00-00:01 and 00:04-00:07; released at each pop; restored at 00:04 landing with visible compression"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skater | both soles on deck, knees flexed, rolling on flat ground | both soles on deck, airborne above quarter coping | back-foot pop with tail contact ~00:01; airborne 00:02-00:03; catch ~00:03; landing ~00:04; continuous roll 00:04-00:07; second pop ~00:08; airborne 00:08-00:09\",\n    \"skateboard | wheels on ground, deck level under feet | deck tilted beneath feet in air near coping | tail-ground pivot at pop 00:01; free rotation 00:02; deck meets soles at catch 00:03; wheels-ground contact 00:04-00:07; leaves ground after second pop 00:08\",\n    \"feet-deck interface | full sole contact, weight supported | full sole contact, unsupported (aerial) | contact broken only during aerial phases 00:02-00:03 and 00:08-00:09; re-established at catch and landing with feet aligned to deck\",\n    \"wheels-ground interface | rolling contact at start | contact broken during final aerial | contact maintained 00:00-00:01 and 00:04-00:07; released at each pop; restored at 00:04 landing with visible compression\"\n  ],\n  \"findings\": []\n}"
+}

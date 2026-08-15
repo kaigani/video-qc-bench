@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:27:50.031Z",
+  "latencyMs": 5050,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 4835,
+    "total_tokens": 11503,
+    "cost": 0.042346,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042346,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.02901
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4451,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red apple | whole, held at chest height in woman's right hand | last visible 00:07 cradled in both hands; absent from 00:08 onward | vanishes between 00:07 and 00:08 with no transfer, bite, drop, or pocketing action",
+    "blue umbrella | open, shaft gripped in woman's left hand above her head | open, shaft gripped by left hand at 00:09 | support shifts between left hand and both hands but remains held throughout; no unexplained change",
+    "blue shoulder bag (pedestrian in red shirt) | on her left shoulder | exits frame with owner | none",
+    "blue bottle/container (pedestrian in purple top) | carried in right hand | exits frame with owner | none",
+    "market produce crates & displays | static on tables/stalls | static | apparent changes due only to camera motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "object persistence",
+      "description": "At 00:07 the red apple is clearly visible cradled in the woman's cupped hands. At 00:08 both hands are visible clasped together and empty, and at 00:09 the one visible hand grips only the umbrella handle; the apple never reappears. No frame shows it being eaten, dropped, handed off, or placed anywhere, so its disappearance is unexplained.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"red apple | whole, held at chest height in woman's right hand | last visible 00:07 cradled in both hands; absent from 00:08 onward | vanishes between 00:07 and 00:08 with no transfer, bite, drop, or pocketing action\",\n    \"blue umbrella | open, shaft gripped in woman's left hand above her head | open, shaft gripped by left hand at 00:09 | support shifts between left hand and both hands but remains held throughout; no unexplained change\",\n    \"blue shoulder bag (pedestrian in red shirt) | on her left shoulder | exits frame with owner | none\",\n    \"blue bottle/container (pedestrian in purple top) | carried in right hand | exits frame with owner | none\",\n    \"market produce crates & displays | static on tables/stalls | static | apparent changes due only to camera motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"At 00:07 the red apple is clearly visible cradled in the woman's cupped hands. At 00:08 both hands are visible clasped together and empty, and at 00:09 the one visible hand grips only the umbrella handle; the apple never reappears. No frame shows it being eaten, dropped, handed off, or placed anywhere, so its disappearance is unexplained.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

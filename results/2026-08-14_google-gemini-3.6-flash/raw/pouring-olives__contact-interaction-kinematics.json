@@ -1,0 +1,40 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:22.289Z",
+  "latencyMs": 4694,
+  "usage": {
+    "prompt_tokens": 1447,
+    "completion_tokens": 1030,
+    "total_tokens": 2477,
+    "cost": 0.00494775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00494775,
+      "upstream_inference_prompt_cost": 0.00108525,
+      "upstream_inference_completions_cost": 0.0038625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 859,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person's hands | gripping small glass container above jar opening | holding second glass container during pour | grips small container at 00:00, tilts to empty at 00:01-00:03, reaches for second container at 00:04, lifts and pours at 00:05-00:09",
+    "Large glass jar | resting upright on wooden cutting board | resting upright on cutting board, filled with olives | remains seated on board throughout, receiving olives from above",
+    "Small glass containers | held in mid-air above main jar | held in mid-air above main jar | held continuously by fingers, tilted under manual force to discharge olives"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Person's hands | gripping small glass container above jar opening | holding second glass container during pour | grips small container at 00:00, tilts to empty at 00:01-00:03, reaches for second container at 00:04, lifts and pours at 00:05-00:09\",\n    \"Large glass jar | resting upright on wooden cutting board | resting upright on cutting board, filled with olives | remains seated on board throughout, receiving olives from above\",\n    \"Small glass containers | held in mid-air above main jar | held in mid-air above main jar | held continuously by fingers, tilted under manual force to discharge olives\"\n  ],\n  \"findings\": []\n}"
+}

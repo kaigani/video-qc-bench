@@ -1,0 +1,66 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:49:16.689Z",
+  "latencyMs": 11777,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 13148,
+    "total_tokens": 19618,
+    "cost": 0.091828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.091828,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.078888
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12495,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child (toddler, navy zip jacket) | standing at table, reaching into bowl | same child, stirring balls in bowl | identity, clothing and hands consistent across jump cuts",
+    "glass bowl + ball set | 8 balls: 2 red, 3 yellow, 3 green | ~7 balls: composition shifts to 1 red/3 green mid-video and ~2 red/2 green during final stir | ball count and color mix change between shots with no visible transfers",
+    "spare balls on table (right edge) | 1 red + 1 green partially visible | 2 red + 1 green + 1 yellow visible | pile grows as framing widens",
+    "foil-cup prop with wrapped ball (right of table) | present, static | present while in frame | no change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red balls",
+      "invariant_violated": "object-count continuity",
+      "description": "At 00:01 the child holds one red ball over a bowl containing exactly one red (total 2 red). After the cut at 00:02 the child still holds one red ball, yet the bowl now contains two reds and an additional red is visible at the table edge, raising the visible red count from 2 to 3+ with no shown transfer of balls into the bowl or onto the table.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "red ball in bowl",
+      "invariant_violated": "object permanence",
+      "description": "At 00:02 the bowl held two reds plus one red in the child's hand. At 00:03, with both hands empty or merely touching balls over the bowl, only one red is present in the bowl; the surplus red balls vanish without any visible removal action, and the bowl total drops from 9 to 7-8.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "green/red ball during stirring",
+      "invariant_violated": "object-color continuity",
+      "description": "During the near-continuous stirring shot (00:06-00:09) the bowl's settled composition at 00:05 was 1 red / 3 yellow / 3 green. By 00:08 the visible set is 2 red / 3 yellow / 2 green, i.e. one green ball appears to have turned red mid-stir with no exchange of balls.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child (toddler, navy zip jacket) | standing at table, reaching into bowl | same child, stirring balls in bowl | identity, clothing and hands consistent across jump cuts\",\n    \"glass bowl + ball set | 8 balls: 2 red, 3 yellow, 3 green | ~7 balls: composition shifts to 1 red/3 green mid-video and ~2 red/2 green during final stir | ball count and color mix change between shots with no visible transfers\",\n    \"spare balls on table (right edge) | 1 red + 1 green partially visible | 2 red + 1 green + 1 yellow visible | pile grows as framing widens\",\n    \"foil-cup prop with wrapped ball (right of table) | present, static | present while in frame | no change\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red balls\",\n      \"invariant_violated\": \"object-count continuity\",\n      \"description\": \"At 00:01 the child holds one red ball over a bowl containing exactly one red (total 2 red). After the cut at 00:02 the child still holds one red ball, yet the bowl now contains two reds and an additional red is visible at the table edge, raising the visible red count from 2 to 3+ with no shown transfer of balls into the bowl or onto the table.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"red ball in bowl\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"At 00:02 the bowl held two reds plus one red in the child's hand. At 00:03, with both hands empty or merely touching balls over the bowl, only one red is present in the bowl; the surplus red balls vanish without any visible removal action, and the bowl total drops from 9 to 7-8.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"green/red ball during stirring\",\n      \"invariant_violated\": \"object-color continuity\",\n      \"description\": \"During the near-continuous stirring shot (00:06-00:09) the bowl's settled composition at 00:05 was 1 red / 3 yellow / 3 green. By 00:08 the visible set is 2 red / 3 yellow / 2 green, i.e. one green ball appears to have turned red mid-stir with no exchange of balls.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

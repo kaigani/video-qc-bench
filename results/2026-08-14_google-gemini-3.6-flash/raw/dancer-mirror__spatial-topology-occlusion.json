@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:54:29.463Z",
+  "latencyMs": 4949,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 823,
+    "total_tokens": 2250,
+    "cost": 0.0041565,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0041565,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.00308625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 739,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dance studio room | mirrored wall on right side, exit doors on left background wall, ballet barre along far wall | layout remains completely stable | recorded from a single static camera angle",
+    "dancer | positioned facing mirror with back to camera | remains in same floor location throughout | executes dance arm motions",
+    "mirror reflection | planar mirror covering right wall | accurately reflects dancer and studio background with correct geometric symmetry | continuous across entire clip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dance studio room | mirrored wall on right side, exit doors on left background wall, ballet barre along far wall | layout remains completely stable | recorded from a single static camera angle\",\n    \"dancer | positioned facing mirror with back to camera | remains in same floor location throughout | executes dance arm motions\",\n    \"mirror reflection | planar mirror covering right wall | accurately reflects dancer and studio background with correct geometric symmetry | continuous across entire clip\"\n  ],\n  \"findings\": []\n}"
+}

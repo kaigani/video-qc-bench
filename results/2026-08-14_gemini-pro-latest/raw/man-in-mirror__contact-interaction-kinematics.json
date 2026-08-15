@@ -1,0 +1,55 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:24.468Z",
+  "latencyMs": 4994,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 5510,
+    "total_tokens": 6962,
+    "cost": 0.069024,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.069024,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.06612
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5231,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's right arm and hand | holding object against right cheek with curled fingers | holding object against right cheek with curled fingers | teleports to top of head and changes hand pose, then snaps back"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man's right arm and hand",
+      "invariant_violated": "continuous limb trajectories",
+      "description": "The man's right arm instantly teleports from his cheek to the top of his head without continuous movement, and his fingers snap from a curled grip to a flat pose in a single frame.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Man's right arm and hand",
+      "invariant_violated": "continuous limb trajectories",
+      "description": "The man's right arm instantly teleports from the top of his head back down to his cheek, and his hand snaps from a flat pose back to a curled grip in a single frame.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's right arm and hand | holding object against right cheek with curled fingers | holding object against right cheek with curled fingers | teleports to top of head and changes hand pose, then snaps back\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Man's right arm and hand\",\n      \"invariant_violated\": \"continuous limb trajectories\",\n      \"description\": \"The man's right arm instantly teleports from his cheek to the top of his head without continuous movement, and his fingers snap from a curled grip to a flat pose in a single frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Man's right arm and hand\",\n      \"invariant_violated\": \"continuous limb trajectories\",\n      \"description\": \"The man's right arm instantly teleports from the top of his head back down to his cheek, and his hand snaps from a flat pose back to a curled grip in a single frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

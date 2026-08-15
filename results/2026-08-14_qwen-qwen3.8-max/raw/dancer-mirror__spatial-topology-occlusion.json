@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:55:21.535Z",
+  "latencyMs": 3654,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 11152,
+    "total_tokens": 17811,
+    "cost": 0.08023,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.08023,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.066912
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10527,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "studio room | rectangular dance studio: left wall with one dark door + exit sign near camera; front (facing) wall fully mirrored starting at corner x≈220; wood floor; right wall (behind camera) holds barre, poster, blue bin | identical layout at end | layout static across all 10 s; no fixed element moves",
+    "real door (left wall) | dark door with vision panel, handle, exit sign above; left of frame | same | static; never occluded",
+    "mirror wall | spans front wall; vertical panel seams at x≈535 and x≈865; black base trim sloping from (220,565) to (1010,960) | same | static; reflects left-wall doors, right-wall barre/poster/bin, ceiling lights",
+    "reflected door A (virtual image of real left door) | appears just right of wall corner inside mirror, mirrored exit sign above, handle side flipped | same | static; partially occluded by dancer when she shifts left (e.g., 5.2s)",
+    "reflected door B (virtual image of second left-wall door behind camera) | farther right in mirror (x≈365-435), smaller, exit sign above | same | static; correctly occluded by dancer's head/torso at 0.2-4.2s, visible when she moves left (6.2-9.2s)",
+    "reflected right-wall items | barre with posts at mirror-right, dark poster above it, blue bin at mirror-left of barre | same | static; positions consistent in every frame",
+    "white cup at mirror base | small cup on floor at x≈485 against mirror trim | same | static; occluded by dancer's hand/body at 0.2s, visible otherwise",
+    "dancer (real) | back to camera, center-left, black top/leggings, tattoos on right shoulder and left arm | same | performs port de bras: right arm raises (1-3s), lowers (4-5s), raises again (6-9s), ends with right foot pointed/releve",
+    "dancer reflection | front-facing in mirror; pose, tattoos, and foot placement match real dancer with world-x preserved (raised right arm appears on same image side); feet meet real feet at mirror base | same | frame-by-frame pose match verified at 0.2,1.2,2.2,3.2,4.2,5.2,6.2,7.2,8.2,9.2 s; correctly occludes mirror background",
+    "camera | handheld, nearly static with slight drift | same | small translations only; parallax of seams/trim consistent with single continuous viewpoint"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"studio room | rectangular dance studio: left wall with one dark door + exit sign near camera; front (facing) wall fully mirrored starting at corner x≈220; wood floor; right wall (behind camera) holds barre, poster, blue bin | identical layout at end | layout static across all 10 s; no fixed element moves\",\n    \"real door (left wall) | dark door with vision panel, handle, exit sign above; left of frame | same | static; never occluded\",\n    \"mirror wall | spans front wall; vertical panel seams at x≈535 and x≈865; black base trim sloping from (220,565) to (1010,960) | same | static; reflects left-wall doors, right-wall barre/poster/bin, ceiling lights\",\n    \"reflected door A (virtual image of real left door) | appears just right of wall corner inside mirror, mirrored exit sign above, handle side flipped | same | static; partially occluded by dancer when she shifts left (e.g., 5.2s)\",\n    \"reflected door B (virtual image of second left-wall door behind camera) | farther right in mirror (x≈365-435), smaller, exit sign above | same | static; correctly occluded by dancer's head/torso at 0.2-4.2s, visible when she moves left (6.2-9.2s)\",\n    \"reflected right-wall items | barre with posts at mirror-right, dark poster above it, blue bin at mirror-left of barre | same | static; positions consistent in every frame\",\n    \"white cup at mirror base | small cup on floor at x≈485 against mirror trim | same | static; occluded by dancer's hand/body at 0.2s, visible otherwise\",\n    \"dancer (real) | back to camera, center-left, black top/leggings, tattoos on right shoulder and left arm | same | performs port de bras: right arm raises (1-3s), lowers (4-5s), raises again (6-9s), ends with right foot pointed/releve\",\n    \"dancer reflection | front-facing in mirror; pose, tattoos, and foot placement match real dancer with world-x preserved (raised right arm appears on same image side); feet meet real feet at mirror base | same | frame-by-frame pose match verified at 0.2,1.2,2.2,3.2,4.2,5.2,6.2,7.2,8.2,9.2 s; correctly occludes mirror background\",\n    \"camera | handheld, nearly static with slight drift | same | small translations only; parallax of seams/trim consistent with single continuous viewpoint\"\n  ],\n  \"findings\": []\n}"
+}

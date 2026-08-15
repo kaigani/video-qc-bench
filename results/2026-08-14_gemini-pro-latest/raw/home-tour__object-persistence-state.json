@@ -1,0 +1,65 @@
+{
+  "key": "home-tour__object-persistence-state",
+  "video": "home-tour.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:49.445Z",
+  "latencyMs": 4492,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2966,
+    "total_tokens": 4410,
+    "cost": 0.03848,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03848,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.035592
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2543,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Framed picture (Blue Flower) | Hanging on hallway wall to the right of subject | Hanging on hallway wall to the right of subject after she turns around | Moved to opposite wall",
+    "Red kettle | Not present on stove | Resting on stove | Appears uncaused",
+    "Microwave | Resting on right kitchen counter | Mounted above stove on left counter | Teleported and changed installation state"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Framed picture (Blue Flower)",
+      "invariant_violated": "location & orientation",
+      "description": "When the subject first walks down the hallway, the blue flower picture is on the wall to her right. When she turns around and walks back, the picture is still on her right, meaning it has inexplicably moved to the opposite wall.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Red kettle",
+      "invariant_violated": "identity & persistence",
+      "description": "A red kettle appears on the stove as the subject returns to the kitchen. It was not present on the stove when she initially walked past it at the beginning of the video.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Microwave",
+      "invariant_violated": "location & orientation",
+      "description": "The microwave was originally resting on the right-hand kitchen counter. When the subject returns to the kitchen, the microwave is now mounted on the wall above the stove on the left side.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Framed picture (Blue Flower) | Hanging on hallway wall to the right of subject | Hanging on hallway wall to the right of subject after she turns around | Moved to opposite wall\",\n    \"Red kettle | Not present on stove | Resting on stove | Appears uncaused\",\n    \"Microwave | Resting on right kitchen counter | Mounted above stove on left counter | Teleported and changed installation state\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Framed picture (Blue Flower)\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"When the subject first walks down the hallway, the blue flower picture is on the wall to her right. When she turns around and walks back, the picture is still on her right, meaning it has inexplicably moved to the opposite wall.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Red kettle\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"A red kettle appears on the stove as the subject returns to the kitchen. It was not present on the stove when she initially walked past it at the beginning of the video.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Microwave\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The microwave was originally resting on the right-hand kitchen counter. When the subject returns to the kitchen, the microwave is now mounted on the wall above the stove on the left side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

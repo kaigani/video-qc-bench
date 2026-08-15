@@ -1,0 +1,55 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:20:28.701Z",
+  "latencyMs": 4961,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1847,
+    "total_tokens": 3291,
+    "cost": 0.025052,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025052,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.022164
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1583,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Comb | Starts as a small, clear comb held in right hand | Ends as a small, clear comb in right hand | Transforms into a large black comb and then back to a small clear comb"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Comb",
+      "invariant_violated": "Identity & Persistence",
+      "description": "As the man raises his hand from his face to his hair, the small clear comb in his hand spontaneously transforms into a larger black comb. There is no visible action to explain swapping the object.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Comb",
+      "invariant_violated": "Identity & Persistence",
+      "description": "As the man lowers his hand from his hair back to his face, the large black comb spontaneously transforms back into the small clear comb. No swap or object exchange is visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Comb | Starts as a small, clear comb held in right hand | Ends as a small, clear comb in right hand | Transforms into a large black comb and then back to a small clear comb\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Comb\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"As the man raises his hand from his face to his hair, the small clear comb in his hand spontaneously transforms into a larger black comb. There is no visible action to explain swapping the object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Comb\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"As the man lowers his hand from his hair back to his face, the large black comb spontaneously transforms back into the small clear comb. No swap or object exchange is visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

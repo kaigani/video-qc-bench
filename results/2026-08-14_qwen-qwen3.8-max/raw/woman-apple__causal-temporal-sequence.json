@@ -1,0 +1,45 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:29:17.103Z",
+  "latencyMs": 5478,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 4646,
+    "total_tokens": 11299,
+    "cost": 0.041182,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.041182,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.027876
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4253,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "main woman | 0:00 walking toward camera, smiling, red apple in right hand, umbrella in left | 0:09 seen from behind, walking on, umbrella held in one hand, hands clasped | continuous forward locomotion; camera arcs front->side->rear; apple regrouped from one hand to both hands 0:04-0:06, transfer completes",
+    "blue umbrella | 0:00 open overhead | 0:09 open overhead | displaces only with woman's hand/body; no uncaused jumps or tilts",
+    "red apple | 0:00 held at chest, moves with hand | 0:07 cradled in both hands; 0:08-0:09 not visible in clasped hands | motion always coupled to hands; late visibility change is object-state bookkeeping (out of my scope)",
+    "light-blue-shirt passerby | 0:01 enters left foreground | 0:04 walks away right mid-ground | continuous passing trajectory, speed constant",
+    "white-shirt passerby | 0:03 enters left foreground | 0:05 walks away right | continuous passing trajectory",
+    "blue-shirt passerby | 0:06 left foreground | 0:07 right background | continuous passing trajectory",
+    "background crowd (green-shirt man, red-shirt and purple-shirt women) | 0:00 mid-distance approaching | 0:04-0:05 pass out of frame | approach rate consistent with woman's forward walk",
+    "hanging market bulbs | 0:00 lit | 0:09 lit | steady emission, no uncaused light change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"main woman | 0:00 walking toward camera, smiling, red apple in right hand, umbrella in left | 0:09 seen from behind, walking on, umbrella held in one hand, hands clasped | continuous forward locomotion; camera arcs front->side->rear; apple regrouped from one hand to both hands 0:04-0:06, transfer completes\",\n    \"blue umbrella | 0:00 open overhead | 0:09 open overhead | displaces only with woman's hand/body; no uncaused jumps or tilts\",\n    \"red apple | 0:00 held at chest, moves with hand | 0:07 cradled in both hands; 0:08-0:09 not visible in clasped hands | motion always coupled to hands; late visibility change is object-state bookkeeping (out of my scope)\",\n    \"light-blue-shirt passerby | 0:01 enters left foreground | 0:04 walks away right mid-ground | continuous passing trajectory, speed constant\",\n    \"white-shirt passerby | 0:03 enters left foreground | 0:05 walks away right | continuous passing trajectory\",\n    \"blue-shirt passerby | 0:06 left foreground | 0:07 right background | continuous passing trajectory\",\n    \"background crowd (green-shirt man, red-shirt and purple-shirt women) | 0:00 mid-distance approaching | 0:04-0:05 pass out of frame | approach rate consistent with woman's forward walk\",\n    \"hanging market bulbs | 0:00 lit | 0:09 lit | steady emission, no uncaused light change\"\n  ],\n  \"findings\": []\n}"
+}

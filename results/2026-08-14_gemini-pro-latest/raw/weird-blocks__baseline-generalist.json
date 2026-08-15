@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:27.515Z",
+  "latencyMs": 4918,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1141,
+    "total_tokens": 2379,
+    "cost": 0.016168,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016168,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.013692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 980,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "block in hand | green '2' | green '6' | morphs continuously in color and number while being held"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "block in hand",
+      "invariant_violated": "Object Constancy",
+      "description": "The block held by the hand continuously morphs, changing color and number (e.g., from a green '2' to a blue '3', then a yellow '2', etc.) as it is dragged across the table.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"block in hand | green '2' | green '6' | morphs continuously in color and number while being held\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"block in hand\",\n      \"invariant_violated\": \"Object Constancy\",\n      \"description\": \"The block held by the hand continuously morphs, changing color and number (e.g., from a green '2' to a blue '3', then a yellow '2', etc.) as it is dragged across the table.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

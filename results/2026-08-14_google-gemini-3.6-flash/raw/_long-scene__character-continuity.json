@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:53:31.963Z",
+  "latencyMs": 27684,
+  "usage": {
+    "prompt_tokens": 10630,
+    "completion_tokens": 3391,
+    "total_tokens": 14021,
+    "cost": 0.02068875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 10115
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02068875,
+      "upstream_inference_prompt_cost": 0.0079725,
+      "upstream_inference_completions_cost": 0.01271625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3204,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Older woman with grey hair in a bun, light blue polo shirt, white apron, reading glasses hanging on shirt | Same uniform and appearance throughout | A duplicate identical waitress appears in the background at 01:52 while the main waitress walks toward the back",
+    "Truck Driver / Customer | Middle-aged man with grey beard/hair, tan jacket over plaid shirt, jeans | Same attire throughout | Enters diner at 00:19, sits at counter, receives coffee and food, chats with waitress, leaves cash, and walks out to his truck at 01:41"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "multi-character consistency",
+      "description": "As the waitress gets up from her stool at the counter and walks toward the back room, a second identical waitress in the exact same uniform and hairstyle is already standing behind the back counter working, duplicating the character on screen simultaneously.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Older woman with grey hair in a bun, light blue polo shirt, white apron, reading glasses hanging on shirt | Same uniform and appearance throughout | A duplicate identical waitress appears in the background at 01:52 while the main waitress walks toward the back\",\n    \"Truck Driver / Customer | Middle-aged man with grey beard/hair, tan jacket over plaid shirt, jeans | Same attire throughout | Enters diner at 00:19, sits at counter, receives coffee and food, chats with waitress, leaves cash, and walks out to his truck at 01:41\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"multi-character consistency\",\n      \"description\": \"As the waitress gets up from her stool at the counter and walks toward the back room, a second identical waitress in the exact same uniform and hairstyle is already standing behind the back counter working, duplicating the character on screen simultaneously.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

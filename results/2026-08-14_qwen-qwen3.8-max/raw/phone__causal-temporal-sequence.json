@@ -1,0 +1,43 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:14:28.233Z",
+  "latencyMs": 4338,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 4364,
+    "total_tokens": 11017,
+    "cost": 0.03949,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03949,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.026184
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3822,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background pedestrian | at 0.2s on stair landing carrying red case, mid-stride moving away | at ~3.2s far down the walkway, exiting top of frame | cause: walking strides -> effect: continuous recession away from camera; speed and trajectory smooth and plausible across 0.2-3.2s",
+    "phone (held object) | 0.2s held steady, screen defocused showing blurred '742' | 9.2s lowered out of frame bottom after being in sharp focus | cause: hand tilt/rotation -> effect: screen angle and reflections shift (4.2-8.2s); cause: hand lowers phone -> effect: phone exits frame with motion blur at 9.2s; order and delay plausible",
+    "camera focus/framing | 0.2-3.2s wide view including stairs and pedestrian, phone screen out of focus | 4.2-8.2s tight close-up with screen racked into sharp focus | cause: focus pull -> effect: gradual blur-to-sharp transition on screen text; gradual, not instantaneous; plausible. Reframe between 3.2s and 4.2s is a cut (edit), not an in-shot causal break",
+    "sunlight reflection/shadow on screen | 4.2s diagonal shadow edge with specular white band | 7.2-8.2s reflection displaced to right edge, screen uniformly lit | cause: visible hand tilts/rotates phone -> effect: reflection and shadow geometry shift correspondingly at 5.2s, 6.2s, 7.2s; motion of highlight tracks phone angle change with no lag; plausible",
+    "screen content (emitted light) | blurred large '742' glyphs, no legible small text | sharp '7:42' plus 'AZ-12', small '42', and status-bar icons | cause: lens de-blur -> effect: pre-existing small text becomes legible progressively (faint traces visible at 4.2-6.2s); no abrupt uncaused content swap detected within a shot",
+    "hands/thumbs | left hand cradles phone, right thumb resting on right bezel | right thumb repositions, then both hands lower phone at 9.2s | cause: thumb/hand adjustments -> effect: phone tilt and final downward motion; initiated lowering completes out of frame; continuous"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"background pedestrian | at 0.2s on stair landing carrying red case, mid-stride moving away | at ~3.2s far down the walkway, exiting top of frame | cause: walking strides -> effect: continuous recession away from camera; speed and trajectory smooth and plausible across 0.2-3.2s\",\n    \"phone (held object) | 0.2s held steady, screen defocused showing blurred '742' | 9.2s lowered out of frame bottom after being in sharp focus | cause: hand tilt/rotation -> effect: screen angle and reflections shift (4.2-8.2s); cause: hand lowers phone -> effect: phone exits frame with motion blur at 9.2s; order and delay plausible\",\n    \"camera focus/framing | 0.2-3.2s wide view including stairs and pedestrian, phone screen out of focus | 4.2-8.2s tight close-up with screen racked into sharp focus | cause: focus pull -> effect: gradual blur-to-sharp transition on screen text; gradual, not instantaneous; plausible. Reframe between 3.2s and 4.2s is a cut (edit), not an in-shot causal break\",\n    \"sunlight reflection/shadow on screen | 4.2s diagonal shadow edge with specular white band | 7.2-8.2s reflection displaced to right edge, screen uniformly lit | cause: visible hand tilts/rotates phone -> effect: reflection and shadow geometry shift correspondingly at 5.2s, 6.2s, 7.2s; motion of highlight tracks phone angle change with no lag; plausible\",\n    \"screen content (emitted light) | blurred large '742' glyphs, no legible small text | sharp '7:42' plus 'AZ-12', small '42', and status-bar icons | cause: lens de-blur -> effect: pre-existing small text becomes legible progressively (faint traces visible at 4.2-6.2s); no abrupt uncaused content swap detected within a shot\",\n    \"hands/thumbs | left hand cradles phone, right thumb resting on right bezel | right thumb repositions, then both hands lower phone at 9.2s | cause: thumb/hand adjustments -> effect: phone tilt and final downward motion; initiated lowering completes out of frame; continuous\"\n  ],\n  \"findings\": []\n}"
+}

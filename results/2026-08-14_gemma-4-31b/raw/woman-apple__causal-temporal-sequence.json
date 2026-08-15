@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:24:44.185Z",
+  "latencyMs": 3558,
+  "usage": {
+    "prompt_tokens": 2930,
+    "completion_tokens": 2420,
+    "total_tokens": 5350,
+    "cost": 0.0026303,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0026303,
+      "upstream_inference_prompt_cost": 0.0007911,
+      "upstream_inference_completions_cost": 0.0018392
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2020,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | walking forward | walking forward | continuous motion",
+    "apple | held in hands | vanishes | disappears at 00:08",
+    "umbrella | held in hand | held in hand | continuous motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "apple",
+      "invariant_violated": "effect-without-cause",
+      "description": "The red apple held by the woman suddenly disappears from her hand without any action or movement to explain its removal.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | walking forward | walking forward | continuous motion\",\n    \"apple | held in hands | vanishes | disappears at 00:08\",\n    \"umbrella | held in hand | held in hand | continuous motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"apple\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"The red apple held by the woman suddenly disappears from her hand without any action or movement to explain its removal.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

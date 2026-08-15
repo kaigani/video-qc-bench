@@ -1,0 +1,57 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:58:33.779Z",
+  "latencyMs": 5007,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 8406,
+    "total_tokens": 15074,
+    "cost": 0.063772,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.063772,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.050436
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7838,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "navy coat | hanging on brass hook on wooden door behind speaker, uniformly dark navy with no markings | same hook after camera reframe, but now shows broad white stripe across sleeve and white band at hem | no visible action on the coat; marking appears without cause",
+    "brass coat hook | mounted on wooden door behind speaker, supporting coat | same position, still supporting coat | none",
+    "wooden door behind speaker | closed, intact | closed, intact | none",
+    "left wooden door (man's destination) | closed, untouched | closed; man places hand on panel at 00:09 | contact only, no state change",
+    "brass doorknob (left door) | intact, fixed | intact, fixed | none",
+    "framed emblem sketch (door behind speaker) | fixed, partially occluded by man | fixed, fully visible after pan | none",
+    "framed 'V' print (right door) | fixed at right edge | fixed, leaves frame with pan | none",
+    "wheel ornament (top of door) | fixed | fixed | none",
+    "wooden wall box with slot+knob (right of door) | fixed on green wall | leaves frame right during pan | none",
+    "wooden wall box + brass bell device (left wall) | off-frame at start | enters frame left at 00:09, fixed | revealed by camera pan only",
+    "white light-switch plate (left wall) | off-frame at start | enters frame left at 00:09, fixed | revealed by camera pan only"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "navy coat on brass hook",
+      "invariant_violated": "object identity/appearance persistence",
+      "description": "In the frontal views (00:00-00:07) the coat hanging on the hook is uniformly dark navy with no markings on any edge. At 00:09, the same coat on the same hook (same door, verified by hook and door paneling) displays a broad white diagonal stripe across the sleeve and a white band at the hem. No person approached or handled the coat, and a band this wide would have been visible on the coat's silhouette in the earlier frontal views, so the change cannot be attributed to viewpoint; the prop's appearance changed without a visible cause.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"navy coat | hanging on brass hook on wooden door behind speaker, uniformly dark navy with no markings | same hook after camera reframe, but now shows broad white stripe across sleeve and white band at hem | no visible action on the coat; marking appears without cause\",\n    \"brass coat hook | mounted on wooden door behind speaker, supporting coat | same position, still supporting coat | none\",\n    \"wooden door behind speaker | closed, intact | closed, intact | none\",\n    \"left wooden door (man's destination) | closed, untouched | closed; man places hand on panel at 00:09 | contact only, no state change\",\n    \"brass doorknob (left door) | intact, fixed | intact, fixed | none\",\n    \"framed emblem sketch (door behind speaker) | fixed, partially occluded by man | fixed, fully visible after pan | none\",\n    \"framed 'V' print (right door) | fixed at right edge | fixed, leaves frame with pan | none\",\n    \"wheel ornament (top of door) | fixed | fixed | none\",\n    \"wooden wall box with slot+knob (right of door) | fixed on green wall | leaves frame right during pan | none\",\n    \"wooden wall box + brass bell device (left wall) | off-frame at start | enters frame left at 00:09, fixed | revealed by camera pan only\",\n    \"white light-switch plate (left wall) | off-frame at start | enters frame left at 00:09, fixed | revealed by camera pan only\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"navy coat on brass hook\",\n      \"invariant_violated\": \"object identity/appearance persistence\",\n      \"description\": \"In the frontal views (00:00-00:07) the coat hanging on the hook is uniformly dark navy with no markings on any edge. At 00:09, the same coat on the same hook (same door, verified by hook and door paneling) displays a broad white diagonal stripe across the sleeve and a white band at the hem. No person approached or handled the coat, and a band this wide would have been visible on the coat's silhouette in the earlier frontal views, so the change cannot be attributed to viewpoint; the prop's appearance changed without a visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

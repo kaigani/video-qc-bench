@@ -1,0 +1,45 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:57:59.060Z",
+  "latencyMs": 3137,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 3963,
+    "total_tokens": 10622,
+    "cost": 0.037096,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037096,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.023778
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3616,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden door with brass wheel ornament + coat hook | left-center behind man, hook at chest height | right side of frame | static; shifts right in frame as camera pans left at 7-9s",
+    "Navy coat on hook | hanging below hook, lower portion near frame bottom | hanging below hook on right side | static throughout; full length visible once camera pans",
+    "Framed hat sketch on panel right of coat-hook door | mostly occluded by man's head/shoulder | fully visible right of coat-hook door | occlusion released smoothly as man steps left",
+    "Right door with 'V' framed print | far right edge of frame | out of frame | exits frame right during left pan, order consistent",
+    "Green wallpaper strip with wooden box | between central door and right door | out of frame | exits right during pan",
+    "Left paneled door (man's destination) | dark paneling at left frame edge | center of frame, brass knob at lower left, man's hand on panel | revealed by left pan; geometry matches the paneling glimpsed at start",
+    "Left green wall with telephone device + switch plate | not in frame at start | left edge of frame | new territory entered by left pan, consistent adjacency",
+    "Man in striped shirt (moving entity) | center frame, facing camera, occludes hat sketch | left profile at left door, hand raised to door panel | turns to his left ~7s, walks left, emerges at left door on correct side"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden door with brass wheel ornament + coat hook | left-center behind man, hook at chest height | right side of frame | static; shifts right in frame as camera pans left at 7-9s\",\n    \"Navy coat on hook | hanging below hook, lower portion near frame bottom | hanging below hook on right side | static throughout; full length visible once camera pans\",\n    \"Framed hat sketch on panel right of coat-hook door | mostly occluded by man's head/shoulder | fully visible right of coat-hook door | occlusion released smoothly as man steps left\",\n    \"Right door with 'V' framed print | far right edge of frame | out of frame | exits frame right during left pan, order consistent\",\n    \"Green wallpaper strip with wooden box | between central door and right door | out of frame | exits right during pan\",\n    \"Left paneled door (man's destination) | dark paneling at left frame edge | center of frame, brass knob at lower left, man's hand on panel | revealed by left pan; geometry matches the paneling glimpsed at start\",\n    \"Left green wall with telephone device + switch plate | not in frame at start | left edge of frame | new territory entered by left pan, consistent adjacency\",\n    \"Man in striped shirt (moving entity) | center frame, facing camera, occludes hat sketch | left profile at left door, hand raised to door panel | turns to his left ~7s, walks left, emerges at left door on correct side\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__contact-interaction-kinematics",
+  "video": "home-tour.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:47:41.388Z",
+  "latencyMs": 5236,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 1889,
+    "total_tokens": 8558,
+    "cost": 0.024672,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024672,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.011334
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1695,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (whole body) | upright, walking in kitchen, arms free at sides | upright, walking down rear hall, arms free | continuous gait; head turns ~02-03s and ~06s; passes two doorways without contact",
+    "Hands/arms | no grips; natural alternating swing at sides | no grips; natural swing | no contact established or released with any object; handedness and limb trajectories continuous",
+    "Feet/ground | weight-bearing step cycle (feet largely below frame) | weight-bearing step cycle | weight transfer per step appears continuous; no sliding of planted foot during turns",
+    "Body vs doorframes/furniture | clear separation in kitchen | clear separation at bedroom threshold | no clipping or pass-through at doorways, bed, chairs, or counters"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (whole body) | upright, walking in kitchen, arms free at sides | upright, walking down rear hall, arms free | continuous gait; head turns ~02-03s and ~06s; passes two doorways without contact\",\n    \"Hands/arms | no grips; natural alternating swing at sides | no grips; natural swing | no contact established or released with any object; handedness and limb trajectories continuous\",\n    \"Feet/ground | weight-bearing step cycle (feet largely below frame) | weight-bearing step cycle | weight transfer per step appears continuous; no sliding of planted foot during turns\",\n    \"Body vs doorframes/furniture | clear separation in kitchen | clear separation at bedroom threshold | no clipping or pass-through at doorways, bed, chairs, or counters\"\n  ],\n  \"findings\": []\n}"
+}

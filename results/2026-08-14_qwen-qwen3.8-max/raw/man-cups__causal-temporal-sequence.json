@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:06:50.309Z",
+  "latencyMs": 4904,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 4305,
+    "total_tokens": 10958,
+    "cost": 0.039136,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.039136,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.02583
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3998,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand + held coin | 00:00 pinching gold coin above table | 00:03 coin held over front cup, releasing | hand transports coin to cup, release follows grip; order and delay plausible",
+    "left hand | 00:01 empty, hovering above table | 00:09 pinching coin over a cup | acquires coin between sampled frames/cuts; subsequent placement actions complete",
+    "front cup | 00:00 gold coin inside | 00:09 coin inside, hand at rim | each change in coin position follows visible hand contact",
+    "middle cup | 00:00 gold coin stacked on rim | 00:03 different-appearing coin inside | state differs across a cut; identity bookkeeping out of scope, no uncaused change within a shot",
+    "cup arrangement | 00:00 diamond cluster of four cups | 00:04-00:09 four cups in a row | rearranged across cut; placement across cuts out of scope",
+    "camera/lighting | 00:00 close framing on hands | 00:09 wide orbiting view of seated man | reframing and exposure shifts tied to camera movement; no uncaused light changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand + held coin | 00:00 pinching gold coin above table | 00:03 coin held over front cup, releasing | hand transports coin to cup, release follows grip; order and delay plausible\",\n    \"left hand | 00:01 empty, hovering above table | 00:09 pinching coin over a cup | acquires coin between sampled frames/cuts; subsequent placement actions complete\",\n    \"front cup | 00:00 gold coin inside | 00:09 coin inside, hand at rim | each change in coin position follows visible hand contact\",\n    \"middle cup | 00:00 gold coin stacked on rim | 00:03 different-appearing coin inside | state differs across a cut; identity bookkeeping out of scope, no uncaused change within a shot\",\n    \"cup arrangement | 00:00 diamond cluster of four cups | 00:04-00:09 four cups in a row | rearranged across cut; placement across cuts out of scope\",\n    \"camera/lighting | 00:00 close framing on hands | 00:09 wide orbiting view of seated man | reframing and exposure shifts tied to camera movement; no uncaused light changes\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "watchmaker__object-persistence-state",
+  "video": "watchmaker.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:14.166Z",
+  "latencyMs": 4204,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1376,
+    "total_tokens": 2820,
+    "cost": 0.0194,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0194,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.016512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1156,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tweezers | held in right hand | moves off-screen at 00:03 | initially used to work on round object, then moved out of frame",
+    "Round object | held in left hand | held in left hand | continuously held and manipulated by tools",
+    "Pin tool | not present | held in right hand | suddenly appears in right hand at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Tweezers / Pin tool",
+      "invariant_violated": "Identity & Persistence",
+      "description": "The right hand moves downwards holding tweezers, and a moment later returns holding a completely different thin metal pin tool. There is no visible action or sufficient time to explain the dropping of the tweezers and picking up of the new tool.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Tweezers | held in right hand | moves off-screen at 00:03 | initially used to work on round object, then moved out of frame\",\n    \"Round object | held in left hand | held in left hand | continuously held and manipulated by tools\",\n    \"Pin tool | not present | held in right hand | suddenly appears in right hand at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Tweezers / Pin tool\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"The right hand moves downwards holding tweezers, and a moment later returns holding a completely different thin metal pin tool. There is no visible action or sufficient time to explain the dropping of the tweezers and picking up of the new tool.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

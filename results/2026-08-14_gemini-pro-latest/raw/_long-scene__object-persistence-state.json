@@ -1,0 +1,69 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:21:16.872Z",
+  "latencyMs": 20824,
+  "usage": {
+    "prompt_tokens": 10649,
+    "completion_tokens": 3188,
+    "total_tokens": 13837,
+    "cost": 0.059554,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.059554,
+      "upstream_inference_prompt_cost": 0.021298,
+      "upstream_inference_completions_cost": 0.038256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2580,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's coffee mug | empty, on counter | vanishes | filled at 00:27, left on counter at 01:37, vanishes by 01:50",
+    "Coffee pot | full, held by waitress | resting on machine | pours coffee at 00:27",
+    "Man's plate | contains egg and toast, on counter | vanishes | visible in front of man at 00:36, vanishes by 01:50",
+    "Cleaning cloth | held by waitress | held by waitress | used to wipe counter at 00:10 and 00:48",
+    "Waitress's coffee mug | full, held by waitress | held by waitress | placed on counter at 01:13, picked up at 01:50",
+    "Waitress's plate | contains food, held by waitress | held by waitress | placed on counter at 01:13, picked up at 01:50",
+    "Money (two bills) | held by man | vanishes | placed on counter at 01:38, vanishes by 01:50"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "Man's coffee mug",
+      "invariant_violated": "identity & persistence",
+      "description": "The mug was left on the counter next to the money. In the wide shot at 01:50, the counter in front of the man's seat is bare and the mug has disappeared.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Man's plate",
+      "invariant_violated": "identity & persistence",
+      "description": "The man's plate of food was on the counter in front of him. At 01:50, the plate is no longer on the counter, having vanished without a visible action.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Money (two bills)",
+      "invariant_violated": "identity & persistence",
+      "description": "The man placed the money on the counter at 01:38. In the shot at 01:50, the money is gone from the counter without anyone picking it up.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Man's coffee mug | empty, on counter | vanishes | filled at 00:27, left on counter at 01:37, vanishes by 01:50\",\n    \"Coffee pot | full, held by waitress | resting on machine | pours coffee at 00:27\",\n    \"Man's plate | contains egg and toast, on counter | vanishes | visible in front of man at 00:36, vanishes by 01:50\",\n    \"Cleaning cloth | held by waitress | held by waitress | used to wipe counter at 00:10 and 00:48\",\n    \"Waitress's coffee mug | full, held by waitress | held by waitress | placed on counter at 01:13, picked up at 01:50\",\n    \"Waitress's plate | contains food, held by waitress | held by waitress | placed on counter at 01:13, picked up at 01:50\",\n    \"Money (two bills) | held by man | vanishes | placed on counter at 01:38, vanishes by 01:50\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Man's coffee mug\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The mug was left on the counter next to the money. In the wide shot at 01:50, the counter in front of the man's seat is bare and the mug has disappeared.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Man's plate\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The man's plate of food was on the counter in front of him. At 01:50, the plate is no longer on the counter, having vanished without a visible action.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Money (two bills)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The man placed the money on the counter at 01:38. In the shot at 01:50, the money is gone from the counter without anyone picking it up.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

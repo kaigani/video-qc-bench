@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:53:22.129Z",
+  "latencyMs": 4759,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 10605,
+    "total_tokens": 17075,
+    "cost": 0.07657,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.07657,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.06363
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10230,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer | black strappy sports bra, black leggings, hair bun, tattoos (right shoulder/upper arm, left upper-arm band), tan half-sole shoes | same attire and appearance at end | performs slow port de bras: right arm sweeps out and up overhead, lowers, repeats, finishes with right leg extended to the side in tendu",
+    "Mirror reflection of dancer | front-facing view, pose, clothing and tattoo placement matching the real dancer | still matching at end | remains pose-synchronous with the dancer in every sampled frame; no limb, clothing or reflection-geometry mismatches detected",
+    "Studio environment | wood floor, left wall with two dark doors and green EXIT signs, mirrored wall on right; barre, poster and blue bin visible only via reflection | same | handheld camera reframes slightly between 0s and 1s; a white cup appears at the mirror baseboard from ~1s onward"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "white cup at mirror baseboard",
+      "invariant_violated": "object permanence / continuity",
+      "description": "At 0:00 the floor at the base of the mirror (left of the reflected dancer) is empty, but from 0:01 onward a white disposable cup sits there and remains for the rest of the clip. No person enters the frame or the mirror reflection to place it, so the prop appears unexplained; this indicates a hidden jump cut or continuity error between the first second and the remainder of the take.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer | black strappy sports bra, black leggings, hair bun, tattoos (right shoulder/upper arm, left upper-arm band), tan half-sole shoes | same attire and appearance at end | performs slow port de bras: right arm sweeps out and up overhead, lowers, repeats, finishes with right leg extended to the side in tendu\",\n    \"Mirror reflection of dancer | front-facing view, pose, clothing and tattoo placement matching the real dancer | still matching at end | remains pose-synchronous with the dancer in every sampled frame; no limb, clothing or reflection-geometry mismatches detected\",\n    \"Studio environment | wood floor, left wall with two dark doors and green EXIT signs, mirrored wall on right; barre, poster and blue bin visible only via reflection | same | handheld camera reframes slightly between 0s and 1s; a white cup appears at the mirror baseboard from ~1s onward\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"white cup at mirror baseboard\",\n      \"invariant_violated\": \"object permanence / continuity\",\n      \"description\": \"At 0:00 the floor at the base of the mirror (left of the reflected dancer) is empty, but from 0:01 onward a white disposable cup sits there and remains for the rest of the clip. No person enters the frame or the mirror reflection to place it, so the prop appears unexplained; this indicates a hidden jump cut or continuity error between the first second and the remainder of the take.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

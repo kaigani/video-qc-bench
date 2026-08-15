@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:56.782Z",
+  "latencyMs": 2854,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 398,
+    "total_tokens": 1825,
+    "cost": 0.00256275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00256275,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.0014925
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 331,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | seated in foreground facing camera | seated in foreground facing camera | hands manipulating small object",
+    "background / seating area | visible behind person, static layout | visible behind person, static layout | static throughout single shot",
+    "tweezers and small object | held in foreground hands | held in foreground hands | maintained continuous occlusion with fingers and torso"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | seated in foreground facing camera | seated in foreground facing camera | hands manipulating small object\",\n    \"background / seating area | visible behind person, static layout | visible behind person, static layout | static throughout single shot\",\n    \"tweezers and small object | held in foreground hands | held in foreground hands | maintained continuous occlusion with fingers and torso\"\n  ],\n  \"findings\": []\n}"
+}

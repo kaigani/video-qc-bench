@@ -1,0 +1,49 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:14:02.869Z",
+  "latencyMs": 8491,
+  "usage": {
+    "prompt_tokens": 2932,
+    "completion_tokens": 2808,
+    "total_tokens": 5740,
+    "cost": 0.00124792,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00124792,
+      "upstream_inference_prompt_cost": 0.0002932,
+      "upstream_inference_completions_cost": 0.00095472
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2264,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen | stove and microwave on right side of frame | stove and microwave on left side of frame | relative position to hallway flips",
+    "Hallway | painting on right wall, door at far end | painting on left wall (returning), door at far end | connectivity to kitchen and bedroom stable",
+    "Bedroom | bed, window, and nightstand | bed, window, and nightstand | connectivity to hallway stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Kitchen",
+      "invariant_violated": "scene layout",
+      "description": "The kitchen's spatial orientation relative to the hallway is inverted. At 00:00, the character enters the hallway by moving left from the kitchen; upon returning from the bedroom at 00:09, the kitchen is located on the left side of the hallway, whereas it should be on the right based on the established layout.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen | stove and microwave on right side of frame | stove and microwave on left side of frame | relative position to hallway flips\",\n    \"Hallway | painting on right wall, door at far end | painting on left wall (returning), door at far end | connectivity to kitchen and bedroom stable\",\n    \"Bedroom | bed, window, and nightstand | bed, window, and nightstand | connectivity to hallway stable\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Kitchen\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The kitchen's spatial orientation relative to the hallway is inverted. At 00:00, the character enters the hallway by moving left from the kitchen; upon returning from the bedroom at 00:09, the kitchen is located on the left side of the hallway, whereas it should be on the right based on the established layout.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

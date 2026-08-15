@@ -1,0 +1,51 @@
+{
+  "source": "review-human-baseline.md (KT visual analysis, 2026-08-14)",
+  "priority_scale": {
+    "P0": "defect makes the entire clip unusable",
+    "P1": "critical error, possibly fixable with an edit",
+    "P2": "potentially passable depending on usage",
+    "P3": "potentially passable depending on usage",
+    "P4": "minor / hard to notice"
+  },
+  "defects": [
+    { "id": "LONG-1", "video": "_long-scene", "priority": "P2", "description": "Time of day changes after the first cut from dark to light" },
+    { "id": "LONG-2", "video": "_long-scene", "priority": "P3", "description": "Shifts back to earlier time of day as the man enters" },
+    { "id": "LONG-3", "video": "_long-scene", "priority": "P3", "description": "Man enters from what seems like the kitchen of the diner" },
+    { "id": "LONG-4", "video": "_long-scene", "priority": "P4", "description": "'Open' sign / interior layout doesn't match the exterior establishing shot" },
+    { "id": "LONG-5", "video": "_long-scene", "priority": "P4", "description": "Man seems to bring his own cup for the coffee" },
+    { "id": "LONG-6", "video": "_long-scene", "priority": "P0", "description": "Man sitting clipping through the counter as he faces camera; woman is missing" },
+    { "id": "LONG-7", "video": "_long-scene", "priority": "P1", "description": "Man shifts to opposite end of the counter" },
+    { "id": "LONG-8", "video": "_long-scene", "priority": "P2", "description": "Woman crosses through the counter to sit next to him" },
+    { "id": "LONG-9", "video": "_long-scene", "priority": "P1", "description": "Woman changes to the opposite side of him on the reverse shot" },
+    { "id": "LONG-10", "video": "_long-scene", "priority": "P0", "description": "Man's hand leaves tip and another of his hands takes it" },
+    { "id": "LONG-11", "video": "_long-scene", "priority": "P0", "description": "Two instances of the same woman in the diner" },
+    { "id": "MARB-1", "video": "child-marbles", "priority": "P2", "description": "Red ball duplicates when picked up (2 red -> 3 red); heavy morphing while stirring, up to 5 red visible" },
+    { "id": "DANC-1", "video": "dancer-mirror", "priority": "P2", "description": "Mirrored pose does not match the in-room pose, especially foot position" },
+    { "id": "DANC-2", "video": "dancer-mirror", "priority": "P3", "description": "Shoulder tattoo morphs as she raises her arm" },
+    { "id": "DANC-3", "video": "dancer-mirror", "priority": "P1", "description": "At 00:05 reflection shows hand in front, in-room shows hand behind her back" },
+    { "id": "HOME-1", "video": "home-tour", "priority": "P1", "description": "Implausible interior layout: walking the length of the kitchen through a bedroom reveals another similar kitchen" },
+    { "id": "HOME-2", "video": "home-tour", "priority": "P2", "description": "Bedroom has two chairs tucked under the foot of the bed as if the bed is a table" },
+    { "id": "CUPS-1", "video": "man-cups", "priority": "P3", "description": "Coin placed into a cup moves to the outside of the cup" },
+    { "id": "CUPS-2", "video": "man-cups", "priority": "P2", "description": "Other hand places a coin on the table and the coin changes into a cup (appearance of 5 cups)" },
+    { "id": "CUPS-3", "video": "man-cups", "priority": "P2", "description": "Shot starts with 4 cups, implies 5, ends with 3 visible; gold coins in center of table disappear" },
+    { "id": "MIRR-1", "video": "man-in-mirror", "priority": "P4", "description": "Mirror reflection of hair-brushing does not match in-room action (0:04 in-room hand over ear, reflection in front of forehead)" },
+    { "id": "MIRR-2", "video": "man-in-mirror", "priority": "P4", "description": "The brush object itself morphs and changes" },
+    { "id": "PHON-1", "video": "phone", "priority": "P3", "description": "Screen contains garbled text and hand gestures have no effect on the screen UI" },
+    { "id": "OLIV-1", "video": "pouring-olives", "priority": "P4", "description": "Dark purple olives not visible at start (could feasibly be underneath the green)" },
+    { "id": "OLIV-2", "video": "pouring-olives", "priority": "P4", "description": "Amount poured from first container exceeds what arrives in the jar" },
+    { "id": "OLIV-3", "video": "pouring-olives", "priority": "P3", "description": "First container (bowl) becomes a small bottle when set down" },
+    { "id": "OLIV-4", "video": "pouring-olives", "priority": "P3", "description": "Second batch of olives gathers into his hand unnaturally and a container appears around them" },
+    { "id": "SKAT-1", "video": "skateboarder", "priority": "P2", "description": "First jump reveals board underside with only two wheels, unnaturally placed" },
+    { "id": "SKAT-2", "video": "skateboarder", "priority": "P4", "description": "Feet morph together and switch position on the turn" },
+    { "id": "WATC-1", "video": "watchmaker", "priority": "P4", "description": "Small details on the watch morph slightly; winding/spinning action seems unusual" },
+    { "id": "BLOC-1", "video": "weird-blocks", "priority": "P0", "description": "Two green blocks become 8 multicolored blocks" },
+    { "id": "APPL-1", "video": "woman-apple", "priority": "P1", "description": "Apple held unnaturally: closed hand plus clapping hand, nothing holding it up" },
+    { "id": "APPL-2", "video": "woman-apple", "priority": "P3", "description": "Apple disappears after she passes in front of the camera (seen from behind)" },
+    { "id": "CAR-1", "video": "woman-car", "priority": "P0", "description": "Woman's torso pokes out of the hood in front of the windshield (primary defect)" },
+    { "id": "CAR-2", "video": "woman-car", "priority": "P4", "description": "License plate number is garbled" },
+    { "id": "CAR-3", "video": "woman-car", "priority": "P3", "description": "Road topology nonsensical: poles in the middle of the road, lane lines morph" }
+  ],
+  "clean_videos": [
+    { "video": "dialogue", "note": "No defects - test for false positives due to camera movement" }
+  ]
+}

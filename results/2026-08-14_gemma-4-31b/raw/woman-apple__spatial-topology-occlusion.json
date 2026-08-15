@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:24:22.872Z",
+  "latencyMs": 4487,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 667,
+    "total_tokens": 3598,
+    "cost": 0.00067714,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00067714,
+      "upstream_inference_prompt_cost": 0.00041034,
+      "upstream_inference_completions_cost": 0.0002668
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 591,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "market stalls | fruit crates on tables lining both sides of path | consistent | subject walks between them",
+    "blue umbrella | held by subject | moves with subject | occludes upper background",
+    "central path | walkway between stalls | consistent | traversed by subject and pedestrians"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"market stalls | fruit crates on tables lining both sides of path | consistent | subject walks between them\",\n    \"blue umbrella | held by subject | moves with subject | occludes upper background\",\n    \"central path | walkway between stalls | consistent | traversed by subject and pedestrians\"\n  ],\n  \"findings\": []\n}"
+}

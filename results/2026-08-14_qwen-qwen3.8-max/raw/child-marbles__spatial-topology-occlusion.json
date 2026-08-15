@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:49:41.723Z",
+  "latencyMs": 4688,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 6806,
+    "total_tokens": 13465,
+    "cost": 0.054154,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.054154,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.040836
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6467,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | occupies frame center-right, plank seam runs diagonally on right side, knot/grain pattern fixed | same layout, seam and grain unchanged | static; zooms/crops keep seam and grain geometrically consistent",
+    "glass bowl | centered on table in front of child, rim ellipse oriented with near arc at lower-left | same position and orientation | static; rim ellipse shape/orientation consistent across all framings",
+    "small cup with wrapped item | on table right of bowl, left of plank seam | same relative spot; leaves frame right as camera tightens | exit direction matches camera zoom toward bowl",
+    "patio background (paving stones, terracotta pots) | pale paving upper-left; pots along top edge when FOV widens | same arrangement whenever visible | revealed/hidden consistently with field of view",
+    "child in blue jacket | stands at left/far side of bowl, torso left of bowl | remains on same side throughout | never swaps sides; arms reach into bowl from above/left consistently",
+    "child's left hand | rests on/arcs over right rim of bowl from ~3s on | still gripping right rim in final close-ups | consistent anchor point on rim across cuts",
+    "colored balls (red/yellow/green) | cluster inside bowl; a few at table's right edge | inside bowl, being stirred by right hand | motion confined to bowl interior; balls seen through near glass wall, hands occlude balls from above as expected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | occupies frame center-right, plank seam runs diagonally on right side, knot/grain pattern fixed | same layout, seam and grain unchanged | static; zooms/crops keep seam and grain geometrically consistent\",\n    \"glass bowl | centered on table in front of child, rim ellipse oriented with near arc at lower-left | same position and orientation | static; rim ellipse shape/orientation consistent across all framings\",\n    \"small cup with wrapped item | on table right of bowl, left of plank seam | same relative spot; leaves frame right as camera tightens | exit direction matches camera zoom toward bowl\",\n    \"patio background (paving stones, terracotta pots) | pale paving upper-left; pots along top edge when FOV widens | same arrangement whenever visible | revealed/hidden consistently with field of view\",\n    \"child in blue jacket | stands at left/far side of bowl, torso left of bowl | remains on same side throughout | never swaps sides; arms reach into bowl from above/left consistently\",\n    \"child's left hand | rests on/arcs over right rim of bowl from ~3s on | still gripping right rim in final close-ups | consistent anchor point on rim across cuts\",\n    \"colored balls (red/yellow/green) | cluster inside bowl; a few at table's right edge | inside bowl, being stirred by right hand | motion confined to bowl interior; balls seen through near glass wall, hands occlude balls from above as expected\"\n  ],\n  \"findings\": []\n}"
+}

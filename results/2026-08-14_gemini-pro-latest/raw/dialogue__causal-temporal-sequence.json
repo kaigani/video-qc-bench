@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:22.297Z",
+  "latencyMs": 3686,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 803,
+    "total_tokens": 2228,
+    "cost": 0.012486,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012486,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.009636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 627,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's mouth moves -> 00:00 - 00:06 -> speech is heard -> 00:00 - 00:06 -> yes",
+    "man turns body right -> 00:07 -> man walks towards door -> 00:07 - 00:08 -> yes",
+    "man raises hand -> 00:08 -> man's hand contacts door (knocking) -> 00:09 -> yes",
+    "man's hand impacts door -> 00:09 - 00:10 -> knocking sound is produced -> 00:09 - 00:10 -> yes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man's mouth moves -> 00:00 - 00:06 -> speech is heard -> 00:00 - 00:06 -> yes\",\n    \"man turns body right -> 00:07 -> man walks towards door -> 00:07 - 00:08 -> yes\",\n    \"man raises hand -> 00:08 -> man's hand contacts door (knocking) -> 00:09 -> yes\",\n    \"man's hand impacts door -> 00:09 - 00:10 -> knocking sound is produced -> 00:09 - 00:10 -> yes\"\n  ],\n  \"findings\": []\n}"
+}

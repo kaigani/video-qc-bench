@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:27.854Z",
+  "latencyMs": 6023,
+  "usage": {
+    "prompt_tokens": 1447,
+    "completion_tokens": 1077,
+    "total_tokens": 2524,
+    "cost": 0.005124,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005124,
+      "upstream_inference_prompt_cost": 0.00108525,
+      "upstream_inference_completions_cost": 0.00403875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 945,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | holding coin with pinch grip at 00:00 | released coin near front cup at 00:02 | continuous physical contact until placement",
+    "Left hand | holding coin with pinch grip at 00:00 | lowered coin near cup at 00:03 | continuous physical contact until placement",
+    "Cups and coins | resting on table surface at 00:00 | supported by table surface at 00:09 | continuous physical support from table surface throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | holding coin with pinch grip at 00:00 | released coin near front cup at 00:02 | continuous physical contact until placement\",\n    \"Left hand | holding coin with pinch grip at 00:00 | lowered coin near cup at 00:03 | continuous physical contact until placement\",\n    \"Cups and coins | resting on table surface at 00:00 | supported by table surface at 00:09 | continuous physical support from table surface throughout\"\n  ],\n  \"findings\": []\n}"
+}

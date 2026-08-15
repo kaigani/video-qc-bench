@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:47.181Z",
+  "latencyMs": 4632,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1881,
+    "total_tokens": 3333,
+    "cost": 0.025476,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025476,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.022572
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1696,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground Woman | Standing, facing mirror, large tattoo on left arm | Raises and lowers right arm | Feet remain planted on the floor",
+    "Reflection Woman | Standing, facing camera, large tattoo on right arm (correctly mirrored) | Raises and lowers left arm | Feet remain planted on the floor"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Reflection Woman",
+      "invariant_violated": "limb mechanics",
+      "description": "The foreground woman raises her right arm, but her reflection raises its left arm. A true mirror reflection would show the right arm (the one directly opposite the physical arm) moving.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground Woman | Standing, facing mirror, large tattoo on left arm | Raises and lowers right arm | Feet remain planted on the floor\",\n    \"Reflection Woman | Standing, facing camera, large tattoo on right arm (correctly mirrored) | Raises and lowers left arm | Feet remain planted on the floor\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Reflection Woman\",\n      \"invariant_violated\": \"limb mechanics\",\n      \"description\": \"The foreground woman raises her right arm, but her reflection raises its left arm. A true mirror reflection would show the right arm (the one directly opposite the physical arm) moving.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:57:56.804Z",
+  "latencyMs": 8541,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 1276,
+    "total_tokens": 2703,
+    "cost": 0.00585525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00585525,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.004785
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1184,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Market walkway stalls | Flanking left and right sides of central aisle with stacked fruit display tables | Remained stationary along street layout | Maintained consistent 3D parallax during camera orbit",
+    "Woman with blue umbrella | In center foreground facing forward | In profile and rear view holding umbrella | Continuous camera orbital movement around her",
+    "Market pedestrians | Walking along aisle past foreground woman | Walking past background stalls | Occlusion and depth ordering remained consistent throughout camera move"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Market walkway stalls | Flanking left and right sides of central aisle with stacked fruit display tables | Remained stationary along street layout | Maintained consistent 3D parallax during camera orbit\",\n    \"Woman with blue umbrella | In center foreground facing forward | In profile and rear view holding umbrella | Continuous camera orbital movement around her\",\n    \"Market pedestrians | Walking along aisle past foreground woman | Walking past background stalls | Occlusion and depth ordering remained consistent throughout camera move\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:41.037Z",
+  "latencyMs": 6127,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1828,
+    "total_tokens": 3272,
+    "cost": 0.007938,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007938,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.006855
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1517,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white toothbrush | held in right hand at 00:00 | held in right hand at 00:09 | transforms into a dark comb at 00:02 and transforms back into white toothbrush at 00:04",
+    "black comb | appears in right hand at 00:02 | reverts to toothbrush at 00:04 | used to comb hair between 00:02 and 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "toothbrush / comb",
+      "invariant_violated": "identity_and_persistence",
+      "description": "The white toothbrush held in the man's right hand spontaneously transforms into a dark comb as he raises his hand to his hair without picking up another object.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "comb / toothbrush",
+      "invariant_violated": "identity_and_persistence",
+      "description": "The dark comb transforms back into the white toothbrush as he lowers his hand back down from his hair to his mouth.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white toothbrush | held in right hand at 00:00 | held in right hand at 00:09 | transforms into a dark comb at 00:02 and transforms back into white toothbrush at 00:04\",\n    \"black comb | appears in right hand at 00:02 | reverts to toothbrush at 00:04 | used to comb hair between 00:02 and 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"toothbrush / comb\",\n      \"invariant_violated\": \"identity_and_persistence\",\n      \"description\": \"The white toothbrush held in the man's right hand spontaneously transforms into a dark comb as he raises his hand to his hair without picking up another object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"comb / toothbrush\",\n      \"invariant_violated\": \"identity_and_persistence\",\n      \"description\": \"The dark comb transforms back into the white toothbrush as he lowers his hand back down from his hair to his mouth.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

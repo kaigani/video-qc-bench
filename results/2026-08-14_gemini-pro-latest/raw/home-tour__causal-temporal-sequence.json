@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:02.207Z",
+  "latencyMs": 5201,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1072,
+    "total_tokens": 2497,
+    "cost": 0.015714,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015714,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.012864
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 989,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | walking forward into room | walking forward out of room | turns body and head smoothly to reverse direction at 00:05-00:06",
+    "Camera | tracking behind woman | tracking behind woman | pans and moves continuously to follow the woman's path and turn"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | walking forward into room | walking forward out of room | turns body and head smoothly to reverse direction at 00:05-00:06\",\n    \"Camera | tracking behind woman | tracking behind woman | pans and moves continuously to follow the woman's path and turn\"\n  ],\n  \"findings\": []\n}"
+}

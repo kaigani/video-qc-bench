@@ -1,0 +1,64 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:02:23.670Z",
+  "latencyMs": 20344,
+  "usage": {
+    "prompt_tokens": 48487,
+    "completion_tokens": 13361,
+    "total_tokens": 61848,
+    "cost": 0.17714,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.17714,
+      "upstream_inference_prompt_cost": 0.096974,
+      "upstream_inference_completions_cost": 0.080166
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12549,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress (server) | gray hair in bun, light-blue polo, white apron, eyeglasses hanging at collar; behind counter wiping | same wardrobe/accessories at end; last seen rising from stool and as second instance near coffee station | wipes counter at night (00:11-00:18), pours coffee (00:25-00:32), wipes near kitchen pass (00:45-00:51), serves/clears plate (01:10-01:17), moves from behind counter to sit on customer side beside man (~01:20-01:35), watches man leave at window (01:46-01:50), duplicated at 01:52-01:56",
+    "Male customer | graying hair, stubble, brown work jacket over plaid shirt, blue jeans; enters diner ~00:20 | same wardrobe at end; walks out to truck 01:42-01:50 | enters at night, sits at counter near kitchen end (00:25), served coffee and plate, still seated at dawn (00:45-00:51) and morning (01:00-01:26), sits with waitress (01:27-01:35), pays with cash (01:38-01:40), exits"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "single-instance character duplication",
+      "description": "Within one continuous shot, two instances of the waitress appear simultaneously: a semi-transparent copy wiping the counter near the kitchen pass and a solid copy rising from the stool and working at the coffee station on the right. Both move independently for ~5 seconds (01:52-01:57) before merging into one figure, which is too long for a dissolve and is not explained by any cut; the same character occupies two places at once.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:52",
+      "entity": "male customer",
+      "invariant_violated": "presence across cut",
+      "description": "The dawn cutaway (00:52-00:59) shows the counter and stools completely empty, yet the man was seated at the counter in the preceding shot (00:45-00:51, visible in background) and is seated again at the same counter in the following shot (01:00). No exit or movement is shown to account for his absence in the intervening shot.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:36",
+      "entity": "waitress and male customer",
+      "invariant_violated": "presence across cut",
+      "description": "The counter is shown entirely empty at 01:36-01:37 even though the previous shot (01:27-01:35) has both characters seated together at the counter and the next shot (01:38) has the man's hands placing cash beside his mug at that counter. Both characters vanish and reappear with no on-screen movement to explain it.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress (server) | gray hair in bun, light-blue polo, white apron, eyeglasses hanging at collar; behind counter wiping | same wardrobe/accessories at end; last seen rising from stool and as second instance near coffee station | wipes counter at night (00:11-00:18), pours coffee (00:25-00:32), wipes near kitchen pass (00:45-00:51), serves/clears plate (01:10-01:17), moves from behind counter to sit on customer side beside man (~01:20-01:35), watches man leave at window (01:46-01:50), duplicated at 01:52-01:56\",\n    \"Male customer | graying hair, stubble, brown work jacket over plaid shirt, blue jeans; enters diner ~00:20 | same wardrobe at end; walks out to truck 01:42-01:50 | enters at night, sits at counter near kitchen end (00:25), served coffee and plate, still seated at dawn (00:45-00:51) and morning (01:00-01:26), sits with waitress (01:27-01:35), pays with cash (01:38-01:40), exits\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"single-instance character duplication\",\n      \"description\": \"Within one continuous shot, two instances of the waitress appear simultaneously: a semi-transparent copy wiping the counter near the kitchen pass and a solid copy rising from the stool and working at the coffee station on the right. Both move independently for ~5 seconds (01:52-01:57) before merging into one figure, which is too long for a dissolve and is not explained by any cut; the same character occupies two places at once.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:52\",\n      \"entity\": \"male customer\",\n      \"invariant_violated\": \"presence across cut\",\n      \"description\": \"The dawn cutaway (00:52-00:59) shows the counter and stools completely empty, yet the man was seated at the counter in the preceding shot (00:45-00:51, visible in background) and is seated again at the same counter in the following shot (01:00). No exit or movement is shown to account for his absence in the intervening shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"01:36\",\n      \"entity\": \"waitress and male customer\",\n      \"invariant_violated\": \"presence across cut\",\n      \"description\": \"The counter is shown entirely empty at 01:36-01:37 even though the previous shot (01:27-01:35) has both characters seated together at the counter and the next shot (01:38) has the man's hands placing cash beside his mug at that counter. Both characters vanish and reappear with no on-screen movement to explain it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

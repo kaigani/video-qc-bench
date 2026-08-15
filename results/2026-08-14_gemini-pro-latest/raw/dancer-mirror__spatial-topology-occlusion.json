@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:53.689Z",
+  "latencyMs": 4929,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2380,
+    "total_tokens": 3806,
+    "cost": 0.031412,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.031412,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.02856
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2163,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio | Wood floor, two black doors on left wall, large mirror on right wall | Same | None",
+    "Woman | Standing facing the mirror, visible tattoo on her right arm | Same | Raises right arm",
+    "Mirror reflection | Virtual image of the room and woman | Same | Woman's reflection raises the incorrect arm"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection",
+      "invariant_violated": "impossible geometry",
+      "description": "The woman raises her right arm (which has a visible tattoo), but her reflection in the mirror raises its left arm (the arm on the right side of the screen, which has no tattoo). This violates the spatial mapping of a planar mirror, which must reflect the physical movements on the corresponding side.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio | Wood floor, two black doors on left wall, large mirror on right wall | Same | None\",\n    \"Woman | Standing facing the mirror, visible tattoo on her right arm | Same | Raises right arm\",\n    \"Mirror reflection | Virtual image of the room and woman | Same | Woman's reflection raises the incorrect arm\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection\",\n      \"invariant_violated\": \"impossible geometry\",\n      \"description\": \"The woman raises her right arm (which has a visible tattoo), but her reflection in the mirror raises its left arm (the arm on the right side of the screen, which has no tattoo). This violates the spatial mapping of a planar mirror, which must reflect the physical movements on the corresponding side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

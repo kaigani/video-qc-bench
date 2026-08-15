@@ -1,0 +1,41 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:21:44.648Z",
+  "latencyMs": 15515,
+  "usage": {
+    "prompt_tokens": 10630,
+    "completion_tokens": 1742,
+    "total_tokens": 12372,
+    "cost": 0.042164,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042164,
+      "upstream_inference_prompt_cost": 0.02126,
+      "upstream_inference_completions_cost": 0.020904
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1652,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | at counter with rag | counter wiped | continuous wiping motion",
+    "Man | standing at door | seated at counter | walking continuous",
+    "Coffee | in glass pot | in white mug | liquid flows downward when pot tilts",
+    "Money | held by hand | resting on table | hand places bills and releases"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | at counter with rag | counter wiped | continuous wiping motion\",\n    \"Man | standing at door | seated at counter | walking continuous\",\n    \"Coffee | in glass pot | in white mug | liquid flows downward when pot tilts\",\n    \"Money | held by hand | resting on table | hand places bills and releases\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,47 @@
+{
+  "key": "skateboarder__character-continuity",
+  "video": "skateboarder.mp4",
+  "role": "character-continuity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:26:39.173Z",
+  "latencyMs": 9312,
+  "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 2143,
+    "total_tokens": 3567,
+    "cost": 0.028564,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028564,
+      "upstream_inference_prompt_cost": 0.002848,
+      "upstream_inference_completions_cost": 0.025716
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1968,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder | Black t-shirt, dark pants, green socks, red shoes | Black t-shirt, dark pants, green socks, red shoes | Severe anatomical morphing of the right leg during the second jump landing."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Skateboarder",
+      "invariant_violated": "character identity (build)",
+      "description": "During the mid-air portion and landing of the second trick, the character's right leg undergoes severe anatomical distortion, with the lower leg bending backward at an impossible angle before reforming upon landing.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder | Black t-shirt, dark pants, green socks, red shoes | Black t-shirt, dark pants, green socks, red shoes | Severe anatomical morphing of the right leg during the second jump landing.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Skateboarder\",\n      \"invariant_violated\": \"character identity (build)\",\n      \"description\": \"During the mid-air portion and landing of the second trick, the character's right leg undergoes severe anatomical distortion, with the lower leg bending backward at an impossible angle before reforming upon landing.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

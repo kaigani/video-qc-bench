@@ -1,0 +1,44 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:17:44.643Z",
+  "latencyMs": 6028,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 8656,
+    "total_tokens": 15324,
+    "cost": 0.065272,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.065272,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.051936
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8284,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, upright on wooden cutting board | partially filled with mixed green/dark olives, upright in same spot | filled only via visible pouring actions from small glass bowl (0:00-0:04 and 0:06-0:09); fill level monotonically increases",
+    "small glass bowl | held in hands, tilted over jar mouth, containing olives | empty, inverted over jar after final pour | empties into jar (0:01-0:04); refilled during cut while hand reaches into steel bowl (~0:05); empties again (0:07-0:09)",
+    "stainless steel bowl | on counter right of jar, heaped with green olives | nearly empty with a few green/brown olives | count decreases concurrent with person's hand scooping from it (~0:05)",
+    "ceramic bowl | far-right counter, full of green olives | unchanged, full of green olives | no transitions",
+    "olives (aggregate) | green olives distributed across small bowl, steel bowl, ceramic bowl | mixed green and dark olives accumulated in jar; source bowls depleted | transferred only by visible pouring/scooping; dark olives consistent with being layered beneath green olives in source bowls, emerging as bowls empty",
+    "small clear bottle | not within initial framing | upright on counter at right edge from ~0:04 | enters view only when camera reframes/widens; never contacted or moved",
+    "wooden cutting board | on counter, supporting jar | same position and orientation | no transitions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, upright on wooden cutting board | partially filled with mixed green/dark olives, upright in same spot | filled only via visible pouring actions from small glass bowl (0:00-0:04 and 0:06-0:09); fill level monotonically increases\",\n    \"small glass bowl | held in hands, tilted over jar mouth, containing olives | empty, inverted over jar after final pour | empties into jar (0:01-0:04); refilled during cut while hand reaches into steel bowl (~0:05); empties again (0:07-0:09)\",\n    \"stainless steel bowl | on counter right of jar, heaped with green olives | nearly empty with a few green/brown olives | count decreases concurrent with person's hand scooping from it (~0:05)\",\n    \"ceramic bowl | far-right counter, full of green olives | unchanged, full of green olives | no transitions\",\n    \"olives (aggregate) | green olives distributed across small bowl, steel bowl, ceramic bowl | mixed green and dark olives accumulated in jar; source bowls depleted | transferred only by visible pouring/scooping; dark olives consistent with being layered beneath green olives in source bowls, emerging as bowls empty\",\n    \"small clear bottle | not within initial framing | upright on counter at right edge from ~0:04 | enters view only when camera reframes/widens; never contacted or moved\",\n    \"wooden cutting board | on counter, supporting jar | same position and orientation | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

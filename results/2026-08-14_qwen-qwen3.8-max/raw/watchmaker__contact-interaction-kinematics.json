@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:51:08.018Z",
+  "latencyMs": 5807,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 2579,
+    "total_tokens": 9248,
+    "cost": 0.028812,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028812,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.015474
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2318,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | pinches thin tool between thumb and index finger, tip approaching object | empty hand, index finger touching object held by left hand | tool contact ~00:01-00:03; hand withdraws downward at 00:04 (tool deposited off-frame); direct finger contact re-established by 00:05",
+    "left hand | thumb/index pinch supporting small object, wrist watch on wrist | same pinch grip, object steadied while right index finger touches it | grip repositioned 00:05-00:06 without losing contact with object",
+    "thin tool (tweezers) | held in right hand, tips make contact with object by 00:01 | absent from frame after 00:04 | contact with object 00:01-00:03 only; released as right hand withdraws at 00:04",
+    "small round object | pinched in left hand throughout | pinched in left hand throughout | never moves unsupported; every manipulation coincides with visible hand/tool contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | pinches thin tool between thumb and index finger, tip approaching object | empty hand, index finger touching object held by left hand | tool contact ~00:01-00:03; hand withdraws downward at 00:04 (tool deposited off-frame); direct finger contact re-established by 00:05\",\n    \"left hand | thumb/index pinch supporting small object, wrist watch on wrist | same pinch grip, object steadied while right index finger touches it | grip repositioned 00:05-00:06 without losing contact with object\",\n    \"thin tool (tweezers) | held in right hand, tips make contact with object by 00:01 | absent from frame after 00:04 | contact with object 00:01-00:03 only; released as right hand withdraws at 00:04\",\n    \"small round object | pinched in left hand throughout | pinched in left hand throughout | never moves unsupported; every manipulation coincides with visible hand/tool contact\"\n  ],\n  \"findings\": []\n}"
+}

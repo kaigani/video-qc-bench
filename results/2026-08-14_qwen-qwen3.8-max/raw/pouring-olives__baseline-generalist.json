@@ -1,0 +1,44 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:15:12.618Z",
+  "latencyMs": 5196,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 6488,
+    "total_tokens": 12958,
+    "cost": 0.051868,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.051868,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.038928
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6220,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | navy shirt over white tee, rolled sleeves, watch/ring on left wrist | same attire and accessories at end | consistent across all jump cuts",
+    "large glass jar | empty on cutting board | ~40% full of mixed green/dark olives | fill level increases monotonically with each pour, settled pile pattern stable between cuts",
+    "small fluted glass bowl (pour 1) | full of olives, tilted over jar | emptied and set aside by ~4s | normal emptying motion",
+    "glass container (pour 2) | introduced ~6s full of mixed olives | inverted and empty by 9s | appears after jump cut, plausibly fetched off-screen",
+    "stainless steel bowl | full of green olives | partially depleted, few brown olives exposed | level drops after person reaches toward it at ~5s",
+    "ceramic bowl (right) | full of green olives | still full at end | never touched",
+    "background (stove, counters, cutting board stains) | unchanged | unchanged | only camera reframing/jump cuts, no object teleporting"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | navy shirt over white tee, rolled sleeves, watch/ring on left wrist | same attire and accessories at end | consistent across all jump cuts\",\n    \"large glass jar | empty on cutting board | ~40% full of mixed green/dark olives | fill level increases monotonically with each pour, settled pile pattern stable between cuts\",\n    \"small fluted glass bowl (pour 1) | full of olives, tilted over jar | emptied and set aside by ~4s | normal emptying motion\",\n    \"glass container (pour 2) | introduced ~6s full of mixed olives | inverted and empty by 9s | appears after jump cut, plausibly fetched off-screen\",\n    \"stainless steel bowl | full of green olives | partially depleted, few brown olives exposed | level drops after person reaches toward it at ~5s\",\n    \"ceramic bowl (right) | full of green olives | still full at end | never touched\",\n    \"background (stove, counters, cutting board stains) | unchanged | unchanged | only camera reframing/jump cuts, no object teleporting\"\n  ],\n  \"findings\": []\n}"
+}

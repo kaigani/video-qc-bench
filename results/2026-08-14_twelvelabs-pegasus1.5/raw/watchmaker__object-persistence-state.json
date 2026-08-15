@@ -1,0 +1,31 @@
+{
+  "key": "watchmaker__object-persistence-state",
+  "video": "watchmaker.mp4",
+  "role": "object-persistence-state",
+  "model": "twelvelabs/pegasus1.5",
+  "timestamp": "2026-08-15T01:39:28.098Z",
+  "latencyMs": 10280,
+  "usage": {
+    "prompt_tokens": 4632,
+    "completion_tokens": 197,
+    "total_tokens": 4829
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "metal tweezers | held in right hand, tips open | held in right hand, tips open | no state transitions",
+    "small metallic object | held in left hand | held in left hand | no state transitions",
+    "black cylindrical object | not visible initially | held in right hand | appeared at 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "black cylindrical object",
+      "invariant_violated": "persistence",
+      "description": "The black cylindrical object appears in the right hand at 00:06 without any visible action showing it being picked up or introduced into the frame.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"metal tweezers | held in right hand, tips open | held in right hand, tips open | no state transitions\",\n    \"small metallic object | held in left hand | held in left hand | no state transitions\",\n    \"black cylindrical object | not visible initially | held in right hand | appeared at 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"black cylindrical object\",\n      \"invariant_violated\": \"persistence\",\n      \"description\": \"The black cylindrical object appears in the right hand at 00:06 without any visible action showing it being picked up or introduced into the frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

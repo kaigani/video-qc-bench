@@ -1,0 +1,48 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:27.872Z",
+  "latencyMs": 5231,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1181,
+    "total_tokens": 2606,
+    "cost": 0.0054975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0054975,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00442875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 977,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Olives poured from small container 1 (00:00 - 00:03) | Container holds green olives | Container emptied into jar | Dark purple olives spontaneously generate in falling stream",
+    "Olives poured from small container 2 (00:06 - 00:09) | Container holds green olives | Container emptied into jar | Dark purple olives stream out alongside green olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "falling olives stream",
+      "invariant_violated": "effect_without_cause",
+      "description": "Dark purple olives spontaneously appear in mid-air and inside the jar while pouring from a glass container that contains only bright green olives.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Olives poured from small container 1 (00:00 - 00:03) | Container holds green olives | Container emptied into jar | Dark purple olives spontaneously generate in falling stream\",\n    \"Olives poured from small container 2 (00:06 - 00:09) | Container holds green olives | Container emptied into jar | Dark purple olives stream out alongside green olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"falling olives stream\",\n      \"invariant_violated\": \"effect_without_cause\",\n      \"description\": \"Dark purple olives spontaneously appear in mid-air and inside the jar while pouring from a glass container that contains only bright green olives.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

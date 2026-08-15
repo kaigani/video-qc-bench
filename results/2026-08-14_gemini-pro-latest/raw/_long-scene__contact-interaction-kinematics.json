@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:21:38.156Z",
+  "latencyMs": 14105,
+  "usage": {
+    "prompt_tokens": 10657,
+    "completion_tokens": 1825,
+    "total_tokens": 12482,
+    "cost": 0.043214,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.043214,
+      "upstream_inference_prompt_cost": 0.021314,
+      "upstream_inference_completions_cost": 0.0219
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1546,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's hand | holding cloth | holding cloth | wipes counter surface",
+    "woman's hand | gripping coffee pot handle | gripping coffee pot handle | pours coffee into mug",
+    "woman's hands | holding plate and mug | empty | places items on counter",
+    "man's hands | holding folded bills | resting | places money on table and taps it",
+    "man's hand | empty | gripping handle | grabs truck door handle and opens it",
+    "woman's right hand | empty | gripping mug | reaches out and lifts mug from counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "woman's right hand and mug",
+      "invariant_violated": "contact points (floating grip)",
+      "description": "The woman reaches for the white mug on the counter, but her fingers form a loose shape next to it rather than wrapping around the handle or the body of the cup. The mug lifts into the air, moving in tandem with her hand, despite no physical gripping contact being established.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"woman's hand | holding cloth | holding cloth | wipes counter surface\",\n    \"woman's hand | gripping coffee pot handle | gripping coffee pot handle | pours coffee into mug\",\n    \"woman's hands | holding plate and mug | empty | places items on counter\",\n    \"man's hands | holding folded bills | resting | places money on table and taps it\",\n    \"man's hand | empty | gripping handle | grabs truck door handle and opens it\",\n    \"woman's right hand | empty | gripping mug | reaches out and lifts mug from counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"woman's right hand and mug\",\n      \"invariant_violated\": \"contact points (floating grip)\",\n      \"description\": \"The woman reaches for the white mug on the counter, but her fingers form a loose shape next to it rather than wrapping around the handle or the body of the cup. The mug lifts into the air, moving in tandem with her hand, despite no physical gripping contact being established.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}\n```"
+}

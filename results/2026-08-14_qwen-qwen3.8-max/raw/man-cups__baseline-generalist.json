@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:03:37.260Z",
+  "latencyMs": 6375,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 8011,
+    "total_tokens": 14481,
+    "cost": 0.061006,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.061006,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.048066
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7436,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "cups (4) | diamond arrangement, middle cup topped by large gold coin | still 4, rearranged into row then cluster | man rearranges them ~00:04",
+    "man in blue suit | only arm visible (blue sleeve, white cuff) | blue suit, red tie, black bow tie, glasses, beard, yellow pocket square | revealed as camera pulls back 00:04-00:05",
+    "hands at table | 1 hand holding coin at 00:00; three hands visible 00:01-00:02 | 2 hands manipulating cups at end | extra third hand appears briefly"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "hands of the person at the table",
+      "invariant_violated": "two-hands-per-person anatomy",
+      "description": "At 00:01-00:02 a pair of hands rests at the top of the frame (one showing the white shirt cuff) while a third hand simultaneously enters from the lower left to manipulate the front cup. Only one person (the man in the blue suit) is seated at the table, and only two hands are shown before and after, leaving the third hand unexplained.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "coin resting on middle cup",
+      "invariant_violated": "object identity/color continuity",
+      "description": "The large embossed gold coin sitting on the middle cup from 00:00-00:02 appears as a silver/white coin at 00:03, although neither hand touched that cup in the interim; the metal color change is unexplained.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "man's neckwear",
+      "invariant_violated": "plausible costume",
+      "description": "Once the man's upper body is visible (00:05-00:09) he wears both a black bow tie at the collar and a red necktie hanging down simultaneously, an implausible combination that reads as a generation artifact rather than intentional styling.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"cups (4) | diamond arrangement, middle cup topped by large gold coin | still 4, rearranged into row then cluster | man rearranges them ~00:04\",\n    \"man in blue suit | only arm visible (blue sleeve, white cuff) | blue suit, red tie, black bow tie, glasses, beard, yellow pocket square | revealed as camera pulls back 00:04-00:05\",\n    \"hands at table | 1 hand holding coin at 00:00; three hands visible 00:01-00:02 | 2 hands manipulating cups at end | extra third hand appears briefly\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"hands of the person at the table\",\n      \"invariant_violated\": \"two-hands-per-person anatomy\",\n      \"description\": \"At 00:01-00:02 a pair of hands rests at the top of the frame (one showing the white shirt cuff) while a third hand simultaneously enters from the lower left to manipulate the front cup. Only one person (the man in the blue suit) is seated at the table, and only two hands are shown before and after, leaving the third hand unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coin resting on middle cup\",\n      \"invariant_violated\": \"object identity/color continuity\",\n      \"description\": \"The large embossed gold coin sitting on the middle cup from 00:00-00:02 appears as a silver/white coin at 00:03, although neither hand touched that cup in the interim; the metal color change is unexplained.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"man's neckwear\",\n      \"invariant_violated\": \"plausible costume\",\n      \"description\": \"Once the man's upper body is visible (00:05-00:09) he wears both a black bow tie at the collar and a red necktie hanging down simultaneously, an implausible combination that reads as a generation artifact rather than intentional styling.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

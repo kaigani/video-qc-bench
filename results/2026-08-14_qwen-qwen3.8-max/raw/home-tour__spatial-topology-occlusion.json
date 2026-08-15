@@ -1,0 +1,53 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:03:04.196Z",
+  "latencyMs": 3986,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 7910,
+    "total_tokens": 14569,
+    "cost": 0.060778,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.060778,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.04746
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7470,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | starts at kitchen microwave counter (right/east wall) | ends walking out of bedroom toward kitchen | walks N through galley kitchen, turns into corridor past portrait wall, enters bedroom E, turns back and exits W",
+    "kitchen west wall | stove with stainless hood, sink under window | (at end) left wall shows stove with microwave mounted above, no hood | appliance stack configuration differs between start and end views",
+    "kitchen east wall | countertop microwave under upper cabinets | not re-shown directly | microwave location contradicted by end view",
+    "back door (white, curtained window) | at north end of kitchen hall | seen again through bedroom doorway | position consistent",
+    "portrait wall (blue-flower portrait + small green frame) | on right wall at kitchen hall end | on left when entering/exiting bedroom | consistent single wall at corridor corner",
+    "bedroom | bed on far wall, windows left and right, chandelier | same when exiting | internal layout consistent",
+    "abstract painting + photo table | beside bedroom door inside bedroom | beside doorway at end | consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen appliance wall",
+      "invariant_violated": "scene layout consistency",
+      "description": "In the opening shots the galley kitchen has the stove with a stainless range hood on the left wall and a standalone countertop microwave on the opposite right wall. In the final shot looking back into the same kitchen (same door with curtained window at the end, same cabinet wood), the left wall now shows the microwave built into the upper cabinetry directly above the stove, the range hood is gone, and open shelving appears in the upper cabinets. Two appliances established on opposite walls are now stacked on one wall with no camera-position explanation.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | starts at kitchen microwave counter (right/east wall) | ends walking out of bedroom toward kitchen | walks N through galley kitchen, turns into corridor past portrait wall, enters bedroom E, turns back and exits W\",\n    \"kitchen west wall | stove with stainless hood, sink under window | (at end) left wall shows stove with microwave mounted above, no hood | appliance stack configuration differs between start and end views\",\n    \"kitchen east wall | countertop microwave under upper cabinets | not re-shown directly | microwave location contradicted by end view\",\n    \"back door (white, curtained window) | at north end of kitchen hall | seen again through bedroom doorway | position consistent\",\n    \"portrait wall (blue-flower portrait + small green frame) | on right wall at kitchen hall end | on left when entering/exiting bedroom | consistent single wall at corridor corner\",\n    \"bedroom | bed on far wall, windows left and right, chandelier | same when exiting | internal layout consistent\",\n    \"abstract painting + photo table | beside bedroom door inside bedroom | beside doorway at end | consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"kitchen appliance wall\",\n      \"invariant_violated\": \"scene layout consistency\",\n      \"description\": \"In the opening shots the galley kitchen has the stove with a stainless range hood on the left wall and a standalone countertop microwave on the opposite right wall. In the final shot looking back into the same kitchen (same door with curtained window at the end, same cabinet wood), the left wall now shows the microwave built into the upper cabinetry directly above the stove, the range hood is gone, and open shelving appears in the upper cabinets. Two appliances established on opposite walls are now stacked on one wall with no camera-position explanation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

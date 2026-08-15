@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:08:54.109Z",
+  "latencyMs": 14476,
+  "usage": {
+    "prompt_tokens": 2741,
+    "completion_tokens": 2190,
+    "total_tokens": 4931,
+    "cost": 0.00424575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00424575,
+      "upstream_inference_prompt_cost": 0.00205575,
+      "upstream_inference_completions_cost": 0.00219
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2068,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | standing | cleaning counter | pours coffee, slides mug, wipes counter",
+    "Man | entering | exiting | walks in, sits at counter, drinks coffee, leaves",
+    "Coffee | in pot | in mug | poured from pot into mug",
+    "Mug | on counter | in man's hand | fills with coffee, slid across counter, grasped by man",
+    "Money | in man's possession | on counter | placed on counter"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | standing | cleaning counter | pours coffee, slides mug, wipes counter\",\n    \"Man | entering | exiting | walks in, sits at counter, drinks coffee, leaves\",\n    \"Coffee | in pot | in mug | poured from pot into mug\",\n    \"Mug | on counter | in man's hand | fills with coffee, slid across counter, grasped by man\",\n    \"Money | in man's possession | on counter | placed on counter\"\n  ],\n  \"findings\": []\n}"
+}

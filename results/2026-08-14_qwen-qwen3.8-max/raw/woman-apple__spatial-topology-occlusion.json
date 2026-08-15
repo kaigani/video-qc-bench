@@ -1,0 +1,47 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:30:38.594Z",
+  "latencyMs": 6219,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 8119,
+    "total_tokens": 14778,
+    "cost": 0.062032,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.062032,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.048714
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7617,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "west stall row (frame-left at start) | continuous line of crates under red awnings: lemons/avocados/oranges/limes/hanging tomato bundles, hanging bulbs | same continuous row shows oranges/teal crates at 5-6s and bread trays on purple trays when viewed from behind at 9s (now frame-right) | camera tracks along it, then 180-degree orbit flips it to frame-right, order of produce consistent",
+    "east stall row (frame-right at start) | wooden crates of red apples/limes, blue plastic bins, red awnings | same row further along at 9s (now frame-left) with tomato/produce crates | side flip matches camera orbit to behind the woman",
+    "central aisle | straight pedestrian corridor between the two stall rows, red umbrellas receding to vanishing point | same corridor seen from opposite direction at 9s | camera moves forward then orbits around the woman",
+    "main woman with apple | walking toward camera, center aisle | walking away from camera at 9s | camera overtakes/orbits her between 6-9s; her rotation relative to frame is consistent with a single continuous orbit",
+    "blue umbrella | canopy overhead occluding awnings and buildings correctly | still overhead, pole aligned to her hand | stays rigidly attached above her through all angles",
+    "woman in light-blue tee | enters frame-left foreground at 1s walking away | receding mid-aisle at 4-5s, right of center | passes camera then falls behind main woman; occlusion by main woman after depth crossover is correct",
+    "man in white polo | enters extreme left foreground at 3s walking away | receding right-of-center at 5s | frame-left to frame-right shift matches camera pan direction",
+    "woman in red polo | approaching from mid-distance right | exits frame right ~5s | monotonic approach, stays east side of aisle",
+    "man in green tee | approaching center-right | passed camera/out of frame by 5s | monotonic approach",
+    "woman in white top (background) | frame-left background at 7s facing camera | frame-right background at 9s facing camera | left-to-right drift matches camera orbit direction"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"west stall row (frame-left at start) | continuous line of crates under red awnings: lemons/avocados/oranges/limes/hanging tomato bundles, hanging bulbs | same continuous row shows oranges/teal crates at 5-6s and bread trays on purple trays when viewed from behind at 9s (now frame-right) | camera tracks along it, then 180-degree orbit flips it to frame-right, order of produce consistent\",\n    \"east stall row (frame-right at start) | wooden crates of red apples/limes, blue plastic bins, red awnings | same row further along at 9s (now frame-left) with tomato/produce crates | side flip matches camera orbit to behind the woman\",\n    \"central aisle | straight pedestrian corridor between the two stall rows, red umbrellas receding to vanishing point | same corridor seen from opposite direction at 9s | camera moves forward then orbits around the woman\",\n    \"main woman with apple | walking toward camera, center aisle | walking away from camera at 9s | camera overtakes/orbits her between 6-9s; her rotation relative to frame is consistent with a single continuous orbit\",\n    \"blue umbrella | canopy overhead occluding awnings and buildings correctly | still overhead, pole aligned to her hand | stays rigidly attached above her through all angles\",\n    \"woman in light-blue tee | enters frame-left foreground at 1s walking away | receding mid-aisle at 4-5s, right of center | passes camera then falls behind main woman; occlusion by main woman after depth crossover is correct\",\n    \"man in white polo | enters extreme left foreground at 3s walking away | receding right-of-center at 5s | frame-left to frame-right shift matches camera pan direction\",\n    \"woman in red polo | approaching from mid-distance right | exits frame right ~5s | monotonic approach, stays east side of aisle\",\n    \"man in green tee | approaching center-right | passed camera/out of frame by 5s | monotonic approach\",\n    \"woman in white top (background) | frame-left background at 7s facing camera | frame-right background at 9s facing camera | left-to-right drift matches camera orbit direction\"\n  ],\n  \"findings\": []\n}"
+}

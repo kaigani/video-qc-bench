@@ -1,0 +1,64 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:27.657Z",
+  "latencyMs": 6645,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2391,
+    "total_tokens": 3835,
+    "cost": 0.03158,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03158,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.028692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1994,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Umbrella | Blue canopy, thin metal shaft positioned behind right shoulder, unsupported by hands | Blue canopy, thick metal shaft held in right hand | Shaft teleports between left and right sides, suddenly appears in hand, changes thickness",
+    "Apple | Red, held in both hands | Red, held in left hand | Grasp changes from two-handed to one-handed without visible transition"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Umbrella",
+      "invariant_violated": "location & orientation",
+      "description": "The umbrella's shaft instantaneously teleports from being positioned behind the woman's right shoulder to being in front of her left shoulder without any visible movement.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Umbrella",
+      "invariant_violated": "location & orientation",
+      "description": "The umbrella's shaft teleports again, instantly moving from the woman's left side back to her right side.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Umbrella",
+      "invariant_violated": "ownership & possession",
+      "description": "The woman's right hand, which was previously holding the apple along with her left hand, is instantly shown holding the umbrella shaft. The shaft materializes in her grip without being moved there, and its physical thickness noticeably increases.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Umbrella | Blue canopy, thin metal shaft positioned behind right shoulder, unsupported by hands | Blue canopy, thick metal shaft held in right hand | Shaft teleports between left and right sides, suddenly appears in hand, changes thickness\",\n    \"Apple | Red, held in both hands | Red, held in left hand | Grasp changes from two-handed to one-handed without visible transition\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Umbrella\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The umbrella's shaft instantaneously teleports from being positioned behind the woman's right shoulder to being in front of her left shoulder without any visible movement.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Umbrella\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The umbrella's shaft teleports again, instantly moving from the woman's left side back to her right side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Umbrella\",\n      \"invariant_violated\": \"ownership & possession\",\n      \"description\": \"The woman's right hand, which was previously holding the apple along with her left hand, is instantly shown holding the umbrella shaft. The shaft materializes in her grip without being moved there, and its physical thickness noticeably increases.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

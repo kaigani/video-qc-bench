@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:20.811Z",
+  "latencyMs": 3999,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 2085,
+    "total_tokens": 3537,
+    "cost": 0.027924,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027924,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.02502
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1929,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left hand | Gripping small mechanical object firmly | Maintains stable grip on object | Continuous contact and support throughout",
+    "Right hand (tweezers) | Gripping tweezers with thumb and fingers | Moves downward out of frame | Tweezers maintain contact with hand, interact with object until 00:04",
+    "Right hand (screwdriver) | Moves upward holding precision screwdriver | Precision grip with index on swivel top | Correct kinematic rotation of screwdriver from 00:06-00:09",
+    "Mechanical object | Supported by left hand | Maintained in left hand | Interacted with by tweezers then screwdriver without floating or clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Left hand | Gripping small mechanical object firmly | Maintains stable grip on object | Continuous contact and support throughout\",\n    \"Right hand (tweezers) | Gripping tweezers with thumb and fingers | Moves downward out of frame | Tweezers maintain contact with hand, interact with object until 00:04\",\n    \"Right hand (screwdriver) | Moves upward holding precision screwdriver | Precision grip with index on swivel top | Correct kinematic rotation of screwdriver from 00:06-00:09\",\n    \"Mechanical object | Supported by left hand | Maintained in left hand | Interacted with by tweezers then screwdriver without floating or clipping\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,58 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:41.466Z",
+  "latencyMs": 4652,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1096,
+    "total_tokens": 2521,
+    "cost": 0.016002,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016002,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.013152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 759,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person walking → 00:00 → moves down stairs and away → 00:02 → plausible",
+    "Hand holding phone → 00:00 → phone remains in hand → 00:09 → plausible",
+    "No user interaction with screen → 00:03 → text on screen morphs and changes layout → 00:06 → implausible",
+    "Thumb taps screen → 00:06 → no corresponding logical reaction on screen → 00:08 → implausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "phone screen text",
+      "invariant_violated": "effect-without-cause",
+      "description": "The text and numbers on the phone screen continuously morph, change layout, and update without any corresponding swiping or typing actions from the user.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "phone screen",
+      "invariant_violated": "cause-without-effect",
+      "description": "The user's thumb makes tapping motions on the screen, but the interface does not react to these specific inputs; instead, the text continues its independent morphing.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Person walking → 00:00 → moves down stairs and away → 00:02 → plausible\",\n    \"Hand holding phone → 00:00 → phone remains in hand → 00:09 → plausible\",\n    \"No user interaction with screen → 00:03 → text on screen morphs and changes layout → 00:06 → implausible\",\n    \"Thumb taps screen → 00:06 → no corresponding logical reaction on screen → 00:08 → implausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"phone screen text\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"The text and numbers on the phone screen continuously morph, change layout, and update without any corresponding swiping or typing actions from the user.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"phone screen\",\n      \"invariant_violated\": \"cause-without-effect\",\n      \"description\": \"The user's thumb makes tapping motions on the screen, but the interface does not react to these specific inputs; instead, the text continues its independent morphing.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

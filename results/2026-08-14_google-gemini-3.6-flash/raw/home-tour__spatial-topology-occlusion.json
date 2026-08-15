@@ -1,0 +1,57 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:17.131Z",
+  "latencyMs": 4782,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3842,
+    "total_tokens": 5268,
+    "cost": 0.015477,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015477,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0144075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3432,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen layout | counter on left with window, sink, red kettle, and separate microwave on right counter | counter on left features an over-the-range microwave above stove and cabinets | kitchen layout transforms between shots",
+    "hallway wall & bedroom doorway | connects kitchen and bedroom with blue picture wall in hallway | doorway opens directly onto kitchen counter and stove | corridor spatial geometry shifts upon exiting bedroom",
+    "woman (subject) | walks through kitchen and hallway into bedroom | walks back out of bedroom into kitchen | navigates morphing room geometry"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "hallway wall and doorway topology",
+      "invariant_violated": "connectivity",
+      "description": "At 00:07, looking through the bedroom doorway, the corridor straight ahead and to the left is bounded by hallway walls featuring framed artwork. As the camera advances through the door at 00:08–00:09, the left hallway wall disappears and connects directly into kitchen cabinetry and appliances.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen layout and appliances",
+      "invariant_violated": "scene layout",
+      "description": "The kitchen counter layout along the left wall is altered when re-entering the space. At 00:01, the left side contains a window over a sink and a red kettle next to the stove. At 00:09, the left side wall features an over-the-range microwave mounted directly above the stove, replacing the window and sink layout shown earlier.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen layout | counter on left with window, sink, red kettle, and separate microwave on right counter | counter on left features an over-the-range microwave above stove and cabinets | kitchen layout transforms between shots\",\n    \"hallway wall & bedroom doorway | connects kitchen and bedroom with blue picture wall in hallway | doorway opens directly onto kitchen counter and stove | corridor spatial geometry shifts upon exiting bedroom\",\n    \"woman (subject) | walks through kitchen and hallway into bedroom | walks back out of bedroom into kitchen | navigates morphing room geometry\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"hallway wall and doorway topology\",\n      \"invariant_violated\": \"connectivity\",\n      \"description\": \"At 00:07, looking through the bedroom doorway, the corridor straight ahead and to the left is bounded by hallway walls featuring framed artwork. As the camera advances through the door at 00:08–00:09, the left hallway wall disappears and connects directly into kitchen cabinetry and appliances.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"kitchen layout and appliances\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The kitchen counter layout along the left wall is altered when re-entering the space. At 00:01, the left side contains a window over a sink and a red kettle next to the stove. At 00:09, the left side wall features an over-the-range microwave mounted directly above the stove, replacing the window and sink layout shown earlier.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

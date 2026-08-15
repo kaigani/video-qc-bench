@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:27.025Z",
+  "latencyMs": 6481,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 790,
+    "total_tokens": 2216,
+    "cost": 0.004032,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004032,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0029625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 652,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Round game table | Positioned in center of room with patterned red cloth | Remains fixed in room space | Camera orbits continuously around table",
+    "Metal and red cups | Clustered near center of round table | Fixed relative to table surface | Viewed from changing camera angles during camera pull-back and rotation",
+    "Performer | Seated directly behind table | Remains seated at table throughout | Gradually revealed as camera retreats and elevates",
+    "Background windows and chairs | Positioned behind performer against far wall | Fixed background layout | Displays accurate parallax shift during camera rotation"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Round game table | Positioned in center of room with patterned red cloth | Remains fixed in room space | Camera orbits continuously around table\",\n    \"Metal and red cups | Clustered near center of round table | Fixed relative to table surface | Viewed from changing camera angles during camera pull-back and rotation\",\n    \"Performer | Seated directly behind table | Remains seated at table throughout | Gradually revealed as camera retreats and elevates\",\n    \"Background windows and chairs | Positioned behind performer against far wall | Fixed background layout | Displays accurate parallax shift during camera rotation\"\n  ],\n  \"findings\": []\n}"
+}

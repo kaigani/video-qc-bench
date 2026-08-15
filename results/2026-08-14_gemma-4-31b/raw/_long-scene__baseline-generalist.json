@@ -1,0 +1,57 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:07:14.507Z",
+  "latencyMs": 23196,
+  "usage": {
+    "prompt_tokens": 2554,
+    "completion_tokens": 3332,
+    "total_tokens": 5886,
+    "cost": 0.0052475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0052475,
+      "upstream_inference_prompt_cost": 0.0019155,
+      "upstream_inference_completions_cost": 0.003332
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3045,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | brown jacket, jeans | brown jacket, jeans | enters diner, eats, leaves",
+    "Waitress | blue shirt, white apron | blue shirt, white apron | serves man, cleans counter",
+    "Truck | white semi | green box truck | changes model between start and end"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:09",
+      "entity": "Food/Coffee",
+      "invariant_violated": "Continuity",
+      "description": "The man is already served and eating breakfast at 00:38, but the waitress is shown serving him the same meal and coffee again at 01:09.",
+      "severity": "moderate",
+      "confidence": 1
+    },
+    {
+      "timestamp": "01:43",
+      "entity": "Truck",
+      "invariant_violated": "Object Consistency",
+      "description": "The white semi-truck with a sleeper cab shown at the start (00:00) is replaced by a green box truck when the man departs at 01:43.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | brown jacket, jeans | brown jacket, jeans | enters diner, eats, leaves\",\n    \"Waitress | blue shirt, white apron | blue shirt, white apron | serves man, cleans counter\",\n    \"Truck | white semi | green box truck | changes model between start and end\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:09\",\n      \"entity\": \"Food/Coffee\",\n      \"invariant_violated\": \"Continuity\",\n      \"description\": \"The man is already served and eating breakfast at 00:38, but the waitress is shown serving him the same meal and coffee again at 01:09.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"Truck\",\n      \"invariant_violated\": \"Object Consistency\",\n      \"description\": \"The white semi-truck with a sleeper cab shown at the start (00:00) is replaced by a green box truck when the man departs at 01:43.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,45 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:09:04.210Z",
+  "latencyMs": 12414,
+  "usage": {
+    "prompt_tokens": 2746,
+    "completion_tokens": 1618,
+    "total_tokens": 4364,
+    "cost": 0.0036775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 256,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0036775,
+      "upstream_inference_prompt_cost": 0.0020595,
+      "upstream_inference_completions_cost": 0.001618
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1519,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [],
+  "findings": [
+    {
+      "timestamp": "00:10",
+      "entity": "red balls",
+      "invariant_violated": "object_count",
+      "description": "The number of red balls increases from two to at least three during the stirring motion.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"red balls\",\n      \"invariant_violated\": \"object_count\",\n      \"description\": \"The number of red balls increases from two to at least three during the stirring motion.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

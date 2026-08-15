@@ -1,0 +1,66 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:22:00.385Z",
+  "latencyMs": 2280,
+  "usage": {
+    "prompt_tokens": 2949,
+    "completion_tokens": 5773,
+    "total_tokens": 8722,
+    "cost": 0.00272206,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00272206,
+      "upstream_inference_prompt_cost": 0.00041286,
+      "upstream_inference_completions_cost": 0.0023092
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3572,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Leftmost Cube | pos: left, color: green, val: 2 | pos: 2nd, color: blue, val: 3 | 00:01: transformed from green 2 to blue 3 during rotation",
+    "Rightmost Cube | pos: right, color: green, val: 2 | pos: 3rd, color: green, val: 2 | None",
+    "Blue Cube 2 | N/A | pos: 1st, color: blue, val: 2 | 00:01: spontaneously appeared",
+    "Green Cube 3 | N/A | pos: 4th, color: green, val: 3 | 00:02: placed by hand",
+    "Brown Cube 2a | N/A | pos: 5th, color: brown, val: 2 | 00:03: placed by hand",
+    "Brown Cube 2b | N/A | pos: 6th, color: brown, val: 2 | 00:04: placed by hand",
+    "Brown Cube 2c | N/A | pos: 7th, color: brown, val: 2 | 00:04: placed by hand",
+    "Blue Cube 3b | N/A | pos: 8th, color: blue, val: 3 | 00:05: placed by hand",
+    "Green Cube 3b | N/A | pos: 9th, color: green, val: 3 | 00:06: placed by hand",
+    "Blue Cube 2b | N/A | pos: 10th, color: blue, val: 2 | 00:06: placed by hand",
+    "Blue Cube 3c | N/A | pos: 11th, color: blue, val: 3 | 00:07: placed by hand",
+    "Blue Cube 6 | N/A | pos: 12th, color: blue, val: 6 | 00:08: placed by hand"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Leftmost Cube",
+      "invariant_violated": "identity & persistence",
+      "description": "The green cube with value '2' transforms into a blue cube with value '3' while being rotated by the hand.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Blue Cube 2",
+      "invariant_violated": "identity & persistence",
+      "description": "A blue cube with value '2' spontaneously appears at the leftmost position of the sequence without being placed by the hand.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Leftmost Cube | pos: left, color: green, val: 2 | pos: 2nd, color: blue, val: 3 | 00:01: transformed from green 2 to blue 3 during rotation\",\n    \"Rightmost Cube | pos: right, color: green, val: 2 | pos: 3rd, color: green, val: 2 | None\",\n    \"Blue Cube 2 | N/A | pos: 1st, color: blue, val: 2 | 00:01: spontaneously appeared\",\n    \"Green Cube 3 | N/A | pos: 4th, color: green, val: 3 | 00:02: placed by hand\",\n    \"Brown Cube 2a | N/A | pos: 5th, color: brown, val: 2 | 00:03: placed by hand\",\n    \"Brown Cube 2b | N/A | pos: 6th, color: brown, val: 2 | 00:04: placed by hand\",\n    \"Brown Cube 2c | N/A | pos: 7th, color: brown, val: 2 | 00:04: placed by hand\",\n    \"Blue Cube 3b | N/A | pos: 8th, color: blue, val: 3 | 00:05: placed by hand\",\n    \"Green Cube 3b | N/A | pos: 9th, color: green, val: 3 | 00:06: placed by hand\",\n    \"Blue Cube 2b | N/A | pos: 10th, color: blue, val: 2 | 00:06: placed by hand\",\n    \"Blue Cube 3c | N/A | pos: 11th, color: blue, val: 3 | 00:07: placed by hand\",\n    \"Blue Cube 6 | N/A | pos: 12th, color: blue, val: 6 | 00:08: placed by hand\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Leftmost Cube\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The green cube with value '2' transforms into a blue cube with value '3' while being rotated by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Blue Cube 2\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"A blue cube with value '2' spontaneously appears at the leftmost position of the sequence without being placed by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

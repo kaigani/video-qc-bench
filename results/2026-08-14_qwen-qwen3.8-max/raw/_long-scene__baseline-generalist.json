@@ -1,0 +1,90 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:00:43.234Z",
+  "latencyMs": 18852,
+  "usage": {
+    "prompt_tokens": 48307,
+    "completion_tokens": 8269,
+    "total_tokens": 56576,
+    "cost": 0.146228,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.146228,
+      "upstream_inference_prompt_cost": 0.096614,
+      "upstream_inference_completions_cost": 0.049614
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7290,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner exterior | night, neon OPEN lit, white aerodynamic semi parked with exhaust smoke | morning, dark-green conventional box truck parked, white semi gone | truck swap never shown or explained",
+    "waitress | blue-gray shirt, white apron, glasses hung on chest | same attire at end | appears as two simultaneous copies in final shot",
+    "male customer | absent at start, arrives at night in brown jacket | departs at sunrise after leaving cash | first glimpsed walking inside the kitchen pass-through before entering the dining room",
+    "breakfast plate | night close-up: fried egg plus thick wedge of crusty toast | morning serve: flatter toast/eggs | plate already in front of man at night before the morning serving scene"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:11",
+      "entity": "diner interior window light",
+      "invariant_violated": "day/night continuity",
+      "description": "Interior shots 00:11-00:18 show the left window blown out with bright daylight, yet they are sandwiched between the dark night exterior (00:00-00:10) and the dark blue night interior that follows (00:19+); the ambient light level is inconsistent with the established time of night.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:20",
+      "entity": "male customer",
+      "invariant_violated": "entrance blocking",
+      "description": "The man is first visible as a silhouette walking inside the kitchen pass-through window, then emerges into the dining room from the kitchen side. A customer should enter through the front glass door seen in the exterior shots; the kitchen is not a customer entrance.",
+      "severity": "minor",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:37",
+      "entity": "breakfast plate",
+      "invariant_violated": "temporal order / food continuity",
+      "description": "At night (00:33-00:44) the man already has a plated meal (fried egg plus a thick wedge of crusty toast) in front of him, yet at 01:10, now in morning light, the waitress is shown serving him the plate for the first time, and the toast shape differs (flat slice vs thick wedge). The meal exists before it is served.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:39",
+      "entity": "cash close-up",
+      "invariant_violated": "prop legibility",
+      "description": "The banknote is a garbled $100-style bill: portrait, seal and numerals are present but the printed text is illegible AI-style gibberish and the layout does not match real currency, which is noticeable in a tight close-up.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "truck",
+      "invariant_violated": "vehicle continuity",
+      "description": "The opening night shots feature a white aerodynamic semi parked outside with running exhaust, implying it is the customer's truck. At 01:41 the man walks out to a completely different vehicle - a dark green conventional-cab box truck - and the white semi is gone. No arrival/departure of either truck is shown to explain the swap.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "character duplication",
+      "description": "Two copies of the waitress are visible simultaneously for several seconds: one rises from the counter stool and walks behind the counter while another identical waitress wipes the counter in the background. Only a single waitress was established throughout the video, so this reads as a temporal ghosting/duplication artifact rather than a second character.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner exterior | night, neon OPEN lit, white aerodynamic semi parked with exhaust smoke | morning, dark-green conventional box truck parked, white semi gone | truck swap never shown or explained\",\n    \"waitress | blue-gray shirt, white apron, glasses hung on chest | same attire at end | appears as two simultaneous copies in final shot\",\n    \"male customer | absent at start, arrives at night in brown jacket | departs at sunrise after leaving cash | first glimpsed walking inside the kitchen pass-through before entering the dining room\",\n    \"breakfast plate | night close-up: fried egg plus thick wedge of crusty toast | morning serve: flatter toast/eggs | plate already in front of man at night before the morning serving scene\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:11\",\n      \"entity\": \"diner interior window light\",\n      \"invariant_violated\": \"day/night continuity\",\n      \"description\": \"Interior shots 00:11-00:18 show the left window blown out with bright daylight, yet they are sandwiched between the dark night exterior (00:00-00:10) and the dark blue night interior that follows (00:19+); the ambient light level is inconsistent with the established time of night.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"00:20\",\n      \"entity\": \"male customer\",\n      \"invariant_violated\": \"entrance blocking\",\n      \"description\": \"The man is first visible as a silhouette walking inside the kitchen pass-through window, then emerges into the dining room from the kitchen side. A customer should enter through the front glass door seen in the exterior shots; the kitchen is not a customer entrance.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:37\",\n      \"entity\": \"breakfast plate\",\n      \"invariant_violated\": \"temporal order / food continuity\",\n      \"description\": \"At night (00:33-00:44) the man already has a plated meal (fried egg plus a thick wedge of crusty toast) in front of him, yet at 01:10, now in morning light, the waitress is shown serving him the plate for the first time, and the toast shape differs (flat slice vs thick wedge). The meal exists before it is served.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"cash close-up\",\n      \"invariant_violated\": \"prop legibility\",\n      \"description\": \"The banknote is a garbled $100-style bill: portrait, seal and numerals are present but the printed text is illegible AI-style gibberish and the layout does not match real currency, which is noticeable in a tight close-up.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"truck\",\n      \"invariant_violated\": \"vehicle continuity\",\n      \"description\": \"The opening night shots feature a white aerodynamic semi parked outside with running exhaust, implying it is the customer's truck. At 01:41 the man walks out to a completely different vehicle - a dark green conventional-cab box truck - and the white semi is gone. No arrival/departure of either truck is shown to explain the swap.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"character duplication\",\n      \"description\": \"Two copies of the waitress are visible simultaneously for several seconds: one rises from the counter stool and walks behind the counter while another identical waitress wipes the counter in the background. Only a single waitress was established throughout the video, so this reads as a temporal ghosting/duplication artifact rather than a second character.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

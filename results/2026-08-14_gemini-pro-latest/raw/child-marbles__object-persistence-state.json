@@ -1,0 +1,50 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:01.753Z",
+  "latencyMs": 4793,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 836,
+    "total_tokens": 2280,
+    "cost": 0.01292,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01292,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.010032
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 583,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Clear glass bowl | On wooden table, upright | On wooden table, upright | No notable transitions",
+    "Colorful balls in bowl | Inside bowl, opaque, solid | Inside bowl, translucent, hollow | Abruptly transform from solid opaque balls to translucent hollow shells at 00:05",
+    "Small cup/object | On table right side | On table right side | No notable transitions",
+    "Loose balls on right edge | On table right side | On table right side | Mostly out of frame, no visible transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Colorful balls in bowl",
+      "invariant_violated": "Identity & Persistence",
+      "description": "The solid, opaque balls (red, yellow, green) inside the bowl abruptly transform into translucent, hollow, shell-like objects as the child begins to mix them. The original solid objects vanish and are replaced by these new objects without any logical physical transition.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Clear glass bowl | On wooden table, upright | On wooden table, upright | No notable transitions\",\n    \"Colorful balls in bowl | Inside bowl, opaque, solid | Inside bowl, translucent, hollow | Abruptly transform from solid opaque balls to translucent hollow shells at 00:05\",\n    \"Small cup/object | On table right side | On table right side | No notable transitions\",\n    \"Loose balls on right edge | On table right side | On table right side | Mostly out of frame, no visible transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Colorful balls in bowl\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"The solid, opaque balls (red, yellow, green) inside the bowl abruptly transform into translucent, hollow, shell-like objects as the child begins to mix them. The original solid objects vanish and are replaced by these new objects without any logical physical transition.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

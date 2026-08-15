@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:11:14.029Z",
+  "latencyMs": 3454,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 1140,
+    "total_tokens": 4071,
+    "cost": 0.0006807,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0006807,
+      "upstream_inference_prompt_cost": 0.0002931,
+      "upstream_inference_completions_cost": 0.0003876
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 770,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right arm | resting at side | vertical position | 00:00-00:02: lifts horizontally then vertically",
+    "Right arm | vertical position | resting at side | 00:02-00:04: lowers from vertical to side",
+    "Right arm | resting at side | vertical position | 00:06-00:08: lifts horizontally then vertically",
+    "Right leg/foot | flat on floor | heel lifted | 00:08-00:10: subtle weight shift and heel lift"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right arm | resting at side | vertical position | 00:00-00:02: lifts horizontally then vertically\",\n    \"Right arm | vertical position | resting at side | 00:02-00:04: lowers from vertical to side\",\n    \"Right arm | resting at side | vertical position | 00:06-00:08: lifts horizontally then vertically\",\n    \"Right leg/foot | flat on floor | heel lifted | 00:08-00:10: subtle weight shift and heel lift\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,44 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:13:30.603Z",
+  "latencyMs": 4781,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 2674,
+    "total_tokens": 9333,
+    "cost": 0.029362,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.029362,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.016044
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2389,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left masonry wall with vertical seams | runs along left edge, borders descending stair flight | same | static throughout, consistent perspective as camera tilts",
+    "Descending stair flight (lower left) | steps descend away from camera at lower left | same | static; partially occluded by phone in close-ups",
+    "Dark metal railing (right) | diagonal top rail with vertical balusters on right side | same | static; goes out of focus as focus racks to phone, but position/angle unchanged",
+    "Planted bed with green shrubs | at base of railing, right side between railing and plaza | same | static; leaves frame only due to camera tilt/zoom",
+    "Tiled plaza pavement | beyond stair bottom, fills background | same | static; perspective consistent across all frames",
+    "Person in blue carrying red container | behind railing at right, walking away | exits top of frame ~0:03 | continuous away-trajectory right-to-center; correctly occluded by railing balusters while behind them, then beyond railing end",
+    "Handheld smartphone + hands | extreme foreground, occludes center/left of scene | occupies larger frame fraction as camera pushes in | always occludes background; no background-over-foreground rendering observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Left masonry wall with vertical seams | runs along left edge, borders descending stair flight | same | static throughout, consistent perspective as camera tilts\",\n    \"Descending stair flight (lower left) | steps descend away from camera at lower left | same | static; partially occluded by phone in close-ups\",\n    \"Dark metal railing (right) | diagonal top rail with vertical balusters on right side | same | static; goes out of focus as focus racks to phone, but position/angle unchanged\",\n    \"Planted bed with green shrubs | at base of railing, right side between railing and plaza | same | static; leaves frame only due to camera tilt/zoom\",\n    \"Tiled plaza pavement | beyond stair bottom, fills background | same | static; perspective consistent across all frames\",\n    \"Person in blue carrying red container | behind railing at right, walking away | exits top of frame ~0:03 | continuous away-trajectory right-to-center; correctly occluded by railing balusters while behind them, then beyond railing end\",\n    \"Handheld smartphone + hands | extreme foreground, occludes center/left of scene | occupies larger frame fraction as camera pushes in | always occludes background; no background-over-foreground rendering observed\"\n  ],\n  \"findings\": []\n}"
+}

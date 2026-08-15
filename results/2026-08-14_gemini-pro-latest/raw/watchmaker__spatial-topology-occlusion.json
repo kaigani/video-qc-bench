@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:15.321Z",
+  "latencyMs": 4250,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 633,
+    "total_tokens": 2059,
+    "cost": 0.010448,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010448,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.007596
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 518,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | seated, facing camera | same | moves arms and hands to manipulate object",
+    "background | plain white wall behind person | same | static",
+    "object | held in left hand | same | manipulated by tools",
+    "tweezers | held in right hand | placed out of frame | used on object, then put down",
+    "small tool | out of frame | held in right hand | picked up and used on object"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | seated, facing camera | same | moves arms and hands to manipulate object\",\n    \"background | plain white wall behind person | same | static\",\n    \"object | held in left hand | same | manipulated by tools\",\n    \"tweezers | held in right hand | placed out of frame | used on object, then put down\",\n    \"small tool | out of frame | held in right hand | picked up and used on object\"\n  ],\n  \"findings\": []\n}"
+}

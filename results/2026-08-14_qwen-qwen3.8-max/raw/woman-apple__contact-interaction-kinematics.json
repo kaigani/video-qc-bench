@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:53:59.158Z",
+  "latencyMs": 7740,
+  "usage": {
+    "prompt_tokens": 6669,
+    "completion_tokens": 7470,
+    "total_tokens": 14139,
+    "cost": 0.058158,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.058158,
+      "upstream_inference_prompt_cost": 0.013338,
+      "upstream_inference_completions_cost": 0.04482
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6963,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "main woman | walking toward camera; right hand cupping red apple; left hand gripping umbrella shaft; watch on left wrist | angled away from camera; left hand gripping shaft; right hand out of view | apple transferred right-to-left hand ~00:04-00:05; both hands cup apple 00:06-00:07; hands clasp shaft ~00:08",
+    "blue umbrella | canopy overhead; shaft terminated in left fist | canopy overhead; shaft terminated in left fist again | 00:05-00:08 shaft ends at/above apple-cupping hands with no wrapping grip",
+    "red apple | cupped in right hand at chest height | not visible at end (inside clasped hands) | rests on left hand ~00:04; cupped by both hands 00:06-00:07",
+    "pedestrian, light-blue shirt (foreground) | enters left at 00:01 | exits right by 00:03 | passes in front of subject, no contact",
+    "pedestrian, white shirt (foreground) | enters left at 00:03 | exits by 00:05 | passes in front of subject, no contact"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "blue umbrella / subject's hands",
+      "invariant_violated": "weight without support (missing grip contact)",
+      "description": "After the apple moves to the left hand (~00:05), both hands cup the apple at 00:06-00:07 and no fingers wrap the umbrella shaft; the shaft terminates at the back of the hands and by 00:07 ends in mid-air above the hands with a visible gap. Despite zero supporting contact, the canopy stays rigidly overhead and translates in sync with the subject's gait, i.e. the umbrella moves as if held without contact being established. A grip is only re-established ~00:08 when the hands clasp the shaft.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"main woman | walking toward camera; right hand cupping red apple; left hand gripping umbrella shaft; watch on left wrist | angled away from camera; left hand gripping shaft; right hand out of view | apple transferred right-to-left hand ~00:04-00:05; both hands cup apple 00:06-00:07; hands clasp shaft ~00:08\",\n    \"blue umbrella | canopy overhead; shaft terminated in left fist | canopy overhead; shaft terminated in left fist again | 00:05-00:08 shaft ends at/above apple-cupping hands with no wrapping grip\",\n    \"red apple | cupped in right hand at chest height | not visible at end (inside clasped hands) | rests on left hand ~00:04; cupped by both hands 00:06-00:07\",\n    \"pedestrian, light-blue shirt (foreground) | enters left at 00:01 | exits right by 00:03 | passes in front of subject, no contact\",\n    \"pedestrian, white shirt (foreground) | enters left at 00:03 | exits by 00:05 | passes in front of subject, no contact\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"blue umbrella / subject's hands\",\n      \"invariant_violated\": \"weight without support (missing grip contact)\",\n      \"description\": \"After the apple moves to the left hand (~00:05), both hands cup the apple at 00:06-00:07 and no fingers wrap the umbrella shaft; the shaft terminates at the back of the hands and by 00:07 ends in mid-air above the hands with a visible gap. Despite zero supporting contact, the canopy stays rigidly overhead and translates in sync with the subject's gait, i.e. the umbrella moves as if held without contact being established. A grip is only re-established ~00:08 when the hands clasp the shaft.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

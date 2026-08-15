@@ -1,0 +1,65 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:19:53.926Z",
+  "latencyMs": 2650,
+  "usage": {
+    "prompt_tokens": 2957,
+    "completion_tokens": 3644,
+    "total_tokens": 6601,
+    "cost": 0.00187158,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00187158,
+      "upstream_inference_prompt_cost": 0.00041398,
+      "upstream_inference_completions_cost": 0.0014576
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2849,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left Hand | gripping tool | gripping small piece | tool vanishes at 00:03 and reappears smaller at 00:05",
+    "Right Hand | gripping circular object | gripping circular object | maintains consistent contact",
+    "Tool | gripped by LH and RH | gripped by LH | vanishes from frame/grip and reappears with changed geometry"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Left Hand",
+      "invariant_violated": "contact points",
+      "description": "The tool vanishes from the left hand's grip instantly without any visible release movement or trajectory away from the fingers.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Tool",
+      "invariant_violated": "limb mechanics",
+      "description": "The tool reappears in the left hand with an abrupt jump in position and a significant change in geometry (from a long rod to a small fragment), violating continuous trajectory.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Tool",
+      "invariant_violated": "limb mechanics",
+      "description": "The object held in the left hand exhibits high-frequency jitter and snapping between positions, failing to follow a continuous physical trajectory.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left Hand | gripping tool | gripping small piece | tool vanishes at 00:03 and reappears smaller at 00:05\",\n    \"Right Hand | gripping circular object | gripping circular object | maintains consistent contact\",\n    \"Tool | gripped by LH and RH | gripped by LH | vanishes from frame/grip and reappears with changed geometry\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Left Hand\",\n      \"invariant_violated\": \"contact points\",\n      \"description\": \"The tool vanishes from the left hand's grip instantly without any visible release movement or trajectory away from the fingers.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Tool\",\n      \"invariant_violated\": \"limb mechanics\",\n      \"description\": \"The tool reappears in the left hand with an abrupt jump in position and a significant change in geometry (from a long rod to a small fragment), violating continuous trajectory.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Tool\",\n      \"invariant_violated\": \"limb mechanics\",\n      \"description\": \"The object held in the left hand exhibits high-frequency jitter and snapping between positions, failing to follow a continuous physical trajectory.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

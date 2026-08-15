@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:58:16.643Z",
+  "latencyMs": 5166,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1261,
+    "total_tokens": 2687,
+    "cost": 0.00579825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00579825,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00472875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1136,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon | Vintage wood-paneled wagon parked on desert road side | Front grille, hood, driver side window and roof rack maintain fixed geometry | Camera dollies right in continuous shot",
+    "Woman | Positioned at driver-side A-pillar and hood junction | Upper body resting on car frame in consistent spatial relation | Perspective shifts smoothly with camera dolly",
+    "Desert road environment | Asphalt highway curving behind vehicle with distant mountains | Background elements shift with expected parallax relative to vehicle | Continuous camera trajectory"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Station wagon | Vintage wood-paneled wagon parked on desert road side | Front grille, hood, driver side window and roof rack maintain fixed geometry | Camera dollies right in continuous shot\",\n    \"Woman | Positioned at driver-side A-pillar and hood junction | Upper body resting on car frame in consistent spatial relation | Perspective shifts smoothly with camera dolly\",\n    \"Desert road environment | Asphalt highway curving behind vehicle with distant mountains | Background elements shift with expected parallax relative to vehicle | Continuous camera trajectory\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,71 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:23:58.736Z",
+  "latencyMs": 4477,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 10462,
+    "total_tokens": 16932,
+    "cost": 0.075712,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.075712,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.062772
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9650,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | placing blocks one at a time | adjusting leftmost blocks at end | continuous plausible motion",
+    "block pos1 | green, front '2' at 0:00 | blue, front '2' from 0:01 to end | body color changes green->blue between 0:00 and 0:01 with no visible swap",
+    "block pos2 | blue '3' being placed at 0:01 | blue '3' at end | consistent",
+    "block pos3 | green '2' present from 0:00 | green '2' at end | consistent",
+    "block pos4 | green block (faces '2'/'3') being placed at 0:03 | orange '2' from 0:04 to end | body color changes green->orange with no visible swap",
+    "block pos5 | saturated blue '3' being placed at 0:04 | pale light-blue '3' from 0:05 to end | shade lightens after settling",
+    "block pos6 | green '5' appears by 0:05 | green '5' at end | consistent",
+    "block pos7 | green '3' being placed at 0:05 | green '2' from 0:06 | front digit changes as it settles (plausible rotation)",
+    "block pos8 | blue '3' being placed 0:06-0:07 | blue '6' from 0:08 | front digit changes as it settles (plausible rotation)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost block (position 1)",
+      "invariant_violated": "object color constancy",
+      "description": "At 0:00 the hand is setting down a green '2' block at the left end. At 0:01 the leftmost block is a blue '2' while the hand is simultaneously placing a different blue '3' block in the middle. The green block is never lifted, carried away, or exchanged on camera, so its body color changes from green to blue unexplained.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "fourth block",
+      "invariant_violated": "object color constancy",
+      "description": "At 0:03 the hand is placing a green block (faces showing '2' and '3') into slot 4. At 0:04 slot 4 is occupied by an orange '2' block while the hand is already placing the fifth block. The green block was never removed or swapped, so its body color changes from green to orange unexplained.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "fifth block",
+      "invariant_violated": "object color constancy",
+      "description": "While being placed at 0:04 the fifth block reads as the same saturated blue as blocks 1, 2 and 8; once settled (0:05 onward) it is a distinctly paler light-blue under the same lighting that leaves the other blue blocks saturated. Possible genuine shade mismatch, though lighting/blur on the tilted block could contribute.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | placing blocks one at a time | adjusting leftmost blocks at end | continuous plausible motion\",\n    \"block pos1 | green, front '2' at 0:00 | blue, front '2' from 0:01 to end | body color changes green->blue between 0:00 and 0:01 with no visible swap\",\n    \"block pos2 | blue '3' being placed at 0:01 | blue '3' at end | consistent\",\n    \"block pos3 | green '2' present from 0:00 | green '2' at end | consistent\",\n    \"block pos4 | green block (faces '2'/'3') being placed at 0:03 | orange '2' from 0:04 to end | body color changes green->orange with no visible swap\",\n    \"block pos5 | saturated blue '3' being placed at 0:04 | pale light-blue '3' from 0:05 to end | shade lightens after settling\",\n    \"block pos6 | green '5' appears by 0:05 | green '5' at end | consistent\",\n    \"block pos7 | green '3' being placed at 0:05 | green '2' from 0:06 | front digit changes as it settles (plausible rotation)\",\n    \"block pos8 | blue '3' being placed 0:06-0:07 | blue '6' from 0:08 | front digit changes as it settles (plausible rotation)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"leftmost block (position 1)\",\n      \"invariant_violated\": \"object color constancy\",\n      \"description\": \"At 0:00 the hand is setting down a green '2' block at the left end. At 0:01 the leftmost block is a blue '2' while the hand is simultaneously placing a different blue '3' block in the middle. The green block is never lifted, carried away, or exchanged on camera, so its body color changes from green to blue unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"fourth block\",\n      \"invariant_violated\": \"object color constancy\",\n      \"description\": \"At 0:03 the hand is placing a green block (faces showing '2' and '3') into slot 4. At 0:04 slot 4 is occupied by an orange '2' block while the hand is already placing the fifth block. The green block was never removed or swapped, so its body color changes from green to orange unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"fifth block\",\n      \"invariant_violated\": \"object color constancy\",\n      \"description\": \"While being placed at 0:04 the fifth block reads as the same saturated blue as blocks 1, 2 and 8; once settled (0:05 onward) it is a distinctly paler light-blue under the same lighting that leaves the other blue blocks saturated. Possible genuine shade mismatch, though lighting/blur on the tilted block could contribute.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

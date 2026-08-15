@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:50.357Z",
+  "latencyMs": 8671,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1765,
+    "total_tokens": 3190,
+    "cost": 0.02403,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02403,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.02118
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1562,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman walks forward -> Camera moves backward to keep her in frame -> Plausible",
+    "Woman moves right arm -> Right hand repeatedly strikes left hand/apple -> Plausible",
+    "Umbrella maintains position above woman -> No visible hand or support structure is causing it to stay elevated against gravity -> Implausible (Missing Cause)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Umbrella",
+      "invariant_violated": "effect-without-cause",
+      "description": "The umbrella remains elevated and moves synchronously with the woman, but neither of her hands are gripping its shaft to support it (her hands are occupied holding and clapping an apple), providing no physical cause for the umbrella to remain upright.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman walks forward -> Camera moves backward to keep her in frame -> Plausible\",\n    \"Woman moves right arm -> Right hand repeatedly strikes left hand/apple -> Plausible\",\n    \"Umbrella maintains position above woman -> No visible hand or support structure is causing it to stay elevated against gravity -> Implausible (Missing Cause)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Umbrella\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"The umbrella remains elevated and moves synchronously with the woman, but neither of her hands are gripping its shaft to support it (her hands are occupied holding and clapping an apple), providing no physical cause for the umbrella to remain upright.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

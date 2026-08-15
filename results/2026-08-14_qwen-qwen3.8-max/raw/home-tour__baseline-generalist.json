@@ -1,0 +1,42 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:00:48.297Z",
+  "latencyMs": 5400,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 7383,
+    "total_tokens": 13853,
+    "cost": 0.057238,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.057238,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.044298
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7105,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | short blonde hair, teal 3/4-sleeve top, white camisole, dark earrings | same hair, top, earrings at end | walks kitchen -> hallway -> bedroom, looks around, exits toward rear hallway/kitchenette; appearance constant throughout",
+    "framed portrait (figure with blue flower) | on gray hallway wall right of kitchen, light switch below | same portrait/switch placement visible when exiting bedroom | stays on same hallway wall; re-sighting consistent with reversed viewing direction",
+    "kitchen (stainless countertop microwave with wooden bowl on top, stove with hood, red kettle, tile backsplash) | consistent layout at start | same items visible as camera passes | no changes",
+    "bedroom (bed with cream bedding, two foot chairs, nightstand lamp, reddish abstract art over bed, light-wood abstract art over photo table, chandelier, curtained windows) | consistent when entering | consistent when turning and exiting | furniture and decor stable across angles",
+    "rear hallway/kitchenette (over-range microwave, stove with white bowl, greenish walls) | not visible at start | appears at end as new area | plausible separate space, no conflict with first kitchen"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | short blonde hair, teal 3/4-sleeve top, white camisole, dark earrings | same hair, top, earrings at end | walks kitchen -> hallway -> bedroom, looks around, exits toward rear hallway/kitchenette; appearance constant throughout\",\n    \"framed portrait (figure with blue flower) | on gray hallway wall right of kitchen, light switch below | same portrait/switch placement visible when exiting bedroom | stays on same hallway wall; re-sighting consistent with reversed viewing direction\",\n    \"kitchen (stainless countertop microwave with wooden bowl on top, stove with hood, red kettle, tile backsplash) | consistent layout at start | same items visible as camera passes | no changes\",\n    \"bedroom (bed with cream bedding, two foot chairs, nightstand lamp, reddish abstract art over bed, light-wood abstract art over photo table, chandelier, curtained windows) | consistent when entering | consistent when turning and exiting | furniture and decor stable across angles\",\n    \"rear hallway/kitchenette (over-range microwave, stove with white bowl, greenish walls) | not visible at start | appears at end as new area | plausible separate space, no conflict with first kitchen\"\n  ],\n  \"findings\": []\n}"
+}

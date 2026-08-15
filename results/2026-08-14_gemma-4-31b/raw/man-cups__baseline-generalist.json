@@ -1,0 +1,57 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:14:07.768Z",
+  "latencyMs": 6931,
+  "usage": {
+    "prompt_tokens": 2744,
+    "completion_tokens": 2982,
+    "total_tokens": 5726,
+    "cost": 0.00128828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 320,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00128828,
+      "upstream_inference_prompt_cost": 0.0002744,
+      "upstream_inference_completions_cost": 0.00101388
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2266,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | blue suit, glasses | blue suit, glasses | performing magic tricks",
+    "copper cups | three cups | three cups | manipulated by person",
+    "table coins | array of coins on red/green cloth | shifted/changed array | spontaneous morphing and movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "table coins",
+      "invariant_violated": "spatial_consistency",
+      "description": "Coins on the red periphery of the tablecloth shift positions and change appearance spontaneously as the camera zooms out.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "coin on table",
+      "invariant_violated": "spatial_consistency",
+      "description": "A gold coin located to the right of the copper cups shifts position on the table without being touched.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person | blue suit, glasses | blue suit, glasses | performing magic tricks\",\n    \"copper cups | three cups | three cups | manipulated by person\",\n    \"table coins | array of coins on red/green cloth | shifted/changed array | spontaneous morphing and movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"table coins\",\n      \"invariant_violated\": \"spatial_consistency\",\n      \"description\": \"Coins on the red periphery of the tablecloth shift positions and change appearance spontaneously as the camera zooms out.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"coin on table\",\n      \"invariant_violated\": \"spatial_consistency\",\n      \"description\": \"A gold coin located to the right of the copper cups shifts position on the table without being touched.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:57:49.298Z",
+  "latencyMs": 4534,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2274,
+    "total_tokens": 3718,
+    "cost": 0.0096105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0096105,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0085275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2049,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | held open above head by central woman | held open above head by central woman | retained throughout without state changes",
+    "red apple | held in central woman's hands at chest level | missing/vanished | held continuously from 00:00 to 00:07, then vanishes completely at 00:08 without being dropped or stowed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "identity & persistence",
+      "description": "The red apple held prominently in the central woman's hands vanishes between 00:07 and 00:08 as the camera rotates to her side, leaving both of her hands grasping only the umbrella handle with no visible action explaining the apple's disappearance.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | held open above head by central woman | held open above head by central woman | retained throughout without state changes\",\n    \"red apple | held in central woman's hands at chest level | missing/vanished | held continuously from 00:00 to 00:07, then vanishes completely at 00:08 without being dropped or stowed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red apple held prominently in the central woman's hands vanishes between 00:07 and 00:08 as the camera rotates to her side, leaving both of her hands grasping only the umbrella handle with no visible action explaining the apple's disappearance.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

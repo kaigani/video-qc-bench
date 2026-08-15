@@ -1,0 +1,47 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:19:18.928Z",
+  "latencyMs": 5598,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 3122,
+    "total_tokens": 9781,
+    "cost": 0.03205,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03205,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.018732
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2724,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "concrete plaza floor | flat continuous surface with expansion joints and radiating seam lines | same continuous surface at end | camera travels over it without discontinuity",
+    "round stone table/planter | right of skater's line at 0:00 | out of frame after 0:01 | exits frame right as camera arcs left; never reappears incorrectly",
+    "perimeter light poles | multiple tall poles: left, center-behind, right at start | same pole set seen from rotated viewpoints at end | angular positions shift consistently with camera orbit around skater",
+    "thick gray pole base at jump spot | behind skater during 0:02-0:03 aerial | right side 0:04-0:06, then behind camera | parallax consistent with camera passing it on the left",
+    "tree line / grass perimeter | horizon behind ramps at start | same horizon at end | no layout change",
+    "checkered-floor bowl | glimpsed far left at 0:05 | left of skater with metal coping at 0:08-0:09 | position relative to plaza consistent",
+    "quarter ramps with coping | left and right edges of plaza at start | same edges at end | connectivity unchanged",
+    "skater | rolling toward camera, crouched to pop | rolling away beside bowl coping after two tricks | continuous trajectory; lands and emerges on geometrically correct sides",
+    "skateboard | under feet at start | under feet at end | two flip tricks; board correctly occludes background pole and horizon while airborne",
+    "camera | low fisheye, front-facing | low fisheye, trailing/following | smooth arc around subject; no impossible viewpoint jumps"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"concrete plaza floor | flat continuous surface with expansion joints and radiating seam lines | same continuous surface at end | camera travels over it without discontinuity\",\n    \"round stone table/planter | right of skater's line at 0:00 | out of frame after 0:01 | exits frame right as camera arcs left; never reappears incorrectly\",\n    \"perimeter light poles | multiple tall poles: left, center-behind, right at start | same pole set seen from rotated viewpoints at end | angular positions shift consistently with camera orbit around skater\",\n    \"thick gray pole base at jump spot | behind skater during 0:02-0:03 aerial | right side 0:04-0:06, then behind camera | parallax consistent with camera passing it on the left\",\n    \"tree line / grass perimeter | horizon behind ramps at start | same horizon at end | no layout change\",\n    \"checkered-floor bowl | glimpsed far left at 0:05 | left of skater with metal coping at 0:08-0:09 | position relative to plaza consistent\",\n    \"quarter ramps with coping | left and right edges of plaza at start | same edges at end | connectivity unchanged\",\n    \"skater | rolling toward camera, crouched to pop | rolling away beside bowl coping after two tricks | continuous trajectory; lands and emerges on geometrically correct sides\",\n    \"skateboard | under feet at start | under feet at end | two flip tricks; board correctly occludes background pole and horizon while airborne\",\n    \"camera | low fisheye, front-facing | low fisheye, trailing/following | smooth arc around subject; no impossible viewpoint jumps\"\n  ],\n  \"findings\": []\n}"
+}

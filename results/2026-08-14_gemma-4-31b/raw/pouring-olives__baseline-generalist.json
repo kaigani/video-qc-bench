@@ -1,0 +1,47 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:16:51.024Z",
+  "latencyMs": 11443,
+  "usage": {
+    "prompt_tokens": 2743,
+    "completion_tokens": 1312,
+    "total_tokens": 4055,
+    "cost": 0.00090882,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00090882,
+      "upstream_inference_prompt_cost": 0.00038402,
+      "upstream_inference_completions_cost": 0.0005248
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 960,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives in jar | empty | mixed green and purple | purple olives appear spontaneously before being poured"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "olives in jar",
+      "invariant_violated": "object consistency",
+      "description": "Purple olives spontaneously appear at the bottom of the jar while the person is pouring exclusively green olives from the source bowl.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives in jar | empty | mixed green and purple | purple olives appear spontaneously before being poured\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"olives in jar\",\n      \"invariant_violated\": \"object consistency\",\n      \"description\": \"Purple olives spontaneously appear at the bottom of the jar while the person is pouring exclusively green olives from the source bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

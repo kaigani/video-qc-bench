@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:18:51.595Z",
+  "latencyMs": 2310,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 613,
+    "total_tokens": 3544,
+    "cost": 0.00065554,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00065554,
+      "upstream_inference_prompt_cost": 0.00041034,
+      "upstream_inference_completions_cost": 0.0002452
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 563,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wall | background, flat, white | background, flat, white | none",
+    "person | center foreground, in front of wall | center foreground, in front of wall | none",
+    "surface | foreground, bottom edge | foreground, bottom edge | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wall | background, flat, white | background, flat, white | none\",\n    \"person | center foreground, in front of wall | center foreground, in front of wall | none\",\n    \"surface | foreground, bottom edge | foreground, bottom edge | none\"\n  ],\n  \"findings\": []\n}"
+}

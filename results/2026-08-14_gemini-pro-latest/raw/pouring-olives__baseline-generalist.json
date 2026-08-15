@@ -1,0 +1,56 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:47.427Z",
+  "latencyMs": 5972,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1062,
+    "total_tokens": 2300,
+    "cost": 0.01522,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01522,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.012744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 799,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives in first jar | green | mixed green and black | color changes from green to black mid-air while pouring",
+    "olives in second jar | green | mixed green and black | color changes from green to black while pouring"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives being poured",
+      "invariant_violated": "color consistency",
+      "description": "The small jar initially contains only green olives, but as they are poured into the large jar, several black/dark purple olives fall out, changing color mid-air.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives in second jar",
+      "invariant_violated": "color consistency",
+      "description": "The second small jar also appears to contain only green olives before being poured, but black olives fall from it into the large jar.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives in first jar | green | mixed green and black | color changes from green to black mid-air while pouring\",\n    \"olives in second jar | green | mixed green and black | color changes from green to black while pouring\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives being poured\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The small jar initially contains only green olives, but as they are poured into the large jar, several black/dark purple olives fall out, changing color mid-air.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"olives in second jar\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The second small jar also appears to contain only green olives before being poured, but black olives fall from it into the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

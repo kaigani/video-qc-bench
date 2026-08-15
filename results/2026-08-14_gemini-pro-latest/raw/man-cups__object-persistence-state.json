@@ -1,0 +1,69 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:20.572Z",
+  "latencyMs": 5649,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1815,
+    "total_tokens": 3259,
+    "cost": 0.024668,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024668,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.02178
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1292,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Coin (Left Hand) | Held in left hand | Drops towards front-left cup, vanishes | Vanishes during drop",
+    "Coin (Right Hand) | Held in right hand | Drops towards middle cup, vanishes | Continually appears in hand and vanishes upon dropping",
+    "Coin (Middle Cup Top) | Resting horizontally on top of middle cup | Vanishes | Disappears when another coin is dropped into the cup",
+    "Front-Left Cup | On table, spaced apart | On table, clustered | Jumps to a new location",
+    "Middle Cup | On table, spaced apart | On table, clustered | Jumps to a new location",
+    "Right Cup | On table, spaced apart | On table, clustered | Jumps to a new location",
+    "Fourth Cup | Not present | Not present | Spontaneously appears and disappears"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Coin (Middle Cup Top)",
+      "invariant_violated": "Identity & Persistence",
+      "description": "A coin is clearly resting horizontally across the opening of the middle cup. As the right hand drops a new coin into the cup, the resting coin completely vanishes without falling or being moved.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "All Cups",
+      "invariant_violated": "Location & Orientation",
+      "description": "The three cups are initially spaced apart in a loose triangle formation. After a sudden change in camera perspective, the cups are instantly clustered tightly together in a row.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Cups",
+      "invariant_violated": "Identity & Persistence",
+      "description": "Throughout the beginning of the video, there are exactly three cups. As the camera pans around the table at 00:06, a fourth cup appears in the row. By 00:08, the extra cup has vanished, leaving only three again.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Coin (Left Hand) | Held in left hand | Drops towards front-left cup, vanishes | Vanishes during drop\",\n    \"Coin (Right Hand) | Held in right hand | Drops towards middle cup, vanishes | Continually appears in hand and vanishes upon dropping\",\n    \"Coin (Middle Cup Top) | Resting horizontally on top of middle cup | Vanishes | Disappears when another coin is dropped into the cup\",\n    \"Front-Left Cup | On table, spaced apart | On table, clustered | Jumps to a new location\",\n    \"Middle Cup | On table, spaced apart | On table, clustered | Jumps to a new location\",\n    \"Right Cup | On table, spaced apart | On table, clustered | Jumps to a new location\",\n    \"Fourth Cup | Not present | Not present | Spontaneously appears and disappears\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Coin (Middle Cup Top)\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"A coin is clearly resting horizontally across the opening of the middle cup. As the right hand drops a new coin into the cup, the resting coin completely vanishes without falling or being moved.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"All Cups\",\n      \"invariant_violated\": \"Location & Orientation\",\n      \"description\": \"The three cups are initially spaced apart in a loose triangle formation. After a sudden change in camera perspective, the cups are instantly clustered tightly together in a row.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Cups\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"Throughout the beginning of the video, there are exactly three cups. As the camera pans around the table at 00:06, a fourth cup appears in the row. By 00:08, the extra cup has vanished, leaving only three again.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

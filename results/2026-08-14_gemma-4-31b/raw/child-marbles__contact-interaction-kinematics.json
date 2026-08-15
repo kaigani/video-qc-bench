@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:09:52.257Z",
+  "latencyMs": 11983,
+  "usage": {
+    "prompt_tokens": 2960,
+    "completion_tokens": 1438,
+    "total_tokens": 4398,
+    "cost": 0.003658,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003658,
+      "upstream_inference_prompt_cost": 0.00222,
+      "upstream_inference_completions_cost": 0.001438
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1297,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | neutral | resting on bowl rim | 00:01 grips red ball, 00:02 releases ball, 00:08 contacts bowl rim",
+    "left hand | neutral | stirring balls | 00:03 contacts balls in bowl",
+    "red ball | in bowl | in bowl | 00:01 lifted by right hand, 00:02 returned to bowl",
+    "glass bowl | stationary on table | stationary on table | supports balls and right hand"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"right hand | neutral | resting on bowl rim | 00:01 grips red ball, 00:02 releases ball, 00:08 contacts bowl rim\",\n    \"left hand | neutral | stirring balls | 00:03 contacts balls in bowl\",\n    \"red ball | in bowl | in bowl | 00:01 lifted by right hand, 00:02 returned to bowl\",\n    \"glass bowl | stationary on table | stationary on table | supports balls and right hand\"\n  ],\n  \"findings\": []\n}\n```"
+}

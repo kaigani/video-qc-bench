@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:54:45.169Z",
+  "latencyMs": 2993,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 1181,
+    "total_tokens": 2608,
+    "cost": 0.005499,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005499,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.00442875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1043,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden paneling wall & doors | fixed background architecture behind character | remains consistent during camera pan | continuously connected wall topology",
+    "coat hook with jacket | attached to rear paneling left of character | transitions behind character during leftward pan | proper depth ordering and occlusion",
+    "side wall door | located on left wall perpendicular to rear wall | revealed as camera pans left | spatial relationship to corner and light switches consistent",
+    "character | positioned in front of rear doors | turns and moves to side door on left | motion and perspective relative to fixed background remain continuous"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden paneling wall & doors | fixed background architecture behind character | remains consistent during camera pan | continuously connected wall topology\",\n    \"coat hook with jacket | attached to rear paneling left of character | transitions behind character during leftward pan | proper depth ordering and occlusion\",\n    \"side wall door | located on left wall perpendicular to rear wall | revealed as camera pans left | spatial relationship to corner and light switches consistent\",\n    \"character | positioned in front of rear doors | turns and moves to side door on left | motion and perspective relative to fixed background remain continuous\"\n  ],\n  \"findings\": []\n}"
+}

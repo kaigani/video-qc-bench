@@ -1,0 +1,68 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:26:13.725Z",
+  "latencyMs": 4324,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 2960,
+    "total_tokens": 4412,
+    "cost": 0.038424,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038424,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.03552
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2475,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | gripping bottom of first small jar | gripping bottom of second small jar | moves off-screen to retrieve second jar, then returns",
+    "Left hand | resting fingers on rim of first small jar | resting fingers on rim of second small jar | releases first jar, moves to support second jar",
+    "First small jar | held by hands, containing green olives | moved out of frame | tilted downwards to pour contents",
+    "Second small jar | appears in right hand | held by hands, tilted downwards | brought into frame to pour contents",
+    "Large jar | stationary on countertop, empty | stationary on countertop, partially filled | remains in place while receiving falling objects",
+    "Olives | contained in small jars | accumulated in large jar | fall in a stream, transitioning from small to large container"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "falling olives / large jar",
+      "invariant_violated": "solidity",
+      "description": "The stream of falling olives renders over the top of the large jar's front rim, clipping directly through the solid glass barrier rather than falling behind it into the opening.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "solidity",
+      "description": "As the olives settle at the bottom of the large jar, they fail to behave as solid rigid bodies, visibly clipping into and merging with one another in the pile.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "falling olives / large jar",
+      "invariant_violated": "solidity",
+      "description": "During the second pour, the falling stream of olives again clips through the front glass rim of the large jar instead of passing cleanly through the opening.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | gripping bottom of first small jar | gripping bottom of second small jar | moves off-screen to retrieve second jar, then returns\",\n    \"Left hand | resting fingers on rim of first small jar | resting fingers on rim of second small jar | releases first jar, moves to support second jar\",\n    \"First small jar | held by hands, containing green olives | moved out of frame | tilted downwards to pour contents\",\n    \"Second small jar | appears in right hand | held by hands, tilted downwards | brought into frame to pour contents\",\n    \"Large jar | stationary on countertop, empty | stationary on countertop, partially filled | remains in place while receiving falling objects\",\n    \"Olives | contained in small jars | accumulated in large jar | fall in a stream, transitioning from small to large container\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"falling olives / large jar\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The stream of falling olives renders over the top of the large jar's front rim, clipping directly through the solid glass barrier rather than falling behind it into the opening.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the olives settle at the bottom of the large jar, they fail to behave as solid rigid bodies, visibly clipping into and merging with one another in the pile.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.90\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"falling olives / large jar\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"During the second pour, the falling stream of olives again clips through the front glass rim of the large jar instead of passing cleanly through the opening.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

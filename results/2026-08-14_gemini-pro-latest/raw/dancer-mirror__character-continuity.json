@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:35.153Z",
+  "latencyMs": 3717,
+  "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 2026,
+    "total_tokens": 3450,
+    "cost": 0.02716,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02716,
+      "upstream_inference_prompt_cost": 0.002848,
+      "upstream_inference_completions_cost": 0.024312
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1789,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (foreground) | back to camera, black activewear, tattoos on left arm, right arm bare | back to camera, black activewear, tattoos on left arm, right arm bare | raises untattooed right arm",
+    "Reflection (in mirror) | facing camera, black activewear, tattoos on right arm (viewer's left), left arm bare | facing camera, black activewear, tattoos on right arm (viewer's left), left arm bare | raises tattooed right arm"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Reflection",
+      "invariant_violated": "Identity",
+      "description": "The woman in the foreground has tattoos on her left arm and a bare right arm. Her reflection in the mirror incorrectly shows tattoos on her right arm and a bare left arm. When she raises her bare right arm, the reflection raises a tattooed right arm.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (foreground) | back to camera, black activewear, tattoos on left arm, right arm bare | back to camera, black activewear, tattoos on left arm, right arm bare | raises untattooed right arm\",\n    \"Reflection (in mirror) | facing camera, black activewear, tattoos on right arm (viewer's left), left arm bare | facing camera, black activewear, tattoos on right arm (viewer's left), left arm bare | raises tattooed right arm\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Reflection\",\n      \"invariant_violated\": \"Identity\",\n      \"description\": \"The woman in the foreground has tattoos on her left arm and a bare right arm. Her reflection in the mirror incorrectly shows tattoos on her right arm and a bare left arm. When she raises her bare right arm, the reflection raises a tattooed right arm.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

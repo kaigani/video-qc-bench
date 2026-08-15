@@ -1,0 +1,39 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:14:58.415Z",
+  "latencyMs": 6986,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 1479,
+    "total_tokens": 4410,
+    "cost": 0.00079596,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00079596,
+      "upstream_inference_prompt_cost": 0.0002931,
+      "upstream_inference_completions_cost": 0.00050286
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1123,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Coin | held by hand | inside leftmost cup | dropped into cup at 00:01",
+    "Leftmost Cup | static position | shifted position | moved by hand from 00:03 to 00:10"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Coin | held by hand | inside leftmost cup | dropped into cup at 00:01\",\n    \"Leftmost Cup | static position | shifted position | moved by hand from 00:03 to 00:10\"\n  ],\n  \"findings\": []\n}"
+}

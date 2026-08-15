@@ -1,0 +1,63 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:06:24.894Z",
+  "latencyMs": 18294,
+  "usage": {
+    "prompt_tokens": 48490,
+    "completion_tokens": 10592,
+    "total_tokens": 59082,
+    "cost": 0.160532,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.160532,
+      "upstream_inference_prompt_cost": 0.09698,
+      "upstream_inference_completions_cost": 0.063552
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9735,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "exterior semi-truck | parked left of diner at dusk, exhaust/dust plume rising at 0:00 | same parked position, plume fully dissipated by 0:09 | plume drifts and disperses continuously; truck never moves, smoke decay is a plausible effect of a recent stop",
+    "neon OPEN sign / interior lights | lit at 0:00 | lit in all interior shots | only dims during the fade at 0:10 (transition), no uncaused on/off toggling within a shot",
+    "waitress | wiping counter at 0:11 | superimposed as two instances while cleaning at 1:52-1:58 | wiping, walking, pouring, serving all continuous within each shot; final shot shows dual semi-transparent instances",
+    "man (customer) | not present until 0:20 | leaves money 1:39, walks to truck 1:42-1:45 | entry, walk to counter, sit, reach for mug, pay, exit: each action initiated and completed in order",
+    "coffee pot -> mug | pot lifted and tilted 0:25-0:27 | stream flows 0:28-0:31, stops as pot rights at 0:32 | pour begins only after tilt, stream ceases when pot returns upright; order and delay plausible",
+    "plate (toast + fried egg) | steaming close-up at 0:33 | placed then retrieved by waitress 1:10-1:17 | steam rises continuously; place and retrieve are completed volitional actions",
+    "ambient daylight | night/dusk 0:00-0:10 | sunrise glow 1:27-1:36, bright morning 1:51 | gradual brightening consistent with sunrise; however 0:11-0:18 shows full daylight windows inside a night sequence",
+    "folded bill | absent at 1:38 | resting on counter at 1:40 | hands place and adjust it at 1:39 then withdraw; effect follows cause",
+    "window reflections | reflection of waitress matches her pose at 1:46 | reflection turns down as she turns at 1:49-1:50 | reflection updates synchronously with the character's motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:11",
+      "entity": "diner interior ambient light (left windows)",
+      "invariant_violated": "light change without cause",
+      "description": "The interior shot 0:11-0:18 shows bright, blown-out daylight through the left windows, although the preceding exterior (0:00-0:10) and the following interior (0:19 onward) are the same night/dusk with the OPEN neon lit and dark blue sky. No switch, source change, or in-shot time transition accounts for the jump to daylight and back to night within an otherwise continuous night sequence.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "1:52",
+      "entity": "waitress",
+      "invariant_violated": "temporal flow (single forward timeline per shot)",
+      "description": "In one continuous shot (1:51-1:58) the waitress exists as two simultaneous semi-transparent instances for about six seconds: one rises from the stool and walks behind the counter while another independently wipes the mid-counter. Motion branches into two concurrent timelines instead of one continuous forward flow; the superimposition persists far longer than a normal dissolve and the duplicated action has no cause within the scene.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"exterior semi-truck | parked left of diner at dusk, exhaust/dust plume rising at 0:00 | same parked position, plume fully dissipated by 0:09 | plume drifts and disperses continuously; truck never moves, smoke decay is a plausible effect of a recent stop\",\n    \"neon OPEN sign / interior lights | lit at 0:00 | lit in all interior shots | only dims during the fade at 0:10 (transition), no uncaused on/off toggling within a shot\",\n    \"waitress | wiping counter at 0:11 | superimposed as two instances while cleaning at 1:52-1:58 | wiping, walking, pouring, serving all continuous within each shot; final shot shows dual semi-transparent instances\",\n    \"man (customer) | not present until 0:20 | leaves money 1:39, walks to truck 1:42-1:45 | entry, walk to counter, sit, reach for mug, pay, exit: each action initiated and completed in order\",\n    \"coffee pot -> mug | pot lifted and tilted 0:25-0:27 | stream flows 0:28-0:31, stops as pot rights at 0:32 | pour begins only after tilt, stream ceases when pot returns upright; order and delay plausible\",\n    \"plate (toast + fried egg) | steaming close-up at 0:33 | placed then retrieved by waitress 1:10-1:17 | steam rises continuously; place and retrieve are completed volitional actions\",\n    \"ambient daylight | night/dusk 0:00-0:10 | sunrise glow 1:27-1:36, bright morning 1:51 | gradual brightening consistent with sunrise; however 0:11-0:18 shows full daylight windows inside a night sequence\",\n    \"folded bill | absent at 1:38 | resting on counter at 1:40 | hands place and adjust it at 1:39 then withdraw; effect follows cause\",\n    \"window reflections | reflection of waitress matches her pose at 1:46 | reflection turns down as she turns at 1:49-1:50 | reflection updates synchronously with the character's motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:11\",\n      \"entity\": \"diner interior ambient light (left windows)\",\n      \"invariant_violated\": \"light change without cause\",\n      \"description\": \"The interior shot 0:11-0:18 shows bright, blown-out daylight through the left windows, although the preceding exterior (0:00-0:10) and the following interior (0:19 onward) are the same night/dusk with the OPEN neon lit and dark blue sky. No switch, source change, or in-shot time transition accounts for the jump to daylight and back to night within an otherwise continuous night sequence.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"1:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"temporal flow (single forward timeline per shot)\",\n      \"description\": \"In one continuous shot (1:51-1:58) the waitress exists as two simultaneous semi-transparent instances for about six seconds: one rises from the stool and walks behind the counter while another independently wipes the mid-counter. Motion branches into two concurrent timelines instead of one continuous forward flow; the superimposition persists far longer than a normal dissolve and the duplicated action has no cause within the scene.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

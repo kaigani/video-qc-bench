@@ -1,0 +1,48 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:11.111Z",
+  "latencyMs": 5573,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 487,
+    "total_tokens": 1725,
+    "cost": 0.00832,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00832,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.005844
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 303,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Phone | held by hands, screen displays 'A742' | screen text changes slightly, held by hands | focus shifts from background to phone",
+    "Hands holding phone | left thumb on left edge, right thumb on right edge | extra thumb appears on left side | an extra thumb suddenly manifests on the left side of the phone"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Hands holding phone",
+      "invariant_violated": "Anatomical Consistency",
+      "description": "An extra, disconnected thumb suddenly appears on the lower left side of the phone screen and then slides down out of frame.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Phone | held by hands, screen displays 'A742' | screen text changes slightly, held by hands | focus shifts from background to phone\",\n    \"Hands holding phone | left thumb on left edge, right thumb on right edge | extra thumb appears on left side | an extra thumb suddenly manifests on the left side of the phone\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Hands holding phone\",\n      \"invariant_violated\": \"Anatomical Consistency\",\n      \"description\": \"An extra, disconnected thumb suddenly appears on the lower left side of the phone screen and then slides down out of frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

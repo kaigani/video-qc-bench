@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:49:46.657Z",
+  "latencyMs": 5059,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 3061,
+    "total_tokens": 9714,
+    "cost": 0.031672,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.031672,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.018366
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2703,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's right hand | raised above bowl, motion-blurred at 0:00 | inside bowl stirring balls with strong motion blur at 0:09 | reaches down, grasps red ball (0:01), holds it (0:02), returns it into bowl (0:03-0:05), then begins stirring (0:06-0:09); motion continuous, no dissolved reaches",
+    "child's left hand | raised at 0:00 | braced on bowl rim 0:03-0:09 | assists holding red ball at 0:01-0:02, then moves to rim; transition completed, plausible timing",
+    "held red ball | at rest in bowl at 0:00 | back in bowl, later displaced by stirring | lifted only after hand contact (0:01), held stationary while gripped (0:02), released into bowl (0:03), thereafter moves only during hand contact; all motion contact-caused",
+    "ball cluster in bowl | stationary 0:00-0:05 | moving with motion blur 0:06-0:09 | motion onset coincides with hand entering and sweeping through cluster; blur magnitude matches hand speed; stationary balls remain stationary until touched",
+    "glass bowl | stationary on table at 0:00 | stationary at 0:09 | rim contacted by left hand at ~0:03; bowl never displaces without cause, no uncaused rotation or slide"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child's right hand | raised above bowl, motion-blurred at 0:00 | inside bowl stirring balls with strong motion blur at 0:09 | reaches down, grasps red ball (0:01), holds it (0:02), returns it into bowl (0:03-0:05), then begins stirring (0:06-0:09); motion continuous, no dissolved reaches\",\n    \"child's left hand | raised at 0:00 | braced on bowl rim 0:03-0:09 | assists holding red ball at 0:01-0:02, then moves to rim; transition completed, plausible timing\",\n    \"held red ball | at rest in bowl at 0:00 | back in bowl, later displaced by stirring | lifted only after hand contact (0:01), held stationary while gripped (0:02), released into bowl (0:03), thereafter moves only during hand contact; all motion contact-caused\",\n    \"ball cluster in bowl | stationary 0:00-0:05 | moving with motion blur 0:06-0:09 | motion onset coincides with hand entering and sweeping through cluster; blur magnitude matches hand speed; stationary balls remain stationary until touched\",\n    \"glass bowl | stationary on table at 0:00 | stationary at 0:09 | rim contacted by left hand at ~0:03; bowl never displaces without cause, no uncaused rotation or slide\"\n  ],\n  \"findings\": []\n}"
+}

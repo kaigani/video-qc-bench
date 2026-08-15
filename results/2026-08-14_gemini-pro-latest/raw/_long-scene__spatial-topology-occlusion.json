@@ -1,0 +1,57 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:00.133Z",
+  "latencyMs": 11146,
+  "usage": {
+    "prompt_tokens": 10631,
+    "completion_tokens": 4899,
+    "total_tokens": 15530,
+    "cost": 0.08005,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.08005,
+      "upstream_inference_prompt_cost": 0.021262,
+      "upstream_inference_completions_cost": 0.058788
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4518,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner layout | counter on right, window wall on left, front door on far wall | front door vanishes, opposite wall changes | inconsistent architecture",
+    "front door | located on far wall to the right of OPEN sign | missing, replaced by wall panel | disappears between wide shots",
+    "pass-through opposite wall | continuous window wall with booths | solid wall with EXIT door and fridge | complete change of architectural features"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:45",
+      "entity": "pass-through opposite wall",
+      "invariant_violated": "scene layout",
+      "description": "The view looking out from the kitchen pass-through shows a solid wall with an EXIT door behind the booths. Based on the wide shots establishing the room's layout (e.g., 00:19), the wall opposite the counter should be a continuous large window wall.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "front door",
+      "invariant_violated": "scene layout",
+      "description": "The front door of the diner is missing. In all previous wide shots looking down the counter (e.g., 00:19, 01:00, 01:18), a glass door is clearly visible to the right of the window with the 'OPEN' sign. In this shot, that space is filled by a solid wall panel.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"diner layout | counter on right, window wall on left, front door on far wall | front door vanishes, opposite wall changes | inconsistent architecture\",\n    \"front door | located on far wall to the right of OPEN sign | missing, replaced by wall panel | disappears between wide shots\",\n    \"pass-through opposite wall | continuous window wall with booths | solid wall with EXIT door and fridge | complete change of architectural features\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"pass-through opposite wall\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The view looking out from the kitchen pass-through shows a solid wall with an EXIT door behind the booths. Based on the wide shots establishing the room's layout (e.g., 00:19), the wall opposite the counter should be a continuous large window wall.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"front door\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The front door of the diner is missing. In all previous wide shots looking down the counter (e.g., 00:19, 01:00, 01:18), a glass door is clearly visible to the right of the window with the 'OPEN' sign. In this shot, that space is filled by a solid wall panel.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

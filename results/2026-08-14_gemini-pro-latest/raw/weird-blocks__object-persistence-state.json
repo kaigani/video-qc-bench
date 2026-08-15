@@ -1,0 +1,73 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:46.705Z",
+  "latencyMs": 4320,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2287,
+    "total_tokens": 3731,
+    "cost": 0.030332,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.030332,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.027444
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1783,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Held Green Block | Starts as Green '2', held by hand | Ends as Green '6' at the end of the row | Spawns multiple blocks, transforms its printed number several times during movement",
+    "Stationary Green Block | Green '2', resting on table to the right | Disappears | Vanishes completely as the moving block passes over its position",
+    "Trail Blocks | None initially | Row of 8 distinct blocks (blue, green, yellow) on table | Spontaneously generated from behind the moving block"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Trail Blocks",
+      "invariant_violated": "identity & persistence (spontaneous generation)",
+      "description": "As the hand drags the green block, a continuous stream of new blocks (blue, green, yellow) spontaneously appears from behind it.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Stationary Green Block",
+      "invariant_violated": "identity & persistence (disappearance)",
+      "description": "The green '2' block that was initially stationary on the right side of the table vanishes as the moving block passes through its location.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Held Green Block",
+      "invariant_violated": "physical state transitions",
+      "description": "The number printed on the green block held by the hand spontaneously changes from '2' to '3' while being dragged.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Held Green Block",
+      "invariant_violated": "physical state transitions",
+      "description": "The number printed on the green block held by the hand spontaneously changes from '3' to '6' while being dragged.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Held Green Block | Starts as Green '2', held by hand | Ends as Green '6' at the end of the row | Spawns multiple blocks, transforms its printed number several times during movement\",\n    \"Stationary Green Block | Green '2', resting on table to the right | Disappears | Vanishes completely as the moving block passes over its position\",\n    \"Trail Blocks | None initially | Row of 8 distinct blocks (blue, green, yellow) on table | Spontaneously generated from behind the moving block\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Trail Blocks\",\n      \"invariant_violated\": \"identity & persistence (spontaneous generation)\",\n      \"description\": \"As the hand drags the green block, a continuous stream of new blocks (blue, green, yellow) spontaneously appears from behind it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Stationary Green Block\",\n      \"invariant_violated\": \"identity & persistence (disappearance)\",\n      \"description\": \"The green '2' block that was initially stationary on the right side of the table vanishes as the moving block passes through its location.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Held Green Block\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"The number printed on the green block held by the hand spontaneously changes from '2' to '3' while being dragged.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Held Green Block\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"The number printed on the green block held by the hand spontaneously changes from '3' to '6' while being dragged.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

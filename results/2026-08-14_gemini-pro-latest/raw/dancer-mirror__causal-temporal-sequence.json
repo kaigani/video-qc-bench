@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:57.533Z",
+  "latencyMs": 5548,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2358,
+    "total_tokens": 3783,
+    "cost": 0.031146,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.031146,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.028296
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2039,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer | standing facing mirror, tattoo on left arm | standing facing mirror, right arm raised over head | raises right arm, lowers it, raises it again",
+    "Reflection | standing facing camera, tattoo on right arm | standing facing camera, left arm raised over head | raises left arm, lowers it, raises it again"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Reflection",
+      "invariant_violated": "Proportionality & direction",
+      "description": "The dancer raises her right arm (on the right side of the screen), which should cause the reflection's arm on the right side of the screen to raise. Instead, the reflection raises its left arm (on the left side of the screen). The effect's direction physically mismatches the cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Reflection",
+      "invariant_violated": "Proportionality & direction",
+      "description": "The dancer turns her head to the right. The reflection reacts by turning its head to its left (the left side of the screen), failing to accurately reflect the direction of the causal movement.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer | standing facing mirror, tattoo on left arm | standing facing mirror, right arm raised over head | raises right arm, lowers it, raises it again\",\n    \"Reflection | standing facing camera, tattoo on right arm | standing facing camera, left arm raised over head | raises left arm, lowers it, raises it again\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Reflection\",\n      \"invariant_violated\": \"Proportionality & direction\",\n      \"description\": \"The dancer raises her right arm (on the right side of the screen), which should cause the reflection's arm on the right side of the screen to raise. Instead, the reflection raises its left arm (on the left side of the screen). The effect's direction physically mismatches the cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Reflection\",\n      \"invariant_violated\": \"Proportionality & direction\",\n      \"description\": \"The dancer turns her head to the right. The reflection reacts by turning its head to its left (the left side of the screen), failing to accurately reflect the direction of the causal movement.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:15:03.259Z",
+  "latencyMs": 9917,
+  "usage": {
+    "prompt_tokens": 2958,
+    "completion_tokens": 1949,
+    "total_tokens": 4907,
+    "cost": 0.00095846,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 544,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00095846,
+      "upstream_inference_prompt_cost": 0.0002958,
+      "upstream_inference_completions_cost": 0.00066266
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1429,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right Hand | gripping coin | releases coin to cup | coin drop 00:02",
+    "Right Hand | moving cup | releasing cup | cup shift 00:04-00:06",
+    "Left Hand | idle | moving cups | cup arrangement 00:07-00:09",
+    "Right Hand | gripping coin | moving coin | coin manipulate 00:09-00:10",
+    "Cups | static on table | repositioned | shifted by hands 00:04-00:09",
+    "Coins | static on table | static on table | no change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right Hand | gripping coin | releases coin to cup | coin drop 00:02\",\n    \"Right Hand | moving cup | releasing cup | cup shift 00:04-00:06\",\n    \"Left Hand | idle | moving cups | cup arrangement 00:07-00:09\",\n    \"Right Hand | gripping coin | moving coin | coin manipulate 00:09-00:10\",\n    \"Cups | static on table | repositioned | shifted by hands 00:04-00:09\",\n    \"Coins | static on table | static on table | no change\"\n  ],\n  \"findings\": []\n}"
+}

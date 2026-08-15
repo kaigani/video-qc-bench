@@ -1,0 +1,47 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:13.062Z",
+  "latencyMs": 6953,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1153,
+    "total_tokens": 2391,
+    "cost": 0.00525225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00525225,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00432375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1010,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives | bright green in source container | mix of green and dark purple in jar | olives spontaneously change color to dark purple as they are poured into the jar"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "color_consistency",
+      "description": "Green olives poured from a container containing exclusively green olives spontaneously transform into dark purple olives upon falling into the jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives | bright green in source container | mix of green and dark purple in jar | olives spontaneously change color to dark purple as they are poured into the jar\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"color_consistency\",\n      \"description\": \"Green olives poured from a container containing exclusively green olives spontaneously transform into dark purple olives upon falling into the jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

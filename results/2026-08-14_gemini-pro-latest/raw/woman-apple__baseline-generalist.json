@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:13.431Z",
+  "latencyMs": 7224,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1736,
+    "total_tokens": 2974,
+    "cost": 0.023308,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023308,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.020832
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1542,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman | Walking in market holding umbrella and apple | Walking in market holding umbrella and apple | Hands unnaturally intersect with umbrella shaft",
+    "Umbrella | Open, held upright | Open, held upright | Shaft passes through the woman's hands and the apple"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Umbrella shaft and woman's hands",
+      "invariant_violated": "Solid object intersection",
+      "description": "As the woman brings her hands together around the apple, the metal shaft of the umbrella passes directly through her hands and the apple. The umbrella remains upright and floats in position despite not being physically held or supported by her hands.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman | Walking in market holding umbrella and apple | Walking in market holding umbrella and apple | Hands unnaturally intersect with umbrella shaft\",\n    \"Umbrella | Open, held upright | Open, held upright | Shaft passes through the woman's hands and the apple\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Umbrella shaft and woman's hands\",\n      \"invariant_violated\": \"Solid object intersection\",\n      \"description\": \"As the woman brings her hands together around the apple, the metal shaft of the umbrella passes directly through her hands and the apple. The umbrella remains upright and floats in position despite not being physically held or supported by her hands.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:48.875Z",
+  "latencyMs": 5511,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 3337,
+    "total_tokens": 4575,
+    "cost": 0.04252,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04252,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.040044
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3060,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing blue dress, short bob hair | wearing blue dress, short bob hair | walks through kitchen, hallway, and bedroom",
+    "framed picture (kitchen) | depicts blue flower, right wall | depicts blue flower, left wall (perspective change) | image content shifts and morphs significantly"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "framed picture (kitchen)",
+      "invariant_violated": "Temporal Consistency",
+      "description": "The image within the framed picture on the right wall shifts and changes shape, appearing to move, as the woman's shadow passes over it.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "framed picture (kitchen)",
+      "invariant_violated": "Temporal Consistency",
+      "description": "As the woman walks back toward the kitchen, the framed picture visible through the doorway morphs significantly; the image becomes abstract and unrecognizable, and the frame distorts.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | wearing blue dress, short bob hair | wearing blue dress, short bob hair | walks through kitchen, hallway, and bedroom\",\n    \"framed picture (kitchen) | depicts blue flower, right wall | depicts blue flower, left wall (perspective change) | image content shifts and morphs significantly\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"framed picture (kitchen)\",\n      \"invariant_violated\": \"Temporal Consistency\",\n      \"description\": \"The image within the framed picture on the right wall shifts and changes shape, appearing to move, as the woman's shadow passes over it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"framed picture (kitchen)\",\n      \"invariant_violated\": \"Temporal Consistency\",\n      \"description\": \"As the woman walks back toward the kitchen, the framed picture visible through the doorway morphs significantly; the image becomes abstract and unrecognizable, and the frame distorts.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

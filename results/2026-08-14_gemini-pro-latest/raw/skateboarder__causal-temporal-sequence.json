@@ -1,0 +1,51 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:27:06.578Z",
+  "latencyMs": 5767,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2650,
+    "total_tokens": 4075,
+    "cost": 0.03465,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03465,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.0318
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2356,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater pop (00:00) -> Board lift and flip (00:01) -> Plausible",
+    "Skater catch (00:02) -> Board stops flipping (00:03) -> Plausible",
+    "Skater lands (00:03) -> Impact absorbed (00:03) -> Plausible",
+    "Skater pop (00:06) -> Board lift (00:07) -> Plausible",
+    "Skater landing initiated (00:08) -> Board dissolves underfoot (00:09) -> Implausible, action dissolves"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Skater landing action",
+      "invariant_violated": "proportionality & completion",
+      "description": "The skater initiates a landing motion to land back on the skateboard, but the skateboard completely dissolves from under his right foot. The landing action fails to complete as a physical interaction with the board, instead dissolving into the skater landing directly on the concrete while maintaining a posture as if the board were still present.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skater pop (00:00) -> Board lift and flip (00:01) -> Plausible\",\n    \"Skater catch (00:02) -> Board stops flipping (00:03) -> Plausible\",\n    \"Skater lands (00:03) -> Impact absorbed (00:03) -> Plausible\",\n    \"Skater pop (00:06) -> Board lift (00:07) -> Plausible\",\n    \"Skater landing initiated (00:08) -> Board dissolves underfoot (00:09) -> Implausible, action dissolves\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Skater landing action\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"The skater initiates a landing motion to land back on the skateboard, but the skateboard completely dissolves from under his right foot. The landing action fails to complete as a physical interaction with the board, instead dissolving into the skater landing directly on the concrete while maintaining a posture as if the board were still present.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

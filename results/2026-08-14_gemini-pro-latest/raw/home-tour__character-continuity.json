@@ -1,0 +1,79 @@
+{
+  "key": "home-tour__character-continuity",
+  "video": "home-tour.mp4",
+  "role": "character-continuity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:23:43.954Z",
+  "latencyMs": 5726,
+  "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 2482,
+    "total_tokens": 3906,
+    "cost": 0.032632,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.032632,
+      "upstream_inference_prompt_cost": 0.002848,
+      "upstream_inference_completions_cost": 0.029784
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2001,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | Short brown hair, teal blue dress with smooth shoulders and plain back | Short brown hair, teal blue dress with horizontal seam on back | Hair texture and dress details (shoulders, back seams) change across multiple cuts."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Woman",
+      "invariant_violated": "Identity Continuity",
+      "description": "A large blue dangle earring is visible on her left ear when she turns her head, which was not present in the earlier profile view.",
+      "severity": "minor",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Woman",
+      "invariant_violated": "Identity Continuity",
+      "description": "The dress suddenly features gathered, slightly puffed seams on the shoulders, and her hair appears noticeably curlier and shorter.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Woman",
+      "invariant_violated": "Identity Continuity",
+      "description": "The gathered seams on the dress shoulders disappear between cuts, reverting to smooth shoulders.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Woman",
+      "invariant_violated": "Identity Continuity",
+      "description": "A distinct V-shaped seam or yoke appears on the upper back of the dress.",
+      "severity": "minor",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Woman",
+      "invariant_violated": "Identity Continuity",
+      "description": "The seam detail on the upper back of the dress changes from V-shaped to a straight horizontal line.",
+      "severity": "minor",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | Short brown hair, teal blue dress with smooth shoulders and plain back | Short brown hair, teal blue dress with horizontal seam on back | Hair texture and dress details (shoulders, back seams) change across multiple cuts.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Woman\",\n      \"invariant_violated\": \"Identity Continuity\",\n      \"description\": \"A large blue dangle earring is visible on her left ear when she turns her head, which was not present in the earlier profile view.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Woman\",\n      \"invariant_violated\": \"Identity Continuity\",\n      \"description\": \"The dress suddenly features gathered, slightly puffed seams on the shoulders, and her hair appears noticeably curlier and shorter.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Woman\",\n      \"invariant_violated\": \"Identity Continuity\",\n      \"description\": \"The gathered seams on the dress shoulders disappear between cuts, reverting to smooth shoulders.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Woman\",\n      \"invariant_violated\": \"Identity Continuity\",\n      \"description\": \"A distinct V-shaped seam or yoke appears on the upper back of the dress.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Woman\",\n      \"invariant_violated\": \"Identity Continuity\",\n      \"description\": \"The seam detail on the upper back of the dress changes from V-shaped to a straight horizontal line.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

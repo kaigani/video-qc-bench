@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:21:34.147Z",
+  "latencyMs": 5257,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 2611,
+    "total_tokens": 9264,
+    "cost": 0.028972,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028972,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.015666
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2416,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand + pin tool | start: holds tool, tip aimed at object | end: empty-handed, fingers turning object | 0:00-0:03 approach and contact with object; 0:04 withdrawal downward (visible motion blur, tool deposited); 0:05-0:09 hand returns to manipulate and twist object - order and delays plausible",
+    "left hand + small round object | start: held steady in fingertips | end: still held, being turned by right hand | object only displaces/rotates while tool or fingers act on it; no uncaused motion; plausible",
+    "head / gaze | start: tilted down, attending to hands | end: tilted down, attending to hands | small posture and smile shifts follow ongoing hand actions; reaction timing plausible"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand + pin tool | start: holds tool, tip aimed at object | end: empty-handed, fingers turning object | 0:00-0:03 approach and contact with object; 0:04 withdrawal downward (visible motion blur, tool deposited); 0:05-0:09 hand returns to manipulate and twist object - order and delays plausible\",\n    \"left hand + small round object | start: held steady in fingertips | end: still held, being turned by right hand | object only displaces/rotates while tool or fingers act on it; no uncaused motion; plausible\",\n    \"head / gaze | start: tilted down, attending to hands | end: tilted down, attending to hands | small posture and smile shifts follow ongoing hand actions; reaction timing plausible\"\n  ],\n  \"findings\": []\n}"
+}

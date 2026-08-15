@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:18:15.963Z",
+  "latencyMs": 3052,
+  "usage": {
+    "prompt_tokens": 2930,
+    "completion_tokens": 852,
+    "total_tokens": 3782,
+    "cost": 0.000751,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000751,
+      "upstream_inference_prompt_cost": 0.0004102,
+      "upstream_inference_completions_cost": 0.0003408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 542,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | standing on board | riding out | crouch (00:00) -> jump (00:01) -> flip/air (00:02) -> land (00:03) -> ride (00:03-00:08) -> crouch (00:08) -> jump (00:08) -> land (00:10)",
+    "skateboard | stationary on ground | moving on ground | lifted (00:01) -> flipped (00:02) -> landed (00:03) -> rolling (00:03-00:08) -> lifted (00:08) -> landed (00:10)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | standing on board | riding out | crouch (00:00) -> jump (00:01) -> flip/air (00:02) -> land (00:03) -> ride (00:03-00:08) -> crouch (00:08) -> jump (00:08) -> land (00:10)\",\n    \"skateboard | stationary on ground | moving on ground | lifted (00:01) -> flipped (00:02) -> landed (00:03) -> rolling (00:03-00:08) -> lifted (00:08) -> landed (00:10)\"\n  ],\n  \"findings\": []\n}"
+}

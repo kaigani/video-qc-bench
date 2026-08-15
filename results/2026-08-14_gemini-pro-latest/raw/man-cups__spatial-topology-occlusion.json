@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:40.560Z",
+  "latencyMs": 6904,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3177,
+    "total_tokens": 4603,
+    "cost": 0.040976,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.040976,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.038124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2803,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tablecloth | center has a light green circular pattern | center is solid red | pattern morphs and disappears during camera pullback",
+    "Three red cups | arranged in a triangle (one front, two back) | arranged in a straight horizontal line | layout morphs without interaction during camera pan",
+    "Coin on back-right cup | resting horizontally over the cup's opening | absent | disappears during camera movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Tablecloth",
+      "invariant_violated": "scene layout",
+      "description": "The center of the tablecloth changes from a light green circular pattern to a solid red surface as the camera pulls back.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Three red cups",
+      "invariant_violated": "scene layout",
+      "description": "The spatial arrangement of the three cups morphs from a triangular formation into a straight horizontal line as the viewpoint changes, without any physical manipulation.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Coin on cup",
+      "invariant_violated": "scene layout",
+      "description": "The coin resting on top of the back-right cup vanishes entirely as the camera pans, without being moved or falling.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Tablecloth | center has a light green circular pattern | center is solid red | pattern morphs and disappears during camera pullback\",\n    \"Three red cups | arranged in a triangle (one front, two back) | arranged in a straight horizontal line | layout morphs without interaction during camera pan\",\n    \"Coin on back-right cup | resting horizontally over the cup's opening | absent | disappears during camera movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Tablecloth\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The center of the tablecloth changes from a light green circular pattern to a solid red surface as the camera pulls back.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Three red cups\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The spatial arrangement of the three cups morphs from a triangular formation into a straight horizontal line as the viewpoint changes, without any physical manipulation.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Coin on cup\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The coin resting on top of the back-right cup vanishes entirely as the camera pans, without being moved or falling.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

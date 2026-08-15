@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:29:05.807Z",
+  "latencyMs": 6927,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 917,
+    "total_tokens": 2369,
+    "cost": 0.013908,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013908,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.011004
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 737,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | Arms folded, resting on car hood | Arms folded, resting on car hood | Torso continuously clips through the solid hood of the car",
+    "Car | Stationary, solid hood | Stationary, solid hood | Intersected by woman's body"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's torso",
+      "invariant_violated": "solidity",
+      "description": "The woman's torso appears to emerge directly from and clip through the solid metal hood of the car. There is no opening; her body impossibly intersects the solid geometry of the vehicle.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | Arms folded, resting on car hood | Arms folded, resting on car hood | Torso continuously clips through the solid hood of the car\",\n    \"Car | Stationary, solid hood | Stationary, solid hood | Intersected by woman's body\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman's torso\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The woman's torso appears to emerge directly from and clip through the solid metal hood of the car. There is no opening; her body impossibly intersects the solid geometry of the vehicle.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

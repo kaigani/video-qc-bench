@@ -1,0 +1,48 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:19:15.790Z",
+  "latencyMs": 2151,
+  "usage": {
+    "prompt_tokens": 2930,
+    "completion_tokens": 1540,
+    "total_tokens": 4470,
+    "cost": 0.0010262,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0010262,
+      "upstream_inference_prompt_cost": 0.0004102,
+      "upstream_inference_completions_cost": 0.000616
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1215,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "tool | held in right hand | vanished | disappears at 00:04",
+    "object | held in left hand | held in both hands | manipulated by tool then by fingers"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "tool",
+      "invariant_violated": "temporal flow",
+      "description": "The tool held in the right hand vanishes instantaneously without a continuous motion of being set down or moved out of frame.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"tool | held in right hand | vanished | disappears at 00:04\",\n    \"object | held in left hand | held in both hands | manipulated by tool then by fingers\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"tool\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"The tool held in the right hand vanishes instantaneously without a continuous motion of being set down or moved out of frame.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

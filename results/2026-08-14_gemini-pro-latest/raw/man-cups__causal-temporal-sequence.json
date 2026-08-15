@@ -1,0 +1,48 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:33.271Z",
+  "latencyMs": 5183,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1042,
+    "total_tokens": 2467,
+    "cost": 0.015354,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015354,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.012504
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 847,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand holds coin -> 00:00 -> Hand lowers into cup -> 00:02 -> plausible",
+    "Hand hovers near cup -> 00:04 -> Coin appears on table and slides away -> 00:05 -> implausible, no push or drop action"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Coin on table",
+      "invariant_violated": "effect-without-cause",
+      "description": "A coin materializes on the table surface next to the leftmost cup and slides outwards. The person's hand is hovering above but does not perform any pushing or dropping action to cause this movement.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand holds coin -> 00:00 -> Hand lowers into cup -> 00:02 -> plausible\",\n    \"Hand hovers near cup -> 00:04 -> Coin appears on table and slides away -> 00:05 -> implausible, no push or drop action\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Coin on table\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"A coin materializes on the table surface next to the leftmost cup and slides outwards. The person's hand is hovering above but does not perform any pushing or dropping action to cause this movement.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

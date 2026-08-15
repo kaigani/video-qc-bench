@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:12:27.144Z",
+  "latencyMs": 12373,
+  "usage": {
+    "prompt_tokens": 48496,
+    "completion_tokens": 12356,
+    "total_tokens": 60852,
+    "cost": 0.086904,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 48128,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.086904,
+      "upstream_inference_prompt_cost": 0.012768,
+      "upstream_inference_completions_cost": 0.074136
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11813,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner building | rectangular single-story block; glass double door centered on front facade flanked by window bands; OPEN neon in window right of door (exterior view); kitchen at rear | same throughout | static night exterior with truck parked at left end",
+    "parked truck | white cab/trailer at left of building, cab facing diner, exhaust smoke | dark-green box truck with white stripe parked parallel to booth windows at dawn | vehicle differs at end (identity change is another specialist's domain)",
+    "counter | long counter on right side of interior (view toward kitchen), curved near end; stools lined on customer side | same | waitress works behind it; customer seats in front of it",
+    "kitchen pass | wide opening in back wall with stainless hood, left of wooden back/service door | same | seen consistently from dining side and from kitchen side",
+    "booths + windows | booth row along left wall under large windows; OPEN sign visible in far window from inside; sunrise later through same glazing | same | consistent orientation across wide shots",
+    "exit door | single glass door with EXIT sign at front end of booth side (view from kitchen) | same | compatible with front facade glazing",
+    "waitress | wiping counter behind service area at night | sits at counter at dawn, then two simultaneous instances appear in one shot | duplication artifact at end",
+    "male customer | first visible crossing service aisle (silhouetted against pass), then seated at counter | leaves cash, walks out to truck | path via back door is geometrically consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "single-instance consistency (one person in two places at once)",
+      "description": "In a single continuous shot, one instance of the waitress rises from the stool and moves behind the right side of the counter while a second, identical instance (same bun, blue shirt, white apron, same wiping action) is simultaneously visible in the background at the kitchen pass. The two copies coexist from 01:52-01:56 and the background copy fades/merges away by 01:58. No second identically-dressed character was ever established, and one person cannot occupy two positions in the same viewpoint.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner building | rectangular single-story block; glass double door centered on front facade flanked by window bands; OPEN neon in window right of door (exterior view); kitchen at rear | same throughout | static night exterior with truck parked at left end\",\n    \"parked truck | white cab/trailer at left of building, cab facing diner, exhaust smoke | dark-green box truck with white stripe parked parallel to booth windows at dawn | vehicle differs at end (identity change is another specialist's domain)\",\n    \"counter | long counter on right side of interior (view toward kitchen), curved near end; stools lined on customer side | same | waitress works behind it; customer seats in front of it\",\n    \"kitchen pass | wide opening in back wall with stainless hood, left of wooden back/service door | same | seen consistently from dining side and from kitchen side\",\n    \"booths + windows | booth row along left wall under large windows; OPEN sign visible in far window from inside; sunrise later through same glazing | same | consistent orientation across wide shots\",\n    \"exit door | single glass door with EXIT sign at front end of booth side (view from kitchen) | same | compatible with front facade glazing\",\n    \"waitress | wiping counter behind service area at night | sits at counter at dawn, then two simultaneous instances appear in one shot | duplication artifact at end\",\n    \"male customer | first visible crossing service aisle (silhouetted against pass), then seated at counter | leaves cash, walks out to truck | path via back door is geometrically consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"single-instance consistency (one person in two places at once)\",\n      \"description\": \"In a single continuous shot, one instance of the waitress rises from the stool and moves behind the right side of the counter while a second, identical instance (same bun, blue shirt, white apron, same wiping action) is simultaneously visible in the background at the kitchen pass. The two copies coexist from 01:52-01:56 and the background copy fades/merges away by 01:58. No second identically-dressed character was ever established, and one person cannot occupy two positions in the same viewpoint.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

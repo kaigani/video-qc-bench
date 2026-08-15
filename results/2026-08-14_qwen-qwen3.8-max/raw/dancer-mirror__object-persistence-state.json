@@ -1,0 +1,43 @@
+{
+  "key": "dancer-mirror__object-persistence-state",
+  "video": "dancer-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:51:33.676Z",
+  "latencyMs": 3387,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 5208,
+    "total_tokens": 11876,
+    "cost": 0.044584,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.044584,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.031248
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5008,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white cup | upright on floor at base of wall (seen via mirror reflection), stationary | upright on floor at base of wall, stationary | no transitions; apparent image shift matches handheld camera drift only",
+    "blue plastic bin | closed, sitting on floor against far wall (mirror reflection) | closed, same spot | no transitions; remains fixed throughout",
+    "portable ballet barre stands | upright against right wall (mirror reflection) | same position/orientation | no transitions",
+    "framed wall poster | hanging flat on right wall (mirror reflection) | same | no transitions",
+    "double doors (left wall) and their reflections | closed | closed | no open/close transitions",
+    "mirror wall panels | fixed, intact, reflective | same | no state change; reflections remain consistent with dancer's pose in every frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"white cup | upright on floor at base of wall (seen via mirror reflection), stationary | upright on floor at base of wall, stationary | no transitions; apparent image shift matches handheld camera drift only\",\n    \"blue plastic bin | closed, sitting on floor against far wall (mirror reflection) | closed, same spot | no transitions; remains fixed throughout\",\n    \"portable ballet barre stands | upright against right wall (mirror reflection) | same position/orientation | no transitions\",\n    \"framed wall poster | hanging flat on right wall (mirror reflection) | same | no transitions\",\n    \"double doors (left wall) and their reflections | closed | closed | no open/close transitions\",\n    \"mirror wall panels | fixed, intact, reflective | same | no state change; reflections remain consistent with dancer's pose in every frame\"\n  ],\n  \"findings\": []\n}"
+}

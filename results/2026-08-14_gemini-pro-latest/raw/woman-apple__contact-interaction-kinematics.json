@@ -1,0 +1,57 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:29.683Z",
+  "latencyMs": 5820,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1597,
+    "total_tokens": 3049,
+    "cost": 0.022068,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022068,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.019164
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1281,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's left hand | holding red apple, stable grip | holding red apple | claps with an extra phantom hand starting at 00:02",
+    "Woman's right hand | holding umbrella shaft | holding umbrella shaft | maintains grip throughout",
+    "Umbrella shaft | solid cylinder, held on right side | clips through body | passes through the woman's neck/shoulder as she turns at 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Woman's hands",
+      "invariant_violated": "limb mechanics",
+      "description": "An extra hand appears and claps against the woman's left hand (which is holding the apple), while her actual right arm and hand are simultaneously visible holding the umbrella on her right side.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Umbrella shaft",
+      "invariant_violated": "solidity",
+      "description": "As the woman turns and the camera pans around her, the shaft of the umbrella passes directly through her shoulder and neck area instead of moving around her body.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's left hand | holding red apple, stable grip | holding red apple | claps with an extra phantom hand starting at 00:02\",\n    \"Woman's right hand | holding umbrella shaft | holding umbrella shaft | maintains grip throughout\",\n    \"Umbrella shaft | solid cylinder, held on right side | clips through body | passes through the woman's neck/shoulder as she turns at 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Woman's hands\",\n      \"invariant_violated\": \"limb mechanics\",\n      \"description\": \"An extra hand appears and claps against the woman's left hand (which is holding the apple), while her actual right arm and hand are simultaneously visible holding the umbrella on her right side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Umbrella shaft\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the woman turns and the camera pans around her, the shaft of the umbrella passes directly through her shoulder and neck area instead of moving around her body.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:06:49.473Z",
+  "latencyMs": 5230,
+  "usage": {
+    "prompt_tokens": 6659,
+    "completion_tokens": 8474,
+    "total_tokens": 15133,
+    "cost": 0.064162,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.064162,
+      "upstream_inference_prompt_cost": 0.013318,
+      "upstream_inference_completions_cost": 0.050844
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8186,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "round table w/ red cloth | central pale-green oval surrounded by ring of coin tokens; cups sit on oval | same layout at end; ring and oval keep fixed relative positions | camera orbits from close side view to frontal to opposite side; pattern geometry stays consistent",
+    "set of 4 small metal cups | 4 cups clustered on pale oval (near/mid/right/far) | 4 cups still present, rearranged into row/cluster by the man's hands | count conserved (4) in every frame; apparent row-vs-diamond differences match viewing angle plus manual rearrangement",
+    "man in blue suit | only arms/hands visible at frame left, seated at table edge | fully revealed seated at far side of table, later at frame right | single consistent seat position relative to table; camera reveal, not movement of subject",
+    "room background | dark room, chairs, bright windows glimpsed at top | window bank behind man, doorway + framed picture on side wall, chairs right | background panorama rotates consistently with camera orbit; openings show matching spaces",
+    "coin tokens on cloth rim | fixed decorative ring positions (e.g., blue-flower tokens right side) | same tokens in same relative spots when re-visible | static; no relocation detected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"round table w/ red cloth | central pale-green oval surrounded by ring of coin tokens; cups sit on oval | same layout at end; ring and oval keep fixed relative positions | camera orbits from close side view to frontal to opposite side; pattern geometry stays consistent\",\n    \"set of 4 small metal cups | 4 cups clustered on pale oval (near/mid/right/far) | 4 cups still present, rearranged into row/cluster by the man's hands | count conserved (4) in every frame; apparent row-vs-diamond differences match viewing angle plus manual rearrangement\",\n    \"man in blue suit | only arms/hands visible at frame left, seated at table edge | fully revealed seated at far side of table, later at frame right | single consistent seat position relative to table; camera reveal, not movement of subject\",\n    \"room background | dark room, chairs, bright windows glimpsed at top | window bank behind man, doorway + framed picture on side wall, chairs right | background panorama rotates consistently with camera orbit; openings show matching spaces\",\n    \"coin tokens on cloth rim | fixed decorative ring positions (e.g., blue-flower tokens right side) | same tokens in same relative spots when re-visible | static; no relocation detected\"\n  ],\n  \"findings\": []\n}"
+}

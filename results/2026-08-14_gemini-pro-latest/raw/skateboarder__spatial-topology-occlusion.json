@@ -1,0 +1,58 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:26:48.066Z",
+  "latencyMs": 5636,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1615,
+    "total_tokens": 3041,
+    "cost": 0.022232,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022232,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.01938
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1307,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder | riding forward | lands trick | moves through skatepark",
+    "Skatepark concrete | flat and curved ramps | similar features | geometry shifts slightly during camera moves",
+    "Background trees | line of trees | line of trees | shapes and positions warp and morph during camera pans",
+    "Light poles | tall poles with lights | tall poles | disappear, reappear, and shift relative to trees"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Background trees and light poles",
+      "invariant_violated": "scene layout",
+      "description": "As the camera tilts up during the first trick, the background trees morph in shape and the light poles on the right disappear, completely altering the established scene layout.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Background trees and light poles",
+      "invariant_violated": "scene layout",
+      "description": "During the second trick, the pair of light poles visible on the left earlier disappears, and the tree line warps, changing the relative positions of the background elements again.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder | riding forward | lands trick | moves through skatepark\",\n    \"Skatepark concrete | flat and curved ramps | similar features | geometry shifts slightly during camera moves\",\n    \"Background trees | line of trees | line of trees | shapes and positions warp and morph during camera pans\",\n    \"Light poles | tall poles with lights | tall poles | disappear, reappear, and shift relative to trees\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Background trees and light poles\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"As the camera tilts up during the first trick, the background trees morph in shape and the light poles on the right disappear, completely altering the established scene layout.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Background trees and light poles\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"During the second trick, the pair of light poles visible on the left earlier disappears, and the tree line warps, changing the relative positions of the background elements again.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:54:50.333Z",
+  "latencyMs": 4939,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1754,
+    "total_tokens": 2992,
+    "cost": 0.007506,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007506,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0065775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1512,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | short blonde-brown hair, dark blue long-sleeve dress | short blonde-brown hair, dark blue long-sleeve dress | walks from kitchen through hallway into bedroom and returns",
+    "kitchen | countertop microwave at 00:00, stove without microwave hood at 00:01 | over-the-range microwave above stove at 00:09 | environment morphs between shots"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "kitchen layout and microwave",
+      "invariant_violated": "spatial_inconsistency",
+      "description": "When the woman walks back into the kitchen, a built-in microwave hood appears directly above the stove on the left wall, whereas in the opening kitchen shot (00:00-00:01) the microwave was sitting on the opposite countertop and there was no microwave installed above the stove.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | short blonde-brown hair, dark blue long-sleeve dress | short blonde-brown hair, dark blue long-sleeve dress | walks from kitchen through hallway into bedroom and returns\",\n    \"kitchen | countertop microwave at 00:00, stove without microwave hood at 00:01 | over-the-range microwave above stove at 00:09 | environment morphs between shots\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"kitchen layout and microwave\",\n      \"invariant_violated\": \"spatial_inconsistency\",\n      \"description\": \"When the woman walks back into the kitchen, a built-in microwave hood appears directly above the stove on the left wall, whereas in the opening kitchen shot (00:00-00:01) the microwave was sitting on the opposite countertop and there was no microwave installed above the stove.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:52:32.296Z",
+  "latencyMs": 6668,
+  "usage": {
+    "prompt_tokens": 6819,
+    "completion_tokens": 3463,
+    "total_tokens": 10282,
+    "cost": 0.034416,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.034416,
+      "upstream_inference_prompt_cost": 0.013638,
+      "upstream_inference_completions_cost": 0.020778
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3167,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's crossed forearms/hands | resting on passenger door/window sill at 00:00, forearms in contact with metal edge | same crossed rest at 00:09 | contact continuous throughout; fingertips visibly touching door edge/upper arm in frames 00:03-00:08; no release, no floating grip observed",
+    "woman's torso/pelvis | seated inside cabin, weight on seat (occluded but implied by stable upright posture) | same at 00:09 | posture remains supported through vehicle acceleration ~00:04-00:05; no unsupported shift or slide",
+    "car tires vs road | tires in contact with asphalt, vehicle stationary at 00:00 | tires in contact, vehicle moving at 00:09 | transition to motion ~00:04-00:05 evidenced by hair flow and background motion; ground contact maintained, no hover or teleport of chassis",
+    "woman's hair vs airflow | hanging still at 00:00-00:04 | streaming rearward at 00:05-00:09 | motion onset coincides with vehicle motion onset; consistent cause-effect, no wind effect before motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's crossed forearms/hands | resting on passenger door/window sill at 00:00, forearms in contact with metal edge | same crossed rest at 00:09 | contact continuous throughout; fingertips visibly touching door edge/upper arm in frames 00:03-00:08; no release, no floating grip observed\",\n    \"woman's torso/pelvis | seated inside cabin, weight on seat (occluded but implied by stable upright posture) | same at 00:09 | posture remains supported through vehicle acceleration ~00:04-00:05; no unsupported shift or slide\",\n    \"car tires vs road | tires in contact with asphalt, vehicle stationary at 00:00 | tires in contact, vehicle moving at 00:09 | transition to motion ~00:04-00:05 evidenced by hair flow and background motion; ground contact maintained, no hover or teleport of chassis\",\n    \"woman's hair vs airflow | hanging still at 00:00-00:04 | streaming rearward at 00:05-00:09 | motion onset coincides with vehicle motion onset; consistent cause-effect, no wind effect before motion\"\n  ],\n  \"findings\": []\n}"
+}

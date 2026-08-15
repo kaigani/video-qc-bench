@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video QC Bench</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --baseline: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --blue: #2a78d6; --red: #e34948; --neutral: #d5d4cd;
+    --seq-100:#cde2fb; --seq-200:#9ec5f4; --seq-300:#6da7ec; --seq-450:#2a78d6; --seq-600:#184f95;
+    --good-text: #006300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+      --blue: #3987e5; --red: #e66767; --neutral: #45443f;
+      --seq-100:#0d366b; --seq-200:#184f95; --seq-300:#256abf; --seq-450:#3987e5; --seq-600:#86b6ef;
+      --good-text: #0ca30c;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--page); color: var(--ink); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
+  header h1 { font-size: 28px; letter-spacing: -0.02em; }
+  header .sub { color: var(--ink-2); margin-top: 6px; max-width: 72ch; }
+  header .meta { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  section { margin-top: 40px; }
+  h2 { font-size: 19px; letter-spacing: -0.01em; margin-bottom: 4px; }
+  .lede { color: var(--ink-2); font-size: 14px; margin-bottom: 14px; max-width: 78ch; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 18px 14px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 24px; }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .kpi .label { font-size: 13px; color: var(--ink-2); }
+  .kpi .value { font-size: 30px; font-weight: 600; margin-top: 2px; }
+  .kpi .note { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  svg text { font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--ink-2); }
+  svg .val { fill: var(--ink); font-weight: 600; }
+  svg .axis { stroke: var(--baseline); stroke-width: 1; }
+  svg .gridline { stroke: var(--grid); stroke-width: 1; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); margin: 4px 0 10px; }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th { text-align: left; color: var(--ink-2); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--baseline); }
+  td { padding: 5px 8px; border-bottom: 1px solid var(--grid); }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .scroll { overflow-x: auto; }
+  .chip { display: inline-block; font-size: 11px; font-weight: 600; border-radius: 4px; padding: 0 6px; color: var(--ink-2); background: var(--page); border: 1px solid var(--border); }
+  .cell-found { width: 30px; text-align: center; }
+  .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; vertical-align: middle; }
+  .miss { color: var(--grid); }
+  #tooltip { position: fixed; pointer-events: none; background: var(--surface); border: 1px solid var(--border);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.14); border-radius: 8px; padding: 8px 10px; font-size: 13px;
+    max-width: 320px; opacity: 0; transition: opacity 80ms; z-index: 10; }
+  #tooltip .t { font-weight: 600; }
+  #tooltip .d { color: var(--ink-2); }
+  ul.plain { padding-left: 20px; color: var(--ink-2); font-size: 14px; }
+  ul.plain li { margin: 4px 0; }
+  ul.plain b { color: var(--ink); }
+  .foot { margin-top: 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--grid); padding-top: 16px; }
+  a { color: var(--blue); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Video QC Bench</h1>
+    <p class="sub">Can video language models find continuity and physics defects in AI-generated video?
+      Five systems, each run as <b>five specialist forensic observers plus a generalist baseline</b> over 14 test clips,
+      scored against a human reviewer's defect baseline. Specialists track narrow invariants (object persistence,
+      character continuity, contact mechanics, spatial topology, causal order) instead of answering a broad
+      &ldquo;find any issues&rdquo; prompt.</p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <h2>Leaderboard: detection credit vs false-positive penalty</h2>
+    <p class="lede">Detection credit sums priority weights (P0=8 … P4=1) over unique human-baseline defects a model found;
+      each false-positive finding costs 1 point. Findings that are plausible but absent from the human baseline
+      (&ldquo;extras&rdquo;) are neutral.</p>
+    <div class="card">
+      <div class="legend" id="lb-legend"></div>
+      <div id="lb-chart"></div>
+      <div class="scroll" id="lb-table"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cost of the full run vs detection</h2>
+    <p class="lede">84 calls per system (14 videos &times; 6 roles). Cost is the metered API spend for the whole run;
+      Pegasus 1.5 is estimated from TwelveLabs' $0.021/analyzed-minute pricing. The efficient frontier is the upper-left.</p>
+    <div class="card"><div id="cost-chart"></div></div>
+  </section>
+
+  <section>
+    <h2>What each system's findings were made of</h2>
+    <p class="lede">Every reported finding was adjudicated: a true positive matching the human baseline, an
+      &ldquo;extra&rdquo; (plausible defect the human didn't list &mdash; several were verified real on frame review), or a false positive.</p>
+    <div class="card">
+      <div class="legend" id="comp-legend"></div>
+      <div id="comp-chart"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Defect coverage matrix</h2>
+    <p class="lede">All 36 human-baseline defects. Filled cells are detections; darker means higher priority.
+      Hover any cell for the defect description.</p>
+    <div class="card scroll"><div id="matrix"></div></div>
+  </section>
+
+  <section>
+    <h2>Where the specialist roles earn their keep</h2>
+    <p class="lede">True-positive findings per role. The generalist baseline is the control: for Gemini Pro Latest,
+      11 of its 20 detected defects came <i>only</i> from specialist passes.</p>
+    <div class="card scroll"><div id="roles"></div></div>
+  </section>
+
+  <section>
+    <h2>Missed by every model</h2>
+    <p class="lede" id="missed-lede"></p>
+    <div class="card"><ul class="plain" id="missed"></ul></div>
+  </section>
+
+  <section>
+    <h2>Model-found extras awaiting adjudication</h2>
+    <p class="lede">Plausible defects reported by the models but absent from the human baseline &mdash; cross-model
+      corroborated or verified on frame review. Scoring-neutral until confirmed.</p>
+    <div class="card"><ul class="plain" id="extras"></ul></div>
+  </section>
+
+  <section>
+    <h2>Method &amp; caveats</h2>
+    <ul class="plain">
+      <li><b>Protocol:</b> each role is an independent API call: role charter &rarr; invariant ledger &rarr; strict-JSON findings with timestamp, severity, and confidence. Same six prompts for every system; videos sent as base64.</li>
+      <li><b>Ground truth:</b> a human reviewer's per-clip defect audit (P0 unusable &hellip; P4 minor), plus one deliberately clean clip (<code>dialogue</code>) as a false-positive trap. Gemini Pro fell into it 5 times; Flash and Pegasus resisted.</li>
+      <li><b>Adjudication:</b> all 216 findings classified against the baseline by Claude (Fable 5), with frame-level spot checks via extracted contact sheets; borderline calls documented in <code>ground-truth/matches.json</code>.</li>
+      <li><b>Caveats:</b> Qwen &amp; Pegasus saw compressed variants of the 2-minute clip (provider size caps); the contact-role prompt was reworded mid-study after Alibaba's content filter rejected the word &ldquo;penetration&rdquo;; Qwen, Pro, and Gemma ran with reasoning enabled, Flash and Pegasus without.</li>
+      <li><b>Reproduce:</b> <code>node src/run-benchmark.mjs --model &lt;id&gt;</code> &rarr; <code>node src/score.mjs</code>. Raw per-call JSON lives in <code>results/&lt;run&gt;/raw/</code>.</li>
+    </ul>
+  </section>
+
+  <p class="foot">Generated <span id="gen"></span> · scores &amp; raw model output in the repo ·
+    weights P0=8, P1=5, P2=3, P3=2, P4=1, FP penalty −1 · built with hand-rolled SVG, no dependencies.</p>
+</div>
+<div id="tooltip"></div>
+<script src="data.js"></script>
+<script>
+const $ = (id) => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+const fmt$ = (v) => v >= 1 ? '$' + v.toFixed(2) : '$' + v.toFixed(2).replace(/^\$?0/, '0');
+const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+const tip = $('tooltip');
+function showTip(evt, html) {
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const pad = 14, w = tip.offsetWidth;
+  let x = evt.clientX + pad; if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+  tip.style.left = x + 'px'; tip.style.top = (evt.clientY + pad) + 'px';
+}
+function hideTip() { tip.style.opacity = 0; }
+function hover(el, html) {
+  el.addEventListener('mousemove', (e) => showTip(e, html));
+  el.addEventListener('mouseleave', hideTip);
+}
+function el(tag, attrs, parent) {
+  const n = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+function legend(id, keys) {
+  $(id).innerHTML = keys.map(([c, l]) => `<span class="key"><span class="swatch" style="background:${c}"></span>${l}</span>`).join('');
+}
+
+// ---- meta + KPIs ----
+const M = DATA.models;
+const totalCalls = M.length * 84;
+const totalFindings = M.reduce((a, m) => a + m.findings, 0);
+const totalCost = M.reduce((a, m) => a + m.cost, 0);
+$('meta').textContent = `${M.length} systems · ${DATA.videos.length} test clips · 6 roles · ${totalCalls} API calls · ${DATA.defectsTotal} human-baseline defects`;
+const kpis = [
+  ['Systems tested', M.length, 'via OpenRouter + TwelveLabs'],
+  ['API calls', totalCalls, '14 videos × 6 roles each'],
+  ['Findings reported', totalFindings, 'all individually adjudicated'],
+  ['Baseline defects', DATA.defectsTotal, 'from human review, P0–P4'],
+  ['Total spend', '$' + totalCost.toFixed(2), 'all five full runs'],
+];
+$('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="note">${n}</div></div>`).join('');
+
+// ---- leaderboard: diverging bars ----
+(function () {
+  const blue = css('--blue'), red = css('--red');
+  legend('lb-legend', [[blue, 'Detection credit'], [red, 'False-positive penalty']]);
+  const sorted = [...M].sort((a, b) => (b.detection - b.fp) - (a.detection - a.fp));
+  const W = 940, rowH = 44, mL = 150, mR = 60, H = sorted.length * rowH + 30;
+  const maxV = Math.max(...M.map((m) => m.detection));
+  const maxP = Math.max(...M.map((m) => m.fp), 8);
+  const zero = mL + (W - mL - mR) * (maxP / (maxP + maxV));
+  const sx = (v) => (W - mL - mR - (zero - mL)) * (v / maxV);
+  const sp = (v) => (zero - mL) * (v / maxP);
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%' }, null);
+  el('line', { x1: zero, y1: 6, x2: zero, y2: H - 24, class: 'axis' }, svg);
+  sorted.forEach((m, i) => {
+    const y = 10 + i * rowH, bh = 22;
+    const name = el('text', { x: mL - 10, y: y + bh / 2 + 4, 'text-anchor': 'end' }, svg);
+    name.textContent = m.label;
+    if (m.detection > 0) {
+      const w = sx(m.detection);
+      const bar = el('path', { d: `M ${zero} ${y} h ${Math.max(w - 4, 0)} a4 4 0 0 1 4 4 v ${bh - 8} a4 4 0 0 1 -4 4 h ${-Math.max(w - 4, 0)} z`, fill: css('--blue') }, svg);
+      hover(bar, `<div class="t">${m.label}</div><div class="d">Detection credit ${m.detection}/${DATA.maxScore} · ${m.defectsFound}/${DATA.defectsTotal} defects found</div>`);
+    }
+    if (m.fp > 0) {
+      const w = sp(m.fp);
+      const bar = el('path', { d: `M ${zero} ${y} h ${-Math.max(w - 4, 0)} a4 4 0 0 0 -4 4 v ${bh - 8} a4 4 0 0 0 4 4 h ${Math.max(w - 4, 0)} z`, fill: css('--red') }, svg);
+      hover(bar, `<div class="t">${m.label}</div><div class="d">${m.fp} false-positive findings (−${m.fp} points)</div>`);
+    }
+    const net = el('text', { x: zero + sx(m.detection) + 8, y: y + bh / 2 + 4, class: 'val' }, svg);
+    net.textContent = (m.detection - m.fp);
+  });
+  const cap = el('text', { x: zero, y: H - 8, 'text-anchor': 'middle' }, svg);
+  cap.textContent = '← penalty · net score labeled at bar end · credit →';
+  $('lb-chart').appendChild(svg);
+
+  $('lb-table').innerHTML = `<table>
+    <tr><th>System</th><th>Model id</th><th class="num">Score</th><th class="num">Detection</th><th class="num">Defects</th><th class="num">TP</th><th class="num">Extra</th><th class="num">FP</th><th class="num">Avg latency</th><th class="num">Run cost</th></tr>
+    ${sorted.map((m) => `<tr><td>${m.label}${m.reasoning ? ' <span class="chip">reasoning</span>' : ''}</td><td><code>${m.model}</code></td>
+      <td class="num"><b>${m.detection - m.fp}</b></td><td class="num">${m.detection}/${DATA.maxScore}</td><td class="num">${m.defectsFound}/${DATA.defectsTotal}</td>
+      <td class="num">${m.tp}</td><td class="num">${m.extra}</td><td class="num">${m.fp}</td><td class="num">${m.avgLatencyS}s</td><td class="num">${fmt$(m.cost)}${m.costEstimated ? '*' : ''}</td></tr>`).join('')}
+  </table><p style="color:var(--muted);font-size:12px;margin-top:6px">*estimated from TwelveLabs per-minute pricing; not metered per call.</p>`;
+})();
+
+// ---- cost vs detection scatter ----
+(function () {
+  const W = 940, H = 320, mL = 60, mB = 44, mT = 14, mR = 30;
+  const maxC = 5, maxD = Math.ceil(Math.max(...M.map((m) => m.detection)) / 10) * 10;
+  const x = (v) => mL + (W - mL - mR) * (v / maxC);
+  const y = (v) => H - mB - (H - mB - mT) * (v / maxD);
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%' }, null);
+  for (let d = 0; d <= maxD; d += 20) {
+    el('line', { x1: mL, y1: y(d), x2: W - mR, y2: y(d), class: 'gridline' }, svg);
+    const t = el('text', { x: mL - 8, y: y(d) + 4, 'text-anchor': 'end' }, svg); t.textContent = d;
+  }
+  for (let c = 0; c <= maxC; c++) {
+    const t = el('text', { x: x(c), y: H - mB + 18, 'text-anchor': 'middle' }, svg); t.textContent = '$' + c;
+  }
+  el('line', { x1: mL, y1: y(0), x2: W - mR, y2: y(0), class: 'axis' }, svg);
+  const xl = el('text', { x: (mL + W - mR) / 2, y: H - 6, 'text-anchor': 'middle' }, svg);
+  xl.textContent = 'Full-run cost (84 calls)';
+  const yl = el('text', { x: 14, y: mT + 10 }, svg); yl.textContent = 'Detection credit';
+  M.forEach((m) => {
+    const c = el('circle', { cx: x(m.cost), cy: y(m.detection), r: 7, fill: css('--blue'), stroke: css('--surface'), 'stroke-width': 2 }, svg);
+    hover(c, `<div class="t">${m.label}</div><div class="d">${fmt$(m.cost)}${m.costEstimated ? ' (est.)' : ''} · detection ${m.detection} · ${m.fp} FPs · ~${m.avgLatencyS}s/call</div>`);
+    const anchor = m.key === 'gemma' ? 'start' : m.key === 'flash' ? 'start' : 'start';
+    const lbl = el('text', { x: x(m.cost) + 11, y: y(m.detection) + 4, 'text-anchor': anchor, class: 'val' }, svg);
+    lbl.textContent = m.label;
+  });
+  $('cost-chart').appendChild(svg);
+})();
+
+// ---- composition stacked bars ----
+(function () {
+  const blue = css('--blue'), red = css('--red'), neutral = css('--neutral');
+  legend('comp-legend', [[blue, 'True positives'], [neutral, 'Extras (not in baseline)'], [red, 'False positives']]);
+  const sorted = [...M].sort((a, b) => b.findings - a.findings);
+  const W = 940, rowH = 40, mL = 150, mR = 56, H = sorted.length * rowH + 8;
+  const maxF = Math.max(...M.map((m) => m.findings));
+  const sx = (v) => (W - mL - mR) * (v / maxF);
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%' }, null);
+  sorted.forEach((m, i) => {
+    const yy = 6 + i * rowH, bh = 20;
+    const name = el('text', { x: mL - 10, y: yy + bh / 2 + 4, 'text-anchor': 'end' }, svg);
+    name.textContent = m.label;
+    let cx = mL;
+    [[m.tp, blue, 'true positives'], [m.extra, neutral, 'extras'], [m.fp, red, 'false positives']].forEach(([v, color, label]) => {
+      if (!v) return;
+      const w = Math.max(sx(v) - 2, 1.5);
+      const r = el('rect', { x: cx, y: yy, width: w, height: bh, rx: 3, fill: color }, svg);
+      hover(r, `<div class="t">${m.label}</div><div class="d">${v} ${label} of ${m.findings} findings</div>`);
+      cx += sx(v);
+    });
+    const tot = el('text', { x: cx + 6, y: yy + bh / 2 + 4, class: 'val' }, svg);
+    tot.textContent = m.findings;
+  });
+  $('comp-chart').appendChild(svg);
+})();
+
+// ---- coverage matrix ----
+(function () {
+  const stepByW = { 8: 'var(--seq-600)', 5: 'var(--seq-450)', 3: 'var(--seq-300)', 2: 'var(--seq-200)', 1: 'var(--seq-100)' };
+  let html = `<table><tr><th>Defect</th><th>Clip</th><th>Prio</th>${M.map((m) => `<th class="cell-found">${m.label.split(' ')[0]}</th>`).join('')}<th class="num">Found by</th></tr>`;
+  for (const c of DATA.coverage) {
+    const foundN = M.filter((m) => c.found[m.key]).length;
+    html += `<tr data-desc="${c.description.replace(/"/g, '&quot;')}"><td><b>${c.id}</b></td><td>${c.video}</td>
+      <td><span class="chip">${c.priority}</span></td>
+      ${M.map((m) => `<td class="cell-found">${c.found[m.key] ? `<span class="dot" style="background:${stepByW[c.weight]}"></span>` : '<span class="miss">·</span>'}</td>`).join('')}
+      <td class="num">${foundN}/5</td></tr>`;
+  }
+  html += '</table>';
+  $('matrix').innerHTML = html;
+  $('matrix').querySelectorAll('tr[data-desc]').forEach((tr) => {
+    hover(tr, `<div class="t">${tr.querySelector('b').textContent}</div><div class="d">${tr.dataset.desc}</div>`);
+  });
+})();
+
+// ---- role matrix heatmap ----
+(function () {
+  const steps = ['var(--seq-100)', 'var(--seq-200)', 'var(--seq-300)', 'var(--seq-450)', 'var(--seq-600)'];
+  const maxTp = Math.max(...Object.values(DATA.roleMatrix).flatMap((r) => Object.values(r).map((c) => c.tp)));
+  let html = `<table><tr><th>Role</th>${M.map((m) => `<th class="num">${m.label}</th>`).join('')}</tr>`;
+  for (const role of DATA.roles) {
+    html += `<tr><td>${role.name.replace(' Observer', '')}</td>`;
+    for (const m of M) {
+      const c = DATA.roleMatrix[m.key][role.id];
+      const bg = c.tp === 0 ? 'transparent' : steps[Math.min(steps.length - 1, Math.floor((c.tp / maxTp) * steps.length))];
+      const inkStyle = c.tp / maxTp > 0.55 ? 'color:#fff' : '';
+      html += `<td class="num" data-t="${m.label}" data-d="${c.tp} true positives, ${c.fp} false positives, ${c.total} findings from this role" style="background:${bg};${inkStyle}">${c.tp || '·'}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</table>';
+  $('roles').innerHTML = html;
+  $('roles').querySelectorAll('td[data-t]').forEach((td) => hover(td, `<div class="t">${td.dataset.t}</div><div class="d">${td.dataset.d}</div>`));
+})();
+
+// ---- missed + extras ----
+$('missed-lede').textContent = `${DATA.missedByAll.length} of ${DATA.defectsTotal} baseline defects were caught by no system — dominated by character-position continuity in the long multi-shot scene.`;
+$('missed').innerHTML = DATA.coverage.filter((c) => DATA.missedByAll.includes(c.id))
+  .map((c) => `<li><b>${c.id}</b> <span class="chip">${c.priority}</span> (${c.video}) — ${c.description}</li>`).join('');
+$('extras').innerHTML = DATA.extras.map((e) => `<li><b>${e.slug}</b> — ${e.desc}</li>`).join('');
+$('gen').textContent = DATA.generated;
+</script>
+</body>
+</html>

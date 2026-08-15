@@ -1,0 +1,42 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:16:09.134Z",
+  "latencyMs": 10216,
+  "usage": {
+    "prompt_tokens": 2957,
+    "completion_tokens": 949,
+    "total_tokens": 3906,
+    "cost": 0.00079358,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00079358,
+      "upstream_inference_prompt_cost": 0.00041398,
+      "upstream_inference_completions_cost": 0.0003796
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 771,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left hand | gripping phone edge | gripping phone edge | stable contact",
+    "Right hand | supporting phone side | interacting with screen | stable contact to touch interaction",
+    "Right thumb | contacting phone side | pressing screen surface | active touch input",
+    "Person (BG) feet | walking on stairs | walking on stairs | weight transfer per step",
+    "Person (BG) hand | holding bag handle | holding bag handle | stable grip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Left hand | gripping phone edge | gripping phone edge | stable contact\",\n    \"Right hand | supporting phone side | interacting with screen | stable contact to touch interaction\",\n    \"Right thumb | contacting phone side | pressing screen surface | active touch input\",\n    \"Person (BG) feet | walking on stairs | walking on stairs | weight transfer per step\",\n    \"Person (BG) hand | holding bag handle | holding bag handle | stable grip\"\n  ],\n  \"findings\": []\n}"
+}

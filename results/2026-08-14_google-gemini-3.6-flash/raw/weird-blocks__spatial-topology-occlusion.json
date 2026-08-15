@@ -1,0 +1,39 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:57:24.186Z",
+  "latencyMs": 3471,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1473,
+    "total_tokens": 2899,
+    "cost": 0.00659325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00659325,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00552375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1390,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | horizontal wooden surface occupying lower two-thirds of frame | horizontal wooden surface | remains fixed baseline throughout shot",
+    "numbered block row | initial pair of green blocks on table | contiguous line of nine numbered blocks | expanded sequentially left-to-right as blocks are slid along the table surface"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | horizontal wooden surface occupying lower two-thirds of frame | horizontal wooden surface | remains fixed baseline throughout shot\",\n    \"numbered block row | initial pair of green blocks on table | contiguous line of nine numbered blocks | expanded sequentially left-to-right as blocks are slid along the table surface\"\n  ],\n  \"findings\": []\n}"
+}

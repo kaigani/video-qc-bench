@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:29:27.678Z",
+  "latencyMs": 6081,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2340,
+    "total_tokens": 3765,
+    "cost": 0.03093,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03093,
+      "upstream_inference_prompt_cost": 0.00285,
+      "upstream_inference_completions_cost": 0.02808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2092,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car forward motion (00:00) -> wind generated (00:03) -> plausible threshold effect",
+    "wind presence (00:03) -> woman's hair blows backward (00:03) -> plausible, immediate",
+    "camera translation relative to sun (00:05) -> lens flare and glare on car surface (00:06) -> plausible, immediate",
+    "wind presence (00:03) -> car antenna moves -> MISSING"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "car antenna",
+      "invariant_violated": "cause-without-effect",
+      "description": "A strong wind begins blowing the woman's hair violently backward, indicating significant air resistance from the car's motion. However, the thin metal antenna mounted on the hood right next to her remains completely rigid and is unaffected by the airflow.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"car forward motion (00:00) -> wind generated (00:03) -> plausible threshold effect\",\n    \"wind presence (00:03) -> woman's hair blows backward (00:03) -> plausible, immediate\",\n    \"camera translation relative to sun (00:05) -> lens flare and glare on car surface (00:06) -> plausible, immediate\",\n    \"wind presence (00:03) -> car antenna moves -> MISSING\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"car antenna\",\n      \"invariant_violated\": \"cause-without-effect\",\n      \"description\": \"A strong wind begins blowing the woman's hair violently backward, indicating significant air resistance from the car's motion. However, the thin metal antenna mounted on the hood right next to her remains completely rigid and is unaffected by the airflow.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:32:37.517Z",
+  "latencyMs": 5867,
+  "usage": {
+    "prompt_tokens": 6818,
+    "completion_tokens": 7304,
+    "total_tokens": 14122,
+    "cost": 0.05746,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.05746,
+      "upstream_inference_prompt_cost": 0.013636,
+      "upstream_inference_completions_cost": 0.043824
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6915,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (whole vehicle) | cream body, woodgrain side panels, chrome grille/trim, roof rack; front-quarter view on desert highway | same configuration at end, side view while in motion | all fixed features persist; position change explained by driving and camera tracking",
+    "front license plate | mounted on front bumper, inscription 'STEG7' at 0:00 | last visible at 0:01 reading 'STEG9', then cropped out of frame | final glyph changes with no visible action",
+    "chrome hood ornament (ball on stalk) | front-left of hood | out of frame after ~0:03 | unchanged while visible",
+    "radio antenna | upright wire on right front fender | upright and present through end | no unexplained change",
+    "windshield wipers (pair) | parked at windshield base | parked at windshield base | apparent angle shift attributable to camera parallax only",
+    "roof rack | chrome rails on roof | chrome rails on roof | no change",
+    "passenger-side mirror | chrome mirror on door | persists while in frame | no change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "front license plate",
+      "invariant_violated": "object identity / state persistence",
+      "description": "The plate reads 'STEG7' in the 0:00 frame but 'STEG9' at 0:01; the plate was never touched, occluded, or replaced, so the final character morphing between consecutive frames is an unexplained state change.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (whole vehicle) | cream body, woodgrain side panels, chrome grille/trim, roof rack; front-quarter view on desert highway | same configuration at end, side view while in motion | all fixed features persist; position change explained by driving and camera tracking\",\n    \"front license plate | mounted on front bumper, inscription 'STEG7' at 0:00 | last visible at 0:01 reading 'STEG9', then cropped out of frame | final glyph changes with no visible action\",\n    \"chrome hood ornament (ball on stalk) | front-left of hood | out of frame after ~0:03 | unchanged while visible\",\n    \"radio antenna | upright wire on right front fender | upright and present through end | no unexplained change\",\n    \"windshield wipers (pair) | parked at windshield base | parked at windshield base | apparent angle shift attributable to camera parallax only\",\n    \"roof rack | chrome rails on roof | chrome rails on roof | no change\",\n    \"passenger-side mirror | chrome mirror on door | persists while in frame | no change\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"front license plate\",\n      \"invariant_violated\": \"object identity / state persistence\",\n      \"description\": \"The plate reads 'STEG7' in the 0:00 frame but 'STEG9' at 0:01; the plate was never touched, occluded, or replaced, so the final character morphing between consecutive frames is an unexplained state change.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

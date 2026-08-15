@@ -1,0 +1,45 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T22:03:29.384Z",
+  "latencyMs": 15783,
+  "usage": {
+    "prompt_tokens": 48506,
+    "completion_tokens": 7574,
+    "total_tokens": 56080,
+    "cost": 0.142456,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.142456,
+      "upstream_inference_prompt_cost": 0.097012,
+      "upstream_inference_completions_cost": 0.045444
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6954,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress hand + wipe cloth | 00:11 palm pressing cloth on counter, mid-wipe | 00:51 cloth in contact with counter, wiping resumed | cloth-counter contact maintained through wipe passes 00:11-00:18 and 00:45-00:51; hand rests on stationary cloth 00:46-00:48",
+    "coffee pot grip | 00:24 pot held by handle above counter | 00:32 pot returned upright, grip maintained | tilt begins ~00:28; liquid stream contacts mug interior 00:29-00:31; untilt 00:31-00:32 with grip continuous",
+    "white mug | 00:28 resting on counter | 01:35 cradled in seated figures' hands | stationary during pour 00:29-00:31; two-hand grip by man 00:37-00:44; both figures gripping mugs 01:27-01:35",
+    "man (customer) | 00:20 walking with continuous step cycle | 01:45 standing at truck door | palm plants on counter 00:25 before seating 00:26; seated weight on stool 00:26-01:35; fingers contact banknotes 01:38-01:39; walks to truck 01:42-01:45",
+    "plate (toast + egg) | 00:33 at rest on surface | 01:16 held by waitress | two-hand placement onto counter 01:10-01:14; release 01:14; re-grasp and lift 01:15-01:16",
+    "banknotes | 01:38 pressed flat by fingertips | 01:40 at rest on counter | hand-note contact 01:38-01:39; release by 01:40; notes remain supported by counter",
+    "stools / counter support | 00:26 man's weight transferred onto stool | 01:52 waitress rises using hand-on-counter support | sit contacts established without float or sink; waitress rises 01:51-01:52 with counter support",
+    "semi-truck | 00:00 wheels on ground, parked | 01:50 parked | no displacement; exhaust plume dissipates 00:00-00:08"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress hand + wipe cloth | 00:11 palm pressing cloth on counter, mid-wipe | 00:51 cloth in contact with counter, wiping resumed | cloth-counter contact maintained through wipe passes 00:11-00:18 and 00:45-00:51; hand rests on stationary cloth 00:46-00:48\",\n    \"coffee pot grip | 00:24 pot held by handle above counter | 00:32 pot returned upright, grip maintained | tilt begins ~00:28; liquid stream contacts mug interior 00:29-00:31; untilt 00:31-00:32 with grip continuous\",\n    \"white mug | 00:28 resting on counter | 01:35 cradled in seated figures' hands | stationary during pour 00:29-00:31; two-hand grip by man 00:37-00:44; both figures gripping mugs 01:27-01:35\",\n    \"man (customer) | 00:20 walking with continuous step cycle | 01:45 standing at truck door | palm plants on counter 00:25 before seating 00:26; seated weight on stool 00:26-01:35; fingers contact banknotes 01:38-01:39; walks to truck 01:42-01:45\",\n    \"plate (toast + egg) | 00:33 at rest on surface | 01:16 held by waitress | two-hand placement onto counter 01:10-01:14; release 01:14; re-grasp and lift 01:15-01:16\",\n    \"banknotes | 01:38 pressed flat by fingertips | 01:40 at rest on counter | hand-note contact 01:38-01:39; release by 01:40; notes remain supported by counter\",\n    \"stools / counter support | 00:26 man's weight transferred onto stool | 01:52 waitress rises using hand-on-counter support | sit contacts established without float or sink; waitress rises 01:51-01:52 with counter support\",\n    \"semi-truck | 00:00 wheels on ground, parked | 01:50 parked | no displacement; exhaust plume dissipates 00:00-00:08\"\n  ],\n  \"findings\": []\n}"
+}

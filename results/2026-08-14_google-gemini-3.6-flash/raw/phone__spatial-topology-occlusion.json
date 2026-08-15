@@ -1,0 +1,41 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:03.511Z",
+  "latencyMs": 5252,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 864,
+    "total_tokens": 2291,
+    "cost": 0.00431025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00431025,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.00324
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 766,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Outdoor staircase | steps bordered by wall on left and dark metal railing on right | retains same layout throughout | continuous camera tracking",
+    "Upper paved walkway | paved stone plaza at top of stairs | continuous background behind railing | consistent layout throughout",
+    "Smartphone and hand | held in foreground, occluding stairs | tilts to show screen, moves slightly down | occludes background continuously",
+    "Background pedestrian | walking away from stairs across upper walkway | occluded by railing bars | moves consistently away without spatial jumps"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Outdoor staircase | steps bordered by wall on left and dark metal railing on right | retains same layout throughout | continuous camera tracking\",\n    \"Upper paved walkway | paved stone plaza at top of stairs | continuous background behind railing | consistent layout throughout\",\n    \"Smartphone and hand | held in foreground, occluding stairs | tilts to show screen, moves slightly down | occludes background continuously\",\n    \"Background pedestrian | walking away from stairs across upper walkway | occluded by railing bars | moves consistently away without spatial jumps\"\n  ],\n  \"findings\": []\n}"
+}

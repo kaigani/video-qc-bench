@@ -1,0 +1,78 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:24:04.167Z",
+  "latencyMs": 3248,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 8124,
+    "total_tokens": 14792,
+    "cost": 0.06208,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.06208,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.048744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7116,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block slot1 | green cube, face '2', on table, hand gripping | blue cube, face '2', on table | color green->blue between 00:00-00:01 while hand held it; no swap visible",
+    "Block slot2 | absent at start | blue cube, face '3', on table | introduced by hand between 00:01-00:02; stable thereafter",
+    "Block slot3 | green cube, face '2', on table (right of slot1) | green cube, face '2', on table | stable throughout; hand rotated it at 00:02 without changing visible state",
+    "Block slot4 | placed by hand at 00:03 as green cube showing '2' | orange cube, face '2', on table | color green->orange between 00:03-00:04 after placement, block untouched",
+    "Block slot5 | placed by hand at 00:04 as saturated blue cube '3' | pale/light blue cube, face '3', on table | hue shifted blue->light blue between 00:04-00:05, block untouched",
+    "Block slot6 | in hand at 00:05 as blue cube '3' | green cube, face '5', on table | color blue->green and face 3->5 between 00:05-00:06 after placement, block untouched",
+    "Block slot7 | in hand at 00:06 as green cube '3' | green cube, face '2', on table | face 3->2 between 00:06-00:07, consistent with hand rotation during placement",
+    "Block slot8 | in hand at 00:07 as blue cube '3' | blue cube, face '6', on table | face 3->6 between 00:07-00:08, consistent with hand rotation during placement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "slot1 block (leftmost)",
+      "invariant_violated": "object identity/color persistence",
+      "description": "The leftmost cube is green with face '2' at 00:00 but blue with face '2' at 00:01. The hand never leaves the block and no swap is visible; rotating a block cannot change its body color, and the original green cube never reappears.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "slot4 block",
+      "invariant_violated": "object identity/color persistence",
+      "description": "The fourth cube is placed as a green cube (faces '2'/'3') at 00:03, yet at 00:04 it sits settled as an orange cube '2'. The hand had moved on to place the next block; no action touches slot4 in between, so the color change has no visible cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "slot5 block",
+      "invariant_violated": "object identity/color persistence",
+      "description": "The fifth cube is placed at 00:04 as a saturated blue matching slots 1-2, but at 00:05 it appears as a distinctly paler light-blue cube while remaining settled and untouched. Lighting is constant across the row, so the hue shift is unexplained.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "slot6 block",
+      "invariant_violated": "object identity/color persistence",
+      "description": "At 00:05 the hand holds a blue cube '3' for the sixth slot; at 00:06 the settled sixth cube is green with face '5'. A rotation could change the visible number but not the body color, and the hand performed no further action on that slot before fetching the next block.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block slot1 | green cube, face '2', on table, hand gripping | blue cube, face '2', on table | color green->blue between 00:00-00:01 while hand held it; no swap visible\",\n    \"Block slot2 | absent at start | blue cube, face '3', on table | introduced by hand between 00:01-00:02; stable thereafter\",\n    \"Block slot3 | green cube, face '2', on table (right of slot1) | green cube, face '2', on table | stable throughout; hand rotated it at 00:02 without changing visible state\",\n    \"Block slot4 | placed by hand at 00:03 as green cube showing '2' | orange cube, face '2', on table | color green->orange between 00:03-00:04 after placement, block untouched\",\n    \"Block slot5 | placed by hand at 00:04 as saturated blue cube '3' | pale/light blue cube, face '3', on table | hue shifted blue->light blue between 00:04-00:05, block untouched\",\n    \"Block slot6 | in hand at 00:05 as blue cube '3' | green cube, face '5', on table | color blue->green and face 3->5 between 00:05-00:06 after placement, block untouched\",\n    \"Block slot7 | in hand at 00:06 as green cube '3' | green cube, face '2', on table | face 3->2 between 00:06-00:07, consistent with hand rotation during placement\",\n    \"Block slot8 | in hand at 00:07 as blue cube '3' | blue cube, face '6', on table | face 3->6 between 00:07-00:08, consistent with hand rotation during placement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"slot1 block (leftmost)\",\n      \"invariant_violated\": \"object identity/color persistence\",\n      \"description\": \"The leftmost cube is green with face '2' at 00:00 but blue with face '2' at 00:01. The hand never leaves the block and no swap is visible; rotating a block cannot change its body color, and the original green cube never reappears.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"slot4 block\",\n      \"invariant_violated\": \"object identity/color persistence\",\n      \"description\": \"The fourth cube is placed as a green cube (faces '2'/'3') at 00:03, yet at 00:04 it sits settled as an orange cube '2'. The hand had moved on to place the next block; no action touches slot4 in between, so the color change has no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"slot5 block\",\n      \"invariant_violated\": \"object identity/color persistence\",\n      \"description\": \"The fifth cube is placed at 00:04 as a saturated blue matching slots 1-2, but at 00:05 it appears as a distinctly paler light-blue cube while remaining settled and untouched. Lighting is constant across the row, so the hue shift is unexplained.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"slot6 block\",\n      \"invariant_violated\": \"object identity/color persistence\",\n      \"description\": \"At 00:05 the hand holds a blue cube '3' for the sixth slot; at 00:06 the settled sixth cube is green with face '5'. A rotation could change the visible number but not the body color, and the hand performed no further action on that slot before fetching the next block.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

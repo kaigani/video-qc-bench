@@ -1,0 +1,42 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:16:18.531Z",
+  "latencyMs": 2088,
+  "usage": {
+    "prompt_tokens": 2931,
+    "completion_tokens": 648,
+    "total_tokens": 3579,
+    "cost": 0.00066954,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00066954,
+      "upstream_inference_prompt_cost": 0.00041034,
+      "upstream_inference_completions_cost": 0.0002592
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 509,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wall | left boundary | left boundary | static",
+    "Stairs | center, descending | center, descending | static",
+    "Railing | right of stairs | right of stairs | static",
+    "Person | top of stairs | moving down/out of view | linear movement down path",
+    "Smartphone | foreground, occluding background | foreground, occluding background | static relative to camera"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wall | left boundary | left boundary | static\",\n    \"Stairs | center, descending | center, descending | static\",\n    \"Railing | right of stairs | right of stairs | static\",\n    \"Person | top of stairs | moving down/out of view | linear movement down path\",\n    \"Smartphone | foreground, occluding background | foreground, occluding background | static relative to camera\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,64 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:52.572Z",
+  "latencyMs": 8298,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1990,
+    "total_tokens": 3228,
+    "cost": 0.026356,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026356,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.02388
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1620,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | Leaning on car hood, intact anatomy | Torso intersecting car, deformed hands | Body clips through solid car parts, fingers merge unnaturally",
+    "Car | Vintage station wagon, defined features | Morphing features | Antenna disappears, hood ornament shifts shape"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Woman and Car",
+      "invariant_violated": "Solid Object Intersection",
+      "description": "The woman's torso visibly intersects and merges with the solid metal of the car's hood and fender, rather than resting on top of it, creating a physical impossibility.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Woman's Hand",
+      "invariant_violated": "Anatomical Integrity",
+      "description": "The fingers on the woman's visible hand, resting on her arm, are deformed and merged together into an unnatural, blob-like shape.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Car details (Antenna, Hood Ornament)",
+      "invariant_violated": "Temporal Consistency",
+      "description": "The car's antenna vanishes, and the hood ornament morphs in shape and shifts position on the hood as the camera pans.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | Leaning on car hood, intact anatomy | Torso intersecting car, deformed hands | Body clips through solid car parts, fingers merge unnaturally\",\n    \"Car | Vintage station wagon, defined features | Morphing features | Antenna disappears, hood ornament shifts shape\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Woman and Car\",\n      \"invariant_violated\": \"Solid Object Intersection\",\n      \"description\": \"The woman's torso visibly intersects and merges with the solid metal of the car's hood and fender, rather than resting on top of it, creating a physical impossibility.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Woman's Hand\",\n      \"invariant_violated\": \"Anatomical Integrity\",\n      \"description\": \"The fingers on the woman's visible hand, resting on her arm, are deformed and merged together into an unnatural, blob-like shape.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Car details (Antenna, Hood Ornament)\",\n      \"invariant_violated\": \"Temporal Consistency\",\n      \"description\": \"The car's antenna vanishes, and the hood ornament morphs in shape and shifts position on the hood as the camera pans.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.90\n    }\n  ]\n}"
+}

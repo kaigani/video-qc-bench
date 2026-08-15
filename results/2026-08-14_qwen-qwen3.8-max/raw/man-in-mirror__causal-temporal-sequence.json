@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:10:46.703Z",
+  "latencyMs": 4636,
+  "usage": {
+    "prompt_tokens": 6653,
+    "completion_tokens": 5008,
+    "total_tokens": 11661,
+    "cost": 0.043354,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.043354,
+      "upstream_inference_prompt_cost": 0.013306,
+      "upstream_inference_completions_cost": 0.030048
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4649,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (direct view, from behind) | right hand raised, razor at chin/mouth, head level | right hand at jaw, razor stroking jawline | shaves mouth/chin 00:00-00:01; raises hand to brow/forehead/hairline 00:02-00:04; returns to mouth/cheek/jaw 00:05-00:09; motion continuous, actions complete or transition smoothly",
+    "mirror reflection of man | facing forward, razor at upper lip in frame-right hand, head level | razor at chin/jawline, head level | reproduces each action beat of the direct view with matching timing and same (frame-right) hand; head tilts (down at 00:02-00:04, back at 00:05) correspond in both views; no independent, lagged, or anticipatory motion detected",
+    "razor | held in right hand, touching face | held in right hand, touching face | travels rigidly with hand; its position in the reflection corresponds to its position in the direct view at every sampled moment (lip 00:00-00:01, brow/hairline 00:02-00:04, lip/cheek/jaw 00:05-00:09)",
+    "environment (door, shelf, switch, mirror frame) | static | static | no motion initiated, none observed; no uncaused light or object changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man (direct view, from behind) | right hand raised, razor at chin/mouth, head level | right hand at jaw, razor stroking jawline | shaves mouth/chin 00:00-00:01; raises hand to brow/forehead/hairline 00:02-00:04; returns to mouth/cheek/jaw 00:05-00:09; motion continuous, actions complete or transition smoothly\",\n    \"mirror reflection of man | facing forward, razor at upper lip in frame-right hand, head level | razor at chin/jawline, head level | reproduces each action beat of the direct view with matching timing and same (frame-right) hand; head tilts (down at 00:02-00:04, back at 00:05) correspond in both views; no independent, lagged, or anticipatory motion detected\",\n    \"razor | held in right hand, touching face | held in right hand, touching face | travels rigidly with hand; its position in the reflection corresponds to its position in the direct view at every sampled moment (lip 00:00-00:01, brow/hairline 00:02-00:04, lip/cheek/jaw 00:05-00:09)\",\n    \"environment (door, shelf, switch, mirror frame) | static | static | no motion initiated, none observed; no uncaused light or object changes\"\n  ],\n  \"findings\": []\n}"
+}

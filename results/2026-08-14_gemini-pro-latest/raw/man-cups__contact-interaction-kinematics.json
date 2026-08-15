@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:30.492Z",
+  "latencyMs": 8649,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1659,
+    "total_tokens": 3111,
+    "cost": 0.022812,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022812,
+      "upstream_inference_prompt_cost": 0.002904,
+      "upstream_inference_completions_cost": 0.019908
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1395,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left arm/hands | Starts holding a coin near cup | Extra hand vanishes, leaving one hand on table | Arm splits to reveal two hands from one sleeve, then one vanishes",
+    "Right hand | Holding a coin over a cup | Continues holding coin | Moves slightly as camera pans",
+    "Coins | Scattered on table and held in hands | Remain in place or held | Coin on middle cup rests at an unnatural angle",
+    "Cups | Three cups on table | Remain in place | No notable transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Left arm/hands",
+      "invariant_violated": "limb mechanics",
+      "description": "As the camera pulls back, two distinct hands are seen emerging from the single left sleeve of the man's blue suit. One hand is holding a coin above the cup, while a second hand is resting near the rim. By 00:03, the upper hand holding the coin disappears completely, leaving only the lower hand.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left arm/hands | Starts holding a coin near cup | Extra hand vanishes, leaving one hand on table | Arm splits to reveal two hands from one sleeve, then one vanishes\",\n    \"Right hand | Holding a coin over a cup | Continues holding coin | Moves slightly as camera pans\",\n    \"Coins | Scattered on table and held in hands | Remain in place or held | Coin on middle cup rests at an unnatural angle\",\n    \"Cups | Three cups on table | Remain in place | No notable transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Left arm/hands\",\n      \"invariant_violated\": \"limb mechanics\",\n      \"description\": \"As the camera pulls back, two distinct hands are seen emerging from the single left sleeve of the man's blue suit. One hand is holding a coin above the cup, while a second hand is resting near the rim. By 00:03, the upper hand holding the coin disappears completely, leaving only the lower hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

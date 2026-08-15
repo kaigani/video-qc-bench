@@ -1,0 +1,79 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:24:53.101Z",
+  "latencyMs": 1709,
+  "usage": {
+    "prompt_tokens": 2743,
+    "completion_tokens": 3093,
+    "total_tokens": 5836,
+    "cost": 0.00162122,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00162122,
+      "upstream_inference_prompt_cost": 0.00038402,
+      "upstream_inference_completions_cost": 0.0012372
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1650,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "block sequence | 2(green), 2(green) | 2(blue), 3(blue), 2(green), 2(tan), 2(tan), 3(blue), 3(green), 5(green), 2(green), 6(blue) | Multiple pops, morphs, and value changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "blocks",
+      "invariant_violated": "material_consistency",
+      "description": "The initial green blocks suddenly change color to blue, and a new blue block appears out of nowhere.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "block",
+      "invariant_violated": "value_consistency",
+      "description": "The block being placed by the hand instantly changes from the number '2' to '3'.",
+      "severity": "moderate",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "block sequence",
+      "invariant_violated": "count_consistency",
+      "description": "The total number of blocks and their sequence change inconsistently between frames.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "block",
+      "invariant_violated": "entity_persistence",
+      "description": "A block with the number '5' suddenly appears in the sequence without being placed.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "block",
+      "invariant_violated": "value_consistency",
+      "description": "The final block in the sequence instantly changes from the number '3' to '6'.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"block sequence | 2(green), 2(green) | 2(blue), 3(blue), 2(green), 2(tan), 2(tan), 3(blue), 3(green), 5(green), 2(green), 6(blue) | Multiple pops, morphs, and value changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"blocks\",\n      \"invariant_violated\": \"material_consistency\",\n      \"description\": \"The initial green blocks suddenly change color to blue, and a new blue block appears out of nowhere.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"block\",\n      \"invariant_violated\": \"value_consistency\",\n      \"description\": \"The block being placed by the hand instantly changes from the number '2' to '3'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"block sequence\",\n      \"invariant_violated\": \"count_consistency\",\n      \"description\": \"The total number of blocks and their sequence change inconsistently between frames.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"block\",\n      \"invariant_violated\": \"entity_persistence\",\n      \"description\": \"A block with the number '5' suddenly appears in the sequence without being placed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"block\",\n      \"invariant_violated\": \"value_consistency\",\n      \"description\": \"The final block in the sequence instantly changes from the number '3' to '6'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

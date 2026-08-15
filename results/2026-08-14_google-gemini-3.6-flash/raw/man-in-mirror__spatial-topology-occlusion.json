@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:55:46.094Z",
+  "latencyMs": 4243,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1251,
+    "total_tokens": 2677,
+    "cost": 0.00576075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00576075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00469125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1113,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "mirror frame | wooden frame mounted on wall | wooden frame mounted on wall | static throughout clip",
+    "foreground subject | left foreground shoulder and head facing right | left foreground shoulder and head facing right | continuous movement grooming face/brow",
+    "reflected subject & room | mirror reflection of subject and bathroom interior | mirror reflection of subject and bathroom interior | geometrically consistent reflection matching foreground actions",
+    "background architecture | doorframe, light switch, and wall shelf in mirror reflection | doorframe, light switch, and wall shelf in mirror reflection | static spatial layout behind subject"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"mirror frame | wooden frame mounted on wall | wooden frame mounted on wall | static throughout clip\",\n    \"foreground subject | left foreground shoulder and head facing right | left foreground shoulder and head facing right | continuous movement grooming face/brow\",\n    \"reflected subject & room | mirror reflection of subject and bathroom interior | mirror reflection of subject and bathroom interior | geometrically consistent reflection matching foreground actions\",\n    \"background architecture | doorframe, light switch, and wall shelf in mirror reflection | doorframe, light switch, and wall shelf in mirror reflection | static spatial layout behind subject\"\n  ],\n  \"findings\": []\n}"
+}

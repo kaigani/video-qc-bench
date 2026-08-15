@@ -1,0 +1,49 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:24:09.194Z",
+  "latencyMs": 5881,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1391,
+    "total_tokens": 2629,
+    "cost": 0.019168,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019168,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.016692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1221,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | blue suit, red tie | same | n/a",
+    "left hand (in frame) | six fingers | out of frame | n/a",
+    "cups | three metal cups | three metal cups | coins disappear/morph"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "person's hand",
+      "invariant_violated": "Anatomy consistency",
+      "description": "The hand holding the coin on the left side of the screen clearly has at least six fingers, with multiple thumb-like digits visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person | blue suit, red tie | same | n/a\",\n    \"left hand (in frame) | six fingers | out of frame | n/a\",\n    \"cups | three metal cups | three metal cups | coins disappear/morph\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"person's hand\",\n      \"invariant_violated\": \"Anatomy consistency\",\n      \"description\": \"The hand holding the coin on the left side of the screen clearly has at least six fingers, with multiple thumb-like digits visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

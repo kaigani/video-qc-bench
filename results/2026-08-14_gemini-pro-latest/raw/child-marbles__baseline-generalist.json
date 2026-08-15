@@ -1,0 +1,48 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:21:50.756Z",
+  "latencyMs": 6925,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 889,
+    "total_tokens": 2127,
+    "cost": 0.013144,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013144,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.010668
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 709,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands | normal appearance | blurry and moving unnaturally fast | hand movements become excessively fast and blurry",
+    "balls in bowl | solid, distinct red, yellow, and green balls | a blurred, swishing mass of color | solid balls transform into a liquid-like blur"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "balls in bowl",
+      "invariant_violated": "Solid object physics",
+      "description": "When the child's hand begins to spin the balls, the balls lose their solid shapes and merge into a blurry, liquid-like state that defies physics.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands | normal appearance | blurry and moving unnaturally fast | hand movements become excessively fast and blurry\",\n    \"balls in bowl | solid, distinct red, yellow, and green balls | a blurred, swishing mass of color | solid balls transform into a liquid-like blur\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"balls in bowl\",\n      \"invariant_violated\": \"Solid object physics\",\n      \"description\": \"When the child's hand begins to spin the balls, the balls lose their solid shapes and merge into a blurry, liquid-like state that defies physics.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

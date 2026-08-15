@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:49.526Z",
+  "latencyMs": 5074,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 853,
+    "total_tokens": 2279,
+    "cost": 0.00426825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00426825,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00319875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 731,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder | riding on board at 00:00 | initiates first trick at 00:01 | crouch and pop at 00:01 causes board elevation, board rotates mid-air at 00:02, caught and landed at 00:03",
+    "Skateboarder | rolling after first landing at 00:04 | initiates second trick at 00:07 | crouching at 00:07 leads to board pop at 00:08, elevation, and landing absorption at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder | riding on board at 00:00 | initiates first trick at 00:01 | crouch and pop at 00:01 causes board elevation, board rotates mid-air at 00:02, caught and landed at 00:03\",\n    \"Skateboarder | rolling after first landing at 00:04 | initiates second trick at 00:07 | crouching at 00:07 leads to board pop at 00:08, elevation, and landing absorption at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

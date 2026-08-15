@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:58:04.281Z",
+  "latencyMs": 5337,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1503,
+    "total_tokens": 2741,
+    "cost": 0.00656475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00656475,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00563625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1340,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing denim jacket, folded arms resting on car hood/window | leaning out window as hair blows in wind | posture stays fixed as background accelerates",
+    "station wagon | vintage white station wagon with wood side panels | stationary on shoulder initially, then motion blur on road | visual environment transitions from stationary to high-speed movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "car and driver",
+      "invariant_violated": "unexplained physical motion",
+      "description": "The vehicle seamlessly transitions from stationary to moving at high speed (as indicated by yellow road lines moving past), while the woman remains folded-arm over the driver's window with no one controlling the vehicle.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\"ledger\": [\"woman | wearing denim jacket, folded arms resting on car hood/window | leaning out window as hair blows in wind | posture stays fixed as background accelerates\", \"station wagon | vintage white station wagon with wood side panels | stationary on shoulder initially, then motion blur on road | visual environment transitions from stationary to high-speed movement\"], \"findings\": [{\"timestamp\": \"00:03\", \"entity\": \"car and driver\", \"invariant_violated\": \"unexplained physical motion\", \"description\": \"The vehicle seamlessly transitions from stationary to moving at high speed (as indicated by yellow road lines moving past), while the woman remains folded-arm over the driver's window with no one controlling the vehicle.\", \"severity\": \"severe\", \"confidence\": 0.95}]}"
+}

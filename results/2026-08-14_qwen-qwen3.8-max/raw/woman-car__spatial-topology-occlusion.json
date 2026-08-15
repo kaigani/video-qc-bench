@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:33:58.586Z",
+  "latencyMs": 5723,
+  "usage": {
+    "prompt_tokens": 6809,
+    "completion_tokens": 8549,
+    "total_tokens": 15358,
+    "cost": 0.064912,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.064912,
+      "upstream_inference_prompt_cost": 0.013618,
+      "upstream_inference_completions_cost": 0.051294
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8205,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (cream paint, woodgrain sides, roof rack) | front end oriented frame-left, near side facing camera, positioned on right shoulder of desert road | same orientation and trim layout through end of shot | single continuous take; camera arcs from front-quarter view to side close-up; grille, hood ornament, roof rack, wipers, and chrome mirror stay fixed to the body consistently",
+    "desert road & background | two-lane road with yellow center dashes receding to frame-left behind car; shrubs, distant mountains | same road geometry; utility poles along left roadside enter view progressively | background displacement smooth and consistent with car moving forward while camera tracks alongside",
+    "woman leaning from front door window | torso behind door panel, crossed arms resting on window sill | identical pose relative to car at end | hair transitions from still to wind-blown (~00:05), matching onset of vehicle motion; no positional jump relative to door/aperture",
+    "antenna mast (front fender) | vertical mast, base at fender/cowl junction | same attachment point | apparent base position drifts smoothly relative to hood silhouette, consistent with parallax from camera arc; occlusion by hood edge evolves continuously",
+    "occlusion stack | door panel occludes woman's lower body; window sill occludes forearms; woman's body occludes cabin interior and far-side glass; hood occludes antenna base and road behind | unchanged through all frames | no foreground/background inversions; no element visible through a surface that should block it"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (cream paint, woodgrain sides, roof rack) | front end oriented frame-left, near side facing camera, positioned on right shoulder of desert road | same orientation and trim layout through end of shot | single continuous take; camera arcs from front-quarter view to side close-up; grille, hood ornament, roof rack, wipers, and chrome mirror stay fixed to the body consistently\",\n    \"desert road & background | two-lane road with yellow center dashes receding to frame-left behind car; shrubs, distant mountains | same road geometry; utility poles along left roadside enter view progressively | background displacement smooth and consistent with car moving forward while camera tracks alongside\",\n    \"woman leaning from front door window | torso behind door panel, crossed arms resting on window sill | identical pose relative to car at end | hair transitions from still to wind-blown (~00:05), matching onset of vehicle motion; no positional jump relative to door/aperture\",\n    \"antenna mast (front fender) | vertical mast, base at fender/cowl junction | same attachment point | apparent base position drifts smoothly relative to hood silhouette, consistent with parallax from camera arc; occlusion by hood edge evolves continuously\",\n    \"occlusion stack | door panel occludes woman's lower body; window sill occludes forearms; woman's body occludes cabin interior and far-side glass; hood occludes antenna base and road behind | unchanged through all frames | no foreground/background inversions; no element visible through a surface that should block it\"\n  ],\n  \"findings\": []\n}"
+}

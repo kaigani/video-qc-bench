@@ -1,0 +1,58 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:28:52.426Z",
+  "latencyMs": 5654,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3139,
+    "total_tokens": 4565,
+    "cost": 0.04052,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04052,
+      "upstream_inference_prompt_cost": 0.002852,
+      "upstream_inference_completions_cost": 0.037668
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2810,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "main subject | walking forward in center | standing, seen from behind | camera circles 180 degrees",
+    "left market stalls | tiered fruit displays with solid bases | flat tables with purple trays | continuous morphing of physical structure as camera moves",
+    "right market stalls | wooden crates with apples | similar wooden crates | relatively consistent",
+    "background crowd | man in green, woman in red on right path | completely different crowd | sudden dissolution and replacement of figures"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "background crowd",
+      "invariant_violated": "scene layout",
+      "description": "The distinct group of people in the background right, including a man in a green shirt and a woman in a red shirt, dissolve and vanish into a completely different crowd layout without being occluded or leaving the frame.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "left market stalls",
+      "invariant_violated": "scene layout",
+      "description": "As the camera moves along the path, the physical architecture of the stalls on the left morphs from tiered structural displays to flat tables with purple trays, failing to maintain consistent geometry.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"main subject | walking forward in center | standing, seen from behind | camera circles 180 degrees\",\n    \"left market stalls | tiered fruit displays with solid bases | flat tables with purple trays | continuous morphing of physical structure as camera moves\",\n    \"right market stalls | wooden crates with apples | similar wooden crates | relatively consistent\",\n    \"background crowd | man in green, woman in red on right path | completely different crowd | sudden dissolution and replacement of figures\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"background crowd\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The distinct group of people in the background right, including a man in a green shirt and a woman in a red shirt, dissolve and vanish into a completely different crowd layout without being occluded or leaving the frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"left market stalls\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"As the camera moves along the path, the physical architecture of the stalls on the left morphs from tiered structural displays to flat tables with purple trays, failing to maintain consistent geometry.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

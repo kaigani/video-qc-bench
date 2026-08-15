@@ -1,0 +1,41 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T21:12:23.872Z",
+  "latencyMs": 4418,
+  "usage": {
+    "prompt_tokens": 6470,
+    "completion_tokens": 9734,
+    "total_tokens": 16204,
+    "cost": 0.071344,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.071344,
+      "upstream_inference_prompt_cost": 0.01294,
+      "upstream_inference_completions_cost": 0.058404
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9498,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground smartphone | black phone held two-handed, screen heavily defocused showing dark handwritten 'A742' | same phone in sharp focus showing large 'A742', top status '7:42'/'441'/'A-A', bottom 'AZ-12' | smooth focus pull and slight tilt; glyph shapes stable once in focus (7-9s)",
+    "hands | left hand cradling bottom-left, right thumb on right edge | same grip; right thumb moves/taps around 7-8s then returns to edge | natural motion, consistent skin tone and nails",
+    "background pedestrian | person in blue shirt and jeans with red bag/crate beside railing | walks away along paved path and exits top of frame by ~4s | continuous gait, no teleporting or speed jumps",
+    "red bag/crate | red rectangular container with yellow mark, seen close | red tote with handle seen from behind at distance | silhouette change consistent with viewpoint/distance change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground smartphone | black phone held two-handed, screen heavily defocused showing dark handwritten 'A742' | same phone in sharp focus showing large 'A742', top status '7:42'/'441'/'A-A', bottom 'AZ-12' | smooth focus pull and slight tilt; glyph shapes stable once in focus (7-9s)\",\n    \"hands | left hand cradling bottom-left, right thumb on right edge | same grip; right thumb moves/taps around 7-8s then returns to edge | natural motion, consistent skin tone and nails\",\n    \"background pedestrian | person in blue shirt and jeans with red bag/crate beside railing | walks away along paved path and exits top of frame by ~4s | continuous gait, no teleporting or speed jumps\",\n    \"red bag/crate | red rectangular container with yellow mark, seen close | red tote with handle seen from behind at distance | silhouette change consistent with viewpoint/distance change\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "twelvelabs/pegasus1.5",
+  "timestamp": "2026-08-15T01:40:28.647Z",
+  "latencyMs": 10315,
+  "usage": {
+    "prompt_tokens": 4721,
+    "completion_tokens": 132,
+    "total_tokens": 4853
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon | parked on road, woman leaning out driver window | moving forward, woman still leaning out | continuous motion along road",
+    "road | straight, yellow center line, desert on both sides | straight, yellow center line, desert on both sides | consistent geometry",
+    "desert background | distant mountains, sparse vegetation | distant mountains, sparse vegetation | consistent background",
+    "woman | leaning out driver window, arms crossed | leaning out driver window, arms crossed | consistent position relative to car"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"station wagon | parked on road, woman leaning out driver window | moving forward, woman still leaning out | continuous motion along road\",\n    \"road | straight, yellow center line, desert on both sides | straight, yellow center line, desert on both sides | consistent geometry\",\n    \"desert background | distant mountains, sparse vegetation | distant mountains, sparse vegetation | consistent background\",\n    \"woman | leaning out driver window, arms crossed | leaning out driver window, arms crossed | consistent position relative to car\"\n  ],\n  \"findings\": []\n}"
+}

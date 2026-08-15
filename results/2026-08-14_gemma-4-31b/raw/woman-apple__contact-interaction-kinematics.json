@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T01:24:32.072Z",
+  "latencyMs": 3799,
+  "usage": {
+    "prompt_tokens": 2957,
+    "completion_tokens": 2084,
+    "total_tokens": 5041,
+    "cost": 0.00124758,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00124758,
+      "upstream_inference_prompt_cost": 0.00041398,
+      "upstream_inference_completions_cost": 0.0008336
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1750,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's Right Hand & Apple | gripping | empty | apple vanishes 00:08-00:09",
+    "Woman's Left Hand & Umbrella | gripping | gripping | continuous",
+    "Woman's Feet & Ground | contact | contact | walking"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Apple",
+      "invariant_violated": "contact points",
+      "description": "The apple held in the woman's right hand vanishes instantly between frames without a visible release motion or being placed into another object.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's Right Hand & Apple | gripping | empty | apple vanishes 00:08-00:09\",\n    \"Woman's Left Hand & Umbrella | gripping | gripping | continuous\",\n    \"Woman's Feet & Ground | contact | contact | walking\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Apple\",\n      \"invariant_violated\": \"contact points\",\n      \"description\": \"The apple held in the woman's right hand vanishes instantly between frames without a visible release motion or being placed into another object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:25:21.806Z",
+  "latencyMs": 4374,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 910,
+    "total_tokens": 2354,
+    "cost": 0.013808,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013808,
+      "upstream_inference_prompt_cost": 0.002888,
+      "upstream_inference_completions_cost": 0.01092
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 713,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone | foreground, out of focus, held by person, screen lit | foreground, in focus, held by person, screen lit | screen content changes as focus shifts, device is slightly rotated",
+    "Red bag | background, held in left hand of walking person | vanished | disappears completely from the person's hand without being dropped or placed anywhere"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Red bag",
+      "invariant_violated": "Identity & Persistence",
+      "description": "The red bag being carried by the person in the background suddenly vanishes from their hand. There is no visible action of dropping it or handing it off; the object simply ceases to exist.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone | foreground, out of focus, held by person, screen lit | foreground, in focus, held by person, screen lit | screen content changes as focus shifts, device is slightly rotated\",\n    \"Red bag | background, held in left hand of walking person | vanished | disappears completely from the person's hand without being dropped or placed anywhere\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Red bag\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"The red bag being carried by the person in the background suddenly vanishes from their hand. There is no visible action of dropping it or handing it off; the object simply ceases to exist.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

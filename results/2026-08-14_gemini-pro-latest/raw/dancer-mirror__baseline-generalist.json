@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-08-14T22:22:28.020Z",
+  "latencyMs": 5248,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1764,
+    "total_tokens": 3002,
+    "cost": 0.023644,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023644,
+      "upstream_inference_prompt_cost": 0.002476,
+      "upstream_inference_completions_cost": 0.021168
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1592,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground woman | Intact body parts | Intact body parts | None",
+    "Reflection woman | Left hand visible | Missing left hand | Left hand disappears when arm is raised the second time"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Reflection woman",
+      "invariant_violated": "Anatomical Integrity",
+      "description": "As the woman in the reflection raises her left arm for the second time, her hand is completely missing, leaving her arm to end in a stump. The foreground woman's corresponding hand remains fully intact and visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground woman | Intact body parts | Intact body parts | None\",\n    \"Reflection woman | Left hand visible | Missing left hand | Left hand disappears when arm is raised the second time\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Reflection woman\",\n      \"invariant_violated\": \"Anatomical Integrity\",\n      \"description\": \"As the woman in the reflection raises her left arm for the second time, her hand is completely missing, leaving her arm to end in a stump. The foreground woman's corresponding hand remains fully intact and visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

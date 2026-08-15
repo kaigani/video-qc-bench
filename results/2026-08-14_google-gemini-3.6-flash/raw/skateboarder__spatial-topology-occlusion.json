@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-08-14T18:56:46.185Z",
+  "latencyMs": 3859,
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 856,
+    "total_tokens": 2283,
+    "cost": 0.00428025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 910
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00428025,
+      "upstream_inference_prompt_cost": 0.00107025,
+      "upstream_inference_completions_cost": 0.00321
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 764,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder & board | positioned on concrete ramp at start | landing on concrete ramp at end | performs continuous air tricks and carves along ramps in a single camera take",
+    "Skate park concrete ramps | curved bowl and banks around skater | unchanged relative positions | perspective shifts smoothly with camera motion",
+    "Background light poles and trees | visible behind concrete bowl structure | maintain consistent background topology | subject and foreground ramps correctly occlude background based on camera position"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder & board | positioned on concrete ramp at start | landing on concrete ramp at end | performs continuous air tricks and carves along ramps in a single camera take\",\n    \"Skate park concrete ramps | curved bowl and banks around skater | unchanged relative positions | perspective shifts smoothly with camera motion\",\n    \"Background light poles and trees | visible behind concrete bowl structure | maintain consistent background topology | subject and foreground ramps correctly occlude background based on camera position\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,60 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-max",
+  "timestamp": "2026-08-14T20:48:41.569Z",
+  "latencyMs": 5979,
+  "usage": {
+    "prompt_tokens": 6668,
+    "completion_tokens": 11423,
+    "total_tokens": 18091,
+    "cost": 0.081874,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.081874,
+      "upstream_inference_prompt_cost": 0.013336,
+      "upstream_inference_completions_cost": 0.068538
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10782,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | center of wooden table, upright, containing balls | same position/orientation throughout | static support; balls stirred by child's hand from ~00:06",
+    "red balls (2 in bowl at start) | 2 in bowl at 00:00 | 2 in bowl at end | 00:01 child lifts one red from bowl (bowl 2->1 red, explained); 00:02 bowl shows 2 reds again while child still holds the lifted red (unexplained gain); 00:03-00:05 held red gone but bowl still only 2 reds (unexplained loss)",
+    "yellow balls (3) | in bowl at 00:00 | in bowl at end | position shuffled by hand/stirring; count constant",
+    "green balls (3) | in bowl at 00:00 | in bowl at end | position shuffled by hand/stirring; count constant",
+    "spare balls at right table edge (red/green/yellow) | partially visible at frame edge 00:00-00:02 | persist at edge | never contacted; visibility changes only with camera framing",
+    "small cup with wrapped candy/leaf | right side of table 00:00 | persists, leaves frame after camera zoom ~00:05 | no state or position change while visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red ball / bowl ball count",
+      "invariant_violated": "count persistence (no unexplained appearance)",
+      "description": "At 00:01 the bowl holds 7 balls (1 red) while the child holds 1 red in both hands. At 00:02 the bowl holds 8 balls including 2 reds while the child still holds a red ball; no visible action placed an additional red ball into the bowl, so one red ball appears unexplained.",
+      "severity": "moderate",
+      "confidence": 0.72
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "held red ball",
+      "invariant_violated": "object persistence (no unexplained disappearance)",
+      "description": "The red ball held at 00:02 is gone by 00:03 (right hand enters bowl empty), yet at 00:04-00:05 the bowl contains only 8 balls (2 reds) instead of 9; the held red is not visible in the bowl or on the table, i.e., it vanishes without a visible placement or transfer.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | center of wooden table, upright, containing balls | same position/orientation throughout | static support; balls stirred by child's hand from ~00:06\",\n    \"red balls (2 in bowl at start) | 2 in bowl at 00:00 | 2 in bowl at end | 00:01 child lifts one red from bowl (bowl 2->1 red, explained); 00:02 bowl shows 2 reds again while child still holds the lifted red (unexplained gain); 00:03-00:05 held red gone but bowl still only 2 reds (unexplained loss)\",\n    \"yellow balls (3) | in bowl at 00:00 | in bowl at end | position shuffled by hand/stirring; count constant\",\n    \"green balls (3) | in bowl at 00:00 | in bowl at end | position shuffled by hand/stirring; count constant\",\n    \"spare balls at right table edge (red/green/yellow) | partially visible at frame edge 00:00-00:02 | persist at edge | never contacted; visibility changes only with camera framing\",\n    \"small cup with wrapped candy/leaf | right side of table 00:00 | persists, leaves frame after camera zoom ~00:05 | no state or position change while visible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red ball / bowl ball count\",\n      \"invariant_violated\": \"count persistence (no unexplained appearance)\",\n      \"description\": \"At 00:01 the bowl holds 7 balls (1 red) while the child holds 1 red in both hands. At 00:02 the bowl holds 8 balls including 2 reds while the child still holds a red ball; no visible action placed an additional red ball into the bowl, so one red ball appears unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.72\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"held red ball\",\n      \"invariant_violated\": \"object persistence (no unexplained disappearance)\",\n      \"description\": \"The red ball held at 00:02 is gone by 00:03 (right hand enters bowl empty), yet at 00:04-00:05 the bowl contains only 8 balls (2 reds) instead of 9; the held red is not visible in the bowl or on the table, i.e., it vanishes without a visible placement or transfer.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}
