@@ -1,22 +1,22 @@
 # Benchmark scores vs human baseline
 
-Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 138). FP penalty = 1 per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
+Ground truth: 47 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 139). FP penalty = 1 per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
 
 ## Leaderboard
 
 | Model | Score | Detection | Defects found | FP findings | TP findings | EXTRA | Precision* |
 |---|---|---|---|---|---|---|---|
-| flash | **31** | 34/138 | 9/46 | 3 | 18 | 0 | 86% |
-| qwen | **41** | 52/138 | 15/46 | 11 | 34 | 0 | 76% |
-| pro | **21** | 69/138 | 23/46 | 48 | 65 | 1 | 58% |
-| gemma | **27** | 33/138 | 11/46 | 6 | 28 | 0 | 82% |
-| pegasus | **6** | 6/138 | 2/46 | 0 | 2 | 0 | 100% |
-| muse | **30** | 42/138 | 12/46 | 12 | 19 | 0 | 61% |
-| flash37 | **22** | 25/138 | 7/46 | 3 | 13 | 0 | 81% |
-| nemotron | **11** | 14/138 | 5/46 | 3 | 9 | 0 | 75% |
-| seed | **39** | 40/138 | 11/46 | 1 | 21 | 0 | 95% |
-| kimi | **39** | 54/138 | 20/46 | 15 | 43 | 4 | 76% |
-| qwen27b | **29** | 32/138 | 10/46 | 3 | 18 | 1 | 86% |
+| flash | **31** | 34/139 | 9/47 | 3 | 18 | 0 | 86% |
+| qwen | **41** | 52/139 | 15/47 | 11 | 34 | 0 | 76% |
+| pro | **22** | 70/139 | 24/47 | 48 | 66 | 0 | 58% |
+| gemma | **27** | 33/139 | 11/47 | 6 | 28 | 0 | 82% |
+| pegasus | **6** | 6/139 | 2/47 | 0 | 2 | 0 | 100% |
+| muse | **30** | 42/139 | 12/47 | 12 | 19 | 0 | 61% |
+| flash37 | **22** | 25/139 | 7/47 | 3 | 13 | 0 | 81% |
+| nemotron | **11** | 14/139 | 5/47 | 3 | 9 | 0 | 75% |
+| seed | **39** | 40/139 | 11/47 | 1 | 21 | 0 | 95% |
+| kimi | **37** | 55/139 | 21/47 | 18 | 44 | 0 | 71% |
+| qwen27b | **28** | 32/139 | 10/47 | 4 | 18 | 0 | 82% |
 
 *Precision counts TP+EXTRA findings as non-noise.
 
@@ -70,6 +70,7 @@ Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 | APPL-4 | P4 | · | ✓ | · | · | · | · | · | · | · | ✓ | · | Top-left market sign shows garbled glyphs; KT: very low priority, difficult to see (KT-con |
 | CAR-4 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | ✓ | · | Hair streams violently in wind while vegetation and antenna are unaffected (KT-confirmed 2 |
 | DIAL-1 | P3 | · | · | · | · | · | ✓ | · | ✓ | · | · | · | Spoken dialogue references 'the red door is locked, the blue door is open' but all visible |
+| CAR-5 | P4 | · | · | ✓ | · | · | · | · | · | · | ✓ | · | Windshield wiper arms relocate/change configuration between frames (KT-confirmed 2026-08-1 |
 
 **Missed by every model (11):** LONG-2 (P3), LONG-5 (P4), LONG-6 (P0), LONG-7 (P1), LONG-8 (P2), LONG-9 (P1), LONG-10 (P0), DANC-3 (P1), HOME-2 (P2), CUPS-2 (P2), SKAT-1 (P2)
 
@@ -77,25 +78,25 @@ Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 
 | Role | flash | qwen | pro | gemma | pegasus | muse | flash37 | nemotron | seed | kimi | qwen27b |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| baseline-generalist | 6tp/2fp/8 | 18tp/7fp/25 | 12tp/10fp/22 | 15tp/4fp/19 | 1tp/0fp/1 | 10tp/5fp/15 | 7tp/2fp/9 | 4tp/1fp/5 | 5tp/1fp/6 | 23tp/10fp/35 | 13tp/2fp/16 |
-| character-continuity | 1tp/0fp/1 | 1tp/2fp/3 | 4tp/11fp/15 | 0tp/2fp/2 | — | 1tp/1fp/2 | 0tp/1fp/1 | 2tp/2fp/4 | 1tp/0fp/1 | 2tp/1fp/4 | 0tp/1fp/1 |
-| object-persistence-state | 7tp/0fp/7 | 10tp/2fp/12 | 21tp/6fp/28 | 5tp/0fp/5 | 1tp/0fp/1 | 5tp/3fp/8 | 5tp/0fp/5 | 3tp/0fp/3 | 14tp/0fp/14 | 9tp/1fp/10 | 4tp/0fp/4 |
+| baseline-generalist | 6tp/2fp/8 | 18tp/7fp/25 | 12tp/10fp/22 | 15tp/4fp/19 | 1tp/0fp/1 | 10tp/5fp/15 | 7tp/2fp/9 | 4tp/1fp/5 | 5tp/1fp/6 | 24tp/11fp/35 | 13tp/3fp/16 |
+| character-continuity | 1tp/0fp/1 | 1tp/2fp/3 | 4tp/11fp/15 | 0tp/2fp/2 | — | 1tp/1fp/2 | 0tp/1fp/1 | 2tp/2fp/4 | 1tp/0fp/1 | 2tp/2fp/4 | 0tp/1fp/1 |
+| object-persistence-state | 7tp/0fp/7 | 10tp/2fp/12 | 22tp/6fp/28 | 5tp/0fp/5 | 1tp/0fp/1 | 5tp/3fp/8 | 5tp/0fp/5 | 3tp/0fp/3 | 14tp/0fp/14 | 9tp/1fp/10 | 4tp/0fp/4 |
 | contact-interaction-kinematics | 1tp/0fp/1 | 1tp/0fp/1 | 7tp/9fp/16 | 4tp/0fp/4 | — | — | — | — | — | 3tp/2fp/5 | — |
 | spatial-topology-occlusion | 2tp/1fp/3 | 2tp/0fp/2 | 9tp/9fp/18 | 1tp/0fp/1 | — | 3tp/0fp/3 | — | — | — | 3tp/0fp/3 | 1tp/0fp/1 |
-| causal-temporal-sequence | 1tp/0fp/1 | 2tp/0fp/2 | 12tp/3fp/15 | 3tp/0fp/3 | — | 0tp/3fp/3 | 1tp/0fp/1 | — | 1tp/0fp/1 | 3tp/1fp/5 | — |
+| causal-temporal-sequence | 1tp/0fp/1 | 2tp/0fp/2 | 12tp/3fp/15 | 3tp/0fp/3 | — | 0tp/3fp/3 | 1tp/0fp/1 | — | 1tp/0fp/1 | 3tp/2fp/5 | — |
 
 ## Specialist vs generalist detection (per model: defects found only by specialists / only by baseline / by both)
 
 - **flash**: specialists-only [MIRR-2, BLOC-1, APPL-2], baseline-only [LONG-13, PHON-1, APPL-3], both [LONG-11, HOME-1, OLIV-1]
 - **qwen**: specialists-only [HOME-1, CUPS-3], baseline-only [LONG-3, LONG-15, CUPS-4, APPL-3, APPL-4], both [LONG-1, LONG-11, LONG-13, MARB-1, BLOC-1, APPL-1, APPL-2, CAR-2]
-- **pro**: specialists-only [LONG-11, LONG-14, LONG-4, DANC-1, DANC-2, HOME-1, CUPS-1, CUPS-3, PHON-1, OLIV-2, SKAT-2, CAR-4], baseline-only [LONG-12, LONG-13, CUPS-5], both [MARB-1, MIRR-2, MIRR-1, OLIV-1, WATC-1, BLOC-1, APPL-1, CAR-1]
+- **pro**: specialists-only [LONG-11, LONG-14, LONG-4, DANC-1, DANC-2, HOME-1, CUPS-1, CUPS-3, PHON-1, OLIV-2, SKAT-2, CAR-4, CAR-5], baseline-only [LONG-12, LONG-13, CUPS-5], both [MARB-1, MIRR-2, MIRR-1, OLIV-1, WATC-1, BLOC-1, APPL-1, CAR-1]
 - **gemma**: specialists-only [—], baseline-only [LONG-15, LONG-13, MARB-1, CUPS-1, CAR-3, CAR-4], both [HOME-1, OLIV-1, WATC-1, BLOC-1, APPL-2]
 - **pegasus**: specialists-only [WATC-1], baseline-only [LONG-13], both [—]
 - **muse**: specialists-only [LONG-15, LONG-4, OLIV-3], baseline-only [MARB-1, DIAL-1, CUPS-3, OLIV-1, OLIV-4], both [LONG-11, LONG-13, HOME-1, BLOC-1]
 - **flash37**: specialists-only [APPL-2], baseline-only [LONG-11, OLIV-3, APPL-3, CAR-3], both [OLIV-1, BLOC-1]
 - **nemotron**: specialists-only [WATC-1], baseline-only [DIAL-1, OLIV-1], both [PHON-1, BLOC-1]
 - **seed**: specialists-only [LONG-11, MARB-1, CUPS-3, MIRR-2, OLIV-3, OLIV-4], baseline-only [LONG-13, HOME-1, APPL-2], both [OLIV-1, BLOC-1]
-- **kimi**: specialists-only [CUPS-1, OLIV-3], baseline-only [LONG-3, HOME-1, CUPS-4, PHON-1, OLIV-1, APPL-3, APPL-4, CAR-2, CAR-3], both [LONG-11, LONG-13, LONG-15, LONG-4, CUPS-3, MIRR-1, BLOC-1, APPL-2, CAR-4]
+- **kimi**: specialists-only [CUPS-1, OLIV-3], baseline-only [LONG-3, HOME-1, CUPS-4, PHON-1, OLIV-1, APPL-3, APPL-4, CAR-2, CAR-3, CAR-5], both [LONG-11, LONG-13, LONG-15, LONG-4, CUPS-3, MIRR-1, BLOC-1, APPL-2, CAR-4]
 - **qwen27b**: specialists-only [LONG-4], baseline-only [LONG-13, LONG-15, DANC-1, HOME-1, CUPS-3, PHON-1, OLIV-1], both [BLOC-1, APPL-2]
 
 ## False positives (penalized findings)
@@ -196,7 +197,10 @@ Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
   - phone / character-continuity @00:02: The person was walking up the stairs (away from camera) and then is seen walking down the stairs (towards camera) without any visi
 - **seed** (1):
   - _long-scene / baseline-generalist @01:09: The waitress places a full plate of food in front of the customer, then immediately picks it up and carries it away with no visibl
-- **kimi** (15):
+- **kimi** (18):
+  - _long-scene / baseline-generalist @01:43: As the customer walks away from the window toward the truck (back turned to camera), the glass shows a translucent front-facing im
+  - _long-scene / causal-temporal-sequence @01:41: As the man walks away from the diner toward the truck with his back to the glass, the window displays a front-facing image of his 
+  - _long-scene / character-continuity @01:42: In one continuous shot through the diner window, as the man walks toward the truck, a semi-transparent second copy of him (face an
   - dialogue / baseline-generalist @00:00:00: Throughout the speech segment the mouth deforms with overly smooth, rubbery transitions while the rest of the face (eyes, brows, j
   - man-cups / baseline-generalist @00:07: A black smartphone/wallet-like object is suddenly lying on the cloth to the right of the cups. Earlier views of the same table are
   - man-cups / causal-temporal-sequence @00:02: The front-left cup's interior is visible at 00:00.0 holding roughly one coin; the hand adds one more coin at 00:01.0. At 00:02.0 t
@@ -212,8 +216,9 @@ Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
   - woman-car / baseline-generalist @00:01: The small chrome emblems on the front fender just ahead of the driver's door change in number and arrangement between frames (a si
   - woman-car / baseline-generalist @00:07: With the car clearly traveling at speed, the driver is leaned fully out of the window with both arms crossed on the door and no ha
   - woman-car / object-persistence-state @00:00: At 00:00–00:02 a large dark cross/figure-shaped mass fills the center of the windshield; over the following seconds it shrinks and
-- **qwen27b** (3):
+- **qwen27b** (4):
   - _long-scene / baseline-generalist @00:52: The diner is shown completely empty at 00:52-00:59 — no customer at the counter — immediately after a shot (00:45-00:51) with him 
+  - _long-scene / baseline-generalist @01:46: In the window/trailer reflection the waitress appears in a tan/khaki shirt, inconsistent with the light blue uniform she is wearin
   - skateboarder / baseline-generalist @00:01: During the first aerial trick, two skateboards are visible simultaneously: one deck with visible trucks/white wheels angled under 
   - woman-apple / character-continuity @00:09: At 00:08 the checked-shirt man is in the left foreground in profile, facing/walking screen-right (toward the aisle), about 1 m fro
 
@@ -221,5 +226,3 @@ Ground truth: 46 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 
 If confirmed, these should be added to ground-truth.json and rescored; if rejected, reclassify as FP in matches.json.
 
-- **reflection-faces-wrong-way** (kimi×3, qwen27b×1): _long-scene 01:41-01:46: window reflection physically wrong - shows man's FACE while his back is to the glass (kimi x3), and waitress reflection in wrong shirt color/posture (qwen27b). Distinct from the location claim KT rejected; needs KT verdict
-- **wiper-mutation** (pro×1, kimi×1): woman-car ~00:02-00:05: windshield wiper arms relocate/change configuration between frames (pro, kimi - independent corroboration; needs KT verdict)

@@ -21,20 +21,20 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 
 | System | Score | Detection | Defects found | FPs | Run cost |
 |---|---|---|---|---|---|
-| Qwen 3.8 Max (reasoning) | **41** | 52/138 | 15/46 | 11 | $4.42 |
-| Seed 2.1 Turbo | **39** | 40/138 | 11/46 | 1 | $1.96 |
-| Kimi K3 (reasoning) | **39** | 54/138 | 20/46 | 15 | $10.83 |
-| Gemini 3.6 Flash | **31** | 34/138 | 9/46 | 3 | $0.53 |
-| Muse Spark 1.2 (reasoning) | **30** | 42/138 | 12/46 | 12 | $1.11 |
-| Qwen 3.8 27B (reasoning) | **29** | 32/138 | 10/46 | 3 | $1.58 |
-| Gemma 4 31B (reasoning) | **27** | 33/138 | 11/46 | 6 | $0.11 |
-| Gemini 3.7 Flash | **22** | 25/138 | 7/46 | 3 | $0.15 |
-| Gemini Pro Latest (reasoning) | **21** | 69/138 | 23/46 | 48 | $2.15 |
-| Nemotron 3 Nano (free, reasoning) | **11** | 14/138 | 5/46 | 3 | $0.00 |
-| TwelveLabs Pegasus 1.5 | **6** | 6/138 | 2/46 | 0 | ~$0.58 |
+| Qwen 3.8 Max (reasoning) | **41** | 52/139 | 15/47 | 11 | $4.42 |
+| Seed 2.1 Turbo | **39** | 40/139 | 11/47 | 1 | $1.96 |
+| Kimi K3 (reasoning) | **37** | 55/139 | 21/47 | 18 | $10.83 |
+| Gemini 3.6 Flash | **31** | 34/139 | 9/47 | 3 | $0.53 |
+| Muse Spark 1.2 (reasoning) | **30** | 42/139 | 12/47 | 12 | $1.11 |
+| Qwen 3.8 27B (reasoning) | **28** | 32/139 | 10/47 | 4 | $1.58 |
+| Gemma 4 31B (reasoning) | **27** | 33/139 | 11/47 | 6 | $0.11 |
+| Gemini 3.7 Flash | **22** | 25/139 | 7/47 | 3 | $0.15 |
+| Gemini Pro Latest (reasoning) | **22** | 70/139 | 24/47 | 48 | $2.15 |
+| Nemotron 3 Nano (free, reasoning) | **11** | 14/139 | 5/47 | 3 | $0.00 |
+| TwelveLabs Pegasus 1.5 | **6** | 6/139 | 2/47 | 0 | ~$0.58 |
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
-false-positive finding. The ground truth includes 10 defects first surfaced by models and then
+false-positive finding. The ground truth includes 11 defects first surfaced by models and then
 human-confirmed. Headline patterns: Gemini Pro finds the most real defects (23/46) but its 48
 false positives sink it; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call; Kimi K3
 pairs the second-best recall with honest confidence calibration; and Gemini 3.7 Flash *regresses*
