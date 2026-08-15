@@ -131,10 +131,9 @@
     <div class="card"><ul class="plain" id="missed"></ul></div>
   </section>
 
-  <section>
-    <h2>Model-found extras awaiting adjudication</h2>
-    <p class="lede">Plausible defects reported by the models but absent from the human baseline &mdash; cross-model
-      corroborated or verified on frame review. Scoring-neutral until confirmed.</p>
+  <section id="extras-section">
+    <h2>Model-found extras</h2>
+    <p class="lede" id="extras-lede">Plausible defects reported by the models but absent from the original human baseline.</p>
     <div class="card"><ul class="plain" id="extras"></ul></div>
   </section>
 
@@ -336,7 +335,12 @@ $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="labe
 $('missed-lede').textContent = `${DATA.missedByAll.length} of ${DATA.defectsTotal} baseline defects were caught by no system — dominated by character-position continuity in the long multi-shot scene.`;
 $('missed').innerHTML = DATA.coverage.filter((c) => DATA.missedByAll.includes(c.id))
   .map((c) => `<li><b>${c.id}</b> <span class="chip">${c.priority}</span> (${c.video}) — ${c.description}</li>`).join('');
-$('extras').innerHTML = DATA.extras.map((e) => `<li><b>${e.slug}</b> — ${e.desc}</li>`).join('');
+if (DATA.extras.length) {
+  $('extras').innerHTML = DATA.extras.map((e) => `<li><b>${e.slug}</b> — ${e.desc}</li>`).join('');
+} else {
+  $('extras-lede').textContent = 'All model-found extras have been human-adjudicated: 6 were confirmed as real defects and folded into the ground truth (the truck swap, the pre-served meal, the carafe physics, the moved mug, the bow-tie+necktie combo, the six-fingered hand, the teal fruit, the garbled sign, the wind inconsistency); the rest were rejected and now count as false positives.';
+  $('extras').parentElement.style.display = 'none';
+}
 $('gen').textContent = DATA.generated;
 </script>
 </body>

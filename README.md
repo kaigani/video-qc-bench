@@ -17,18 +17,21 @@ ontology of what is *allowed to change over time* — and requiring an invariant
 findings — produces measurably different (and per-model, diagnostic) results. See the
 [report](https://kaigani.github.io/video-qc-bench/) for the specialist-vs-baseline breakdown.
 
-## Results snapshot (August 2026)
+## Results snapshot (August 2026, after full human adjudication)
 
 | System | Score | Detection | Defects found | FPs | Run cost |
 |---|---|---|---|---|---|
-| Gemini Pro Latest (reasoning) | **38** | 69/116 | 20/36 | 31 | $2.15 |
-| Qwen 3.8 Max (reasoning) | **36** | 40/116 | 10/36 | 4 | $4.42 |
-| Gemini 3.6 Flash | **27** | 27/116 | 7/36 | 0 | $0.53 |
-| Gemma 4 31B (reasoning) | **23** | 24/116 | 8/36 | 1 | $0.11 |
-| TwelveLabs Pegasus 1.5 | **1** | 1/116 | 1/36 | 0 | ~$0.58 |
+| Qwen 3.8 Max (reasoning) | **41** | 52/136 | 15/45 | 11 | $4.42 |
+| Gemini 3.6 Flash | **31** | 34/136 | 9/45 | 3 | $0.53 |
+| Gemma 4 31B (reasoning) | **27** | 33/136 | 11/45 | 6 | $0.11 |
+| Gemini Pro Latest (reasoning) | **20** | 69/136 | 23/45 | 49 | $2.15 |
+| TwelveLabs Pegasus 1.5 | **6** | 6/136 | 2/45 | 0 | ~$0.58 |
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
-false-positive finding. Full matrices, cost/detection chart, and per-role breakdowns in the report.
+false-positive finding. The ground truth includes 9 defects first surfaced by models and then
+human-confirmed. Gemini Pro finds by far the most real defects (23/45) but its 49 false
+positives sink its net score — the precision/recall trade-off is the benchmark's central story.
+Full matrices, cost/detection chart, and per-role breakdowns in the report.
 
 ## Repo layout
 
