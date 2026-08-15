@@ -1,0 +1,43 @@
+{
+  "key": "watchmaker__baseline-generalist",
+  "video": "watchmaker.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:08:29.999Z",
+  "latencyMs": 282716,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 5825,
+    "total_tokens": 15092,
+    "cost": 0.02281015,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02281015,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.01864
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5511,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | navy/white striped shirt, gold chain necklace, watch on left wrist, rings on both hands | same attire and accessories throughout | leans forward slightly after 4s, shifts from tool work to finger work",
+    "tweezers | held in right hand, tips touching small metal part | no longer in hand from 4s onward | right hand moves down out of frame between 3s and 4s, consistent with setting the tool down",
+    "small metal part | held in left hand, mesh/textured disc shape | still held in left hand, viewed from different angles | rotated and manipulated continuously, no shape discontinuity",
+    "watch | black strap, white dial, gold case on left wrist | unchanged | none",
+    "rings | thin band on right middle finger, band with stone on left ring finger | unchanged | none",
+    "necklace pendant | small round stone on gold chain | same, brightness varies with posture | rotates/swings as she leans, no unexplained change"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"woman | navy/white striped shirt, gold chain necklace, watch on left wrist, rings on both hands | same attire and accessories throughout | leans forward slightly after 4s, shifts from tool work to finger work\",\n    \"tweezers | held in right hand, tips touching small metal part | no longer in hand from 4s onward | right hand moves down out of frame between 3s and 4s, consistent with setting the tool down\",\n    \"small metal part | held in left hand, mesh/textured disc shape | still held in left hand, viewed from different angles | rotated and manipulated continuously, no shape discontinuity\",\n    \"watch | black strap, white dial, gold case on left wrist | unchanged | none\",\n    \"rings | thin band on right middle finger, band with stone on left ring finger | unchanged | none\",\n    \"necklace pendant | small round stone on gold chain | same, brightness varies with posture | rotates/swings as she leans, no unexplained change\"\n  ],\n  \"findings\": []\n}"
+}

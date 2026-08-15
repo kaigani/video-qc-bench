@@ -27,6 +27,7 @@ const LABELS = {
   nemotron: 'Nemotron 3 Nano',
   seed: 'Seed 2.1 Turbo',
   kimi: 'Kimi K3',
+  qwen27b: 'Qwen 3.8 27B',
 };
 
 const models = [];

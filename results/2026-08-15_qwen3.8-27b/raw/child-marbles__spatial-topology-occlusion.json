@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:16:00.020Z",
+  "latencyMs": 135861,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 4604,
+    "total_tokens": 14061,
+    "cost": 0.01898845,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01898845,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0147328
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4046,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden picnic table | fixed; occupies right/foreground with diagonal left edge and visible board seams; child stands outside table on left | same geometry at end | only apparent changes are from continuous zoom-in toward bowl",
+    "clear glass bowl of colored balls | centered on table in front of child, mid-table | same relative position | bowl stays centered as camera pushes in; front rim consistently occludes balls/hands inside",
+    "small metal cup with green/white contents | on table to the right of bowl, right of the vertical board seam | same location | drifts toward right frame edge as camera zooms, never changes table position",
+    "loose balls (two red, green, yellow) | lower-right corner of table | same corner | static across wide and close shots",
+    "child in blue hoodie | standing at left side of table, body angled toward table/camera; right arm reaches into bowl from left, left arm holds rim on right | same stance and side | no repositioning or wrong-side emergence in any shot",
+    "background elements | paved patio on left; stacked terracotta pots along wall at top; white-framed window at upper right | consistent in wide shot at 0:02-0:03 | revealed when camera is wider, hidden by close framing otherwise; no contradictions",
+    "board seams on table | diagonal horizontal seam across upper table and near-vertical seam passing just left of the metal cup | identical pattern in close-ups and wide shot | seam-cup-bowl relative layout preserved across zoom changes"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"wooden picnic table | fixed; occupies right/foreground with diagonal left edge and visible board seams; child stands outside table on left | same geometry at end | only apparent changes are from continuous zoom-in toward bowl\",\n    \"clear glass bowl of colored balls | centered on table in front of child, mid-table | same relative position | bowl stays centered as camera pushes in; front rim consistently occludes balls/hands inside\",\n    \"small metal cup with green/white contents | on table to the right of bowl, right of the vertical board seam | same location | drifts toward right frame edge as camera zooms, never changes table position\",\n    \"loose balls (two red, green, yellow) | lower-right corner of table | same corner | static across wide and close shots\",\n    \"child in blue hoodie | standing at left side of table, body angled toward table/camera; right arm reaches into bowl from left, left arm holds rim on right | same stance and side | no repositioning or wrong-side emergence in any shot\",\n    \"background elements | paved patio on left; stacked terracotta pots along wall at top; white-framed window at upper right | consistent in wide shot at 0:02-0:03 | revealed when camera is wider, hidden by close framing otherwise; no contradictions\",\n    \"board seams on table | diagonal horizontal seam across upper table and near-vertical seam passing just left of the metal cup | identical pattern in close-ups and wide shot | seam-cup-bowl relative layout preserved across zoom changes\"\n  ],\n  \"findings\": []\n}"
+}

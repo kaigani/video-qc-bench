@@ -1,0 +1,43 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:54:41.617Z",
+  "latencyMs": 162336,
+  "usage": {
+    "prompt_tokens": 7651,
+    "completion_tokens": 2644,
+    "total_tokens": 10295,
+    "cost": 0.01190375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01190375,
+      "upstream_inference_prompt_cost": 0.00344295,
+      "upstream_inference_completions_cost": 0.0084608
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2499,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Car (cream/wood-grain wagon) | front-left 3/4 view, grille fully visible, camera wide | side close-up, hood and window dominate frame | camera continuously orbits front-to-side; vehicle shows no forward slip relative to ground, consistent with steady drive",
+    "Background (desert, road, utility poles) | open desert with road edge on left | road with yellow dashes and poles, motion-blurred | background flows continuously backward past the car in a direction matching forward motion; no jumps or reversals",
+    "Woman's hair | mostly settled, slight lift | strongly blown up and toward car rear (frame right) | displacement ramps smoothly from frames ~5-9, magnitude tracks with visible motion/wind, no sudden onset",
+    "Sun glare / lens flare | absent (front-facing light) | bright flare sweeping across windshield and rim-lighting hair | flare enters and intensifies only as camera angle relative to sun rotates; cause (camera orbit) precedes the brightening",
+    "Woman's arms | crossed, resting on open door frame | crossed, resting on open door frame | position constant; no unexplained repositioning",
+    "Front antenna | thin vertical rod | thin vertical rod | stays upright through motion; no snap or lag"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Car (cream/wood-grain wagon) | front-left 3/4 view, grille fully visible, camera wide | side close-up, hood and window dominate frame | camera continuously orbits front-to-side; vehicle shows no forward slip relative to ground, consistent with steady drive\",\n    \"Background (desert, road, utility poles) | open desert with road edge on left | road with yellow dashes and poles, motion-blurred | background flows continuously backward past the car in a direction matching forward motion; no jumps or reversals\",\n    \"Woman's hair | mostly settled, slight lift | strongly blown up and toward car rear (frame right) | displacement ramps smoothly from frames ~5-9, magnitude tracks with visible motion/wind, no sudden onset\",\n    \"Sun glare / lens flare | absent (front-facing light) | bright flare sweeping across windshield and rim-lighting hair | flare enters and intensifies only as camera angle relative to sun rotates; cause (camera orbit) precedes the brightening\",\n    \"Woman's arms | crossed, resting on open door frame | crossed, resting on open door frame | position constant; no unexplained repositioning\",\n    \"Front antenna | thin vertical rod | thin vertical rod | stays upright through motion; no snap or lag\"\n  ],\n  \"findings\": []\n}"
+}

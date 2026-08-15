@@ -1,0 +1,49 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:46:59.767Z",
+  "latencyMs": 409668,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 5266,
+    "total_tokens": 14533,
+    "cost": 0.02102135,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02102135,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0168512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4077,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "phone screen | large handwritten 'A7A2' in black ink, small scribbles top | same 'A7A2' in black plus small 'XZ / AZ-12' note at bottom | between ~4.5s and 5.5s the main 'A7A2' renders in red, then is black again by 6.5s with no visible color-selection action; top-left label appears as '7AZ' at 4.5s and 'A7AZ' by 5.5s without a visible stroke",
+    "background pedestrian (blue shirt, jeans, red bag) | standing at top of stairs, near frame edge | walking away, out of frame by ~3.4s | consistent motion away, no discontinuity",
+    "hands holding phone | left hand cradling phone, right thumb on right edge | right index finger taps and writes on screen | interactions plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "phone screen text 'A7A2'",
+      "invariant_violated": "on-screen content continuity",
+      "description": "The large handwritten 'A7A2' is dark/black at 0:00-0:03, appears in red ink at 0:04-0:05, and is black again at 0:06-0:09. No editing action (tap on a color tool, re-draw) is visible in between, so the ink color flip is unexplained. Relatedly, the top-left label changes from '7AZ' (4.5s) to 'A7AZ' (5.5s) without a visible writing stroke.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"phone screen | large handwritten 'A7A2' in black ink, small scribbles top | same 'A7A2' in black plus small 'XZ / AZ-12' note at bottom | between ~4.5s and 5.5s the main 'A7A2' renders in red, then is black again by 6.5s with no visible color-selection action; top-left label appears as '7AZ' at 4.5s and 'A7AZ' by 5.5s without a visible stroke\",\n    \"background pedestrian (blue shirt, jeans, red bag) | standing at top of stairs, near frame edge | walking away, out of frame by ~3.4s | consistent motion away, no discontinuity\",\n    \"hands holding phone | left hand cradling phone, right thumb on right edge | right index finger taps and writes on screen | interactions plausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"phone screen text 'A7A2'\",\n      \"invariant_violated\": \"on-screen content continuity\",\n      \"description\": \"The large handwritten 'A7A2' is dark/black at 0:00-0:03, appears in red ink at 0:04-0:05, and is black again at 0:06-0:09. No editing action (tap on a color tool, re-draw) is visible in between, so the ink color flip is unexplained. Relatedly, the top-left label changes from '7AZ' (4.5s) to 'A7AZ' (5.5s) without a visible writing stroke.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

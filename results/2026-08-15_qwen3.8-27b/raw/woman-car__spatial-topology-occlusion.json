@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T14:09:11.336Z",
+  "latencyMs": 593973,
+  "usage": {
+    "prompt_tokens": 7657,
+    "completion_tokens": 9619,
+    "total_tokens": 17276,
+    "cost": 0.03422645,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03422645,
+      "upstream_inference_prompt_cost": 0.00344565,
+      "upstream_inference_completions_cost": 0.0307808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9188,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Car (vintage wood-panel SUV) | front aimed frame-left, cream body with wood side panels, roof rack, thin antenna and twin round hood lamps on front-left of hood, chrome door mirror at A-pillar | same configuration at end, viewed closer and more side-on | camera orbits from front three-quarter to side close-up; all fixed car features keep their relative positions (lamps in front of antenna, mirror at front of door, rack over cabin)",
+    "Woman in driver's (left) front seat | leaning out of open left side window, arms crossed, forearms resting on door line just behind A-pillar; head and torso above beltline | same pose and location at end, closer | she remains in the left front door opening the whole time; her body occludes the cabin interior/seat behind the window; hair streams toward frame-right (rear), consistent with forward motion of the car",
+    "Road | paved two-lane highway with dashed yellow centerline and white edge lines running parallel along the car's left side, visible at frame-left from ~0:03 onward | same road at end, blurred, markings shifted toward frame-right | markings and roadside utility poles stream left-to-right at a steady rate, compatible with the vehicle/camera traveling forward along the road; no change in road geometry or side",
+    "Desert and mountains | flat desert with dry grass clumps and low mountain ridge on the horizon beyond the car's front | same at end | background pans gently in the direction expected as the camera rotates from front to side; no elements pop in from wrong directions",
+    "Front-end occlusion set | hood, wipers at cowl, grille and front bumper occlude the ground and road behind them; antenna rises from hood and is occluded only by the windshield frame at steep angles | consistent at end | no background element ever renders over the hood or body panels; occlusion edges shift smoothly with the orbit"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Car (vintage wood-panel SUV) | front aimed frame-left, cream body with wood side panels, roof rack, thin antenna and twin round hood lamps on front-left of hood, chrome door mirror at A-pillar | same configuration at end, viewed closer and more side-on | camera orbits from front three-quarter to side close-up; all fixed car features keep their relative positions (lamps in front of antenna, mirror at front of door, rack over cabin)\",\n    \"Woman in driver's (left) front seat | leaning out of open left side window, arms crossed, forearms resting on door line just behind A-pillar; head and torso above beltline | same pose and location at end, closer | she remains in the left front door opening the whole time; her body occludes the cabin interior/seat behind the window; hair streams toward frame-right (rear), consistent with forward motion of the car\",\n    \"Road | paved two-lane highway with dashed yellow centerline and white edge lines running parallel along the car's left side, visible at frame-left from ~0:03 onward | same road at end, blurred, markings shifted toward frame-right | markings and roadside utility poles stream left-to-right at a steady rate, compatible with the vehicle/camera traveling forward along the road; no change in road geometry or side\",\n    \"Desert and mountains | flat desert with dry grass clumps and low mountain ridge on the horizon beyond the car's front | same at end | background pans gently in the direction expected as the camera rotates from front to side; no elements pop in from wrong directions\",\n    \"Front-end occlusion set | hood, wipers at cowl, grille and front bumper occlude the ground and road behind them; antenna rises from hood and is occluded only by the windshield frame at steep angles | consistent at end | no background element ever renders over the hood or body panels; occlusion edges shift smoothly with the orbit\"\n  ],\n  \"findings\": []\n}"
+}

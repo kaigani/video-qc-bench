@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:06:52.238Z",
+  "latencyMs": 210022,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 2757,
+    "total_tokens": 12208,
+    "cost": 0.01307535,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01307535,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0088224
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2304,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | crouched, both feet on board on flat concrete, facing camera (0.0s) | standing, feet on board, riding up curved bowl wall (9.0s) | rode up transition -> popped into air with feet leaving board (2.0s) -> landed feet back on board on coping (3.0s) -> rolled flat -> crouched to pop (6.0s) -> second aerial off ramp edge (7.0-8.0s) -> landed and rolled on bowl wall (9.0s)",
+    "skateboard | flat on ground under both feet (0.0s) | on curved bowl wall under feet (9.0s) | tilted up the ramp (1.0s) -> popped/flip, briefly airborne below the feet (2.0s) -> horizontal on coping at landing (3.0s) -> rolled flat (4.0-5.0s) -> nose-lifted during crouch (6.0s) -> airborne below feet (7.0-8.0s) -> on bowl wall (9.0s)",
+    "ground shadow | large, detailed silhouette directly under skater on flat ground (0.0s) | silhouette cast on bowl floor (9.0s) | follows skater+board position each frame; shrinks/dims while skater is at apex of each jump (2.0s, 7.0s); re-expands on landing",
+    "sun / lighting | bright sun high in clear sky, strong directional shadows (0.0s) | same bright sun, strong shadows (9.0s) | sun disk visible high in frame mid-sequence; shadow length/direction track the high sun and moving camera; no light change without a cause"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"skater | crouched, both feet on board on flat concrete, facing camera (0.0s) | standing, feet on board, riding up curved bowl wall (9.0s) | rode up transition -> popped into air with feet leaving board (2.0s) -> landed feet back on board on coping (3.0s) -> rolled flat -> crouched to pop (6.0s) -> second aerial off ramp edge (7.0-8.0s) -> landed and rolled on bowl wall (9.0s)\",\n    \"skateboard | flat on ground under both feet (0.0s) | on curved bowl wall under feet (9.0s) | tilted up the ramp (1.0s) -> popped/flip, briefly airborne below the feet (2.0s) -> horizontal on coping at landing (3.0s) -> rolled flat (4.0-5.0s) -> nose-lifted during crouch (6.0s) -> airborne below feet (7.0-8.0s) -> on bowl wall (9.0s)\",\n    \"ground shadow | large, detailed silhouette directly under skater on flat ground (0.0s) | silhouette cast on bowl floor (9.0s) | follows skater+board position each frame; shrinks/dims while skater is at apex of each jump (2.0s, 7.0s); re-expands on landing\",\n    \"sun / lighting | bright sun high in clear sky, strong directional shadows (0.0s) | same bright sun, strong shadows (9.0s) | sun disk visible high in frame mid-sequence; shadow length/direction track the high sun and moving camera; no light change without a cause\"\n  ],\n  \"findings\": []\n}"
+}

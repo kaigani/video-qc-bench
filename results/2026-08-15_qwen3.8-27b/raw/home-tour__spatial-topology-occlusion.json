@@ -1,0 +1,43 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:40:54.255Z",
+  "latencyMs": 571979,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 9319,
+    "total_tokens": 18776,
+    "cost": 0.03407645,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03407645,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0298208
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9253,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen A (start) | wood cabinets, stone-tile backsplash; range+hood on left wall, counter with microwave and coffee maker on right wall; doorway to hall at far end | same layout from behind at 1.0s | camera repositions from profile to tracking shot; microwave stays on right counter, never moves",
+    "Hall | runs perpendicular to kitchen doorway; white front door (windowed) at far end; floral framed print on near wall to the right of kitchen opening; small framed pictures further down same wall | unchanged through 3.0s | consistent as woman crosses it; floral print is on the wall side that is right when exiting kitchen, left when viewed back from bedroom door",
+    "Bedroom doorway | in the same wall as the floral print, just past it (turn right from hall) | visible again when she exits at 7.0-8.0s | entering and exiting views match: floral print on one jamb side, bedroom window+side table on the other",
+    "Bedroom | bed against far wall under colorful painting; windows on both side walls; side table with framed photo near door | same at 6.0s | camera pans from bed to door; door opens onto hall showing front door beyond, matching hall layout",
+    "Woman in blue dress | standing right of microwave counter at 0.0s facing left | walking down galley kitchen at end | continuous path: kitchen -> hall -> bedroom -> hall; she always emerges on the correct side of doorways per the map",
+    "Galley kitchen (final shot) | microwave over white range on left, window right, doorway to bright hall ahead | end of clip | separate location/scene after cut; its doorway shows the same bright front-door hall, but cabinet/appliance arrangement is its own, not claimed to be Kitchen A"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Kitchen A (start) | wood cabinets, stone-tile backsplash; range+hood on left wall, counter with microwave and coffee maker on right wall; doorway to hall at far end | same layout from behind at 1.0s | camera repositions from profile to tracking shot; microwave stays on right counter, never moves\",\n    \"Hall | runs perpendicular to kitchen doorway; white front door (windowed) at far end; floral framed print on near wall to the right of kitchen opening; small framed pictures further down same wall | unchanged through 3.0s | consistent as woman crosses it; floral print is on the wall side that is right when exiting kitchen, left when viewed back from bedroom door\",\n    \"Bedroom doorway | in the same wall as the floral print, just past it (turn right from hall) | visible again when she exits at 7.0-8.0s | entering and exiting views match: floral print on one jamb side, bedroom window+side table on the other\",\n    \"Bedroom | bed against far wall under colorful painting; windows on both side walls; side table with framed photo near door | same at 6.0s | camera pans from bed to door; door opens onto hall showing front door beyond, matching hall layout\",\n    \"Woman in blue dress | standing right of microwave counter at 0.0s facing left | walking down galley kitchen at end | continuous path: kitchen -> hall -> bedroom -> hall; she always emerges on the correct side of doorways per the map\",\n    \"Galley kitchen (final shot) | microwave over white range on left, window right, doorway to bright hall ahead | end of clip | separate location/scene after cut; its doorway shows the same bright front-door hall, but cabinet/appliance arrangement is its own, not claimed to be Kitchen A\"\n  ],\n  \"findings\": []\n}"
+}

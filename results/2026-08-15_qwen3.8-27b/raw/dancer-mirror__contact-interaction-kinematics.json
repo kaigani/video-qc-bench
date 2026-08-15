@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:18:54.487Z",
+  "latencyMs": 95925,
+  "usage": {
+    "prompt_tokens": 9467,
+    "completion_tokens": 2771,
+    "total_tokens": 12238,
+    "cost": 0.01312735,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01312735,
+      "upstream_inference_prompt_cost": 0.00426015,
+      "upstream_inference_completions_cost": 0.0088672
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2679,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (real, back to camera) | start: barefoot, both feet flat on wood floor, arms low at sides | end: standing with right foot on demi-pointe turned out, right arm extended overhead, left arm at side | transitions: right arm elevates smoothly from side (0:01) to overhead (0:02-0:03), returns to chest (0:04-0:05), re-elevates (0:06-0:07); weight shift/turn at 0:08-0:09 with feet repositioning via steps, no planted-foot slide observed",
+    "Mirror reflection (frontal) | start: frontal pose mirroring real dancer, both feet grounded | end: frontal pose matching real dancer's final arm/foot position | transitions: laterally-flipped copy of the real dancer's arm and foot poses in every frame; reflected feet remain on the reflected floor with the same weight shifts; no pose desync, no independent motion",
+    "Wood floor (support surface) | start: clear, dry | end: clear | notable: continuous foot-ground contact for the real dancer throughout; reflections of feet stay planted on the reflected floor; no airborne foot without preceding/pending weight transfer, no object grip or hand-object contact occurs in this clip"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Dancer (real, back to camera) | start: barefoot, both feet flat on wood floor, arms low at sides | end: standing with right foot on demi-pointe turned out, right arm extended overhead, left arm at side | transitions: right arm elevates smoothly from side (0:01) to overhead (0:02-0:03), returns to chest (0:04-0:05), re-elevates (0:06-0:07); weight shift/turn at 0:08-0:09 with feet repositioning via steps, no planted-foot slide observed\",\n    \"Mirror reflection (frontal) | start: frontal pose mirroring real dancer, both feet grounded | end: frontal pose matching real dancer's final arm/foot position | transitions: laterally-flipped copy of the real dancer's arm and foot poses in every frame; reflected feet remain on the reflected floor with the same weight shifts; no pose desync, no independent motion\",\n    \"Wood floor (support surface) | start: clear, dry | end: clear | notable: continuous foot-ground contact for the real dancer throughout; reflections of feet stay planted on the reflected floor; no airborne foot without preceding/pending weight transfer, no object grip or hand-object contact occurs in this clip\"\n  ],\n  \"findings\": []\n}"
+}

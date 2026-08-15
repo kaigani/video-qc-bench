@@ -1,0 +1,48 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:53:18.237Z",
+  "latencyMs": 722044,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 9606,
+    "total_tokens": 19063,
+    "cost": 0.03499485,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03499485,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0307392
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7198,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Counter island + wooden cutting board | foreground center; board right edge runs diagonally from mid-right down to bottom | unchanged | none",
+    "Glass mason jar with side spout | center of board; spout on viewer's right in every frame | center of board; spout still on right | fill level rises across cuts (object state, out of scope)",
+    "Steel mixing bowl (full of olives) | on white counter right of board edge, mid-depth | same position relative to board edge and oven door | contents shift from all-green to mixed (out of scope)",
+    "Lighter shallow bowl | right of and nearer camera than steel bowl | same relative arrangement preserved in all frames | none",
+    "Stainless range (stovetop, knob row, display, oven door) | background, right of jar; oven window left-center of face | same geometry; display/knob arrangement consistent across camera shifts | none",
+    "Wooden cabinetry | right of range; drawer fronts appear at frame left once camera pans | same | none",
+    "Yellow wall | above range, revealed as camera tilts down/zooms from ~2.4s | same | none",
+    "Back counter with dish bowls | top-right background | same | none",
+    "Small glass bottle | absent in early frames (out of view); on counter right of steel bowl from 4.5s | visible 4.5-7.6s, falls out of frame right by 8.7s | placed between shots; position compatible with established layout",
+    "Person in navy shirt | behind counter (far side), left-center | behind counter, left-center | torso occluded by counter top consistently",
+    "Small glass pour bowl | held in both hands above jar mouth | held above jar, then reappears for second pour | consistent occlusion of stovetop behind it"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Counter island + wooden cutting board | foreground center; board right edge runs diagonally from mid-right down to bottom | unchanged | none\",\n    \"Glass mason jar with side spout | center of board; spout on viewer's right in every frame | center of board; spout still on right | fill level rises across cuts (object state, out of scope)\",\n    \"Steel mixing bowl (full of olives) | on white counter right of board edge, mid-depth | same position relative to board edge and oven door | contents shift from all-green to mixed (out of scope)\",\n    \"Lighter shallow bowl | right of and nearer camera than steel bowl | same relative arrangement preserved in all frames | none\",\n    \"Stainless range (stovetop, knob row, display, oven door) | background, right of jar; oven window left-center of face | same geometry; display/knob arrangement consistent across camera shifts | none\",\n    \"Wooden cabinetry | right of range; drawer fronts appear at frame left once camera pans | same | none\",\n    \"Yellow wall | above range, revealed as camera tilts down/zooms from ~2.4s | same | none\",\n    \"Back counter with dish bowls | top-right background | same | none\",\n    \"Small glass bottle | absent in early frames (out of view); on counter right of steel bowl from 4.5s | visible 4.5-7.6s, falls out of frame right by 8.7s | placed between shots; position compatible with established layout\",\n    \"Person in navy shirt | behind counter (far side), left-center | behind counter, left-center | torso occluded by counter top consistently\",\n    \"Small glass pour bowl | held in both hands above jar mouth | held above jar, then reappears for second pour | consistent occlusion of stovetop behind it\"\n  ],\n  \"findings\": []\n}"
+}

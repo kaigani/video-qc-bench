@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:37:42.311Z",
+  "latencyMs": 279787,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 4961,
+    "total_tokens": 14228,
+    "cost": 0.02004535,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02004535,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0158752
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4383,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman | navy button top, light-gray shorts, watch on left wrist, holding blue umbrella and a red apple/tomato | same outfit, holding umbrella with both hands, no fruit | walks toward camera while camera arcs from front to profile to back; fruit in hand until ~00:07, absent from 00:08 on",
+    "Red apple/tomato | held prominently in right hand at chest height | not visible | held continuously 00:00-00:07, disappears by 00:08 with no hand-off or pocketing motion",
+    "Passerby, light-blue shirt with ponytail and black shoulder bag | enters left foreground, back to camera | passes behind main subject, exits right | walks away from camera down the aisle",
+    "Passerby, white polo shirt | enters left foreground at 00:02 | exits right side at 00:05 | crosses in front of camera while walking away",
+    "Passerby, blue polo with glasses | left of frame at 00:07, walking right | right of frame behind main subject at 00:08 | walks past the main subject"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Red apple/tomato held by main woman",
+      "invariant_violated": "object continuity / unexplained disappearance",
+      "description": "The red fruit is clearly visible in her hand from 00:00 through 00:07 (prominently at 00:04-00:07). At 00:08 both hands are clasped on the umbrella shaft and the fruit is gone, and it remains absent in the 00:09 back view, where a fruit in her hand would still be visible. No motion shows her pocketing, dropping, or handing it to anyone, so the object simply vanishes.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Main woman | navy button top, light-gray shorts, watch on left wrist, holding blue umbrella and a red apple/tomato | same outfit, holding umbrella with both hands, no fruit | walks toward camera while camera arcs from front to profile to back; fruit in hand until ~00:07, absent from 00:08 on\",\n    \"Red apple/tomato | held prominently in right hand at chest height | not visible | held continuously 00:00-00:07, disappears by 00:08 with no hand-off or pocketing motion\",\n    \"Passerby, light-blue shirt with ponytail and black shoulder bag | enters left foreground, back to camera | passes behind main subject, exits right | walks away from camera down the aisle\",\n    \"Passerby, white polo shirt | enters left foreground at 00:02 | exits right side at 00:05 | crosses in front of camera while walking away\",\n    \"Passerby, blue polo with glasses | left of frame at 00:07, walking right | right of frame behind main subject at 00:08 | walks past the main subject\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Red apple/tomato held by main woman\",\n      \"invariant_violated\": \"object continuity / unexplained disappearance\",\n      \"description\": \"The red fruit is clearly visible in her hand from 00:00 through 00:07 (prominently at 00:04-00:07). At 00:08 both hands are clasped on the umbrella shaft and the fruit is gone, and it remains absent in the 00:09 back view, where a fruit in her hand would still be visible. No motion shows her pocketing, dropping, or handing it to anyone, so the object simply vanishes.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

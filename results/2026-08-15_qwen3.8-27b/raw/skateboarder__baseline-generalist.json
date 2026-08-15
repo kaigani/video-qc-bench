@@ -1,0 +1,48 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:56:57.970Z",
+  "latencyMs": 155254,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 3405,
+    "total_tokens": 12672,
+    "cost": 0.01506615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01506615,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.010896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3071,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | black t-shirt, black pants, green socks, red shoes, crouched on board at flat spot | rolling out of a flip trick on a ramp, same outfit | multiple jumps/flips, outfit consistent throughout",
+    "skateboard | single deck under skater's feet | single deck under skater's feet | at 00:01 a second deck shape appears in the air alongside the board being ridden"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "skateboard",
+      "invariant_violated": "object duplication",
+      "description": "During the first aerial trick, two skateboards are visible simultaneously: one deck with visible trucks/white wheels angled under the skater's rear foot, and a second dark deck (with a visible yellow logo on its graphic side) floating vertically above/beside his front leg. A single rider can only have one board at a time, so one of these decks is an unexplained duplicate.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"skater | black t-shirt, black pants, green socks, red shoes, crouched on board at flat spot | rolling out of a flip trick on a ramp, same outfit | multiple jumps/flips, outfit consistent throughout\",\n    \"skateboard | single deck under skater's feet | single deck under skater's feet | at 00:01 a second deck shape appears in the air alongside the board being ridden\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"object duplication\",\n      \"description\": \"During the first aerial trick, two skateboards are visible simultaneously: one deck with visible trucks/white wheels angled under the skater's rear foot, and a second dark deck (with a visible yellow logo on its graphic side) floating vertically above/beside his front leg. A single rider can only have one board at a time, so one of these decks is an unexplained duplicate.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

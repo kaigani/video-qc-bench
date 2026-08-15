@@ -1,0 +1,45 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:27:36.828Z",
+  "latencyMs": 134156,
+  "usage": {
+    "prompt_tokens": 12377,
+    "completion_tokens": 3688,
+    "total_tokens": 16065,
+    "cost": 0.01737125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01737125,
+      "upstream_inference_prompt_cost": 0.00556965,
+      "upstream_inference_completions_cost": 0.0118016
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2891,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "server (woman) | standing behind counter, both hands resting on counter top | standing at rear of diner after briefly perching on a bar stool | wipes counter with cloth, pours coffee from glass pot into customer's mug, places food plate and second mug on counter, sits beside customer on the bar stool, then stands and walks to the back",
+    "customer (man) | entering through front door, walking down aisle | walking away from diner toward his truck, seen through window glass | sits on a bar stool, receives coffee and plate, rests hands on counter and mug, places folded bills on counter, exits",
+    "glass coffee pot | held in server's hand, upright at counter | tilted over mug, stream of coffee visible, then lifted back up | gripped by handle, poured steadily into white mug, no gap between spout and mug",
+    "white mug (customer's) | on counter in front of customer | on counter filled with coffee, bills placed beside it | filled by pour from pot; remains seated on counter throughout, used as anchor point when bills are laid down",
+    "food plate (toast and eggs) | off-screen in kitchen | resting on counter in front of man | carried by server with both hands, set down flat on counter, hands released",
+    "cleaning cloth | in server's hand on counter | lying flat on counter after wiping | pressed against counter top and moved across it, continuous contact",
+    "bar stools (row) | unoccupied | occupied: man seated on one, server perched on same stool beside him | man lowers onto stool with weight transfer before sitting; server sits beside him, later stands and the stool remains empty and upright",
+    "dollar bills | folded, in customer's hands | stacked on counter next to mug | left hand steadies one bill, right hand slides additional bills onto the stack, hands release and withdraw"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"server (woman) | standing behind counter, both hands resting on counter top | standing at rear of diner after briefly perching on a bar stool | wipes counter with cloth, pours coffee from glass pot into customer's mug, places food plate and second mug on counter, sits beside customer on the bar stool, then stands and walks to the back\",\n    \"customer (man) | entering through front door, walking down aisle | walking away from diner toward his truck, seen through window glass | sits on a bar stool, receives coffee and plate, rests hands on counter and mug, places folded bills on counter, exits\",\n    \"glass coffee pot | held in server's hand, upright at counter | tilted over mug, stream of coffee visible, then lifted back up | gripped by handle, poured steadily into white mug, no gap between spout and mug\",\n    \"white mug (customer's) | on counter in front of customer | on counter filled with coffee, bills placed beside it | filled by pour from pot; remains seated on counter throughout, used as anchor point when bills are laid down\",\n    \"food plate (toast and eggs) | off-screen in kitchen | resting on counter in front of man | carried by server with both hands, set down flat on counter, hands released\",\n    \"cleaning cloth | in server's hand on counter | lying flat on counter after wiping | pressed against counter top and moved across it, continuous contact\",\n    \"bar stools (row) | unoccupied | occupied: man seated on one, server perched on same stool beside him | man lowers onto stool with weight transfer before sitting; server sits beside him, later stands and the stool remains empty and upright\",\n    \"dollar bills | folded, in customer's hands | stacked on counter next to mug | left hand steadies one bill, right hand slides additional bills onto the stack, hands release and withdraw\"\n  ],\n  \"findings\": []\n}"
+}

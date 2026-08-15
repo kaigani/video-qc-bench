@@ -1,0 +1,44 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:10:00.718Z",
+  "latencyMs": 89557,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 2015,
+    "total_tokens": 11472,
+    "cost": 0.01070365,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01070365,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.006448
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1659,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background wall | plain cream/white, fills entire frame behind subject | unchanged in all frames | none; no openings, furniture, or fixed objects present to track connectivity",
+    "Subject torso (striped shirt) | centered, vertical white pinstripes, center button placket | centered, same stripes and placket | none; slight camera reframe only, layout stable",
+    "Necklace + pendant | thin chain, single round pendant at center of chest | same chain and pendant position at center chest | none; pendant apparent appearance shifts with angle/lighting only (out of scope)",
+    "Watch (her left wrist, right side of frame) | round face, dark strap, on right-of-frame wrist in every frame | same wrist, same side, same orientation | none; never flips to opposite wrist or side",
+    "Her right hand (left of frame) + tweezers | holds metal tweezers pointing right toward object | returns to holding tweezers by 08.7s | tweezers temporarily lowered out of frame ~04.5-07.6s (object-state, out of scope); hand position consistent with torso",
+    "Her left hand (right of frame) + small round object | cupped, holding round bezel/object, ring on ring finger | still cupped holding object, same ring | none; remains on correct side throughout",
+    "Table edge (bottom of frame) | dark horizontal surface line occasionally visible at very bottom | same low horizontal position when visible | none; never rises to occlude mid-frame elements"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Background wall | plain cream/white, fills entire frame behind subject | unchanged in all frames | none; no openings, furniture, or fixed objects present to track connectivity\",\n    \"Subject torso (striped shirt) | centered, vertical white pinstripes, center button placket | centered, same stripes and placket | none; slight camera reframe only, layout stable\",\n    \"Necklace + pendant | thin chain, single round pendant at center of chest | same chain and pendant position at center chest | none; pendant apparent appearance shifts with angle/lighting only (out of scope)\",\n    \"Watch (her left wrist, right side of frame) | round face, dark strap, on right-of-frame wrist in every frame | same wrist, same side, same orientation | none; never flips to opposite wrist or side\",\n    \"Her right hand (left of frame) + tweezers | holds metal tweezers pointing right toward object | returns to holding tweezers by 08.7s | tweezers temporarily lowered out of frame ~04.5-07.6s (object-state, out of scope); hand position consistent with torso\",\n    \"Her left hand (right of frame) + small round object | cupped, holding round bezel/object, ring on ring finger | still cupped holding object, same ring | none; remains on correct side throughout\",\n    \"Table edge (bottom of frame) | dark horizontal surface line occasionally visible at very bottom | same low horizontal position when visible | none; never rises to occlude mid-frame elements\"\n  ],\n  \"findings\": []\n}"
+}

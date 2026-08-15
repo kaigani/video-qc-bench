@@ -1,0 +1,43 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:35:43.535Z",
+  "latencyMs": 256921,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 7027,
+    "total_tokens": 16478,
+    "cost": 0.02673935,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02673935,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0224864
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6423,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (green/white striped shirt) | standing in hallway, facing frame-right, speaking with mouth open | in profile at paneled door, hands flat on door panel | continuous speech 0-6s; initiates ~180° turn 6-8s (motion blur shows the turn in progress); cut at 8-9s places him at the door; hand reaches door 9-10s",
+    "man's mouth | open 'o' shape at 0s | closed/smirk at 6s, head lowered at 10s | repeated open-close cycles with varying shapes (0,3,4,5s open; 1,2,6s closed), consistent with ongoing speech; no frozen frames or repeated identical beats",
+    "man's hands | at rest, out of view in first shot | both palms flat on lower door panel at 10s | raised with motion blur at 9s (cause: reaching) → contact with door at 10s (effect); order and delay plausible",
+    "head-shaped shadow on paneled door | not present before 9s (different shot) | present at 9-10s | appears coincident with man arriving at door; shadow/lighting behavior is out of scope for this observer",
+    "paneled wooden door and entry door with coat | closed, static | closed, static | no uncaused motion",
+    "hanging navy coat on hook | stationary | stationary | no motion, no cause needed"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"man (green/white striped shirt) | standing in hallway, facing frame-right, speaking with mouth open | in profile at paneled door, hands flat on door panel | continuous speech 0-6s; initiates ~180° turn 6-8s (motion blur shows the turn in progress); cut at 8-9s places him at the door; hand reaches door 9-10s\",\n    \"man's mouth | open 'o' shape at 0s | closed/smirk at 6s, head lowered at 10s | repeated open-close cycles with varying shapes (0,3,4,5s open; 1,2,6s closed), consistent with ongoing speech; no frozen frames or repeated identical beats\",\n    \"man's hands | at rest, out of view in first shot | both palms flat on lower door panel at 10s | raised with motion blur at 9s (cause: reaching) → contact with door at 10s (effect); order and delay plausible\",\n    \"head-shaped shadow on paneled door | not present before 9s (different shot) | present at 9-10s | appears coincident with man arriving at door; shadow/lighting behavior is out of scope for this observer\",\n    \"paneled wooden door and entry door with coat | closed, static | closed, static | no uncaused motion\",\n    \"hanging navy coat on hook | stationary | stationary | no motion, no cause needed\"\n  ],\n  \"findings\": []\n}"
+}

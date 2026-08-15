@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:15:46.138Z",
+  "latencyMs": 107128,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 3522,
+    "total_tokens": 12973,
+    "cost": 0.01552335,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01552335,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0112704
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2690,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's right hand | raised above bowl, motion-blurred at 00:00 | buried in bowl, vigorously sweeping by 00:09 | reaches in, pinches a red ball with both hands, releases it, then stirs the pile",
+    "child's left hand | hovering near bowl rim at 00:00 | gripping the bowl rim from 00:03 onward | assists in holding the red ball (00:01-00:02), then steadies the bowl while the right hand stirs",
+    "red ball (hand-held) | not separately visible at 00:00 | dropped into the pile by 00:03 | grasped and held between both hands at 00:01-00:02, then released into the bowl as the right hand drops in",
+    "balls in bowl | resting in a loose pile at 00:00 | repositioned, scattered, and mid-bounce by 00:09 | displaced only during frames where the right hand is in contact or sweeping through them (00:05-00:09); hand blur and ball motion co-occur in the same frames, order consistent",
+    "small metal dish with wrapped candy | sitting on right of table at 00:00 | unchanged at 00:09 | no contact, no motion — no unexplained effect",
+    "loose red/green balls at right table edge | at rest at 00:00 | at rest at 00:09 | no motion, consistent with no cause",
+    "ambient daylight | even overcast light at 00:00 | even overcast light at 00:09 | no uncaused lighting changes"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"child's right hand | raised above bowl, motion-blurred at 00:00 | buried in bowl, vigorously sweeping by 00:09 | reaches in, pinches a red ball with both hands, releases it, then stirs the pile\",\n    \"child's left hand | hovering near bowl rim at 00:00 | gripping the bowl rim from 00:03 onward | assists in holding the red ball (00:01-00:02), then steadies the bowl while the right hand stirs\",\n    \"red ball (hand-held) | not separately visible at 00:00 | dropped into the pile by 00:03 | grasped and held between both hands at 00:01-00:02, then released into the bowl as the right hand drops in\",\n    \"balls in bowl | resting in a loose pile at 00:00 | repositioned, scattered, and mid-bounce by 00:09 | displaced only during frames where the right hand is in contact or sweeping through them (00:05-00:09); hand blur and ball motion co-occur in the same frames, order consistent\",\n    \"small metal dish with wrapped candy | sitting on right of table at 00:00 | unchanged at 00:09 | no contact, no motion — no unexplained effect\",\n    \"loose red/green balls at right table edge | at rest at 00:00 | at rest at 00:09 | no motion, consistent with no cause\",\n    \"ambient daylight | even overcast light at 00:00 | even overcast light at 00:09 | no uncaused lighting changes\"\n  ],\n  \"findings\": []\n}"
+}

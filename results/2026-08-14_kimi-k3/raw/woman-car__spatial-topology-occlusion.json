@@ -1,0 +1,47 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T15:11:57.872Z",
+  "latencyMs": 431949,
+  "usage": {
+    "prompt_tokens": 19132,
+    "completion_tokens": 13461,
+    "total_tokens": 32593,
+    "cost": 0.259311,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.259311,
+      "upstream_inference_prompt_cost": 0.057396,
+      "upstream_inference_completions_cost": 0.201915
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12859,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (cream, wood-paneled, roof rack) | nose toward frame-left, driver's side facing camera, on/right of desert road | identical configuration and orientation; framing tightens on driver's window | camera executes one continuous slow orbit + push-in from front-left 3/4 to near-profile; car geometry (grille, hood, cowl, doors, wheel arch under driver's window, B-pillar behind woman) stays self-consistent throughout",
+    "woman at driver's window | leaning out of front-left window, arms crossed on sill, body over front wheel arch | same window, same posture, hair streaming rearward (toward back of car) | apparent rotation from near-frontal to profile matches camera orbit, not her turning; no wrong-side emergence",
+    "driver's side mirror | chrome stalk mirror on front door, rear half of front door (behind her leaning position) | exits frame-right as camera pushes in | position on front door stays consistent with fore/aft layout; occlusion by frame edge is smooth",
+    "antenna | thin mast mounted at cowl base on driver's side of windshield | projects progressively onto windshield glass in frame as camera moves to profile | near-side object correctly renders in front of glass and background at all times",
+    "rearview mirror (interior) | hangs from top of windshield, roughly center | remains at top of windshield until it exits top of frame | rendering of its shape shifts early (cross-like blob resolving to mirror) but position is stable; shape/identity aspect is out of scope",
+    "desert road | paved two-lane running parallel on car's left (driver) side, yellow dashed centerline, white edge line | remains alongside the car's left in every frame; never swaps sides | centerline dashes enter view as the orbit reveals more of the road surface — geometrically compatible",
+    "utility poles | line the far side of the road, receding to the left vanishing point | parade from far distance (frame-left) past the car toward frame-right | monotonic progression consistent with forward translation along the road; always occluded correctly by car body",
+    "mountain range / desert scrub | horizon backdrop beyond road and on far side | shifts slowly with parallax, stays behind all foreground | no background-over-foreground errors",
+    "hood ornament / front license plate | on nose of car at frame-left | exit frame-left as camera orbits and pushes in | smooth, explained disappearance",
+    "occlusion pairs (woman vs B-pillar/rear window; antenna vs windshield; car vs poles/mountains) | nearer surfaces correctly occlude farther ones at start | same ordering holds at end | hair blowing across rear side window is correct since she is outside the car's side plane; no depth-order inversions observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (cream, wood-paneled, roof rack) | nose toward frame-left, driver's side facing camera, on/right of desert road | identical configuration and orientation; framing tightens on driver's window | camera executes one continuous slow orbit + push-in from front-left 3/4 to near-profile; car geometry (grille, hood, cowl, doors, wheel arch under driver's window, B-pillar behind woman) stays self-consistent throughout\",\n    \"woman at driver's window | leaning out of front-left window, arms crossed on sill, body over front wheel arch | same window, same posture, hair streaming rearward (toward back of car) | apparent rotation from near-frontal to profile matches camera orbit, not her turning; no wrong-side emergence\",\n    \"driver's side mirror | chrome stalk mirror on front door, rear half of front door (behind her leaning position) | exits frame-right as camera pushes in | position on front door stays consistent with fore/aft layout; occlusion by frame edge is smooth\",\n    \"antenna | thin mast mounted at cowl base on driver's side of windshield | projects progressively onto windshield glass in frame as camera moves to profile | near-side object correctly renders in front of glass and background at all times\",\n    \"rearview mirror (interior) | hangs from top of windshield, roughly center | remains at top of windshield until it exits top of frame | rendering of its shape shifts early (cross-like blob resolving to mirror) but position is stable; shape/identity aspect is out of scope\",\n    \"desert road | paved two-lane running parallel on car's left (driver) side, yellow dashed centerline, white edge line | remains alongside the car's left in every frame; never swaps sides | centerline dashes enter view as the orbit reveals more of the road surface — geometrically compatible\",\n    \"utility poles | line the far side of the road, receding to the left vanishing point | parade from far distance (frame-left) past the car toward frame-right | monotonic progression consistent with forward translation along the road; always occluded correctly by car body\",\n    \"mountain range / desert scrub | horizon backdrop beyond road and on far side | shifts slowly with parallax, stays behind all foreground | no background-over-foreground errors\",\n    \"hood ornament / front license plate | on nose of car at frame-left | exit frame-left as camera orbits and pushes in | smooth, explained disappearance\",\n    \"occlusion pairs (woman vs B-pillar/rear window; antenna vs windshield; car vs poles/mountains) | nearer surfaces correctly occlude farther ones at start | same ordering holds at end | hair blowing across rear side window is correct since she is outside the car's side plane; no depth-order inversions observed\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:13:35.527Z",
+  "latencyMs": 214800,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 2975,
+    "total_tokens": 12426,
+    "cost": 0.01377295,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01377295,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.00952
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2625,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tweezers (steel, held in right hand) | held extended, tips aimed at the object in the left hand | out of view (right hand lowered, later open) | tips advanced toward and contacted the dome at 0-3s, then exited the frame when the right hand dropped at ~4s — removal is preceded by a visible lowering motion",
+    "Small metal dome/ring (held in left hand) | gripped by left thumb and fingers, textured edge and smooth top visible | still anchored in left hand, now also touched by right fingers | tweezers tip touched its top edge 1-3s; both hands' fingers manipulated it 5-9s — every positional change is preceded by a hand moving onto it",
+    "Right hand (with ring) | raised, gripping the tweezers | lowered, then open with finger pointing at the object | initiated a downward lowering motion (motion blur) at ~4s to release the tweezers; returned to the object at 5s; briefly re-gripped a thin element ~8s; relaxed to an open hand by 9s — each state change has a matching preceding action",
+    "Left hand (with wristwatch) | holding the dome steady near center-frame | holding the dome steady, slightly repositioned | acted as the stable anchor throughout, with only small in-place adjustments that follow the right hand's movements",
+    "Head/face | level, gaze down toward the hands | tilted a little further down, gaze fixed on the object | small downward tilt coincides with closer inspection of the object; no frozen or repeated beat observed"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Tweezers (steel, held in right hand) | held extended, tips aimed at the object in the left hand | out of view (right hand lowered, later open) | tips advanced toward and contacted the dome at 0-3s, then exited the frame when the right hand dropped at ~4s — removal is preceded by a visible lowering motion\",\n    \"Small metal dome/ring (held in left hand) | gripped by left thumb and fingers, textured edge and smooth top visible | still anchored in left hand, now also touched by right fingers | tweezers tip touched its top edge 1-3s; both hands' fingers manipulated it 5-9s — every positional change is preceded by a hand moving onto it\",\n    \"Right hand (with ring) | raised, gripping the tweezers | lowered, then open with finger pointing at the object | initiated a downward lowering motion (motion blur) at ~4s to release the tweezers; returned to the object at 5s; briefly re-gripped a thin element ~8s; relaxed to an open hand by 9s — each state change has a matching preceding action\",\n    \"Left hand (with wristwatch) | holding the dome steady near center-frame | holding the dome steady, slightly repositioned | acted as the stable anchor throughout, with only small in-place adjustments that follow the right hand's movements\",\n    \"Head/face | level, gaze down toward the hands | tilted a little further down, gaze fixed on the object | small downward tilt coincides with closer inspection of the object; no frozen or repeated beat observed\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,70 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:51:34.483Z",
+  "latencyMs": 425428,
+  "usage": {
+    "prompt_tokens": 9466,
+    "completion_tokens": 5991,
+    "total_tokens": 15457,
+    "cost": 0.0234309,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0234309,
+      "upstream_inference_prompt_cost": 0.0042597,
+      "upstream_inference_completions_cost": 0.0191712
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4641,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "leftmost block | green cube, front face '2' (right face '6'), on table left of a second green '2', hand pinning its top at 00:00 | blue cube, front face '2' (right face '6'), leftmost of final 8-block row | color changed green→blue between 00:00 and 00:01 with no visible swap or replacement action",
+    "second block | absent at start | blue cube showing '3', second from left | placed by hand at ~00:01; persists unchanged",
+    "third block (initial right-hand block) | green cube showing '2' (right face '6'), on table right of leftmost block | green cube showing '2', third in row | no change; persists",
+    "fourth block | absent at start | orange cube showing '2', fourth in row | appears as a green '3' block being placed by hand at 00:03, then is orange '2' by 00:04 with no visible action changing it",
+    "fifth block | absent at start | pale blue cube showing '3', fifth in row | placed by hand at ~00:05; no further change",
+    "sixth block | absent at start | green cube showing '5', sixth in row | appears as a blue '3' block being placed by hand at 00:05, then is green '5' by 00:06 with no visible action changing it",
+    "seventh block | absent at start | green cube showing '2', seventh in row | placed by hand at ~00:06; persists unchanged",
+    "eighth block | absent at start | blue cube showing '6', eighth in row | placed by hand at ~00:07; persists unchanged"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost cube (front face '2')",
+      "invariant_violated": "identity/persistence (object transformed)",
+      "description": "The leftmost cube is green in the first frame while the hand rests on it, but in the next frame the same cube in the same position is blue with the same '2'/'6' faces. The hand was occupied placing the new blue '3' block, so no swap or recoloring action is visible; the block's color/identity changed unexplained.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "fourth cube in the row",
+      "invariant_violated": "identity/persistence (object transformed, count of distinct objects)",
+      "description": "At 00:03 the hand is placing a green cube showing '3' into the fourth position. By 00:04 that position holds an orange cube showing '2' while the hand is placing a new blue '3' block at position five. No visible action removed the green '3' or introduced the orange '2'; it changed color and digit in place.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "sixth cube in the row",
+      "invariant_violated": "identity/persistence (object transformed, count of distinct objects)",
+      "description": "At 00:05 the hand is placing a blue cube showing '3' into the sixth position. By 00:06 that position holds a green cube showing '5' while the hand places a new green '2' at position seven. No visible action accounts for the blue '3' becoming a green '5'.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"leftmost block | green cube, front face '2' (right face '6'), on table left of a second green '2', hand pinning its top at 00:00 | blue cube, front face '2' (right face '6'), leftmost of final 8-block row | color changed green→blue between 00:00 and 00:01 with no visible swap or replacement action\",\n    \"second block | absent at start | blue cube showing '3', second from left | placed by hand at ~00:01; persists unchanged\",\n    \"third block (initial right-hand block) | green cube showing '2' (right face '6'), on table right of leftmost block | green cube showing '2', third in row | no change; persists\",\n    \"fourth block | absent at start | orange cube showing '2', fourth in row | appears as a green '3' block being placed by hand at 00:03, then is orange '2' by 00:04 with no visible action changing it\",\n    \"fifth block | absent at start | pale blue cube showing '3', fifth in row | placed by hand at ~00:05; no further change\",\n    \"sixth block | absent at start | green cube showing '5', sixth in row | appears as a blue '3' block being placed by hand at 00:05, then is green '5' by 00:06 with no visible action changing it\",\n    \"seventh block | absent at start | green cube showing '2', seventh in row | placed by hand at ~00:06; persists unchanged\",\n    \"eighth block | absent at start | blue cube showing '6', eighth in row | placed by hand at ~00:07; persists unchanged\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"leftmost cube (front face '2')\",\n      \"invariant_violated\": \"identity/persistence (object transformed)\",\n      \"description\": \"The leftmost cube is green in the first frame while the hand rests on it, but in the next frame the same cube in the same position is blue with the same '2'/'6' faces. The hand was occupied placing the new blue '3' block, so no swap or recoloring action is visible; the block's color/identity changed unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"fourth cube in the row\",\n      \"invariant_violated\": \"identity/persistence (object transformed, count of distinct objects)\",\n      \"description\": \"At 00:03 the hand is placing a green cube showing '3' into the fourth position. By 00:04 that position holds an orange cube showing '2' while the hand is placing a new blue '3' block at position five. No visible action removed the green '3' or introduced the orange '2'; it changed color and digit in place.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"sixth cube in the row\",\n      \"invariant_violated\": \"identity/persistence (object transformed, count of distinct objects)\",\n      \"description\": \"At 00:05 the hand is placing a blue cube showing '3' into the sixth position. By 00:06 that position holds a green cube showing '5' while the hand places a new green '2' at position seven. No visible action accounts for the blue '3' becoming a green '5'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

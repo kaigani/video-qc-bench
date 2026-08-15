@@ -23,9 +23,10 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 |---|---|---|---|---|---|
 | Qwen 3.8 Max (reasoning) | **41** | 52/138 | 15/46 | 11 | $4.42 |
 | Seed 2.1 Turbo | **39** | 40/138 | 11/46 | 1 | $1.96 |
-| Kimi K3 (reasoning) | **39** | 54/138 | 20/46 | 15 | $10.16 |
+| Kimi K3 (reasoning) | **39** | 54/138 | 20/46 | 15 | $10.83 |
 | Gemini 3.6 Flash | **31** | 34/138 | 9/46 | 3 | $0.53 |
 | Muse Spark 1.2 (reasoning) | **30** | 42/138 | 12/46 | 12 | $1.11 |
+| Qwen 3.8 27B (reasoning) | **29** | 32/138 | 10/46 | 3 | $1.58 |
 | Gemma 4 31B (reasoning) | **27** | 33/138 | 11/46 | 6 | $0.11 |
 | Gemini 3.7 Flash | **22** | 25/138 | 7/46 | 3 | $0.15 |
 | Gemini Pro Latest (reasoning) | **21** | 69/138 | 23/46 | 48 | $2.15 |
@@ -88,4 +89,6 @@ Runs are resumable: completed video×role calls are skipped on re-invocation.
 - Provider quirks encountered and worked around: Alibaba's content filter rejected a prompt
   containing the word "penetration" (reworded to "clip through"); Alibaba caps request bodies
   at 10MB (the 2-minute clip was recompressed to fit); OpenRouter occasionally returned
-  HTTP 200 with empty content when a provider dropped the video (detected + retried).
+  HTTP 200 with empty content when a provider dropped the video (detected + retried); and
+  gateway idle timeouts killed long non-streamed generations - fixed by switching the client to
+  SSE streaming (stream: true), which recovered every previously-failed call.

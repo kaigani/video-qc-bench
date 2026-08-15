@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:03:06.020Z",
+  "latencyMs": 141709,
+  "usage": {
+    "prompt_tokens": 9467,
+    "completion_tokens": 2138,
+    "total_tokens": 11605,
+    "cost": 0.01110175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01110175,
+      "upstream_inference_prompt_cost": 0.00426015,
+      "upstream_inference_completions_cost": 0.0068416
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1774,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | crouched, both feet planted on deck, hands free | rolling in ramp, both feet on deck, hands free | feet leave deck only during airborne trick phases (00:02-00:03 and 00:08), re-establish full contact on each landing; no hand-to-board grip attempted",
+    "left foot (red shoe) | flat on rear deck | on deck over ramp coping | continuous deck contact when grounded; lifts and returns cleanly during ollie windows; no sliding or clipping",
+    "right foot (red shoe) | flat on front deck | on deck over ramp coping | drives the pop at 00:01 (deck nose rotates up while foot stays on deck); re-contacts on landing; anatomically plausible ankle/knee bend throughout",
+    "skateboard | horizontal, all four wheels on flat concrete | horizontal, all wheels on ramp surface | repeated pop-air-land cycles; deck never intersects skater's legs or shoes; wheels remain below deck in all airborne frames; no pass-through",
+    "concrete ground / ramp | supporting board at 00:00 | supporting board at 00:09 | contact breaks only while board is airborne, weight carried by skater's body in flight; support restored before any further motion change"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"skater | crouched, both feet planted on deck, hands free | rolling in ramp, both feet on deck, hands free | feet leave deck only during airborne trick phases (00:02-00:03 and 00:08), re-establish full contact on each landing; no hand-to-board grip attempted\",\n    \"left foot (red shoe) | flat on rear deck | on deck over ramp coping | continuous deck contact when grounded; lifts and returns cleanly during ollie windows; no sliding or clipping\",\n    \"right foot (red shoe) | flat on front deck | on deck over ramp coping | drives the pop at 00:01 (deck nose rotates up while foot stays on deck); re-contacts on landing; anatomically plausible ankle/knee bend throughout\",\n    \"skateboard | horizontal, all four wheels on flat concrete | horizontal, all wheels on ramp surface | repeated pop-air-land cycles; deck never intersects skater's legs or shoes; wheels remain below deck in all airborne frames; no pass-through\",\n    \"concrete ground / ramp | supporting board at 00:00 | supporting board at 00:09 | contact breaks only while board is airborne, weight carried by skater's body in flight; support restored before any further motion change\"\n  ],\n  \"findings\": []\n}"
+}

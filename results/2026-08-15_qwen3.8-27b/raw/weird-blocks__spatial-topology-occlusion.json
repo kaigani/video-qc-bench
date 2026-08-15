@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:28:00.475Z",
+  "latencyMs": 284793,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 5522,
+    "total_tokens": 14979,
+    "cost": 0.02192605,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02192605,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0176704
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4665,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table | fixed light-wood surface filling lower ~85% of frame, front edge a straight horizontal line | unchanged in all shots | none — camera is static, no parallax or edge drift",
+    "background couch | dark grey sofa behind table along top of frame | unchanged in all shots | none",
+    "cube row | begins as 2 green '2' cubes at left (x≈135, x≈380) | ends as 8-cube row (blue2, blue3, green2, orange2, lightblue3, green5, green2, blue6) spanning x≈170–1160 | row extends only by appending at the right end; left end stays within a few px; all cubes coplanar on the table in a single straight line; right-hand side faces show side numbers consistently on the rightmost cube each frame",
+    "hand | enters from top-right, fingers pointing down, initially over left cube | travels right placing cubes one per step, then returns to left end to nudge first two cubes | hand always occludes cubes/table from above (nearer to camera); no cube renders over a fingertip when the finger is in front; no wrong-side emergence"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"table | fixed light-wood surface filling lower ~85% of frame, front edge a straight horizontal line | unchanged in all shots | none — camera is static, no parallax or edge drift\",\n    \"background couch | dark grey sofa behind table along top of frame | unchanged in all shots | none\",\n    \"cube row | begins as 2 green '2' cubes at left (x≈135, x≈380) | ends as 8-cube row (blue2, blue3, green2, orange2, lightblue3, green5, green2, blue6) spanning x≈170–1160 | row extends only by appending at the right end; left end stays within a few px; all cubes coplanar on the table in a single straight line; right-hand side faces show side numbers consistently on the rightmost cube each frame\",\n    \"hand | enters from top-right, fingers pointing down, initially over left cube | travels right placing cubes one per step, then returns to left end to nudge first two cubes | hand always occludes cubes/table from above (nearer to camera); no cube renders over a fingertip when the finger is in front; no wrong-side emergence\"\n  ],\n  \"findings\": []\n}"
+}

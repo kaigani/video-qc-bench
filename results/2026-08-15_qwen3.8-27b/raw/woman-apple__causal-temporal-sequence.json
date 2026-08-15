@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:41:15.040Z",
+  "latencyMs": 212709,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 4103,
+    "total_tokens": 13554,
+    "cost": 0.01738255,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01738255,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0131296
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4051,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "main woman | walking toward camera, facing front, blue umbrella in left hand, red tomato in right hand, smiling | turned through profile to back-facing, both hands clasped on umbrella shaft, tomato occluded by body, still smiling | continuous forward walk followed by a smooth 180-degree turn; no frozen or repeated beats",
+    "blue umbrella | open, overhead, gripped in left hand | open, overhead, gripped with both hands after the turn | state unchanged throughout; no opening/closing or floating without a hand action",
+    "red tomato | held at chest in right hand | hidden behind clasped hands/torso after the turn | held continuously, same hand, no drop or transfer before becoming occluded",
+    "background man (green shirt) | mid-stride behind the woman, walking toward camera | closes distance, passes behind her, exits frame | gait advances monotonically; no teleport or pause",
+    "background woman (red shirt, right) | walking toward camera on right side | steadily approaches and exits frame right | approach rate consistent with forward camera dolly; no lag or jump",
+    "left-foreground passers-by (light-blue, white, blue, striped shirts) | enter from off-screen left with backs to camera | pass the camera and exit frame | each appears only after being off-frame and exits on the same side; no pop-in without prior off-screen presence"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"main woman | walking toward camera, facing front, blue umbrella in left hand, red tomato in right hand, smiling | turned through profile to back-facing, both hands clasped on umbrella shaft, tomato occluded by body, still smiling | continuous forward walk followed by a smooth 180-degree turn; no frozen or repeated beats\",\n    \"blue umbrella | open, overhead, gripped in left hand | open, overhead, gripped with both hands after the turn | state unchanged throughout; no opening/closing or floating without a hand action\",\n    \"red tomato | held at chest in right hand | hidden behind clasped hands/torso after the turn | held continuously, same hand, no drop or transfer before becoming occluded\",\n    \"background man (green shirt) | mid-stride behind the woman, walking toward camera | closes distance, passes behind her, exits frame | gait advances monotonically; no teleport or pause\",\n    \"background woman (red shirt, right) | walking toward camera on right side | steadily approaches and exits frame right | approach rate consistent with forward camera dolly; no lag or jump\",\n    \"left-foreground passers-by (light-blue, white, blue, striped shirts) | enter from off-screen left with backs to camera | pass the camera and exit frame | each appears only after being off-frame and exits on the same side; no pop-in without prior off-screen presence\"\n  ],\n  \"findings\": []\n}"
+}

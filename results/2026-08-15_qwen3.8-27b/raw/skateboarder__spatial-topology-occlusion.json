@@ -1,0 +1,43 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:08:03.808Z",
+  "latencyMs": 297770,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 4331,
+    "total_tokens": 13788,
+    "cost": 0.01811485,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01811485,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0138592
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3646,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater + skateboard | crouched on flat deck, board flat, circular table to his right | rolling through bowl/flat transition at end | kickflip-style aerial over the table zone (00:01-00:03), second aerial over the bowl (00:08), consistent with camera orbiting a single continuous run",
+    "Circular concrete table | on flat deck to skater's right at 00:00, shadow falling right | out of frame by 00:04 | stationary; reappears directly below the airborne skater at 00:01, consistent with the ollie being performed beside it",
+    "Bowl with checkered floor and metal coping | left of skater at 00:00, checkered floor visible at left in 00:04 | skater rolling in it at 00:09 | entered between 00:07 and 00:09; coping and tiled floor match across angles",
+    "Raised deck/ledge with dark slot opening | low concrete ledge at right in 00:00 | right of skater in 00:04 and 00:07 | same feature seen from progressively different camera positions, no change in form",
+    "Multi-head perimeter light poles | distributed around park edges, several on left and right at start | same poles visible in mid and late frames | arrangement stable; e.g., the cluster on the left of 00:00 reappears as the row of poles on the left in 00:06-00:08 after camera orbited",
+    "Small pedestal box on low platform | far-left background at 00:04 | mid-left background behind skater at 00:05 | consistent with camera moving around the skater, no relocation"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Skater + skateboard | crouched on flat deck, board flat, circular table to his right | rolling through bowl/flat transition at end | kickflip-style aerial over the table zone (00:01-00:03), second aerial over the bowl (00:08), consistent with camera orbiting a single continuous run\",\n    \"Circular concrete table | on flat deck to skater's right at 00:00, shadow falling right | out of frame by 00:04 | stationary; reappears directly below the airborne skater at 00:01, consistent with the ollie being performed beside it\",\n    \"Bowl with checkered floor and metal coping | left of skater at 00:00, checkered floor visible at left in 00:04 | skater rolling in it at 00:09 | entered between 00:07 and 00:09; coping and tiled floor match across angles\",\n    \"Raised deck/ledge with dark slot opening | low concrete ledge at right in 00:00 | right of skater in 00:04 and 00:07 | same feature seen from progressively different camera positions, no change in form\",\n    \"Multi-head perimeter light poles | distributed around park edges, several on left and right at start | same poles visible in mid and late frames | arrangement stable; e.g., the cluster on the left of 00:00 reappears as the row of poles on the left in 00:06-00:08 after camera orbited\",\n    \"Small pedestal box on low platform | far-left background at 00:04 | mid-left background behind skater at 00:05 | consistent with camera moving around the skater, no relocation\"\n  ],\n  \"findings\": []\n}"
+}

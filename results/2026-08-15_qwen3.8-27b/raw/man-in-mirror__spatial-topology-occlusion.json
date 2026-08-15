@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:20:09.955Z",
+  "latencyMs": 152937,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 3381,
+    "total_tokens": 12838,
+    "cost": 0.01507485,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01507485,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0108192
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3400,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "gold-framed mirror | occupies right ~2/3 of frame, static single-shot camera | same | no movement; left edge occluded by subject's head in all frames",
+    "reflected open wooden door + brass knob (in mirror, left of reflected subject) | constant position/angle | same | never changes state or position across the clip",
+    "reflected wall light switch (center-left of mirror) | fixed | fixed | consistent placement relative to door and shelf in every frame",
+    "reflected wooden shelving unit with bottles (right side of mirror) | fixed | fixed | matches the same wall layout behind the subject throughout",
+    "foreground subject (back view, white shirt, left shoulder/ear toward camera, right hand raised) | left foreground, occluding mirror's left frame edge | same pose area, hand moves through skincare routine | occlusion of mirror frame edge remains smooth and consistent",
+    "reflected subject (front view in mirror) | center of mirror, right-hand (world-east) raised | same | raised arm appears on viewer's right of reflection, matching mirror geometry of the subject's actual right hand; head/hand motion tracks the foreground subject"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"gold-framed mirror | occupies right ~2/3 of frame, static single-shot camera | same | no movement; left edge occluded by subject's head in all frames\",\n    \"reflected open wooden door + brass knob (in mirror, left of reflected subject) | constant position/angle | same | never changes state or position across the clip\",\n    \"reflected wall light switch (center-left of mirror) | fixed | fixed | consistent placement relative to door and shelf in every frame\",\n    \"reflected wooden shelving unit with bottles (right side of mirror) | fixed | fixed | matches the same wall layout behind the subject throughout\",\n    \"foreground subject (back view, white shirt, left shoulder/ear toward camera, right hand raised) | left foreground, occluding mirror's left frame edge | same pose area, hand moves through skincare routine | occlusion of mirror frame edge remains smooth and consistent\",\n    \"reflected subject (front view in mirror) | center of mirror, right-hand (world-east) raised | same | raised arm appears on viewer's right of reflection, matching mirror geometry of the subject's actual right hand; head/hand motion tracks the foreground subject\"\n  ],\n  \"findings\": []\n}"
+}

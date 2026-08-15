@@ -1,0 +1,45 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:30:46.659Z",
+  "latencyMs": 866487,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 8858,
+    "total_tokens": 18315,
+    "cost": 0.03260125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03260125,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0283456
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7993,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Door C (coat door) | shot 1: left of center, brass hook with navy jacket, brass rosette above hook | shot 2: right of frame, same hook/coat/rosette | man passes in front of it during 0:08 cut; position consistent (west of touched door, east of window door in both angles)",
+    "Window door A | shot 1: behind man, rectangular glass window showing white-matted framed picture in adjoining room | shot 2: visible at frame right behind man, same window/picture at oblique angle | static; ordering coat-door-then-window-door preserved in both shots",
+    "Door 1 (touched door) | shot 1: off-frame far left (paneled wood edge at frame left) | shot 2: left of frame, brass knob on left stile, man's hand on lower panel | man turns right (frame-left in shot 1) and ends in front of it; correct-side emergence",
+    "Navy work coat with white sleeve stripe | hanging on Door C hook, left of man | hanging on Door C hook, right of man | consistent with man moving two doors to his right; garment/stripe matches",
+    "Olive wall section with small wooden key box | shot 1: right of window door | shot 2: off-frame right | static, no conflict",
+    "Wood panel with 'V' framed print | shot 1: far right | shot 2: off-frame right | static, no conflict",
+    "Olive wall with brass intercom + light switch | shot 1: off-frame left | shot 2: far left, adjacent to Door 1 | consistent with Door 1 being further along the same wall line",
+    "Man in striped shirt | centered, facing camera | right profile, facing frame-left (east), hand on Door 1 | head turn at 0:07 to his right matches final orientation; left profile shown from north-side camera, geometrically compatible"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Door C (coat door) | shot 1: left of center, brass hook with navy jacket, brass rosette above hook | shot 2: right of frame, same hook/coat/rosette | man passes in front of it during 0:08 cut; position consistent (west of touched door, east of window door in both angles)\",\n    \"Window door A | shot 1: behind man, rectangular glass window showing white-matted framed picture in adjoining room | shot 2: visible at frame right behind man, same window/picture at oblique angle | static; ordering coat-door-then-window-door preserved in both shots\",\n    \"Door 1 (touched door) | shot 1: off-frame far left (paneled wood edge at frame left) | shot 2: left of frame, brass knob on left stile, man's hand on lower panel | man turns right (frame-left in shot 1) and ends in front of it; correct-side emergence\",\n    \"Navy work coat with white sleeve stripe | hanging on Door C hook, left of man | hanging on Door C hook, right of man | consistent with man moving two doors to his right; garment/stripe matches\",\n    \"Olive wall section with small wooden key box | shot 1: right of window door | shot 2: off-frame right | static, no conflict\",\n    \"Wood panel with 'V' framed print | shot 1: far right | shot 2: off-frame right | static, no conflict\",\n    \"Olive wall with brass intercom + light switch | shot 1: off-frame left | shot 2: far left, adjacent to Door 1 | consistent with Door 1 being further along the same wall line\",\n    \"Man in striped shirt | centered, facing camera | right profile, facing frame-left (east), hand on Door 1 | head turn at 0:07 to his right matches final orientation; left profile shown from north-side camera, geometrically compatible\"\n  ],\n  \"findings\": []\n}"
+}

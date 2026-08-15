@@ -1,0 +1,45 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:22:04.169Z",
+  "latencyMs": 189675,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 4950,
+    "total_tokens": 14407,
+    "cost": 0.02009565,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02009565,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.01584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4561,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left wall (real) | two dark doors with vertical windows, green EXIT signs above, beige wall | same doors/signs in same order (door A left, door B right) | stable; only slight handheld parallax shift",
+    "Mirror wall | full-height mirrored panels on black baseboard, left edge meeting the door wall in a vertical corner at frame center-left | corner line and baseboard unchanged | reference plane; all reflection checks made against this",
+    "Reflected doors | one dark door with window and reflected EXIT sign visible just right of the mirror corner (mirror image of real door B) | same door, same position | consistent with real wall geometry",
+    "Ballet barre (via mirror) | double barre mounted on the reflected far wall, right side of frame | same position, same height | consistent across all frames",
+    "Framed picture (via mirror) | dark framed artwork on reflected wall above/right of barre | unchanged | consistent",
+    "Blue storage bin (via mirror) | sits in the reflected corner where far wall meets reflected door wall | unchanged | consistent",
+    "Dancer (real) | back to camera, center-left, barefoot, arms at side then moving through adagio positions | back to camera, center-left, left arm raised overhead | stays in front of mirror; body correctly occludes mirror corner/edges as she shifts",
+    "Dancer's mirror reflection | front-facing image in right half of frame, laterally flipped copy of the real dancer | front-facing, left arm raised overhead matching real pose | in every frame the reflected arm positions (raised/extended/down) are the correct mirror flip of the real arms and the reflection's floor position matches her distance to the mirror"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Left wall (real) | two dark doors with vertical windows, green EXIT signs above, beige wall | same doors/signs in same order (door A left, door B right) | stable; only slight handheld parallax shift\",\n    \"Mirror wall | full-height mirrored panels on black baseboard, left edge meeting the door wall in a vertical corner at frame center-left | corner line and baseboard unchanged | reference plane; all reflection checks made against this\",\n    \"Reflected doors | one dark door with window and reflected EXIT sign visible just right of the mirror corner (mirror image of real door B) | same door, same position | consistent with real wall geometry\",\n    \"Ballet barre (via mirror) | double barre mounted on the reflected far wall, right side of frame | same position, same height | consistent across all frames\",\n    \"Framed picture (via mirror) | dark framed artwork on reflected wall above/right of barre | unchanged | consistent\",\n    \"Blue storage bin (via mirror) | sits in the reflected corner where far wall meets reflected door wall | unchanged | consistent\",\n    \"Dancer (real) | back to camera, center-left, barefoot, arms at side then moving through adagio positions | back to camera, center-left, left arm raised overhead | stays in front of mirror; body correctly occludes mirror corner/edges as she shifts\",\n    \"Dancer's mirror reflection | front-facing image in right half of frame, laterally flipped copy of the real dancer | front-facing, left arm raised overhead matching real pose | in every frame the reflected arm positions (raised/extended/down) are the correct mirror flip of the real arms and the reflection's floor position matches her distance to the mirror\"\n  ],\n  \"findings\": []\n}"
+}

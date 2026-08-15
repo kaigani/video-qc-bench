@@ -30,7 +30,7 @@ const RETRYABLE_STATUS = new Set([408, 429, 500, 502, 503, 504]);
 /**
  * Send one prompt + video to a model. Returns { text, usage, raw, latencyMs }.
  */
-export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning = false, maxRetries = 3, timeoutMs = 300_000 }) {
+export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning = false, maxRetries = 3, timeoutMs = 900_000 }) {
   const body = JSON.stringify({
     model,
     messages: [
@@ -44,6 +44,9 @@ export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning
     ],
     usage: { include: true },
     ...(reasoning ? { reasoning: { enabled: true } } : {}),
+    // Stream to survive gateway/upstream idle timeouts on long generations:
+    // OpenRouter sends SSE keep-alive comments while the provider works.
+    stream: true,
   });
 
   let lastErr;
@@ -59,15 +62,9 @@ export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning
         body,
         signal: AbortSignal.timeout(timeoutMs),
       });
-      const raw = await res.json().catch(() => null);
-      const latencyMs = Date.now() - start;
-      if (raw === null && attempt < maxRetries) {
-        lastErr = new Error(`${model}: non-JSON response body, HTTP ${res.status} (attempt ${attempt})`);
-        await sleep(2000 * 2 ** (attempt - 1));
-        continue;
-      }
-      if (raw === null) throw new Error(`${model}: non-JSON response body, HTTP ${res.status}`);
-      if (!res.ok || raw?.error) {
+      if (!res.ok) {
+        // Error responses come back as plain JSON, not SSE.
+        const raw = await res.json().catch(() => null);
         const msg = raw?.error?.message ?? `HTTP ${res.status}`;
         const code = raw?.error?.code ?? res.status;
         if (RETRYABLE_STATUS.has(Number(code)) && attempt < maxRetries) {
@@ -77,7 +74,48 @@ export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning
         }
         throw new Error(`${model}: ${msg}`);
       }
-      const text = raw.choices?.[0]?.message?.content ?? '';
+
+      let text = '';
+      let usage = null;
+      let streamError = null;
+      if ((res.headers.get('content-type') ?? '').includes('application/json')) {
+        // Some providers ignore stream:true and reply with a single JSON body.
+        const raw = await res.json().catch(() => null);
+        if (raw?.error) streamError = raw.error;
+        text = raw?.choices?.[0]?.message?.content ?? '';
+        usage = raw?.usage ?? null;
+      } else {
+        const decoder = new TextDecoder();
+        let buf = '';
+        for await (const chunk of res.body) {
+          buf += decoder.decode(chunk, { stream: true });
+          const lines = buf.split('\n');
+          buf = lines.pop();
+          for (const line of lines) {
+            const t = line.trim();
+            if (!t || t.startsWith(':')) continue; // SSE keep-alive comment
+            if (!t.startsWith('data:')) continue;
+            const payload = t.slice(5).trim();
+            if (payload === '[DONE]') continue;
+            let obj;
+            try { obj = JSON.parse(payload); } catch { continue; }
+            if (obj.error) streamError = obj.error;
+            text += obj.choices?.[0]?.delta?.content ?? '';
+            if (obj.usage) usage = obj.usage;
+          }
+        }
+      }
+      const raw = { usage, streamed: true };
+      const latencyMs = Date.now() - start;
+      if (streamError) {
+        const msg = streamError.message ?? String(streamError);
+        if (RETRYABLE_STATUS.has(Number(streamError.code)) && attempt < maxRetries) {
+          lastErr = new Error(`${model}: ${msg} (attempt ${attempt})`);
+          await sleep(2000 * 2 ** (attempt - 1));
+          continue;
+        }
+        throw new Error(`${model}: ${msg}`);
+      }
       if (!text.trim() && attempt < maxRetries) {
         // Providers occasionally drop the video (prompt_tokens collapses) and
         // return empty content with only reasoning tokens — treat as retryable.

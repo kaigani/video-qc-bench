@@ -1,0 +1,75 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:13:53.966Z",
+  "latencyMs": 217556,
+  "usage": {
+    "prompt_tokens": 12177,
+    "completion_tokens": 7922,
+    "total_tokens": 20099,
+    "cost": 0.03083005,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03083005,
+      "upstream_inference_prompt_cost": 0.00547965,
+      "upstream_inference_completions_cost": 0.0253504
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6492,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | 00:00 white sleeper cab, no visible trailer, parked left of diner | 01:41 dark green/teal 'SEABOARD' cab with long box trailer at door | vehicle identity changes completely between opening and closing shots",
+    "waitress | light blue polo + white apron, glasses on collar, wiping counter at night | same uniform, seated then exits at sunset | wardrobe consistent on camera; reflection shows different shirt color at 01:46",
+    "male customer | brown jacket, enters and sits at counter at night, full breakfast plate in front at 00:37 | absent in empty-diner shot at 00:52, present again at 01:00, paid at 01:38, walks to truck at 01:41 | unexplained absence in 00:52 establishing shot",
+    "breakfast plate (french toast + eggs) | steaming insert at 00:33, in front of customer 00:37-00:44 | served again by waitress at 01:10 | same meal shown served twice",
+    "diner lighting | deep night/dusk blue through windows 00:00-00:51 | bright dawn 01:00-01:17, warm sunset 01:27-01:59 | time progression plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "semi-truck",
+      "invariant_violated": "vehicle continuity",
+      "description": "The customer's truck is a white sleeper cab (no trailer) in the opening exterior shot, but when he walks out at sunset it is a dark green 'SEABOARD' cab paired with a long box trailer. Same story element, entirely different vehicle livery and configuration.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:52",
+      "entity": "male customer",
+      "invariant_violated": "presence continuity",
+      "description": "The diner is shown completely empty at 00:52-00:59 — no customer at the counter — immediately after a shot (00:45-00:51) with him seated in the background and immediately before a shot (01:00) with him seated at the counter again. No exit or re-entry is shown.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:10",
+      "entity": "breakfast plate",
+      "invariant_violated": "action duplication / prop continuity",
+      "description": "The customer is already shown with the full french-toast-and-eggs plate in front of him at 00:33-00:44, yet at 01:10 the waitress is shown placing that same meal in front of him as if serving it for the first time.",
+      "severity": "minor",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:46",
+      "entity": "waitress reflection",
+      "invariant_violated": "reflection consistency",
+      "description": "In the window/trailer reflection the waitress appears in a tan/khaki shirt, inconsistent with the light blue uniform she is wearing on camera in the same frame, and her posture in the reflection does not clearly match her actual movement.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"semi-truck | 00:00 white sleeper cab, no visible trailer, parked left of diner | 01:41 dark green/teal 'SEABOARD' cab with long box trailer at door | vehicle identity changes completely between opening and closing shots\",\n    \"waitress | light blue polo + white apron, glasses on collar, wiping counter at night | same uniform, seated then exits at sunset | wardrobe consistent on camera; reflection shows different shirt color at 01:46\",\n    \"male customer | brown jacket, enters and sits at counter at night, full breakfast plate in front at 00:37 | absent in empty-diner shot at 00:52, present again at 01:00, paid at 01:38, walks to truck at 01:41 | unexplained absence in 00:52 establishing shot\",\n    \"breakfast plate (french toast + eggs) | steaming insert at 00:33, in front of customer 00:37-00:44 | served again by waitress at 01:10 | same meal shown served twice\",\n    \"diner lighting | deep night/dusk blue through windows 00:00-00:51 | bright dawn 01:00-01:17, warm sunset 01:27-01:59 | time progression plausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"semi-truck\",\n      \"invariant_violated\": \"vehicle continuity\",\n      \"description\": \"The customer's truck is a white sleeper cab (no trailer) in the opening exterior shot, but when he walks out at sunset it is a dark green 'SEABOARD' cab paired with a long box trailer. Same story element, entirely different vehicle livery and configuration.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:52\",\n      \"entity\": \"male customer\",\n      \"invariant_violated\": \"presence continuity\",\n      \"description\": \"The diner is shown completely empty at 00:52-00:59 — no customer at the counter — immediately after a shot (00:45-00:51) with him seated in the background and immediately before a shot (01:00) with him seated at the counter again. No exit or re-entry is shown.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"01:10\",\n      \"entity\": \"breakfast plate\",\n      \"invariant_violated\": \"action duplication / prop continuity\",\n      \"description\": \"The customer is already shown with the full french-toast-and-eggs plate in front of him at 00:33-00:44, yet at 01:10 the waitress is shown placing that same meal in front of him as if serving it for the first time.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"01:46\",\n      \"entity\": \"waitress reflection\",\n      \"invariant_violated\": \"reflection consistency\",\n      \"description\": \"In the window/trailer reflection the waitress appears in a tan/khaki shirt, inconsistent with the light blue uniform she is wearing on camera in the same frame, and her posture in the reflection does not clearly match her actual movement.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

@@ -1,0 +1,55 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T15:03:43.169Z",
+  "latencyMs": 853627,
+  "usage": {
+    "prompt_tokens": 12367,
+    "completion_tokens": 14463,
+    "total_tokens": 26830,
+    "cost": 0.05184675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.05184675,
+      "upstream_inference_prompt_cost": 0.00556515,
+      "upstream_inference_completions_cost": 0.0462816
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13903,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner building | single-story, long window wall (facade) with neon OPEN sign, flat roof | same | exterior 00:00-00:10 and all interior shots agree on window wall + booths on one long side, counter on opposite side",
+    "entrance door (exterior) | set in the middle of the window-wall facade, windows on both sides, neon OPEN to its right | not re-verified from outside | interior entrance door appears on the wall perpendicular to the window wall, beside the kitchen pass-through (00:19)",
+    "kitchen pass-through | centered on the back (kitchen-end) wall, lit, with poster above and clock to its right | same | anchor element for judging door side in 00:11 vs 00:19",
+    "counter + stool row | long counter parallel to window wall, red stools on customer side, coffee carafes/cups on surface | same | man's seated position at mid-counter consistent 00:25-01:35",
+    "booth row | along the window wall, left side in wide interior shots | same | visible in 00:19, 00:37, 01:00, 01:50",
+    "OPEN neon sign | in window wall (left wall in interior wides) | same | orientation/position consistent across 00:19, 00:37, 01:00, 01:50",
+    "semi-truck | parked parallel to facade, cab to the right (facing away from trailer) at dusk | same orientation at dawn through window (01:41) | man exits toward cab on his right; reflection at 01:44-01:46 matches",
+    "waitress | behind counter near coffee machine (customer view) | seated on customer-side stool, then back at pass-through (01:50-01:58) | movements track consistently around counter",
+    "man (trucker) | enters through back-wall door (00:19), walks aisle, sits mid-counter | leaves via same door area, walks to truck (01:41) | no wrong-side emergence at counter or doorway"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "entrance door / building connectivity",
+      "invariant_violated": "scene layout consistency (door position)",
+      "description": "In the exterior establishing shot (00:00-00:10) the entrance door is set in the middle of the long window wall (the same wall that carries the OPEN neon and the booth-facing windows), with windows on both sides of it. In the interior wide shot at 00:19 the man instead enters through a door on the wall perpendicular to that window wall, positioned beside the kitchen pass-through at the kitchen end. The doorway seen to the right of the pass-through in the 00:11-00:19 counter shot is on the opposite side of the pass-through from the 00:19 doorway. The entrance therefore occupies two different walls in different shots, so the established exterior layout cannot explain the interior doorway used for entry/exit (also reused at 01:41).",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"diner building | single-story, long window wall (facade) with neon OPEN sign, flat roof | same | exterior 00:00-00:10 and all interior shots agree on window wall + booths on one long side, counter on opposite side\",\n    \"entrance door (exterior) | set in the middle of the window-wall facade, windows on both sides, neon OPEN to its right | not re-verified from outside | interior entrance door appears on the wall perpendicular to the window wall, beside the kitchen pass-through (00:19)\",\n    \"kitchen pass-through | centered on the back (kitchen-end) wall, lit, with poster above and clock to its right | same | anchor element for judging door side in 00:11 vs 00:19\",\n    \"counter + stool row | long counter parallel to window wall, red stools on customer side, coffee carafes/cups on surface | same | man's seated position at mid-counter consistent 00:25-01:35\",\n    \"booth row | along the window wall, left side in wide interior shots | same | visible in 00:19, 00:37, 01:00, 01:50\",\n    \"OPEN neon sign | in window wall (left wall in interior wides) | same | orientation/position consistent across 00:19, 00:37, 01:00, 01:50\",\n    \"semi-truck | parked parallel to facade, cab to the right (facing away from trailer) at dusk | same orientation at dawn through window (01:41) | man exits toward cab on his right; reflection at 01:44-01:46 matches\",\n    \"waitress | behind counter near coffee machine (customer view) | seated on customer-side stool, then back at pass-through (01:50-01:58) | movements track consistently around counter\",\n    \"man (trucker) | enters through back-wall door (00:19), walks aisle, sits mid-counter | leaves via same door area, walks to truck (01:41) | no wrong-side emergence at counter or doorway\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"entrance door / building connectivity\",\n      \"invariant_violated\": \"scene layout consistency (door position)\",\n      \"description\": \"In the exterior establishing shot (00:00-00:10) the entrance door is set in the middle of the long window wall (the same wall that carries the OPEN neon and the booth-facing windows), with windows on both sides of it. In the interior wide shot at 00:19 the man instead enters through a door on the wall perpendicular to that window wall, positioned beside the kitchen pass-through at the kitchen end. The doorway seen to the right of the pass-through in the 00:11-00:19 counter shot is on the opposite side of the pass-through from the 00:19 doorway. The entrance therefore occupies two different walls in different shots, so the established exterior layout cannot explain the interior doorway used for entry/exit (also reused at 01:41).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

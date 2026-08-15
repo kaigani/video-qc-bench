@@ -1,0 +1,58 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:50:39.769Z",
+  "latencyMs": 277277,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 6423,
+    "total_tokens": 15690,
+    "cost": 0.02472375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02472375,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0205536
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5698,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "four copper cups | 00:00: front-center cup contains a two-token stack (gold 'GRAND SLAM' token over a silver token), left cup has a token inside, other two empty | 00:09: cups mostly empty, dealer dropping in new tokens one at a time | the center-cup stack is no longer present after the 00:04 cut",
+    "loose tokens on tablecloth | 00:02-00:03: small gold pair at left, single gold right of center cup, silver '20' token plus gold at bottom-center | 00:04 onward: different set (large gold bottom-center, small gold at right), silver '20' absent | set changes without shown action after angle change",
+    "dealer's hand(s) | 00:00: right hand holds two edge-on gold tokens | 00:04: both hands each holding a token, depositing into separate cups | action switches from one-hand to two-hand placement across the cut",
+    "man in blue suit | not visible 00:00-00:03 (hand only) | visible from 00:04, seated at table placing tokens | introduced via hard cut/camera pull-back"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "token stack in front-center copper cup",
+      "invariant_violated": "object persistence",
+      "description": "From 00:00 to 00:03 the front-center cup clearly holds a stack of two oversized tokens (a gold token with 'GRAND SLAM' engraving on top of a silver one). After the camera cut at 00:04, the corresponding cup in the row is empty and the stack is not visible in any cup, on the table, or in the dealer's hands, even though no action is shown removing it.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "loose tokens on the tablecloth",
+      "invariant_violated": "object persistence",
+      "description": "The loose tokens visible at 00:02-00:03 (the silver token engraved '20' at bottom-center and the small gold pair at the lower edge) do not reappear after the cut at 00:04; instead a different arrangement of gold tokens is present with no shown cause for the change.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"four copper cups | 00:00: front-center cup contains a two-token stack (gold 'GRAND SLAM' token over a silver token), left cup has a token inside, other two empty | 00:09: cups mostly empty, dealer dropping in new tokens one at a time | the center-cup stack is no longer present after the 00:04 cut\",\n    \"loose tokens on tablecloth | 00:02-00:03: small gold pair at left, single gold right of center cup, silver '20' token plus gold at bottom-center | 00:04 onward: different set (large gold bottom-center, small gold at right), silver '20' absent | set changes without shown action after angle change\",\n    \"dealer's hand(s) | 00:00: right hand holds two edge-on gold tokens | 00:04: both hands each holding a token, depositing into separate cups | action switches from one-hand to two-hand placement across the cut\",\n    \"man in blue suit | not visible 00:00-00:03 (hand only) | visible from 00:04, seated at table placing tokens | introduced via hard cut/camera pull-back\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"token stack in front-center copper cup\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"From 00:00 to 00:03 the front-center cup clearly holds a stack of two oversized tokens (a gold token with 'GRAND SLAM' engraving on top of a silver one). After the camera cut at 00:04, the corresponding cup in the row is empty and the stack is not visible in any cup, on the table, or in the dealer's hands, even though no action is shown removing it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"loose tokens on the tablecloth\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"The loose tokens visible at 00:02-00:03 (the silver token engraved '20' at bottom-center and the small gold pair at the lower edge) do not reappear after the cut at 00:04; instead a different arrangement of gold tokens is present with no shown cause for the change.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

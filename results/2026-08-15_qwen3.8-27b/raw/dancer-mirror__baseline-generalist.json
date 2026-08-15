@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:24:26.993Z",
+  "latencyMs": 284716,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 6826,
+    "total_tokens": 16093,
+    "cost": 0.02601335,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02601335,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0218432
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6688,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (real, back to camera) | black sports bra + leggings, arms at sides, head turned toward mirror | arms at sides then right arm overhead, right leg extended in 5th position | continuous arm-adageio: raise to side, overhead, lower, repeat",
+    "Mirror reflection (front view) | matching pose, arms at sides | right screen arm overhead, leg extended | generally mirrors the dancer, but arm elevation deviates at 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "mirror reflection of dancer's right arm",
+      "invariant_violated": "reflection-pose consistency",
+      "description": "At the same instant the real dancer's right arm is extended outward and downward (hand at/below waist level, arm nearly horizontal or drooping), the reflection shows the corresponding arm raised to roughly 45 degrees above horizontal with the hand well above shoulder height. A planar mirror must reproduce the exact pose at the same instant, so the elevation of the reflected arm is inconsistent with the real arm; adjacent frames (00:05 both down, 00:07 both overhead) confirm the two are out of sync at this moment.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Dancer (real, back to camera) | black sports bra + leggings, arms at sides, head turned toward mirror | arms at sides then right arm overhead, right leg extended in 5th position | continuous arm-adageio: raise to side, overhead, lower, repeat\",\n    \"Mirror reflection (front view) | matching pose, arms at sides | right screen arm overhead, leg extended | generally mirrors the dancer, but arm elevation deviates at 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"mirror reflection of dancer's right arm\",\n      \"invariant_violated\": \"reflection-pose consistency\",\n      \"description\": \"At the same instant the real dancer's right arm is extended outward and downward (hand at/below waist level, arm nearly horizontal or drooping), the reflection shows the corresponding arm raised to roughly 45 degrees above horizontal with the hand well above shoulder height. A planar mirror must reproduce the exact pose at the same instant, so the elevation of the reflected arm is inconsistent with the real arm; adjacent frames (00:05 both down, 00:07 both overhead) confirm the two are out of sync at this moment.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

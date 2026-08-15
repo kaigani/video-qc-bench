@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:15:39.881Z",
+  "latencyMs": 209825,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 3544,
+    "total_tokens": 12995,
+    "cost": 0.01559375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01559375,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0113408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2874,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dealer's right hand | 0.0s holding two gold coins above table, blue sleeve/white cuff | 10.0s pinching coin over rear-left cup | continuous reach → drop at ~1.5-2.0s → lift at 3.0s → further drops at 4.5-6.0s; all motions arrive at the cup and complete",
+    "dealer's left hand | off-frame at 0.0s, enters at 4.0s over right cup | 10.0s hovering over front-right cup | each repositioning follows continuous arm motion; no abrupt teleports",
+    "front-left cup | 0.0s one coin visible inside | 10.0s coin present | hand enters at 1.0-2.0s before any interior change; drop action precedes coin appearance",
+    "center cup | 0.0s stack of coins | unchanged through 10.0s | no hand contact, no change — consistent",
+    "rear and right cups | empty at 0.0s | hand contacts right cup 5.0-10.0s | interior changes only after hand arrives at the rim; order holds",
+    "man in blue suit | only hand visible 0.0-3.0s | fully visible 4.0-10.0s | revealed by continuous camera pull-back, not a state jump; his posture matches the earlier hand position",
+    "camera | tight on cups 0.0s | wide orbit shot 4.0-10.0s | smooth continuous dolly/pan, forward time flow, no frozen or repeated frames"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"dealer's right hand | 0.0s holding two gold coins above table, blue sleeve/white cuff | 10.0s pinching coin over rear-left cup | continuous reach → drop at ~1.5-2.0s → lift at 3.0s → further drops at 4.5-6.0s; all motions arrive at the cup and complete\",\n    \"dealer's left hand | off-frame at 0.0s, enters at 4.0s over right cup | 10.0s hovering over front-right cup | each repositioning follows continuous arm motion; no abrupt teleports\",\n    \"front-left cup | 0.0s one coin visible inside | 10.0s coin present | hand enters at 1.0-2.0s before any interior change; drop action precedes coin appearance\",\n    \"center cup | 0.0s stack of coins | unchanged through 10.0s | no hand contact, no change — consistent\",\n    \"rear and right cups | empty at 0.0s | hand contacts right cup 5.0-10.0s | interior changes only after hand arrives at the rim; order holds\",\n    \"man in blue suit | only hand visible 0.0-3.0s | fully visible 4.0-10.0s | revealed by continuous camera pull-back, not a state jump; his posture matches the earlier hand position\",\n    \"camera | tight on cups 0.0s | wide orbit shot 4.0-10.0s | smooth continuous dolly/pan, forward time flow, no frozen or repeated frames\"\n  ],\n  \"findings\": []\n}"
+}

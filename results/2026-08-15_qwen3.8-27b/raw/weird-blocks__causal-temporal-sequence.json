@@ -1,0 +1,46 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:31:07.404Z",
+  "latencyMs": 214373,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 3473,
+    "total_tokens": 12924,
+    "cost": 0.01536655,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01536655,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0111136
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2642,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | 0.3s: fingers contacting top of leftmost green block | 9.7s: index+middle fingers resting on tops of blocks 1-2 | sequentially places/rotates a new block at each position left-to-right, lifting and shifting right between each placement; every block motion coincides with hand contact",
+    "Block 1 (leftmost) | green, front '2', tilted mid-rotation under hand | blue, front '2', settled in row | rotated/released by hand between 0.3s-1.3s; color swap is identity bookkeeping (out of scope), motion itself is hand-caused",
+    "Block 2 | absent at 0.3s | blue '3' settled at position 2 by 2.4s | being placed by hand at 1.3s, settled by next frame",
+    "Block 3 | absent | green '2' settled by 3.4s | tilted with motion blur under hand at 2.4s, settled by 3.4s",
+    "Block 4 | absent | orange '2' settled by 4.5s | hand places between 3.4s-4.5s (off-sample), appears settled",
+    "Block 5 | absent | light-blue '3' settled by 5.5s | mid-rotation under hand at 4.5s, settled by 5.5s",
+    "Block 6 | absent | green '5' settled by 6.6s | mid-rotation under hand at 5.5s, settled by 6.6s (face/color difference is identity bookkeeping, out of scope)",
+    "Block 7 | absent | green '2' settled by 6.6s | placed by hand between 5.5s-6.6s, appears settled",
+    "Block 8 | absent | blue '6' settled by 8.7s | mid-rotation under hand at 7.6s, released, fully settled by 8.7s"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Hand | 0.3s: fingers contacting top of leftmost green block | 9.7s: index+middle fingers resting on tops of blocks 1-2 | sequentially places/rotates a new block at each position left-to-right, lifting and shifting right between each placement; every block motion coincides with hand contact\",\n    \"Block 1 (leftmost) | green, front '2', tilted mid-rotation under hand | blue, front '2', settled in row | rotated/released by hand between 0.3s-1.3s; color swap is identity bookkeeping (out of scope), motion itself is hand-caused\",\n    \"Block 2 | absent at 0.3s | blue '3' settled at position 2 by 2.4s | being placed by hand at 1.3s, settled by next frame\",\n    \"Block 3 | absent | green '2' settled by 3.4s | tilted with motion blur under hand at 2.4s, settled by 3.4s\",\n    \"Block 4 | absent | orange '2' settled by 4.5s | hand places between 3.4s-4.5s (off-sample), appears settled\",\n    \"Block 5 | absent | light-blue '3' settled by 5.5s | mid-rotation under hand at 4.5s, settled by 5.5s\",\n    \"Block 6 | absent | green '5' settled by 6.6s | mid-rotation under hand at 5.5s, settled by 6.6s (face/color difference is identity bookkeeping, out of scope)\",\n    \"Block 7 | absent | green '2' settled by 6.6s | placed by hand between 5.5s-6.6s, appears settled\",\n    \"Block 8 | absent | blue '6' settled by 8.7s | mid-rotation under hand at 7.6s, released, fully settled by 8.7s\"\n  ],\n  \"findings\": []\n}"
+}

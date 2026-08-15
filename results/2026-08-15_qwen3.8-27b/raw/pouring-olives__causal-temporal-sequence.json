@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:03:22.198Z",
+  "latencyMs": 198968,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 3467,
+    "total_tokens": 12918,
+    "cost": 0.01534735,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01534735,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0110944
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3268,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | empty at 0s, on cutting board | pile of mixed green/dark olives at 9s | contents increase only during pouring episodes (~0-3s and ~5-9s); pile height tracks the amount poured",
+    "Small glass bowl held by person | full of olives, held above jar at 0s | emptied and set aside by ~4s, holds olives again in later segment | tilting causes olives to fall; fingers push the last few in; each pour completes with bowl withdrawn",
+    "Falling olives | none in air at 0s | in flight at ~1s, ~3s, ~8s | motion begins immediately after bowl tilt, lands with corresponding pile growth; no airborne olives before a tilt or after the pour ends",
+    "Person's hands | holding bowl over jar at 0s | repositioning, pushing, withdrawing through 9s | motion blur during repositioning at ~4s; all reaches arrive at their target (bowl, jar rim) rather than dissolving",
+    "Metal bowl on counter (right) | full of green olives at 0s | fewer olives with brown fragments visible by ~5s | no person action toward it in shot; content change is state bookkeeping (out of scope, not a causality report)"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Large glass jar | empty at 0s, on cutting board | pile of mixed green/dark olives at 9s | contents increase only during pouring episodes (~0-3s and ~5-9s); pile height tracks the amount poured\",\n    \"Small glass bowl held by person | full of olives, held above jar at 0s | emptied and set aside by ~4s, holds olives again in later segment | tilting causes olives to fall; fingers push the last few in; each pour completes with bowl withdrawn\",\n    \"Falling olives | none in air at 0s | in flight at ~1s, ~3s, ~8s | motion begins immediately after bowl tilt, lands with corresponding pile growth; no airborne olives before a tilt or after the pour ends\",\n    \"Person's hands | holding bowl over jar at 0s | repositioning, pushing, withdrawing through 9s | motion blur during repositioning at ~4s; all reaches arrive at their target (bowl, jar rim) rather than dissolving\",\n    \"Metal bowl on counter (right) | full of green olives at 0s | fewer olives with brown fragments visible by ~5s | no person action toward it in shot; content change is state bookkeeping (out of scope, not a causality report)\"\n  ],\n  \"findings\": []\n}"
+}

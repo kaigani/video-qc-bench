@@ -1,0 +1,46 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:31:26.607Z",
+  "latencyMs": 117598,
+  "usage": {
+    "prompt_tokens": 9466,
+    "completion_tokens": 3126,
+    "total_tokens": 12592,
+    "cost": 0.0142629,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0142629,
+      "upstream_inference_prompt_cost": 0.0042597,
+      "upstream_inference_completions_cost": 0.0100032
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2685,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue coat/jacket | hanging on brass hook on the wooden door behind the man (left of frame) | hanging on the same brass hook (right of frame after camera reframe) | none — same coat, same hook; apparent side flip is due to camera angle change at ~0:07, no visible move",
+    "brass coat hook/rack | fixed to the door behind the man | fixed to the same door, now right of frame | none — fixed fixture, no reposition",
+    "round ship's-wheel wall ornament | mounted at top of the door behind the man | mounted at top of the same door (top-right after reframe) | none — fixed, no change",
+    "gold-framed picture with circular emblem | on the door right of the man's head (partly obscured) | on the same door right of the coat (clearer view) | none — same frame, more visible after reframe",
+    "gold-framed horse/'V' picture | on the right-hand wall beside the wooden plate | out of frame after camera pans left | none — simply leaves frame, no vanishing",
+    "wooden/brass wall plate (right wall) | on the right wall at start | out of frame after reframe | none — leaves frame, no state change",
+    "wooden door with recessed lower panel | closed | closed; man's hand rests on it at end | none — remains closed, no open/shown state change",
+    "brass wall fixtures (bell + switch plate) | off-screen left at start | visible on left wall at end | none — enter frame via reframe, no state change",
+    "light switch plate (left wall) | off-screen at start | visible on left wall at end | none — enters frame via reframe, unlit/unlit, no change"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"blue coat/jacket | hanging on brass hook on the wooden door behind the man (left of frame) | hanging on the same brass hook (right of frame after camera reframe) | none — same coat, same hook; apparent side flip is due to camera angle change at ~0:07, no visible move\",\n    \"brass coat hook/rack | fixed to the door behind the man | fixed to the same door, now right of frame | none — fixed fixture, no reposition\",\n    \"round ship's-wheel wall ornament | mounted at top of the door behind the man | mounted at top of the same door (top-right after reframe) | none — fixed, no change\",\n    \"gold-framed picture with circular emblem | on the door right of the man's head (partly obscured) | on the same door right of the coat (clearer view) | none — same frame, more visible after reframe\",\n    \"gold-framed horse/'V' picture | on the right-hand wall beside the wooden plate | out of frame after camera pans left | none — simply leaves frame, no vanishing\",\n    \"wooden/brass wall plate (right wall) | on the right wall at start | out of frame after reframe | none — leaves frame, no state change\",\n    \"wooden door with recessed lower panel | closed | closed; man's hand rests on it at end | none — remains closed, no open/shown state change\",\n    \"brass wall fixtures (bell + switch plate) | off-screen left at start | visible on left wall at end | none — enter frame via reframe, no state change\",\n    \"light switch plate (left wall) | off-screen at start | visible on left wall at end | none — enters frame via reframe, unlit/unlit, no change\"\n  ],\n  \"findings\": []\n}"
+}

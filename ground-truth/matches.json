@@ -10,10 +10,11 @@
   "flash37": "2026-08-14_gemini-3.7-flash",
   "nemotron": "2026-08-14_nemotron-3-nano",
   "seed": "2026-08-14_seed-2-1-turbo",
-  "kimi": "2026-08-14_kimi-k3"
+  "kimi": "2026-08-14_kimi-k3",
+  "qwen27b": "2026-08-15_qwen3.8-27b"
  },
  "_extras": {
-  "reflection-faces-wrong-way": "_long-scene 01:41-01:43: window reflection shows the man's FACE while his back is to the glass - direction-impossible reflection, distinct from the location claim KT rejected (kimi x3; needs KT verdict)",
+  "reflection-faces-wrong-way": "_long-scene 01:41-01:46: window reflection physically wrong - shows man's FACE while his back is to the glass (kimi x3), and waitress reflection in wrong shirt color/posture (qwen27b). Distinct from the location claim KT rejected; needs KT verdict",
   "wiper-mutation": "woman-car ~00:02-00:05: windshield wiper arms relocate/change configuration between frames (pro, kimi - independent corroboration; needs KT verdict)"
  },
  "flash|_long-scene|baseline-generalist|0": "TP:LONG-13",
@@ -372,5 +373,29 @@
  "kimi|weird-blocks|object-persistence-state|1": "TP:BLOC-1",
  "kimi|weird-blocks|object-persistence-state|2": "TP:BLOC-1",
  "kimi|weird-blocks|object-persistence-state|3": "TP:BLOC-1",
- "kimi|weird-blocks|object-persistence-state|4": "TP:BLOC-1"
+ "kimi|weird-blocks|object-persistence-state|4": "TP:BLOC-1",
+ "qwen27b|_long-scene|baseline-generalist|0": "TP:LONG-13",
+ "qwen27b|_long-scene|baseline-generalist|1": "FP",
+ "qwen27b|_long-scene|baseline-generalist|2": "TP:LONG-15",
+ "qwen27b|_long-scene|baseline-generalist|3": "EXTRA:reflection-faces-wrong-way",
+ "qwen27b|_long-scene|spatial-topology-occlusion|0": "TP:LONG-4",
+ "qwen27b|dancer-mirror|baseline-generalist|0": "TP:DANC-1",
+ "qwen27b|home-tour|baseline-generalist|0": "TP:HOME-1",
+ "qwen27b|home-tour|baseline-generalist|1": "TP:HOME-1",
+ "qwen27b|man-cups|baseline-generalist|0": "TP:CUPS-3",
+ "qwen27b|man-cups|baseline-generalist|1": "TP:CUPS-3",
+ "qwen27b|phone|baseline-generalist|0": "TP:PHON-1",
+ "qwen27b|pouring-olives|baseline-generalist|0": "TP:OLIV-1",
+ "qwen27b|skateboarder|baseline-generalist|0": "FP",
+ "qwen27b|weird-blocks|baseline-generalist|0": "TP:BLOC-1",
+ "qwen27b|weird-blocks|baseline-generalist|1": "TP:BLOC-1",
+ "qwen27b|weird-blocks|baseline-generalist|2": "TP:BLOC-1",
+ "qwen27b|weird-blocks|object-persistence-state|0": "TP:BLOC-1",
+ "qwen27b|weird-blocks|object-persistence-state|1": "TP:BLOC-1",
+ "qwen27b|weird-blocks|object-persistence-state|2": "TP:BLOC-1",
+ "qwen27b|woman-apple|baseline-generalist|0": "TP:APPL-2",
+ "qwen27b|woman-apple|character-continuity|0": "FP",
+ "qwen27b|woman-apple|object-persistence-state|0": "TP:APPL-2",
+ "kimi|_long-scene|spatial-topology-occlusion|0": "TP:LONG-4",
+ "kimi|_long-scene|spatial-topology-occlusion|1": "TP:LONG-4"
 }

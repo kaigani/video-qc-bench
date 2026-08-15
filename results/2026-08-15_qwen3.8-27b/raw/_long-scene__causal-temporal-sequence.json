@@ -1,0 +1,49 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:32:52.185Z",
+  "latencyMs": 232124,
+  "usage": {
+    "prompt_tokens": 12361,
+    "completion_tokens": 4742,
+    "total_tokens": 17103,
+    "cost": 0.02073685,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02073685,
+      "upstream_inference_prompt_cost": 0.00556245,
+      "upstream_inference_completions_cost": 0.0151744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3544,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck (exterior) | idling, exhaust plume visible at rear at 00:00 | plume drifts left and dissipates by 00:09 | continuous smoke emission from engine, drift direction consistent throughout; no re-ignition or disappearance",
+    "diner OPEN sign (exterior) | lit pink at 00:00 | lit pink at 00:10 | steady illumination, no flicker or unexplained state change",
+    "ground light strip (exterior) | on at 00:00 | on at 00:10 | constant; no source change needed",
+    "woman wiping counter (interior 00:11-00:18) | standing at bar wiping with cloth | turns toward entrance at 00:17, turns back by 00:18 | wiping motion continuous; turn preceded by implied off-screen door/sound cue, resolved by man's entrance next shot",
+    "man entering (00:19-00:26) | not present at 00:10 | seated on stool at 00:25 | walks in through back passage 00:20, walks to bar 00:21-00:23, sits 00:24-00:25; woman's attention follows him after he enters (perception plausible)",
+    "coffee pour (00:27-00:32) | pot held level, mug empty-ish | pot lifted away, stream gone by 00:31 | tilt begins before stream appears; stream persists only while tilted; stream stops as pot straightens; pour completes",
+    "egg plate steam (00:33-00:36) | steaming at 00:33 | steaming at 00:36 | steam rises continuously, consistent with hot food; no on/off",
+    "woman serving plate (01:10-01:17) | carrying plate off-counter | plate placed at man's spot by 01:12 | placement motion completes; man does not react before plate lands",
+    "money on counter (01:38-01:40) | one folded bill slid by man's hand | two bills resting on counter, hands withdrawn | slide and counter-hand adjustment are continuous; reach begins, makes contact, and withdraws without dissolving",
+    "man exiting (01:41-01:45) | seated inside until 01:35 | walking away toward truck by 01:44 | stands, passes through doorway, walks across lot; motion continuous across window/reflection",
+    "woman at window (01:46-01:49) | watching glass | turns and sits down by 01:50 | her gaze follows the departing man while visible, then she turns only after he leaves the window view",
+    "woman departing (01:50-01:59) | seated on stool at 01:50 | gone through back door by 01:56 | stands, walks to open door, exits; door area bright/then dim consistent with her passage"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"truck (exterior) | idling, exhaust plume visible at rear at 00:00 | plume drifts left and dissipates by 00:09 | continuous smoke emission from engine, drift direction consistent throughout; no re-ignition or disappearance\",\n    \"diner OPEN sign (exterior) | lit pink at 00:00 | lit pink at 00:10 | steady illumination, no flicker or unexplained state change\",\n    \"ground light strip (exterior) | on at 00:00 | on at 00:10 | constant; no source change needed\",\n    \"woman wiping counter (interior 00:11-00:18) | standing at bar wiping with cloth | turns toward entrance at 00:17, turns back by 00:18 | wiping motion continuous; turn preceded by implied off-screen door/sound cue, resolved by man's entrance next shot\",\n    \"man entering (00:19-00:26) | not present at 00:10 | seated on stool at 00:25 | walks in through back passage 00:20, walks to bar 00:21-00:23, sits 00:24-00:25; woman's attention follows him after he enters (perception plausible)\",\n    \"coffee pour (00:27-00:32) | pot held level, mug empty-ish | pot lifted away, stream gone by 00:31 | tilt begins before stream appears; stream persists only while tilted; stream stops as pot straightens; pour completes\",\n    \"egg plate steam (00:33-00:36) | steaming at 00:33 | steaming at 00:36 | steam rises continuously, consistent with hot food; no on/off\",\n    \"woman serving plate (01:10-01:17) | carrying plate off-counter | plate placed at man's spot by 01:12 | placement motion completes; man does not react before plate lands\",\n    \"money on counter (01:38-01:40) | one folded bill slid by man's hand | two bills resting on counter, hands withdrawn | slide and counter-hand adjustment are continuous; reach begins, makes contact, and withdraws without dissolving\",\n    \"man exiting (01:41-01:45) | seated inside until 01:35 | walking away toward truck by 01:44 | stands, passes through doorway, walks across lot; motion continuous across window/reflection\",\n    \"woman at window (01:46-01:49) | watching glass | turns and sits down by 01:50 | her gaze follows the departing man while visible, then she turns only after he leaves the window view\",\n    \"woman departing (01:50-01:59) | seated on stool at 01:50 | gone through back door by 01:56 | stands, walks to open door, exits; door area bright/then dim consistent with her passage\"\n  ],\n  \"findings\": []\n}"
+}

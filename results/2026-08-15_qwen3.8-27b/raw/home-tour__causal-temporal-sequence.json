@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:46:02.460Z",
+  "latencyMs": 77798,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 1552,
+    "total_tokens": 11003,
+    "cost": 0.00921935,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00921935,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0049664
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1414,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman in blue dress | standing in kitchen, right profile, near microwave (0s) | standing in small kitchen/laundry, back to camera near window (9s) | continuous walking sequence: turns from profile to back-view, proceeds down hallway, enters bedroom, pauses to look at window, exits bedroom, walks down second hallway into small kitchen; head rotations follow her own locomotion, motion blur at 3s matches an accelerated step",
+    "bedroom table lamp | lit (4s) | lit, steady (6s) | no intensity or on/off change observed while in frame"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"woman in blue dress | standing in kitchen, right profile, near microwave (0s) | standing in small kitchen/laundry, back to camera near window (9s) | continuous walking sequence: turns from profile to back-view, proceeds down hallway, enters bedroom, pauses to look at window, exits bedroom, walks down second hallway into small kitchen; head rotations follow her own locomotion, motion blur at 3s matches an accelerated step\",\n    \"bedroom table lamp | lit (4s) | lit, steady (6s) | no intensity or on/off change observed while in frame\"\n  ],\n  \"findings\": []\n}"
+}

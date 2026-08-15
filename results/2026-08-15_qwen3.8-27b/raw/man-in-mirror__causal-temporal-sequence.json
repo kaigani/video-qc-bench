@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:22:31.596Z",
+  "latencyMs": 157601,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 2297,
+    "total_tokens": 11748,
+    "cost": 0.01160335,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01160335,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0073504
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2122,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man (back/side view, left of frame) | seated in white shirt, right hand raised holding toothbrush to mouth | right hand ends raised to comb hair | transitions: mouth (0.3-1.3s) -> forehead/hair combing (2.4-3.4s) -> mouth (4.5-8.7s) -> forehead (9.7s)",
+    "mirror reflection (right of frame) | facing camera in white shirt, hand with brush at chin | hand with brush at forehead | mirrors the real man's hand path frame-by-frame at the same vertical heights (chin/forehead) with no lead or lag",
+    "toothbrush | gripped in right hand, tip toward face | gripped in right hand, tip toward face/hair | moves rigidly with the hand throughout; no independent or unexplained motion"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"man (back/side view, left of frame) | seated in white shirt, right hand raised holding toothbrush to mouth | right hand ends raised to comb hair | transitions: mouth (0.3-1.3s) -> forehead/hair combing (2.4-3.4s) -> mouth (4.5-8.7s) -> forehead (9.7s)\",\n    \"mirror reflection (right of frame) | facing camera in white shirt, hand with brush at chin | hand with brush at forehead | mirrors the real man's hand path frame-by-frame at the same vertical heights (chin/forehead) with no lead or lag\",\n    \"toothbrush | gripped in right hand, tip toward face | gripped in right hand, tip toward face/hair | moves rigidly with the hand throughout; no independent or unexplained motion\"\n  ],\n  \"findings\": []\n}"
+}

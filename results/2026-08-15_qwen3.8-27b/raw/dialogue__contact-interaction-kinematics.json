@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__contact-interaction-kinematics",
+  "video": "dialogue.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T10:26:50.340Z",
+  "latencyMs": 69548,
+  "usage": {
+    "prompt_tokens": 9467,
+    "completion_tokens": 1489,
+    "total_tokens": 10956,
+    "cost": 0.00902495,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00902495,
+      "upstream_inference_prompt_cost": 0.00426015,
+      "upstream_inference_completions_cost": 0.0047648
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1235,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (torso/head) | standing, facing camera, talking, arms at rest below frame | standing in left profile at wooden door, both hands raised to door surface | continuous left turn beginning ~7.6s, complete by ~9.7s; no foot or support visible in frame",
+    "Man's near hand (left, striped sleeve) | out of frame / not in contact | palm open, fingers spread, in contact with door surface at ~9.7s | raised forward during turn, contact established as he reaches the door; no object gripped, no floating hold",
+    "Man's far hand (right) | out of frame / not in contact | fingers flat against upper door surface at ~9.7s | raised during turn, contact coincides with arrival at door; no clipping through door observed",
+    "Hanging coat (background) | draped on hook, untouched | draped on hook, untouched | never contacted by the man; only repositioned in frame due to camera/subject turn"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Man (torso/head) | standing, facing camera, talking, arms at rest below frame | standing in left profile at wooden door, both hands raised to door surface | continuous left turn beginning ~7.6s, complete by ~9.7s; no foot or support visible in frame\",\n    \"Man's near hand (left, striped sleeve) | out of frame / not in contact | palm open, fingers spread, in contact with door surface at ~9.7s | raised forward during turn, contact established as he reaches the door; no object gripped, no floating hold\",\n    \"Man's far hand (right) | out of frame / not in contact | fingers flat against upper door surface at ~9.7s | raised during turn, contact coincides with arrival at door; no clipping through door observed\",\n    \"Hanging coat (background) | draped on hook, untouched | draped on hook, untouched | never contacted by the man; only repositioned in frame due to camera/subject turn\"\n  ],\n  \"findings\": []\n}"
+}

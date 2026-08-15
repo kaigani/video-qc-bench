@@ -1,0 +1,51 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:39:21.266Z",
+  "latencyMs": 245254,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 4361,
+    "total_tokens": 13628,
+    "cost": 0.01812535,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01812535,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0139552
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3848,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | empty at 00:00 (clear bottom visible) | filled ~half with mixed green and dark-brown olives by 00:09 | dark-brown olives present at 00:01 though only green olives were being poured from the small bowl",
+    "Small glass pouring bowl | holds only green olives at 00:00 | refilled by 00:05 with green + dark-brown olives | emptied by 00:04, then reappears with dark olives that were never seen in any source bowl",
+    "Left stainless bowl on counter | ~10 green olives at 00:00 | fewer green olives plus brown peel-like scraps and reddish residue from 00:04 on | contents change during a hand motion at 00:04",
+    "Right light-colored bowl on counter | green olives at 00:00 | green olives, roughly unchanged through 00:09 | no notable transitions",
+    "Person (navy shirt) | pouring green olives over jar | still adding olives to jar | hands move off-screen between 00:04-00:05"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Large glass jar / dark-brown olives",
+      "invariant_violated": "object conservation / continuity",
+      "description": "At 00:00 the jar is visibly empty and the small bowl being poured contains only green olives. At 00:01, while a green olive is still falling from the bowl, several dark-brown/purple olives have already appeared at the bottom of the jar. These dark olives were never poured on camera and cannot be accounted for (they sit beneath the still-falling green ones, which also contradicts the pour order if the bowl had contained a mix).",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Large glass jar | empty at 00:00 (clear bottom visible) | filled ~half with mixed green and dark-brown olives by 00:09 | dark-brown olives present at 00:01 though only green olives were being poured from the small bowl\",\n    \"Small glass pouring bowl | holds only green olives at 00:00 | refilled by 00:05 with green + dark-brown olives | emptied by 00:04, then reappears with dark olives that were never seen in any source bowl\",\n    \"Left stainless bowl on counter | ~10 green olives at 00:00 | fewer green olives plus brown peel-like scraps and reddish residue from 00:04 on | contents change during a hand motion at 00:04\",\n    \"Right light-colored bowl on counter | green olives at 00:00 | green olives, roughly unchanged through 00:09 | no notable transitions\",\n    \"Person (navy shirt) | pouring green olives over jar | still adding olives to jar | hands move off-screen between 00:04-00:05\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Large glass jar / dark-brown olives\",\n      \"invariant_violated\": \"object conservation / continuity\",\n      \"description\": \"At 00:00 the jar is visibly empty and the small bowl being poured contains only green olives. At 00:01, while a green olive is still falling from the bowl, several dark-brown/purple olives have already appeared at the bottom of the jar. These dark olives were never poured on camera and cannot be accounted for (they sit beneath the still-falling green ones, which also contradicts the pour order if the bowl had contained a mix).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

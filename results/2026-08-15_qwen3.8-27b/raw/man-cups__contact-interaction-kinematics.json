@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:02:04.018Z",
+  "latencyMs": 181042,
+  "usage": {
+    "prompt_tokens": 9467,
+    "completion_tokens": 3778,
+    "total_tokens": 13245,
+    "cost": 0.01634975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01634975,
+      "upstream_inference_prompt_cost": 0.00426015,
+      "upstream_inference_completions_cost": 0.0120896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3089,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand (suited figure) | 00:00 pinching a small stack of coins between thumb and index/middle fingers, above table | 00:09 pinching a single gold coin above rear-left cup | 00:01-00:02 fingers descend into open mouth of front-left cup to retrieve coins, 00:03 lifts stack, subsequent frames show coin pinched at each cup in turn; grip visible in every frame, no floating hold",
+    "left hand (suited figure) | off-frame until 00:04, entering at rear-right cup with coin pinched | 00:09 fingers spread on rim of rightmost cup | pinches coin over rear cup 00:04-00:07, then contacts rim of rightmost cup 00:08-00:09; contact visible at each moment, no pass-through of rim",
+    "front-left red cup | 00:00 contains one coin at bottom | 00:09 contains added coins | right-hand fingers enter open mouth at 00:01 (cup is open, no clip), coins released into it by 00:06; cup remains stationary, no rim interference",
+    "center red cup | 00:00 large coin stacked atop a second coin inside | 00:09 same | never touched by any hand; coins remain seated, no motion without cause",
+    "rear and right red cups | 00:00 empty | 00:09 coins added | left hand deposits coins 00:05-00:08, fingers contact rim at 00:08; cups do not shift or tilt under contact",
+    "coins in hand | 00:00 stack of ~3 in pinch grip | 00:09 single coin in pinch grip | coins only translate when held in visible pinch; no coin moves prior to grip establishment"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"right hand (suited figure) | 00:00 pinching a small stack of coins between thumb and index/middle fingers, above table | 00:09 pinching a single gold coin above rear-left cup | 00:01-00:02 fingers descend into open mouth of front-left cup to retrieve coins, 00:03 lifts stack, subsequent frames show coin pinched at each cup in turn; grip visible in every frame, no floating hold\",\n    \"left hand (suited figure) | off-frame until 00:04, entering at rear-right cup with coin pinched | 00:09 fingers spread on rim of rightmost cup | pinches coin over rear cup 00:04-00:07, then contacts rim of rightmost cup 00:08-00:09; contact visible at each moment, no pass-through of rim\",\n    \"front-left red cup | 00:00 contains one coin at bottom | 00:09 contains added coins | right-hand fingers enter open mouth at 00:01 (cup is open, no clip), coins released into it by 00:06; cup remains stationary, no rim interference\",\n    \"center red cup | 00:00 large coin stacked atop a second coin inside | 00:09 same | never touched by any hand; coins remain seated, no motion without cause\",\n    \"rear and right red cups | 00:00 empty | 00:09 coins added | left hand deposits coins 00:05-00:08, fingers contact rim at 00:08; cups do not shift or tilt under contact\",\n    \"coins in hand | 00:00 stack of ~3 in pinch grip | 00:09 single coin in pinch grip | coins only translate when held in visible pinch; no coin moves prior to grip establishment\"\n  ],\n  \"findings\": []\n}"
+}

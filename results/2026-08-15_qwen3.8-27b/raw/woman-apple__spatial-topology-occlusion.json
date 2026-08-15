@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:59:57.279Z",
+  "latencyMs": 502761,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 7230,
+    "total_tokens": 16687,
+    "cost": 0.02739165,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02739165,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.023136
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6559,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "West fruit-stall row (start-left) | red awnings, hanging red-fruit garlands, red tub of oranges, purple tub of eggs, green bin of avocados, masked vendor | identical stall content seen on the RIGHT side of frame in the final rear view | background rotates left (0-2s) -> behind subject (5-8s) -> right (9.6s), consistent with a 180° camera arc",
+    "East stall row (start-right) | blue tub of avocados, wooden crates of apples/pears, red awnings, pedestrians (red-polo woman) approaching | tubs/crates still occupy the same side as subjects pass | no side swap; pedestrians on this side remain on the correct side throughout the arc",
+    "Pedestrian aisle | straight lane between the two stall rows, receding to vanishing point under line of red umbrellas | same lane, camera now behind subject looking back down it | west-to-east crossers (blue-shirt ponytail woman, white-shirt man) enter left foreground and emerge right/background, matching the geometry",
+    "Camera | positioned south of subject, looking down aisle (front view of her) | positioned north of subject, looking south (rear view) | continuous arc via her right/east side; at 5.5s (looking west) north is frame-right and the woman's southward travel reads as frame-left, correct",
+    "Blue-shirt man with glasses | mid-frame left at 8.6s (camera heading ~SW) | frame right at 9.6s (camera heading S) | apparent left-to-right shift is exactly what his fixed west-side position predicts as the heading rotates 45°",
+    "Subject with umbrella | walking toward camera, holding red apple at chest | walking away from camera, apple no longer in frame | occlusions by crossing pedestrians and by the umbrella evolve continuously, no background-through-foreground errors"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"West fruit-stall row (start-left) | red awnings, hanging red-fruit garlands, red tub of oranges, purple tub of eggs, green bin of avocados, masked vendor | identical stall content seen on the RIGHT side of frame in the final rear view | background rotates left (0-2s) -> behind subject (5-8s) -> right (9.6s), consistent with a 180° camera arc\",\n    \"East stall row (start-right) | blue tub of avocados, wooden crates of apples/pears, red awnings, pedestrians (red-polo woman) approaching | tubs/crates still occupy the same side as subjects pass | no side swap; pedestrians on this side remain on the correct side throughout the arc\",\n    \"Pedestrian aisle | straight lane between the two stall rows, receding to vanishing point under line of red umbrellas | same lane, camera now behind subject looking back down it | west-to-east crossers (blue-shirt ponytail woman, white-shirt man) enter left foreground and emerge right/background, matching the geometry\",\n    \"Camera | positioned south of subject, looking down aisle (front view of her) | positioned north of subject, looking south (rear view) | continuous arc via her right/east side; at 5.5s (looking west) north is frame-right and the woman's southward travel reads as frame-left, correct\",\n    \"Blue-shirt man with glasses | mid-frame left at 8.6s (camera heading ~SW) | frame right at 9.6s (camera heading S) | apparent left-to-right shift is exactly what his fixed west-side position predicts as the heading rotates 45°\",\n    \"Subject with umbrella | walking toward camera, holding red apple at chest | walking away from camera, apple no longer in frame | occlusions by crossing pedestrians and by the umbrella evolve continuously, no background-through-foreground errors\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,47 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:48:01.713Z",
+  "latencyMs": 205608,
+  "usage": {
+    "prompt_tokens": 7666,
+    "completion_tokens": 2996,
+    "total_tokens": 10662,
+    "cost": 0.0130369,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0130369,
+      "upstream_inference_prompt_cost": 0.0034497,
+      "upstream_inference_completions_cost": 0.0095872
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2692,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car body (cream/wood-paneled station wagon) | front three-quarter view on desert road, stationary relative to occupant | side view of driver's window as camera orbits | no state change; all panels, paint, and wood trim persist identically",
+    "antenna (vertical rod, front-left of hood) | upright at same hood location in all frames | upright at same hood location | none",
+    "hood ornaments (pair of chrome tips, center-left of hood) | two tips visible fore-aft on hood | same two tips, projection foreshortened as camera moves to side | none (perspective only)",
+    "license plate 'STE__97' (front bumper, partly behind chrome guard) | fully visible at 0:00 | exits frame bottom by ~0:03 as camera angle rises | none (framing, not occlusion by object)",
+    "headlights (quad round lenses + outer amber signals) | unlit glass lenses, symmetric clusters | same unlit lenses | none",
+    "grille (black 3-section mesh) | front face | exits frame as camera pans to side | none",
+    "roof rack (chrome cross-rails) | mounted on roof across all frames | mounted on roof | none",
+    "side mirror (chrome housing, car's left door) | visible on left door 0:00-0:04 | exits frame right edge by 0:05 | none (framing)",
+    "windshield wipers (pair) | resting in parked position at windshield base | resting in parked position | none",
+    "wood side paneling (brown doors) | on both visible doors | on visible doors | none"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"car body (cream/wood-paneled station wagon) | front three-quarter view on desert road, stationary relative to occupant | side view of driver's window as camera orbits | no state change; all panels, paint, and wood trim persist identically\",\n    \"antenna (vertical rod, front-left of hood) | upright at same hood location in all frames | upright at same hood location | none\",\n    \"hood ornaments (pair of chrome tips, center-left of hood) | two tips visible fore-aft on hood | same two tips, projection foreshortened as camera moves to side | none (perspective only)\",\n    \"license plate 'STE__97' (front bumper, partly behind chrome guard) | fully visible at 0:00 | exits frame bottom by ~0:03 as camera angle rises | none (framing, not occlusion by object)\",\n    \"headlights (quad round lenses + outer amber signals) | unlit glass lenses, symmetric clusters | same unlit lenses | none\",\n    \"grille (black 3-section mesh) | front face | exits frame as camera pans to side | none\",\n    \"roof rack (chrome cross-rails) | mounted on roof across all frames | mounted on roof | none\",\n    \"side mirror (chrome housing, car's left door) | visible on left door 0:00-0:04 | exits frame right edge by 0:05 | none (framing)\",\n    \"windshield wipers (pair) | resting in parked position at windshield base | resting in parked position | none\",\n    \"wood side paneling (brown doors) | on both visible doors | on visible doors | none\"\n  ],\n  \"findings\": []\n}"
+}

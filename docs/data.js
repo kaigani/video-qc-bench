@@ -188,9 +188,9 @@ const DATA = {
    "extra": 0,
    "fp": 1,
    "findings": 22,
-   "cost": 1.955,
+   "cost": 1.963,
    "costEstimated": false,
-   "avgLatencyS": 8.9
+   "avgLatencyS": 9.3
   },
   {
    "key": "kimi",
@@ -199,13 +199,28 @@ const DATA = {
    "reasoning": true,
    "detection": 54,
    "defectsFound": 20,
-   "tp": 41,
+   "tp": 43,
    "extra": 4,
    "fp": 15,
-   "findings": 60,
-   "cost": 10.165,
+   "findings": 62,
+   "cost": 10.828,
    "costEstimated": false,
-   "avgLatencyS": 8.7
+   "avgLatencyS": 21
+  },
+  {
+   "key": "qwen27b",
+   "label": "Qwen 3.8 27B",
+   "model": "qwen/qwen3.8-27b",
+   "reasoning": true,
+   "detection": 32,
+   "defectsFound": 10,
+   "tp": 18,
+   "extra": 1,
+   "fp": 3,
+   "findings": 22,
+   "cost": 1.582,
+   "costEstimated": false,
+   "avgLatencyS": 266.3
   }
  ],
  "coverage": [
@@ -225,7 +240,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -244,7 +260,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -263,7 +280,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -282,7 +300,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -301,7 +320,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -320,7 +340,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -339,7 +360,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -358,7 +380,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -377,7 +400,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -396,7 +420,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -415,7 +440,8 @@ const DATA = {
     "flash37": true,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -434,7 +460,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -453,7 +480,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -472,7 +500,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -491,7 +520,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -510,7 +540,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": true
    }
   },
   {
@@ -529,7 +560,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -548,7 +580,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -567,7 +600,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -586,7 +620,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -605,7 +640,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -624,7 +660,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -643,7 +680,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -662,7 +700,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -681,7 +720,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -700,7 +740,8 @@ const DATA = {
     "flash37": false,
     "nemotron": true,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -719,7 +760,8 @@ const DATA = {
     "flash37": true,
     "nemotron": true,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -738,7 +780,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -757,7 +800,8 @@ const DATA = {
     "flash37": true,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -776,7 +820,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": true,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -795,7 +840,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -814,7 +860,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -833,7 +880,8 @@ const DATA = {
     "flash37": false,
     "nemotron": true,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -852,7 +900,8 @@ const DATA = {
     "flash37": true,
     "nemotron": true,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -871,7 +920,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -890,7 +940,8 @@ const DATA = {
     "flash37": true,
     "nemotron": false,
     "seed": true,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -909,7 +960,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -928,7 +980,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -947,7 +1000,8 @@ const DATA = {
     "flash37": true,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -966,7 +1020,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": true
    }
   },
   {
@@ -985,7 +1040,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -1004,7 +1060,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   },
   {
@@ -1023,7 +1080,8 @@ const DATA = {
     "flash37": true,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -1042,7 +1100,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -1061,7 +1120,8 @@ const DATA = {
     "flash37": false,
     "nemotron": false,
     "seed": false,
-    "kimi": true
+    "kimi": true,
+    "qwen27b": false
    }
   },
   {
@@ -1080,7 +1140,8 @@ const DATA = {
     "flash37": false,
     "nemotron": true,
     "seed": false,
-    "kimi": false
+    "kimi": false,
+    "qwen27b": false
    }
   }
  ],
@@ -1453,16 +1514,54 @@ const DATA = {
     "total": 5
    },
    "spatial-topology-occlusion": {
-    "tp": 1,
+    "tp": 3,
     "fp": 0,
     "extra": 0,
-    "total": 1
+    "total": 3
    },
    "causal-temporal-sequence": {
     "tp": 3,
     "fp": 1,
     "extra": 1,
     "total": 5
+   }
+  },
+  "qwen27b": {
+   "baseline-generalist": {
+    "tp": 13,
+    "fp": 2,
+    "extra": 1,
+    "total": 16
+   },
+   "character-continuity": {
+    "tp": 0,
+    "fp": 1,
+    "extra": 0,
+    "total": 1
+   },
+   "object-persistence-state": {
+    "tp": 4,
+    "fp": 0,
+    "extra": 0,
+    "total": 4
+   },
+   "contact-interaction-kinematics": {
+    "tp": 0,
+    "fp": 0,
+    "extra": 0,
+    "total": 0
+   },
+   "spatial-topology-occlusion": {
+    "tp": 1,
+    "fp": 0,
+    "extra": 0,
+    "total": 1
+   },
+   "causal-temporal-sequence": {
+    "tp": 0,
+    "fp": 0,
+    "extra": 0,
+    "total": 0
    }
   }
  },
@@ -1482,7 +1581,7 @@ const DATA = {
  "extras": [
   {
    "slug": "reflection-faces-wrong-way",
-   "desc": "_long-scene 01:41-01:43: window reflection shows the man's FACE while his back is to the glass - direction-impossible reflection, distinct from the location claim KT rejected (kimi x3; needs KT verdict)"
+   "desc": "_long-scene 01:41-01:46: window reflection physically wrong - shows man's FACE while his back is to the glass (kimi x3), and waitress reflection in wrong shirt color/posture (qwen27b). Distinct from the location claim KT rejected; needs KT verdict"
   },
   {
    "slug": "wiper-mutation",

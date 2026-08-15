@@ -1,0 +1,65 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "moonshotai/kimi-k3",
+  "timestamp": "2026-08-15T15:14:59.002Z",
+  "latencyMs": 612956,
+  "usage": {
+    "prompt_tokens": 42710,
+    "completion_tokens": 18405,
+    "total_tokens": 61115,
+    "cost": 0.404205,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.404205,
+      "upstream_inference_prompt_cost": 0.12813,
+      "upstream_inference_completions_cost": 0.276075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 17319,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner exterior | single-story building; long front facade with a glass entrance door set mid-facade, window groups on both sides, red neon OPEN sign in the right-hand window group; chimney center-roof, vent pipe right; right end wall has one small window | unchanged through the opening sequence | static establishing view 00:00-00:09",
+    "White semi tractor-trailer | parked at the building's left end, engine smoking | absent later; the departure scene uses a different dark conventional semi parked in front of the windows | vehicle identity out of scope, positions noted",
+    "Booth row (Wall A, street-facing long wall) | green booths beneath a continuous band of windows; OPEN neon hangs in this wall near the front end | identical arrangement in every interior wide (00:18, 00:59, 01:27, 01:50) | consistent; no door ever interrupts this wall inside",
+    "Counter and stools (Wall B, opposite long wall) | long counter with red swivel stools, curved front end; back shelf with espresso machine, microwaves, posters, wall clock | same across all angles | consistent",
+    "Kitchen pass-through | centered on the rear short wall behind the counter, warm-lit kitchen beyond; connects kitchen to service aisle the same way in 00:10, 00:45, 00:51, 01:08 | consistent connectivity",
+    "Entrance door (interior) | glass door with red EXIT sign located on the FRONT SHORT END wall, with a refrigerated display case beside it (00:45) | same whenever shown (00:45, implied 01:27) | conflicts with exterior, which places the door mid-long-facade",
+    "OPEN neon sign | hangs in Wall A window near the front end | reads 'OPEN' from outside (00:00) and also reads 'OPEN' from inside (00:18 onward) | a single-face sign must read mirrored from one side",
+    "Man (customer) | emerges from the kitchen end ~00:19 (consistent with the rear wooden door near the pass-through), walks the aisle, sits at the counter's front end; later seated mid-counter through 01:34; leaves cash and exits to the truck | seated positions track continuously within scenes | no wrong-side emergence",
+    "Waitress | works the service aisle behind the counter: wiping, fetching the pot from the machine at the kitchen end, pouring and serving at the counter; sits beside the man 01:19-01:34 | all paths geometrically compatible with the counter/kitchen layout | closing montage 01:50-01:58 uses an artistic time-lapse superimposition of her positions (handled elsewhere)",
+    "Refrigerated display case | positioned inside next to the front-end EXIT door | seen from the kitchen side at 00:45 and from the counter side at 01:27 with matching relative placement | consistent",
+    "Background through Wall A windows | neighboring gabled structure and parked cars outside | visible as a night silhouette (00:18) and in daylight (00:59, 01:50) from the same wall | consistent through-opening background"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:45",
+      "entity": "entrance door / facade connectivity (exterior vs interior)",
+      "invariant_violated": "layout consistency / doorway connectivity",
+      "description": "The exterior (00:00-00:09) establishes the entrance as a glass door set in the middle of the long, windowed front facade, with window groups on both sides and the OPEN neon in the right-hand group. Every interior view of that same windowed long wall (00:18, 00:59, 01:27, 01:50) shows an unbroken run of booths and windows with no door at all; the only customer door inside is the glass EXIT door on the short end wall (00:45). The door cannot simultaneously sit mid-long-wall outside and on the end wall inside while the long wall remains doorless; additionally the exterior's right end wall, which corresponds to the interior door end, shows only a window.",
+      "severity": "moderate",
+      "confidence": 0.62
+    },
+    {
+      "timestamp": "00:18",
+      "entity": "OPEN neon sign",
+      "invariant_violated": "object orientation consistency (mirror ambiguity)",
+      "description": "The neon OPEN sign is a single-faced sign hanging in the front window. It reads 'OPEN' left-to-right when seen from outside the building (00:00-00:09) and also reads 'OPEN' left-to-right when seen from inside (00:18, 00:59, 01:08, 01:50). One of the two views must be the mirrored reverse of the same sign; both reading correctly is only possible with a double-faced sign, which is not visually indicated.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner exterior | single-story building; long front facade with a glass entrance door set mid-facade, window groups on both sides, red neon OPEN sign in the right-hand window group; chimney center-roof, vent pipe right; right end wall has one small window | unchanged through the opening sequence | static establishing view 00:00-00:09\",\n    \"White semi tractor-trailer | parked at the building's left end, engine smoking | absent later; the departure scene uses a different dark conventional semi parked in front of the windows | vehicle identity out of scope, positions noted\",\n    \"Booth row (Wall A, street-facing long wall) | green booths beneath a continuous band of windows; OPEN neon hangs in this wall near the front end | identical arrangement in every interior wide (00:18, 00:59, 01:27, 01:50) | consistent; no door ever interrupts this wall inside\",\n    \"Counter and stools (Wall B, opposite long wall) | long counter with red swivel stools, curved front end; back shelf with espresso machine, microwaves, posters, wall clock | same across all angles | consistent\",\n    \"Kitchen pass-through | centered on the rear short wall behind the counter, warm-lit kitchen beyond; connects kitchen to service aisle the same way in 00:10, 00:45, 00:51, 01:08 | consistent connectivity\",\n    \"Entrance door (interior) | glass door with red EXIT sign located on the FRONT SHORT END wall, with a refrigerated display case beside it (00:45) | same whenever shown (00:45, implied 01:27) | conflicts with exterior, which places the door mid-long-facade\",\n    \"OPEN neon sign | hangs in Wall A window near the front end | reads 'OPEN' from outside (00:00) and also reads 'OPEN' from inside (00:18 onward) | a single-face sign must read mirrored from one side\",\n    \"Man (customer) | emerges from the kitchen end ~00:19 (consistent with the rear wooden door near the pass-through), walks the aisle, sits at the counter's front end; later seated mid-counter through 01:34; leaves cash and exits to the truck | seated positions track continuously within scenes | no wrong-side emergence\",\n    \"Waitress | works the service aisle behind the counter: wiping, fetching the pot from the machine at the kitchen end, pouring and serving at the counter; sits beside the man 01:19-01:34 | all paths geometrically compatible with the counter/kitchen layout | closing montage 01:50-01:58 uses an artistic time-lapse superimposition of her positions (handled elsewhere)\",\n    \"Refrigerated display case | positioned inside next to the front-end EXIT door | seen from the kitchen side at 00:45 and from the counter side at 01:27 with matching relative placement | consistent\",\n    \"Background through Wall A windows | neighboring gabled structure and parked cars outside | visible as a night silhouette (00:18) and in daylight (00:59, 01:50) from the same wall | consistent through-opening background\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"entrance door / facade connectivity (exterior vs interior)\",\n      \"invariant_violated\": \"layout consistency / doorway connectivity\",\n      \"description\": \"The exterior (00:00-00:09) establishes the entrance as a glass door set in the middle of the long, windowed front facade, with window groups on both sides and the OPEN neon in the right-hand group. Every interior view of that same windowed long wall (00:18, 00:59, 01:27, 01:50) shows an unbroken run of booths and windows with no door at all; the only customer door inside is the glass EXIT door on the short end wall (00:45). The door cannot simultaneously sit mid-long-wall outside and on the end wall inside while the long wall remains doorless; additionally the exterior's right end wall, which corresponds to the interior door end, shows only a window.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.62\n    },\n    {\n      \"timestamp\": \"00:18\",\n      \"entity\": \"OPEN neon sign\",\n      \"invariant_violated\": \"object orientation consistency (mirror ambiguity)\",\n      \"description\": \"The neon OPEN sign is a single-faced sign hanging in the front window. It reads 'OPEN' left-to-right when seen from outside the building (00:00-00:09) and also reads 'OPEN' left-to-right when seen from inside (00:18, 00:59, 01:08, 01:50). One of the two views must be the mirrored reverse of the same sign; both reading correctly is only possible with a double-faced sign, which is not visually indicated.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

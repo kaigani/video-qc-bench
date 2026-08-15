@@ -1,0 +1,40 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:26:41.338Z",
+  "latencyMs": 149913,
+  "usage": {
+    "prompt_tokens": 9466,
+    "completion_tokens": 3160,
+    "total_tokens": 12626,
+    "cost": 0.0143717,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0143717,
+      "upstream_inference_prompt_cost": 0.0042597,
+      "upstream_inference_completions_cost": 0.010112
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2714,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone (dark case, notes app open) | start: held in hands in foreground, screen lit showing dark 'A7A2' scribble center | end: still held, tilted/rotated, screen shows 'A7A2' in black plus added 'x2' and 'A2-12' annotations | screen content edited over time (dark -> red '7A2' -> black 'A7A2' + annotations) consistent with user tapping/writing (finger seen at screen edge ~7-8s); orientation changes only as the holding hands rotate it",
+    "red tote bag | start: held by person in blue at top of stairs | end: carried in that person's left hand walking away, out of frame | no state change; single bag, never duplicated",
+    "metal stair handrail | start: fixed, right side of stairs | end: same, fixed | no transitions"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"smartphone (dark case, notes app open) | start: held in hands in foreground, screen lit showing dark 'A7A2' scribble center | end: still held, tilted/rotated, screen shows 'A7A2' in black plus added 'x2' and 'A2-12' annotations | screen content edited over time (dark -> red '7A2' -> black 'A7A2' + annotations) consistent with user tapping/writing (finger seen at screen edge ~7-8s); orientation changes only as the holding hands rotate it\",\n    \"red tote bag | start: held by person in blue at top of stairs | end: carried in that person's left hand walking away, out of frame | no state change; single bag, never duplicated\",\n    \"metal stair handrail | start: fixed, right side of stairs | end: same, fixed | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

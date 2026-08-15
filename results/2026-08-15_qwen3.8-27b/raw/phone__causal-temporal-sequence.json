@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:35:26.117Z",
+  "latencyMs": 251567,
+  "usage": {
+    "prompt_tokens": 9451,
+    "completion_tokens": 3592,
+    "total_tokens": 13043,
+    "cost": 0.01574735,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01574735,
+      "upstream_inference_prompt_cost": 0.00425295,
+      "upstream_inference_completions_cost": 0.0114944
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3115,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background pedestrian (blue shirt, red bag) | 0.0s: standing at top of stairs, facing toward camera, holding red bag | ~2.4s: has walked away and is nearly out of frame; gone by 3.4s | turned and walked off between 0.0s and 2.4s; displacement per interval is consistent walking speed, no teleporting or reversed motion",
+    "smartphone in hand | 0.0s: screen on showing '7:42', screen mostly in shade, held angled toward camera | 9.7s: phone lowered/rotated, screen dark and motion-blurred | hand rotates/tilts phone through the shot; screen content (7:42, 'A A', scribbles) remains consistent, no unexplained content jumps",
+    "screen reflection (light band) | 0.0s: little to no glare | 8.7s: narrow bright band at right edge | large bright band appears ~2.4s and sweeps across the screen, tracking the phone's visible tilt toward the light; band position changes correlate with phone angle in each frame",
+    "holder's fingers | 0.0s: gripping phone edges, thumb resting on side | 8.7s: index finger extended to touch screen edge; 9.7s: phone moving/lowered | the reach/tap motion initiates the phone's downward move at 9.7s; action completes into the motion, no dissolve"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"background pedestrian (blue shirt, red bag) | 0.0s: standing at top of stairs, facing toward camera, holding red bag | ~2.4s: has walked away and is nearly out of frame; gone by 3.4s | turned and walked off between 0.0s and 2.4s; displacement per interval is consistent walking speed, no teleporting or reversed motion\",\n    \"smartphone in hand | 0.0s: screen on showing '7:42', screen mostly in shade, held angled toward camera | 9.7s: phone lowered/rotated, screen dark and motion-blurred | hand rotates/tilts phone through the shot; screen content (7:42, 'A A', scribbles) remains consistent, no unexplained content jumps\",\n    \"screen reflection (light band) | 0.0s: little to no glare | 8.7s: narrow bright band at right edge | large bright band appears ~2.4s and sweeps across the screen, tracking the phone's visible tilt toward the light; band position changes correlate with phone angle in each frame\",\n    \"holder's fingers | 0.0s: gripping phone edges, thumb resting on side | 8.7s: index finger extended to touch screen edge; 9.7s: phone moving/lowered | the reach/tap motion initiates the phone's downward move at 9.7s; action completes into the motion, no dissolve\"\n  ],\n  \"findings\": []\n}"
+}

@@ -13,7 +13,7 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 | dancer-mirror | 0 | 0 | 0 | 0 | 0 | 0 |
 | dialogue | 0 | 0 | 0 | 0 | 0 | 0 |
 | home-tour | 1 | 0 | 0 | 0 | 0 | 0 |
-| man-cups | 0 | 0 | 1 | 0 | — | 0 |
+| man-cups | 0 | 0 | 1 | 0 | 0 | 0 |
 | man-in-mirror | 0 | 0 | 2 | 0 | 0 | 0 |
 | phone | 0 | 0 | 0 | 0 | 0 | 0 |
 | pouring-olives | 1 | 0 | 4 | 0 | 0 | 0 |
@@ -23,7 +23,7 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 | woman-apple | 1 | 0 | 0 | 0 | 0 | 0 |
 | woman-car | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Totals:** 83 calls, 1,351,154 tokens, $1.9553. Errors: 1 (man-cups__spatial-topology-occlusion).
+**Totals:** 84 calls, 1,359,613 tokens, $1.9627. Errors: 0.
 
 ## _long-scene
 
@@ -183,6 +183,10 @@ _No findings._
 | 1 | 00:03 | Gold coin initially inside front-left red metal cup | location & orientation: position changes without visible movement | The front-left cup started with 1 gold coin. After a second coin was visibly placed into the cup and one coin was visibly removed, the cup was observed to be empty. The original coin was no longer present in the cup with no visible removal action, and shortly after appeared in the performer's opposite hand with no visible transfer action. | severe | 0.9 |  |
 
 ### Contact, Interaction & Body Mechanics Observer
+
+_No findings._
+
+### Spatial Topology & Occlusion Observer
 
 _No findings._
 

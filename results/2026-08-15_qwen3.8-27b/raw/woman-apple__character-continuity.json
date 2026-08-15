@@ -1,0 +1,52 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:59:17.341Z",
+  "latencyMs": 737535,
+  "usage": {
+    "prompt_tokens": 9448,
+    "completion_tokens": 10381,
+    "total_tokens": 19829,
+    "cost": 0.0374708,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0374708,
+      "upstream_inference_prompt_cost": 0.0042516,
+      "upstream_inference_completions_cost": 0.0332192
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9503,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman (brown ponytail, navy button cardigan, light grey shorts, watch on left wrist, bracelet, ring, necklace) | 00:00 center of aisle facing camera, umbrella in left hand, red apple in right hand | 00:09 same wardrobe, seen from behind, still holding umbrella; apple in right hand | walks toward camera continuously while camera orbits from front to her side to behind; no attribute changes detected",
+    "Man in light-blue checked shirt (glasses, beard, short hair) | 00:08 left foreground, profile facing screen-right, walking toward the aisle | 00:09 right mid-ground, back to camera, walking away | position and heading flip ~180 degrees between consecutive shots",
+    "Man in white t-shirt (grey shorts) | 00:02 left foreground, back to camera | 00:05 right side, back to camera, walking away | passes behind the main woman with consistent progression",
+    "Woman in light-blue t-shirt (ponytail, black crossbody bag) | 00:01 left foreground | 00:04 right mid-ground, back to camera, walking away | consistent exit path",
+    "Man in cream t-shirt (denim shorts, glasses) | 00:00 right of main woman walking toward camera | out of frame by 00:05 after passing camera | consistent approach",
+    "Women in red polo (blue crossbody bag) and maroon top | 00:00 right side approaching camera | 00:04 still approaching on right | consistent relative positions throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "man in light-blue checked shirt",
+      "invariant_violated": "placement between cuts / multi-character consistency",
+      "description": "At 00:08 the checked-shirt man is in the left foreground in profile, facing/walking screen-right (toward the aisle), about 1 m from camera. In the next shot (00:09), while static anchors (woman in white tank top on the right, stall lines, main woman) show only a small camera shift to behind her, the same man suddenly appears on the right mid-ground with his back to camera, i.e. heading the opposite direction and several metres farther away. He cannot have crossed the aisle and reversed direction in the sub-second interval, so his placement is inconsistent across the cut.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Main woman (brown ponytail, navy button cardigan, light grey shorts, watch on left wrist, bracelet, ring, necklace) | 00:00 center of aisle facing camera, umbrella in left hand, red apple in right hand | 00:09 same wardrobe, seen from behind, still holding umbrella; apple in right hand | walks toward camera continuously while camera orbits from front to her side to behind; no attribute changes detected\",\n    \"Man in light-blue checked shirt (glasses, beard, short hair) | 00:08 left foreground, profile facing screen-right, walking toward the aisle | 00:09 right mid-ground, back to camera, walking away | position and heading flip ~180 degrees between consecutive shots\",\n    \"Man in white t-shirt (grey shorts) | 00:02 left foreground, back to camera | 00:05 right side, back to camera, walking away | passes behind the main woman with consistent progression\",\n    \"Woman in light-blue t-shirt (ponytail, black crossbody bag) | 00:01 left foreground | 00:04 right mid-ground, back to camera, walking away | consistent exit path\",\n    \"Man in cream t-shirt (denim shorts, glasses) | 00:00 right of main woman walking toward camera | out of frame by 00:05 after passing camera | consistent approach\",\n    \"Women in red polo (blue crossbody bag) and maroon top | 00:00 right side approaching camera | 00:04 still approaching on right | consistent relative positions throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"man in light-blue checked shirt\",\n      \"invariant_violated\": \"placement between cuts / multi-character consistency\",\n      \"description\": \"At 00:08 the checked-shirt man is in the left foreground in profile, facing/walking screen-right (toward the aisle), about 1 m from camera. In the next shot (00:09), while static anchors (woman in white tank top on the right, stall lines, main woman) show only a small camera shift to behind her, the same man suddenly appears on the right mid-ground with his back to camera, i.e. heading the opposite direction and several metres farther away. He cannot have crossed the aisle and reversed direction in the sub-second interval, so his placement is inconsistent across the cut.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

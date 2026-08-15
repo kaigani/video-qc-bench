@@ -8,7 +8,7 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 
 | Video | BASELINE generalist | character continuity | object persistence state | contact interaction kinematics | spatial topology occlusion | causal temporal sequence |
 |---|---|---|---|---|---|---|
-| _long-scene | 6 | 2 | 2 | 1 | — | 2 |
+| _long-scene | 6 | 2 | 2 | 1 | 2 | 2 |
 | child-marbles | 0 | 0 | 0 | 0 | 0 | 0 |
 | dancer-mirror | 0 | 0 | 0 | 0 | 0 | 0 |
 | dialogue | 1 | 0 | 0 | 0 | 0 | 0 |
@@ -21,9 +21,9 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 | watchmaker | 0 | 0 | 0 | 0 | 0 | 0 |
 | weird-blocks | 2 | 0 | 5 | 0 | 0 | 0 |
 | woman-apple | 4 | 0 | 0 | 1 | 0 | 0 |
-| woman-car | 7 | 0 | 1 | 0 | — | 1 |
+| woman-car | 7 | 0 | 1 | 0 | 0 | 1 |
 
-**Totals:** 82 calls, 2,411,749 tokens, $10.1646. Errors: 2 (_long-scene__spatial-topology-occlusion, woman-car__spatial-topology-occlusion).
+**Totals:** 84 calls, 2,505,457 tokens, $10.8281. Errors: 0.
 
 ## _long-scene
 
@@ -57,6 +57,13 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 01:52 | waitress (two simultaneous instances) | solidity / body duplication | During the final sunlit cleaning sequence, two figures wearing the same uniform and apron are visible at once: one stands up from the customer-side stool and moves behind the right end of the counter, while a second, already-present figure wipes the far end of the counter near the front window. Over the next ~5 seconds the near figure walks toward the back and the two converge at the kitchen doorway, after which only a single figure remains — the two bodies occupy overlapping space and merge into one with no collision, occlusion, or separation event. A single person cannot be in two places at once, and the merge is an unexplained pass-through/overlap of solid bodies. | moderate | 0.6 |  |
+
+### Spatial Topology & Occlusion Observer
+
+| # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
+|---|---|---|---|---|---|---|---|
+| 1 | 00:45 | entrance door / facade connectivity (exterior vs interior) | layout consistency / doorway connectivity | The exterior (00:00-00:09) establishes the entrance as a glass door set in the middle of the long, windowed front facade, with window groups on both sides and the OPEN neon in the right-hand group. Every interior view of that same windowed long wall (00:18, 00:59, 01:27, 01:50) shows an unbroken run of booths and windows with no door at all; the only customer door inside is the glass EXIT door on the short end wall (00:45). The door cannot simultaneously sit mid-long-wall outside and on the end wall inside while the long wall remains doorless; additionally the exterior's right end wall, which corresponds to the interior door end, shows only a window. | moderate | 0.62 |  |
+| 2 | 00:18 | OPEN neon sign | object orientation consistency (mirror ambiguity) | The neon OPEN sign is a single-faced sign hanging in the front window. It reads 'OPEN' left-to-right when seen from outside the building (00:00-00:09) and also reads 'OPEN' left-to-right when seen from inside (00:18, 00:59, 01:08, 01:50). One of the two views must be the mirrored reverse of the same sign; both reading correctly is only possible with a double-faced sign, which is not visually indicated. | minor | 0.5 |  |
 
 ### Causal & Temporal Sequence Observer
 
@@ -459,6 +466,10 @@ _No findings._
 | 1 | 00:00 | object behind windshield (rearview mirror / dark silhouette) | identity & persistence (no unexplained transformation) | At 00:00–00:02 a large dark cross/figure-shaped mass fills the center of the windshield; over the following seconds it shrinks and resolves into a small standard rectangular rearview mirror mounted at the top of the glass. No visible action causes this change in size, shape, or position; the camera zoom alone cannot account for the object's proportions changing relative to the windshield. | moderate | 0.5 |  |
 
 ### Contact, Interaction & Body Mechanics Observer
+
+_No findings._
+
+### Spatial Topology & Occlusion Observer
 
 _No findings._
 

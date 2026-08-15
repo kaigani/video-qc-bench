@@ -1,0 +1,41 @@
+{
+  "key": "phone__contact-interaction-kinematics",
+  "video": "phone.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:31:14.539Z",
+  "latencyMs": 273189,
+  "usage": {
+    "prompt_tokens": 9467,
+    "completion_tokens": 4337,
+    "total_tokens": 13804,
+    "cost": 0.01813855,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01813855,
+      "upstream_inference_prompt_cost": 0.00426015,
+      "upstream_inference_completions_cost": 0.0138784
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4063,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone (portrait, handwritten math on screen) | held in two hands, screen toward POV camera, top of stair area in background | held in same two hands, tilted/lowered by end | right thumb maintains edge contact from 00:00 continuously; left thumb/finger supports lower-left corner; right index finger enters ~00:07 and contacts screen ~00:08; grip never releases or floats",
+    "Right hand (thumb with light/white nail) | thumb contacting phone's right edge from 00:00 | same, slightly repositioned upward by 00:07 | continuous edge contact; no clipping through bezel; index finger trajectory into screen is continuous, no snapping",
+    "Left hand | supporting lower-left corner/edge of phone from 00:00 | same | continuous contact, no pass-through of phone body",
+    "Person in blue shirt/jeans carrying red box | standing on upper landing facing camera, box at chest height gripped by left hand on top edge | walking away on upper landing, box at side in same left hand, feet on pavement | turned around between 00:00 and 00:01 (within 1s interval, plausible); box grip stays in left hand; feet remain planted/striding without visible slide or support gap"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Smartphone (portrait, handwritten math on screen) | held in two hands, screen toward POV camera, top of stair area in background | held in same two hands, tilted/lowered by end | right thumb maintains edge contact from 00:00 continuously; left thumb/finger supports lower-left corner; right index finger enters ~00:07 and contacts screen ~00:08; grip never releases or floats\",\n    \"Right hand (thumb with light/white nail) | thumb contacting phone's right edge from 00:00 | same, slightly repositioned upward by 00:07 | continuous edge contact; no clipping through bezel; index finger trajectory into screen is continuous, no snapping\",\n    \"Left hand | supporting lower-left corner/edge of phone from 00:00 | same | continuous contact, no pass-through of phone body\",\n    \"Person in blue shirt/jeans carrying red box | standing on upper landing facing camera, box at chest height gripped by left hand on top edge | walking away on upper landing, box at side in same left hand, feet on pavement | turned around between 00:00 and 00:01 (within 1s interval, plausible); box grip stays in left hand; feet remain planted/striding without visible slide or support gap\"\n  ],\n  \"findings\": []\n}"
+}

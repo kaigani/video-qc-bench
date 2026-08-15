@@ -1,0 +1,53 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:34:46.176Z",
+  "latencyMs": 218749,
+  "usage": {
+    "prompt_tokens": 9466,
+    "completion_tokens": 4722,
+    "total_tokens": 14188,
+    "cost": 0.0193701,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0193701,
+      "upstream_inference_prompt_cost": 0.0042597,
+      "upstream_inference_completions_cost": 0.0151104
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4009,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red apple | whole, held in woman's right hand at chest height, left hand on umbrella shaft | not visible after 00:08; both hands clasped empty on umbrella shaft | held continuously 00:00-00:07; gone by 00:08 with no visible drop, hand-off, or placement",
+    "blue umbrella | open, canopy overhead, shaft gripped in woman's left hand | open, shaft gripped with both hands | no state change; remains open and held throughout",
+    "green limes in dark-green crate (left stall) | piled, full crate | same | none",
+    "orange/red citrus in red crate (left stall) | piled, full crate | same | none",
+    "limes in blue plastic crate (right stall) | full | same | none",
+    "red apples + limes in wooden crate (right stall) | full | same | none",
+    "hanging red-fruit bunches (left stall ceiling) | suspended, intact | same | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "identity & persistence (object vanishes)",
+      "description": "The red apple is held in the woman's right hand from 00:00 through 00:07. At 00:08-00:09 her right hand is visibly empty, curled around the umbrella shaft beneath her left hand, and no apple is visible from the side or rear view. No visible action (dropping, handing to another person, placing on a surface) accounts for its removal, so the apple's disappearance is unexplained.",
+      "severity": "severe",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"red apple | whole, held in woman's right hand at chest height, left hand on umbrella shaft | not visible after 00:08; both hands clasped empty on umbrella shaft | held continuously 00:00-00:07; gone by 00:08 with no visible drop, hand-off, or placement\",\n    \"blue umbrella | open, canopy overhead, shaft gripped in woman's left hand | open, shaft gripped with both hands | no state change; remains open and held throughout\",\n    \"green limes in dark-green crate (left stall) | piled, full crate | same | none\",\n    \"orange/red citrus in red crate (left stall) | piled, full crate | same | none\",\n    \"limes in blue plastic crate (right stall) | full | same | none\",\n    \"red apples + limes in wooden crate (right stall) | full | same | none\",\n    \"hanging red-fruit bunches (left stall ceiling) | suspended, intact | same | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"identity & persistence (object vanishes)\",\n      \"description\": \"The red apple is held in the woman's right hand from 00:00 through 00:07. At 00:08-00:09 her right hand is visibly empty, curled around the umbrella shaft beneath her left hand, and no apple is visible from the side or rear view. No visible action (dropping, handing to another person, placing on a surface) accounts for its removal, so the apple's disappearance is unexplained.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

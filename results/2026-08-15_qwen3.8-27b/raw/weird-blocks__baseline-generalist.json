@@ -1,0 +1,71 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T12:21:08.410Z",
+  "latencyMs": 296778,
+  "usage": {
+    "prompt_tokens": 9267,
+    "completion_tokens": 7008,
+    "total_tokens": 16275,
+    "cost": 0.02659575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02659575,
+      "upstream_inference_prompt_cost": 0.00417015,
+      "upstream_inference_completions_cost": 0.0224256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5230,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (leftmost) | 0.0s: green, face '2' | final: blue, face '2' | changed from green to blue between 0.0s and 1.0s with no visible swap",
+    "Block 2 | 1.0s: blue '3' being placed | final: blue '3' | placed between blocks 1 and 3, stable afterwards",
+    "Block 3 | 0.0s: green '2' (right of pair) | final: green '2' | stable throughout",
+    "Block 4 | 3.0-4.0s: green '3' being placed | 5.0s onward: orange '2' | identity (color and digit) changed at same position",
+    "Block 5 | absent at 4.0s | light blue '3' | appears at 5.0s with no visible placement action",
+    "Block 6 | 5.0s: blue '3' being placed | 6.0s onward: green '5' | identity changed at same position",
+    "Block 7 | absent at 5.0s | green '2' | appears at 6.0s; placement only partially visible",
+    "Block 8 | 7.0s: blue '6' placed | final: blue '6' | placed normally, stable",
+    "Hand | enters frame, places/adjusts blocks | resting on left blocks | motion mostly plausible, but row grows by two blocks per second in several samples"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost block",
+      "invariant_violated": "object identity continuity",
+      "description": "At 0.0s the leftmost block is green showing '2'; at 1.0s the block in that same position is blue showing '2' (and a blue '3' block has appeared next to it). The green block was never shown being removed or replaced, so its color/identity change is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "4th and 5th blocks",
+      "invariant_violated": "object continuity / unexplained appearance",
+      "description": "At 4.0s the hand is placing a green '3' block as the 4th block. At 5.0s that position holds an orange '2' block and a new light-blue '3' block appears as the 5th block, although no pickup of the green '3' and no placement of the orange '2' or light-blue '3' are visible in the intervening second. The green '3' simply vanished and the row grew by two blocks.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "6th and 7th blocks",
+      "invariant_violated": "object continuity / unexplained appearance",
+      "description": "At 5.0s the hand is placing a blue '3' block in the 6th position. At 6.0s that position holds a green '5' block and a green '2' block has appeared as the 7th. The blue '3' was never seen removed, so the color/digit change and the new block are unexplained.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Block 1 (leftmost) | 0.0s: green, face '2' | final: blue, face '2' | changed from green to blue between 0.0s and 1.0s with no visible swap\",\n    \"Block 2 | 1.0s: blue '3' being placed | final: blue '3' | placed between blocks 1 and 3, stable afterwards\",\n    \"Block 3 | 0.0s: green '2' (right of pair) | final: green '2' | stable throughout\",\n    \"Block 4 | 3.0-4.0s: green '3' being placed | 5.0s onward: orange '2' | identity (color and digit) changed at same position\",\n    \"Block 5 | absent at 4.0s | light blue '3' | appears at 5.0s with no visible placement action\",\n    \"Block 6 | 5.0s: blue '3' being placed | 6.0s onward: green '5' | identity changed at same position\",\n    \"Block 7 | absent at 5.0s | green '2' | appears at 6.0s; placement only partially visible\",\n    \"Block 8 | 7.0s: blue '6' placed | final: blue '6' | placed normally, stable\",\n    \"Hand | enters frame, places/adjusts blocks | resting on left blocks | motion mostly plausible, but row grows by two blocks per second in several samples\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"leftmost block\",\n      \"invariant_violated\": \"object identity continuity\",\n      \"description\": \"At 0.0s the leftmost block is green showing '2'; at 1.0s the block in that same position is blue showing '2' (and a blue '3' block has appeared next to it). The green block was never shown being removed or replaced, so its color/identity change is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"4th and 5th blocks\",\n      \"invariant_violated\": \"object continuity / unexplained appearance\",\n      \"description\": \"At 4.0s the hand is placing a green '3' block as the 4th block. At 5.0s that position holds an orange '2' block and a new light-blue '3' block appears as the 5th block, although no pickup of the green '3' and no placement of the orange '2' or light-blue '3' are visible in the intervening second. The green '3' simply vanished and the row grew by two blocks.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"6th and 7th blocks\",\n      \"invariant_violated\": \"object continuity / unexplained appearance\",\n      \"description\": \"At 5.0s the hand is placing a blue '3' block in the 6th position. At 6.0s that position holds a green '5' block and a green '2' block has appeared as the 7th. The blue '3' was never seen removed, so the color/digit change and the new block are unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

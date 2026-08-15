@@ -1,0 +1,45 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T11:54:22.682Z",
+  "latencyMs": 295361,
+  "usage": {
+    "prompt_tokens": 9466,
+    "completion_tokens": 7388,
+    "total_tokens": 16854,
+    "cost": 0.0279013,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0279013,
+      "upstream_inference_prompt_cost": 0.0042597,
+      "upstream_inference_completions_cost": 0.0236416
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6877,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | open, no lid, upright, empty, on wooden cutting board | open, no lid, upright, ~1/3 full with mixed green/dark olives | 00:01-00:03 olives poured in from small bowl (first batch, cut mid-pour); 00:06-00:09 second pour adds more mixed olives; jar never moved, lid never present",
+    "small glass bowl (held by person) | held in both hands above jar, appears full of green olives | same bowl, emptied twice, dark olives visible in it from 00:05 | poured into jar 00:01-00:03 (emptied by 00:03); refilled off-camera; second pour 00:05-00:09, emptied by 00:09",
+    "green olives in small bowl | in small bowl held above jar | poured into jar in two batches | moved only via visible pouring action",
+    "dark/purple olives | not clearly visible before 00:02 (small bowl partly occluded by hands) | mixed in jar from 00:02; also visible in small bowl 00:05-00:08 | first appear inside jar during the ongoing pour; consistent with having been in the occluded small bowl",
+    "stainless steel bowl of green olives | on counter right, heaped with green olives | on counter right, green olives with a few brownish pieces visible from 00:05 | no direct manipulation; 00:04-00:05 camera reframe/angle change; minor content shift likely occlusion/angle",
+    "speckled ceramic bowl of green olives | on counter far right, full | unchanged | no transitions",
+    "small clear glass bottle | out of frame before 00:04 | on counter at right edge from 00:04, static | enters frame as camera reframes wider; never touched",
+    "wooden cutting board | under jar | unchanged | no transitions"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"large glass jar | open, no lid, upright, empty, on wooden cutting board | open, no lid, upright, ~1/3 full with mixed green/dark olives | 00:01-00:03 olives poured in from small bowl (first batch, cut mid-pour); 00:06-00:09 second pour adds more mixed olives; jar never moved, lid never present\",\n    \"small glass bowl (held by person) | held in both hands above jar, appears full of green olives | same bowl, emptied twice, dark olives visible in it from 00:05 | poured into jar 00:01-00:03 (emptied by 00:03); refilled off-camera; second pour 00:05-00:09, emptied by 00:09\",\n    \"green olives in small bowl | in small bowl held above jar | poured into jar in two batches | moved only via visible pouring action\",\n    \"dark/purple olives | not clearly visible before 00:02 (small bowl partly occluded by hands) | mixed in jar from 00:02; also visible in small bowl 00:05-00:08 | first appear inside jar during the ongoing pour; consistent with having been in the occluded small bowl\",\n    \"stainless steel bowl of green olives | on counter right, heaped with green olives | on counter right, green olives with a few brownish pieces visible from 00:05 | no direct manipulation; 00:04-00:05 camera reframe/angle change; minor content shift likely occlusion/angle\",\n    \"speckled ceramic bowl of green olives | on counter far right, full | unchanged | no transitions\",\n    \"small clear glass bottle | out of frame before 00:04 | on counter at right edge from 00:04, static | enters frame as camera reframes wider; never touched\",\n    \"wooden cutting board | under jar | unchanged | no transitions\"\n  ],\n  \"findings\": []\n}"
+}

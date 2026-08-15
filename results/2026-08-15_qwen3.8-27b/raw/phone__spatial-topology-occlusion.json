@@ -1,0 +1,44 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:44:29.045Z",
+  "latencyMs": 214777,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 4304,
+    "total_tokens": 13761,
+    "cost": 0.01802845,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01802845,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0137728
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3808,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "staircase | steps descending along the left edge from the camera position down to the paved walkway | same steps visible in final low-angle frame, camera at top looking down | static throughout",
+    "left wall with brick base and vertical metal fixtures | runs along the left side of the stairs | same wall at upper left in final frame | static, consistent left-side placement",
+    "black metal handrail | right side, top rail running diagonally from upper-right corner down to a corner post near mid-frame, vertical balusters | same diagonal handrail on right in all close-up frames and in final frame | static; balusters consistently occlude background walkway and planting",
+    "paved plaza/walkway | background surface beyond the handrail where pedestrian walks | same paving visible at top of final frame | static, consistent with being on the far side of the handrail",
+    "planter strip with green plants | right side, below/behind the handrail base | same greenery visible beyond the handrail on the right in final frame | static",
+    "pedestrian in blue shirt with red bag | on the walkway beyond the handrail, upper right at 0s, bag on their left side, walking away | walked away and exited top of frame by ~3s as camera tilted down | continuous trajectory away from camera, no side switch",
+    "smartphone in foreground | held upright, left-center foreground, screen showing A7A2, out of focus at start | rotated to horizontal at bottom of frame in final shot | focus pull and re-orientation; always occludes background, never rendered behind it"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"staircase | steps descending along the left edge from the camera position down to the paved walkway | same steps visible in final low-angle frame, camera at top looking down | static throughout\",\n    \"left wall with brick base and vertical metal fixtures | runs along the left side of the stairs | same wall at upper left in final frame | static, consistent left-side placement\",\n    \"black metal handrail | right side, top rail running diagonally from upper-right corner down to a corner post near mid-frame, vertical balusters | same diagonal handrail on right in all close-up frames and in final frame | static; balusters consistently occlude background walkway and planting\",\n    \"paved plaza/walkway | background surface beyond the handrail where pedestrian walks | same paving visible at top of final frame | static, consistent with being on the far side of the handrail\",\n    \"planter strip with green plants | right side, below/behind the handrail base | same greenery visible beyond the handrail on the right in final frame | static\",\n    \"pedestrian in blue shirt with red bag | on the walkway beyond the handrail, upper right at 0s, bag on their left side, walking away | walked away and exited top of frame by ~3s as camera tilted down | continuous trajectory away from camera, no side switch\",\n    \"smartphone in foreground | held upright, left-center foreground, screen showing A7A2, out of focus at start | rotated to horizontal at bottom of frame in final shot | focus pull and re-orientation; always occludes background, never rendered behind it\"\n  ],\n  \"findings\": []\n}"
+}

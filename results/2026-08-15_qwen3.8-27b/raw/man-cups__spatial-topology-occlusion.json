@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "qwen/qwen3.8-27b",
+  "timestamp": "2026-08-15T13:40:10.076Z",
+  "latencyMs": 563403,
+  "usage": {
+    "prompt_tokens": 9457,
+    "completion_tokens": 8931,
+    "total_tokens": 18388,
+    "cost": 0.03283485,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03283485,
+      "upstream_inference_prompt_cost": 0.00425565,
+      "upstream_inference_completions_cost": 0.0285792
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7764,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Round table (red cloth, cream circular center, ring of coin holders in the red border) | center circle with cups placed on it near the left edge; coin-holder ring surrounds it | unchanged at end | camera orbits from a low close-up on the man's right side, around the front, to his left side; table geometry (cream center, border ring) stays consistent in every shot",
+    "Four small metal cups (red outside, silver inside) | loose diamond in the close-up = near cup, two mid cups, far cup; revealed as a single row in wide shots | same row of four in final shot | the 'diamond' in close-up is geometrically the same row viewed obliquely: near cup bottom-left, mid cups staggered, far cup top-right",
+    "Man in blue suit (seated player) | hands enter frame from the left in close-ups (his right hand on near cup, left hand on far cup) | seated at left edge of table, both hands on the two end cups | revealed on the left at 00:04 as camera pulls back; his position relative to the cup row (right hand=near/right-end cup, left hand=far/left-end cup) is consistent across the orbit",
+    "Back wall with tall bright multi-pane windows | behind the man | behind the man throughout | windows drift left-to-right across frame (upper-left at 00:03-00:04, upper-center 00:05-00:07, upper-right 00:08-00:09) exactly as the camera orbits right-side to left-side",
+    "Side wall with picture frame / doorway and dark seating wall | visible at frame-left only in the left-side views (00:08-00:09), hidden behind camera in front views | same | appears on the correct side as the camera passes to the man's left; spectators and chairs in background remain on the far side of the table in all shots",
+    "Moving hands/coins (occlusion check) | hands and coins stay in front of table surface, cups occlude forearms where crossed | same | no background element rendered over foreground; cup rims correctly occlude fingertips at 00:04-00:09"
+  ],
+  "findings": [],
+  "rawText": "\n\n{\n  \"ledger\": [\n    \"Round table (red cloth, cream circular center, ring of coin holders in the red border) | center circle with cups placed on it near the left edge; coin-holder ring surrounds it | unchanged at end | camera orbits from a low close-up on the man's right side, around the front, to his left side; table geometry (cream center, border ring) stays consistent in every shot\",\n    \"Four small metal cups (red outside, silver inside) | loose diamond in the close-up = near cup, two mid cups, far cup; revealed as a single row in wide shots | same row of four in final shot | the 'diamond' in close-up is geometrically the same row viewed obliquely: near cup bottom-left, mid cups staggered, far cup top-right\",\n    \"Man in blue suit (seated player) | hands enter frame from the left in close-ups (his right hand on near cup, left hand on far cup) | seated at left edge of table, both hands on the two end cups | revealed on the left at 00:04 as camera pulls back; his position relative to the cup row (right hand=near/right-end cup, left hand=far/left-end cup) is consistent across the orbit\",\n    \"Back wall with tall bright multi-pane windows | behind the man | behind the man throughout | windows drift left-to-right across frame (upper-left at 00:03-00:04, upper-center 00:05-00:07, upper-right 00:08-00:09) exactly as the camera orbits right-side to left-side\",\n    \"Side wall with picture frame / doorway and dark seating wall | visible at frame-left only in the left-side views (00:08-00:09), hidden behind camera in front views | same | appears on the correct side as the camera passes to the man's left; spectators and chairs in background remain on the far side of the table in all shots\",\n    \"Moving hands/coins (occlusion check) | hands and coins stay in front of table surface, cups occlude forearms where crossed | same | no background element rendered over foreground; cup rims correctly occlude fingertips at 00:04-00:09\"\n  ],\n  \"findings\": []\n}"
+}
