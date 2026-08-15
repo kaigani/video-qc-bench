@@ -32,8 +32,16 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:27 | coffee pot | Physics/Liquid Dynamics | Coffee pours out of the glass carafe, but the top half of the carafe is completely transparent and empty, while a solid black mass of liquid appears at the bottom. | severe | 0.99 |  |
+
+KT: Correct, I'd call it P3, not severe.
+
 | 2 | 01:41 | truck | Continuity | The truck parked outside the diner has changed from white (as seen in the opening shot at 00:00) to dark green. | severe | 0.99 |  |
+
+KT: Correct, P1
+
 | 3 | 01:41 | truck trailer reflection | Physics/Optics | An oversized, perfectly clear image of the waitress's face appears on the side of the truck trailer. It does not behave like a natural reflection in terms of scale, distortion, or the woman's actual position. | severe | 0.95 |  |
+
+KT: False positive, this is a reflection on the glass not the truck.
 
 ### Character Continuity Observer
 
@@ -41,13 +49,23 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 |---|---|---|---|---|---|---|---|
 | 1 | 01:51 | Waitress | character duplication | As the main waitress stands up and walks to the right to clear the counter, a second woman wearing the exact same uniform (blue polo, white apron) and hairstyle walks from right to left in the background kitchen area. | severe | 0.99 |  |
 
+KT: Correct, noted in my review
+
 ### Object Persistence & Physical State Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 01:50 | Man's coffee mug | identity & persistence | The mug was left on the counter next to the money. In the wide shot at 01:50, the counter in front of the man's seat is bare and the mug has disappeared. | severe | 0.99 |  |
+
+KT: Patially correct, Mug has moved on counter, P3
+
 | 2 | 01:50 | Man's plate | identity & persistence | The man's plate of food was on the counter in front of him. At 01:50, the plate is no longer on the counter, having vanished without a visible action. | severe | 0.99 |  |
+
+KT: False positive, She takes the plate away, 1:15 (also Gemini's timestamp is off)
+
 | 3 | 01:50 | Money (two bills) | identity & persistence | The man placed the money on the counter at 01:38. In the shot at 01:50, the money is gone from the counter without anyone picking it up. | severe | 0.99 |  |
+
+KT: Not the correct error, the two versions of the man's hand is the error
 
 ### Contact, Interaction & Body Mechanics Observer
 
@@ -55,12 +73,21 @@ For each finding, fill in **Verdict** with one of: `defect` (real, correctly ide
 |---|---|---|---|---|---|---|---|
 | 1 | 01:50 | woman's right hand and mug | contact points (floating grip) | The woman reaches for the white mug on the counter, but her fingers form a loose shape next to it rather than wrapping around the handle or the body of the cup. The mug lifts into the air, moving in tandem with her hand, despite no physical gripping contact being established. | severe | 0.95 |  |
 
+KT: False positive, there is another issue with her placing the mug as I noted in the review
+
+
 ### Spatial Topology & Occlusion Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:45 | pass-through opposite wall | scene layout | The view looking out from the kitchen pass-through shows a solid wall with an EXIT door behind the booths. Based on the wide shots establishing the room's layout (e.g., 00:19), the wall opposite the counter should be a continuous large window wall. | severe | 0.99 |  |
+
+KT: Correct, noted in my review
+
 | 2 | 01:50 | front door | scene layout | The front door of the diner is missing. In all previous wide shots looking down the counter (e.g., 00:19, 01:00, 01:18), a glass door is clearly visible to the right of the window with the 'OPEN' sign. In this shot, that space is filled by a solid wall panel. | severe | 0.99 |  |
+
+KT: Correct, interior layout problems noted in my review
+
 
 ### Causal & Temporal Sequence Observer
 
@@ -74,6 +101,8 @@ _No findings._
 |---|---|---|---|---|---|---|---|
 | 1 | 00:05 | balls in bowl | Solid object physics | When the child's hand begins to spin the balls, the balls lose their solid shapes and merge into a blurry, liquid-like state that defies physics. | severe | 1 |  |
 
+KT: Correct
+
 ### Character Continuity Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
@@ -82,11 +111,15 @@ _No findings._
 | 2 | 00:02 | Young boy (right hand) | movement continuity | Before the cut, the boy's right hand is resting on the right side of the bowl's rim. After the cut, it instantly appears in mid-air above the center of the bowl. | moderate | 0.95 |  |
 | 3 | 00:05 | Young boy (right hand) | movement continuity | Before the cut, the boy's right hand is moving slowly inside the bowl. After the cut, it instantly transitions to a very rapid, blurred swirling motion without any time for acceleration. | moderate | 0.9 |  |
 
+KT: Blurring is a fair observation, the notes don't match my review
+
 ### Object Persistence & Physical State Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:05 | Colorful balls in bowl | Identity & Persistence | The solid, opaque balls (red, yellow, green) inside the bowl abruptly transform into translucent, hollow, shell-like objects as the child begins to mix them. The original solid objects vanish and are replaced by these new objects without any logical physical transition. | severe | 1 |  |
+
+KT: Seems correct, doesn't name the red ball duplication
 
 ### Contact, Interaction & Body Mechanics Observer
 
@@ -96,17 +129,23 @@ _No findings._
 | 2 | 00:05 | child's left hand and colored balls | solidity | While swirling the balls, the fingers of the child's left hand are completely submerged inside the volume of the solid balls without displacing them. | severe | 0.99 |  |
 | 3 | 00:06 | colored balls | solidity | During the swirling motion, the colored balls clip through each other and morph together, losing their solid spherical form. | severe | 0.95 |  |
 
+KT: Mostly correct
+
 ### Spatial Topology & Occlusion Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:00 | background environment | scene layout | In the initial shot, the background visible beyond the paving stones is a flat edge of dirt or grass. After the cut to a wider angle at 00:00, the background layout changes entirely, revealing a row of large terracotta pots lined up on a ledge or step that should have been visible in the geometry of the first shot. | severe | 0.95 |  |
 
+KT: False positive, it seems like Gemini is eager to give any positive result even if there is none in this category
+
 ### Causal & Temporal Sequence Observer
 
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:05 | Child's hand and balls | Proportionality & Completion | The rapid, continuous circular motion of the balls does not correspond to the movement of the child's hand. The hand's motion does not impart the correct force or direction to cause this effect, and the fingers appear to morph and dissolve as they pass through the balls, failing to complete a physical interaction. | severe | 0.95 |  |
+
+KT: Correct
 
 ## dancer-mirror
 
@@ -115,6 +154,8 @@ _No findings._
 | # | Time | Entity | Invariant | Description | Sev | Conf | Verdict |
 |---|---|---|---|---|---|---|---|
 | 1 | 00:06 | Reflection woman | Anatomical Integrity | As the woman in the reflection raises her left arm for the second time, her hand is completely missing, leaving her arm to end in a stump. The foreground woman's corresponding hand remains fully intact and visible. | severe | 0.99 |  |
+
+KT: False positive, her hand is raised out of the framing of the shot, which makes sense
 
 ### Character Continuity Observer
 
