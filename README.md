@@ -22,6 +22,7 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 | System | Score | Detection | Defects found | FPs | Run cost |
 |---|---|---|---|---|---|
 | Qwen 3.8 Max (reasoning) | **41** | 52/136 | 15/45 | 11 | $4.42 |
+| Muse Spark 1.2 (reasoning) | **33** | 40/136 | 11/45 | 7 | $1.29 |
 | Gemini 3.6 Flash | **31** | 34/136 | 9/45 | 3 | $0.53 |
 | Gemma 4 31B (reasoning) | **27** | 33/136 | 11/45 | 6 | $0.11 |
 | Gemini Pro Latest (reasoning) | **20** | 69/136 | 23/45 | 49 | $2.15 |

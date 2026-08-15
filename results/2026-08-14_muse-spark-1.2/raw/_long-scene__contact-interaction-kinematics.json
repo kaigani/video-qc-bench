@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:52:58.987Z",
+  "latencyMs": 14546,
+  "usage": {
+    "prompt_tokens": 20100,
+    "completion_tokens": 2666,
+    "total_tokens": 22766,
+    "cost": 0.0364555,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0364555,
+      "upstream_inference_prompt_cost": 0.025125,
+      "upstream_inference_completions_cost": 0.0113305
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2261,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress (light blue shirt, white apron, glasses on chest, hair in bun) | wiping counter at night under artificial light | standing by window at sunrise watching, then wiping/clearing counter in bright daylight | wipes counter with cloth, pours coffee from carafe, serves plate, sits on stool with customer, clears mugs/plate, handles money",
+    "Male customer / truck driver (brown jacket, plaid shirt, gray hair) | outside in truck at dusk | walking to truck outside in daylight | enters diner, walks to counter, sits on stool, receives coffee, receives plate (egg/toast), holds mug, places cash, stands, exits to truck",
+    "Diner counter + red stools | empty counter with condiments at night | empty sunlit counter at dawn | provides support for wiping, sitting, holding mugs/plates/money; stools support seated weight",
+    "Coffee carafe (glass) + white ceramic mug | carafe full on warmer, mug empty on counter | mugs held at counter then cleared | waitress grips carafe handle -> pours stream into mug -> sets carafe down; customer grips mug",
+    "Plated food (fried egg, toast/pancake) | not yet on counter / in kitchen pass | on counter steaming before customer, then removed | carried one-handed, placed on counter, supported, later picked up by waitress",
+    "Semi-truck | white cab idling at night with exhaust/steam | dark green Kenworth box truck parked in daylight | stationary, exhaust emission, later approached and boarded by driver; supports weight on ground",
+    "US currency (folded $100 bills) | not on counter | placed on counter next to mug then left | hand establishes contact, presses/slides bills, releases"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress (light blue shirt, white apron, glasses on chest, hair in bun) | wiping counter at night under artificial light | standing by window at sunrise watching, then wiping/clearing counter in bright daylight | wipes counter with cloth, pours coffee from carafe, serves plate, sits on stool with customer, clears mugs/plate, handles money\",\n    \"Male customer / truck driver (brown jacket, plaid shirt, gray hair) | outside in truck at dusk | walking to truck outside in daylight | enters diner, walks to counter, sits on stool, receives coffee, receives plate (egg/toast), holds mug, places cash, stands, exits to truck\",\n    \"Diner counter + red stools | empty counter with condiments at night | empty sunlit counter at dawn | provides support for wiping, sitting, holding mugs/plates/money; stools support seated weight\",\n    \"Coffee carafe (glass) + white ceramic mug | carafe full on warmer, mug empty on counter | mugs held at counter then cleared | waitress grips carafe handle -> pours stream into mug -> sets carafe down; customer grips mug\",\n    \"Plated food (fried egg, toast/pancake) | not yet on counter / in kitchen pass | on counter steaming before customer, then removed | carried one-handed, placed on counter, supported, later picked up by waitress\",\n    \"Semi-truck | white cab idling at night with exhaust/steam | dark green Kenworth box truck parked in daylight | stationary, exhaust emission, later approached and boarded by driver; supports weight on ground\",\n    \"US currency (folded $100 bills) | not on counter | placed on counter next to mug then left | hand establishes contact, presses/slides bills, releases\"\n  ],\n  \"findings\": []\n}"
+}

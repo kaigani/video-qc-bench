@@ -1,0 +1,59 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:57:52.047Z",
+  "latencyMs": 6697,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 2680,
+    "total_tokens": 4649,
+    "cost": 0.01353115,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 291,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01353115,
+      "upstream_inference_prompt_cost": 0.00214115,
+      "upstream_inference_completions_cost": 0.01139
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2279,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | empty, clear, on wooden board | ~1/2 full with mixed green and dark olives | filled in two distinct pours from small glass bowl",
+    "Small glass bowl | full of olives in person's hands above jar | empty on white counter then refilled in hands then empty again | emptied at 00:04, reappears full at 00:06, emptied again by 00:09",
+    "Stainless steel bowl | ~7-8 green olives on white counter | ~3 olives plus debris remaining | depletes during second pour refill",
+    "Speckled ceramic bowl | full of green olives on white counter | unchanged full | never handled, remains static",
+    "Olives (collective) | appear green in source bowls | mixed green and dark purple/black in jar | color/type appears inconsistent during transit"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives in transit / Large glass jar",
+      "invariant_violated": "Color/Identity Conservation",
+      "description": "Olives visible inside the small glass bowl in the hands look uniformly light green, but the stream falling into the jar and the olives accumulating in the jar are a mix of light green and dark purple/black. Dark olives materialize mid-air and in the jar without being visibly present in the source bowl at the start of the pour.",
+      "severity": "moderate",
+      "confidence": 0.82
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Small glass bowl",
+      "invariant_violated": "Continuity / Quantity Conservation",
+      "description": "The small glass bowl was emptied and set down on the white counter at 00:04, then at 00:06 it is again full in the person's hands with no continuous visible transfer. The stainless steel bowl on the counter simultaneously shows a discontinuous drop in contents, indicating a non-continuous refill/teleport rather than a smooth hand-scooped transfer.",
+      "severity": "minor",
+      "confidence": 0.62
+    }
+  ],
+  "rawText": "{\"ledger\":[\"Large glass jar | empty, clear, on wooden board | ~1/2 full with mixed green and dark olives | filled in two distinct pours from small glass bowl\",\"Small glass bowl | full of olives in person's hands above jar | empty on white counter then refilled in hands then empty again | emptied at 00:04, reappears full at 00:06, emptied again by 00:09\",\"Stainless steel bowl | ~7-8 green olives on white counter | ~3 olives plus debris remaining | depletes during second pour refill\",\"Speckled ceramic bowl | full of green olives on white counter | unchanged full | never handled, remains static\",\"Olives (collective) | appear green in source bowls | mixed green and dark purple/black in jar | color/type appears inconsistent during transit\"],\"findings\":[{\"timestamp\":\"00:01\",\"entity\":\"Olives in transit / Large glass jar\",\"invariant_violated\":\"Color/Identity Conservation\",\"description\":\"Olives visible inside the small glass bowl in the hands look uniformly light green, but the stream falling into the jar and the olives accumulating in the jar are a mix of light green and dark purple/black. Dark olives materialize mid-air and in the jar without being visibly present in the source bowl at the start of the pour.\",\"severity\":\"moderate\",\"confidence\":0.82},{\"timestamp\":\"00:06\",\"entity\":\"Small glass bowl\",\"invariant_violated\":\"Continuity / Quantity Conservation\",\"description\":\"The small glass bowl was emptied and set down on the white counter at 00:04, then at 00:06 it is again full in the person's hands with no continuous visible transfer. The stainless steel bowl on the counter simultaneously shows a discontinuous drop in contents, indicating a non-continuous refill/teleport rather than a smooth hand-scooped transfer.\",\"severity\":\"minor\",\"confidence\":0.62}]}"
+}

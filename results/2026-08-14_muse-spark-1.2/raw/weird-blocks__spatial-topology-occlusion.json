@@ -1,0 +1,43 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:59:57.093Z",
+  "latencyMs": 4862,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 2130,
+    "total_tokens": 4280,
+    "cost": 0.0112087,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0112087,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.0090525
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1806,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden table surface | light wood grain filling lower frame, static horizontal plane | unchanged at end | remains fixed reference for all cubes throughout",
+    "Hand (right hand) | enters from top edge, fingers extended | exits after final left-to-right sweep | repeatedly enters from top/right to place/rotate cubes, occludes cubes correctly when in foreground",
+    "Cube row (positions left-to-right) | 2 green cubes spaced apart, both front face '2' | 8 cubes tightly aligned in single straight row left-to-right | grows sequentially to the right: [Blue 2][Blue 3][Green 2][Orange 2][Light-Blue 3][Green 5][Green 2][Blue 6]",
+    "Cube 1 (leftmost) | green cube front '2' at 00:00 | blue cube front '2', side '6' visible at end | flipped/rotated by hand at ~00:01 to reveal blue faces, then remains stationary",
+    "Cube 3 (original right green cube) | rightmost position at start, front '2' | position 3 in final row, front '2' | shifts from index 2 to index 3 when Cube 2 inserted between, then remains stationary",
+    "Camera viewpoint | fixed eye-level frontal shot centered on table | same fixed shot at end | no cuts, pans, or zooms; perspective and foreshortening constant"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden table surface | light wood grain filling lower frame, static horizontal plane | unchanged at end | remains fixed reference for all cubes throughout\",\n    \"Hand (right hand) | enters from top edge, fingers extended | exits after final left-to-right sweep | repeatedly enters from top/right to place/rotate cubes, occludes cubes correctly when in foreground\",\n    \"Cube row (positions left-to-right) | 2 green cubes spaced apart, both front face '2' | 8 cubes tightly aligned in single straight row left-to-right | grows sequentially to the right: [Blue 2][Blue 3][Green 2][Orange 2][Light-Blue 3][Green 5][Green 2][Blue 6]\",\n    \"Cube 1 (leftmost) | green cube front '2' at 00:00 | blue cube front '2', side '6' visible at end | flipped/rotated by hand at ~00:01 to reveal blue faces, then remains stationary\",\n    \"Cube 3 (original right green cube) | rightmost position at start, front '2' | position 3 in final row, front '2' | shifts from index 2 to index 3 when Cube 2 inserted between, then remains stationary\",\n    \"Camera viewpoint | fixed eye-level frontal shot centered on table | same fixed shot at end | no cuts, pans, or zooms; perspective and foreshortening constant\"\n  ],\n  \"findings\": []\n}"
+}

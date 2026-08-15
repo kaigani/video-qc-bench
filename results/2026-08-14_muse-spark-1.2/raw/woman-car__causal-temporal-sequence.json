@@ -1,0 +1,43 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:01:31.258Z",
+  "latencyMs": 6402,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 2342,
+    "total_tokens": 4491,
+    "cost": 0.01210845,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01210845,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.0099535
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1975,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on passenger window sill, arms crossed, hair resting on shoulders, slight smile | same leaning pose, arms crossed, hair blown back and lifted by wind, gaze forward | hair transitions from still (00:00-00:04) to progressively wind-blown (00:05-00:09) while pose remains constant",
+    "station wagon | parked on desert shoulder, front 3/4 view, wood paneling, roof rack, antenna vertical, license plate STPL89T visible | same parked position, more side-prominent view, antenna still vertical | no self-propulsion; perspective changes only due to camera dolly left/forward, remains stationary",
+    "desert road/environment | empty two-lane asphalt with yellow dashes, dry grasses/shrubs, distant mountains, utility poles receding | same road/terrain, dashes and poles show parallax | background shifts continuously with camera motion (00:00-00:09), vegetation remains static",
+    "wind/atmosphere | calm to light air, no visible dust/vegetation motion | moderate gust implied by hair lift | cause invisible but effect isolated to hair 00:05-00:09; no corroborating motion in grasses or antenna",
+    "sunlight/specular highlight | bright daylight, highlight on hood and windshield, shadows soft | same daylight, highlight slides across hood/windshield | highlight motion correlates with camera angle change, no abrupt light change",
+    "camera/viewpoint | frontal three-quarter distance view | closer, tighter side-front view centered on woman | continuous smooth dolly/pan left and push-in 00:00-00:09 with uninterrupted temporal flow"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on passenger window sill, arms crossed, hair resting on shoulders, slight smile | same leaning pose, arms crossed, hair blown back and lifted by wind, gaze forward | hair transitions from still (00:00-00:04) to progressively wind-blown (00:05-00:09) while pose remains constant\",\n    \"station wagon | parked on desert shoulder, front 3/4 view, wood paneling, roof rack, antenna vertical, license plate STPL89T visible | same parked position, more side-prominent view, antenna still vertical | no self-propulsion; perspective changes only due to camera dolly left/forward, remains stationary\",\n    \"desert road/environment | empty two-lane asphalt with yellow dashes, dry grasses/shrubs, distant mountains, utility poles receding | same road/terrain, dashes and poles show parallax | background shifts continuously with camera motion (00:00-00:09), vegetation remains static\",\n    \"wind/atmosphere | calm to light air, no visible dust/vegetation motion | moderate gust implied by hair lift | cause invisible but effect isolated to hair 00:05-00:09; no corroborating motion in grasses or antenna\",\n    \"sunlight/specular highlight | bright daylight, highlight on hood and windshield, shadows soft | same daylight, highlight slides across hood/windshield | highlight motion correlates with camera angle change, no abrupt light change\",\n    \"camera/viewpoint | frontal three-quarter distance view | closer, tighter side-front view centered on woman | continuous smooth dolly/pan left and push-in 00:00-00:09 with uninterrupted temporal flow\"\n  ],\n  \"findings\": []\n}"
+}

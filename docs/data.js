@@ -130,6 +130,21 @@ const DATA = {
    "cost": 0.583,
    "costEstimated": true,
    "avgLatencyS": 10.8
+  },
+  {
+   "key": "muse",
+   "label": "Muse Spark 1.2",
+   "model": "meta/muse-spark-1.2",
+   "reasoning": true,
+   "detection": 40,
+   "defectsFound": 11,
+   "tp": 18,
+   "extra": 6,
+   "fp": 7,
+   "findings": 31,
+   "cost": 1.106,
+   "costEstimated": false,
+   "avgLatencyS": 7.4
   }
  ],
  "coverage": [
@@ -144,7 +159,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -158,7 +174,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -172,7 +189,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -186,7 +204,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -200,7 +219,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -214,7 +234,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -228,7 +249,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -242,7 +264,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -256,7 +279,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -270,7 +294,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -284,7 +309,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -298,7 +324,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -312,7 +339,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": true,
-    "pegasus": true
+    "pegasus": true,
+    "muse": true
    }
   },
   {
@@ -326,7 +354,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -340,7 +369,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -354,7 +384,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -368,7 +399,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -382,7 +414,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -396,7 +429,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -410,7 +444,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -424,7 +459,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -438,7 +474,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -452,7 +489,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -466,7 +504,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -480,7 +519,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -494,7 +534,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -508,7 +549,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -522,7 +564,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -536,7 +579,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -550,7 +594,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -564,7 +609,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -578,7 +624,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -592,7 +639,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": true,
-    "pegasus": true
+    "pegasus": true,
+    "muse": false
    }
   },
   {
@@ -606,7 +654,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -620,7 +669,8 @@ const DATA = {
     "qwen": true,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -634,7 +684,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -648,7 +699,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -662,7 +714,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -676,7 +729,8 @@ const DATA = {
     "qwen": false,
     "pro": false,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -690,7 +744,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": true
    }
   },
   {
@@ -704,7 +759,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -718,7 +774,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -732,7 +789,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -746,7 +804,8 @@ const DATA = {
     "qwen": true,
     "pro": false,
     "gemma": false,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   },
   {
@@ -760,7 +819,8 @@ const DATA = {
     "qwen": false,
     "pro": true,
     "gemma": true,
-    "pegasus": false
+    "pegasus": false,
+    "muse": false
    }
   }
  ],
@@ -954,6 +1014,44 @@ const DATA = {
     "extra": 0,
     "total": 0
    }
+  },
+  "muse": {
+   "baseline-generalist": {
+    "tp": 9,
+    "fp": 5,
+    "extra": 1,
+    "total": 15
+   },
+   "character-continuity": {
+    "tp": 1,
+    "fp": 1,
+    "extra": 0,
+    "total": 2
+   },
+   "object-persistence-state": {
+    "tp": 5,
+    "fp": 0,
+    "extra": 3,
+    "total": 8
+   },
+   "contact-interaction-kinematics": {
+    "tp": 0,
+    "fp": 0,
+    "extra": 0,
+    "total": 0
+   },
+   "spatial-topology-occlusion": {
+    "tp": 3,
+    "fp": 0,
+    "extra": 0,
+    "total": 3
+   },
+   "causal-temporal-sequence": {
+    "tp": 0,
+    "fp": 1,
+    "extra": 2,
+    "total": 3
+   }
   }
  },
  "missedByAll": [
@@ -967,9 +1065,12 @@ const DATA = {
   "DANC-3",
   "HOME-2",
   "CUPS-2",
-  "OLIV-3",
-  "OLIV-4",
   "SKAT-1"
  ],
- "extras": []
+ "extras": [
+  {
+   "slug": "coin-count-inflation",
+   "desc": "man-cups: loose gold coins on the felt INCREASE in count with no placement action (muse x6; direction opposite to KT's CUPS-3 'coins disappear' - needs KT verdict)"
+  }
+ ]
 };

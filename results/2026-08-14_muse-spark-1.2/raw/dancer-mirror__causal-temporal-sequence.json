@@ -1,0 +1,43 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:54:22.823Z",
+  "latencyMs": 3624,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 1944,
+    "total_tokens": 4093,
+    "cost": 0.01041695,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01041695,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.008262
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (woman in black sports bra and leggings, barefoot) | standing facing mirror, weight centered, arms at sides | standing facing mirror, left arm raised overhead, weight shifted | weight shifts precede foot adjustments, arm raises precede overhead positions, no teleport",
+    "Dancer right arm (tattooed upper arm, viewed from behind) | at side, elbow extended | lowered to side behind back | causes: shoulder abduction ~00:00-00:02 → effect: arm rises to overhead with continuous motion, then adduction ~00:03-00:04 → effect: arm lowers to hip/back, delay plausible",
+    "Dancer left arm | at side, neutral | raised overhead with wrist flexed ~00:06-00:09 | causes: shoulder abduction ~00:06 → effect: arm sweeps laterally then overhead, held ~00:07-00:09, continuous trajectory, no interruption or dissolution",
+    "Mirror reflection (entire dancer + studio) | synchronized with dancer | synchronized with dancer | cause: dancer movement → effect: reflected movement with zero perceptible lag, direction mirrored correctly, temporal order preserved",
+    "Studio environment (wood floor, doors, overhead fluorescents, ballet barres) | static, lights on, doors closed | static, lights on, doors closed | no light change without switch/source change, no door motion without push, no floor deformation, contact forces produce proportional weight shifts",
+    "Temporal flow within single continuous shot | time forward at real-time rate | time forward at real-time rate | motion is continuous, no frozen frames, no repeated beats, velocities consistent with human biomechanics, effects follow causes within ~1-2 frames"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (woman in black sports bra and leggings, barefoot) | standing facing mirror, weight centered, arms at sides | standing facing mirror, left arm raised overhead, weight shifted | weight shifts precede foot adjustments, arm raises precede overhead positions, no teleport\",\n    \"Dancer right arm (tattooed upper arm, viewed from behind) | at side, elbow extended | lowered to side behind back | causes: shoulder abduction ~00:00-00:02 → effect: arm rises to overhead with continuous motion, then adduction ~00:03-00:04 → effect: arm lowers to hip/back, delay plausible\",\n    \"Dancer left arm | at side, neutral | raised overhead with wrist flexed ~00:06-00:09 | causes: shoulder abduction ~00:06 → effect: arm sweeps laterally then overhead, held ~00:07-00:09, continuous trajectory, no interruption or dissolution\",\n    \"Mirror reflection (entire dancer + studio) | synchronized with dancer | synchronized with dancer | cause: dancer movement → effect: reflected movement with zero perceptible lag, direction mirrored correctly, temporal order preserved\",\n    \"Studio environment (wood floor, doors, overhead fluorescents, ballet barres) | static, lights on, doors closed | static, lights on, doors closed | no light change without switch/source change, no door motion without push, no floor deformation, contact forces produce proportional weight shifts\",\n    \"Temporal flow within single continuous shot | time forward at real-time rate | time forward at real-time rate | motion is continuous, no frozen frames, no repeated beats, velocities consistent with human biomechanics, effects follow causes within ~1-2 frames\"\n  ],\n  \"findings\": []\n}"
+}

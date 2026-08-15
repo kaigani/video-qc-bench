@@ -1,0 +1,43 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:54:32.464Z",
+  "latencyMs": 3627,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 3714,
+    "total_tokens": 5864,
+    "cost": 0.0179407,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0179407,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.0157845
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3438,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "studio shell | rectangular room with light wood floor and off-white walls at start | same at end | static, no structural change",
+    "mirrored wall | full-length mirror on north wall facing dancer, black base trim, reflects opposite wall, doors, ceiling lights, barre | same at end | maintains planar mirror geometry throughout",
+    "doors + exit signs | two black doors with vertical windows on west wall, green EXIT signs above each, at far-left of frame | same at end | reflections duplicate correctly in mirror with consistent depth recession",
+    "ballet barre + blue object | double wooden barre mounted on south wall behind camera, blue bin/box in far corner near barre | same at end | only visible via mirror reflection, stable position",
+    "dancer real vs reflection | real dancer barefoot in black sports bra and leggings centered foreground with back to camera; virtual image faces camera centered in mirror | dancer shifts weight and performs symmetric arm raises then returns to neutral | real and virtual remain mirrored across mirror plane, same screen-east/west mapping for limbs",
+    "ceiling + floor occlusion | fluorescent ceiling panels and wood plank floor | same | floor in front of mirror occludes mirror base, reflected floor lies behind mirror plane, nearer (real) dancer correctly occludes floor and partially occludes reflected space behind mirror"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"studio shell | rectangular room with light wood floor and off-white walls at start | same at end | static, no structural change\",\"mirrored wall | full-length mirror on north wall facing dancer, black base trim, reflects opposite wall, doors, ceiling lights, barre | same at end | maintains planar mirror geometry throughout\",\"doors + exit signs | two black doors with vertical windows on west wall, green EXIT signs above each, at far-left of frame | same at end | reflections duplicate correctly in mirror with consistent depth recession\",\"ballet barre + blue object | double wooden barre mounted on south wall behind camera, blue bin/box in far corner near barre | same at end | only visible via mirror reflection, stable position\",\"dancer real vs reflection | real dancer barefoot in black sports bra and leggings centered foreground with back to camera; virtual image faces camera centered in mirror | dancer shifts weight and performs symmetric arm raises then returns to neutral | real and virtual remain mirrored across mirror plane, same screen-east/west mapping for limbs\",\"ceiling + floor occlusion | fluorescent ceiling panels and wood plank floor | same | floor in front of mirror occludes mirror base, reflected floor lies behind mirror plane, nearer (real) dancer correctly occludes floor and partially occludes reflected space behind mirror\"],\"findings\":[]}"
+}

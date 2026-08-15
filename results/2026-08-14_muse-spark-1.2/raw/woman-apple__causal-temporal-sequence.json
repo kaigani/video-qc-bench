@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:00:52.416Z",
+  "latencyMs": 7726,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 1713,
+    "total_tokens": 3862,
+    "cost": 0.0094352,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0094352,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.00728025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1387,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman with blue umbrella and red apple | walking toward camera, frontal view, holding umbrella shaft and apple with both hands, smiling | walking forward, side/profile view facing left, still holding umbrella and apple, smiling | continuous forward translation, camera arcs from front to side, gaze shifts left, gait and hand grip remain uninterrupted",
+    "blue umbrella | open, centered above woman, canopy taut | open, above woman viewed from side, canopy taut | moves continuously with woman, no collapse, flutter or shape change without wind/contact",
+    "red apple | held clasped between both hands around umbrella shaft | held similarly between hands, now seen from side | remains in hands with no drop, throw or impact, position tracks hand motion",
+    "background pedestrians (multiple) | walking along market aisle toward and past camera at varied distances | continue walking past and behind camera plane | continuous linear motion, no freezes, reversals or sudden accelerations, passing order preserves forward time",
+    "market stalls and produce displays | static tables/crates of green limes, red tomatoes, oranges, hanging mesh bags under red awnings and bulbs | same stalls remain static as camera tracks past | no produce toppling, sliding or splashing without contact, lighting from bulbs steady",
+    "camera motion | frontal tracking moving backward ahead of woman | lateral arc to woman's side/rear-quarter, still moving | smooth continuous motion, no jump cuts, freezes or repeated beats, perspective shift matches translation"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"central woman with blue umbrella and red apple | walking toward camera, frontal view, holding umbrella shaft and apple with both hands, smiling | walking forward, side/profile view facing left, still holding umbrella and apple, smiling | continuous forward translation, camera arcs from front to side, gaze shifts left, gait and hand grip remain uninterrupted\",\n    \"blue umbrella | open, centered above woman, canopy taut | open, above woman viewed from side, canopy taut | moves continuously with woman, no collapse, flutter or shape change without wind/contact\",\n    \"red apple | held clasped between both hands around umbrella shaft | held similarly between hands, now seen from side | remains in hands with no drop, throw or impact, position tracks hand motion\",\n    \"background pedestrians (multiple) | walking along market aisle toward and past camera at varied distances | continue walking past and behind camera plane | continuous linear motion, no freezes, reversals or sudden accelerations, passing order preserves forward time\",\n    \"market stalls and produce displays | static tables/crates of green limes, red tomatoes, oranges, hanging mesh bags under red awnings and bulbs | same stalls remain static as camera tracks past | no produce toppling, sliding or splashing without contact, lighting from bulbs steady\",\n    \"camera motion | frontal tracking moving backward ahead of woman | lateral arc to woman's side/rear-quarter, still moving | smooth continuous motion, no jump cuts, freezes or repeated beats, perspective shift matches translation\"\n  ],\n  \"findings\": []\n}"
+}

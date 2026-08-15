@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:52:26.145Z",
+  "latencyMs": 25628,
+  "usage": {
+    "prompt_tokens": 20081,
+    "completion_tokens": 2180,
+    "total_tokens": 22261,
+    "cost": 0.03436625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03436625,
+      "upstream_inference_prompt_cost": 0.02510125,
+      "upstream_inference_completions_cost": 0.009265
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1781,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | first seen ~00:11: gray hair in bun, light blue short-sleeve collared shirt, white apron with glasses hanging on chest, wiping counter at right-side diner counter, facing counter/kitchen | last seen ~01:50: same hair/wardrobe/apron/glasses, standing by window then wiping counter in sunlit diner | notable transitions: wipes along counter length, pours coffee for man, serves plate, sits beside man at counter at dawn, watches man leave through window",
+    "Man (truck driver) | first seen ~00:20: graying short hair, stubble/beard, brown jacket over plaid shirt, blue jeans, enters from rear near kitchen pass-through and walks to counter | last seen ~01:46: same wardrobe/hair/build, walks from counter out window to truck | notable transitions: walks down aisle to counter, sits on red stool facing waitress/counter, drinks coffee, eats, sits side-by-side with waitress, places money on counter, exits to lot"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress",
+      "invariant_violated": "identity_and_placement_continuity",
+      "description": "In the sunlit wide shot of the diner interior, the waitress appears as two semi-transparent overlapping instances at once — one wiping near the front of the counter and a second ghosted duplicate near the coffee station/rear of the counter — violating the single-instance identity rule and placement continuity. No on-screen movement or plausible off-screen time explains simultaneous duplication; the effect persists for several seconds as she moves, showing motion trails/ghosting.",
+      "severity": "severe",
+      "confidence": 0.96
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | first seen ~00:11: gray hair in bun, light blue short-sleeve collared shirt, white apron with glasses hanging on chest, wiping counter at right-side diner counter, facing counter/kitchen | last seen ~01:50: same hair/wardrobe/apron/glasses, standing by window then wiping counter in sunlit diner | notable transitions: wipes along counter length, pours coffee for man, serves plate, sits beside man at counter at dawn, watches man leave through window\",\n    \"Man (truck driver) | first seen ~00:20: graying short hair, stubble/beard, brown jacket over plaid shirt, blue jeans, enters from rear near kitchen pass-through and walks to counter | last seen ~01:46: same wardrobe/hair/build, walks from counter out window to truck | notable transitions: walks down aisle to counter, sits on red stool facing waitress/counter, drinks coffee, eats, sits side-by-side with waitress, places money on counter, exits to lot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"identity_and_placement_continuity\",\n      \"description\": \"In the sunlit wide shot of the diner interior, the waitress appears as two semi-transparent overlapping instances at once — one wiping near the front of the counter and a second ghosted duplicate near the coffee station/rear of the counter — violating the single-instance identity rule and placement continuity. No on-screen movement or plausible off-screen time explains simultaneous duplication; the effect persists for several seconds as she moves, showing motion trails/ghosting.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    }\n  ]\n}"
+}

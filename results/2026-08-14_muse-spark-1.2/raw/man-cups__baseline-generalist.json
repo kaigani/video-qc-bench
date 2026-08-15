@@ -1,0 +1,67 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:55:57.676Z",
+  "latencyMs": 10570,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 1707,
+    "total_tokens": 3676,
+    "cost": 0.0093959,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 291,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0093959,
+      "upstream_inference_prompt_cost": 0.00214115,
+      "upstream_inference_completions_cost": 0.00725475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1226,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hands (performer in blue suit, red tie, glasses) | right hand holding coin above front cup, left hand idle | both hands actively manipulating cups/coins across table | continuous reaching, dropping, and retrieving motions",
+    "four red cups with metallic interiors | arranged in loose diamond on green oval, one cup (center) has coin balanced on rim | same four cups, slightly repositioned | cups remain on green felt, center cup's rim-coin persists then vanishes",
+    "loose gold coins | ~2-3 scattered on green felt near cups, plus coin in hand | ~6-7 scattered on green felt | count increases without corresponding placement actions",
+    "table surface | red outer ring with printed circular chip patterns surrounding green center oval | same | camera pulls back to reveal wider table and room",
+    "background room | blurred interior with windows and indistinct figures | more of room visible as camera widens | lighting and background figures subtly shift/flicker"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "gold coin / front cup",
+      "invariant_violated": "object_permanence_and_penetration",
+      "description": "Hand appears to push a gold coin into the front cup, but the coin clips through the metallic rim/sidewall and the hand's fingers momentarily merge with the cup edge, then a coin is instantly retrieved from the same cup without a clear grasp-and-lift motion.",
+      "severity": "moderate",
+      "confidence": 0.82
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "loose gold coins on green felt",
+      "invariant_violated": "quantity_conservation",
+      "description": "Number of loose gold coins on the green felt increases from 2-3 at start to 5-7 by 00:03-00:04. New coins appear on the felt outside the hands' immediate drop zones with no visible placement or slide-in, indicating spontaneous generation/duplication.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "coin balanced on center cup rim",
+      "invariant_violated": "support_and_contact",
+      "description": "A coin balanced on the rim of the center cup remains unnaturally fixed in place while nearby hands and cups move, then disappears between frames without being touched, picked up, or falling, violating contact and persistence.",
+      "severity": "minor",
+      "confidence": 0.74
+    }
+  ],
+  "rawText": "{\"ledger\":[\"hands (performer in blue suit, red tie, glasses) | right hand holding coin above front cup, left hand idle | both hands actively manipulating cups/coins across table | continuous reaching, dropping, and retrieving motions\",\"four red cups with metallic interiors | arranged in loose diamond on green oval, one cup (center) has coin balanced on rim | same four cups, slightly repositioned | cups remain on green felt, center cup's rim-coin persists then vanishes\",\"loose gold coins | ~2-3 scattered on green felt near cups, plus coin in hand | ~6-7 scattered on green felt | count increases without corresponding placement actions\",\"table surface | red outer ring with printed circular chip patterns surrounding green center oval | same | camera pulls back to reveal wider table and room\",\"background room | blurred interior with windows and indistinct figures | more of room visible as camera widens | lighting and background figures subtly shift/flicker\"],\"findings\":[{\"timestamp\":\"00:02\",\"entity\":\"gold coin / front cup\",\"invariant_violated\":\"object_permanence_and_penetration\",\"description\":\"Hand appears to push a gold coin into the front cup, but the coin clips through the metallic rim/sidewall and the hand's fingers momentarily merge with the cup edge, then a coin is instantly retrieved from the same cup without a clear grasp-and-lift motion.\",\"severity\":\"moderate\",\"confidence\":0.82},{\"timestamp\":\"00:03\",\"entity\":\"loose gold coins on green felt\",\"invariant_violated\":\"quantity_conservation\",\"description\":\"Number of loose gold coins on the green felt increases from 2-3 at start to 5-7 by 00:03-00:04. New coins appear on the felt outside the hands' immediate drop zones with no visible placement or slide-in, indicating spontaneous generation/duplication.\",\"severity\":\"moderate\",\"confidence\":0.88},{\"timestamp\":\"00:04\",\"entity\":\"coin balanced on center cup rim\",\"invariant_violated\":\"support_and_contact\",\"description\":\"A coin balanced on the rim of the center cup remains unnaturally fixed in place while nearby hands and cups move, then disappears between frames without being touched, picked up, or falling, violating contact and persistence.\",\"severity\":\"minor\",\"confidence\":0.74}]}"
+}

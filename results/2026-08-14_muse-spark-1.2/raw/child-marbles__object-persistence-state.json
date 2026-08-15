@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:53:34.599Z",
+  "latencyMs": 7969,
+  "usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 1595,
+    "total_tokens": 3757,
+    "cost": 0.00948125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00948125,
+      "upstream_inference_prompt_cost": 0.0027025,
+      "upstream_inference_completions_cost": 0.00677875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1288,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "clear glass bowl | center on wooden table, containing ~9 plastic balls (red/yellow/green), transparent intact empty except balls | same position on table, left hand holding rim, still containing same balls, intact | held/stabilized by left hand while right hand stirs contents, no state change",
+    "plastic balls collection (~9: red, yellow, green spheres) | inside glass bowl, mixed colors, intact closed | inside glass bowl, same count and colors, intact | one red ball picked up with both hands and replaced (~00:01-00:03), then continuously stirred/moved by right hand within bowl (~00:04-00:09), no duplication/vanishing/transform",
+    "small metallic cup with green/white wrapper | on wooden table to right of bowl, upright, containing wrapper | same position on table, unchanged | no visible manipulation or state change",
+    "loose plastic balls on table surface (green + partially visible red at bottom right edge) | on wooden table outside bowl, to the right/below bowl | still on table but cropped out of frame as camera zooms toward bowl at end | no visible movement or manipulation, apparent disappearance is framing/zoom not object persistence violation",
+    "wooden table surface | supporting bowl, cup, and loose balls, visible wood grain | same, supporting same objects | no change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"clear glass bowl | center on wooden table, containing ~9 plastic balls (red/yellow/green), transparent intact empty except balls | same position on table, left hand holding rim, still containing same balls, intact | held/stabilized by left hand while right hand stirs contents, no state change\",\n    \"plastic balls collection (~9: red, yellow, green spheres) | inside glass bowl, mixed colors, intact closed | inside glass bowl, same count and colors, intact | one red ball picked up with both hands and replaced (~00:01-00:03), then continuously stirred/moved by right hand within bowl (~00:04-00:09), no duplication/vanishing/transform\",\n    \"small metallic cup with green/white wrapper | on wooden table to right of bowl, upright, containing wrapper | same position on table, unchanged | no visible manipulation or state change\",\n    \"loose plastic balls on table surface (green + partially visible red at bottom right edge) | on wooden table outside bowl, to the right/below bowl | still on table but cropped out of frame as camera zooms toward bowl at end | no visible movement or manipulation, apparent disappearance is framing/zoom not object persistence violation\",\n    \"wooden table surface | supporting bowl, cup, and loose balls, visible wood grain | same, supporting same objects | no change\"\n  ],\n  \"findings\": []\n}"
+}

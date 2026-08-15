@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:57:50.409Z",
+  "latencyMs": 5917,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 2281,
+    "total_tokens": 4430,
+    "cost": 0.0118492,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0118492,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.00969425
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2071,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand + smartphone | foreground, out-of-focus displaying '742' with faint glare, held steady | in sharp focus displaying '7742' with status icons, then tilted down and blurred | focus pull to sharp, bright specular band sweeps across screen in sync with slight hand rotation, ends with rapid tilt away",
+    "background pedestrian with red bag (blue shirt, jeans) | near railing at top of stairs | further away on paved area continuing outward | continuous walking away from camera at steady pace, no abrupt position change",
+    "sunlight/specular reflection on phone screen | diffuse, low intensity | bright white vertical band traversing display | motion of glare matches small changes in phone angle under steady sunlight",
+    "stairs and metal railing environment | sunlit with crisp railing shadows on steps and pavement, greenery beside railing | same illumination and shadow geometry, becomes clearer as phone leaves frame | stable lighting, shadows remain consistent, no uncaused illumination change"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"hand + smartphone | foreground, out-of-focus displaying '742' with faint glare, held steady | in sharp focus displaying '7742' with status icons, then tilted down and blurred | focus pull to sharp, bright specular band sweeps across screen in sync with slight hand rotation, ends with rapid tilt away\",\"background pedestrian with red bag (blue shirt, jeans) | near railing at top of stairs | further away on paved area continuing outward | continuous walking away from camera at steady pace, no abrupt position change\",\"sunlight/specular reflection on phone screen | diffuse, low intensity | bright white vertical band traversing display | motion of glare matches small changes in phone angle under steady sunlight\",\"stairs and metal railing environment | sunlit with crisp railing shadows on steps and pavement, greenery beside railing | same illumination and shadow geometry, becomes clearer as phone leaves frame | stable lighting, shadows remain consistent, no uncaused illumination change\"],\"findings\":[]}"
+}

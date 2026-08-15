@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:59:39.826Z",
+  "latencyMs": 4288,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 2257,
+    "total_tokens": 4226,
+    "cost": 0.0117334,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 291,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0117334,
+      "upstream_inference_prompt_cost": 0.00214115,
+      "upstream_inference_completions_cost": 0.00959225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1813,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | entering from top | interacting with cubes | places 6 additional cubes sequentially",
+    "cube_1 (leftmost) | green, '2' front, '6' side visible, dark bolt on top | blue, '2' front | instant color change green->blue at 00:01 with no replacement",
+    "cube_2 | not present at start | blue, '3' front | placed at 00:01-00:02",
+    "cube_3 (original right green) | green, '2' front | green, '2' front | remains, shifted right as new cubes inserted",
+    "cube_4 | not present | tan/orange, '2' front | placed at 00:03-00:04",
+    "cube_5 | not present | light blue/grey, '3' front | placed at 00:04-00:05",
+    "cube_6 | not present | green, '5' front | placed at 00:05-00:06 (shows '3' during tumble, settles on '5')",
+    "cube_7 | not present | green, '2' front | placed at 00:06-00:07 (shows '3' during tumble, settles on '2')",
+    "cube_8 (rightmost) | not present | blue, '6' front | placed at 00:07-00:08 (shows '3' during tumble, settles on '6')"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "cube_1 (leftmost cube)",
+      "invariant_violated": "object_color_persistence",
+      "description": "The leftmost cube is green at 00:00 with '2' facing camera. While the hand contacts it, without the cube being removed or replaced, its entire body color switches instantaneously to blue by 00:01, while retaining the same '2' marking and top bolt. Color is an intrinsic material property and should not change from a simple touch/rotation; no new cube is brought in for this position.",
+      "severity": "moderate",
+      "confidence": 0.96
+    }
+  ],
+  "rawText": "{\"ledger\":[\"hand | entering from top | interacting with cubes | places 6 additional cubes sequentially\",\"cube_1 (leftmost) | green, '2' front, '6' side visible, dark bolt on top | blue, '2' front | instant color change green->blue at 00:01 with no replacement\",\"cube_2 | not present at start | blue, '3' front | placed at 00:01-00:02\",\"cube_3 (original right green) | green, '2' front | green, '2' front | remains, shifted right as new cubes inserted\",\"cube_4 | not present | tan/orange, '2' front | placed at 00:03-00:04\",\"cube_5 | not present | light blue/grey, '3' front | placed at 00:04-00:05\",\"cube_6 | not present | green, '5' front | placed at 00:05-00:06 (shows '3' during tumble, settles on '5')\",\"cube_7 | not present | green, '2' front | placed at 00:06-00:07 (shows '3' during tumble, settles on '2')\",\"cube_8 (rightmost) | not present | blue, '6' front | placed at 00:07-00:08 (shows '3' during tumble, settles on '6')\"],\"findings\":[{\"timestamp\":\"00:01\",\"entity\":\"cube_1 (leftmost cube)\",\"invariant_violated\":\"object_color_persistence\",\"description\":\"The leftmost cube is green at 00:00 with '2' facing camera. While the hand contacts it, without the cube being removed or replaced, its entire body color switches instantaneously to blue by 00:01, while retaining the same '2' marking and top bolt. Color is an intrinsic material property and should not change from a simple touch/rotation; no new cube is brought in for this position.\",\"severity\":\"moderate\",\"confidence\":0.96}]}"
+}

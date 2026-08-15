@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:52:37.946Z",
+  "latencyMs": 26759,
+  "usage": {
+    "prompt_tokens": 20097,
+    "completion_tokens": 3729,
+    "total_tokens": 23826,
+    "cost": 0.0409695,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0409695,
+      "upstream_inference_prompt_cost": 0.02512125,
+      "upstream_inference_completions_cost": 0.01584825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3027,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | white cab-over box truck with white trailer parked left of diner at dusk, steam venting, on gravel | dark green conventional hood tractor with white stripe and dark green trailer at dawn | no visible swap/repaint, model and color change instantly",
+    "diner building + OPEN neon sign | illuminated at night, windows lit | same building at dawn with daylight | lighting changes only",
+    "long laminate counter + red vinyl stools + condiment caddies/coffee urns | stools tucked under counter, caddies and urns on right | same arrangement at end, warm sunlight | wiping actions visible",
+    "glass coffee carafe | ~75% full of dark coffee before pour (00:27) | ~50% full after pour (00:32) | level drop caused by visible pour",
+    "white ceramic mug(s) | empty mug on counter | one steaming full mug in front of seated man + second mug held by waitress | filled by carafe pour, handled visibly",
+    "plate with fried egg (sunny-side-up) and thick toast slice | not present at 00:10 | steaming plate on counter in front of man, then absent, then re-carried | appears at 00:33 without delivery and vanishes at 00:52 without clearing",
+    "folded US $100 bills | absent | two bills left on counter next to mug (01:38) | placed by man's hand, flattened by other hand",
+    "wiping cloth | in waitress hand/on counter | on counter after wipe | moved by visible wiping motions"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "semi-truck",
+      "invariant_violated": "identity & persistence / transformation",
+      "description": "Truck parked outside from 00:00-00:10 is a white cab-over with white box trailer venting steam. At 01:41 viewed through window in same parking position it is a dark green conventional-hood tractor (tall exhaust stacks, different cab shape, white stripe, dark green corrugated trailer). No replacement, repaint, or drive-in was shown; the vehicle has transformed into a different color/model instantly.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:33",
+      "entity": "plate with fried egg and toast",
+      "invariant_violated": "identity & persistence / unexplained appearance and vanishing",
+      "description": "Close-up at 00:33 and wide shot at 00:37 show a steaming plate with one sunny-side-up egg and one thick toast slice already on the counter in front of the seated man with no carry/placement action shown. At 00:52 the diner is shown empty from the same angle and the plate (and man/mug) are gone with no clearing action, while condiment caddies and urns remain. At 01:09 the waitress carries an identical plate from the kitchen to offer to the man again, indicating the plate duplicated/vanished and reappeared without visible cause.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck | white cab-over box truck with white trailer parked left of diner at dusk, steam venting, on gravel | dark green conventional hood tractor with white stripe and dark green trailer at dawn | no visible swap/repaint, model and color change instantly\",\n    \"diner building + OPEN neon sign | illuminated at night, windows lit | same building at dawn with daylight | lighting changes only\",\n    \"long laminate counter + red vinyl stools + condiment caddies/coffee urns | stools tucked under counter, caddies and urns on right | same arrangement at end, warm sunlight | wiping actions visible\",\n    \"glass coffee carafe | ~75% full of dark coffee before pour (00:27) | ~50% full after pour (00:32) | level drop caused by visible pour\",\n    \"white ceramic mug(s) | empty mug on counter | one steaming full mug in front of seated man + second mug held by waitress | filled by carafe pour, handled visibly\",\n    \"plate with fried egg (sunny-side-up) and thick toast slice | not present at 00:10 | steaming plate on counter in front of man, then absent, then re-carried | appears at 00:33 without delivery and vanishes at 00:52 without clearing\",\n    \"folded US $100 bills | absent | two bills left on counter next to mug (01:38) | placed by man's hand, flattened by other hand\",\n    \"wiping cloth | in waitress hand/on counter | on counter after wipe | moved by visible wiping motions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"semi-truck\",\n      \"invariant_violated\": \"identity & persistence / transformation\",\n      \"description\": \"Truck parked outside from 00:00-00:10 is a white cab-over with white box trailer venting steam. At 01:41 viewed through window in same parking position it is a dark green conventional-hood tractor (tall exhaust stacks, different cab shape, white stripe, dark green corrugated trailer). No replacement, repaint, or drive-in was shown; the vehicle has transformed into a different color/model instantly.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:33\",\n      \"entity\": \"plate with fried egg and toast\",\n      \"invariant_violated\": \"identity & persistence / unexplained appearance and vanishing\",\n      \"description\": \"Close-up at 00:33 and wide shot at 00:37 show a steaming plate with one sunny-side-up egg and one thick toast slice already on the counter in front of the seated man with no carry/placement action shown. At 00:52 the diner is shown empty from the same angle and the plate (and man/mug) are gone with no clearing action, while condiment caddies and urns remain. At 01:09 the waitress carries an identical plate from the kitchen to offer to the man again, indicating the plate duplicated/vanished and reappeared without visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

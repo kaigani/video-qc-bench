@@ -1,0 +1,43 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:01:23.204Z",
+  "latencyMs": 8786,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 2473,
+    "total_tokens": 4623,
+    "cost": 0.01266645,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01266645,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.01051025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2008,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon (cream wood-paneled) | front 3/4 view at start, hood ornament centered on ridge, grille/headlights and plate 'ST 297' facing camera, wood paneling and chrome trim along side, roof rack on top | side-oblique front view at end, front foreshortened and plate cropped out, ornament near left edge of hood, wood trim and side mirror still on same door position | continuous ~30-40 degree arc around front toward side, parallax of hood, fender, and rack evolves smoothly",
+    "Woman leaning on door | arms crossed on door/window sill mid-right, facing slightly left of camera | same pose larger in frame, arms still on sill occluding interior | remains anchored to door top, nearer than interior and windshield, occlusion edge stable while hair moves in wind",
+    "Antenna + roof rack | thin vertical antenna on front fender left of windshield base, two-bar rack centered on roof | antenna shifts left relative to windshield A-pillar, rack foreshortened in perspective | both remain fixed to body, depth order antenna in front of windshield/hood maintained",
+    "Desert road and verge | two-lane asphalt left background with faint yellow dashes, sandy verge and low shrubs | road now centered behind car with clearer dashed centerline receding to horizon, utility poles spaced along horizon | newly revealed length of road and poles compatible with camera moving to reveal more of receding road, no lateral flip",
+    "Background terrain (shrub desert + distant mountains) | flat arid plain with scattered yellow-green shrubs, hazy purple mountains under pale sky seen beyond and through windshield | same plain and mountain line, parallax slow vs car (distant), shrubs visible through windshield match exterior | distant background remains stable and continuous, no mismatch between view through glass and exterior",
+    "Occlusion stack | foreground: woman/door top and hood > mid: windshield/ A-pillar/roof > background: road/desert/sky, hood occludes grille lower, door occludes interior | same stack enlarged, hood still occludes front, door sill still occludes interior, windshield frame occludes background | depth ordering preserved, no background rendering over foreground, no see-through of opaque panels"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"Station wagon (cream wood-paneled) | front 3/4 view at start, hood ornament centered on ridge, grille/headlights and plate 'ST 297' facing camera, wood paneling and chrome trim along side, roof rack on top | side-oblique front view at end, front foreshortened and plate cropped out, ornament near left edge of hood, wood trim and side mirror still on same door position | continuous ~30-40 degree arc around front toward side, parallax of hood, fender, and rack evolves smoothly\",\"Woman leaning on door | arms crossed on door/window sill mid-right, facing slightly left of camera | same pose larger in frame, arms still on sill occluding interior | remains anchored to door top, nearer than interior and windshield, occlusion edge stable while hair moves in wind\",\"Antenna + roof rack | thin vertical antenna on front fender left of windshield base, two-bar rack centered on roof | antenna shifts left relative to windshield A-pillar, rack foreshortened in perspective | both remain fixed to body, depth order antenna in front of windshield/hood maintained\",\"Desert road and verge | two-lane asphalt left background with faint yellow dashes, sandy verge and low shrubs | road now centered behind car with clearer dashed centerline receding to horizon, utility poles spaced along horizon | newly revealed length of road and poles compatible with camera moving to reveal more of receding road, no lateral flip\",\"Background terrain (shrub desert + distant mountains) | flat arid plain with scattered yellow-green shrubs, hazy purple mountains under pale sky seen beyond and through windshield | same plain and mountain line, parallax slow vs car (distant), shrubs visible through windshield match exterior | distant background remains stable and continuous, no mismatch between view through glass and exterior\",\"Occlusion stack | foreground: woman/door top and hood > mid: windshield/ A-pillar/roof > background: road/desert/sky, hood occludes grille lower, door occludes interior | same stack enlarged, hood still occludes front, door sill still occludes interior, windshield frame occludes background | depth ordering preserved, no background rendering over foreground, no see-through of opaque panels\"],\"findings\":[]}"
+}

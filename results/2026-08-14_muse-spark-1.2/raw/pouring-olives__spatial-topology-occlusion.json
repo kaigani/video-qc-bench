@@ -1,0 +1,44 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:58:14.185Z",
+  "latencyMs": 5728,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 2955,
+    "total_tokens": 5105,
+    "cost": 0.01471495,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01471495,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.01255875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2617,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tall glass jar with hinged clasp | centered on wooden cutting board, clasp on right, empty at 00:00 | same central position, clasp still on right, ~2/3 full of green/dark olives at 00:09 | stationary throughout, receives olives in two pouring batches",
+    "Wooden cutting board | rectangular, centered on white countertop beneath jar, stained grain visible | same position and orientation | static, no shift",
+    "White countertop + stainless steel gas stove + wooden cabinets | counter spans foreground, stove with black knobs centered in background, wood cabinets flank stove | same layout | static background architecture",
+    "Metal bowl (left bowl) | on white counter to the right of cutting board, containing green olives | same position to the right of board, still on counter | remains stationary, never teleports",
+    "Speckled ceramic bowl (right bowl) | on white counter far right, containing green olives | lifted and tilted over jar 00:05-00:09 then held above jar | movement is hand-driven, base location consistent before lift",
+    "Small clear pouring glass | held in both hands above jar pouring mixed olives 00:00-00:04 | placed on white counter to the right of metal bowl at ~00:04-00:05, remains there | explains appearance on counter; not a spontaneous layout change",
+    "Person torso/arms in navy shirt over white tee | standing behind counter, hands moving above jar | same standing position behind counter | correctly occludes stove/cabinets when in front, occluded by jar/counter when behind"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"Tall glass jar with hinged clasp | centered on wooden cutting board, clasp on right, empty at 00:00 | same central position, clasp still on right, ~2/3 full of green/dark olives at 00:09 | stationary throughout, receives olives in two pouring batches\",\"Wooden cutting board | rectangular, centered on white countertop beneath jar, stained grain visible | same position and orientation | static, no shift\",\"White countertop + stainless steel gas stove + wooden cabinets | counter spans foreground, stove with black knobs centered in background, wood cabinets flank stove | same layout | static background architecture\",\"Metal bowl (left bowl) | on white counter to the right of cutting board, containing green olives | same position to the right of board, still on counter | remains stationary, never teleports\",\"Speckled ceramic bowl (right bowl) | on white counter far right, containing green olives | lifted and tilted over jar 00:05-00:09 then held above jar | movement is hand-driven, base location consistent before lift\",\"Small clear pouring glass | held in both hands above jar pouring mixed olives 00:00-00:04 | placed on white counter to the right of metal bowl at ~00:04-00:05, remains there | explains appearance on counter; not a spontaneous layout change\",\"Person torso/arms in navy shirt over white tee | standing behind counter, hands moving above jar | same standing position behind counter | correctly occludes stove/cabinets when in front, occluded by jar/counter when behind\"],\"findings\":[]}"
+}

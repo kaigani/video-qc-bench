@@ -1,0 +1,44 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:57:13.206Z",
+  "latencyMs": 5301,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 5049,
+    "total_tokens": 7199,
+    "cost": 0.02361445,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02361445,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.02145825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4761,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground man (white shirt, dark hair, viewed from behind-left) | facing mirror, razor in right hand at chin/jaw | same orientation, razor still at chin/nose | raises razor to forehead, cheek, chin and nose in smooth shaving motions",
+    "mirror reflection of man | facing outward, razor in left hand (lateral inversion) at chin/jaw, geometrically behind mirror plane | same | mirrors foreground motions with correct east-west reversal, same screen-side alignment as real hand",
+    "wall-mounted mirror with thick wooden frame | vertical, centered, reflecting man and background | unchanged | static, occlusion edge at frame remains consistent with foreground man overlap",
+    "wooden panel door with brass knob | visible only in reflection behind man's right shoulder (screen-left of reflection), hinge on left side of door | unchanged | static background",
+    "wall segment with white light switch / outlet | visible in reflection immediately adjacent to door frame (between door and mirror edge) | unchanged | static",
+    "open shelving unit with glassware/bottles | visible in reflection to right of man's reflection (screen-right), dark wood shelves | unchanged | static",
+    "straight razor (light handle, metal blade) | held between fingers, blade near skin | same object near skin | moves across chin, cheek, forehead and under nose, remains in hand and correctly occluded by hand/face"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"foreground man (white shirt, dark hair, viewed from behind-left) | facing mirror, razor in right hand at chin/jaw | same orientation, razor still at chin/nose | raises razor to forehead, cheek, chin and nose in smooth shaving motions\",\"mirror reflection of man | facing outward, razor in left hand (lateral inversion) at chin/jaw, geometrically behind mirror plane | same | mirrors foreground motions with correct east-west reversal, same screen-side alignment as real hand\",\"wall-mounted mirror with thick wooden frame | vertical, centered, reflecting man and background | unchanged | static, occlusion edge at frame remains consistent with foreground man overlap\",\"wooden panel door with brass knob | visible only in reflection behind man's right shoulder (screen-left of reflection), hinge on left side of door | unchanged | static background\",\"wall segment with white light switch / outlet | visible in reflection immediately adjacent to door frame (between door and mirror edge) | unchanged | static\",\"open shelving unit with glassware/bottles | visible in reflection to right of man's reflection (screen-right), dark wood shelves | unchanged | static\",\"straight razor (light handle, metal blade) | held between fingers, blade near skin | same object near skin | moves across chin, cheek, forehead and under nose, remains in hand and correctly occluded by hand/face\"],\"findings\":[]}"
+}

@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:53:50.699Z",
+  "latencyMs": 7054,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 2328,
+    "total_tokens": 4478,
+    "cost": 0.0120502,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0120502,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.009894
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1985,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden table (2-plank) | centered foreground, visible grain and central seam, bowl near middle | same position, appears larger due to slow zoom | static, no shift in seam or edge alignment",
+    "Glass bowl (transparent circular) | centered on table, rim ellipse consistent with oblique top-down view, contains clustered balls | same center position, rim remains circular/elliptical with zoom | fixed to table surface",
+    "Colored balls (red/yellow/green) | ~9 inside bowl in loose cluster, 2 balls + partial red outside on far right table edge | inside balls rearranged by stirring, outside balls stationary on right edge | motion constrained inside bowl interior",
+    "Small metallic cup with green/white object | on right side of table, east of bowl, near table edge | same position relative to bowl and table edge | static",
+    "Child hands/arms (blue zip-up) | hands above bowl then both hands over rim, right hand inside bowl | right hand stirring inside bowl interior, left hand holding rim | continuous motion inside bowl volume, remains on same side of table",
+    "Background patio (brick pavement + terracotta pots + wall) | visible beyond table, pots aligned along far edge | same layout, slightly more cropped at top due to zoom | consistent depth behind table, no new openings",
+    "Camera viewpoint | oblique top-down ~40-45 deg centered on bowl | slowly translates/zooms in toward bowl, framing tightens | smooth and geometrically consistent, no cuts or side-switch"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden table (2-plank) | centered foreground, visible grain and central seam, bowl near middle | same position, appears larger due to slow zoom | static, no shift in seam or edge alignment\",\n    \"Glass bowl (transparent circular) | centered on table, rim ellipse consistent with oblique top-down view, contains clustered balls | same center position, rim remains circular/elliptical with zoom | fixed to table surface\",\n    \"Colored balls (red/yellow/green) | ~9 inside bowl in loose cluster, 2 balls + partial red outside on far right table edge | inside balls rearranged by stirring, outside balls stationary on right edge | motion constrained inside bowl interior\",\n    \"Small metallic cup with green/white object | on right side of table, east of bowl, near table edge | same position relative to bowl and table edge | static\",\n    \"Child hands/arms (blue zip-up) | hands above bowl then both hands over rim, right hand inside bowl | right hand stirring inside bowl interior, left hand holding rim | continuous motion inside bowl volume, remains on same side of table\",\n    \"Background patio (brick pavement + terracotta pots + wall) | visible beyond table, pots aligned along far edge | same layout, slightly more cropped at top due to zoom | consistent depth behind table, no new openings\",\n    \"Camera viewpoint | oblique top-down ~40-45 deg centered on bowl | slowly translates/zooms in toward bowl, framing tightens | smooth and geometrically consistent, no cuts or side-switch\"\n  ],\n  \"findings\": []\n}"
+}

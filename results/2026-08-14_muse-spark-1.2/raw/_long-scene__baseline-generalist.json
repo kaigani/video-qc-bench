@@ -1,0 +1,66 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:52:29.047Z",
+  "latencyMs": 26080,
+  "usage": {
+    "prompt_tokens": 19904,
+    "completion_tokens": 2204,
+    "total_tokens": 22108,
+    "cost": 0.034247,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.034247,
+      "upstream_inference_prompt_cost": 0.02488,
+      "upstream_inference_completions_cost": 0.009367
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1603,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Exterior semi-truck | white cab-over tractor, parked left of diner at night, emitting steam/smoke near front wheel | dark green Kenworth-style conventional cab with white stripe and green box trailer in bright daylight | color/model changes completely between exterior night shots (00:00) and daylight departure shot (01:41) without plausible replacement",
+    "Waitress | single older woman, grey hair in bun, light blue shirt, white apron, glasses on chest | two identical copies simultaneously present inside diner | single throughout until 01:50, then duplicate appears wiping counter in foreground and background, both moving independently",
+    "Male customer | middle-aged, grey hair/beard, brown jacket over plaid shirt, jeans | same appearance seated at counter then departing | enters at 00:19 from kitchen doorway, sits at counter (00:24), served coffee/food, remains seated until 01:41, walks to truck",
+    "Diner interior | night, dark blue window light, red OPEN neon, counter with stools, warm kitchen light | day, bright sunrise through windows, sun flare on counter | time-lapse from dusk to dawn between 00:45 and 00:59, artificial lighting consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "semi-truck",
+      "invariant_violated": "object permanence / continuity",
+      "description": "Truck parked outside at 00:00 is a white cab-over semi emitting steam. At 01:41 the same parking spot viewed through the diner window contains a completely different vehicle: a dark green conventional Kenworth with a white stripe and a green corrugated box trailer. No arrival/departure of a second truck is shown; the same male customer walks to it as if it were his original truck.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress",
+      "invariant_violated": "human duplication / cloning",
+      "description": "At 01:51-01:57 the interior shows two identical waitresses simultaneously. One wipes the pass/counter in the foreground near the kitchen window, another identical woman wipes the counter in the mid-background near the kitchen doorway. Both wear the same light blue shirt, white apron, and hair bun and move independently, a classic AI cloning artifact that resolves as they appear to merge.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "01:42",
+      "entity": "window reflection / compositing",
+      "invariant_violated": "reflection coherence",
+      "description": "View through the diner window at 01:42-01:46 shows the departing green truck with a persistent semi-transparent ghost of the waitress superimposed on the trailer side as the man walks outside. The interior reflection remains fixed on the exterior object while the exterior moves, creating an impossible double-exposure composite rather than a natural window reflection.",
+      "severity": "moderate",
+      "confidence": 0.88
+    }
+  ],
+  "rawText": "{\"ledger\":[\"Exterior semi-truck | white cab-over tractor, parked left of diner at night, emitting steam/smoke near front wheel | dark green Kenworth-style conventional cab with white stripe and green box trailer in bright daylight | color/model changes completely between exterior night shots (00:00) and daylight departure shot (01:41) without plausible replacement\",\"Waitress | single older woman, grey hair in bun, light blue shirt, white apron, glasses on chest | two identical copies simultaneously present inside diner | single throughout until 01:50, then duplicate appears wiping counter in foreground and background, both moving independently\",\"Male customer | middle-aged, grey hair/beard, brown jacket over plaid shirt, jeans | same appearance seated at counter then departing | enters at 00:19 from kitchen doorway, sits at counter (00:24), served coffee/food, remains seated until 01:41, walks to truck\",\"Diner interior | night, dark blue window light, red OPEN neon, counter with stools, warm kitchen light | day, bright sunrise through windows, sun flare on counter | time-lapse from dusk to dawn between 00:45 and 00:59, artificial lighting consistent\"],\"findings\":[{\"timestamp\":\"01:41\",\"entity\":\"semi-truck\",\"invariant_violated\":\"object permanence / continuity\",\"description\":\"Truck parked outside at 00:00 is a white cab-over semi emitting steam. At 01:41 the same parking spot viewed through the diner window contains a completely different vehicle: a dark green conventional Kenworth with a white stripe and a green corrugated box trailer. No arrival/departure of a second truck is shown; the same male customer walks to it as if it were his original truck.\",\"severity\":\"severe\",\"confidence\":0.98},{\"timestamp\":\"01:51\",\"entity\":\"waitress\",\"invariant_violated\":\"human duplication / cloning\",\"description\":\"At 01:51-01:57 the interior shows two identical waitresses simultaneously. One wipes the pass/counter in the foreground near the kitchen window, another identical woman wipes the counter in the mid-background near the kitchen doorway. Both wear the same light blue shirt, white apron, and hair bun and move independently, a classic AI cloning artifact that resolves as they appear to merge.\",\"severity\":\"severe\",\"confidence\":0.96},{\"timestamp\":\"01:42\",\"entity\":\"window reflection / compositing\",\"invariant_violated\":\"reflection coherence\",\"description\":\"View through the diner window at 01:42-01:46 shows the departing green truck with a persistent semi-transparent ghost of the waitress superimposed on the trailer side as the man walks outside. The interior reflection remains fixed on the exterior object while the exterior moves, creating an impossible double-exposure composite rather than a natural window reflection.\",\"severity\":\"moderate\",\"confidence\":0.88}]}"
+}

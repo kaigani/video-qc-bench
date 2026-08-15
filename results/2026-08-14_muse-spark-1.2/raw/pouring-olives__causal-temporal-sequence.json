@@ -1,0 +1,44 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:58:23.477Z",
+  "latencyMs": 5193,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 1951,
+    "total_tokens": 4100,
+    "cost": 0.0104467,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0104467,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.00829175
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1609,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hands/arms | holding small glass bowl filled with mixed olives above empty jar | holding bowl through two pour cycles and manual transfer | tilt bowl to pour 00:00-00:04, transfer olives by hand 00:05-00:06, tilt to pour again 00:06-00:09",
+    "Small glass bowl | full of green and dark olives | emptied 00:04 then refilled 00:05-00:06 then emptied again 00:09 | tilting causes olive release, manual hand transfer causes refill",
+    "Glass jar (center, on cutting board) | empty transparent | ~1/3 filled 00:04 then ~2/3 filled 00:09 | olives accumulate immediately after each pour stream impacts bottom/atop pile",
+    "Olives (green and dark) | resting in bowl(s) | falling through air and settling/stacking in jar | gravity fall begins <0.2s after bowl tilt, bounce/roll and come to rest on jar bottom or existing olives, proportional to pour rate",
+    "Metal bowl (right, stainless) | full of green olives | depleted to few olives by 00:09 | cause: hand scoops olives out 00:05-00:06 -> effect: level drops immediately",
+    "Speckled ceramic bowl (far right) | full of green olives | unchanged | no causal interaction observed",
+    "Background kitchen (stove, cabinets, cutting board) | static | static | no cause-effect change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Hands/arms | holding small glass bowl filled with mixed olives above empty jar | holding bowl through two pour cycles and manual transfer | tilt bowl to pour 00:00-00:04, transfer olives by hand 00:05-00:06, tilt to pour again 00:06-00:09\",\n    \"Small glass bowl | full of green and dark olives | emptied 00:04 then refilled 00:05-00:06 then emptied again 00:09 | tilting causes olive release, manual hand transfer causes refill\",\n    \"Glass jar (center, on cutting board) | empty transparent | ~1/3 filled 00:04 then ~2/3 filled 00:09 | olives accumulate immediately after each pour stream impacts bottom/atop pile\",\n    \"Olives (green and dark) | resting in bowl(s) | falling through air and settling/stacking in jar | gravity fall begins <0.2s after bowl tilt, bounce/roll and come to rest on jar bottom or existing olives, proportional to pour rate\",\n    \"Metal bowl (right, stainless) | full of green olives | depleted to few olives by 00:09 | cause: hand scoops olives out 00:05-00:06 -> effect: level drops immediately\",\n    \"Speckled ceramic bowl (far right) | full of green olives | unchanged | no causal interaction observed\",\n    \"Background kitchen (stove, cabinets, cutting board) | static | static | no cause-effect change\"\n  ],\n  \"findings\": []\n}"
+}

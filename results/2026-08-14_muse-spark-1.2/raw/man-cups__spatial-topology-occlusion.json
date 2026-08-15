@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:56:29.298Z",
+  "latencyMs": 9784,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 3224,
+    "total_tokens": 5374,
+    "cost": 0.0158582,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0158582,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.013702
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2868,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Round table with red cloth and cream central oval | close overhead view, oval fills center, red patterned border with printed coin spots visible around rim | wider elevated view from pulled-back arced angle, same oval and border pattern | camera pulls back and arcs ~60-90 deg around table, ellipse foreshortening and border reveal evolve smoothly",
+    "Four red cups with metallic interiors | diamond cluster on cream area (frontmost cup nearest camera, one middle cup with coin on rim, two rear cups) | same four cups still on cream area in shallow arc/line | remain within cream area, left-right ordering shifts consistently with camera orbit, no teleport",
+    "Performer in blue suit with red tie | only hands/forearms at table edge visible | full upper body (glasses, beard) seated at table edge facing table | progressively revealed as camera widens, stays on same side of table throughout",
+    "Room architecture - windows, chairs, walls | blurred background with dark chairs and indistinct windows | far wall with tall bright windows behind performer and chairs along side walls, depth-of-field sharper | background parallax shifts smoothly with camera arc, window wall remains behind performer as expected for stationary sitter",
+    "Camera viewpoint and occlusion | low close overhead looking slightly across table | elevated wider angle from side-front, looking across table toward window wall | smooth continuous pull-back and orbit, nearer hands/cups correctly occlude farther table/coins/background with no inversion",
+    "Loose gold coins scattered on table | ~5-7 coins on cream and red areas near cups | similar scatter with some coins lifted/handled by hands | coins stay on table plane, occlusion by cups and hands evolves smoothly as hands move"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"Round table with red cloth and cream central oval | close overhead view, oval fills center, red patterned border with printed coin spots visible around rim | wider elevated view from pulled-back arced angle, same oval and border pattern | camera pulls back and arcs ~60-90 deg around table, ellipse foreshortening and border reveal evolve smoothly\",\"Four red cups with metallic interiors | diamond cluster on cream area (frontmost cup nearest camera, one middle cup with coin on rim, two rear cups) | same four cups still on cream area in shallow arc/line | remain within cream area, left-right ordering shifts consistently with camera orbit, no teleport\",\"Performer in blue suit with red tie | only hands/forearms at table edge visible | full upper body (glasses, beard) seated at table edge facing table | progressively revealed as camera widens, stays on same side of table throughout\",\"Room architecture - windows, chairs, walls | blurred background with dark chairs and indistinct windows | far wall with tall bright windows behind performer and chairs along side walls, depth-of-field sharper | background parallax shifts smoothly with camera arc, window wall remains behind performer as expected for stationary sitter\",\"Camera viewpoint and occlusion | low close overhead looking slightly across table | elevated wider angle from side-front, looking across table toward window wall | smooth continuous pull-back and orbit, nearer hands/cups correctly occlude farther table/coins/background with no inversion\",\"Loose gold coins scattered on table | ~5-7 coins on cream and red areas near cups | similar scatter with some coins lifted/handled by hands | coins stay on table plane, occlusion by cups and hands evolves smoothly as hands move\"],\"findings\":[]}"
+}

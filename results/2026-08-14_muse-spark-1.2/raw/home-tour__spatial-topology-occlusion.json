@@ -1,0 +1,51 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:55:46.320Z",
+  "latencyMs": 5941,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 4157,
+    "total_tokens": 6307,
+    "cost": 0.02035475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02035475,
+      "upstream_inference_prompt_cost": 0.0026875,
+      "upstream_inference_completions_cost": 0.01766725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3683,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman in teal dress | in kitchen facing hallway near microwave counter on right | walking back toward kitchen viewed from behind in hallway | enters bedroom off hallway then exits and returns toward kitchen",
+    "Kitchen | L-shaped: stove with stainless range hood + sink along left wall, microwave on countertop against tiled backsplash under light wood cabinets on right peninsula | stove wall now shows over-range microwave where range hood was, right peninsula not visible | appliance/fixture positions appear to swap between start and end",
+    "Hallway | narrow hardwood corridor leading north to white door with glass, floral framed art + small frame + light switches on right wall, kitchen open on left, bedroom doorway on right | same corridor viewed south toward kitchen, floral art now on wall that appears opposite, windows on right wall near kitchen end | camera follows woman north then south, walls/art should mirror but position of fixtures must stay fixed",
+    "Bedroom | off east side of hallway via doorway, bed centered against far gray wall under art, chandelier, nightstands with lamps, windows on side walls with curtains, two chairs at foot of bed | same room viewed from doorway outward toward hallway, doorway connects back to hallway with hallway art/windows visible beyond | woman enters east then exits west, connectivity hallway-bedroom must remain constant",
+    "Doorways/Windows connectivity | hallway north end = white exterior door, hallway east wall = bedroom doorway, bedroom has windows on at least two walls | hallway south end = kitchen, bedroom doorway still east of hallway, windows visible in both hallway and bedroom | background seen through openings should match established layout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Kitchen - range hood / microwave wall",
+      "invariant_violated": "scene layout consistency",
+      "description": "At 00:01-00:02 the kitchen's left wall has a stainless range hood over the stove with no microwave above it, while a countertop microwave sits on the right peninsula under cabinets with tile backsplash. At 00:09 the same left wall viewed from the hallway shows an over-range microwave mounted under the cabinets above the stove where the range hood was. Fixed appliances have swapped positions/walls with no in-scene change, breaking layout consistency of furniture/architecture independent of camera angle.",
+      "severity": "moderate",
+      "confidence": 0.82
+    }
+  ],
+  "rawText": "{\"ledger\":[\"Woman in teal dress | in kitchen facing hallway near microwave counter on right | walking back toward kitchen viewed from behind in hallway | enters bedroom off hallway then exits and returns toward kitchen\",\"Kitchen | L-shaped: stove with stainless range hood + sink along left wall, microwave on countertop against tiled backsplash under light wood cabinets on right peninsula | stove wall now shows over-range microwave where range hood was, right peninsula not visible | appliance/fixture positions appear to swap between start and end\",\"Hallway | narrow hardwood corridor leading north to white door with glass, floral framed art + small frame + light switches on right wall, kitchen open on left, bedroom doorway on right | same corridor viewed south toward kitchen, floral art now on wall that appears opposite, windows on right wall near kitchen end | camera follows woman north then south, walls/art should mirror but position of fixtures must stay fixed\",\"Bedroom | off east side of hallway via doorway, bed centered against far gray wall under art, chandelier, nightstands with lamps, windows on side walls with curtains, two chairs at foot of bed | same room viewed from doorway outward toward hallway, doorway connects back to hallway with hallway art/windows visible beyond | woman enters east then exits west, connectivity hallway-bedroom must remain constant\",\"Doorways/Windows connectivity | hallway north end = white exterior door, hallway east wall = bedroom doorway, bedroom has windows on at least two walls | hallway south end = kitchen, bedroom doorway still east of hallway, windows visible in both hallway and bedroom | background seen through openings should match established layout\"],\"findings\":[{\"timestamp\":\"00:09\",\"entity\":\"Kitchen - range hood / microwave wall\",\"invariant_violated\":\"scene layout consistency\",\"description\":\"At 00:01-00:02 the kitchen's left wall has a stainless range hood over the stove with no microwave above it, while a countertop microwave sits on the right peninsula under cabinets with tile backsplash. At 00:09 the same left wall viewed from the hallway shows an over-range microwave mounted under the cabinets above the stove where the range hood was. Fixed appliances have swapped positions/walls with no in-scene change, breaking layout consistency of furniture/architecture independent of camera angle.\",\"severity\":\"moderate\",\"confidence\":0.82}]}"
+}

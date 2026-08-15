@@ -1,0 +1,57 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:56:37.030Z",
+  "latencyMs": 4655,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 2393,
+    "total_tokens": 4362,
+    "cost": 0.0123114,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 291,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0123114,
+      "upstream_inference_prompt_cost": 0.00214115,
+      "upstream_inference_completions_cost": 0.01017025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1956,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man in white shirt | facing mirror, holding straight razor near chin/mouth | facing mirror, holding razor near chin/mouth | moves razor sequentially to upper lip, nose, forehead, eye/brow, cheek, chin in repetitive loop",
+    "straight razor (small silver blade) | held in hand near face, tip near mouth | held in hand near face | translates with hand across face, no change in foam/hair, orientation stays consistent",
+    "mirror with wood frame + reflected room (wood door with brass handle, wall shelf with bottles) | reflects front view of man and background | same | reflection motion stays synchronized with foreground man"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "man / straight razor",
+      "invariant_violated": "plausible_action/safe_tool_use",
+      "description": "Man drags the straight razor across non-shaving areas including the center forehead and directly over the eyelid/eyebrow (00:02-00:04 and again 00:09). No shaving cream, no beard hair in that region, and the blade contacts eyelid skin at a perpendicular angle. This is not a plausible shaving technique and depicts an unsafe, implausible grooming action that would need correction before publication.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "shaving process / facial surface",
+      "invariant_violated": "physical_effect_consistency",
+      "description": "Throughout 00:00-00:09 the razor repeatedly strokes chin, cheek, nose and forehead with audible scraping but produces no visible effect: no shaving cream/lather present at any time, no hair removal, no skin displacement, no residue on blade. Contact leaves no trace, indicating a simulated action without expected material consequences.",
+      "severity": "minor",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man in white shirt | facing mirror, holding straight razor near chin/mouth | facing mirror, holding razor near chin/mouth | moves razor sequentially to upper lip, nose, forehead, eye/brow, cheek, chin in repetitive loop\",\n    \"straight razor (small silver blade) | held in hand near face, tip near mouth | held in hand near face | translates with hand across face, no change in foam/hair, orientation stays consistent\",\n    \"mirror with wood frame + reflected room (wood door with brass handle, wall shelf with bottles) | reflects front view of man and background | same | reflection motion stays synchronized with foreground man\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"man / straight razor\",\n      \"invariant_violated\": \"plausible_action/safe_tool_use\",\n      \"description\": \"Man drags the straight razor across non-shaving areas including the center forehead and directly over the eyelid/eyebrow (00:02-00:04 and again 00:09). No shaving cream, no beard hair in that region, and the blade contacts eyelid skin at a perpendicular angle. This is not a plausible shaving technique and depicts an unsafe, implausible grooming action that would need correction before publication.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"shaving process / facial surface\",\n      \"invariant_violated\": \"physical_effect_consistency\",\n      \"description\": \"Throughout 00:00-00:09 the razor repeatedly strokes chin, cheek, nose and forehead with audible scraping but produces no visible effect: no shaving cream/lather present at any time, no hair removal, no skin displacement, no residue on blade. Contact leaves no trace, indicating a simulated action without expected material consequences.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

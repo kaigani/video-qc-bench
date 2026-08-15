@@ -22,6 +22,7 @@ const LABELS = {
   pro: 'Gemini Pro Latest',
   gemma: 'Gemma 4 31B',
   pegasus: 'Pegasus 1.5',
+  muse: 'Muse Spark 1.2',
 };
 
 const models = [];

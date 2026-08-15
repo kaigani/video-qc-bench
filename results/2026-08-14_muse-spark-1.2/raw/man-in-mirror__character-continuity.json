@@ -1,0 +1,47 @@
+{
+  "key": "man-in-mirror__character-continuity",
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:56:50.430Z",
+  "latencyMs": 7001,
+  "usage": {
+    "prompt_tokens": 2146,
+    "completion_tokens": 2894,
+    "total_tokens": 5040,
+    "cost": 0.0144507,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0144507,
+      "upstream_inference_prompt_cost": 0.0021512,
+      "upstream_inference_completions_cost": 0.0122995
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2614,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (real body and mirror reflection) | dark slicked-back hair, white collared button-up shirt, holding light-colored razor, standing facing bathroom mirror (real body back/side to camera, reflection front-facing to camera) | same hair, same white shirt, same razor, same position facing mirror | motion sequence chin->forehead->cheek repeats with abrupt reset around 00:05, otherwise position/facing unchanged"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Man (real body and mirror reflection)",
+      "invariant_violated": "movement_continuity",
+      "description": "At ~00:04 the man's hand/razor is at the cheek/jaw completing a downward stroke; at ~00:05 the hand/razor instantly teleports back to the starting chin/philtrum position and restarts the identical chin->forehead->cheek sequence seen at 00:00-00:04. The motion does not continue plausibly across the loop point - action is restarted/skipped without intervening on-screen movement or plausible off-screen time, indicating a hidden loop cut.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (real body and mirror reflection) | dark slicked-back hair, white collared button-up shirt, holding light-colored razor, standing facing bathroom mirror (real body back/side to camera, reflection front-facing to camera) | same hair, same white shirt, same razor, same position facing mirror | motion sequence chin->forehead->cheek repeats with abrupt reset around 00:05, otherwise position/facing unchanged\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Man (real body and mirror reflection)\",\n      \"invariant_violated\": \"movement_continuity\",\n      \"description\": \"At ~00:04 the man's hand/razor is at the cheek/jaw completing a downward stroke; at ~00:05 the hand/razor instantly teleports back to the starting chin/philtrum position and restarts the identical chin->forehead->cheek sequence seen at 00:00-00:04. The motion does not continue plausibly across the loop point - action is restarted/skipped without intervening on-screen movement or plausible off-screen time, indicating a hidden loop cut.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

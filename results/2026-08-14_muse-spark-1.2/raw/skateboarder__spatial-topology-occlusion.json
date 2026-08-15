@@ -1,0 +1,43 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:59:01.457Z",
+  "latencyMs": 9753,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 1771,
+    "total_tokens": 3921,
+    "cost": 0.00968295,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00968295,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.00752675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1483,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder (moving) | centered, low on board rolling forward on flat | crouched over bowl coping, then rolling away | two airborne phases with smooth trajectory, occlusion over board and concrete consistent",
+    "skateboard | under feet on flat, horizontal | under feet approaching bowl edge, briefly airborne and rotating | lifts, separates, rotates, lands, stays depth-ordered behind rider feet",
+    "concrete skatepark (fixed) | flat apron with bowls/ramps, dark metal coping edges, light-gray joints | same continuous bowl structure with coping and checkered bowl interior visible | camera tracks forward along surface, curvature and coping continuity maintained",
+    "light poles (fixed) | 2-3 tall poles with multi-fixtures against sky, left and right of frame | same poles recede/reapproach as camera moves, vertical orientation warped only by fisheye | relative spacing and background position shift smoothly with camera translation",
+    "tree line & horizon (fixed) | dense green trees beyond park perimeter behind ramps | same tree line encircling park, visible beyond coping | panorama pans consistently with camera travel, no sudden appearance/disappearance",
+    "sky/sun (fixed background) | bright blue with cumulus, sun high overhead creating glare | same sky dome, sun near frame top during air | fisheye sky curvature stable across motion"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"skateboarder (moving) | centered, low on board rolling forward on flat | crouched over bowl coping, then rolling away | two airborne phases with smooth trajectory, occlusion over board and concrete consistent\",\"skateboard | under feet on flat, horizontal | under feet approaching bowl edge, briefly airborne and rotating | lifts, separates, rotates, lands, stays depth-ordered behind rider feet\",\"concrete skatepark (fixed) | flat apron with bowls/ramps, dark metal coping edges, light-gray joints | same continuous bowl structure with coping and checkered bowl interior visible | camera tracks forward along surface, curvature and coping continuity maintained\",\"light poles (fixed) | 2-3 tall poles with multi-fixtures against sky, left and right of frame | same poles recede/reapproach as camera moves, vertical orientation warped only by fisheye | relative spacing and background position shift smoothly with camera translation\",\"tree line & horizon (fixed) | dense green trees beyond park perimeter behind ramps | same tree line encircling park, visible beyond coping | panorama pans consistently with camera travel, no sudden appearance/disappearance\",\"sky/sun (fixed background) | bright blue with cumulus, sun high overhead creating glare | same sky dome, sun near frame top during air | fisheye sky curvature stable across motion\"],\"findings\":[]}"
+}

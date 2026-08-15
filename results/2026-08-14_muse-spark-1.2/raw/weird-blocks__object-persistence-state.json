@@ -1,0 +1,62 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:00:01.795Z",
+  "latencyMs": 5710,
+  "usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 3883,
+    "total_tokens": 6045,
+    "cost": 0.01867395,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01867395,
+      "upstream_inference_prompt_cost": 0.0021712,
+      "upstream_inference_completions_cost": 0.01650275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3147,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cube 1 (leftmost, final blue 2/6) | start: green cube with 2 front at left center, on table | end: blue cube with 2 front (6 side) at pos1 leftmost, on table | notable: color green->blue at 00:01 while hand occluded, number 2 persisted",
+    "Cube 2 (final blue 3) | start: not visible off-screen | end: blue cube with 3 front at pos2, on table | notable: entered in hand at 00:01-00:02 and placed between Cube1 and Cube3",
+    "Cube 3 (middle green 2, original right) | start: green cube with 2 front at right center, on table | end: green cube with 2 front at pos3, on table | notable: slid right at 00:02 to accommodate Cube2 without visible contact",
+    "Cube 4 (tan/beige 2) | start: not visible off-screen | end: tan cube with 2 front at pos4, on table | notable: entered in hand at 00:03-00:04 placed to right of Cube3",
+    "Cube 5 (light blue 3) | start: not visible off-screen | end: light blue cube with 3 front at pos5, on table | notable: entered in hand at 00:04-00:05 placed to right of Cube4",
+    "Cube 6 (green 5) | start: not visible off-screen, first seen held showing 3 at 00:05 | end: green cube with 5 front at pos6, on table | notable: rotated in hand during placement 3->5, then stable",
+    "Cube 7 (green 2) | start: not visible off-screen, first seen held showing 3 at 00:06 | end: green cube with 2 front at pos7, on table | notable: rotated in hand during placement 3->2, then stable",
+    "Cube 8 (rightmost blue 6) | start: not visible off-screen, first seen held showing 3 at 00:07 | end: blue cube with 6 front at pos8, on table | notable: rotated in hand during placement 3->6, then stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Cube 1 (leftmost cube)",
+      "invariant_violated": "identity_persistence",
+      "description": "Left green cube with 2 front transforms into a blue cube with 2 front (6 side visible) while hand occludes it. No swap or paint action is visible; a green inanimate object cannot become blue on its own. Color identity changes with no visible cause.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Cube 3 (original right green 2)",
+      "invariant_violated": "location & orientation",
+      "description": "Green 2 cube at right center slides/displaces to the right to make space for the inserted blue 3 cube, without any visible hand contact or push on that cube at that moment. Position changes with no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.88
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cube 1 (leftmost, final blue 2/6) | start: green cube with 2 front at left center, on table | end: blue cube with 2 front (6 side) at pos1 leftmost, on table | notable: color green->blue at 00:01 while hand occluded, number 2 persisted\",\n    \"Cube 2 (final blue 3) | start: not visible off-screen | end: blue cube with 3 front at pos2, on table | notable: entered in hand at 00:01-00:02 and placed between Cube1 and Cube3\",\n    \"Cube 3 (middle green 2, original right) | start: green cube with 2 front at right center, on table | end: green cube with 2 front at pos3, on table | notable: slid right at 00:02 to accommodate Cube2 without visible contact\",\n    \"Cube 4 (tan/beige 2) | start: not visible off-screen | end: tan cube with 2 front at pos4, on table | notable: entered in hand at 00:03-00:04 placed to right of Cube3\",\n    \"Cube 5 (light blue 3) | start: not visible off-screen | end: light blue cube with 3 front at pos5, on table | notable: entered in hand at 00:04-00:05 placed to right of Cube4\",\n    \"Cube 6 (green 5) | start: not visible off-screen, first seen held showing 3 at 00:05 | end: green cube with 5 front at pos6, on table | notable: rotated in hand during placement 3->5, then stable\",\n    \"Cube 7 (green 2) | start: not visible off-screen, first seen held showing 3 at 00:06 | end: green cube with 2 front at pos7, on table | notable: rotated in hand during placement 3->2, then stable\",\n    \"Cube 8 (rightmost blue 6) | start: not visible off-screen, first seen held showing 3 at 00:07 | end: blue cube with 6 front at pos8, on table | notable: rotated in hand during placement 3->6, then stable\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Cube 1 (leftmost cube)\",\n      \"invariant_violated\": \"identity_persistence\",\n      \"description\": \"Left green cube with 2 front transforms into a blue cube with 2 front (6 side visible) while hand occludes it. No swap or paint action is visible; a green inanimate object cannot become blue on its own. Color identity changes with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Cube 3 (original right green 2)\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"Green 2 cube at right center slides/displaces to the right to make space for the inserted blue 3 cube, without any visible hand contact or push on that cube at that moment. Position changes with no visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    }\n  ]\n}"
+}

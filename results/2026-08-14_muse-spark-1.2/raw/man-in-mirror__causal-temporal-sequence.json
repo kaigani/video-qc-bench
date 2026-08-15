@@ -1,0 +1,50 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:57:16.764Z",
+  "latencyMs": 6459,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 3696,
+    "total_tokens": 5845,
+    "cost": 0.01786295,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01786295,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.015708
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3345,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (real, white shirt) | head tilted up, right hand holding razor at chin/jaw | head tilted up, right hand holding razor at forehead/eye | razor strokes: chin -> upper lip/nose -> forehead -> cheek -> chin -> upper lip/nose -> forehead",
+    "Mirror reflection (in wood-framed mirror) | synchronized with real man, same posture and hand position | synchronized | mirrors all hand/razor translations without lag or offset",
+    "Razor (small light-colored straight razor) | in right hand at chin | in right hand at forehead | translates continuously across face in successive strokes",
+    "Background (wooden door, wall, shelf with bottles) | static, door closed, no motion | static | no changes, no cause for motion/light changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Man/right hand/razor motion",
+      "invariant_violated": "temporal flow - repeated beats / discontinuous motion",
+      "description": "After the razor completes a forehead stroke (~00:02-00:04), the hand position abruptly resets to the chin/upper-lip starting position (~00:05) and the entire stroke sequence from 00:00-00:04 (chin -> nose -> forehead) repeats verbatim from 00:05-00:09. There is no continuous travel bridging forehead to chin and time effectively loops backward, constituting repeated beats and a discontinuous cause-effect trajectory.",
+      "severity": "moderate",
+      "confidence": 0.84
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (real, white shirt) | head tilted up, right hand holding razor at chin/jaw | head tilted up, right hand holding razor at forehead/eye | razor strokes: chin -> upper lip/nose -> forehead -> cheek -> chin -> upper lip/nose -> forehead\",\n    \"Mirror reflection (in wood-framed mirror) | synchronized with real man, same posture and hand position | synchronized | mirrors all hand/razor translations without lag or offset\",\n    \"Razor (small light-colored straight razor) | in right hand at chin | in right hand at forehead | translates continuously across face in successive strokes\",\n    \"Background (wooden door, wall, shelf with bottles) | static, door closed, no motion | static | no changes, no cause for motion/light changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Man/right hand/razor motion\",\n      \"invariant_violated\": \"temporal flow - repeated beats / discontinuous motion\",\n      \"description\": \"After the razor completes a forehead stroke (~00:02-00:04), the hand position abruptly resets to the chin/upper-lip starting position (~00:05) and the entire stroke sequence from 00:00-00:04 (chin -> nose -> forehead) repeats verbatim from 00:05-00:09. There is no continuous travel bridging forehead to chin and time effectively loops backward, constituting repeated beats and a discontinuous cause-effect trajectory.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.84\n    }\n  ]\n}"
+}

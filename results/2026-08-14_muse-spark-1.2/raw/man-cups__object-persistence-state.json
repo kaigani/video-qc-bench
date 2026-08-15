@@ -1,0 +1,66 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:56:05.433Z",
+  "latencyMs": 6611,
+  "usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 2347,
+    "total_tokens": 4509,
+    "cost": 0.01214595,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01214595,
+      "upstream_inference_prompt_cost": 0.0021712,
+      "upstream_inference_completions_cost": 0.00997475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1708,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "4x red cups with stainless steel interior | start: clustered on green felt center, one with large emblem coin on rim (center cup), one with emblem coin inside (front cup), two empty rear cups | end: same 4 cups slightly repositioned on felt, still 4 | moved by hands, no duplication or vanishing",
+    "small gold coins (yellow, ~25mm) | start: ~3-4 on green felt (1 near center left, 1 right of center cup, 2 at bottom) + 1 held in right hand | end: ~6-7 on green felt + 1 in each hand | notable transitions: count increased by 3+ without visible introduction from off-table",
+    "large emblem coins (silver/gold, ~40mm with crest) | start: 1 balanced on rim of center cup, 1 inside front cup, many printed replicas on red border | end: still 1 on rim, 1 handled between fingers, 1 inside front cup | handled repeatedly, placed into/removed from front cup",
+    "printed chip tokens on red outer ring | start: ~20+ circular chips fixed/printed around table perimeter | end: same arrangement, undisturbed | no transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "small gold coins",
+      "invariant_violated": "identity & persistence - count/duplication",
+      "description": "Right hand drops a single gold coin into the front cup. In the next moments the total number of gold coins visible on the green felt and in the hands increases by at least one with no visible coin introduced from off-screen, pocket, or sleeve. An object cannot duplicate without a visible source.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small gold coins",
+      "invariant_violated": "location & orientation - unexplained appearance",
+      "description": "Two additional gold coins appear on the lower green felt area (near bottom edge) where none were present at 00:00-00:02, with no visible placement action causing them. The hand is occupied manipulating the front cup and the other hand holds a different coin; the new coins simply become visible on the felt.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "small gold coins",
+      "invariant_violated": "ownership & possession - unexplained multiplicity",
+      "description": "Performer is shown holding a gold coin in each hand simultaneously (left and right) after only one gold coin was tracked in-hand. The second coin appears in the opposite hand without a visible transfer, pick-up, or retrieval, violating conservation of count.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"4x red cups with stainless steel interior | start: clustered on green felt center, one with large emblem coin on rim (center cup), one with emblem coin inside (front cup), two empty rear cups | end: same 4 cups slightly repositioned on felt, still 4 | moved by hands, no duplication or vanishing\",\n    \"small gold coins (yellow, ~25mm) | start: ~3-4 on green felt (1 near center left, 1 right of center cup, 2 at bottom) + 1 held in right hand | end: ~6-7 on green felt + 1 in each hand | notable transitions: count increased by 3+ without visible introduction from off-table\",\n    \"large emblem coins (silver/gold, ~40mm with crest) | start: 1 balanced on rim of center cup, 1 inside front cup, many printed replicas on red border | end: still 1 on rim, 1 handled between fingers, 1 inside front cup | handled repeatedly, placed into/removed from front cup\",\n    \"printed chip tokens on red outer ring | start: ~20+ circular chips fixed/printed around table perimeter | end: same arrangement, undisturbed | no transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"small gold coins\",\n      \"invariant_violated\": \"identity & persistence - count/duplication\",\n      \"description\": \"Right hand drops a single gold coin into the front cup. In the next moments the total number of gold coins visible on the green felt and in the hands increases by at least one with no visible coin introduced from off-screen, pocket, or sleeve. An object cannot duplicate without a visible source.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"small gold coins\",\n      \"invariant_violated\": \"location & orientation - unexplained appearance\",\n      \"description\": \"Two additional gold coins appear on the lower green felt area (near bottom edge) where none were present at 00:00-00:02, with no visible placement action causing them. The hand is occupied manipulating the front cup and the other hand holds a different coin; the new coins simply become visible on the felt.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"small gold coins\",\n      \"invariant_violated\": \"ownership & possession - unexplained multiplicity\",\n      \"description\": \"Performer is shown holding a gold coin in each hand simultaneously (left and right) after only one gold coin was tracked in-hand. The second coin appears in the opposite hand without a visible transfer, pick-up, or retrieval, violating conservation of count.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

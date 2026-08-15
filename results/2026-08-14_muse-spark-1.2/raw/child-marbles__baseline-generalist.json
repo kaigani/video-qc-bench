@@ -1,0 +1,58 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:53:19.737Z",
+  "latencyMs": 8257,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 2080,
+    "total_tokens": 4049,
+    "cost": 0.01130125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01130125,
+      "upstream_inference_prompt_cost": 0.00246125,
+      "upstream_inference_completions_cost": 0.00884
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1716,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child hands in blue zip-up jacket | both hands above/at bowl rim at start | right hand stirring inside bowl, left hand holding bowl rim at end | picks up red ball 00:01-00:03 then rapid stirring 00:05-00:09",
+    "glass bowl on wooden table | clear, centered, containing 8 distinct balls (3 yellow, 3 green, 2 red) | clear, centered, contents motion-blurred | stationary while contents agitated",
+    "balls inside bowl | 8 total, solid opaque red/yellow/green | ~9-10 visible, heavily motion-blurred with ghosting | stirred and rearranged",
+    "wooden table + small metal cup with green leaf + 2 out-of-bowl balls on right edge | cup and out-of-bowl balls static at right | same positions unchanged | no interaction"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "balls inside bowl",
+      "invariant_violated": "object permanence / count conservation",
+      "description": "Bowl starts with 8 distinct balls (2 red, 3 yellow, 3 green). During rapid stirring 00:06-00:09 the visible count increases to ~9-10 with 3-4 reds visible and duplicate translucent instances, with no ball entering from outside the bowl.",
+      "severity": "moderate",
+      "confidence": 0.72
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "child's right hand and balls",
+      "invariant_violated": "solidity / non-interpenetration",
+      "description": "During rapid stirring the hand and balls exhibit ghosting and transparency; balls appear semi-transparent, leave motion trails, and clip through fingers and each other instead of maintaining solid boundaries and collisions.",
+      "severity": "minor",
+      "confidence": 0.68
+    }
+  ],
+  "rawText": "{\"ledger\":[\"child hands in blue zip-up jacket | both hands above/at bowl rim at start | right hand stirring inside bowl, left hand holding bowl rim at end | picks up red ball 00:01-00:03 then rapid stirring 00:05-00:09\",\"glass bowl on wooden table | clear, centered, containing 8 distinct balls (3 yellow, 3 green, 2 red) | clear, centered, contents motion-blurred | stationary while contents agitated\",\"balls inside bowl | 8 total, solid opaque red/yellow/green | ~9-10 visible, heavily motion-blurred with ghosting | stirred and rearranged\",\"wooden table + small metal cup with green leaf + 2 out-of-bowl balls on right edge | cup and out-of-bowl balls static at right | same positions unchanged | no interaction\"],\"findings\":[{\"timestamp\":\"00:06\",\"entity\":\"balls inside bowl\",\"invariant_violated\":\"object permanence / count conservation\",\"description\":\"Bowl starts with 8 distinct balls (2 red, 3 yellow, 3 green). During rapid stirring 00:06-00:09 the visible count increases to ~9-10 with 3-4 reds visible and duplicate translucent instances, with no ball entering from outside the bowl.\",\"severity\":\"moderate\",\"confidence\":0.72},{\"timestamp\":\"00:07\",\"entity\":\"child's right hand and balls\",\"invariant_violated\":\"solidity / non-interpenetration\",\"description\":\"During rapid stirring the hand and balls exhibit ghosting and transparency; balls appear semi-transparent, leave motion trails, and clip through fingers and each other instead of maintaining solid boundaries and collisions.\",\"severity\":\"minor\",\"confidence\":0.68}]}"
+}

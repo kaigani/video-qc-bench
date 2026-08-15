@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:55:37.968Z",
+  "latencyMs": 4049,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 1889,
+    "total_tokens": 4038,
+    "cost": 0.0101832,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0101832,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.00802825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1633,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman in teal dress (short blonde hair) | standing in kitchen near microwave facing hallway | walking back toward kitchen through hallway | initiates walk (~00:00) -> continuous forward translation, head turns to scan (00:02, 00:05-00:06), enters bedroom (00:04-00:05), reverses direction in bedroom (00:06-00:07) and exits",
+    "ambient illumination (daylight + interior lamps) | warm stable exposure in kitchen/hallway | warm stable exposure in bedroom and on return | no flicker or step-change; bedroom lamp remains on, daylight through windows constant, luminance varies only gradually with position",
+    "architectural elements (open doorways, hardwood floor, fixtures) | doorways open and static, floor static, chandelier/curtains still | same open/static state on return | no movement without contact; woman passes through thresholds without causing door/wall motion",
+    "camera viewpoint | following behind woman in kitchen | following behind woman returning toward kitchen | smooth continuous tracking matching subject velocity, no freeze, jump, or temporal discontinuity"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman in teal dress (short blonde hair) | standing in kitchen near microwave facing hallway | walking back toward kitchen through hallway | initiates walk (~00:00) -> continuous forward translation, head turns to scan (00:02, 00:05-00:06), enters bedroom (00:04-00:05), reverses direction in bedroom (00:06-00:07) and exits\",\n    \"ambient illumination (daylight + interior lamps) | warm stable exposure in kitchen/hallway | warm stable exposure in bedroom and on return | no flicker or step-change; bedroom lamp remains on, daylight through windows constant, luminance varies only gradually with position\",\n    \"architectural elements (open doorways, hardwood floor, fixtures) | doorways open and static, floor static, chandelier/curtains still | same open/static state on return | no movement without contact; woman passes through thresholds without causing door/wall motion\",\n    \"camera viewpoint | following behind woman in kitchen | following behind woman returning toward kitchen | smooth continuous tracking matching subject velocity, no freeze, jump, or temporal discontinuity\"\n  ],\n  \"findings\": []\n}"
+}

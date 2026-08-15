@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:59:07.952Z",
+  "latencyMs": 7444,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 2153,
+    "total_tokens": 4302,
+    "cost": 0.0113052,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0113052,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.00915025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1824,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | rolling upright on flat, black clothes/red shoes/green socks | rolling upright on flat after landing | crouch 00:00-00:01 -> pop/jump 00:01 -> airborne 00:01-00:03 -> land/roll 00:03-00:07 -> crouch 00:06-00:07 -> pop/flick/jump 00:07-00:08 -> airborne 00:08-00:09 -> land/roll 00:09",
+    "skateboard | on ground rolling under feet | on ground rolling under feet | tail press 00:01 -> lift-off 00:01 -> airborne coasting with rider 00:01-00:03 -> wheel impact 00:03 -> roll 00:03-00:07 -> tail press + front-foot flick 00:07-00:08 -> airborne rotation 00:08-00:09 -> wheel impact 00:09 -> roll",
+    "shadow on concrete | cast directly below rider/board | cast directly below rider/board | translates continuously with rider/board, elongates/shifts during jumps 00:01-00:03 and 00:08-00:09, no lag/lead vs motion",
+    "environment (concrete bowls, trees, sky, light poles) | static bright daylight | static bright daylight | no self-motion; parallax moves continuously with tracking camera, no freeze/repeat"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | rolling upright on flat, black clothes/red shoes/green socks | rolling upright on flat after landing | crouch 00:00-00:01 -> pop/jump 00:01 -> airborne 00:01-00:03 -> land/roll 00:03-00:07 -> crouch 00:06-00:07 -> pop/flick/jump 00:07-00:08 -> airborne 00:08-00:09 -> land/roll 00:09\",\n    \"skateboard | on ground rolling under feet | on ground rolling under feet | tail press 00:01 -> lift-off 00:01 -> airborne coasting with rider 00:01-00:03 -> wheel impact 00:03 -> roll 00:03-00:07 -> tail press + front-foot flick 00:07-00:08 -> airborne rotation 00:08-00:09 -> wheel impact 00:09 -> roll\",\n    \"shadow on concrete | cast directly below rider/board | cast directly below rider/board | translates continuously with rider/board, elongates/shifts during jumps 00:01-00:03 and 00:08-00:09, no lag/lead vs motion\",\n    \"environment (concrete bowls, trees, sky, light poles) | static bright daylight | static bright daylight | no self-motion; parallax moves continuously with tracking camera, no freeze/repeat\"\n  ],\n  \"findings\": []\n}"
+}

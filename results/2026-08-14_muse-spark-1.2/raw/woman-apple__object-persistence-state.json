@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:00:28.030Z",
+  "latencyMs": 8196,
+  "usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 1509,
+    "total_tokens": 3671,
+    "cost": 0.00858445,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00858445,
+      "upstream_inference_prompt_cost": 0.0021712,
+      "upstream_inference_completions_cost": 0.00641325
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1252,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Blue umbrella | start: open, blue canopy overhead, shaft held vertically by woman center-frame | end: open, canopy overhead, shaft held vertically as woman turns away (back to camera) | possession remains with woman throughout, orientation rotates with her body turn, no open/closed state change",
+    "Red apple | start: whole, red, held in both hands at chest by woman | end: whole, red, still held between both hands near umbrella shaft, partially occluded in side/back view | possession remains with woman, no bitten/broken state change, location follows woman",
+    "Market produce bins (oranges/yellow fruits in pink/red crates left, green limes, red tomatoes, blue/purple fruits) | start: arranged in crates on tables lining both sides of aisle | end: same crates in same positions as camera pans past | no duplication, vanishing, or spontaneous rearrangement observed",
+    "Hanging produce bags (red onions/tomatoes) and cardboard boxes on stalls | start: hanging above left stalls, boxes stacked on tables | end: remain hanging/stacked in background | no persistence or location violation"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Blue umbrella | start: open, blue canopy overhead, shaft held vertically by woman center-frame | end: open, canopy overhead, shaft held vertically as woman turns away (back to camera) | possession remains with woman throughout, orientation rotates with her body turn, no open/closed state change\",\n    \"Red apple | start: whole, red, held in both hands at chest by woman | end: whole, red, still held between both hands near umbrella shaft, partially occluded in side/back view | possession remains with woman, no bitten/broken state change, location follows woman\",\n    \"Market produce bins (oranges/yellow fruits in pink/red crates left, green limes, red tomatoes, blue/purple fruits) | start: arranged in crates on tables lining both sides of aisle | end: same crates in same positions as camera pans past | no duplication, vanishing, or spontaneous rearrangement observed\",\n    \"Hanging produce bags (red onions/tomatoes) and cardboard boxes on stalls | start: hanging above left stalls, boxes stacked on tables | end: remain hanging/stacked in background | no persistence or location violation\"\n  ],\n  \"findings\": []\n}"
+}

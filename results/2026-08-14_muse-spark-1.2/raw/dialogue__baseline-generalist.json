@@ -1,0 +1,48 @@
+{
+  "key": "dialogue__baseline-generalist",
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:54:41.746Z",
+  "latencyMs": 3544,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 3652,
+    "total_tokens": 5621,
+    "cost": 0.01798225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01798225,
+      "upstream_inference_prompt_cost": 0.00246125,
+      "upstream_inference_completions_cost": 0.015521
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3453,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man in green/white striped shirt | center frame facing camera speaking | turned left in profile knocking on left wood door | turns left, walks to door, knocks",
+    "background doors and decor | brown wooden paneled doors closed, blue coat on hook, kangaroo print on right door | same doors still brown and closed, left door being knocked | reveals second framed picture behind actor as he moves, no red/blue/open door appears"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "doors / dialogue",
+      "invariant_violated": "audio-visual consistency",
+      "description": "Dialogue states 'The red door is locked. The blue door is open' but all doors visible throughout the clip are brown wood and closed. No red door, no blue door, and no open door is ever visible; the door knocked at 00:08-00:09 is also brown and closed.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\"ledger\":[\"man in green/white striped shirt | center frame facing camera speaking | turned left in profile knocking on left wood door | turns left, walks to door, knocks\",\"background doors and decor | brown wooden paneled doors closed, blue coat on hook, kangaroo print on right door | same doors still brown and closed, left door being knocked | reveals second framed picture behind actor as he moves, no red/blue/open door appears\"],\"findings\":[{\"timestamp\":\"00:00\",\"entity\":\"doors / dialogue\",\"invariant_violated\":\"audio-visual consistency\",\"description\":\"Dialogue states 'The red door is locked. The blue door is open' but all doors visible throughout the clip are brown wood and closed. No red door, no blue door, and no open door is ever visible; the door knocked at 00:08-00:09 is also brown and closed.\",\"severity\":\"moderate\",\"confidence\":0.92}]}"
+}

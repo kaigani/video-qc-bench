@@ -1,0 +1,60 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:56:28.352Z",
+  "latencyMs": 6748,
+  "usage": {
+    "prompt_tokens": 2149,
+    "completion_tokens": 3206,
+    "total_tokens": 5355,
+    "cost": 0.01578045,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01578045,
+      "upstream_inference_prompt_cost": 0.00215495,
+      "upstream_inference_completions_cost": 0.0136255
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2619,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand + gold coin | holding coin above green felt at 00:00 | descending into front cup 00:01-00:02 | coin insertion motion continuous, hand-to-coin contact maintained",
+    "Left hand + gold coin | holding coin near table edge at 00:00-00:03 | translating toward cups 00:04-00:08 | lateral movement while gripping coin",
+    "Front red cup (closest to camera) | upright, empty interior visible at 00:00 | receives coin from right hand at 00:02 | containment follows drop cause with plausible delay",
+    "Middle red cup with coin on rim | large coin balanced on rim at 00:00 | coin remains balanced through 00:09 | no toppling despite nearby hand/cup motions",
+    "Gold coins on green felt center | ~4 distinct coins visible at 00:00 (near hand, mid-right, 2 at bottom) | ~7-8 coins visible at 00:09 | count increases, cluster near front cup grows",
+    "Camera viewpoint | tight close-up on cups/hands at 00:00 | continuous pull-back to wide shot of performer at 00:06-00:09 | smooth dolly-out, forward temporal flow maintained"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Gold coins on green felt - cluster adjacent to front cup",
+      "invariant_violated": "effect-without-cause",
+      "description": "Between 00:02 and 00:04 two to three additional gold coins materialize on the green felt immediately around the front cup. At that moment the right hand is occupied inserting a single coin into the front cup and the left hand is visibly holding a single separate coin over the right side; no hand performs a place/drop action over the location where the new coins appear. Effect (appearance of multiple coins) occurs without any preceding cause or contact.",
+      "severity": "moderate",
+      "confidence": 0.84
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Gold coins on green felt - lower edge of felt",
+      "invariant_violated": "effect-without-cause",
+      "description": "At ~00:05-00:06 as the camera widens, at least one additional gold coin appears at the lower edge of the green felt with no hand over that area and no throwing/dropping trajectory preceding it. The total count on the felt jumps from ~5 to ~7 without a visible placement cause, constituting a second instance of coins appearing without cause.",
+      "severity": "minor",
+      "confidence": 0.76
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand + gold coin | holding coin above green felt at 00:00 | descending into front cup 00:01-00:02 | coin insertion motion continuous, hand-to-coin contact maintained\",\n    \"Left hand + gold coin | holding coin near table edge at 00:00-00:03 | translating toward cups 00:04-00:08 | lateral movement while gripping coin\",\n    \"Front red cup (closest to camera) | upright, empty interior visible at 00:00 | receives coin from right hand at 00:02 | containment follows drop cause with plausible delay\",\n    \"Middle red cup with coin on rim | large coin balanced on rim at 00:00 | coin remains balanced through 00:09 | no toppling despite nearby hand/cup motions\",\n    \"Gold coins on green felt center | ~4 distinct coins visible at 00:00 (near hand, mid-right, 2 at bottom) | ~7-8 coins visible at 00:09 | count increases, cluster near front cup grows\",\n    \"Camera viewpoint | tight close-up on cups/hands at 00:00 | continuous pull-back to wide shot of performer at 00:06-00:09 | smooth dolly-out, forward temporal flow maintained\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Gold coins on green felt - cluster adjacent to front cup\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"Between 00:02 and 00:04 two to three additional gold coins materialize on the green felt immediately around the front cup. At that moment the right hand is occupied inserting a single coin into the front cup and the left hand is visibly holding a single separate coin over the right side; no hand performs a place/drop action over the location where the new coins appear. Effect (appearance of multiple coins) occurs without any preceding cause or contact.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.84\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Gold coins on green felt - lower edge of felt\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"At ~00:05-00:06 as the camera widens, at least one additional gold coin appears at the lower edge of the green felt with no hand over that area and no throwing/dropping trajectory preceding it. The total count on the felt jumps from ~5 to ~7 without a visible placement cause, constituting a second instance of coins appearing without cause.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.76\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T05:00:42.460Z",
+  "latencyMs": 8719,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 2167,
+    "total_tokens": 4317,
+    "cost": 0.01136595,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01136595,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.00920975
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1767,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Market aisle - linear corridor with red awnings overhead, left stalls with hanging mesh bags/bulb lights and bins of green limes, red tomatoes, oranges/yellows, right stalls with crates/blue bins of green and red apples extending to vanishing point | same linear corridor geometry at end | camera tracks backward then arcs smoothly left-around subject, revealing continuous stall progression without rearrangement",
+    "Left stall array - fixed row under red canopy: foreground green limes in dark green bin, red tomatoes, blue-wrapped produce, red crate of orange/yellow citrus, purple trays with green/blue fruits | retains left-side position relative to aisle | perspective slides with camera orbit, nearer bins/crates correctly occlude farther bins, hanging lights maintain parallax",
+    "Right stall array - fixed row under red/blue canopies: wooden crates and blue plastic bins with red/green apples and other produce | retains right-side position relative to aisle | remains on observer right until orbit completes, then appears behind/left as viewpoint rotates  ~90-180 deg, consistent with circular camera path",
+    "Blue umbrella + central woman (moving foreground occluder) - umbrella centered ~0.5m above woman's head, woman at aisle center holding red apple at chest height, walking toward camera | umbrella remains centered above head, woman rotates from front-facing to right-profile to back-facing as camera orbits | umbrella consistently occludes background awnings/lights, woman correctly occludes distant pedestrians and stalls when they are behind her plane",
+    "Background connectivity / depth ordering - open aisle with no doors/windows, depth recedes linearly with pedestrians and stall rows scaling with distance | same open connectivity at end with deeper stalls visible ahead of woman | distant figures remain smaller and are occluded by nearer people/stall edges; occlusion edges evolve smoothly with no background-through-foreground rendering"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Market aisle - linear corridor with red awnings overhead, left stalls with hanging mesh bags/bulb lights and bins of green limes, red tomatoes, oranges/yellows, right stalls with crates/blue bins of green and red apples extending to vanishing point | same linear corridor geometry at end | camera tracks backward then arcs smoothly left-around subject, revealing continuous stall progression without rearrangement\",\n    \"Left stall array - fixed row under red canopy: foreground green limes in dark green bin, red tomatoes, blue-wrapped produce, red crate of orange/yellow citrus, purple trays with green/blue fruits | retains left-side position relative to aisle | perspective slides with camera orbit, nearer bins/crates correctly occlude farther bins, hanging lights maintain parallax\",\n    \"Right stall array - fixed row under red/blue canopies: wooden crates and blue plastic bins with red/green apples and other produce | retains right-side position relative to aisle | remains on observer right until orbit completes, then appears behind/left as viewpoint rotates  ~90-180 deg, consistent with circular camera path\",\n    \"Blue umbrella + central woman (moving foreground occluder) - umbrella centered ~0.5m above woman's head, woman at aisle center holding red apple at chest height, walking toward camera | umbrella remains centered above head, woman rotates from front-facing to right-profile to back-facing as camera orbits | umbrella consistently occludes background awnings/lights, woman correctly occludes distant pedestrians and stalls when they are behind her plane\",\n    \"Background connectivity / depth ordering - open aisle with no doors/windows, depth recedes linearly with pedestrians and stall rows scaling with distance | same open connectivity at end with deeper stalls visible ahead of woman | distant figures remain smaller and are occluded by nearer people/stall edges; occlusion edges evolve smoothly with no background-through-foreground rendering\"\n  ],\n  \"findings\": []\n}"
+}

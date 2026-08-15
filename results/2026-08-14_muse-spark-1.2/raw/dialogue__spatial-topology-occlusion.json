@@ -1,0 +1,42 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:55:06.413Z",
+  "latencyMs": 5306,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 3416,
+    "total_tokens": 5566,
+    "cost": 0.0166742,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0166742,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.014518
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3037,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "West wall paneled doors (left/center/right) | start: left door cropped at far left edge, center door centered behind subject with brass medallion top and brass hook, right door far right with kangaroo print frame | end: left door centered as knock target, center door at frame right, right door out of frame after leftward pan | camera pans left following subject, linear adjacency left-center-right preserved",
+    "Blue coat on brass hook (center door) | start: hanging on left side of center door (viewer's left), dark navy with white diagonal stripe near hem, vertical drape | end: same coat same hook same door now at frame right (viewer's right) | translates with door in image due to camera pan, not teleported",
+    "Framed artwork | start: circular/V emblem frame centered on center door partially occluded by subject's head, kangaroo 'V' frame on right door | end: circular frame fully visible on center door at frame right, kangaroo frame out of view | artwork remains fixed to respective doors, occlusion by subject evolves smoothly",
+    "Wall fixtures between doors | start: small wooden push-button box on beige wall segment between center and right doors | end: two brass bell plates + white outlet/switch on beige wall segment left of left door, previous wooden box out of view | consistent with viewing opposite inter-door wall segments after lateral movement, no duplication or displacement",
+    "Subject (man in green/white vertical stripe shirt) | start: facing camera, centered in front of center door, fully visible torso | end: left profile facing left door, both hands on door panels, near wall | walked left ~1-2m, turned ~90deg, remains in foreground occluding doors correctly, depth ordering nearer surfaces occlude farther doors throughout"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"West wall paneled doors (left/center/right) | start: left door cropped at far left edge, center door centered behind subject with brass medallion top and brass hook, right door far right with kangaroo print frame | end: left door centered as knock target, center door at frame right, right door out of frame after leftward pan | camera pans left following subject, linear adjacency left-center-right preserved\",\"Blue coat on brass hook (center door) | start: hanging on left side of center door (viewer's left), dark navy with white diagonal stripe near hem, vertical drape | end: same coat same hook same door now at frame right (viewer's right) | translates with door in image due to camera pan, not teleported\",\"Framed artwork | start: circular/V emblem frame centered on center door partially occluded by subject's head, kangaroo 'V' frame on right door | end: circular frame fully visible on center door at frame right, kangaroo frame out of view | artwork remains fixed to respective doors, occlusion by subject evolves smoothly\",\"Wall fixtures between doors | start: small wooden push-button box on beige wall segment between center and right doors | end: two brass bell plates + white outlet/switch on beige wall segment left of left door, previous wooden box out of view | consistent with viewing opposite inter-door wall segments after lateral movement, no duplication or displacement\",\"Subject (man in green/white vertical stripe shirt) | start: facing camera, centered in front of center door, fully visible torso | end: left profile facing left door, both hands on door panels, near wall | walked left ~1-2m, turned ~90deg, remains in foreground occluding doors correctly, depth ordering nearer surfaces occlude farther doors throughout\"],\"findings\":[]}"
+}

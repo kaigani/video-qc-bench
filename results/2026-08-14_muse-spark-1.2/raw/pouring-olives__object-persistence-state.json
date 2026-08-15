@@ -1,0 +1,52 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:58:07.919Z",
+  "latencyMs": 5977,
+  "usage": {
+    "prompt_tokens": 2162,
+    "completion_tokens": 2858,
+    "total_tokens": 5020,
+    "cost": 0.0143177,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0143177,
+      "upstream_inference_prompt_cost": 0.0021712,
+      "upstream_inference_completions_cost": 0.0121465
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2296,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large clear glass jar with hinged lid | start: empty, open, upright on wooden cutting board center frame | end: ~2/3 full with mixed green and dark olives, open, same position/orientation | transitions: filled by visible pours at 00:01-00:04 and 00:06-00:09",
+    "small clear glass pouring bowl | start: held in both hands over jar, containing mixed green and dark olives | end: held in both hands over jar, nearly empty after second pour | transitions: partially emptied into jar 00:01-00:04, visibly refilled from stainless steel bowl at ~00:05, poured again 00:06-00:09",
+    "stainless steel bowl | start: on white countertop right of jar, containing ~6-7 green olives | end: on white countertop, containing ~2-3 green olives plus brown debris, same orientation | transitions: lifted and tilted over small glass bowl at ~00:05 to transfer olives, then returned to countertop",
+    "speckled white ceramic bowl | start: on white countertop far right, containing ~7-8 green olives | end: same position, same contents, unchanged | transitions: none observed",
+    "small clear glass bottle with narrow neck | start: not visible anywhere in frame 00:00-00:03 | end: upright on white countertop to the right of stainless steel bowl | transitions: appears abruptly between 00:04-00:05 with no visible placement action",
+    "collective olives (green and dark purple) | start: distributed between small glass bowl (mixed) and two countertop bowls (green only) | end: majority consolidated in large jar, remainder in steel and ceramic bowls | transitions: moved only by hand pouring actions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "small clear glass bottle with narrow neck",
+      "invariant_violated": "identity & persistence",
+      "description": "A small clear glass bottle appears on the white countertop immediately to the right of the stainless steel bowl at ~00:04-00:05. It is absent in all frames from 00:00-00:03 where that countertop area is clearly visible and empty. No hand is seen placing, sliding, or uncovering it; the person's hands are over the central jar at the moment it appears. Unexplained appearance/duplication with no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.93
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large clear glass jar with hinged lid | start: empty, open, upright on wooden cutting board center frame | end: ~2/3 full with mixed green and dark olives, open, same position/orientation | transitions: filled by visible pours at 00:01-00:04 and 00:06-00:09\",\n    \"small clear glass pouring bowl | start: held in both hands over jar, containing mixed green and dark olives | end: held in both hands over jar, nearly empty after second pour | transitions: partially emptied into jar 00:01-00:04, visibly refilled from stainless steel bowl at ~00:05, poured again 00:06-00:09\",\n    \"stainless steel bowl | start: on white countertop right of jar, containing ~6-7 green olives | end: on white countertop, containing ~2-3 green olives plus brown debris, same orientation | transitions: lifted and tilted over small glass bowl at ~00:05 to transfer olives, then returned to countertop\",\n    \"speckled white ceramic bowl | start: on white countertop far right, containing ~7-8 green olives | end: same position, same contents, unchanged | transitions: none observed\",\n    \"small clear glass bottle with narrow neck | start: not visible anywhere in frame 00:00-00:03 | end: upright on white countertop to the right of stainless steel bowl | transitions: appears abruptly between 00:04-00:05 with no visible placement action\",\n    \"collective olives (green and dark purple) | start: distributed between small glass bowl (mixed) and two countertop bowls (green only) | end: majority consolidated in large jar, remainder in steel and ceramic bowls | transitions: moved only by hand pouring actions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"small clear glass bottle with narrow neck\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"A small clear glass bottle appears on the white countertop immediately to the right of the stainless steel bowl at ~00:04-00:05. It is absent in all frames from 00:00-00:03 where that countertop area is clearly visible and empty. No hand is seen placing, sliding, or uncovering it; the person's hands are over the central jar at the moment it appears. Unexplained appearance/duplication with no visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.93\n    }\n  ]\n}"
+}

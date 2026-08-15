@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:53:17.609Z",
+  "latencyMs": 16254,
+  "usage": {
+    "prompt_tokens": 20085,
+    "completion_tokens": 4139,
+    "total_tokens": 24224,
+    "cost": 0.042697,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042697,
+      "upstream_inference_prompt_cost": 0.02510625,
+      "upstream_inference_completions_cost": 0.01759075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3397,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner building | dusk exterior, low rectangular footprint, central glass doors, large windows on front/left wall, flat roof with chimney, OPEN neon on front window | dawn interior views same footprint | viewed exterior then multiple interior angles (counter-level, wide entrance, kitchen pass-through reverse)",
+    "counter + stools | L-shaped Formica counter with metal trim, ~7 red vinyl stools along front edge, condiment caddies on top | same geometry | waitress wipes, man sits, both occupy stool positions",
+    "booths + window wall | row of beige booths along left/window wall, floor-to-ceiling panes facing parking lot/road | same arrangement | camera alternates between looking along booths toward kitchen and along counter toward windows",
+    "kitchen pass-through | stainless steel framed opening in back wall, illuminated interior, shelves and equipment visible | same | seen from counter side and reverse from kitchen side",
+    "openings / background outside | night dark field, empty lot, distant power lines through windows and doors | dawn bright field with road, distant house across street visible through same windows | background seen through same window frames changes but geometry of openings constant",
+    "truck | white cab-over semi without trailer parked offset from front corner, angled away from building at 00:00 | dark green conventional cab with long box trailer parked parallel and tight to window wall at 01:41+ | no transit shown, viewed first exterior then through interior window reflection",
+    "waitress | light blue shirt, white apron, hair in bun, wiping counter | same | moves along counter, to kitchen pass, sits with man",
+    "customer | brown jacket, plaid shirt, seated at counter | same | enters from back doorway, sits, drinks coffee, leaves"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "waitress (duplicate rendering)",
+      "invariant_violated": "scene layout and depth ordering & occlusion",
+      "description": "In the dawn wide shot held from the entrance looking toward the kitchen, two simultaneous instances of the waitress are visible: a solid waitress at the right side of the counter near the coffee equipment and a second semi-transparent duplicate near the kitchen pass-through on the back wall wiping the pass. The same fixed entity occupies two disjoint positions at once and the ghost renders with incorrect occlusion/transparency through the solid counter and back wall, incompatible with single-occupancy layout and proper near-over-far occlusion.",
+      "severity": "severe",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "truck relative to diner",
+      "invariant_violated": "scene layout",
+      "description": "The established exterior at 00:00 shows the truck offset from the building's front corner, angled outward with open space between truck and window wall. When first seen through the interior window wall at 01:41 the truck is parked parallel and immediately abutting the same window wall, filling the panes with its trailer side only ~2m from the glass. The relative position of truck to fixed architecture has changed without an intervening movement, and the background seen through the windows now includes a house/across-street structure not present in the establishing exterior, breaking connectivity between the exterior layout and the background seen through openings.",
+      "severity": "moderate",
+      "confidence": 0.78
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner building | dusk exterior, low rectangular footprint, central glass doors, large windows on front/left wall, flat roof with chimney, OPEN neon on front window | dawn interior views same footprint | viewed exterior then multiple interior angles (counter-level, wide entrance, kitchen pass-through reverse)\",\n    \"counter + stools | L-shaped Formica counter with metal trim, ~7 red vinyl stools along front edge, condiment caddies on top | same geometry | waitress wipes, man sits, both occupy stool positions\",\n    \"booths + window wall | row of beige booths along left/window wall, floor-to-ceiling panes facing parking lot/road | same arrangement | camera alternates between looking along booths toward kitchen and along counter toward windows\",\n    \"kitchen pass-through | stainless steel framed opening in back wall, illuminated interior, shelves and equipment visible | same | seen from counter side and reverse from kitchen side\",\n    \"openings / background outside | night dark field, empty lot, distant power lines through windows and doors | dawn bright field with road, distant house across street visible through same windows | background seen through same window frames changes but geometry of openings constant\",\n    \"truck | white cab-over semi without trailer parked offset from front corner, angled away from building at 00:00 | dark green conventional cab with long box trailer parked parallel and tight to window wall at 01:41+ | no transit shown, viewed first exterior then through interior window reflection\",\n    \"waitress | light blue shirt, white apron, hair in bun, wiping counter | same | moves along counter, to kitchen pass, sits with man\",\n    \"customer | brown jacket, plaid shirt, seated at counter | same | enters from back doorway, sits, drinks coffee, leaves\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"waitress (duplicate rendering)\",\n      \"invariant_violated\": \"scene layout and depth ordering & occlusion\",\n      \"description\": \"In the dawn wide shot held from the entrance looking toward the kitchen, two simultaneous instances of the waitress are visible: a solid waitress at the right side of the counter near the coffee equipment and a second semi-transparent duplicate near the kitchen pass-through on the back wall wiping the pass. The same fixed entity occupies two disjoint positions at once and the ghost renders with incorrect occlusion/transparency through the solid counter and back wall, incompatible with single-occupancy layout and proper near-over-far occlusion.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.93\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"truck relative to diner\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"The established exterior at 00:00 shows the truck offset from the building's front corner, angled outward with open space between truck and window wall. When first seen through the interior window wall at 01:41 the truck is parked parallel and immediately abutting the same window wall, filling the panes with its trailer side only ~2m from the glass. The relative position of truck to fixed architecture has changed without an intervening movement, and the background seen through the windows now includes a house/across-street structure not present in the establishing exterior, breaking connectivity between the exterior layout and the background seen through openings.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.78\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:55:11.604Z",
+  "latencyMs": 6229,
+  "usage": {
+    "prompt_tokens": 1969,
+    "completion_tokens": 2598,
+    "total_tokens": 4567,
+    "cost": 0.01318265,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 291,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01318265,
+      "upstream_inference_prompt_cost": 0.00214115,
+      "upstream_inference_completions_cost": 0.0110415
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2339,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | teal 3/4-sleeve dress, short wavy blonde bob, in kitchen facing hallway | same dress and hair, back to camera walking toward kitchen | walks down hallway, turns into bedroom, traverses bedroom, re-enters hallway and walks back toward kitchen",
+    "kitchen microwave | silver microwave sitting on right-side countertop under wall cabinets, range hood over stove with no microwave | silver microwave mounted under wall cabinets above the gas stove on the left | position and mounting changes without interaction, between start and end of loop"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen microwave / stove wall",
+      "invariant_violated": "Object Permanence / Continuity",
+      "description": "At 00:00-00:01 the microwave sits on the right-side countertop and the stove has a stainless range hood with no microwave above it. At 00:09 when the woman returns to the same kitchen from the opposite direction, a silver microwave is now mounted under the cabinets directly above the gas stove, and the countertop microwave is no longer in that configuration. The appliance has teleported/changed mounting without any interaction or cut that explains it.",
+      "severity": "moderate",
+      "confidence": 0.88
+    }
+  ],
+  "rawText": "{\"ledger\":[\"woman | teal 3/4-sleeve dress, short wavy blonde bob, in kitchen facing hallway | same dress and hair, back to camera walking toward kitchen | walks down hallway, turns into bedroom, traverses bedroom, re-enters hallway and walks back toward kitchen\",\"kitchen microwave | silver microwave sitting on right-side countertop under wall cabinets, range hood over stove with no microwave | silver microwave mounted under wall cabinets above the gas stove on the left | position and mounting changes without interaction, between start and end of loop\"],\"findings\":[{\"timestamp\":\"00:09\",\"entity\":\"kitchen microwave / stove wall\",\"invariant_violated\":\"Object Permanence / Continuity\",\"description\":\"At 00:00-00:01 the microwave sits on the right-side countertop and the stove has a stainless range hood with no microwave above it. At 00:09 when the woman returns to the same kitchen from the opposite direction, a silver microwave is now mounted under the cabinets directly above the gas stove, and the countertop microwave is no longer in that configuration. The appliance has teleported/changed mounting without any interaction or cut that explains it.\",\"severity\":\"moderate\",\"confidence\":0.88}]}"
+}

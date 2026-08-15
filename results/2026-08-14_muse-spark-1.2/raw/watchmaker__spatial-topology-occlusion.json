@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.2",
+  "timestamp": "2026-08-15T04:59:24.785Z",
+  "latencyMs": 5156,
+  "usage": {
+    "prompt_tokens": 2150,
+    "completion_tokens": 1201,
+    "total_tokens": 3351,
+    "cost": 0.00726045,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00726045,
+      "upstream_inference_prompt_cost": 0.0021562,
+      "upstream_inference_completions_cost": 0.00510425
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 890,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background wall | plain uniform white void behind subject at start | same plain white at end | remains static with no parallax or layout change, consistently behind subject",
+    "Subject torso (navy/white vertical striped collared shirt) | centered in frame, collar and buttons visible | centered, same orientation | minor natural torso motion, no left/right or depth shift relative to background",
+    "Right hand + thin metallic tool (needle/pin) | holding tool at chest height in front of shirt, in front of left-hand object | tool lowered out of central view, then right fingers manipulate object directly | tool approaches object 00:00-00:04, withdrawn 00:04-00:05, then finger manipulation 00:05-00:10 - motion is continuous in foreground",
+    "Left hand + wristwatch + small ornate object (ring/brooch) | left hand holding object at center, watch on left wrist face outward, object in front of shirt | left hand still holding object, fingers repositioning it | object stays in foreground, correctly occludes shirt behind it; fingers correctly occlude object as they manipulate it",
+    "Foreground surface (dark table edge) | barely visible at bottom edge, occluded by hands/arms | slightly more visible as hands lower | reveal is consistent with hands moving, and hands/arms correctly occlude the surface behind them throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Background wall | plain uniform white void behind subject at start | same plain white at end | remains static with no parallax or layout change, consistently behind subject\",\n    \"Subject torso (navy/white vertical striped collared shirt) | centered in frame, collar and buttons visible | centered, same orientation | minor natural torso motion, no left/right or depth shift relative to background\",\n    \"Right hand + thin metallic tool (needle/pin) | holding tool at chest height in front of shirt, in front of left-hand object | tool lowered out of central view, then right fingers manipulate object directly | tool approaches object 00:00-00:04, withdrawn 00:04-00:05, then finger manipulation 00:05-00:10 - motion is continuous in foreground\",\n    \"Left hand + wristwatch + small ornate object (ring/brooch) | left hand holding object at center, watch on left wrist face outward, object in front of shirt | left hand still holding object, fingers repositioning it | object stays in foreground, correctly occludes shirt behind it; fingers correctly occlude object as they manipulate it\",\n    \"Foreground surface (dark table edge) | barely visible at bottom edge, occluded by hands/arms | slightly more visible as hands lower | reveal is consistent with hands moving, and hands/arms correctly occlude the surface behind them throughout\"\n  ],\n  \"findings\": []\n}"
+}
