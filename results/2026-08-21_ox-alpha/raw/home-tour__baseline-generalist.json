@@ -1,0 +1,50 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:20:59.028Z",
+  "latencyMs": 277321,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 12973,
+    "total_tokens": 18686,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (short blonde bob, teal 3/4-sleeve cardigan, white top, dark skirt) | standing in kitchen | walking toward bedroom exit doorway | continuous walk: kitchen -> hallway (turns right at painting) -> bedroom -> toward exit door",
+    "Framed 'figure with blue flower' artwork | hangs on hallway right wall at 00:02-00:04 | visually identical painting on bedroom wall beside exit doorway at 00:08 | same artwork appears in two different rooms",
+    "White paneled door with window | at far end of hallway | similar white door visible through bedroom exit doorway | possibly the same door, geometry ambiguous",
+    "Bedroom set | bed with dark headboard, chandelier, tan-curtained windows, nightstand with lamp | unchanged | entered and crossed in one continuous shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Framed 'figure with blue flower' painting",
+      "invariant_violated": "duplicate set-dressing / asset reuse",
+      "description": "The identical framed artwork (pale-faced figure surrounded by blue petal shapes, dark thin frame, wide white mat) that hangs on the hallway's right wall at 00:02-00:04 reappears at 00:08 inside the bedroom on the wall next to the exit doorway. A single framed painting can only face one side of a wall, so the same artwork asset appears to have been duplicated in two separate rooms rather than being a continuous piece of set dressing.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (short blonde bob, teal 3/4-sleeve cardigan, white top, dark skirt) | standing in kitchen | walking toward bedroom exit doorway | continuous walk: kitchen -> hallway (turns right at painting) -> bedroom -> toward exit door\",\n    \"Framed 'figure with blue flower' artwork | hangs on hallway right wall at 00:02-00:04 | visually identical painting on bedroom wall beside exit doorway at 00:08 | same artwork appears in two different rooms\",\n    \"White paneled door with window | at far end of hallway | similar white door visible through bedroom exit doorway | possibly the same door, geometry ambiguous\",\n    \"Bedroom set | bed with dark headboard, chandelier, tan-curtained windows, nightstand with lamp | unchanged | entered and crossed in one continuous shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Framed 'figure with blue flower' painting\",\n      \"invariant_violated\": \"duplicate set-dressing / asset reuse\",\n      \"description\": \"The identical framed artwork (pale-faced figure surrounded by blue petal shapes, dark thin frame, wide white mat) that hangs on the hallway's right wall at 00:02-00:04 reappears at 00:08 inside the bedroom on the wall next to the exit doorway. A single framed painting can only face one side of a wall, so the same artwork asset appears to have been duplicated in two separate rooms rather than being a continuous piece of set dressing.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

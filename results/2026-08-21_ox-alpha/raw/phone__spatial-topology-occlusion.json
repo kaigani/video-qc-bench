@@ -1,0 +1,45 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:52:42.014Z",
+  "latencyMs": 191435,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 9737,
+    "total_tokens": 15638,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone held in foreground | out of focus, center-left of frame, top edge toward upper-left, screen shows large blurred text | sharp, fills most of frame, screen shows 'A742' entry list | camera moves in and racks focus from background to phone across 0:00-0:06; orientation of phone stays consistent throughout",
+    "holder's hands | right thumb on phone's right edge, left hand supporting lower-left | same grip, minor handheld drift | no discontinuities or side-switching of hands",
+    "black metal stair railing | runs diagonally along right side from bottom-center up to top-right, bars separate stairs (near side) from walkway (far side) | blurred, visible top-right behind phone | shifts up-frame as camera tilts down/forward; occludes walkway, plants, and person consistently in every frame",
+    "staircase | treads visible descending toward bottom-left corner | out of frame once phone dominates | exits left gradually during camera move, no jump",
+    "building wall with panel/window details | occupies left edge of frame | reduced to top-left sliver, then out of frame | recedes smoothly consistent with slight rightward pan",
+    "paved walkway (large square pavers) | spans upper frame beyond railing | blurred background behind phone | static surface, paving pattern and slope consistent across all frames",
+    "person carrying large red bag | standing on walkway beyond railing at top-right, back to camera, bag on viewer-left of body (their right hand) | walks away along walkway, shrinks, last clearly visible ~0:04 at top of frame, no longer resolvable by 0:06 | trajectory is continuous away-from-camera, stays left of/behind railing, bag never switches sides",
+    "green shrubs beyond railing | right-center mid-ground, partially occluded by railing bars | blurred green at right edge | occlusion by bars consistent; only parallax shift from camera move"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone held in foreground | out of focus, center-left of frame, top edge toward upper-left, screen shows large blurred text | sharp, fills most of frame, screen shows 'A742' entry list | camera moves in and racks focus from background to phone across 0:00-0:06; orientation of phone stays consistent throughout\",\n    \"holder's hands | right thumb on phone's right edge, left hand supporting lower-left | same grip, minor handheld drift | no discontinuities or side-switching of hands\",\n    \"black metal stair railing | runs diagonally along right side from bottom-center up to top-right, bars separate stairs (near side) from walkway (far side) | blurred, visible top-right behind phone | shifts up-frame as camera tilts down/forward; occludes walkway, plants, and person consistently in every frame\",\n    \"staircase | treads visible descending toward bottom-left corner | out of frame once phone dominates | exits left gradually during camera move, no jump\",\n    \"building wall with panel/window details | occupies left edge of frame | reduced to top-left sliver, then out of frame | recedes smoothly consistent with slight rightward pan\",\n    \"paved walkway (large square pavers) | spans upper frame beyond railing | blurred background behind phone | static surface, paving pattern and slope consistent across all frames\",\n    \"person carrying large red bag | standing on walkway beyond railing at top-right, back to camera, bag on viewer-left of body (their right hand) | walks away along walkway, shrinks, last clearly visible ~0:04 at top of frame, no longer resolvable by 0:06 | trajectory is continuous away-from-camera, stays left of/behind railing, bag never switches sides\",\n    \"green shrubs beyond railing | right-center mid-ground, partially occluded by railing bars | blurred green at right edge | occlusion by bars consistent; only parallax shift from camera move\"\n  ],\n  \"findings\": []\n}"
+}

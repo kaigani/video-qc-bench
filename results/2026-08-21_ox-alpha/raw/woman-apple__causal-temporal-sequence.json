@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:40:14.739Z",
+  "latencyMs": 100415,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 4284,
+    "total_tokens": 10179,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with umbrella | walking toward camera, open blue umbrella held aloft in left hand, red apple carried in right hand | close-up profile view, umbrella still open overhead, apple still at her right hand | continuous forward walk; no state change in umbrella or apple",
+    "Blue umbrella | open and held above woman from first frame | open and still above her at final frame | no opening/closing event occurs; position tracks her movement continuously",
+    "Red apple | held in woman's right hand at chest height | resting at her right palm in final frame | carried steadily; no independent motion, no impact events",
+    "Market pedestrians | multiple people walking through the aisle toward/past camera | exit frame edges progressively | continuous walking motion, no teleporting or direction changes without cause",
+    "Camera | wide shot down market aisle | tight close-up of woman with motion blur on final frame | continuous push-in/orbit; motion blur consistent with rapid camera movement"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with umbrella | walking toward camera, open blue umbrella held aloft in left hand, red apple carried in right hand | close-up profile view, umbrella still open overhead, apple still at her right hand | continuous forward walk; no state change in umbrella or apple\",\n    \"Blue umbrella | open and held above woman from first frame | open and still above her at final frame | no opening/closing event occurs; position tracks her movement continuously\",\n    \"Red apple | held in woman's right hand at chest height | resting at her right palm in final frame | carried steadily; no independent motion, no impact events\",\n    \"Market pedestrians | multiple people walking through the aisle toward/past camera | exit frame edges progressively | continuous walking motion, no teleporting or direction changes without cause\",\n    \"Camera | wide shot down market aisle | tight close-up of woman with motion blur on final frame | continuous push-in/orbit; motion blur consistent with rapid camera movement\"\n  ],\n  \"findings\": []\n}"
+}

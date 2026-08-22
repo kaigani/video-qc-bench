@@ -1,0 +1,64 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:34:52.723Z",
+  "latencyMs": 458126,
+  "usage": {
+    "prompt_tokens": 34929,
+    "completion_tokens": 18620,
+    "total_tokens": 53549,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner exterior | single-story glass-front building, center double door, ONE 'OPEN' neon sign right of door, roof vent | unchanged | static across 00:00-00:10 establishing shots",
+    "Parked truck (arrival) | white conventional semi-tractor with long white trailer, parked along diner's left side, cab nearest building, reefer steam | gone | last visible 00:10, never shown leaving",
+    "Parked truck (departure) | dark-green single-unit box truck with white stripe, broadside to front windows | man walks to it at 01:43-01:51 | appears with no establishing arrival",
+    "Interior counter | long counter with curved front end, ~8 stools, kitchen pass-through glowing at back | unchanged | consistent across all interior wides (00:20, 00:38, 01:02, 01:20, 01:53)",
+    "Front window wall & booths | booths under front windows, OPEN sign visible through glass | unchanged | interior wides show TWO OPEN neons (one correct, one mirrored at far-left)",
+    "Front/EXIT door zone | glass door with EXIT sign, flanked by windows, white cooler beside it | consistent | seen from kitchen at 00:46 and behind patrons at 01:28 in matching arrangement",
+    "Waitress | behind counter at start, wipes counter and pass | alone in diner at 01:53 | paths counter->kitchen->window->counter all geometrically compatible",
+    "Man | enters ~00:22 from front-door side, sits at counter's front (near-camera) end | exits 01:43 through front windows to truck | seat position consistent between dining wides (00:38, 01:02) and kitchen view (00:46)",
+    "White car outside | parked in lot, visible through front windows from ~01:02 | still present 01:43 | static background element",
+    "Service items | carafe, white mug, plate with egg and bread | plate carried off by waitress 01:12-01:20 | consistent placement in front of man's seat"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "Parked truck outside the diner",
+      "invariant_violated": "scene layout / fixed-element continuity",
+      "description": "The establishing exterior (00:00-00:10) shows a white conventional semi-tractor hauling a long white trailer parked along the diner's left side. When the man exits (01:43-01:51, seen through the front window), the vehicle is a completely different rig: a dark-green single-unit box truck with a white stripe, parked close and broadside to the window. No shot shows the original semi leaving or the box truck arriving, and the man walks to the box truck as if it is the rig he arrived with. Vehicle type, color, and parked position are all unexplained discontinuities of a major scene element.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:20",
+      "entity": "OPEN neon sign / front window wall",
+      "invariant_violated": "connectivity: backgrounds through openings must match established layout",
+      "description": "The exterior establishes exactly one OPEN neon sign, right of the entrance door. Every interior wide shot (00:20, 00:38, 01:02, 01:53) simultaneously shows a correctly reading OPEN sign in one window AND a mirrored/reversed OPEN sign in the adjacent window to its left. A single physical sign cannot present opposite chirality in adjacent panes, and the mirrored instance's position (near the corner window) has no counterpart on the exterior facade, where that glass is plainly visible and shows no neon at 00:00. The duplicated flipped sign persists across all interior wides, indicating a set/geometry error rather than a reflection.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner exterior | single-story glass-front building, center double door, ONE 'OPEN' neon sign right of door, roof vent | unchanged | static across 00:00-00:10 establishing shots\",\n    \"Parked truck (arrival) | white conventional semi-tractor with long white trailer, parked along diner's left side, cab nearest building, reefer steam | gone | last visible 00:10, never shown leaving\",\n    \"Parked truck (departure) | dark-green single-unit box truck with white stripe, broadside to front windows | man walks to it at 01:43-01:51 | appears with no establishing arrival\",\n    \"Interior counter | long counter with curved front end, ~8 stools, kitchen pass-through glowing at back | unchanged | consistent across all interior wides (00:20, 00:38, 01:02, 01:20, 01:53)\",\n    \"Front window wall & booths | booths under front windows, OPEN sign visible through glass | unchanged | interior wides show TWO OPEN neons (one correct, one mirrored at far-left)\",\n    \"Front/EXIT door zone | glass door with EXIT sign, flanked by windows, white cooler beside it | consistent | seen from kitchen at 00:46 and behind patrons at 01:28 in matching arrangement\",\n    \"Waitress | behind counter at start, wipes counter and pass | alone in diner at 01:53 | paths counter->kitchen->window->counter all geometrically compatible\",\n    \"Man | enters ~00:22 from front-door side, sits at counter's front (near-camera) end | exits 01:43 through front windows to truck | seat position consistent between dining wides (00:38, 01:02) and kitchen view (00:46)\",\n    \"White car outside | parked in lot, visible through front windows from ~01:02 | still present 01:43 | static background element\",\n    \"Service items | carafe, white mug, plate with egg and bread | plate carried off by waitress 01:12-01:20 | consistent placement in front of man's seat\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"Parked truck outside the diner\",\n      \"invariant_violated\": \"scene layout / fixed-element continuity\",\n      \"description\": \"The establishing exterior (00:00-00:10) shows a white conventional semi-tractor hauling a long white trailer parked along the diner's left side. When the man exits (01:43-01:51, seen through the front window), the vehicle is a completely different rig: a dark-green single-unit box truck with a white stripe, parked close and broadside to the window. No shot shows the original semi leaving or the box truck arriving, and the man walks to the box truck as if it is the rig he arrived with. Vehicle type, color, and parked position are all unexplained discontinuities of a major scene element.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:20\",\n      \"entity\": \"OPEN neon sign / front window wall\",\n      \"invariant_violated\": \"connectivity: backgrounds through openings must match established layout\",\n      \"description\": \"The exterior establishes exactly one OPEN neon sign, right of the entrance door. Every interior wide shot (00:20, 00:38, 01:02, 01:53) simultaneously shows a correctly reading OPEN sign in one window AND a mirrored/reversed OPEN sign in the adjacent window to its left. A single physical sign cannot present opposite chirality in adjacent panes, and the mirrored instance's position (near the corner window) has no counterpart on the exterior facade, where that glass is plainly visible and shows no neon at 00:00. The duplicated flipped sign persists across all interior wides, indicating a set/geometry error rather than a reflection.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

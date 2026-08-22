@@ -1,0 +1,50 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:15:10.516Z",
+  "latencyMs": 236463,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 11798,
+    "total_tokens": 17511,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | clear bowl centered on wooden table, ~8 red/yellow/green balls inside at 00:00 | ~10 balls inside, child stirring them | balls progressively added by child",
+    "child in blue zip hoodie | placing a red ball into the bowl, face and hands visible | swirling balls inside bowl with left hand | repeatedly picks up loose balls from table and drops them into bowl",
+    "decorated egg in silver egg cup | one egg cup on right side of table at 00:00-02:00 | two egg cups visible at 00:04 | second cup appears without explanation",
+    "loose balls on table (bottom-right corner) | 2-4 red/green/yellow balls visible at 00:00-02:00 | gone by 00:04 | picked up by child and transferred into bowl"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "decorated egg in silver egg cup, right side of table",
+      "invariant_violated": "object continuity / unexplained duplication",
+      "description": "At 00:04 two decorated eggs in silver egg cups are clearly visible on the right side of the table. At 00:00 and 00:02 only one egg cup is present in that region. Between 00:02 and 00:04 the camera framing is nearly static (the bowl and the first egg cup barely shift position), so the second egg cup cannot plausibly have entered the frame from off-screen; it appears with no explanation.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | clear bowl centered on wooden table, ~8 red/yellow/green balls inside at 00:00 | ~10 balls inside, child stirring them | balls progressively added by child\",\n    \"child in blue zip hoodie | placing a red ball into the bowl, face and hands visible | swirling balls inside bowl with left hand | repeatedly picks up loose balls from table and drops them into bowl\",\n    \"decorated egg in silver egg cup | one egg cup on right side of table at 00:00-02:00 | two egg cups visible at 00:04 | second cup appears without explanation\",\n    \"loose balls on table (bottom-right corner) | 2-4 red/green/yellow balls visible at 00:00-02:00 | gone by 00:04 | picked up by child and transferred into bowl\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"decorated egg in silver egg cup, right side of table\",\n      \"invariant_violated\": \"object continuity / unexplained duplication\",\n      \"description\": \"At 00:04 two decorated eggs in silver egg cups are clearly visible on the right side of the table. At 00:00 and 00:02 only one egg cup is present in that region. Between 00:02 and 00:04 the camera framing is nearly static (the bowl and the first egg cup barely shift position), so the second egg cup cannot plausibly have entered the frame from off-screen; it appears with no explanation.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

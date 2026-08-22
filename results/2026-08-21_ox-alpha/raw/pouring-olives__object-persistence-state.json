@@ -1,0 +1,61 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:34:00.074Z",
+  "latencyMs": 159317,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 7838,
+    "total_tokens": 13750,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar (open, no lid) | empty, upright on wooden cutting board, center frame | ~1/4 filled with mixed green and dark-purple olives, same position/orientation | filled by pours: green olives from small glass bowl (0:00-0:06), then mixed olives from stainless bowl (0:08); dark olives first visible in jar at 0:02 with no on-camera pour of dark olives",
+    "small glass bowl | held above jar mouth, contains green olives | held in left hand at 0:06, out of frame by 0:08 | tilted to pour green olives into jar continuously 0:00-0:06",
+    "stainless steel bowl | resting on counter right of board, filled with green olives only | held in both hands over jar, now contains mixed green and dark olives | grabbed/lifted at 0:06, poured into jar at 0:08; dark olives present in it at 0:08 with no visible transfer action adding them",
+    "ceramic patterned bowl | on counter far right, filled with green olives | unchanged, same position and contents | no transitions",
+    "green olives (group) | in small glass bowl, stainless bowl, ceramic bowl | majority distributed into jar; ceramic bowl portion untouched | moved only by visible pours",
+    "dark-purple olives (group) | not visible anywhere at 0:00 | present inside jar (from 0:02) and inside stainless bowl (by 0:08) | appearance in both containers with no visible source action",
+    "small clear bottle with cap | not in frame at 0:00-0:04 | standing on counter between stainless and ceramic bowl positions at 0:06 | appears concurrently with camera reframe/tilt between 0:04 and 0:06; plausibly previously out of frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "large glass jar contents (dark-purple olives)",
+      "invariant_violated": "unexplained appearance / count change without visible cause",
+      "description": "At 0:00 the jar is empty and the only container being emptied into it (small glass bowl) visibly holds green olives only; at 0:02 the jar already contains several dark-purple olives among the green. No visible action deposits dark olives into the jar; their first appearance is unexplained within the footage (consistent with an elided cut, but not shown).",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "stainless steel bowl contents",
+      "invariant_violated": "content change without visible cause",
+      "description": "From 0:00 to 0:04 the stainless bowl visibly contains only green olives. When it is lifted (0:06) and poured into the jar (0:08), it contains dark-purple olives mixed with green. The person's hands are occupied with the small glass bowl over the jar during 0:04-0:06, and no visible action transfers dark olives into the stainless bowl; the content change is unexplained in the footage.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar (open, no lid) | empty, upright on wooden cutting board, center frame | ~1/4 filled with mixed green and dark-purple olives, same position/orientation | filled by pours: green olives from small glass bowl (0:00-0:06), then mixed olives from stainless bowl (0:08); dark olives first visible in jar at 0:02 with no on-camera pour of dark olives\",\n    \"small glass bowl | held above jar mouth, contains green olives | held in left hand at 0:06, out of frame by 0:08 | tilted to pour green olives into jar continuously 0:00-0:06\",\n    \"stainless steel bowl | resting on counter right of board, filled with green olives only | held in both hands over jar, now contains mixed green and dark olives | grabbed/lifted at 0:06, poured into jar at 0:08; dark olives present in it at 0:08 with no visible transfer action adding them\",\n    \"ceramic patterned bowl | on counter far right, filled with green olives | unchanged, same position and contents | no transitions\",\n    \"green olives (group) | in small glass bowl, stainless bowl, ceramic bowl | majority distributed into jar; ceramic bowl portion untouched | moved only by visible pours\",\n    \"dark-purple olives (group) | not visible anywhere at 0:00 | present inside jar (from 0:02) and inside stainless bowl (by 0:08) | appearance in both containers with no visible source action\",\n    \"small clear bottle with cap | not in frame at 0:00-0:04 | standing on counter between stainless and ceramic bowl positions at 0:06 | appears concurrently with camera reframe/tilt between 0:04 and 0:06; plausibly previously out of frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"large glass jar contents (dark-purple olives)\",\n      \"invariant_violated\": \"unexplained appearance / count change without visible cause\",\n      \"description\": \"At 0:00 the jar is empty and the only container being emptied into it (small glass bowl) visibly holds green olives only; at 0:02 the jar already contains several dark-purple olives among the green. No visible action deposits dark olives into the jar; their first appearance is unexplained within the footage (consistent with an elided cut, but not shown).\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"stainless steel bowl contents\",\n      \"invariant_violated\": \"content change without visible cause\",\n      \"description\": \"From 0:00 to 0:04 the stainless bowl visibly contains only green olives. When it is lifted (0:06) and poured into the jar (0:08), it contains dark-purple olives mixed with green. The person's hands are occupied with the small glass bowl over the jar during 0:04-0:06, and no visible action transfers dark olives into the stainless bowl; the content change is unexplained in the footage.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

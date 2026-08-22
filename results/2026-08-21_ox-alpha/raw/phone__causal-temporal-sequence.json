@@ -1,0 +1,40 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:10:16.959Z",
+  "latencyMs": 32680,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 1347,
+    "total_tokens": 7242,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone held in hand | blurry, screen shows '742', background in focus | sharp, screen shows '742' and 'A7-742', background blurred | camera rack-focus from background to phone (~0:02-0:06); phone rotates slightly in hand revealing more of screen; shadow crosses screen ~0:06 consistent with changed angle to sun",
+    "person with red bag | walking up steps near railing, mid-frame | further away along paved path, exiting frame | continuous forward walking motion, position changes match stride across frames, no discontinuity",
+    "shadow on phone screen | absent at start | present from ~0:06 onward, soft-edged | appears as phone tilts/rotates during focus pull, plausible occlusion of sunlight by railing or holder's body"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone held in hand | blurry, screen shows '742', background in focus | sharp, screen shows '742' and 'A7-742', background blurred | camera rack-focus from background to phone (~0:02-0:06); phone rotates slightly in hand revealing more of screen; shadow crosses screen ~0:06 consistent with changed angle to sun\",\n    \"person with red bag | walking up steps near railing, mid-frame | further away along paved path, exiting frame | continuous forward walking motion, position changes match stride across frames, no discontinuity\",\n    \"shadow on phone screen | absent at start | present from ~0:06 onward, soft-edged | appears as phone tilts/rotates during focus pull, plausible occlusion of sunlight by railing or holder's body\"\n  ],\n  \"findings\": []\n}"
+}

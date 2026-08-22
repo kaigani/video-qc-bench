@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:02:38.552Z",
+  "latencyMs": 32165,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 1300,
+    "total_tokens": 7211,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer (barefoot woman) | standing on wood floor facing mirror, both feet flat in full ground contact, arms low | still standing, both feet in ground contact, one arm completing overhead arc | arm raised through vertical arc (0-3s), lowered through front carry (4-6s) with slight weight shift, raised again overhead (7-8s); no grip events, no release of floor contact at any point",
+    "dancer's feet <-> studio floor | bilateral full-foot contact, weight evenly distributed at start | contact maintained continuously through end | weight transfers between feet during arm cycles; no lift-off without visible step, no sliding of a planted foot detected",
+    "dancer <-> wall mirror | no contact; dancer stands roughly an arm's length from mirror surface | no contact at end | arm arcs pass near but never touch glass; no clipping into mirror plane observed",
+    "dancer's arms <-> own body | arms move freely in front of torso and face during port de bras | same | arm passes across chest/face without interpenetrating torso, shoulder, or head; elbow flexion directions anatomically consistent throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer (barefoot woman) | standing on wood floor facing mirror, both feet flat in full ground contact, arms low | still standing, both feet in ground contact, one arm completing overhead arc | arm raised through vertical arc (0-3s), lowered through front carry (4-6s) with slight weight shift, raised again overhead (7-8s); no grip events, no release of floor contact at any point\",\n    \"dancer's feet <-> studio floor | bilateral full-foot contact, weight evenly distributed at start | contact maintained continuously through end | weight transfers between feet during arm cycles; no lift-off without visible step, no sliding of a planted foot detected\",\n    \"dancer <-> wall mirror | no contact; dancer stands roughly an arm's length from mirror surface | no contact at end | arm arcs pass near but never touch glass; no clipping into mirror plane observed\",\n    \"dancer's arms <-> own body | arms move freely in front of torso and face during port de bras | same | arm passes across chest/face without interpenetrating torso, shoulder, or head; elbow flexion directions anatomically consistent throughout\"\n  ],\n  \"findings\": []\n}"
+}

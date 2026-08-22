@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:24:15.076Z",
+  "latencyMs": 99325,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 4747,
+    "total_tokens": 10642,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer | standing facing mirror, arms at sides, slight plié stance | performing port de bras, right arm raised overhead at end | self-initiated arm raises/lowers at 0:02, 0:04, 0:06, 0:08; each motion begins from her own body, continuous and completed",
+    "mirror reflection | static mirror image of dancer | tracks dancer's final raised-arm pose | reflection updates in lockstep with every arm movement; laterally inverted correctly (her raised right arm appears as reflection's left arm on the same image side)",
+    "studio doors | closed throughout | closed | no opening event, no uncaused change",
+    "room lighting | constant overhead illumination | unchanged | no light change requiring a cause"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer | standing facing mirror, arms at sides, slight plié stance | performing port de bras, right arm raised overhead at end | self-initiated arm raises/lowers at 0:02, 0:04, 0:06, 0:08; each motion begins from her own body, continuous and completed\",\n    \"mirror reflection | static mirror image of dancer | tracks dancer's final raised-arm pose | reflection updates in lockstep with every arm movement; laterally inverted correctly (her raised right arm appears as reflection's left arm on the same image side)\",\n    \"studio doors | closed throughout | closed | no opening event, no uncaused change\",\n    \"room lighting | constant overhead illumination | unchanged | no light change requiring a cause\"\n  ],\n  \"findings\": []\n}"
+}

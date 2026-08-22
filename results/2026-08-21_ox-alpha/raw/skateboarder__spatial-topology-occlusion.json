@@ -1,0 +1,43 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:13:24.858Z",
+  "latencyMs": 81232,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 2690,
+    "total_tokens": 8591,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skatepark concrete surfaces | flat pad with banked ramps and coping edges; cylindrical pedestal behind-right of skater | skater travels from flat pad onto sloped bank | continuous single location, no layout change detected",
+    "cylindrical concrete pedestal | visible behind-right of skater at 0:00 | exits frame as camera tracks skater forward | absence in later frames consistent with camera pan, not a layout change",
+    "treeline | continuous band of mature trees behind entire park | same treeline in all frames | consistent background boundary across camera motion",
+    "light poles (3+) | tall poles positioned left, center-right, far right of park | same poles visible at shifted screen positions | displacement matches expected parallax of moving follow-cam",
+    "skater + skateboard | crouched on flat ground moving toward camera at 0:00 | riding away along banked ramp at 0:08 | ollie ~0:01-0:03, landing ~0:04, motion continuous with no side-flip or wrong-side emergence",
+    "camera | low fisheye follow-cam positioned in front of skater | tracks skater through trick and ride-out | single continuous shot, no cuts detected; camera-operator shadow on ramp at 0:06 confirms ground-level tracking position"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skatepark concrete surfaces | flat pad with banked ramps and coping edges; cylindrical pedestal behind-right of skater | skater travels from flat pad onto sloped bank | continuous single location, no layout change detected\",\n    \"cylindrical concrete pedestal | visible behind-right of skater at 0:00 | exits frame as camera tracks skater forward | absence in later frames consistent with camera pan, not a layout change\",\n    \"treeline | continuous band of mature trees behind entire park | same treeline in all frames | consistent background boundary across camera motion\",\n    \"light poles (3+) | tall poles positioned left, center-right, far right of park | same poles visible at shifted screen positions | displacement matches expected parallax of moving follow-cam\",\n    \"skater + skateboard | crouched on flat ground moving toward camera at 0:00 | riding away along banked ramp at 0:08 | ollie ~0:01-0:03, landing ~0:04, motion continuous with no side-flip or wrong-side emergence\",\n    \"camera | low fisheye follow-cam positioned in front of skater | tracks skater through trick and ride-out | single continuous shot, no cuts detected; camera-operator shadow on ramp at 0:06 confirms ground-level tracking position\"\n  ],\n  \"findings\": []\n}"
+}

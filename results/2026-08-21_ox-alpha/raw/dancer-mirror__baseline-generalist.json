@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:47:25.875Z",
+  "latencyMs": 480523,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 25242,
+    "total_tokens": 30955,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer | black sports bra, black leggings, barefoot, hair in ponytail, tattoo on upper arm | same attire, right arm curved overhead | performs repeated port de bras arm raises while facing the mirror",
+    "mirror reflection | mirrors dancer's pose, attire, and timing | matches final pose | tattoo appears on the opposite arm relative to the dancer at 00:00",
+    "studio | wood floor, full mirrored wall, exit-signed door on left wall, barre/poster/bin visible only via reflection | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Dancer's arm tattoo and its mirror reflection",
+      "invariant_violated": "mirror reflection consistency (left-right flip)",
+      "description": "At 00:00 the tattoo is on the dancer's right arm — the arm extended out to her side (viewer-right of her body) — while her hanging left arm appears clean. Her mirror reflection shows the tattoo on the opposite arm: the hanging arm on the viewer-left side of the reflection, while the reflection of the extended arm is clean. In a true mirror the tattoo's reflection must appear on the same image side as the real tattoo. From 00:02 onward the tattoo appears on the left arm in both the dancer and the reflection, and the right-arm marking seen at 00:00 is no longer visible on the subject, making the 00:00 right-arm tattoo and its mismatched reflection an unexplained continuity error.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer | black sports bra, black leggings, barefoot, hair in ponytail, tattoo on upper arm | same attire, right arm curved overhead | performs repeated port de bras arm raises while facing the mirror\",\n    \"mirror reflection | mirrors dancer's pose, attire, and timing | matches final pose | tattoo appears on the opposite arm relative to the dancer at 00:00\",\n    \"studio | wood floor, full mirrored wall, exit-signed door on left wall, barre/poster/bin visible only via reflection | unchanged | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Dancer's arm tattoo and its mirror reflection\",\n      \"invariant_violated\": \"mirror reflection consistency (left-right flip)\",\n      \"description\": \"At 00:00 the tattoo is on the dancer's right arm — the arm extended out to her side (viewer-right of her body) — while her hanging left arm appears clean. Her mirror reflection shows the tattoo on the opposite arm: the hanging arm on the viewer-left side of the reflection, while the reflection of the extended arm is clean. In a true mirror the tattoo's reflection must appear on the same image side as the real tattoo. From 00:02 onward the tattoo appears on the left arm in both the dancer and the reflection, and the right-arm marking seen at 00:00 is no longer visible on the subject, making the 00:00 right-arm tattoo and its mismatched reflection an unexplained continuity error.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

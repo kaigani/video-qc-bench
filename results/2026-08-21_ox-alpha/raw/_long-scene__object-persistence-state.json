@@ -1,0 +1,61 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:50:43.182Z",
+  "latencyMs": 196979,
+  "usage": {
+    "prompt_tokens": 34940,
+    "completion_tokens": 10010,
+    "total_tokens": 44950,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white coffee mug | empty on counter, filled by pour at 00:30 | resting on counter beside cash at 01:41 | empty→full via visible pour (00:30-00:32); held by man 00:38-00:44; stationary on counter afterward",
+    "glass coffee carafe | in waitress's hand at counter (00:26) | on back counter with second carafe (01:53+) | tilted to pour coffee into mug (00:30-00:32)",
+    "breakfast plate (thick toast + fried egg) | on counter in front of man (00:34-00:44) | absent from counter from 01:02 onward | unexplained disappearance between 00:44 and 01:02; identical plate placed by waitress 01:12-01:14 and picked back up 01:16-01:18",
+    "cash stack (top bill $100) | placed on counter next to mug (01:39-01:41) | removed by waitress's hand (01:41) | placed by man, retrieved by waitress",
+    "truck outside diner | white conventional semi-tractor with trailer parked left of diner facing right, idling (00:00-00:10) | dark green cab-over box truck parked in front, driver door opened by man (01:43-01:49) | no on-screen transition between the two vehicles",
+    "waitress's cleaning rag | in hand wiping front counter (00:12-00:18) | on counter near pass-through (01:53+) | reused for wiping at 00:46-00:52",
+    "ketchup/mustard squeeze bottles | on windowsill beside waitress (01:49) | on counter (01:53+) | static"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:02",
+      "entity": "breakfast plate (toast + fried egg)",
+      "invariant_violated": "object persistence / unexplained removal and duplication",
+      "description": "A full plate with thick toast and a fried egg sits in front of the man at 00:38-00:44. In the wide shot at 01:02-01:10 only his coffee mug remains in front of him, with no visible clearing action, and at 01:12-01:14 the waitress places an identical plate of food before him again (then picks it back up at 01:16-01:18). The meal disappears and an identical one is re-served with no intervening visible cause, indicating an unexplained vanishing/duplication of the plate.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "01:43",
+      "entity": "truck parked at the diner",
+      "invariant_violated": "identity persistence / impossible transformation",
+      "description": "The opening shots (00:00-00:10) show a white conventional semi-tractor with trailer parked beside the diner. When the man exits and walks to his vehicle at 01:43-01:49, it is a dark green cab-over box truck in a different position, with no shot of the lot in between and no visible swap. If this is intended to be the man's same vehicle, its identity, color, and configuration changed without explanation.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white coffee mug | empty on counter, filled by pour at 00:30 | resting on counter beside cash at 01:41 | empty→full via visible pour (00:30-00:32); held by man 00:38-00:44; stationary on counter afterward\",\n    \"glass coffee carafe | in waitress's hand at counter (00:26) | on back counter with second carafe (01:53+) | tilted to pour coffee into mug (00:30-00:32)\",\n    \"breakfast plate (thick toast + fried egg) | on counter in front of man (00:34-00:44) | absent from counter from 01:02 onward | unexplained disappearance between 00:44 and 01:02; identical plate placed by waitress 01:12-01:14 and picked back up 01:16-01:18\",\n    \"cash stack (top bill $100) | placed on counter next to mug (01:39-01:41) | removed by waitress's hand (01:41) | placed by man, retrieved by waitress\",\n    \"truck outside diner | white conventional semi-tractor with trailer parked left of diner facing right, idling (00:00-00:10) | dark green cab-over box truck parked in front, driver door opened by man (01:43-01:49) | no on-screen transition between the two vehicles\",\n    \"waitress's cleaning rag | in hand wiping front counter (00:12-00:18) | on counter near pass-through (01:53+) | reused for wiping at 00:46-00:52\",\n    \"ketchup/mustard squeeze bottles | on windowsill beside waitress (01:49) | on counter (01:53+) | static\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:02\",\n      \"entity\": \"breakfast plate (toast + fried egg)\",\n      \"invariant_violated\": \"object persistence / unexplained removal and duplication\",\n      \"description\": \"A full plate with thick toast and a fried egg sits in front of the man at 00:38-00:44. In the wide shot at 01:02-01:10 only his coffee mug remains in front of him, with no visible clearing action, and at 01:12-01:14 the waitress places an identical plate of food before him again (then picks it back up at 01:16-01:18). The meal disappears and an identical one is re-served with no intervening visible cause, indicating an unexplained vanishing/duplication of the plate.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"truck parked at the diner\",\n      \"invariant_violated\": \"identity persistence / impossible transformation\",\n      \"description\": \"The opening shots (00:00-00:10) show a white conventional semi-tractor with trailer parked beside the diner. When the man exits and walks to his vehicle at 01:43-01:49, it is a dark green cab-over box truck in a different position, with no shot of the lot in between and no visible swap. If this is intended to be the man's same vehicle, its identity, color, and configuration changed without explanation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

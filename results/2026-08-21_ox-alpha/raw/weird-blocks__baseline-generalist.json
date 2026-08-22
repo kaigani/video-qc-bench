@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:06:27.496Z",
+  "latencyMs": 91454,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 5299,
+    "total_tokens": 11012,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cube 1 (digit '2') | green, front '2', side face shows '3'-like glyph, hand pinching top | blue, front '2', side face shows ring/'0'-like glyph | unexplained color change green→blue between 00:00 and 00:02 while hand stays in contact",
+    "Cube 2 (digit '3') | absent | blue '3' in position 2 | inserted by hand at ~00:02",
+    "Cube 3 (digit '2') | green '2' at position 2 | green '2' at position 3 | shifted right as new cubes inserted; color/face consistent",
+    "Cube 4 (digit '2') | absent | orange '2' in position 4 | placed ~00:04, consistent at 00:06-00:08",
+    "Cube 5 (digit '3') | absent | pale blue '3' in position 5 | present by 00:06, consistent at 00:08",
+    "Cube 6 (digit '5') | absent | green '5' in position 6 | mid-placement at 00:06, settled by 00:08",
+    "Cube 7 (digit '2') | absent | green '2' in position 7 | present by 00:08",
+    "Cube 8 (digit '6') | absent | blurry, mid-placement at far right | motion blur consistent with active placement",
+    "Hand | enters from top-left pinching cube 1 | placing cubes sequentially rightward | motion and contact plausible throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "leftmost cube (digit '2')",
+      "invariant_violated": "object color/identity consistency",
+      "description": "At 00:00 the leftmost cube is green with a '3'-like glyph on its right side face, and the hand is pinching its top knob. At 00:02 the same cube in the same position (hand still in contact) is blue, and its side face glyph has changed to a ring/'0'-like shape. No removal or replacement action is shown, so the color and side-face change are unexplained.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cube 1 (digit '2') | green, front '2', side face shows '3'-like glyph, hand pinching top | blue, front '2', side face shows ring/'0'-like glyph | unexplained color change green→blue between 00:00 and 00:02 while hand stays in contact\",\n    \"Cube 2 (digit '3') | absent | blue '3' in position 2 | inserted by hand at ~00:02\",\n    \"Cube 3 (digit '2') | green '2' at position 2 | green '2' at position 3 | shifted right as new cubes inserted; color/face consistent\",\n    \"Cube 4 (digit '2') | absent | orange '2' in position 4 | placed ~00:04, consistent at 00:06-00:08\",\n    \"Cube 5 (digit '3') | absent | pale blue '3' in position 5 | present by 00:06, consistent at 00:08\",\n    \"Cube 6 (digit '5') | absent | green '5' in position 6 | mid-placement at 00:06, settled by 00:08\",\n    \"Cube 7 (digit '2') | absent | green '2' in position 7 | present by 00:08\",\n    \"Cube 8 (digit '6') | absent | blurry, mid-placement at far right | motion blur consistent with active placement\",\n    \"Hand | enters from top-left pinching cube 1 | placing cubes sequentially rightward | motion and contact plausible throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"leftmost cube (digit '2')\",\n      \"invariant_violated\": \"object color/identity consistency\",\n      \"description\": \"At 00:00 the leftmost cube is green with a '3'-like glyph on its right side face, and the hand is pinching its top knob. At 00:02 the same cube in the same position (hand still in contact) is blue, and its side face glyph has changed to a ring/'0'-like shape. No removal or replacement action is shown, so the color and side-face change are unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

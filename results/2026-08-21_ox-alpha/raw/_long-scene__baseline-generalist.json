@@ -1,0 +1,58 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:39:48.853Z",
+  "latencyMs": 164116,
+  "usage": {
+    "prompt_tokens": 34741,
+    "completion_tokens": 7024,
+    "total_tokens": 41765,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "White semi truck (tractor + dark trailer) | parked left of diner at night, steam rising from it | gone by end of video | replaced overnight by a different vehicle",
+    "Green Kenworth-style box truck | absent at start | parked directly outside diner window at sunrise | trucker walks to it and opens door",
+    "Trucker (gray-haired man, brown jacket) | enters diner at night, sits at counter | exits at sunrise and approaches box truck | served coffee and a plated breakfast, pays with a $100 bill",
+    "Waitress (blue polo, white apron, glasses on apron) | wiping counter alone at night | watching trucker through window at sunrise | pours coffee, serves plate twice, accepts cash"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "Truck parked outside the diner",
+      "invariant_violated": "Vehicle continuity",
+      "description": "The vehicle outside the diner completely changes. From 00:00-00:10 it is a white conventional semi tractor pulling a dark trailer, parked a noticeable distance from the building in the gravel lot. At 01:43 the truck outside the window is a dark-green Kenworth-style box truck (single-unit, different cab, color, and configuration) parked immediately adjacent to the window, close enough that the man reaches it in a few steps. No explanation is given for the swap or the change in parking position.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:11",
+      "entity": "Breakfast plate served to the trucker",
+      "invariant_violated": "Duplicate action / meal continuity",
+      "description": "The man is already shown with the fried-egg-and-bread plate in front of him at the counter from 00:34-00:45 (including a dedicated close-up of the plate). At 01:11-01:18 the waitress places what appears to be the same plated breakfast in front of him again, duplicating the serving of a meal he already has, with no shot of the first plate being cleared or eaten.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"White semi truck (tractor + dark trailer) | parked left of diner at night, steam rising from it | gone by end of video | replaced overnight by a different vehicle\",\n    \"Green Kenworth-style box truck | absent at start | parked directly outside diner window at sunrise | trucker walks to it and opens door\",\n    \"Trucker (gray-haired man, brown jacket) | enters diner at night, sits at counter | exits at sunrise and approaches box truck | served coffee and a plated breakfast, pays with a $100 bill\",\n    \"Waitress (blue polo, white apron, glasses on apron) | wiping counter alone at night | watching trucker through window at sunrise | pours coffee, serves plate twice, accepts cash\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"Truck parked outside the diner\",\n      \"invariant_violated\": \"Vehicle continuity\",\n      \"description\": \"The vehicle outside the diner completely changes. From 00:00-00:10 it is a white conventional semi tractor pulling a dark trailer, parked a noticeable distance from the building in the gravel lot. At 01:43 the truck outside the window is a dark-green Kenworth-style box truck (single-unit, different cab, color, and configuration) parked immediately adjacent to the window, close enough that the man reaches it in a few steps. No explanation is given for the swap or the change in parking position.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:11\",\n      \"entity\": \"Breakfast plate served to the trucker\",\n      \"invariant_violated\": \"Duplicate action / meal continuity\",\n      \"description\": \"The man is already shown with the fried-egg-and-bread plate in front of him at the counter from 00:34-00:45 (including a dedicated close-up of the plate). At 01:11-01:18 the waitress places what appears to be the same plated breakfast in front of him again, duplicating the serving of a meal he already has, with no shot of the first plate being cleared or eaten.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

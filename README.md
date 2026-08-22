@@ -27,6 +27,7 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 | Gemini 3.6 Flash | **31** | 34/139 | 9/47 | 3 | $0.53 |
 | Muse Spark 1.2 (reasoning) | **30** | 42/139 | 12/47 | 12 | $1.11 |
 | Qwen 3.8 27B (reasoning) | **28** | 32/139 | 10/47 | 4 | $1.58 |
+| Ox Alpha (stealth) | **28** | 39/139 | 15/47 | 11 | $0.00 |
 | Gemma 4 31B (reasoning) | **27** | 33/139 | 11/47 | 6 | $0.11 |
 | Gemini 3.7 Flash | **22** | 25/139 | 7/47 | 3 | $0.15 |
 | Gemini Pro Latest (reasoning) | **22** | 70/139 | 24/47 | 48 | $2.15 |

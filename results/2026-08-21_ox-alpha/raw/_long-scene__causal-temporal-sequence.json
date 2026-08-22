@@ -1,0 +1,45 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:47:08.377Z",
+  "latencyMs": 242266,
+  "usage": {
+    "prompt_tokens": 34923,
+    "completion_tokens": 11488,
+    "total_tokens": 46411,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Semi truck (exterior) | parked left of diner at dusk, steam/exhaust plume rising continuously | still parked at sunrise in golden light, steam no longer visible | steady idle steam 0:00-0:10; man approaches its cab at 1:43-1:51",
+    "Diner neon OPEN sign | lit red at dusk | still lit at sunrise | constant illumination, no uncaused change",
+    "Waitress | wiping counter alone before opening rush | alone again cleaning after customer departs | wipes counter (0:12-0:19) -> pours coffee for arriving man (0:26-0:33) -> serves plate (1:11-1:18) -> sits with coffee at sunrise (1:29-1:37) -> takes payment (1:39-1:41) -> watches man leave (1:47-1:51) -> resumes cleaning (1:53-1:58)",
+    "Man (customer) | absent, then enters at dusk | exits at sunrise toward truck | walks in and sits (0:20-0:26) -> receives coffee -> sits with meal through night -> places $100 bill on counter (1:37-1:41) -> walks out to truck (1:43-1:51)",
+    "Coffee carafe and mug | carafe full, mug empty on counter | mug filled and held by man until he leaves | pour begins after man sits (0:26-0:33), stream continuous then carafe withdrawn; mug persists with man through 1:41",
+    "Food plate | first plate appears before man ~0:34-0:38 (serving bridged by close-up) | cleared off-screen; second plate placed by waitress at 1:11 | both servings follow sit-down, no effect preceding cause",
+    "$100 bill | in man's hand | placed on counter next to mug, then taken | placed 1:37-1:39, second hand retrieves it 1:41; order correct",
+    "Sky/daylight through windows | deep dusk at arrival | night blues mid-video | sunrise sun at horizon 1:29-1:37, golden exterior light at departure | monotonic forward progression, no light reversal"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Semi truck (exterior) | parked left of diner at dusk, steam/exhaust plume rising continuously | still parked at sunrise in golden light, steam no longer visible | steady idle steam 0:00-0:10; man approaches its cab at 1:43-1:51\",\n    \"Diner neon OPEN sign | lit red at dusk | still lit at sunrise | constant illumination, no uncaused change\",\n    \"Waitress | wiping counter alone before opening rush | alone again cleaning after customer departs | wipes counter (0:12-0:19) -> pours coffee for arriving man (0:26-0:33) -> serves plate (1:11-1:18) -> sits with coffee at sunrise (1:29-1:37) -> takes payment (1:39-1:41) -> watches man leave (1:47-1:51) -> resumes cleaning (1:53-1:58)\",\n    \"Man (customer) | absent, then enters at dusk | exits at sunrise toward truck | walks in and sits (0:20-0:26) -> receives coffee -> sits with meal through night -> places $100 bill on counter (1:37-1:41) -> walks out to truck (1:43-1:51)\",\n    \"Coffee carafe and mug | carafe full, mug empty on counter | mug filled and held by man until he leaves | pour begins after man sits (0:26-0:33), stream continuous then carafe withdrawn; mug persists with man through 1:41\",\n    \"Food plate | first plate appears before man ~0:34-0:38 (serving bridged by close-up) | cleared off-screen; second plate placed by waitress at 1:11 | both servings follow sit-down, no effect preceding cause\",\n    \"$100 bill | in man's hand | placed on counter next to mug, then taken | placed 1:37-1:39, second hand retrieves it 1:41; order correct\",\n    \"Sky/daylight through windows | deep dusk at arrival | night blues mid-video | sunrise sun at horizon 1:29-1:37, golden exterior light at departure | monotonic forward progression, no light reversal\"\n  ],\n  \"findings\": []\n}"
+}

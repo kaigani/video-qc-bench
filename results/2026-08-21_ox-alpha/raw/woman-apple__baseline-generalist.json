@@ -1,0 +1,58 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:33:17.066Z",
+  "latencyMs": 85012,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 4143,
+    "total_tokens": 9856,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman (navy cardigan, gray shorts) | walking toward camera under open blue umbrella, holding small round red fruit with both hands, watch on left wrist | in profile facing left, holding larger peach-like stemmed fruit, watch visible on fruit-holding (right) wrist | turned right past camera; fruit appearance changed; watch appears to switch wrists",
+    "Red fruit | small, spherical, bright red, no visible stem | larger, orange-red, oblong, with green stem | morphs between 0:06 and 0:08",
+    "Blue umbrella | open canopy, gripped at pole by left hand | still open and blue | consistent throughout",
+    "Market crowd (man in green shirt/blue shorts, women in red and purple tops) | approaching camera in background | pass out of frame as camera advances | consistent movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "Red fruit held by main woman",
+      "invariant_violated": "Object identity continuity",
+      "description": "The fruit starts as a small, spherical, bright red apple/tomato-like fruit with no stem (0:00-0:04). By 0:06 it is noticeably larger and tomato-like with a visible green stem/calyx, and by 0:08 it has become a peach/nectarine-like fruit with a stem, oblong shape, and orange-red coloring. The object smoothly changes size, shape, color, and identity with no action explaining the swap.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "Watch on main woman's wrist",
+      "invariant_violated": "Wardrobe/accessory continuity",
+      "description": "From 0:00 through 0:06 the wristwatch is clearly on her left wrist while the fruit is in her right hand. At 0:08, in profile, the watch is visible on the same (right) arm that is holding the fruit. Either the watch switched wrists or the fruit silently switched hands between 0:06 and 0:08; neither transition is shown.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman (navy cardigan, gray shorts) | walking toward camera under open blue umbrella, holding small round red fruit with both hands, watch on left wrist | in profile facing left, holding larger peach-like stemmed fruit, watch visible on fruit-holding (right) wrist | turned right past camera; fruit appearance changed; watch appears to switch wrists\",\n    \"Red fruit | small, spherical, bright red, no visible stem | larger, orange-red, oblong, with green stem | morphs between 0:06 and 0:08\",\n    \"Blue umbrella | open canopy, gripped at pole by left hand | still open and blue | consistent throughout\",\n    \"Market crowd (man in green shirt/blue shorts, women in red and purple tops) | approaching camera in background | pass out of frame as camera advances | consistent movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"Red fruit held by main woman\",\n      \"invariant_violated\": \"Object identity continuity\",\n      \"description\": \"The fruit starts as a small, spherical, bright red apple/tomato-like fruit with no stem (0:00-0:04). By 0:06 it is noticeably larger and tomato-like with a visible green stem/calyx, and by 0:08 it has become a peach/nectarine-like fruit with a stem, oblong shape, and orange-red coloring. The object smoothly changes size, shape, color, and identity with no action explaining the swap.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"Watch on main woman's wrist\",\n      \"invariant_violated\": \"Wardrobe/accessory continuity\",\n      \"description\": \"From 0:00 through 0:06 the wristwatch is clearly on her left wrist while the fruit is in her right hand. At 0:08, in profile, the watch is visible on the same (right) arm that is holding the fruit. Either the watch switched wrists or the fruit silently switched hands between 0:06 and 0:08; neither transition is shown.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

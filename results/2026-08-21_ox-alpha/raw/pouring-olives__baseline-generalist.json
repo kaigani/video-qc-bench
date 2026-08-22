@@ -1,0 +1,68 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:30:35.364Z",
+  "latencyMs": 135970,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 7096,
+    "total_tokens": 12809,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | empty, on cutting board | ~40% full of mixed green and dark-purple olives | filled by successive pours from 0:00 to 0:08",
+    "Small glass bowl | held over jar, visible contents all green olives | emptied by 0:04, then seen full of green olives again at 0:06 | poured into jar, reappears refilled with no refill action shown",
+    "Stainless steel bowl | full of green olives on counter | partially emptied into jar | picked up at 0:06, poured into jar at 0:08",
+    "White ceramic bowl | full of green olives, right side of counter | unchanged, still full | none",
+    "Person's left wrist | bare, no watch visible (0:00-0:04) | silver wristwatch visible | watch appears from 0:06 onward",
+    "Olives inside jar | none | bottom layer dominated by dark purple olives under green ones | dark olives emerge from a source bowl that showed only green olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "Olives poured from the small glass bowl",
+      "invariant_violated": "Object content/color continuity",
+      "description": "At 0:00 the small glass bowl held over the jar visibly contains only green olives, but the olives falling into the jar at 0:02 (and forming the jar's bottom layer at 0:04) include numerous dark purple/black olives that were never visible in the source bowl.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "Person's left wrist",
+      "invariant_violated": "Wardrobe/prop continuity",
+      "description": "A silver wristwatch is clearly visible on the person's left wrist from 0:06 through 0:08, but the same wrist is plainly visible and bare at 0:00-0:04 while performing the same pouring action, with no sleeve adjustment shown.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "Small glass bowl",
+      "invariant_violated": "Container fill-state continuity",
+      "description": "The small glass bowl is nearly empty at 0:04 after being poured into the jar, yet at 0:06 the person is holding it full of green olives again while their other hand is only just reaching for the steel bowl — no refill action is shown to explain the restored contents.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | empty, on cutting board | ~40% full of mixed green and dark-purple olives | filled by successive pours from 0:00 to 0:08\",\n    \"Small glass bowl | held over jar, visible contents all green olives | emptied by 0:04, then seen full of green olives again at 0:06 | poured into jar, reappears refilled with no refill action shown\",\n    \"Stainless steel bowl | full of green olives on counter | partially emptied into jar | picked up at 0:06, poured into jar at 0:08\",\n    \"White ceramic bowl | full of green olives, right side of counter | unchanged, still full | none\",\n    \"Person's left wrist | bare, no watch visible (0:00-0:04) | silver wristwatch visible | watch appears from 0:06 onward\",\n    \"Olives inside jar | none | bottom layer dominated by dark purple olives under green ones | dark olives emerge from a source bowl that showed only green olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"Olives poured from the small glass bowl\",\n      \"invariant_violated\": \"Object content/color continuity\",\n      \"description\": \"At 0:00 the small glass bowl held over the jar visibly contains only green olives, but the olives falling into the jar at 0:02 (and forming the jar's bottom layer at 0:04) include numerous dark purple/black olives that were never visible in the source bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"Person's left wrist\",\n      \"invariant_violated\": \"Wardrobe/prop continuity\",\n      \"description\": \"A silver wristwatch is clearly visible on the person's left wrist from 0:06 through 0:08, but the same wrist is plainly visible and bare at 0:00-0:04 while performing the same pouring action, with no sleeve adjustment shown.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"Small glass bowl\",\n      \"invariant_violated\": \"Container fill-state continuity\",\n      \"description\": \"The small glass bowl is nearly empty at 0:04 after being poured into the jar, yet at 0:06 the person is holding it full of green olives again while their other hand is only just reaching for the steel bowl — no refill action is shown to explain the restored contents.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

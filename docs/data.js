@@ -221,6 +221,21 @@ const DATA = {
    "cost": 1.582,
    "costEstimated": false,
    "avgLatencyS": 266.3
+  },
+  {
+   "key": "oxalpha",
+   "label": "oxalpha",
+   "model": "stealth/ox-alpha",
+   "reasoning": false,
+   "detection": 39,
+   "defectsFound": 15,
+   "tp": 26,
+   "extra": 0,
+   "fp": 11,
+   "findings": 37,
+   "cost": 0,
+   "costEstimated": false,
+   "avgLatencyS": 120.3
   }
  ],
  "coverage": [
@@ -241,7 +256,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -261,7 +277,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -281,7 +298,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -301,7 +319,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -321,7 +340,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -341,7 +361,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -361,7 +382,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -381,7 +403,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -401,7 +424,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -421,7 +445,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -441,7 +466,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -461,7 +487,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -481,7 +508,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -501,7 +529,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -521,7 +550,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -541,7 +571,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -561,7 +592,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -581,7 +613,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -601,7 +634,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": false
    }
   },
   {
@@ -621,7 +655,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -641,7 +676,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -661,7 +697,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -681,7 +718,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -701,7 +739,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -721,7 +760,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -741,7 +781,8 @@ const DATA = {
     "nemotron": true,
     "seed": false,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -761,7 +802,8 @@ const DATA = {
     "nemotron": true,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -781,7 +823,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -801,7 +844,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -821,7 +865,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -841,7 +886,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -861,7 +907,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -881,7 +928,8 @@ const DATA = {
     "nemotron": true,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -901,7 +949,8 @@ const DATA = {
     "nemotron": true,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -921,7 +970,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -941,7 +991,8 @@ const DATA = {
     "nemotron": false,
     "seed": true,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": false
    }
   },
   {
@@ -961,7 +1012,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -981,7 +1033,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1001,7 +1054,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1021,7 +1075,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": true
+    "qwen27b": true,
+    "oxalpha": true
    }
   },
   {
@@ -1041,7 +1096,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1061,7 +1117,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1081,7 +1138,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1101,7 +1159,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1121,7 +1180,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": true
    }
   },
   {
@@ -1141,7 +1201,8 @@ const DATA = {
     "nemotron": true,
     "seed": false,
     "kimi": false,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   },
   {
@@ -1161,7 +1222,8 @@ const DATA = {
     "nemotron": false,
     "seed": false,
     "kimi": true,
-    "qwen27b": false
+    "qwen27b": false,
+    "oxalpha": false
    }
   }
  ],
@@ -1582,6 +1644,44 @@ const DATA = {
     "fp": 0,
     "extra": 0,
     "total": 0
+   }
+  },
+  "oxalpha": {
+   "baseline-generalist": {
+    "tp": 15,
+    "fp": 10,
+    "extra": 0,
+    "total": 25
+   },
+   "character-continuity": {
+    "tp": 2,
+    "fp": 1,
+    "extra": 0,
+    "total": 3
+   },
+   "object-persistence-state": {
+    "tp": 4,
+    "fp": 0,
+    "extra": 0,
+    "total": 4
+   },
+   "contact-interaction-kinematics": {
+    "tp": 1,
+    "fp": 0,
+    "extra": 0,
+    "total": 1
+   },
+   "spatial-topology-occlusion": {
+    "tp": 2,
+    "fp": 0,
+    "extra": 0,
+    "total": 2
+   },
+   "causal-temporal-sequence": {
+    "tp": 2,
+    "fp": 0,
+    "extra": 0,
+    "total": 2
    }
   }
  },

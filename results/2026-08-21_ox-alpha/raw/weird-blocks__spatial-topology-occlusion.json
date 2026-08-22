@@ -1,0 +1,42 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:33:08.666Z",
+  "latencyMs": 199197,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 10603,
+    "total_tokens": 16504,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table surface | light wooden tabletop, back edge runs horizontally near top of frame | identical | static across all frames; no warping or shifting of the plane",
+    "background room | dark, out-of-focus space above table edge with blurred diagonal chair-leg shapes | identical | static; background elements never render over foreground objects",
+    "camera viewpoint | locked-off frontal shot of tabletop, no panning, zooming, or cuts | same framing at end | single continuous fixed viewpoint; all new views geometrically compatible",
+    "numbered cube row | starts as two green '2' cubes with a one-cube-width gap between them | grows to eight cubes reading '2 3 2 2 3 5 2 6' in a left-to-right row | cubes added sequentially left to right; previously placed cubes hold their positions and orientation; face colors of individual cube positions vary between placements (object-state attribute, outside spatial scope)",
+    "right hand | enters from top of frame gripping cubes by their top knobs | releases the final tilted blue '6' cube at the right end of the row | progresses monotonically left to right; always renders nearer than the cubes it handles, with correct near-over-far occlusion at every overlap"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"table surface | light wooden tabletop, back edge runs horizontally near top of frame | identical | static across all frames; no warping or shifting of the plane\",\n    \"background room | dark, out-of-focus space above table edge with blurred diagonal chair-leg shapes | identical | static; background elements never render over foreground objects\",\n    \"camera viewpoint | locked-off frontal shot of tabletop, no panning, zooming, or cuts | same framing at end | single continuous fixed viewpoint; all new views geometrically compatible\",\n    \"numbered cube row | starts as two green '2' cubes with a one-cube-width gap between them | grows to eight cubes reading '2 3 2 2 3 5 2 6' in a left-to-right row | cubes added sequentially left to right; previously placed cubes hold their positions and orientation; face colors of individual cube positions vary between placements (object-state attribute, outside spatial scope)\",\n    \"right hand | enters from top of frame gripping cubes by their top knobs | releases the final tilted blue '6' cube at the right end of the row | progresses monotonically left to right; always renders nearer than the cubes it handles, with correct near-over-far occlusion at every overlap\"\n  ],\n  \"findings\": []\n}"
+}

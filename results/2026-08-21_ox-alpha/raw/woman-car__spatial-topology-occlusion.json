@@ -1,0 +1,44 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:26:37.010Z",
+  "latencyMs": 351564,
+  "usage": {
+    "prompt_tokens": 5421,
+    "completion_tokens": 15275,
+    "total_tokens": 20696,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wood-paneled station wagon | front faces frame-left, positioned on right lane of a two-lane desert highway, passenger side toward camera | identical orientation throughout, at most an imperceptible creep | camera dollies/orbits continuously from front-three-quarter (00:00) to near-profile close-up (00:08)",
+    "woman in front passenger window | leaning out just aft of the A-pillar, arms crossed on the door sill, window glass down | same window, same pose, same anchor point in every frame | no wrong-side emergence; body stays correctly occluded by door/A-pillar geometry",
+    "desert highway | paved surface with yellow center dashes, dirt shoulder at bottom-left, road ahead recedes to upper-left | same layout in all frames | progressively more of the road ahead revealed as the camera moves toward the car's side, geometrically consistent",
+    "fender-mounted antenna + hood ornament | thin antenna and chrome ornament forward of the windshield on the hood/fender | maintain the same position relative to the cowl and A-pillar in every frame | apparent leftward drift in frame matches camera translation",
+    "windshield, A-pillar, rearview mirror | glass forward of the woman, mirror hanging at top center of glass | mirror tracks the windshield exactly across the dolly | no parallax decoupling",
+    "roof rack | twin chrome rails running along the roof top | present and aligned in all frames | consistent with wagon body",
+    "background (desert scrub, distant mountains, utility pole from ~00:06) | horizon at upper-left, pole stands beyond the far pavement edge | unchanged | no background element ever renders over the car or the woman; occlusion ordering (car > road > desert > mountains) holds throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wood-paneled station wagon | front faces frame-left, positioned on right lane of a two-lane desert highway, passenger side toward camera | identical orientation throughout, at most an imperceptible creep | camera dollies/orbits continuously from front-three-quarter (00:00) to near-profile close-up (00:08)\",\n    \"woman in front passenger window | leaning out just aft of the A-pillar, arms crossed on the door sill, window glass down | same window, same pose, same anchor point in every frame | no wrong-side emergence; body stays correctly occluded by door/A-pillar geometry\",\n    \"desert highway | paved surface with yellow center dashes, dirt shoulder at bottom-left, road ahead recedes to upper-left | same layout in all frames | progressively more of the road ahead revealed as the camera moves toward the car's side, geometrically consistent\",\n    \"fender-mounted antenna + hood ornament | thin antenna and chrome ornament forward of the windshield on the hood/fender | maintain the same position relative to the cowl and A-pillar in every frame | apparent leftward drift in frame matches camera translation\",\n    \"windshield, A-pillar, rearview mirror | glass forward of the woman, mirror hanging at top center of glass | mirror tracks the windshield exactly across the dolly | no parallax decoupling\",\n    \"roof rack | twin chrome rails running along the roof top | present and aligned in all frames | consistent with wagon body\",\n    \"background (desert scrub, distant mountains, utility pole from ~00:06) | horizon at upper-left, pole stands beyond the far pavement edge | unchanged | no background element ever renders over the car or the woman; occlusion ordering (car > road > desert > mountains) holds throughout\"\n  ],\n  \"findings\": []\n}"
+}

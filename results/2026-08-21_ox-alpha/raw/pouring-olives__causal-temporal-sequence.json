@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:28:17.456Z",
+  "latencyMs": 75185,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 3080,
+    "total_tokens": 8975,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, standing on wooden cutting board | partially filled with a settling layer of mixed green and dark olives | olives arrive in two pouring passes (00:00-00:05 and 00:07-00:08), fill level rises only while bowl is tilted over it",
+    "small glass bowl | heaped with olives, held above jar mouth | emptied during first pour, visibly refilled by the second pour after an implied cut | tilt of bowl precedes olives exiting, motion continuous within each shot",
+    "olives | contained in small bowl | falling then resting at jar bottom | fall begins only after bowl tilt, impact with jar base follows travel time, no olives appear or vanish mid-fall",
+    "person's hands | holding bowl above jar, fingers guiding olives at 00:02 | still engaged in pouring at 00:08 | reach/pour motions initiate and complete within shots, no dissolved or interrupted actions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, standing on wooden cutting board | partially filled with a settling layer of mixed green and dark olives | olives arrive in two pouring passes (00:00-00:05 and 00:07-00:08), fill level rises only while bowl is tilted over it\",\n    \"small glass bowl | heaped with olives, held above jar mouth | emptied during first pour, visibly refilled by the second pour after an implied cut | tilt of bowl precedes olives exiting, motion continuous within each shot\",\n    \"olives | contained in small bowl | falling then resting at jar bottom | fall begins only after bowl tilt, impact with jar base follows travel time, no olives appear or vanish mid-fall\",\n    \"person's hands | holding bowl above jar, fingers guiding olives at 00:02 | still engaged in pouring at 00:08 | reach/pour motions initiate and complete within shots, no dissolved or interrupted actions\"\n  ],\n  \"findings\": []\n}"
+}

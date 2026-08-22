@@ -1,0 +1,66 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:54:21.778Z",
+  "latencyMs": 281522,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 13877,
+    "total_tokens": 19590,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dealer (blue suit, red tie, glasses, yellow pocket square) | only hand visible holding a gold coin at 0:00 | standing behind table, both hands reaching over cups at 0:08 | camera orbits from tabletop close-up to wide front shot",
+    "Red cups with silver interiors | 4 cups on cream table center (front-left, center, back-center, right) | only 3 cups discernible in final wide frames | no cup removal ever shown",
+    "Gold coin stack | protruding above rim of center cup at 0:00-0:02 | not visible in any later frame | vanishes during cup shuffle",
+    "Loose gold coins | scattered on table plus one held by dealer | dealer holds coin aloft at 0:06, hands appear empty at 0:08 | coin vanishes from hand"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "red cups on table",
+      "invariant_violated": "object count continuity",
+      "description": "Four cups are clearly present and unoccluded from 0:00 through 0:04 (front-left, center, back-center, right). From 0:06 onward, and clearly at 0:08, only three cups are discernible in the continuous shot; no cup is ever shown being picked up or removed, and at 0:08 no fourth cup is visibly occluded by the dealer's hands.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:04",
+      "entity": "gold coin stack in center cup",
+      "invariant_violated": "unexplained object disappearance",
+      "description": "At 0:00-0:02 the center cup contains a tall stack of gold coins protruding well above its rim, a distinctive feature. In the same continuous shot, by 0:04-0:06 no cup shows any protruding coin stack, and no action of removing or palming the stack is visible on screen.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "gold coin held by dealer",
+      "invariant_violated": "unexplained object disappearance",
+      "description": "At 0:06 the dealer clearly pinches a gold coin above the table next to the right cup. At 0:08 both of his hands appear empty, and no coin is visible on the table surface or in the act of being placed into a cup.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dealer (blue suit, red tie, glasses, yellow pocket square) | only hand visible holding a gold coin at 0:00 | standing behind table, both hands reaching over cups at 0:08 | camera orbits from tabletop close-up to wide front shot\",\n    \"Red cups with silver interiors | 4 cups on cream table center (front-left, center, back-center, right) | only 3 cups discernible in final wide frames | no cup removal ever shown\",\n    \"Gold coin stack | protruding above rim of center cup at 0:00-0:02 | not visible in any later frame | vanishes during cup shuffle\",\n    \"Loose gold coins | scattered on table plus one held by dealer | dealer holds coin aloft at 0:06, hands appear empty at 0:08 | coin vanishes from hand\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"red cups on table\",\n      \"invariant_violated\": \"object count continuity\",\n      \"description\": \"Four cups are clearly present and unoccluded from 0:00 through 0:04 (front-left, center, back-center, right). From 0:06 onward, and clearly at 0:08, only three cups are discernible in the continuous shot; no cup is ever shown being picked up or removed, and at 0:08 no fourth cup is visibly occluded by the dealer's hands.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:04\",\n      \"entity\": \"gold coin stack in center cup\",\n      \"invariant_violated\": \"unexplained object disappearance\",\n      \"description\": \"At 0:00-0:02 the center cup contains a tall stack of gold coins protruding well above its rim, a distinctive feature. In the same continuous shot, by 0:04-0:06 no cup shows any protruding coin stack, and no action of removing or palming the stack is visible on screen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"gold coin held by dealer\",\n      \"invariant_violated\": \"unexplained object disappearance\",\n      \"description\": \"At 0:06 the dealer clearly pinches a gold coin above the table next to the right cup. At 0:08 both of his hands appear empty, and no coin is visible on the table surface or in the act of being placed into a cup.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.35\n    }\n  ]\n}"
+}

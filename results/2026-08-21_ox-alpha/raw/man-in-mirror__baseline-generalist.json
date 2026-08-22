@@ -1,0 +1,57 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:04:16.284Z",
+  "latencyMs": 94862,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 5111,
+    "total_tokens": 10824,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man shaving | dark slicked hair, white dress shirt, straight razor in right hand at jaw | same attire, still shaving at mirror | head bows ~00:02-00:04, hand rises toward temple, then returns to jaw/cheek shaving",
+    "Straight razor (foreground) | dark handle, blade at man's jaw/chin | same dark-handled razor at cheek/jaw | travels chin -> temple/hairline -> jaw across shot",
+    "Mirror reflection of man | razor held at upper lip/moustache area | razor still at upper lip at end | briefly appears at eyebrow at 00:04; never tracks the foreground razor's actual position"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection vs. man's razor",
+      "invariant_violated": "Mirror reflection sync",
+      "description": "Throughout the shot the reflection shows the straight razor at the upper lip/moustache area, while the actual man is shaving his jaw, chin, or cheek (clearly visible at 00:00, 00:06, and 00:08 where the foreground razor is at chin/jaw level but the reflected razor sits at the lip). At 00:04 the man's hand is up at his temple/hairline, yet the reflection shows the blade at his eyebrow. A real mirror must exactly mirror the subject's pose, so the reflection appears to be from a different take or composited separately.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Razor prop (foreground vs. reflection)",
+      "invariant_violated": "Prop consistency",
+      "description": "The razor the man holds in the foreground has a dark handle, but the razor visible in the mirror reflection has a white/light handle (also with a bluish tint at 00:06), indicating two different razors or takes were used for the subject and his reflection.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man shaving | dark slicked hair, white dress shirt, straight razor in right hand at jaw | same attire, still shaving at mirror | head bows ~00:02-00:04, hand rises toward temple, then returns to jaw/cheek shaving\",\n    \"Straight razor (foreground) | dark handle, blade at man's jaw/chin | same dark-handled razor at cheek/jaw | travels chin -> temple/hairline -> jaw across shot\",\n    \"Mirror reflection of man | razor held at upper lip/moustache area | razor still at upper lip at end | briefly appears at eyebrow at 00:04; never tracks the foreground razor's actual position\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection vs. man's razor\",\n      \"invariant_violated\": \"Mirror reflection sync\",\n      \"description\": \"Throughout the shot the reflection shows the straight razor at the upper lip/moustache area, while the actual man is shaving his jaw, chin, or cheek (clearly visible at 00:00, 00:06, and 00:08 where the foreground razor is at chin/jaw level but the reflected razor sits at the lip). At 00:04 the man's hand is up at his temple/hairline, yet the reflection shows the blade at his eyebrow. A real mirror must exactly mirror the subject's pose, so the reflection appears to be from a different take or composited separately.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Razor prop (foreground vs. reflection)\",\n      \"invariant_violated\": \"Prop consistency\",\n      \"description\": \"The razor the man holds in the foreground has a dark handle, but the razor visible in the mirror reflection has a white/light handle (also with a bluish tint at 00:06), indicating two different razors or takes were used for the subject and his reflection.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

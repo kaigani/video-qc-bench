@@ -1,0 +1,50 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:41:38.702Z",
+  "latencyMs": 75955,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 3183,
+    "total_tokens": 9094,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (main subject) | walking through market aisle, right hand gripping blue umbrella shaft at chest height, left hand holding red fruit near shaft | left hand open-palmed with red fruit apparently unsupported, umbrella shaft passes up behind her shoulder with gripping hand out of frame | left-hand grip on fruit visibly degrades ~0:06-0:08 from held to apparently floating; right-hand umbrella grip becomes occluded/out of frame ~0:08",
+    "Blue umbrella | held aloft, shaft gripped by woman's right hand | shaft still upright above/behind woman, no hand visibly contacting shaft in frame | continuous carry, no visible release or transfer",
+    "Red fruit | held in woman's left hand, pressed near umbrella shaft | positioned in front of her open left palm with fingers spread, no visible finger contact | contact with fingers lost around 0:06 and remains absent through 0:08",
+    "Background pedestrians | walking through aisle at normal gait, some carrying bags | continue walking past stalls | no contact or support anomalies observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "red fruit in woman's left hand",
+      "invariant_violated": "missing contact / floating grip",
+      "description": "From 0:06 onward the fruit sits directly in front of the woman's open left hand with fingers spread and thumb extended; no finger wraps, pinches, or presses against the fruit, yet it maintains a fixed position relative to the hand as if supported. By 0:08 it clearly hovers above the open palm with a visible gap, with no contact surface explaining its support.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (main subject) | walking through market aisle, right hand gripping blue umbrella shaft at chest height, left hand holding red fruit near shaft | left hand open-palmed with red fruit apparently unsupported, umbrella shaft passes up behind her shoulder with gripping hand out of frame | left-hand grip on fruit visibly degrades ~0:06-0:08 from held to apparently floating; right-hand umbrella grip becomes occluded/out of frame ~0:08\",\n    \"Blue umbrella | held aloft, shaft gripped by woman's right hand | shaft still upright above/behind woman, no hand visibly contacting shaft in frame | continuous carry, no visible release or transfer\",\n    \"Red fruit | held in woman's left hand, pressed near umbrella shaft | positioned in front of her open left palm with fingers spread, no visible finger contact | contact with fingers lost around 0:06 and remains absent through 0:08\",\n    \"Background pedestrians | walking through aisle at normal gait, some carrying bags | continue walking past stalls | no contact or support anomalies observed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"red fruit in woman's left hand\",\n      \"invariant_violated\": \"missing contact / floating grip\",\n      \"description\": \"From 0:06 onward the fruit sits directly in front of the woman's open left hand with fingers spread and thumb extended; no finger wraps, pinches, or presses against the fruit, yet it maintains a fixed position relative to the hand as if supported. By 0:08 it clearly hovers above the open palm with a visible gap, with no contact surface explaining its support.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

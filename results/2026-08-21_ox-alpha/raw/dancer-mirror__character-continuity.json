@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:19:14.756Z",
+  "latencyMs": 324681,
+  "usage": {
+    "prompt_tokens": 5892,
+    "completion_tokens": 15350,
+    "total_tokens": 21242,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (live person) | woman with dark hair in high bun; black cross-back sports bra; black full-length leggings; barefoot; tattoos on right upper arm and forearm | identical appearance and wardrobe at end of clip | single continuous shot, no cuts; stands center-left of frame facing mirror wall on the right; choreography: right arm extended low with bent elbow (0s) -> right arm arcs overhead (2s) -> both arms raised (4s) -> arms sweep down and out (6s) -> right arm straight up with right leg extended tendu (8s); position and facing stable throughout",
+    "Dancer's mirror reflection | front view of the same woman inside mirror at frame right; by mirror chirality the tattoo must appear on the reflection's left arm (viewer-right side of the reflection) | same | correctly matches the dancer's arm/leg poses at 2s, 4s, 6s and 8s; at 0s it shows both arms hanging at her sides while the live dancer's right arm is extended, and the tattoo appears on the reflection's right arm (viewer-left side)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection of the dancer",
+      "invariant_violated": "Mirror pose consistency (reflection must match the live character's current pose)",
+      "description": "At 00:00 the dancer's right arm is clearly extended out to her side with the elbow bent (mid-port-de-bras), but her mirror reflection shows both arms hanging straight down at her sides. The reflection corresponds to no state of the dancer and no cut or elapsed time explains the desync; from 2s onward the reflection matches her poses correctly again.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection — tattoo placement (identity chirality)",
+      "invariant_violated": "Identity attribute consistency (mirrored left/right placement)",
+      "description": "The dancer's tattoos are on her right arm, which in a mirror must appear on the reflection's left arm (viewer-right side of the reflection figure, as correctly seen at 2s). At 00:00 the ink is visible on the reflection's right arm (viewer-left side of the figure) — the tattoo sits on the wrong limb with no on-screen explanation.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (live person) | woman with dark hair in high bun; black cross-back sports bra; black full-length leggings; barefoot; tattoos on right upper arm and forearm | identical appearance and wardrobe at end of clip | single continuous shot, no cuts; stands center-left of frame facing mirror wall on the right; choreography: right arm extended low with bent elbow (0s) -> right arm arcs overhead (2s) -> both arms raised (4s) -> arms sweep down and out (6s) -> right arm straight up with right leg extended tendu (8s); position and facing stable throughout\",\n    \"Dancer's mirror reflection | front view of the same woman inside mirror at frame right; by mirror chirality the tattoo must appear on the reflection's left arm (viewer-right side of the reflection) | same | correctly matches the dancer's arm/leg poses at 2s, 4s, 6s and 8s; at 0s it shows both arms hanging at her sides while the live dancer's right arm is extended, and the tattoo appears on the reflection's right arm (viewer-left side)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection of the dancer\",\n      \"invariant_violated\": \"Mirror pose consistency (reflection must match the live character's current pose)\",\n      \"description\": \"At 00:00 the dancer's right arm is clearly extended out to her side with the elbow bent (mid-port-de-bras), but her mirror reflection shows both arms hanging straight down at her sides. The reflection corresponds to no state of the dancer and no cut or elapsed time explains the desync; from 2s onward the reflection matches her poses correctly again.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection — tattoo placement (identity chirality)\",\n      \"invariant_violated\": \"Identity attribute consistency (mirrored left/right placement)\",\n      \"description\": \"The dancer's tattoos are on her right arm, which in a mirror must appear on the reflection's left arm (viewer-right side of the reflection figure, as correctly seen at 2s). At 00:00 the ink is visible on the reflection's right arm (viewer-left side of the figure) — the tattoo sits on the wrong limb with no on-screen explanation.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

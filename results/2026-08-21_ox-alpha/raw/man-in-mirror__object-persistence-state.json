@@ -1,0 +1,44 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:10:18.741Z",
+  "latencyMs": 86741,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 3996,
+    "total_tokens": 9908,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "razor (white/silver shaving razor) | held in man's right hand, at jaw/cheek level | still held in right hand, at cheek | position changes only via visible hand motion: strokes along jaw (0:00-0:02), raised to eyebrow region (0:04), back to mouth/chin (0:06), cheek (0:08); identity consistent throughout, no duplication or vanishing",
+    "bathroom mirror | wall-mounted, static, reflecting man/door/shelf | unchanged | no transitions",
+    "wooden door with brass knob (seen in mirror reflection) | closed, static | still closed | no transitions",
+    "bottles on shelf (seen in mirror reflection, upper right) | stationary on shelf | unchanged | no transitions",
+    "light switch plate (seen in mirror reflection) | on wall, static | unchanged | no transitions",
+    "shaving cream on man's face | white cream visible on upper lip and chin | still present at end | no impossible reappearance/reversal; cream persists while razor works around it",
+    "man's raised right arm with razor (real-space view) | arm enters frame from bottom, razor near jaw | arm raised then lowered consistent with reflection at every timestamp | real-space razor and mirror reflection remain spatially consistent; dark back side of razor in real view matches white front in reflection"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"razor (white/silver shaving razor) | held in man's right hand, at jaw/cheek level | still held in right hand, at cheek | position changes only via visible hand motion: strokes along jaw (0:00-0:02), raised to eyebrow region (0:04), back to mouth/chin (0:06), cheek (0:08); identity consistent throughout, no duplication or vanishing\",\n    \"bathroom mirror | wall-mounted, static, reflecting man/door/shelf | unchanged | no transitions\",\n    \"wooden door with brass knob (seen in mirror reflection) | closed, static | still closed | no transitions\",\n    \"bottles on shelf (seen in mirror reflection, upper right) | stationary on shelf | unchanged | no transitions\",\n    \"light switch plate (seen in mirror reflection) | on wall, static | unchanged | no transitions\",\n    \"shaving cream on man's face | white cream visible on upper lip and chin | still present at end | no impossible reappearance/reversal; cream persists while razor works around it\",\n    \"man's raised right arm with razor (real-space view) | arm enters frame from bottom, razor near jaw | arm raised then lowered consistent with reflection at every timestamp | real-space razor and mirror reflection remain spatially consistent; dark back side of razor in real view matches white front in reflection\"\n  ],\n  \"findings\": []\n}"
+}

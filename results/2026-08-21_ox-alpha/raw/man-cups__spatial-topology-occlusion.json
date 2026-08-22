@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:04:51.402Z",
+  "latencyMs": 536389,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 25637,
+    "total_tokens": 31538,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "round table, red medallion-print cloth with central cream circle | close-up, fills lower 2/3 of frame at 0s, near edge at bottom | fully visible ellipse with margins at 8s | camera pulls back and yaws from NE-facing close-up to N-facing wide; near edge remains south side throughout, cloth pattern continuous",
+    "four red cups with metal rims | diamond arrangement on cream circle (SW / center / E / N) at 0s, coin stack visible in center cup | horizontal E-W row of four in front of performer at 8s | rearranged on-screen between ~4-6s with performer's hands on cups at 6s; consistent prop manipulation, not a layout fault",
+    "loose gold coins | two on cream circle plus one held in hand at 0s | one visible in front of cup row at 8s | progressively loaded into cups by performer; no coin seen passing through cup walls or table",
+    "performer in blue suit | only right arm entering from upper-left at 0s, torso out of frame | seated centered on far (north) side facing camera at 8s | revealed progressively by pull-back; right hand consistently frame-left and left hand frame-right at 6s and 8s, matching a north-seated performer facing south",
+    "room background, dark east wall with standing figures and red chair | occupies top of frame at 0-2s (camera facing NE) | same NE sector compressed at right frame edge at 8s (dark chair, person silhouette) | consistent with camera translating east while yawing left; near content shifts left, far content shifts right (correct parallax)",
+    "north-wall windows | not visible at 0-2s | enter from frame-left at ~4s, spread across full background by 8s | progressive reveal matches left-yaw of camera; window at 6s top-left maps to 8s left window, 6s top-center windows map to 8s center windows",
+    "distant seated person at far table, east side | enters frame-right at ~4s | holds frame-right at 6s, near right edge at 8s | drift consistent with camera orbit toward due-south heading"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"round table, red medallion-print cloth with central cream circle | close-up, fills lower 2/3 of frame at 0s, near edge at bottom | fully visible ellipse with margins at 8s | camera pulls back and yaws from NE-facing close-up to N-facing wide; near edge remains south side throughout, cloth pattern continuous\",\n    \"four red cups with metal rims | diamond arrangement on cream circle (SW / center / E / N) at 0s, coin stack visible in center cup | horizontal E-W row of four in front of performer at 8s | rearranged on-screen between ~4-6s with performer's hands on cups at 6s; consistent prop manipulation, not a layout fault\",\n    \"loose gold coins | two on cream circle plus one held in hand at 0s | one visible in front of cup row at 8s | progressively loaded into cups by performer; no coin seen passing through cup walls or table\",\n    \"performer in blue suit | only right arm entering from upper-left at 0s, torso out of frame | seated centered on far (north) side facing camera at 8s | revealed progressively by pull-back; right hand consistently frame-left and left hand frame-right at 6s and 8s, matching a north-seated performer facing south\",\n    \"room background, dark east wall with standing figures and red chair | occupies top of frame at 0-2s (camera facing NE) | same NE sector compressed at right frame edge at 8s (dark chair, person silhouette) | consistent with camera translating east while yawing left; near content shifts left, far content shifts right (correct parallax)\",\n    \"north-wall windows | not visible at 0-2s | enter from frame-left at ~4s, spread across full background by 8s | progressive reveal matches left-yaw of camera; window at 6s top-left maps to 8s left window, 6s top-center windows map to 8s center windows\",\n    \"distant seated person at far table, east side | enters frame-right at ~4s | holds frame-right at 6s, near right edge at 8s | drift consistent with camera orbit toward due-south heading\"\n  ],\n  \"findings\": []\n}"
+}

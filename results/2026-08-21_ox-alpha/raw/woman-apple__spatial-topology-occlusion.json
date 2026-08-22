@@ -1,0 +1,44 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:57:15.451Z",
+  "latencyMs": 231806,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 11160,
+    "total_tokens": 17061,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Market aisle | straight corridor, stall rows on both sides, receding away from camera; camera looks down aisle center | same corridor; after subject passes, camera has yawed left so aisle recedes at frame-left and near stall section fills frame-right | continuous forward dolly then left pan; layout stays coherent throughout",
+    "West (left) stall row | hanging tomato bunches, avocado crates, vendor in blue shirt behind counter | closer sections show orange/tomato crates, then purple crate near camera at frame-right after pan | consistent forward progression; no stall elements teleport or flip sides",
+    "East (right) stall row | stacked tomato crates, avocado crates, blue plastic crate with green fruit | exits frame as camera advances and pans | consistent; blue crate approaches smoothly between 0-4s",
+    "Blue umbrella | held in subject's left hand, canopy above and slightly trailing behind her head, shaft vertical at her left side | canopy exits top of frame, shaft visible angling back over her shoulder | trailing-canopy geometry remains consistent as she turns and passes camera",
+    "Red apple | carried in subject's right hand at chest height, left of umbrella shaft from viewer perspective | still at chest height during pass, visible in near-side hand | pose continuous; hand attribution in final frames blurred but not geometrically contradictory",
+    "Background pedestrians (green-shirt man, red-polo woman, purple-top woman, red-shirt woman with blue bag) | mid-aisle, walking toward camera on center-right | grow in size and exit naturally | approach speeds and lateral ordering consistent across all frames",
+    "Foreground passersby (teal-shirt woman, white-shirt man, bald man in blue) | cross near foreground on west side, walking away from camera | each exits frame-left | all correctly occlude left stall row and stay in front of main subject; no depth-order inversions"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Market aisle | straight corridor, stall rows on both sides, receding away from camera; camera looks down aisle center | same corridor; after subject passes, camera has yawed left so aisle recedes at frame-left and near stall section fills frame-right | continuous forward dolly then left pan; layout stays coherent throughout\",\n    \"West (left) stall row | hanging tomato bunches, avocado crates, vendor in blue shirt behind counter | closer sections show orange/tomato crates, then purple crate near camera at frame-right after pan | consistent forward progression; no stall elements teleport or flip sides\",\n    \"East (right) stall row | stacked tomato crates, avocado crates, blue plastic crate with green fruit | exits frame as camera advances and pans | consistent; blue crate approaches smoothly between 0-4s\",\n    \"Blue umbrella | held in subject's left hand, canopy above and slightly trailing behind her head, shaft vertical at her left side | canopy exits top of frame, shaft visible angling back over her shoulder | trailing-canopy geometry remains consistent as she turns and passes camera\",\n    \"Red apple | carried in subject's right hand at chest height, left of umbrella shaft from viewer perspective | still at chest height during pass, visible in near-side hand | pose continuous; hand attribution in final frames blurred but not geometrically contradictory\",\n    \"Background pedestrians (green-shirt man, red-polo woman, purple-top woman, red-shirt woman with blue bag) | mid-aisle, walking toward camera on center-right | grow in size and exit naturally | approach speeds and lateral ordering consistent across all frames\",\n    \"Foreground passersby (teal-shirt woman, white-shirt man, bald man in blue) | cross near foreground on west side, walking away from camera | each exits frame-left | all correctly occlude left stall row and stay in front of main subject; no depth-order inversions\"\n  ],\n  \"findings\": []\n}"
+}

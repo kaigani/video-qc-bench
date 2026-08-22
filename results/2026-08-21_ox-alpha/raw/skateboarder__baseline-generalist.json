@@ -1,0 +1,73 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:51:38.751Z",
+  "latencyMs": 50463,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 2424,
+    "total_tokens": 8137,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater | black logo t-shirt, dark pants, green socks, red shoes, rolling on flat concrete | crouched mid-trick with board tilted | ollie ~00:02, landing ~00:04, second flip trick ~00:08",
+    "Skateboard | flat on ground under skater's feet | airborne and tilted mid-flip | launches with skater ~00:02, flips ~00:08",
+    "Skatepark background | round concrete table to skater's right, blue sky, light poles | trees and ledges as camera pans | camera tracks skater continuously"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Skater and background",
+      "invariant_violated": "Frame blending / double-exposure ghosting",
+      "description": "The frame shows two translucent, overlapping copies of the skater and the background (doubled trees, ledge, and horizon) blended together, indicating a crossfade between mismatched shots or blended frames rather than a clean continuous action shot.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Skater",
+      "invariant_violated": "Frame blending / ghosting",
+      "description": "During the landing, a translucent ghost of the skater's arm and torso is overlaid on his actual position, again showing double-exposure/frame-blend artifacts instead of a single crisp pose.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Small dark object above skater's head",
+      "invariant_violated": "Unexplained floating object",
+      "description": "A small dark blob floats just above the skater's head with no visible support; it may be a passing bird, but it reads as a possible rendering/compositing artifact.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Skateboard",
+      "invariant_violated": "Rigid-body geometry",
+      "description": "The deck appears to bend/flex sharply in the middle while tilted under the skater's front foot, more than a wooden skateboard deck can plausibly flex; likely a warping or motion-blur distortion artifact.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skater | black logo t-shirt, dark pants, green socks, red shoes, rolling on flat concrete | crouched mid-trick with board tilted | ollie ~00:02, landing ~00:04, second flip trick ~00:08\",\n    \"Skateboard | flat on ground under skater's feet | airborne and tilted mid-flip | launches with skater ~00:02, flips ~00:08\",\n    \"Skatepark background | round concrete table to skater's right, blue sky, light poles | trees and ledges as camera pans | camera tracks skater continuously\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Skater and background\",\n      \"invariant_violated\": \"Frame blending / double-exposure ghosting\",\n      \"description\": \"The frame shows two translucent, overlapping copies of the skater and the background (doubled trees, ledge, and horizon) blended together, indicating a crossfade between mismatched shots or blended frames rather than a clean continuous action shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Skater\",\n      \"invariant_violated\": \"Frame blending / ghosting\",\n      \"description\": \"During the landing, a translucent ghost of the skater's arm and torso is overlaid on his actual position, again showing double-exposure/frame-blend artifacts instead of a single crisp pose.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Small dark object above skater's head\",\n      \"invariant_violated\": \"Unexplained floating object\",\n      \"description\": \"A small dark blob floats just above the skater's head with no visible support; it may be a passing bird, but it reads as a possible rendering/compositing artifact.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.35\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Skateboard\",\n      \"invariant_violated\": \"Rigid-body geometry\",\n      \"description\": \"The deck appears to bend/flex sharply in the middle while tilted under the skater's front foot, more than a wooden skateboard deck can plausibly flex; likely a warping or motion-blur distortion artifact.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

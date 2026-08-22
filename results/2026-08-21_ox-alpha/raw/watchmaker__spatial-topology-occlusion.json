@@ -1,0 +1,44 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:14:43.415Z",
+  "latencyMs": 40683,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 1809,
+    "total_tokens": 7710,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "camera | static frontal medium close-up, no cuts across entire clip | unchanged | single continuous take",
+    "background | plain white wall, faint vertical edge/shadow near viewer-right frame edge | unchanged | no openings or furniture revealed",
+    "person (torso/head) | centered, facing camera, striped shirt, necklace pendant at chest | unchanged | slight forward lean while working",
+    "left hand | holds watch mechanism at viewer-right, watch on left wrist, ring on ring finger | still holding mechanism | brings mechanism to center ~0:06 then back",
+    "right hand | holds tweezers, tip contacting mechanism at viewer-left of center | tweezers no longer in frame | pulls tweezers back ~0:04, then manipulates mechanism by hand ~0:08",
+    "watch mechanism | gripped in left hand in front of torso | still in left hand | briefly centered between both hands ~0:06, occlusion by fingers consistent",
+    "tweezers | in right hand pointing toward mechanism | out of frame after ~0:04 | exits via natural hand motion, no teleport"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"camera | static frontal medium close-up, no cuts across entire clip | unchanged | single continuous take\",\n    \"background | plain white wall, faint vertical edge/shadow near viewer-right frame edge | unchanged | no openings or furniture revealed\",\n    \"person (torso/head) | centered, facing camera, striped shirt, necklace pendant at chest | unchanged | slight forward lean while working\",\n    \"left hand | holds watch mechanism at viewer-right, watch on left wrist, ring on ring finger | still holding mechanism | brings mechanism to center ~0:06 then back\",\n    \"right hand | holds tweezers, tip contacting mechanism at viewer-left of center | tweezers no longer in frame | pulls tweezers back ~0:04, then manipulates mechanism by hand ~0:08\",\n    \"watch mechanism | gripped in left hand in front of torso | still in left hand | briefly centered between both hands ~0:06, occlusion by fingers consistent\",\n    \"tweezers | in right hand pointing toward mechanism | out of frame after ~0:04 | exits via natural hand motion, no teleport\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,52 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T04:01:46.588Z",
+  "latencyMs": 160195,
+  "usage": {
+    "prompt_tokens": 5892,
+    "completion_tokens": 7962,
+    "total_tokens": 13854,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman (umbrella carrier) | Adult woman, brown hair in ponytail, navy buttoned top, light gray shorts, watch on left wrist, thin bracelet on right wrist | Same wardrobe and accessories at end | Walks toward camera 00:00-00:04 holding blue umbrella in left hand and red apple in right hand; turns to her right (frame-left) ~00:06; by 00:08 in full left-facing profile with the apple in her LEFT hand and umbrella shaft rising from her right side",
+    "Woman in teal top | Teal t-shirt, black crossbody bag, dark pants, hair tied up | Same at last seen ~00:06 | Enters frame-left at ~00:02 walking away from camera, passes main woman on her right side at ~00:04, ends behind main woman frame-right walking away - continuous plausible path",
+    "Man in olive-green t-shirt | Green tee, sunglasses, blue shorts, sandals | Last seen ~00:04 | Walks toward camera behind main woman, center-right, consistent approach and relative position to red-polo woman (he stays left of her)",
+    "Woman in red polo shirt | Red polo, black capris, blue crossbody bag | Last seen ~00:06 | Walks toward camera on right side of aisle, consistent position and facing throughout",
+    "Woman in purple patterned top | Purple/maroon patterned top, dark pants, white shoes | Last seen ~00:06 | Background right, walking toward camera behind red-polo woman, consistent",
+    "Bald man in navy shirt | Bald, navy t-shirt | Last seen ~00:06 frame-left | Enters from left walking toward/past camera, plausible single pass"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Main woman - red apple / blue umbrella in hands",
+      "invariant_violated": "movement continuity (hand/grip consistency across continuous shot)",
+      "description": "From 00:00 to 00:06 the red apple is consistently in her right hand (the wrist with the bracelet) while her left hand (the wrist with the watch) grips the umbrella shaft. At 00:08, in what appears to be one continuous shot with no cut, the apple is in her LEFT hand - the extended wrist clearly shows the watch - implying the umbrella has moved to her right hand. No transfer action is visible in the footage between these points, and she is on screen the entire time, so the swap is unexplained by off-screen time.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman (umbrella carrier) | Adult woman, brown hair in ponytail, navy buttoned top, light gray shorts, watch on left wrist, thin bracelet on right wrist | Same wardrobe and accessories at end | Walks toward camera 00:00-00:04 holding blue umbrella in left hand and red apple in right hand; turns to her right (frame-left) ~00:06; by 00:08 in full left-facing profile with the apple in her LEFT hand and umbrella shaft rising from her right side\",\n    \"Woman in teal top | Teal t-shirt, black crossbody bag, dark pants, hair tied up | Same at last seen ~00:06 | Enters frame-left at ~00:02 walking away from camera, passes main woman on her right side at ~00:04, ends behind main woman frame-right walking away - continuous plausible path\",\n    \"Man in olive-green t-shirt | Green tee, sunglasses, blue shorts, sandals | Last seen ~00:04 | Walks toward camera behind main woman, center-right, consistent approach and relative position to red-polo woman (he stays left of her)\",\n    \"Woman in red polo shirt | Red polo, black capris, blue crossbody bag | Last seen ~00:06 | Walks toward camera on right side of aisle, consistent position and facing throughout\",\n    \"Woman in purple patterned top | Purple/maroon patterned top, dark pants, white shoes | Last seen ~00:06 | Background right, walking toward camera behind red-polo woman, consistent\",\n    \"Bald man in navy shirt | Bald, navy t-shirt | Last seen ~00:06 frame-left | Enters from left walking toward/past camera, plausible single pass\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Main woman - red apple / blue umbrella in hands\",\n      \"invariant_violated\": \"movement continuity (hand/grip consistency across continuous shot)\",\n      \"description\": \"From 00:00 to 00:06 the red apple is consistently in her right hand (the wrist with the bracelet) while her left hand (the wrist with the watch) grips the umbrella shaft. At 00:08, in what appears to be one continuous shot with no cut, the apple is in her LEFT hand - the extended wrist clearly shows the watch - implying the umbrella has moved to her right hand. No transfer action is visible in the footage between these points, and she is on screen the entire time, so the swap is unexplained by off-screen time.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

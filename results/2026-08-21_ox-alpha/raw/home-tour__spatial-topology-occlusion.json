@@ -1,0 +1,45 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:25:40.880Z",
+  "latencyMs": 277962,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 13844,
+    "total_tokens": 19745,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen | wooden cabinets, microwave on counter, tiled backsplash, stove with range hood on hallway side | unchanged | camera exits through doorway following woman at 0-1s",
+    "Kitchen-hallway doorway | opening in wall between kitchen and hallway; framed picture (blue flower, dark frame) on hallway-facing side visible from kitchen at 0s | unchanged | woman passes through; same picture reappears on hallway wall at 2s on the correct side",
+    "Hallway | runs from kitchen doorway to white glazed front door at far end; picture gallery on right/east wall; secondary open doorway on left/west wall near far end | unchanged | traversed 1-4s; doorways and pictures stay on consistent sides",
+    "Front door | white, glazed upper panel, at far end of hallway | unchanged | visible through kitchen doorway at 0s and head-on at 2s, same position and appearance",
+    "Bedroom doorway | on right side of hallway past the picture gallery | unchanged | woman turns right into it at ~4s, matching hallway orientation",
+    "Bedroom | bed with white bedding against far wall with two framed pictures above headboard; curtained window on left wall with nightstand and lamp; chair at foot of bed; dresser on right; chandelier overhead | by 8s a second window with picture above appears on the right and a second doorway ahead with ceiling fan beyond | compatible with multi-window, multi-door room; no element contradicts earlier view",
+    "Bedroom far doorway | leads to adjacent room with ceiling fan | unchanged | approached at 8s, consistent with an en-suite or adjoining room",
+    "Woman | walks kitchen -> hallway -> right turn into bedroom -> crosses room toward far doorway | continuous handheld follow shot with no cuts | her path (right turn from hallway, bed ahead on entry, window on left) stays geometrically coherent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen | wooden cabinets, microwave on counter, tiled backsplash, stove with range hood on hallway side | unchanged | camera exits through doorway following woman at 0-1s\",\n    \"Kitchen-hallway doorway | opening in wall between kitchen and hallway; framed picture (blue flower, dark frame) on hallway-facing side visible from kitchen at 0s | unchanged | woman passes through; same picture reappears on hallway wall at 2s on the correct side\",\n    \"Hallway | runs from kitchen doorway to white glazed front door at far end; picture gallery on right/east wall; secondary open doorway on left/west wall near far end | unchanged | traversed 1-4s; doorways and pictures stay on consistent sides\",\n    \"Front door | white, glazed upper panel, at far end of hallway | unchanged | visible through kitchen doorway at 0s and head-on at 2s, same position and appearance\",\n    \"Bedroom doorway | on right side of hallway past the picture gallery | unchanged | woman turns right into it at ~4s, matching hallway orientation\",\n    \"Bedroom | bed with white bedding against far wall with two framed pictures above headboard; curtained window on left wall with nightstand and lamp; chair at foot of bed; dresser on right; chandelier overhead | by 8s a second window with picture above appears on the right and a second doorway ahead with ceiling fan beyond | compatible with multi-window, multi-door room; no element contradicts earlier view\",\n    \"Bedroom far doorway | leads to adjacent room with ceiling fan | unchanged | approached at 8s, consistent with an en-suite or adjoining room\",\n    \"Woman | walks kitchen -> hallway -> right turn into bedroom -> crosses room toward far doorway | continuous handheld follow shot with no cuts | her path (right turn from hallway, bed ahead on entry, window on left) stays geometrically coherent\"\n  ],\n  \"findings\": []\n}"
+}

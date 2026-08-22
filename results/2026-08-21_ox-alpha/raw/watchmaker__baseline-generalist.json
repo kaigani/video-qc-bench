@@ -1,0 +1,50 @@
+{
+  "key": "watchmaker__baseline-generalist",
+  "video": "watchmaker.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:30:03.501Z",
+  "latencyMs": 76263,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 3160,
+    "total_tokens": 8873,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | navy shirt with white stripes, silver band rings on both hands, gold necklace | same attire throughout | leans in to work, head tilts down around 06s",
+    "tweezers | held in right hand, used on stone-set jewelry piece | no longer visible | disappears from view between 04s and 06s (plausibly set down below frame)",
+    "jewelry piece | small round stone-set setting held in left hand | same piece, still in left hand | worked with tweezers, then manipulated with both hands at 06s",
+    "wristwatch | black strap, white dial, silver/steel-toned case on left wrist | gold/rose-gold-toned case clearly visible | case tone appears to shift to gold by 08s"
+  ],
+  "findings": [
+    {
+      "timestamp": "08:00",
+      "entity": "wristwatch on left wrist",
+      "invariant_violated": "object continuity / color consistency",
+      "description": "The watch case reads as silver/steel-toned from 00:00 through ~04:00, but at 08:00 the case is distinctly gold/rose-gold toned with a warm dial tint. The surrounding lighting is unchanged (shirt stripes and skin tone consistent), so the color shift is not explained by ambient light and suggests either a shot change or an inconsistent prop. Could alternatively be an extreme reflection-angle effect, hence not higher confidence.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | navy shirt with white stripes, silver band rings on both hands, gold necklace | same attire throughout | leans in to work, head tilts down around 06s\",\n    \"tweezers | held in right hand, used on stone-set jewelry piece | no longer visible | disappears from view between 04s and 06s (plausibly set down below frame)\",\n    \"jewelry piece | small round stone-set setting held in left hand | same piece, still in left hand | worked with tweezers, then manipulated with both hands at 06s\",\n    \"wristwatch | black strap, white dial, silver/steel-toned case on left wrist | gold/rose-gold-toned case clearly visible | case tone appears to shift to gold by 08s\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"08:00\",\n      \"entity\": \"wristwatch on left wrist\",\n      \"invariant_violated\": \"object continuity / color consistency\",\n      \"description\": \"The watch case reads as silver/steel-toned from 00:00 through ~04:00, but at 08:00 the case is distinctly gold/rose-gold toned with a warm dial tint. The surrounding lighting is unchanged (shirt stripes and skin tone consistent), so the color shift is not explained by ambient light and suggests either a shot change or an inconsistent prop. Could alternatively be an extreme reflection-angle effect, hence not higher confidence.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

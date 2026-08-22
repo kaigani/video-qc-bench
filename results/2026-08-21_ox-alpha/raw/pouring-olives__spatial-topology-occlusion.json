@@ -1,0 +1,46 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:36:51.880Z",
+  "latencyMs": 171792,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 8059,
+    "total_tokens": 13960,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, centered on wooden cutting board, pour spout on rim facing viewer-right | partially filled with green/dark olives, same position and orientation | olives added via repeated pours from small glass bowl",
+    "wooden cutting board | spans lower-center of counter, jar sits on it, white marble counter visible to its right | unchanged | no transitions",
+    "small clear glass bowl | held above jar mouth, tilted to pour | still in use at end | briefly set down/refilled mid-shot",
+    "stainless steel bowl with olives | on white marble counter right of board, farther of the two bowls | same position, mostly emptied by end | person's hand interacts with it around 0:06 (content change is object-state, out of scope)",
+    "white ceramic bowl with olives | nearest bowl at lower-right on counter, occludes base of small clear bottle behind it | unchanged | no transitions",
+    "small clear bottle | outside early framing | standing on counter right of steel bowl, behind white bowl | revealed when framing widens around 0:06, consistent with camera reframe",
+    "stainless range/stove | behind person: black knob back panel, oven door with dark window and handle bar | cooktop grates become visible in later higher-angle frames | geometry (knobs, handle, door) consistent across all angles",
+    "wooden cabinets | right side beneath white counter; second cabinet at far left edge | both consistent | far-left cabinet revealed ~0:06 as person shifts rightward",
+    "person in blue overshirt/white tee | standing behind counter center-left, facing camera, torso occluded by jar | same position at end | ~0:06 crossfade between two poses; all fixed elements (jar, board, bowls, stove, cabinets) align perfectly across the blend, indicating fixed camera and compatible geometry"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, centered on wooden cutting board, pour spout on rim facing viewer-right | partially filled with green/dark olives, same position and orientation | olives added via repeated pours from small glass bowl\",\n    \"wooden cutting board | spans lower-center of counter, jar sits on it, white marble counter visible to its right | unchanged | no transitions\",\n    \"small clear glass bowl | held above jar mouth, tilted to pour | still in use at end | briefly set down/refilled mid-shot\",\n    \"stainless steel bowl with olives | on white marble counter right of board, farther of the two bowls | same position, mostly emptied by end | person's hand interacts with it around 0:06 (content change is object-state, out of scope)\",\n    \"white ceramic bowl with olives | nearest bowl at lower-right on counter, occludes base of small clear bottle behind it | unchanged | no transitions\",\n    \"small clear bottle | outside early framing | standing on counter right of steel bowl, behind white bowl | revealed when framing widens around 0:06, consistent with camera reframe\",\n    \"stainless range/stove | behind person: black knob back panel, oven door with dark window and handle bar | cooktop grates become visible in later higher-angle frames | geometry (knobs, handle, door) consistent across all angles\",\n    \"wooden cabinets | right side beneath white counter; second cabinet at far left edge | both consistent | far-left cabinet revealed ~0:06 as person shifts rightward\",\n    \"person in blue overshirt/white tee | standing behind counter center-left, facing camera, torso occluded by jar | same position at end | ~0:06 crossfade between two poses; all fixed elements (jar, board, bowls, stove, cabinets) align perfectly across the blend, indicating fixed camera and compatible geometry\"\n  ],\n  \"findings\": []\n}"
+}

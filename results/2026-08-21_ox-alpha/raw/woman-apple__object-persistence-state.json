@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T03:16:06.481Z",
+  "latencyMs": 46939,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 2009,
+    "total_tokens": 7921,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | open, canopy above woman, shaft gripped in her left hand | still open, canopy exiting top of frame as camera pans | no state change; remains continuously open, only grip hand and framing change",
+    "red apple-like fruit | held in woman's right hand at chest height, whole and intact | held in right hand, partially occluded by fingers | transferred between hands multiple times (right at 0:00, left ~0:02-0:04, right ~0:06-0:08); remains whole, red, single instance throughout",
+    "market produce displays (fruit crates, hanging produce bunches, price-sign boxes) | stationary on stalls lining both sides of aisle | same displays persist in place | no transitions; apparent shifts are camera pan/parallax only",
+    "pedestrians' carried items (shoulder bags, blue water bottle) | carried by background walkers | exit frame with their carriers | no independent state changes observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | open, canopy above woman, shaft gripped in her left hand | still open, canopy exiting top of frame as camera pans | no state change; remains continuously open, only grip hand and framing change\",\n    \"red apple-like fruit | held in woman's right hand at chest height, whole and intact | held in right hand, partially occluded by fingers | transferred between hands multiple times (right at 0:00, left ~0:02-0:04, right ~0:06-0:08); remains whole, red, single instance throughout\",\n    \"market produce displays (fruit crates, hanging produce bunches, price-sign boxes) | stationary on stalls lining both sides of aisle | same displays persist in place | no transitions; apparent shifts are camera pan/parallax only\",\n    \"pedestrians' carried items (shoulder bags, blue water bottle) | carried by background walkers | exit frame with their carriers | no independent state changes observed\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T02:34:00.535Z",
+  "latencyMs": 132860,
+  "usage": {
+    "prompt_tokens": 5415,
+    "completion_tokens": 5611,
+    "total_tokens": 11026,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman leaning out driver-side window | arms crossed on sill, hair still and settled, calm gaze forward | identical posture, hair streaming backward as if in steady wind | hair transitions still-to-blowing between ~0:02 and ~0:06",
+    "wood-paneled station wagon | seen from front-left, hood antenna rigid and vertical, desert scrub background | seen from driver's window, road with yellow dashes and utility poles in background | camera orbits front-to-driver-side; no visible cue of the car itself accelerating",
+    "wind effect in scene | absent for first ~3s (hair and antenna motionless) | steady from ~0:06 onward (hair streams rearward) | onset coincides only with camera orbit; no in-scene wind source or motion onset is shown"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:04",
+      "entity": "woman's hair (wind effect)",
+      "invariant_violated": "effect-without-cause / implausible cause-effect delay",
+      "description": "Her hair is still at 0:00-0:02, begins lifting at ~0:04, and streams backward strongly by 0:06-0:08, implying sustained road-speed wind. No cause is established for the onset: the car shows no visible acceleration cue (the thin hood antenna remains perfectly rigid and vertical through 0:04, which contradicts highway-speed wind), background motion is confounded by the camera orbit, and her shirt collar barely responds to the same wind that moves her hair. Either the car was moving from the start (wind effect then lags its cause by ~4 seconds) or the car is effectively stationary (wind effect has no cause).",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman leaning out driver-side window | arms crossed on sill, hair still and settled, calm gaze forward | identical posture, hair streaming backward as if in steady wind | hair transitions still-to-blowing between ~0:02 and ~0:06\",\n    \"wood-paneled station wagon | seen from front-left, hood antenna rigid and vertical, desert scrub background | seen from driver's window, road with yellow dashes and utility poles in background | camera orbits front-to-driver-side; no visible cue of the car itself accelerating\",\n    \"wind effect in scene | absent for first ~3s (hair and antenna motionless) | steady from ~0:06 onward (hair streams rearward) | onset coincides only with camera orbit; no in-scene wind source or motion onset is shown\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:04\",\n      \"entity\": \"woman's hair (wind effect)\",\n      \"invariant_violated\": \"effect-without-cause / implausible cause-effect delay\",\n      \"description\": \"Her hair is still at 0:00-0:02, begins lifting at ~0:04, and streams backward strongly by 0:06-0:08, implying sustained road-speed wind. No cause is established for the onset: the car shows no visible acceleration cue (the thin hood antenna remains perfectly rigid and vertical through 0:04, which contradicts highway-speed wind), background motion is confounded by the camera orbit, and her shirt collar barely responds to the same wind that moves her hair. Either the car was moving from the start (wind effect then lags its cause by ~4 seconds) or the car is effectively stationary (wind effect has no cause).\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}
