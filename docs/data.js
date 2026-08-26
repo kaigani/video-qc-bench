@@ -224,7 +224,7 @@ const DATA = {
   },
   {
    "key": "oxalpha",
-   "label": "oxalpha",
+   "label": "GLM 5.3 Flash (was Ox Alpha)",
    "model": "stealth/ox-alpha",
    "reasoning": false,
    "detection": 39,
@@ -233,8 +233,8 @@ const DATA = {
    "extra": 0,
    "fp": 11,
    "findings": 37,
-   "cost": 0,
-   "costEstimated": false,
+   "cost": 0.334,
+   "costEstimated": true,
    "avgLatencyS": 120.3
   }
  ],

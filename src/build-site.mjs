@@ -16,6 +16,12 @@ const PEGASUS_PER_MIN = 0.021;
 const PEGASUS_PER_1K_OUT = 0.0075;
 const VIDEO_MINUTES_PER_ROLE = 249.9 / 60; // 13 shorts + 2-min long scene
 
+// Ox Alpha was OpenRouter's stealth slug for GLM 5.3 Flash (revealed 2026-08-26); the run was
+// free under a promotional trial (manifest cost is 0), so estimate at published pricing instead:
+// $0.15/1M input tokens, $0.50/1M output tokens (openrouter.ai/z-ai/glm-5.3-flash).
+const GLM_5_3_FLASH_PER_1M_IN = 0.15;
+const GLM_5_3_FLASH_PER_1M_OUT = 0.50;
+
 const LABELS = {
   flash: 'Gemini 3.6 Flash',
   qwen: 'Qwen 3.8 Max',
@@ -28,6 +34,7 @@ const LABELS = {
   seed: 'Seed 2.1 Turbo',
   kimi: 'Kimi K3',
   qwen27b: 'Qwen 3.8 27B',
+  oxalpha: 'GLM 5.3 Flash (was Ox Alpha)',
 };
 
 const models = [];
@@ -38,9 +45,11 @@ for (const [key, runId] of Object.entries(MATCHES._runs)) {
   const runDir = join(PROJECT_ROOT, 'results', runId);
   const manifest = JSON.parse(readFileSync(join(runDir, 'manifest.json'), 'utf8'));
   const findings = [];
+  let inputTokens = 0;
   let outputTokens = 0;
   for (const f of readdirSync(join(runDir, 'raw')).filter((x) => x.endsWith('.json'))) {
     const d = JSON.parse(readFileSync(join(runDir, 'raw', f), 'utf8'));
+    inputTokens += d.usage?.prompt_tokens ?? 0;
     outputTokens += d.usage?.completion_tokens ?? 0;
     (d.findings ?? []).forEach((fi, i) => {
       const cls = MATCHES[`${key}|${d.video.replace('.mp4', '')}|${d.role}|${i}`];
@@ -56,6 +65,8 @@ for (const [key, runId] of Object.entries(MATCHES._runs)) {
   const latencies = Object.values(manifest.calls).map((c) => c.latencyMs).filter(Boolean);
   const cost = key === 'pegasus'
     ? 6 * VIDEO_MINUTES_PER_ROLE * PEGASUS_PER_MIN + (outputTokens / 1000) * PEGASUS_PER_1K_OUT
+    : key === 'oxalpha'
+    ? (inputTokens / 1e6) * GLM_5_3_FLASH_PER_1M_IN + (outputTokens / 1e6) * GLM_5_3_FLASH_PER_1M_OUT
     : manifest.totalCost ?? 0;
   models.push({
     key,
@@ -67,7 +78,7 @@ for (const [key, runId] of Object.entries(MATCHES._runs)) {
     tp, extra, fp,
     findings: findings.length,
     cost: Number(cost.toFixed(3)),
-    costEstimated: key === 'pegasus',
+    costEstimated: key === 'pegasus' || key === 'oxalpha',
     avgLatencyS: Number((latencies.reduce((a, b) => a + b, 0) / latencies.length / 1000).toFixed(1)),
   });
   roleMatrix[key] = {};
