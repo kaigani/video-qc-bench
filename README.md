@@ -27,12 +27,18 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 | Gemini 3.6 Flash | **31** | 34/139 | 9/47 | 3 | $0.53 |
 | Muse Spark 1.2 (reasoning) | **30** | 42/139 | 12/47 | 12 | $1.11 |
 | Qwen 3.8 27B (reasoning) | **28** | 32/139 | 10/47 | 4 | $1.58 |
-| Ox Alpha (stealth) | **28** | 39/139 | 15/47 | 11 | $0.00 |
+| GLM 5.3 Flash (was Ox Alpha stealth) | **28** | 39/139 | 15/47 | 11 | ~$0.33* |
 | Gemma 4 31B (reasoning) | **27** | 33/139 | 11/47 | 6 | $0.11 |
 | Gemini 3.7 Flash | **22** | 25/139 | 7/47 | 3 | $0.15 |
 | Gemini Pro Latest (reasoning) | **22** | 70/139 | 24/47 | 48 | $2.15 |
 | Nemotron 3 Nano (free, reasoning) | **11** | 14/139 | 5/47 | 3 | $0.00 |
 | TwelveLabs Pegasus 1.5 | **6** | 6/139 | 2/47 | 0 | ~$0.58 |
+
+\* Ox Alpha was OpenRouter's anonymized stealth slug for GLM 5.3 Flash (revealed 2026-08-26).
+Pricing is $0.15/1M input tokens, $0.50/1M output tokens (cached input reads discounted, often
+~$0.03/1M). The stealth run itself was free under a promotional trial (actual cost $0.00); the
+figure above is the estimated cost at published pricing applied to the run's actual usage
+(664K input / 469K output tokens across 84 calls).
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
 false-positive finding. The ground truth includes 11 defects first surfaced by models and then
