@@ -1,0 +1,50 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:15.096Z",
+  "latencyMs": 25098,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3915,
+    "total_tokens": 5341,
+    "cost": 0.01575075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01575075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.01468125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3538,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen_hallway_corridor | linear corridor oriented toward white exterior door; kitchen on left/right at start | corridor continues toward white door | transitions to bedroom doorway at 00:03",
+    "bedroom | room entered via doorway on right side of corridor | contains bed, windows, chandelier | exited back through doorway at 00:07-00:09",
+    "exterior_white_door | fixed architectural feature at end of main corridor (straight ahead in kitchen/hallway) | visible at 00:00-00:02 and again at 00:07-00:09 straight ahead through bedroom doorway | reappears directly in line of sight when exiting bedroom",
+    "woman | walks from kitchen into hallway, turns right into bedroom | turns around in bedroom and exits | moves continuously across the shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "bedroom doorway / hallway corridor layout",
+      "invariant_violated": "viewpoint consistency / impossible geometry",
+      "description": "At 00:02–00:03, the woman enters the bedroom by turning right off the hallway corridor, where the white exterior door is straight ahead down the hallway. When she turns around to exit the bedroom (00:07–00:09), the bedroom doorway impossibly looks directly toward the exterior door down the full length of the corridor, reorienting the hallway by 90 degrees and looping her back along the kitchen corridor.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen_hallway_corridor | linear corridor oriented toward white exterior door; kitchen on left/right at start | corridor continues toward white door | transitions to bedroom doorway at 00:03\",\n    \"bedroom | room entered via doorway on right side of corridor | contains bed, windows, chandelier | exited back through doorway at 00:07-00:09\",\n    \"exterior_white_door | fixed architectural feature at end of main corridor (straight ahead in kitchen/hallway) | visible at 00:00-00:02 and again at 00:07-00:09 straight ahead through bedroom doorway | reappears directly in line of sight when exiting bedroom\",\n    \"woman | walks from kitchen into hallway, turns right into bedroom | turns around in bedroom and exits | moves continuously across the shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"bedroom doorway / hallway corridor layout\",\n      \"invariant_violated\": \"viewpoint consistency / impossible geometry\",\n      \"description\": \"At 00:02–00:03, the woman enters the bedroom by turning right off the hallway corridor, where the white exterior door is straight ahead down the hallway. When she turns around to exit the bedroom (00:07–00:09), the bedroom doorway impossibly looks directly toward the exterior door down the full length of the corridor, reorienting the hallway by 90 degrees and looping her back along the kitchen corridor.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

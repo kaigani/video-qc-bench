@@ -1,0 +1,40 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:14.383Z",
+  "latencyMs": 8176,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 422,
+    "total_tokens": 1848,
+    "cost": 0.002652,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.002652,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0015825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 320,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in hands in foreground, tilted slightly right | held in hands, rotated down slightly | smooth tracking and focus shift",
+    "outdoor staircase & railing | descending forward to paved area, railing on right | same position | static architectural background",
+    "pedestrian with red bag | walking down stairs and away on paved ground | walks into distance out of sharp focus | moves continuously away"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in hands in foreground, tilted slightly right | held in hands, rotated down slightly | smooth tracking and focus shift\",\n    \"outdoor staircase & railing | descending forward to paved area, railing on right | same position | static architectural background\",\n    \"pedestrian with red bag | walking down stairs and away on paved ground | walks into distance out of sharp focus | moves continuously away\"\n  ],\n  \"findings\": []\n}"
+}

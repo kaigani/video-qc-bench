@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:23:11.192Z",
+  "latencyMs": 29081,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1874,
+    "total_tokens": 3112,
+    "cost": 0.007956,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007956,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0070275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1687,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on station wagon window frame, arms folded | smiling as hair blows in wind | static pose",
+    "station wagon | vintage wood-paneled wagon parked on roadside | same vehicle framed closer | camera push-in",
+    "background road | empty two-lane asphalt without center markings | road displays yellow dashed center line and utility pole | features materialize"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "road and background environment",
+      "invariant_violated": "environmental consistency",
+      "description": "Bright yellow dashed center road markings and a roadside utility pole materialize along the roadway where neither existed in earlier frames.",
+      "severity": "moderate",
+      "confidence": 0.82
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on station wagon window frame, arms folded | smiling as hair blows in wind | static pose\",\n    \"station wagon | vintage wood-paneled wagon parked on roadside | same vehicle framed closer | camera push-in\",\n    \"background road | empty two-lane asphalt without center markings | road displays yellow dashed center line and utility pole | features materialize\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"road and background environment\",\n      \"invariant_violated\": \"environmental consistency\",\n      \"description\": \"Bright yellow dashed center road markings and a roadside utility pole materialize along the roadway where neither existed in earlier frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.82\n    }\n  ]\n}"
+}

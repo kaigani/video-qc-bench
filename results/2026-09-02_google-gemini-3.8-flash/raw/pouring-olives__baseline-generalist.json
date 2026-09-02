@@ -1,0 +1,55 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:28.958Z",
+  "latencyMs": 14557,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1438,
+    "total_tokens": 2676,
+    "cost": 0.006321,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006321,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0053925
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1222,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives | green in small jar | green and dark purple in large jar | dark olives spontaneously appear during pour"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "object appearance / color consistency",
+      "description": "Dark purple olives fall out and appear in the jar despite only green olives being inside the transparent pouring container.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives",
+      "invariant_violated": "object appearance / color consistency",
+      "description": "Dark purple olives again materialize during the pour from a container holding only green olives.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives | green in small jar | green and dark purple in large jar | dark olives spontaneously appear during pour\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"object appearance / color consistency\",\n      \"description\": \"Dark purple olives fall out and appear in the jar despite only green olives being inside the transparent pouring container.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"object appearance / color consistency\",\n      \"description\": \"Dark purple olives again materialize during the pour from a container holding only green olives.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

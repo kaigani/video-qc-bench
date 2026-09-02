@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:21:31.352Z",
+  "latencyMs": 12527,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 550,
+    "total_tokens": 1976,
+    "cost": 0.003132,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003132,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0020625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 372,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person_torso | seated center, striped shirt, stationary relative to camera | seated center, unchanged | static pose",
+    "left_hand | holding small object center-frame | holding small object center-frame | supports object throughout",
+    "right_hand | holding tweezers at 00:00 | holding small screwdriver at 00:09 | puts down tweezers at 00:04 and picks up screwdriver at 00:06",
+    "tweezers | held in right hand | placed down off-camera lower left at 00:04 | smoothly moved out of frame",
+    "screwdriver | off-camera | held in right hand manipulating object | enters frame at 00:06"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person_torso | seated center, striped shirt, stationary relative to camera | seated center, unchanged | static pose\",\n    \"left_hand | holding small object center-frame | holding small object center-frame | supports object throughout\",\n    \"right_hand | holding tweezers at 00:00 | holding small screwdriver at 00:09 | puts down tweezers at 00:04 and picks up screwdriver at 00:06\",\n    \"tweezers | held in right hand | placed down off-camera lower left at 00:04 | smoothly moved out of frame\",\n    \"screwdriver | off-camera | held in right hand manipulating object | enters frame at 00:06\"\n  ],\n  \"findings\": []\n}"
+}

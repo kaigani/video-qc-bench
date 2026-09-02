@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:23.724Z",
+  "latencyMs": 8611,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 686,
+    "total_tokens": 2138,
+    "cost": 0.0036615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0036615,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.0025725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 548,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's right hand | holding coin at start | moving cups on table at end | places coin in cup, grips and moves cups smoothly",
+    "man's left hand | positioned near background cup at start | moving cup and coin at end | grips cups and coins with natural finger contact",
+    "coins | gripped between fingers and resting in cups | resting in cups and on table surface | transferred into cups with direct contact",
+    "cups | resting on round table surface | resting on table surface | slid and repositioned by hands with proper friction and support"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man's right hand | holding coin at start | moving cups on table at end | places coin in cup, grips and moves cups smoothly\",\n    \"man's left hand | positioned near background cup at start | moving cup and coin at end | grips cups and coins with natural finger contact\",\n    \"coins | gripped between fingers and resting in cups | resting in cups and on table surface | transferred into cups with direct contact\",\n    \"cups | resting on round table surface | resting on table surface | slid and repositioned by hands with proper friction and support\"\n  ],\n  \"findings\": []\n}"
+}

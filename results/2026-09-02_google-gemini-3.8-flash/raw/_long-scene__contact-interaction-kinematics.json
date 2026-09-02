@@ -1,0 +1,41 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:17:14.240Z",
+  "latencyMs": 35669,
+  "usage": {
+    "prompt_tokens": 10657,
+    "completion_tokens": 3316,
+    "total_tokens": 13973,
+    "cost": 0.02042775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02042775,
+      "upstream_inference_prompt_cost": 0.00799275,
+      "upstream_inference_completions_cost": 0.012435
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3113,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | standing behind counter wiping surface at 00:10 | walking behind counter at 01:55 | wipes counter, pours coffee into mug, serves plate, sits on stool, rises and walks",
+    "man | walking into diner at 00:21 | climbing into truck cab at 01:48 | walks, sits on stool, holds mug, slides cash across counter, walks outside to truck",
+    "coffee pot | held by waitress at 00:27 | tilted back upright at 00:31 | gripped by handle and pours coffee stream into mug with continuous contact",
+    "dollar bills | on counter under man's hand at 01:37 | resting on counter under woman's fingers at 01:40 | pushed across counter surface and held without clipping or floating"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | standing behind counter wiping surface at 00:10 | walking behind counter at 01:55 | wipes counter, pours coffee into mug, serves plate, sits on stool, rises and walks\",\n    \"man | walking into diner at 00:21 | climbing into truck cab at 01:48 | walks, sits on stool, holds mug, slides cash across counter, walks outside to truck\",\n    \"coffee pot | held by waitress at 00:27 | tilted back upright at 00:31 | gripped by handle and pours coffee stream into mug with continuous contact\",\n    \"dollar bills | on counter under man's hand at 01:37 | resting on counter under woman's fingers at 01:40 | pushed across counter surface and held without clipping or floating\"\n  ],\n  \"findings\": []\n}"
+}

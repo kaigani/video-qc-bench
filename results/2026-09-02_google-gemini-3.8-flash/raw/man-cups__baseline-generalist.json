@@ -1,0 +1,56 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:20.723Z",
+  "latencyMs": 29120,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1322,
+    "total_tokens": 2560,
+    "cost": 0.005886,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005886,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0049575
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1094,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "cups | four cups of differing styles | three identical bronze cups | morphed during zoom out",
+    "dealer | man in blue suit with red tie | seated at table manipulating cups | consistent identity"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "cups on table",
+      "invariant_violated": "object count and appearance consistency",
+      "description": "Four mixed metal and paper cups abruptly morph into three uniform bronze cups during camera pullback.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "tablecloth pattern",
+      "invariant_violated": "surface pattern persistence",
+      "description": "Tablecloth ornamentation and coin arrangement shift and morph unnaturally as the camera retreats.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"cups | four cups of differing styles | three identical bronze cups | morphed during zoom out\",\n    \"dealer | man in blue suit with red tie | seated at table manipulating cups | consistent identity\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"cups on table\",\n      \"invariant_violated\": \"object count and appearance consistency\",\n      \"description\": \"Four mixed metal and paper cups abruptly morph into three uniform bronze cups during camera pullback.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"tablecloth pattern\",\n      \"invariant_violated\": \"surface pattern persistence\",\n      \"description\": \"Tablecloth ornamentation and coin arrangement shift and morph unnaturally as the camera retreats.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

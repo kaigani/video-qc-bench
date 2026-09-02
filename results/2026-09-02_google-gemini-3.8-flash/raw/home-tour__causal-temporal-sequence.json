@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:00.285Z",
+  "latencyMs": 8952,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 596,
+    "total_tokens": 2021,
+    "cost": 0.00330375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00330375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.002235
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 521,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | walking forward through kitchen hallway | walking forward into another hallway | continuous locomotion, glances over right shoulder at 00:02",
+    "camera | tracking woman from side/rear | tracking woman from rear | continuous pan and dolly following subject movement"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | walking forward through kitchen hallway | walking forward into another hallway | continuous locomotion, glances over right shoulder at 00:02\",\n    \"camera | tracking woman from side/rear | tracking woman from rear | continuous pan and dolly following subject movement\"\n  ],\n  \"findings\": []\n}"
+}

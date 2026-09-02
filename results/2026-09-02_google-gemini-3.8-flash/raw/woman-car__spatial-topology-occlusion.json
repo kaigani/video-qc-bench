@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:23:37.856Z",
+  "latencyMs": 38418,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3612,
+    "total_tokens": 5038,
+    "cost": 0.0146145,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0146145,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.013545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3311,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon | parked on desert roadside facing camera-left, hood and windshield prominent | same position, hood/windshield in foreground | camera pushes in toward windshield/cowl",
+    "woman | positioned at driver-side cowl leaning on hood with arms crossed | leaning on hood, smiling looking camera-right | static relative to car",
+    "desert road | extends into background to the left of the car without utility poles or centerlines | shows dashed yellow centerlines and a utility pole | road features materialize mid-shot",
+    "utility pole | absent at start of shot | visible on left shoulder of road in background | materializes around 00:03-00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "utility pole and road markings",
+      "invariant_violated": "scene layout consistency",
+      "description": "Between 00:00 and 00:02, the road stretching into the background is fully visible with no roadside structures or painted centerlines. By 00:04, a wooden utility pole and yellow dashed centerlines materialize along the road in areas that were previously established as clear and unmarked.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon | parked on desert roadside facing camera-left, hood and windshield prominent | same position, hood/windshield in foreground | camera pushes in toward windshield/cowl\",\n    \"woman | positioned at driver-side cowl leaning on hood with arms crossed | leaning on hood, smiling looking camera-right | static relative to car\",\n    \"desert road | extends into background to the left of the car without utility poles or centerlines | shows dashed yellow centerlines and a utility pole | road features materialize mid-shot\",\n    \"utility pole | absent at start of shot | visible on left shoulder of road in background | materializes around 00:03-00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"utility pole and road markings\",\n      \"invariant_violated\": \"scene layout consistency\",\n      \"description\": \"Between 00:00 and 00:02, the road stretching into the background is fully visible with no roadside structures or painted centerlines. By 00:04, a wooden utility pole and yellow dashed centerlines materialize along the road in areas that were previously established as clear and unmarked.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

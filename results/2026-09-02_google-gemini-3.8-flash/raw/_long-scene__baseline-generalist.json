@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:16:38.509Z",
+  "latencyMs": 30766,
+  "usage": {
+    "prompt_tokens": 10443,
+    "completion_tokens": 1917,
+    "total_tokens": 12360,
+    "cost": 0.015021,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015021,
+      "upstream_inference_prompt_cost": 0.00783225,
+      "upstream_inference_completions_cost": 0.00718875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1677,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | blue uniform, apron, hair bun | duplicated into two identical women behind counter | cloned during transition",
+    "semi-truck | white aero tractor-trailer at start | dark green conventional cab truck at end | model and color changed"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "semi-truck",
+      "invariant_violated": "appearance inconsistency",
+      "description": "Truck switches from a white aerodynamic semi-truck at night to a dark green conventional truck in daylight.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "entity duplication",
+      "description": "A second identical waitress appears behind the counter while the first is getting up from the stool.",
+      "severity": "moderate",
+      "confidence": 0.82
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | blue uniform, apron, hair bun | duplicated into two identical women behind counter | cloned during transition\",\n    \"semi-truck | white aero tractor-trailer at start | dark green conventional cab truck at end | model and color changed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"semi-truck\",\n      \"invariant_violated\": \"appearance inconsistency\",\n      \"description\": \"Truck switches from a white aerodynamic semi-truck at night to a dark green conventional truck in daylight.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"entity duplication\",\n      \"description\": \"A second identical waitress appears behind the counter while the first is getting up from the stool.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.82\n    }\n  ]\n}"
+}

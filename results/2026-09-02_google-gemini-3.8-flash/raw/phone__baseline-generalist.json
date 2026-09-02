@@ -1,0 +1,56 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:06.198Z",
+  "latencyMs": 12124,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1368,
+    "total_tokens": 2606,
+    "cost": 0.0060585,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0060585,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00513
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1119,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "pedestrian | walking down stairs carrying red bag in right hand | walking on pavement, red bag vanished | bag disappears abruptly at 00:02",
+    "smartphone | display shows digital readout on screen | display tilts down and blanks out | text artifacts and sudden screen off"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "pedestrian's red bag",
+      "invariant_violated": "object permanence",
+      "description": "The red bag carried by the person in the background suddenly vanishes mid-stride.",
+      "severity": "moderate",
+      "confidence": 0.82
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "smartphone screen text",
+      "invariant_violated": "visual artifact",
+      "description": "A ghosted duplicate of the digits '42' appears beside the main text and fades away.",
+      "severity": "minor",
+      "confidence": 0.74
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"pedestrian | walking down stairs carrying red bag in right hand | walking on pavement, red bag vanished | bag disappears abruptly at 00:02\",\n    \"smartphone | display shows digital readout on screen | display tilts down and blanks out | text artifacts and sudden screen off\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"pedestrian's red bag\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The red bag carried by the person in the background suddenly vanishes mid-stride.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.82\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"smartphone screen text\",\n      \"invariant_violated\": \"visual artifact\",\n      \"description\": \"A ghosted duplicate of the digits '42' appears beside the main text and fades away.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.74\n    }\n  ]\n}"
+}

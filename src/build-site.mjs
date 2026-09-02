@@ -35,6 +35,7 @@ const LABELS = {
   kimi: 'Kimi K3',
   qwen27b: 'Qwen 3.8 27B',
   oxalpha: 'GLM 5.3 Flash (was Ox Alpha)',
+  flash38: 'Gemini 3.8 Flash',
 };
 
 const models = [];
@@ -98,7 +99,7 @@ const missedByAll = coverage.filter((c) => !Object.values(c.found).some(Boolean)
 const extras = Object.entries(MATCHES._extras).map(([slug, desc]) => ({ slug, desc }));
 
 const data = {
-  generated: '2026-08-14',
+  generated: '2026-09-02',
   maxScore,
   weights: WEIGHTS,
   defectsTotal: GT.defects.length,

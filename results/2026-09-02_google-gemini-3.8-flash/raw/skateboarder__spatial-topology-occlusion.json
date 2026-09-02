@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:21:15.245Z",
+  "latencyMs": 10449,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 715,
+    "total_tokens": 2141,
+    "cost": 0.00375075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00375075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00268125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 557,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skater | riding skateboard on concrete skatepark surface | landing trick on ramp transition | continuous movement across the park",
+    "skateboard | under skater's feet, flips in air at 00:02 and 00:08 | under skater's feet on ground | maintains consistent 3D volume and occlusion against skater and ground",
+    "skatepark ramps and transitions | concrete curved banks and quarter pipes | fixed relative positions around flat plaza | consistent parallax under wide-angle moving camera",
+    "background light poles and trees | perimeter fixtures around skatepark edge | maintain fixed orientation and depth order behind ramps | consistent parallax throughout continuous shot"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skater | riding skateboard on concrete skatepark surface | landing trick on ramp transition | continuous movement across the park\",\n    \"skateboard | under skater's feet, flips in air at 00:02 and 00:08 | under skater's feet on ground | maintains consistent 3D volume and occlusion against skater and ground\",\n    \"skatepark ramps and transitions | concrete curved banks and quarter pipes | fixed relative positions around flat plaza | consistent parallax under wide-angle moving camera\",\n    \"background light poles and trees | perimeter fixtures around skatepark edge | maintain fixed orientation and depth order behind ramps | consistent parallax throughout continuous shot\"\n  ],\n  \"findings\": []\n}"
+}

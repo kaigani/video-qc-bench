@@ -142,7 +142,7 @@
     <ul class="plain">
       <li><b>Protocol:</b> each role is an independent API call: role charter &rarr; invariant ledger &rarr; strict-JSON findings with timestamp, severity, and confidence. Same six prompts for every system; videos sent as base64.</li>
       <li><b>Ground truth:</b> a human reviewer's per-clip defect audit (P0 unusable &hellip; P4 minor), plus one deliberately clean clip (<code>dialogue</code>) as a false-positive trap. Gemini Pro fell into it 5 times; Flash and Pegasus resisted.</li>
-      <li><b>Adjudication:</b> all 216 findings classified against the baseline by Claude (Fable 5), with frame-level spot checks via extracted contact sheets; borderline calls documented in <code>ground-truth/matches.json</code>.</li>
+      <li><b>Adjudication:</b> all 241 findings classified against the baseline, with frame-level spot checks via extracted contact sheets; borderline calls documented in <code>ground-truth/matches.json</code>.</li>
       <li><b>Caveats:</b> Qwen &amp; Pegasus saw compressed variants of the 2-minute clip (provider size caps); the contact-role prompt was reworded mid-study after Alibaba's content filter rejected the word &ldquo;penetration&rdquo;; Qwen, Pro, and Gemma ran with reasoning enabled, Flash and Pegasus without.</li>
       <li><b>Reproduce:</b> <code>node src/run-benchmark.mjs --model &lt;id&gt;</code> &rarr; <code>node src/score.mjs</code>. Raw per-call JSON lives in <code>results/&lt;run&gt;/raw/</code>.</li>
     </ul>
@@ -192,7 +192,7 @@ const kpis = [
   ['API calls', totalCalls, '14 videos × 6 roles each'],
   ['Findings reported', totalFindings, 'all individually adjudicated'],
   ['Baseline defects', DATA.defectsTotal, 'from human review, P0–P4'],
-  ['Total spend', '$' + totalCost.toFixed(2), 'all five full runs'],
+  ['Total spend', '$' + totalCost.toFixed(2), 'all full benchmark runs'],
 ];
 $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="note">${n}</div></div>`).join('');
 

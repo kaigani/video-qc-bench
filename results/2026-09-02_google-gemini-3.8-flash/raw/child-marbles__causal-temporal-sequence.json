@@ -1,0 +1,40 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:17:47.317Z",
+  "latencyMs": 9821,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 465,
+    "total_tokens": 1890,
+    "cost": 0.0028125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0028125,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00174375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 318,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands | resting in glass bowl | swirling balls inside bowl | lifts red ball, inspects it, places it back, then stirs balls in a circular motion",
+    "red ball | in bowl among other balls | swirled among other balls | lifted up at 00:00-00:01, returned to bowl at 00:02, rolled around by hand at 00:05-00:09",
+    "glass bowl | stationary on wooden table | held steady by left hand | receives ball impacts and stays steady as balls swirl inside"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands | resting in glass bowl | swirling balls inside bowl | lifts red ball, inspects it, places it back, then stirs balls in a circular motion\",\n    \"red ball | in bowl among other balls | swirled among other balls | lifted up at 00:00-00:01, returned to bowl at 00:02, rolled around by hand at 00:05-00:09\",\n    \"glass bowl | stationary on wooden table | held steady by left hand | receives ball impacts and stays steady as balls swirl inside\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:17:25.220Z",
+  "latencyMs": 33637,
+  "usage": {
+    "prompt_tokens": 10630,
+    "completion_tokens": 2896,
+    "total_tokens": 13526,
+    "cost": 0.0188325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0188325,
+      "upstream_inference_prompt_cost": 0.0079725,
+      "upstream_inference_completions_cost": 0.01086
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2706,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | parked idling outside diner at dusk with exhaust | parked in daylight outside window | driver walks out and opens cab door",
+    "truck driver | enters diner and walks to counter | exits to his truck | sits on counter stool, receives coffee and breakfast, leaves cash tip",
+    "waitress | cleaning counter inside diner | tending counter in daylight | pours coffee, serves food, sits beside customer, cleans up",
+    "coffee carafe and mug | carafe held by waitress, empty mug on counter | filled mug steaming | coffee poured into mug, mug picked up by customer",
+    "breakfast plate | served hot with egg and toast | sitting before customer | delivered to counter",
+    "cash tip | held in customer's hand | resting flat on counter | placed beside mug as customer departs"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck | parked idling outside diner at dusk with exhaust | parked in daylight outside window | driver walks out and opens cab door\",\n    \"truck driver | enters diner and walks to counter | exits to his truck | sits on counter stool, receives coffee and breakfast, leaves cash tip\",\n    \"waitress | cleaning counter inside diner | tending counter in daylight | pours coffee, serves food, sits beside customer, cleans up\",\n    \"coffee carafe and mug | carafe held by waitress, empty mug on counter | filled mug steaming | coffee poured into mug, mug picked up by customer\",\n    \"breakfast plate | served hot with egg and toast | sitting before customer | delivered to counter\",\n    \"cash tip | held in customer's hand | resting flat on counter | placed beside mug as customer departs\"\n  ],\n  \"findings\": []\n}"
+}

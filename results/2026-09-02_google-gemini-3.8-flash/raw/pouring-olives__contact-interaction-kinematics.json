@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:39.335Z",
+  "latencyMs": 10360,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1042,
+    "total_tokens": 2494,
+    "cost": 0.0049965,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0049965,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.0039075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 898,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person's hands | gripping small glass container at upper right | gripping small glass container above large jar | two separate pouring actions with natural hand readjustments",
+    "small glass container | tilted over large jar mouth | held and tilted over large jar mouth | placed down around 00:04 and picked back up filled with olives",
+    "large glass jar | stationary on wooden board | stationary on wooden board | receives falling olives, maintaining stable contact with surface",
+    "olives | inside small container / falling | settled inside large jar | realistic collision, bouncing, and stacking inside jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person's hands | gripping small glass container at upper right | gripping small glass container above large jar | two separate pouring actions with natural hand readjustments\",\n    \"small glass container | tilted over large jar mouth | held and tilted over large jar mouth | placed down around 00:04 and picked back up filled with olives\",\n    \"large glass jar | stationary on wooden board | stationary on wooden board | receives falling olives, maintaining stable contact with surface\",\n    \"olives | inside small container / falling | settled inside large jar | realistic collision, bouncing, and stacking inside jar\"\n  ],\n  \"findings\": []\n}"
+}

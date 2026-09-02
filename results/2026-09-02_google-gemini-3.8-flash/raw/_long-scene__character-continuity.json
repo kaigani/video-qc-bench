@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:16:47.783Z",
+  "latencyMs": 40319,
+  "usage": {
+    "prompt_tokens": 10629,
+    "completion_tokens": 3336,
+    "total_tokens": 13965,
+    "cost": 0.02048175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02048175,
+      "upstream_inference_prompt_cost": 0.00797175,
+      "upstream_inference_completions_cost": 0.01251
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3057,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Mature woman, hair in bun, light blue uniform shirt, white apron, glasses around neck | Same appearance throughout | Appears behind counter, at pass-through, suddenly seated on stool beside customer, and duplicates in kitchen",
+    "Truck Driver | Older man, grey hair and beard, brown canvas jacket, plaid shirt, jeans | Same appearance throughout | Enters diner, sits at counter stool, places money down, walks outside to truck"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:18",
+      "entity": "Waitress",
+      "invariant_violated": "placement between cuts",
+      "description": "Waitress cuts instantly from standing behind service counter to seated on customer stool beside driver without transit time.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "identity",
+      "description": "A duplicate waitress appears cleaning inside kitchen pass-through while primary waitress walks behind counter.",
+      "severity": "moderate",
+      "confidence": 0.74
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Mature woman, hair in bun, light blue uniform shirt, white apron, glasses around neck | Same appearance throughout | Appears behind counter, at pass-through, suddenly seated on stool beside customer, and duplicates in kitchen\",\n    \"Truck Driver | Older man, grey hair and beard, brown canvas jacket, plaid shirt, jeans | Same appearance throughout | Enters diner, sits at counter stool, places money down, walks outside to truck\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:18\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"placement between cuts\",\n      \"description\": \"Waitress cuts instantly from standing behind service counter to seated on customer stool beside driver without transit time.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"A duplicate waitress appears cleaning inside kitchen pass-through while primary waitress walks behind counter.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.74\n    }\n  ]\n}"
+}

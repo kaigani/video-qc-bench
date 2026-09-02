@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:17:47.564Z",
+  "latencyMs": 12180,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 467,
+    "total_tokens": 1893,
+    "cost": 0.00282075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00282075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00175125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 343,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | fixed horizontal support surface in foreground/midground | same position throughout | camera zooms and tilts relative to it",
+    "glass bowl | centered on table in front of child | centered on table | transparent container maintaining consistent depth and boundary",
+    "child | positioned behind the table facing forward | positioned behind the table | reaches into bowl with consistent depth ordering",
+    "patio and potted plants | background behind table and child | background | visible when camera tilts up, consistent spatial alignment"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | fixed horizontal support surface in foreground/midground | same position throughout | camera zooms and tilts relative to it\",\n    \"glass bowl | centered on table in front of child | centered on table | transparent container maintaining consistent depth and boundary\",\n    \"child | positioned behind the table facing forward | positioned behind the table | reaches into bowl with consistent depth ordering\",\n    \"patio and potted plants | background behind table and child | background | visible when camera tilts up, consistent spatial alignment\"\n  ],\n  \"findings\": []\n}"
+}

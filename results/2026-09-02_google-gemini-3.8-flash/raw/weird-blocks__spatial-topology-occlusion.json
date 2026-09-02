@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:22:02.932Z",
+  "latencyMs": 8790,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1016,
+    "total_tokens": 2442,
+    "cost": 0.0048795,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0048795,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00381
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 889,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden tabletop | foreground/midground horizontal surface | remains static throughout | supports blocks",
+    "background wall and chairs | background behind tabletop | remains static throughout | no changes in layout or visibility",
+    "numbered cube blocks | placed in a horizontal line on tabletop | line extends to the right from 2 to 7 blocks | correctly occlude tabletop behind them",
+    "human hand | moves above and around blocks to position them | manipulates blocks across tabletop | consistently occludes blocks and table according to depth"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden tabletop | foreground/midground horizontal surface | remains static throughout | supports blocks\",\n    \"background wall and chairs | background behind tabletop | remains static throughout | no changes in layout or visibility\",\n    \"numbered cube blocks | placed in a horizontal line on tabletop | line extends to the right from 2 to 7 blocks | correctly occlude tabletop behind them\",\n    \"human hand | moves above and around blocks to position them | manipulates blocks across tabletop | consistently occludes blocks and table according to depth\"\n  ],\n  \"findings\": []\n}"
+}

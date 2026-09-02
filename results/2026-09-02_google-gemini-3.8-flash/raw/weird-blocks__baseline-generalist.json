@@ -1,0 +1,63 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:21:45.883Z",
+  "latencyMs": 14517,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1723,
+    "total_tokens": 2961,
+    "cost": 0.00738975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00738975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00646125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1448,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "number blocks | two green blocks | line of seven colored blocks | blocks multiply and morph as hand slides them across table"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "green number block",
+      "invariant_violated": "rigid body deformation",
+      "description": "Block base deforms unrealistically like rubber while being manipulated.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "number blocks",
+      "invariant_violated": "object permanence",
+      "description": "Additional blocks continuously duplicate and emerge from adjacent blocks as the hand drags them.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "block labels and colors",
+      "invariant_violated": "appearance consistency",
+      "description": "Block numbers and colors spontaneously morph during movement.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"number blocks | two green blocks | line of seven colored blocks | blocks multiply and morph as hand slides them across table\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"green number block\",\n      \"invariant_violated\": \"rigid body deformation\",\n      \"description\": \"Block base deforms unrealistically like rubber while being manipulated.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"number blocks\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"Additional blocks continuously duplicate and emerge from adjacent blocks as the hand drags them.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"block labels and colors\",\n      \"invariant_violated\": \"appearance consistency\",\n      \"description\": \"Block numbers and colors spontaneously morph during movement.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

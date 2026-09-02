@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:54.551Z",
+  "latencyMs": 6370,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 369,
+    "total_tokens": 1795,
+    "cost": 0.00245325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00245325,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00138375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 274,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | foreground left, facing mirror | foreground left, facing mirror | grooms hair in front of mirror",
+    "mirror | center-right background plane | center-right background plane | reflects man and room behind him consistently",
+    "background room (in reflection) | door to left of reflection, medicine cabinet/shelf to right | unchanged | static background"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | foreground left, facing mirror | foreground left, facing mirror | grooms hair in front of mirror\",\n    \"mirror | center-right background plane | center-right background plane | reflects man and room behind him consistently\",\n    \"background room (in reflection) | door to left of reflection, medicine cabinet/shelf to right | unchanged | static background\"\n  ],\n  \"findings\": []\n}"
+}

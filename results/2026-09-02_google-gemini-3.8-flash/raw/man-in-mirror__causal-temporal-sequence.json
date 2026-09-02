@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:02.091Z",
+  "latencyMs": 10712,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 900,
+    "total_tokens": 2325,
+    "cost": 0.00444375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00444375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.003375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 752,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing in front of mirror grooming | standing in front of mirror grooming | grooms chin, raises hand to comb hair at 00:03, returns to chin grooming at 00:05",
+    "mirror reflection | perfectly reflects man's movements | perfectly reflects man's movements | synchronous reflection of all grooming motions throughout",
+    "grooming tool | held in man's right hand at chin | held in man's right hand at chin | moved to hair at 00:02-00:04, returned to chin at 00:05"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing in front of mirror grooming | standing in front of mirror grooming | grooms chin, raises hand to comb hair at 00:03, returns to chin grooming at 00:05\",\n    \"mirror reflection | perfectly reflects man's movements | perfectly reflects man's movements | synchronous reflection of all grooming motions throughout\",\n    \"grooming tool | held in man's right hand at chin | held in man's right hand at chin | moved to hair at 00:02-00:04, returned to chin at 00:05\"\n  ],\n  \"findings\": []\n}"
+}

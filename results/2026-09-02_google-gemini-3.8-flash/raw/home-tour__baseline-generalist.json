@@ -1,0 +1,47 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:18:51.311Z",
+  "latencyMs": 20347,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2043,
+    "total_tokens": 3281,
+    "cost": 0.00858975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00858975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00766125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1947,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | dark blue dress, short hair | dark blue dress, short hair | enters bedroom, turns around, exits into initial hallway"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "architectural layout",
+      "invariant_violated": "spatial continuity",
+      "description": "After woman turns around in bedroom to exit, the doorway leads directly into the original hallway in the initial forward orientation rather than reversing the path.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\"ledger\":[\"woman | dark blue dress, short hair | dark blue dress, short hair | enters bedroom, turns around, exits into initial hallway\"],\"findings\":[{\"timestamp\":\"00:07\",\"entity\":\"architectural layout\",\"invariant_violated\":\"spatial continuity\",\"description\":\"After woman turns around in bedroom to exit, the doorway leads directly into the original hallway in the initial forward orientation rather than reversing the path.\",\"severity\":\"moderate\",\"confidence\":0.75}]}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:55.866Z",
+  "latencyMs": 16515,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1361,
+    "total_tokens": 2786,
+    "cost": 0.0061725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0061725,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00510375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1162,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | pouring first jar of olives | finishes pouring and sets jar down | tilts jar at 00:00, olives drop 00:01-00:03, puts jar down 00:04",
+    "olives (first batch) | inside small jar | settled at bottom of large jar | fall under gravity 00:01-00:03",
+    "person | reaching for second jar | pours second jar into large jar | picks up second jar 00:04-00:05, tilts and pours 00:07-00:09",
+    "olives (second batch) | inside second small jar | resting on top of first batch | drop under gravity 00:07-00:09 into large jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | pouring first jar of olives | finishes pouring and sets jar down | tilts jar at 00:00, olives drop 00:01-00:03, puts jar down 00:04\",\n    \"olives (first batch) | inside small jar | settled at bottom of large jar | fall under gravity 00:01-00:03\",\n    \"person | reaching for second jar | pours second jar into large jar | picks up second jar 00:04-00:05, tilts and pours 00:07-00:09\",\n    \"olives (second batch) | inside second small jar | resting on top of first batch | drop under gravity 00:07-00:09 into large jar\"\n  ],\n  \"findings\": []\n}"
+}

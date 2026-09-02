@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:16.312Z",
+  "latencyMs": 14210,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1619,
+    "total_tokens": 3063,
+    "cost": 0.00715425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00715425,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00607125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1437,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in hands in foreground, screen active | held in hands, rotated down | persistent throughout",
+    "red bag | held in right hand of person in background at stairs | vanished | visible at 00:00-00:01, disappears without explanation by 00:02"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red bag",
+      "invariant_violated": "identity & persistence",
+      "description": "The red bag/container carried in the right hand of the walking person in the background disappears completely while the person continues walking with empty hands.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in hands in foreground, screen active | held in hands, rotated down | persistent throughout\",\n    \"red bag | held in right hand of person in background at stairs | vanished | visible at 00:00-00:01, disappears without explanation by 00:02\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red bag\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red bag/container carried in the right hand of the walking person in the background disappears completely while the person continues walking with empty hands.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

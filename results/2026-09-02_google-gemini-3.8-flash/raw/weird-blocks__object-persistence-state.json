@@ -1,0 +1,67 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:22:02.414Z",
+  "latencyMs": 22479,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2433,
+    "total_tokens": 3877,
+    "cost": 0.01020675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01020675,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00912375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1812,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "initial green block 2 (left) | on wooden table at left, green with digit 2 | replaced/morphed by 00:01 | spontaneously transforms into blue block 2",
+    "blue block 2 | appears at table pos 1 at 00:01 | rests on table pos 1 | persistent after 00:01",
+    "blue block 3 (pos 2) | appears at table pos 2 at 00:01 | rests on table pos 2 | persistent after 00:01",
+    "green block (initially pos 2, later pos 3) | on table at right, green with digit 2 | rests on table pos 3 as green 2 | digit spontaneously changes from 2 to 3 at 00:02, then reverts to 2 at 00:03",
+    "additional blocks (tan 2, blue 3, green 5, green 2, blue 6) | not present at start | resting in a line at table positions 4 through 8 | continuously duplicated and pulled from the rightmost block between 00:03 and 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "left green block 2 and blue blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "The leftmost green block with number '2' spontaneously transforms into a blue block with number '2', while an extra blue block with number '3' materializes between it and the adjacent block without physical cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "green block (position 3)",
+      "invariant_violated": "physical state transitions",
+      "description": "The green block's printed numeral spontaneously shifts from '2' to '3' at 00:02, and then reverts to '2' at 00:03 as a new block is pulled away from it.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered blocks line",
+      "invariant_violated": "identity & persistence",
+      "description": "Multiple new numbered blocks (tan '2', blue '3', green '5', green '2', blue '6') duplicate out of thin air / out of adjacent blocks as the hand slides along the table.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"initial green block 2 (left) | on wooden table at left, green with digit 2 | replaced/morphed by 00:01 | spontaneously transforms into blue block 2\",\n    \"blue block 2 | appears at table pos 1 at 00:01 | rests on table pos 1 | persistent after 00:01\",\n    \"blue block 3 (pos 2) | appears at table pos 2 at 00:01 | rests on table pos 2 | persistent after 00:01\",\n    \"green block (initially pos 2, later pos 3) | on table at right, green with digit 2 | rests on table pos 3 as green 2 | digit spontaneously changes from 2 to 3 at 00:02, then reverts to 2 at 00:03\",\n    \"additional blocks (tan 2, blue 3, green 5, green 2, blue 6) | not present at start | resting in a line at table positions 4 through 8 | continuously duplicated and pulled from the rightmost block between 00:03 and 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"left green block 2 and blue blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The leftmost green block with number '2' spontaneously transforms into a blue block with number '2', while an extra blue block with number '3' materializes between it and the adjacent block without physical cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"green block (position 3)\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"The green block's printed numeral spontaneously shifts from '2' to '3' at 00:02, and then reverts to '2' at 00:03 as a new block is pulled away from it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"numbered blocks line\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Multiple new numbered blocks (tan '2', blue '3', green '5', green '2', blue '6') duplicate out of thin air / out of adjacent blocks as the hand slides along the table.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -17,10 +17,11 @@ ontology of what is *allowed to change over time* — and requiring an invariant
 findings — produces measurably different (and per-model, diagnostic) results. See the
 [report](https://kaigani.github.io/video-qc-bench/) for the specialist-vs-baseline breakdown.
 
-## Results snapshot (August 2026, after full human adjudication)
+## Results snapshot (September 2026, after full adjudication)
 
 | System | Score | Detection | Defects found | FPs | Run cost |
 |---|---|---|---|---|---|
+| Gemini 3.8 Flash | **43** | 46/139 | 12/47 | 3 | $0.53 |
 | Qwen 3.8 Max (reasoning) | **41** | 52/139 | 15/47 | 11 | $4.42 |
 | Seed 2.1 Turbo | **39** | 40/139 | 11/47 | 1 | $1.96 |
 | Kimi K3 (reasoning) | **37** | 55/139 | 21/47 | 18 | $10.83 |
@@ -42,7 +43,8 @@ figure above is the estimated cost at published pricing applied to the run's act
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
 false-positive finding. The ground truth includes 11 defects first surfaced by models and then
-human-confirmed. Headline patterns: Gemini Pro finds the most real defects (23/46) but its 48
+human-confirmed. Gemini 3.8 Flash leads the current Flash family at 46/139 detection with 3 FPs
+for $0.53. Headline patterns: Gemini Pro finds the most real defects (23/46) but its 48
 false positives sink it; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call; Kimi K3
 pairs the second-best recall with honest confidence calibration; and Gemini 3.7 Flash *regresses*
 against its 3.6 predecessor on this task. Full matrices and charts in the report.

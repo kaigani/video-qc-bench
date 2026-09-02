@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:18:36.552Z",
+  "latencyMs": 18607,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2224,
+    "total_tokens": 3650,
+    "cost": 0.0094095,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0094095,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00834
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2078,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Sheldon Cooper | standing center-right facing forward | standing at left door knocking | turns right and walks across the frame to the adjacent door",
+    "apartment entry door | off-screen to the left initially | directly in front of Sheldon on the left wall | revealed smoothly by camera pan",
+    "coat hook with blue jacket | fixed on wall panel behind Sheldon to his right | remains fixed to his right/rear as he moves left | stationary background fixture",
+    "hallway wall and fixture | visible on far left beside door frame | remains stationary as Sheldon approaches door | continuously tracked in single shot"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Sheldon Cooper | standing center-right facing forward | standing at left door knocking | turns right and walks across the frame to the adjacent door\",\n    \"apartment entry door | off-screen to the left initially | directly in front of Sheldon on the left wall | revealed smoothly by camera pan\",\n    \"coat hook with blue jacket | fixed on wall panel behind Sheldon to his right | remains fixed to his right/rear as he moves left | stationary background fixture\",\n    \"hallway wall and fixture | visible on far left beside door frame | remains stationary as Sheldon approaches door | continuously tracked in single shot\"\n  ],\n  \"findings\": []\n}"
+}

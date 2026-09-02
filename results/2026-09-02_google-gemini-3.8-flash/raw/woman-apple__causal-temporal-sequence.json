@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:22:50.143Z",
+  "latencyMs": 18375,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2046,
+    "total_tokens": 3471,
+    "cost": 0.00874125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00874125,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.0076725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1948,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman holding umbrella | walking forward through outdoor market, smiling | walking forward viewed from behind | moves forward continuously as camera orbits her",
+    "umbrella | held upright by woman | held upright by woman | sways plausibly in response to her walking gait",
+    "background pedestrians | walking in both directions along market aisle | continuing to walk naturally | continuous forward locomotion without interruption"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman holding umbrella | walking forward through outdoor market, smiling | walking forward viewed from behind | moves forward continuously as camera orbits her\",\n    \"umbrella | held upright by woman | held upright by woman | sways plausibly in response to her walking gait\",\n    \"background pedestrians | walking in both directions along market aisle | continuing to walk naturally | continuous forward locomotion without interruption\"\n  ],\n  \"findings\": []\n}"
+}

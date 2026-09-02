@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:19:54.057Z",
+  "latencyMs": 33314,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 4868,
+    "total_tokens": 6294,
+    "cost": 0.0193245,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0193245,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.018255
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4578,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "round table | covered in red patterned cloth with circular motifs | same position throughout | camera dollies back from close-up to medium shot",
+    "magician | seated behind the table wearing a blue suit | seated behind table | manipulating cups and coins",
+    "metal cups | four cups arranged in a diamond pattern (front-left, center, rear, right) at start | only three cups remain in a horizontal row | rear cup disappears as camera pulls back",
+    "coins | distributed in and around cups on table | manipulated by hands | counts and positions shift during routine"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "rear metal cup",
+      "invariant_violated": "object persistence",
+      "description": "Four metal cups are clearly present on the table from 00:00 to 00:03 (front-left, center, right, and rear). As the camera pulls back between 00:03 and 00:05, the rear cup vanishes from the tabletop without being touched or removed by either hand, leaving only three cups for the remainder of the clip.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"round table | covered in red patterned cloth with circular motifs | same position throughout | camera dollies back from close-up to medium shot\",\n    \"magician | seated behind the table wearing a blue suit | seated behind table | manipulating cups and coins\",\n    \"metal cups | four cups arranged in a diamond pattern (front-left, center, rear, right) at start | only three cups remain in a horizontal row | rear cup disappears as camera pulls back\",\n    \"coins | distributed in and around cups on table | manipulated by hands | counts and positions shift during routine\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"rear metal cup\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"Four metal cups are clearly present on the table from 00:00 to 00:03 (front-left, center, right, and rear). As the camera pulls back between 00:03 and 00:05, the rear cup vanishes from the tabletop without being touched or removed by either hand, leaving only three cups for the remainder of the clip.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

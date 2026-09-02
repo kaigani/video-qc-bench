@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:22:44.093Z",
+  "latencyMs": 13754,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1163,
+    "total_tokens": 2589,
+    "cost": 0.00543075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00543075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00436125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1020,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman with umbrella | center of market alley, walking forward | continues walking forward as camera orbits | smoothly tracked from front to three-quarter back view",
+    "market stalls (left) | fruit crates and hanging tomatoes under red canopy | visible along left side of alley | consistent spatial layout relative to alley",
+    "market stalls (right) | fruit crates and produce displays under red canopy | visible along right side of alley | consistent spatial layout relative to alley",
+    "pedestrians | walking in both directions down alley | passing by woman on both sides | correct occlusion and depth ordering throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman with umbrella | center of market alley, walking forward | continues walking forward as camera orbits | smoothly tracked from front to three-quarter back view\",\n    \"market stalls (left) | fruit crates and hanging tomatoes under red canopy | visible along left side of alley | consistent spatial layout relative to alley\",\n    \"market stalls (right) | fruit crates and produce displays under red canopy | visible along right side of alley | consistent spatial layout relative to alley\",\n    \"pedestrians | walking in both directions down alley | passing by woman on both sides | correct occlusion and depth ordering throughout\"\n  ],\n  \"findings\": []\n}"
+}

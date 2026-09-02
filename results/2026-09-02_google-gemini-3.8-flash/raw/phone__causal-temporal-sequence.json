@@ -1,0 +1,39 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.8-flash",
+  "timestamp": "2026-09-02T18:20:23.062Z",
+  "latencyMs": 11284,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1034,
+    "total_tokens": 2459,
+    "cost": 0.00494625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00494625,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.0038775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 949,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person in background | walking down stairs carrying red bag | continuing down paved path | steps down stairs and transitions to flat walkway",
+    "phone user's hands | holding phone with left and right hands | holding phone and touching screen with thumb | thumb moves to interact with screen at 00:07"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person in background | walking down stairs carrying red bag | continuing down paved path | steps down stairs and transitions to flat walkway\",\n    \"phone user's hands | holding phone with left and right hands | holding phone and touching screen with thumb | thumb moves to interact with screen at 00:07\"\n  ],\n  \"findings\": []\n}"
+}
