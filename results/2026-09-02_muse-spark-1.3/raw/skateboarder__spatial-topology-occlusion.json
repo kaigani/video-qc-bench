@@ -1,0 +1,44 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:38:02.142Z",
+  "latencyMs": 45310,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 1512,
+    "total_tokens": 4742,
+    "cost": 0.0006254,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0006254,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.0003024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1172,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "concrete skatepark surface | flat with ramps left and right at start | flat leading into bowl with coping at end | continuous forward travel across flat toward bowl",
+    "bowl with metal coping and tiled interior | not prominent at start, hint of ramps far background | prominent right and left foreground with curved coping at end | revealed progressively as skater approaches and airs over edge",
+    "tall light poles with bases | one left-mid, two right-mid against sky | one left-mid, one center-mid against sky | relative positions shift smoothly consistent with forward-left camera tracking",
+    "tree line and sky background | trees behind ramps encircling horizon under blue cloudy sky | same tree line encircling horizon | remains as distant background, parallax smooth",
+    "cylindrical concrete obstacle | right-midground near ramp at start | out of frame by mid | passed and left behind as skater moves forward",
+    "skateboarder + skateboard (moving foreground) | low centered riding flat | airborne over bowl then landing on far transition | stays in foreground occluding ground and background, depth order preserved",
+    "camera viewpoint (low fisheye tracking) | low near ground facing skater | low near ground following into bowl | continuous orbit/track with no cuts, new views geometrically compatible with forward motion"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"concrete skatepark surface | flat with ramps left and right at start | flat leading into bowl with coping at end | continuous forward travel across flat toward bowl\", \"bowl with metal coping and tiled interior | not prominent at start, hint of ramps far background | prominent right and left foreground with curved coping at end | revealed progressively as skater approaches and airs over edge\", \"tall light poles with bases | one left-mid, two right-mid against sky | one left-mid, one center-mid against sky | relative positions shift smoothly consistent with forward-left camera tracking\", \"tree line and sky background | trees behind ramps encircling horizon under blue cloudy sky | same tree line encircling horizon | remains as distant background, parallax smooth\", \"cylindrical concrete obstacle | right-midground near ramp at start | out of frame by mid | passed and left behind as skater moves forward\", \"skateboarder + skateboard (moving foreground) | low centered riding flat | airborne over bowl then landing on far transition | stays in foreground occluding ground and background, depth order preserved\", \"camera viewpoint (low fisheye tracking) | low near ground facing skater | low near ground following into bowl | continuous orbit/track with no cuts, new views geometrically compatible with forward motion\"], \"findings\": []}"
+}

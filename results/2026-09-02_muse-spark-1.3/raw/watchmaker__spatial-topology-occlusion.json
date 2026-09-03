@@ -1,0 +1,43 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:38:47.601Z",
+  "latencyMs": 32466,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 850,
+    "total_tokens": 4080,
+    "cost": 0.000493,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000493,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.00017
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 555,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "torso in navy/white striped shirt | centered, facing camera, filling middle frame | centered, facing camera | static anchor, no positional shift",
+    "background wall + chair edge | plain light wall behind subject, faint chair shape behind right shoulder | same position and extent | no layout change",
+    "camera viewpoint | single static medium close-up on torso/hands | same framing throughout | no cuts or moves, all views geometrically compatible",
+    "right hand (viewer left) with thin ring + tweezers | foreground in front of shirt, right of center | moves down then back to center foreground | remains in front of torso, occludes shirt correctly",
+    "left hand (viewer right) with ring + watch holding small object | foreground in front of shirt, left of center | remains foreground holding object | remains in front of torso, occludes shirt correctly, occluded by right hand/tweezers when they overlap",
+    "tweezers + small metallic object | in mid-foreground between hands, in front of shirt | manipulated between hands in same depth plane | depth ordering preserved: hands/tweezers occlude shirt, nearer fingers occlude farther fingers/object smoothly"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"torso in navy/white striped shirt | centered, facing camera, filling middle frame | centered, facing camera | static anchor, no positional shift\", \"background wall + chair edge | plain light wall behind subject, faint chair shape behind right shoulder | same position and extent | no layout change\", \"camera viewpoint | single static medium close-up on torso/hands | same framing throughout | no cuts or moves, all views geometrically compatible\", \"right hand (viewer left) with thin ring + tweezers | foreground in front of shirt, right of center | moves down then back to center foreground | remains in front of torso, occludes shirt correctly\", \"left hand (viewer right) with ring + watch holding small object | foreground in front of shirt, left of center | remains foreground holding object | remains in front of torso, occludes shirt correctly, occluded by right hand/tweezers when they overlap\", \"tweezers + small metallic object | in mid-foreground between hands, in front of shirt | manipulated between hands in same depth plane | depth ordering preserved: hands/tweezers occlude shirt, nearer fingers occlude farther fingers/object smoothly\"], \"findings\": []}"
+}

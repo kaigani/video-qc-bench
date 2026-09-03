@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:41:52.068Z",
+  "latencyMs": 14964,
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 1213,
+    "total_tokens": 4442,
+    "cost": 0.000518166,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000518166,
+      "upstream_inference_prompt_cost": 0.000275566,
+      "upstream_inference_completions_cost": 0.0002426
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 961,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | arms crossed leaning on door, neutral look forward | same crossed-arm lean, slight smile looking left | pose held continuously, no initiated action left incomplete",
+    "woman's hair | mostly still, resting | blowing back/up to the right | onset gradual ~00:04-00:08, direction and growth consistent with ambient wind, plausible delay",
+    "station wagon | parked on roadside, front 3/4 view | side-front view | no self-motion; changing viewpoint from camera arc only, effect follows camera cause",
+    "background road/desert/mountains | centered behind car | shifts continuously with parallax | motion continuous and matched to camera movement, no freeze or jump",
+    "sunlight glare on hood/windshield | low reflection | bright wash ~00:05-00:07 | increase follows camera angle toward sun, cause precedes effect plausibly"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"woman | arms crossed leaning on door, neutral look forward | same crossed-arm lean, slight smile looking left | pose held continuously, no initiated action left incomplete\", \"woman's hair | mostly still, resting | blowing back/up to the right | onset gradual ~00:04-00:08, direction and growth consistent with ambient wind, plausible delay\", \"station wagon | parked on roadside, front 3/4 view | side-front view | no self-motion; changing viewpoint from camera arc only, effect follows camera cause\", \"background road/desert/mountains | centered behind car | shifts continuously with parallax | motion continuous and matched to camera movement, no freeze or jump\", \"sunlight glare on hood/windshield | low reflection | bright wash ~00:05-00:07 | increase follows camera angle toward sun, cause precedes effect plausibly\"], \"findings\": []}"
+}

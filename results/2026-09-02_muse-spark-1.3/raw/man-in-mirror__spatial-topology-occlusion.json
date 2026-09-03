@@ -1,0 +1,45 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:34:00.464Z",
+  "latencyMs": 24870,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 3179,
+    "total_tokens": 6409,
+    "cost": 0.0009588,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0009588,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.0006358
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2769,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "real man (foreground left) | back/ right-profile view, white shirt, dark hair, right hand holding razor near chin | same position, hand returns to chin/cheek area | hand moves chin->forehead->eye/cheek->chin but body stays facing mirror",
+    "mirror reflection (center-right) | front-facing view, white shirt, left hand holding razor near mouth, centered face | same framing, hand near mouth/nose | hand mirrors real hand: mouth->forehead->nose->mouth",
+    "razor | in real hand near chin profile, in reflection near mouth | in real hand near chin, in reflection near mouth | moves with hand to forehead/eye then back, both views stay geometrically symmetric",
+    "mirror frame (wooden) | left vertical edge at ~1/3 frame, bottom edge and right edge visible, encloses reflection | unchanged position and size | static",
+    "reflected wooden door with brass knob | left side of mirror, dark panel, knob mid-height left of center | same position/size relative to reflection and wall strip | static",
+    "reflected wall strip + light switch | between door and reflection face, off-white with switch plate | unchanged | static",
+    "reflected shelving unit with bottles | far right of mirror behind reflection shoulder | unchanged arrangement | static",
+    "foreground wall (real) | beige wall far left behind real man | unchanged | static, occluded by real man"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"real man (foreground left) | back/ right-profile view, white shirt, dark hair, right hand holding razor near chin | same position, hand returns to chin/cheek area | hand moves chin->forehead->eye/cheek->chin but body stays facing mirror\", \"mirror reflection (center-right) | front-facing view, white shirt, left hand holding razor near mouth, centered face | same framing, hand near mouth/nose | hand mirrors real hand: mouth->forehead->nose->mouth\", \"razor | in real hand near chin profile, in reflection near mouth | in real hand near chin, in reflection near mouth | moves with hand to forehead/eye then back, both views stay geometrically symmetric\", \"mirror frame (wooden) | left vertical edge at ~1/3 frame, bottom edge and right edge visible, encloses reflection | unchanged position and size | static\", \"reflected wooden door with brass knob | left side of mirror, dark panel, knob mid-height left of center | same position/size relative to reflection and wall strip | static\", \"reflected wall strip + light switch | between door and reflection face, off-white with switch plate | unchanged | static\", \"reflected shelving unit with bottles | far right of mirror behind reflection shoulder | unchanged arrangement | static\", \"foreground wall (real) | beige wall far left behind real man | unchanged | static, occluded by real man\"], \"findings\": []}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:40:37.371Z",
+  "latencyMs": 33460,
+  "usage": {
+    "prompt_tokens": 3049,
+    "completion_tokens": 2101,
+    "total_tokens": 5150,
+    "cost": 0.0007251,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0007251,
+      "upstream_inference_prompt_cost": 0.0003049,
+      "upstream_inference_completions_cost": 0.0004202
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1823,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman | dark navy cardigan, light gray shorts, ponytail, facing camera holding blue umbrella and red apple with both hands | same clothing, ponytail, seen from behind holding blue umbrella with one hand | walks forward through market while camera arcs front to side to back",
+    "red apple | small round red fruit held in both hands at chest | absent | visible 00:00-00:07 then not visible in side/back views",
+    "blue umbrella | open blue canopy above head, silver pole | open blue canopy above head | remains overhead throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "object_permanence",
+      "description": "Red apple held in both hands for first ~7s disappears without being eaten, pocketed, handed off or put down; hands are then empty and clasped around umbrella pole in side and rear views.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\"ledger\": [\"central woman | dark navy cardigan, light gray shorts, ponytail, facing camera holding blue umbrella and red apple with both hands | same clothing, ponytail, seen from behind holding blue umbrella with one hand | walks forward through market while camera arcs front to side to back\", \"red apple | small round red fruit held in both hands at chest | absent | visible 00:00-00:07 then not visible in side/back views\", \"blue umbrella | open blue canopy above head, silver pole | open blue canopy above head | remains overhead throughout\"], \"findings\": [{\"timestamp\": \"00:08\", \"entity\": \"red apple\", \"invariant_violated\": \"object_permanence\", \"description\": \"Red apple held in both hands for first ~7s disappears without being eaten, pocketed, handed off or put down; hands are then empty and clasped around umbrella pole in side and rear views.\", \"severity\": \"moderate\", \"confidence\": 0.92}]}"
+}

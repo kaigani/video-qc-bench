@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:41:18.470Z",
+  "latencyMs": 23136,
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 1880,
+    "total_tokens": 5109,
+    "cost": 0.000651566,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 483,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000651566,
+      "upstream_inference_prompt_cost": 0.000275566,
+      "upstream_inference_completions_cost": 0.000376
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1536,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman walking | front view smiling toward camera, advancing forward | back view walking away, still advancing | walking cause -> forward displacement effect continuous, camera orbit cause -> front-to-side-to-back view change effect, order and delay plausible",
+    "blue umbrella | open above head, shaft gripped with hands | still open above head, shaft gripped | holder locomotion cause -> umbrella translation effect with no lag, continuous, order plausible",
+    "red apple in hands | held between hands at chest | hands remain together on shaft in side/back view | holding cause -> co-movement with hands effect, no throw/impact so no trajectory/splash effect expected, plausible",
+    "background pedestrians | mid-aisle at various distances approaching/receding | advanced along walk directions, occlusions as passing | self-propelled steps cause -> displacement effect, passing cause -> temporary occlusion effect, order precedes effect, plausible, no reaction without perceivable trigger",
+    "market stalls, produce, awnings, hanging lights | static lining both sides | same static lining | no motion/switch cause -> no motion/light-change effect, persistence plausible",
+    "camera viewpoint | frontal tracking | orbital to side then rear | camera motion cause -> continuous parallax of foreground vs background effect, temporal flow continuous with no freeze or repeat, plausible"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"central woman walking | front view smiling toward camera, advancing forward | back view walking away, still advancing | walking cause -> forward displacement effect continuous, camera orbit cause -> front-to-side-to-back view change effect, order and delay plausible\", \"blue umbrella | open above head, shaft gripped with hands | still open above head, shaft gripped | holder locomotion cause -> umbrella translation effect with no lag, continuous, order plausible\", \"red apple in hands | held between hands at chest | hands remain together on shaft in side/back view | holding cause -> co-movement with hands effect, no throw/impact so no trajectory/splash effect expected, plausible\", \"background pedestrians | mid-aisle at various distances approaching/receding | advanced along walk directions, occlusions as passing | self-propelled steps cause -> displacement effect, passing cause -> temporary occlusion effect, order precedes effect, plausible, no reaction without perceivable trigger\", \"market stalls, produce, awnings, hanging lights | static lining both sides | same static lining | no motion/switch cause -> no motion/light-change effect, persistence plausible\", \"camera viewpoint | frontal tracking | orbital to side then rear | camera motion cause -> continuous parallax of foreground vs background effect, temporal flow continuous with no freeze or repeat, plausible\"], \"findings\": []}"
+}

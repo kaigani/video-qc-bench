@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:31:24.705Z",
+  "latencyMs": 11418,
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 1221,
+    "total_tokens": 4450,
+    "cost": 0.0005671,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0005671,
+      "upstream_inference_prompt_cost": 0.0003229,
+      "upstream_inference_completions_cost": 0.0002442
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1034,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | in kitchen near microwave facing hallway | in kitchen hallway area returning | walks forward through hallway into bedroom, head turns to scan left/right, then walks back; locomotion causes continuous forward displacement with plausible timing",
+    "camera | framing woman in kitchen | framing woman in kitchen | tracks/pans following woman's walk with matched speed and direction, movement follows woman's movement",
+    "doorways / hallway / bedroom interior | static open doorways, made bed, daylight windows | unchanged | no push/pull causes, so no door motion effects; no contact causes, so no object motion; illumination steady with no switch/source cause"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"woman | in kitchen near microwave facing hallway | in kitchen hallway area returning | walks forward through hallway into bedroom, head turns to scan left/right, then walks back; locomotion causes continuous forward displacement with plausible timing\", \"camera | framing woman in kitchen | framing woman in kitchen | tracks/pans following woman's walk with matched speed and direction, movement follows woman's movement\", \"doorways / hallway / bedroom interior | static open doorways, made bed, daylight windows | unchanged | no push/pull causes, so no door motion effects; no contact causes, so no object motion; illumination steady with no switch/source cause\"], \"findings\": []}"
+}

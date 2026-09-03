@@ -1,0 +1,46 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:29:59.480Z",
+  "latencyMs": 32710,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 4988,
+    "total_tokens": 8218,
+    "cost": 0.0013206,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0013206,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.0009976
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4523,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer real | back to camera, center-left, black bra/leggings | same position, weight shifted, right arm lowered then raised | right arm up 00:01-00:04 down, up again 00:06-00:09, stance widens",
+    "dancer reflection | front view in mirror, center-right, mirrored pose | same mirrored end pose | moves mirror-symmetric to real, left anatomical arm corresponds to real right",
+    "mirror wall + base trim | full-height panels ahead/north, black base | unchanged | real dancer occludes lower panels, reflection behind plane",
+    "wood floor | foreground to mirror base | unchanged | continuous to mirror line, reflection floor aligns",
+    "west exit door real | black door with window on left wall, EXIT above | unchanged | static",
+    "doors seen in mirror | reflection of west door + south-wall door(s) on back wall | unchanged | two door images persist, geometrically compatible with L-shaped doors",
+    "ballet barre reflected | double barre on south wall behind camera, seen only in mirror right side | unchanged | occluded correctly by reflection figure when overlapping",
+    "blue bin + plaque + ceiling lights reflected | back/side-wall fixtures seen only in mirror | unchanged | maintain relative positions, no direct view expected",
+    "camera viewpoint | static behind dancer looking north to mirror | static | no cuts, no side swap, left/right stable"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"dancer real | back to camera, center-left, black bra/leggings | same position, weight shifted, right arm lowered then raised | right arm up 00:01-00:04 down, up again 00:06-00:09, stance widens\", \"dancer reflection | front view in mirror, center-right, mirrored pose | same mirrored end pose | moves mirror-symmetric to real, left anatomical arm corresponds to real right\", \"mirror wall + base trim | full-height panels ahead/north, black base | unchanged | real dancer occludes lower panels, reflection behind plane\", \"wood floor | foreground to mirror base | unchanged | continuous to mirror line, reflection floor aligns\", \"west exit door real | black door with window on left wall, EXIT above | unchanged | static\", \"doors seen in mirror | reflection of west door + south-wall door(s) on back wall | unchanged | two door images persist, geometrically compatible with L-shaped doors\", \"ballet barre reflected | double barre on south wall behind camera, seen only in mirror right side | unchanged | occluded correctly by reflection figure when overlapping\", \"blue bin + plaque + ceiling lights reflected | back/side-wall fixtures seen only in mirror | unchanged | maintain relative positions, no direct view expected\", \"camera viewpoint | static behind dancer looking north to mirror | static | no cuts, no side swap, left/right stable\"], \"findings\": []}"
+}

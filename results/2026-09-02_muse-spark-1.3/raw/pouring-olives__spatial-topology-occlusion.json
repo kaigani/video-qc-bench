@@ -1,0 +1,45 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:43:11.398Z",
+  "latencyMs": 44330,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 2141,
+    "total_tokens": 5371,
+    "cost": 0.0007512,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0007512,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.0004282
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1772,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | centered on wooden board in foreground, clasp on right side of neck | same center position, same clasp orientation | stays fixed, camera widens slightly but relative position unchanged",
+    "wooden cutting board on white counter | fills foreground under jar, white counter strip to right | same layout, more board visible after pull-back | no lateral shift",
+    "stainless stove/oven | centered in background behind person, knobs and handle visible | same centered background, more cooktop visible in wider view | consistent behind person",
+    "wood cabinets | wood door to right of stove, wood drawers/cabinets to left of stove | same left/right flanking of stove | relative left/right ordering preserved",
+    "metal bowl | on white counter to right-rear of jar | same right-rear position | remains behind ceramic bowl",
+    "ceramic/small bowl of green olives | on white counter to right-front of jar, partially cropped | same right-front position | remains in front of metal bowl",
+    "person | standing behind counter/board, torso behind jar | same behind-counter position | hands move above jar, body stays behind, correct occlusion",
+    "small pouring glass + small empty bottle | pouring glass in hands above jar, bottle appears far right | same above-jar pouring position; bottle on far right counter | bottle newly framed by wider view, not a layout shift; near hands occlude far background correctly"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"large glass jar | centered on wooden board in foreground, clasp on right side of neck | same center position, same clasp orientation | stays fixed, camera widens slightly but relative position unchanged\", \"wooden cutting board on white counter | fills foreground under jar, white counter strip to right | same layout, more board visible after pull-back | no lateral shift\", \"stainless stove/oven | centered in background behind person, knobs and handle visible | same centered background, more cooktop visible in wider view | consistent behind person\", \"wood cabinets | wood door to right of stove, wood drawers/cabinets to left of stove | same left/right flanking of stove | relative left/right ordering preserved\", \"metal bowl | on white counter to right-rear of jar | same right-rear position | remains behind ceramic bowl\", \"ceramic/small bowl of green olives | on white counter to right-front of jar, partially cropped | same right-front position | remains in front of metal bowl\", \"person | standing behind counter/board, torso behind jar | same behind-counter position | hands move above jar, body stays behind, correct occlusion\", \"small pouring glass + small empty bottle | pouring glass in hands above jar, bottle appears far right | same above-jar pouring position; bottle on far right counter | bottle newly framed by wider view, not a layout shift; near hands occlude far background correctly\"], \"findings\": []}"
+}

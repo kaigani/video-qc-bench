@@ -1,0 +1,46 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:28:23.072Z",
+  "latencyMs": 47486,
+  "usage": {
+    "prompt_tokens": 31509,
+    "completion_tokens": 4978,
+    "total_tokens": 36487,
+    "cost": 0.0041465,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0041465,
+      "upstream_inference_prompt_cost": 0.0031509,
+      "upstream_inference_completions_cost": 0.0009956
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4404,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "exterior diner building | night, single-story flat roof, glass walls on front/side, OPEN neon in window, right of frame | unchanged structure, daylight not shown exterior | camera holds wide exterior then cuts inside",
+    "interior counter + stools | L-shaped counter on east side, stools on west side of counter, south end curved | same position and shape in all interior wides | viewed from south looking north and north looking south consistently",
+    "west wall booths + windows | booths left when looking north, floor-to-ceiling windows above/adjacent | booths right when looking south, same wall | perspective flips correctly with 180-degree viewpoint change",
+    "north wall kitchen pass + OPEN windows | pass-window center-north with warm light, OPEN neon in windows west of pass, menu/clock above | same arrangement in night and day wides | man first appears from north zone and walks south between counter and booths",
+    "east wall back-bar equipment | coffee machines, microwaves, shelves, condiment caddies behind counter | remain east behind counter in all angles | waitress works this side",
+    "south wall EXIT door + front windows | EXIT door and fridges at far south seen from kitchen looking south | same south end seen as near camera when looking north | man sits near south end in both views, distance scaling matches",
+    "man in brown jacket | enters from north, sits west side of counter facing east | leaves via south EXIT to box truck, viewed through west windows | path south-to-south and out doorway stays on correct side of counter, occluded correctly by counter and window frames",
+    "waitress in blue shirt/apron | starts east behind counter, moves along east side | ends moving between east and west via counter ends to sit west beside man | never crosses through counter surface; disappear/reappear around ends, occlusion by counter preserved",
+    "kitchen interior seen through pass | shelves, plates, warm light north of pass | same through all pass views | foreground pass frame correctly occludes background kitchen and dining area"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"exterior diner building | night, single-story flat roof, glass walls on front/side, OPEN neon in window, right of frame | unchanged structure, daylight not shown exterior | camera holds wide exterior then cuts inside\", \"interior counter + stools | L-shaped counter on east side, stools on west side of counter, south end curved | same position and shape in all interior wides | viewed from south looking north and north looking south consistently\", \"west wall booths + windows | booths left when looking north, floor-to-ceiling windows above/adjacent | booths right when looking south, same wall | perspective flips correctly with 180-degree viewpoint change\", \"north wall kitchen pass + OPEN windows | pass-window center-north with warm light, OPEN neon in windows west of pass, menu/clock above | same arrangement in night and day wides | man first appears from north zone and walks south between counter and booths\", \"east wall back-bar equipment | coffee machines, microwaves, shelves, condiment caddies behind counter | remain east behind counter in all angles | waitress works this side\", \"south wall EXIT door + front windows | EXIT door and fridges at far south seen from kitchen looking south | same south end seen as near camera when looking north | man sits near south end in both views, distance scaling matches\", \"man in brown jacket | enters from north, sits west side of counter facing east | leaves via south EXIT to box truck, viewed through west windows | path south-to-south and out doorway stays on correct side of counter, occluded correctly by counter and window frames\", \"waitress in blue shirt/apron | starts east behind counter, moves along east side | ends moving between east and west via counter ends to sit west beside man | never crosses through counter surface; disappear/reappear around ends, occlusion by counter preserved\", \"kitchen interior seen through pass | shelves, plates, warm light north of pass | same through all pass views | foreground pass frame correctly occludes background kitchen and dining area\"], \"findings\": []}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:36:40.491Z",
+  "latencyMs": 17944,
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 1938,
+    "total_tokens": 5167,
+    "cost": 0.0007105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0007105,
+      "upstream_inference_prompt_cost": 0.0003229,
+      "upstream_inference_completions_cost": 0.0003876
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1647,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hands + small bowl first pour | full above empty jar at 00:00 | empty by 00:04 | tilt at 00:00-00:04 causes olives to release; order and delay plausible",
+    "falling olives first batch | in small bowl at 00:00 | resting in large jar bottom 00:01-00:04 | gravity drop immediately after release; order and delay plausible",
+    "large jar contents first phase | empty at 00:00 | ~1/4 full at 00:04 | accumulation follows pouring volume; order and delay plausible",
+    "hands + small bowl second pour | full at 00:05 | emptying 00:06-00:09 | tilt causes second batch to fall; order and delay plausible",
+    "large jar contents second phase | ~1/4 full at 00:05 | ~1/2 full at 00:09 | level rise follows second pour with no lead or lag; order and delay plausible"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"hands + small bowl first pour | full above empty jar at 00:00 | empty by 00:04 | tilt at 00:00-00:04 causes olives to release; order and delay plausible\", \"falling olives first batch | in small bowl at 00:00 | resting in large jar bottom 00:01-00:04 | gravity drop immediately after release; order and delay plausible\", \"large jar contents first phase | empty at 00:00 | ~1/4 full at 00:04 | accumulation follows pouring volume; order and delay plausible\", \"hands + small bowl second pour | full at 00:05 | emptying 00:06-00:09 | tilt causes second batch to fall; order and delay plausible\", \"large jar contents second phase | ~1/4 full at 00:05 | ~1/2 full at 00:09 | level rise follows second pour with no lead or lag; order and delay plausible\"], \"findings\": []}"
+}

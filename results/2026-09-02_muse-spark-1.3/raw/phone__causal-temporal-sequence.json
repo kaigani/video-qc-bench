@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:35:16.942Z",
+  "latencyMs": 20276,
+  "usage": {
+    "prompt_tokens": 3229,
+    "completion_tokens": 1205,
+    "total_tokens": 4434,
+    "cost": 0.0005639,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0005639,
+      "upstream_inference_prompt_cost": 0.0003229,
+      "upstream_inference_completions_cost": 0.000241
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 920,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background walker with red bags | near railing at top of stairs, mid-stride | distant on paved walkway, smaller | cause: walking steps 00:00-00:03 -> effect: continuous forward displacement away from camera, order and delay plausible",
+    "holder hands + smartphone | phone blurry foreground showing A742 | phone sharp then lowered out of frame | cause: hand tilt/focus adjust 00:02-00:07 -> effect: reflection sweep moves and text sharpens, order plausible; cause: hand lowers phone 00:09 -> effect: view shifts to stairs, order plausible",
+    "screen reflection glare | diffuse blur | bright white shape sweeping then fading | cause: phone angle change + sunlight 00:02-00:06 -> effect: glare position/intensity changes in sync with tilt, order and delay plausible, no effect-before-cause",
+    "stairs/railing background | defocused behind phone | focused stairs with rail shadows at end | cause: phone moved away + camera refocus 00:09 -> effect: background becomes visible, continuous motion, no freeze or repeat"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"background walker with red bags | near railing at top of stairs, mid-stride | distant on paved walkway, smaller | cause: walking steps 00:00-00:03 -> effect: continuous forward displacement away from camera, order and delay plausible\", \"holder hands + smartphone | phone blurry foreground showing A742 | phone sharp then lowered out of frame | cause: hand tilt/focus adjust 00:02-00:07 -> effect: reflection sweep moves and text sharpens, order plausible; cause: hand lowers phone 00:09 -> effect: view shifts to stairs, order plausible\", \"screen reflection glare | diffuse blur | bright white shape sweeping then fading | cause: phone angle change + sunlight 00:02-00:06 -> effect: glare position/intensity changes in sync with tilt, order and delay plausible, no effect-before-cause\", \"stairs/railing background | defocused behind phone | focused stairs with rail shadows at end | cause: phone moved away + camera refocus 00:09 -> effect: background becomes visible, continuous motion, no freeze or repeat\"], \"findings\": []}"
+}

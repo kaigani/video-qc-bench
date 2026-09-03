@@ -1,0 +1,63 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:40:12.429Z",
+  "latencyMs": 58504,
+  "usage": {
+    "prompt_tokens": 3242,
+    "completion_tokens": 5474,
+    "total_tokens": 8716,
+    "cost": 0.001419,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.001419,
+      "upstream_inference_prompt_cost": 0.0003242,
+      "upstream_inference_completions_cost": 0.0010948
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4800,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table surface | light wood horizontal at start | supports all cubes, unchanged at end | no transitions",
+    "initial left cube | green cube showing 2 front on left on table held by hand at start | ends as leftmost blue cube showing 2 | green-to-blue color and marking-style change at ~00:01 during rotate",
+    "initial right cube | green cube showing 2 center on table at start | ends as third green cube showing 2 | persists in place, no color change",
+    "second-position blue 3 cube | not visible at start | ends second from left blue showing 3 | appears at ~00:01 between left and right cubes with no visible carry-in",
+    "fourth-position tan 2 cube | not visible at start, enters held in hand from top-right | ends fourth tan showing 2 | placed by hand ~00:03",
+    "fifth-position light-blue 3 cube | not visible at start, enters held in hand | ends fifth light-blue showing 3 | placed by hand ~00:04",
+    "sixth-position green 5 cube | not visible at start, enters held in hand | ends sixth green showing 5 | placed by hand ~00:05",
+    "seventh-position green 2 cube | not visible at start, enters held in hand | ends seventh green showing 2 | placed by hand ~00:06",
+    "eighth-position blue 6 cube | not visible at start, enters held in hand | ends eighth blue showing 6 | placed by hand ~00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "initial left green cube",
+      "invariant_violated": "physical state transition",
+      "description": "Green uniform cube showing 2 becomes uniform blue cube showing 2 while hand only rotates it; rotation cannot change uniform color and marking style with no painting or swapping action visible.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "second-position blue 3 cube",
+      "invariant_violated": "identity & persistence",
+      "description": "A third cube appears between the two initial cubes with no visible carry-in; hand was already on the left cube and does not bring a new cube into frame, count goes 2 to 3 with no cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\"ledger\": [\"table surface | light wood horizontal at start | supports all cubes, unchanged at end | no transitions\", \"initial left cube | green cube showing 2 front on left on table held by hand at start | ends as leftmost blue cube showing 2 | green-to-blue color and marking-style change at ~00:01 during rotate\", \"initial right cube | green cube showing 2 center on table at start | ends as third green cube showing 2 | persists in place, no color change\", \"second-position blue 3 cube | not visible at start | ends second from left blue showing 3 | appears at ~00:01 between left and right cubes with no visible carry-in\", \"fourth-position tan 2 cube | not visible at start, enters held in hand from top-right | ends fourth tan showing 2 | placed by hand ~00:03\", \"fifth-position light-blue 3 cube | not visible at start, enters held in hand | ends fifth light-blue showing 3 | placed by hand ~00:04\", \"sixth-position green 5 cube | not visible at start, enters held in hand | ends sixth green showing 5 | placed by hand ~00:05\", \"seventh-position green 2 cube | not visible at start, enters held in hand | ends seventh green showing 2 | placed by hand ~00:06\", \"eighth-position blue 6 cube | not visible at start, enters held in hand | ends eighth blue showing 6 | placed by hand ~00:07\"], \"findings\": [{\"timestamp\": \"00:01\", \"entity\": \"initial left green cube\", \"invariant_violated\": \"physical state transition\", \"description\": \"Green uniform cube showing 2 becomes uniform blue cube showing 2 while hand only rotates it; rotation cannot change uniform color and marking style with no painting or swapping action visible.\", \"severity\": \"severe\", \"confidence\": 0.9}, {\"timestamp\": \"00:01\", \"entity\": \"second-position blue 3 cube\", \"invariant_violated\": \"identity & persistence\", \"description\": \"A third cube appears between the two initial cubes with no visible carry-in; hand was already on the left cube and does not bring a new cube into frame, count goes 2 to 3 with no cause.\", \"severity\": \"severe\", \"confidence\": 0.85}]}"
+}

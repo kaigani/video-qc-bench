@@ -29,6 +29,7 @@ const LABELS = {
   gemma: 'Gemma 4 31B',
   pegasus: 'Pegasus 1.5',
   muse: 'Muse Spark 1.2',
+  muse13: 'Muse Spark 1.3',
   flash37: 'Gemini 3.7 Flash',
   nemotron: 'Nemotron 3 Nano',
   seed: 'Seed 2.1 Turbo',

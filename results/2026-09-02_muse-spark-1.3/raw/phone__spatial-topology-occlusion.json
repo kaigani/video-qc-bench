@@ -1,0 +1,44 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "meta/muse-spark-1.3-contributor",
+  "timestamp": "2026-09-03T03:35:40.186Z",
+  "latencyMs": 49223,
+  "usage": {
+    "prompt_tokens": 3230,
+    "completion_tokens": 996,
+    "total_tokens": 4226,
+    "cost": 0.0005222,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0005222,
+      "upstream_inference_prompt_cost": 0.000323,
+      "upstream_inference_completions_cost": 0.0001992
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 697,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone + holding hands | foreground center, out-of-focus, obscuring mid-ground | foreground center, in-focus showing 'A742', then tilted down | stays nearest layer throughout, focus pull only, occlusion over stairs/railing maintained",
+    "staircase | lower-left mid-ground under phone, steps descending forward, partially occluded by phone | same position, blurred at end when phone lowers | no movement, consistent left-of-railing placement",
+    "metal stair railing | right side diagonal with vertical balusters | same diagonal right-side position | static, consistently occludes greenery and pavement beyond",
+    "building wall | far left vertical edge bordering stairs/plaza | same left edge | static architectural anchor",
+    "paved plaza | background top-center beyond stairs | same background plane | static ground plane receding from stairs",
+    "greenery bed | below/right of railing behind balusters | same below-railing position | static, correctly occluded by railing bars",
+    "pedestrian with red bag | mid-background near railing, walking away | farther background center-top, smaller | moves away from camera along plaza, correct depth scaling, exits upper area without side swap"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"smartphone + holding hands | foreground center, out-of-focus, obscuring mid-ground | foreground center, in-focus showing 'A742', then tilted down | stays nearest layer throughout, focus pull only, occlusion over stairs/railing maintained\", \"staircase | lower-left mid-ground under phone, steps descending forward, partially occluded by phone | same position, blurred at end when phone lowers | no movement, consistent left-of-railing placement\", \"metal stair railing | right side diagonal with vertical balusters | same diagonal right-side position | static, consistently occludes greenery and pavement beyond\", \"building wall | far left vertical edge bordering stairs/plaza | same left edge | static architectural anchor\", \"paved plaza | background top-center beyond stairs | same background plane | static ground plane receding from stairs\", \"greenery bed | below/right of railing behind balusters | same below-railing position | static, correctly occluded by railing bars\", \"pedestrian with red bag | mid-background near railing, walking away | farther background center-top, smaller | moves away from camera along plaza, correct depth scaling, exits upper area without side swap\"], \"findings\": []}"
+}
