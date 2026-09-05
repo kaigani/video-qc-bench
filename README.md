@@ -21,19 +21,19 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 
 | System | Score | Detection | Defects found | FPs | Run cost |
 |---|---|---|---|---|---|
-| Gemini 3.8 Flash | **43** | 46/139 | 12/47 | 3 | $0.53 |
-| Qwen 3.8 Max (reasoning) | **41** | 52/139 | 15/47 | 11 | $4.42 |
-| Seed 2.1 Turbo | **39** | 40/139 | 11/47 | 1 | $1.96 |
-| Kimi K3 (reasoning) | **37** | 55/139 | 21/47 | 18 | $10.83 |
-| Gemini 3.6 Flash | **31** | 34/139 | 9/47 | 3 | $0.53 |
-| Muse Spark 1.2 (reasoning) | **30** | 42/139 | 12/47 | 12 | $1.11 |
-| Qwen 3.8 27B (reasoning) | **28** | 32/139 | 10/47 | 4 | $1.58 |
-| GLM 5.3 Flash (was Ox Alpha stealth) | **28** | 39/139 | 15/47 | 11 | ~$0.33* |
-| Gemma 4 31B (reasoning) | **27** | 33/139 | 11/47 | 6 | $0.11 |
-| Gemini 3.7 Flash | **22** | 25/139 | 7/47 | 3 | $0.15 |
-| Gemini Pro Latest (reasoning) | **22** | 70/139 | 24/47 | 48 | $2.15 |
-| Nemotron 3 Nano (free, reasoning) | **11** | 14/139 | 5/47 | 3 | $0.00 |
-| TwelveLabs Pegasus 1.5 | **6** | 6/139 | 2/47 | 0 | ~$0.58 |
+| Gemini 3.8 Flash | **43** | 46/141 | 12/48 | 3 | $0.53 |
+| Qwen 3.8 Max (reasoning) | **41** | 52/141 | 15/48 | 11 | $4.42 |
+| Seed 2.1 Turbo | **39** | 40/141 | 11/48 | 1 | $1.96 |
+| Kimi K3 (reasoning) | **37** | 55/141 | 21/48 | 18 | $10.83 |
+| Gemini 3.6 Flash | **31** | 34/141 | 9/48 | 3 | $0.53 |
+| Muse Spark 1.2 (reasoning) | **30** | 42/141 | 12/48 | 12 | $1.11 |
+| Qwen 3.8 27B (reasoning) | **28** | 32/141 | 10/48 | 4 | $1.58 |
+| GLM 5.3 Flash (was Ox Alpha stealth) | **28** | 39/141 | 15/48 | 11 | ~$0.33* |
+| Gemma 4 31B (reasoning) | **27** | 33/141 | 11/48 | 6 | $0.11 |
+| Gemini 3.7 Flash | **22** | 25/141 | 7/48 | 3 | $0.15 |
+| Gemini Pro Latest (reasoning) | **22** | 70/141 | 24/48 | 48 | $2.15 |
+| Nemotron 3 Nano (free, reasoning) | **11** | 14/141 | 5/48 | 3 | $0.00 |
+| TwelveLabs Pegasus 1.5 | **6** | 6/141 | 2/48 | 0 | ~$0.58 |
 
 \* Ox Alpha was OpenRouter's anonymized stealth slug for GLM 5.3 Flash (revealed 2026-08-26).
 Pricing is $0.15/1M input tokens, $0.50/1M output tokens (cached input reads discounted, often
@@ -42,9 +42,9 @@ figure above is the estimated cost at published pricing applied to the run's act
 (664K input / 469K output tokens across 84 calls).
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
-false-positive finding. The ground truth includes 11 defects first surfaced by models and then
-human-confirmed. Gemini 3.8 Flash leads the current Flash family at 46/139 detection with 3 FPs
-for $0.53. Headline patterns: Gemini Pro finds the most real defects (23/46) but its 48
+false-positive finding. The ground truth includes 12 defects first surfaced or prompted by model findings and then
+human-confirmed (latest: DANC-4, 2026-09-04). Gemini 3.8 Flash leads the current Flash family at 46/141 detection with 3 FPs
+for $0.53. Headline patterns: Gemini Pro finds the most real defects (24/48) but its 48
 false positives sink it; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call; Kimi K3
 pairs the second-best recall with honest confidence calibration; and Gemini 3.7 Flash *regresses*
 against its 3.6 predecessor on this task. Full matrices and charts in the report.

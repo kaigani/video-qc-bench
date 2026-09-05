@@ -1,25 +1,25 @@
 # Benchmark scores vs human baseline
 
-Ground truth: 47 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 139). FP penalty = 1 per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
+Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 141). FP penalty = 1 per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
 
 ## Leaderboard
 
 | Model | Score | Detection | Defects found | FP findings | TP findings | EXTRA | Precision* |
 |---|---|---|---|---|---|---|---|
-| flash | **31** | 34/139 | 9/47 | 3 | 18 | 0 | 86% |
-| qwen | **41** | 52/139 | 15/47 | 11 | 34 | 0 | 76% |
-| pro | **22** | 70/139 | 24/47 | 48 | 66 | 0 | 58% |
-| gemma | **27** | 33/139 | 11/47 | 6 | 28 | 0 | 82% |
-| pegasus | **6** | 6/139 | 2/47 | 0 | 2 | 0 | 100% |
-| muse | **30** | 42/139 | 12/47 | 12 | 19 | 0 | 61% |
-| muse13 | **30** | 30/139 | 8/47 | 0 | 9 | 0 | 100% |
-| flash37 | **22** | 25/139 | 7/47 | 3 | 13 | 0 | 81% |
-| nemotron | **11** | 14/139 | 5/47 | 3 | 9 | 0 | 75% |
-| seed | **39** | 40/139 | 11/47 | 1 | 21 | 0 | 95% |
-| kimi | **37** | 55/139 | 21/47 | 18 | 44 | 0 | 71% |
-| qwen27b | **28** | 32/139 | 10/47 | 4 | 18 | 0 | 82% |
-| oxalpha | **28** | 39/139 | 15/47 | 11 | 26 | 0 | 70% |
-| flash38 | **43** | 46/139 | 12/47 | 3 | 22 | 0 | 88% |
+| flash | **31** | 34/141 | 9/48 | 3 | 18 | 0 | 86% |
+| qwen | **41** | 52/141 | 15/48 | 11 | 34 | 0 | 76% |
+| pro | **22** | 70/141 | 24/48 | 48 | 66 | 0 | 58% |
+| gemma | **27** | 33/141 | 11/48 | 6 | 28 | 0 | 82% |
+| pegasus | **6** | 6/141 | 2/48 | 0 | 2 | 0 | 100% |
+| muse | **30** | 42/141 | 12/48 | 12 | 19 | 0 | 61% |
+| muse13 | **30** | 30/141 | 8/48 | 0 | 9 | 0 | 100% |
+| flash37 | **22** | 25/141 | 7/48 | 3 | 13 | 0 | 81% |
+| nemotron | **11** | 14/141 | 5/48 | 3 | 9 | 0 | 75% |
+| seed | **39** | 40/141 | 11/48 | 1 | 21 | 0 | 95% |
+| kimi | **37** | 55/141 | 21/48 | 18 | 44 | 0 | 71% |
+| qwen27b | **28** | 32/141 | 10/48 | 4 | 18 | 0 | 82% |
+| oxalpha | **28** | 39/141 | 15/48 | 11 | 26 | 0 | 70% |
+| flash38 | **43** | 46/141 | 12/48 | 3 | 22 | 0 | 88% |
 
 *Precision counts TP+EXTRA findings as non-noise.
 
@@ -45,6 +45,7 @@ Ground truth: 47 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 | DANC-1 | P2 | · | · | ✓ | · | · | · | · | · | · | · | · | ✓ | ✓ | · | Mirrored pose does not match the in-room pose, especially foot position |
 | DANC-2 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | ✓ | · | Shoulder tattoo morphs as she raises her arm |
 | DANC-3 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | At 00:05 reflection shows hand in front, in-room shows hand behind her back |
+| DANC-4 | P3 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Mirror reflection shows two exit doors where only one reflection of the single door should |
 | HOME-1 | P1 | ✓ | ✓ | ✓ | ✓ | · | ✓ | · | · | · | ✓ | ✓ | ✓ | · | ✓ | Implausible interior layout: walking the length of the kitchen through a bedroom reveals a |
 | HOME-2 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Bedroom has two chairs tucked under the foot of the bed as if the bed is a table |
 | CUPS-1 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | · | ✓ | · | · | · | Coin placed into a cup moves to the outside of the cup |
@@ -75,7 +76,7 @@ Ground truth: 47 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 | DIAL-1 | P3 | · | · | · | · | · | ✓ | · | · | ✓ | · | · | · | · | · | Spoken dialogue references 'the red door is locked, the blue door is open' but all visible |
 | CAR-5 | P4 | · | · | ✓ | · | · | · | · | · | · | · | ✓ | · | · | · | Windshield wiper arms relocate/change configuration between frames (KT-confirmed 2026-08-1 |
 
-**Missed by every model (10):** LONG-2 (P3), LONG-5 (P4), LONG-6 (P0), LONG-7 (P1), LONG-9 (P1), LONG-10 (P0), DANC-3 (P1), HOME-2 (P2), CUPS-2 (P2), SKAT-1 (P2)
+**Missed by every model (11):** LONG-2 (P3), LONG-5 (P4), LONG-6 (P0), LONG-7 (P1), LONG-9 (P1), LONG-10 (P0), DANC-3 (P1), DANC-4 (P3), HOME-2 (P2), CUPS-2 (P2), SKAT-1 (P2)
 
 ## Role contribution (TP findings / total findings per role)
 
