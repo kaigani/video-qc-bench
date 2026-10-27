@@ -1,0 +1,50 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:03:38.464Z",
+  "latencyMs": 69593,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 5926,
+    "total_tokens": 8985,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5640,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large Glass Jar | Empty, upright on cutting board | Full of mixed green and black olives, upright on cutting board | Filled by pouring contents from Small Glass Vessel and Metal Bowl",
+    "Small Glass Vessel | Held in hands, tilted pouring olives into Large Jar | Not visible in frame | Removed from hands between 00:03 and 00:04 without visible placement action",
+    "Metal Bowl | Full of green olives, back right counter | Partially empty, back right counter | Lifted and poured into Large Glass Jar",
+    "Glass Bowl | Full of green olives, front right counter | Full of green olives, front right counter | Static, no interaction"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Small Glass Vessel",
+      "invariant_violated": "Identity & Persistence",
+      "description": "The vessel held in the person's hands at 00:03 is no longer in their hands or visible on the counter at 00:04 when they reach for the metal bowl. No visible action of placing it down occurred.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large Glass Jar | Empty, upright on cutting board | Full of mixed green and black olives, upright on cutting board | Filled by pouring contents from Small Glass Vessel and Metal Bowl\",\n    \"Small Glass Vessel | Held in hands, tilted pouring olives into Large Jar | Not visible in frame | Removed from hands between 00:03 and 00:04 without visible placement action\",\n    \"Metal Bowl | Full of green olives, back right counter | Partially empty, back right counter | Lifted and poured into Large Glass Jar\",\n    \"Glass Bowl | Full of green olives, front right counter | Full of green olives, front right counter | Static, no interaction\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Small Glass Vessel\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"The vessel held in the person's hands at 00:03 is no longer in their hands or visible on the counter at 00:04 when they reach for the metal bowl. No visible action of placing it down occurred.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

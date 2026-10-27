@@ -1,0 +1,68 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:07:40.363Z",
+  "latencyMs": 69822,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 10313,
+    "total_tokens": 13372,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9512,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block A | Start: 00:00, Pos Left, Green face '2' | End: 00:11, Pos Left, Blue face '2' | Notable: Rotated by hand at 00:01 revealing adjacent face",
+    "Block B | Start: 00:00, Pos Right, Green face '2' | End: 00:11, Pos 2nd, Blue face '2' | Notable: State changed Green '2' to Blue '2' at 00:09 without visible touch",
+    "Block C | Start: 00:03, Pos 3rd, Green face '3' | End: 00:10, Vanished | Notable: Changed to Tan '2' at 00:04, vanished between 00:09 and 00:10",
+    "Block D | Start: 00:04, Pos 4th, Blue face '3' | End: 00:10, Pos 3rd (survivor), Blue face '3' | Notable: Changed to Green '5' at 00:06, Green '3' at 00:08, Blue '3' at 00:10",
+    "Block E | Start: 00:05, Pos 5th, Blue face '3' | End: 00:09, Pos 5th, Blue face '6' | Notable: Changed to Blue '2' at 00:06, Blue '6' at 00:09, vanished at 00:10",
+    "Block F | Start: 00:06, Pos 6th, Blue face '3' | End: 00:08, Pos 6th, Blue face '6' | Notable: Changed to Blue '6' at 00:08, vanished between 00:08 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Block at position 2 (Block B)",
+      "invariant_violated": "State",
+      "description": "The block changes from Green face '2' to Blue face '2' between 00:08 and 00:09. The hand is not touching this block during the transition.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Blocks at positions 5 and 6 (Block E, Block F)",
+      "invariant_violated": "Count",
+      "description": "Total block count decreases from 6 to 5 between 00:08 and 00:09. No block is visibly removed from the surface.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "Blocks at positions 3, 4, and 5 (Block C, Block D, Block E)",
+      "invariant_violated": "Count / Existence",
+      "description": "Three blocks vanish from the row between 00:09 and 00:10. The hand only interacts with the first block. Block C (Tan '2') and Block E (Blue '6') disappear entirely.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block A | Start: 00:00, Pos Left, Green face '2' | End: 00:11, Pos Left, Blue face '2' | Notable: Rotated by hand at 00:01 revealing adjacent face\",\n    \"Block B | Start: 00:00, Pos Right, Green face '2' | End: 00:11, Pos 2nd, Blue face '2' | Notable: State changed Green '2' to Blue '2' at 00:09 without visible touch\",\n    \"Block C | Start: 00:03, Pos 3rd, Green face '3' | End: 00:10, Vanished | Notable: Changed to Tan '2' at 00:04, vanished between 00:09 and 00:10\",\n    \"Block D | Start: 00:04, Pos 4th, Blue face '3' | End: 00:10, Pos 3rd (survivor), Blue face '3' | Notable: Changed to Green '5' at 00:06, Green '3' at 00:08, Blue '3' at 00:10\",\n    \"Block E | Start: 00:05, Pos 5th, Blue face '3' | End: 00:09, Pos 5th, Blue face '6' | Notable: Changed to Blue '2' at 00:06, Blue '6' at 00:09, vanished at 00:10\",\n    \"Block F | Start: 00:06, Pos 6th, Blue face '3' | End: 00:08, Pos 6th, Blue face '6' | Notable: Changed to Blue '6' at 00:08, vanished between 00:08 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Block at position 2 (Block B)\",\n      \"invariant_violated\": \"State\",\n      \"description\": \"The block changes from Green face '2' to Blue face '2' between 00:08 and 00:09. The hand is not touching this block during the transition.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Blocks at positions 5 and 6 (Block E, Block F)\",\n      \"invariant_violated\": \"Count\",\n      \"description\": \"Total block count decreases from 6 to 5 between 00:08 and 00:09. No block is visibly removed from the surface.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Blocks at positions 3, 4, and 5 (Block C, Block D, Block E)\",\n      \"invariant_violated\": \"Count / Existence\",\n      \"description\": \"Three blocks vanish from the row between 00:09 and 00:10. The hand only interacts with the first block. Block C (Tan '2') and Block E (Blue '6') disappear entirely.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

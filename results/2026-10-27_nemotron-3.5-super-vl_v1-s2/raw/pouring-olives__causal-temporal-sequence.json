@@ -1,0 +1,40 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:03:51.539Z",
+  "latencyMs": 13065,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 1122,
+    "total_tokens": 4161,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1037,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "small glass bowl | contains green and black olives | empty | olives tipped into large jar",
+    "large glass jar | empty | contains mixed green and black olives | olives fall into it sequentially",
+    "metal bowl | contains green and black olives | empty | olives tipped into large jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"small glass bowl | contains green and black olives | empty | olives tipped into large jar\",\n    \"large glass jar | empty | contains mixed green and black olives | olives fall into it sequentially\",\n    \"metal bowl | contains green and black olives | empty | olives tipped into large jar\"\n  ],\n  \"findings\": []\n}"
+}

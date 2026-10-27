@@ -1,0 +1,65 @@
+{
+  "key": "weird-blocks__character-continuity",
+  "video": "weird-blocks.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:37:42.449Z",
+  "latencyMs": 75688,
+  "usage": {
+    "prompt_tokens": 3044,
+    "completion_tokens": 7383,
+    "total_tokens": 10427,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7013,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left Block | Green cube, number 2, left position | Blue cube, number 2, left position | Color changed from Green to Blue.",
+    "Right Block | Green cube, number 2, right position | Blue cube, number 3, right position | Color and Number changed.",
+    "Hand | Right hand, fair skin | Right hand, fair skin | Moves across table placing blocks."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Left Block",
+      "invariant_violated": "Identity Consistency",
+      "description": "Block changes from Green '2' to Blue '2' instantly between cuts without on-screen transformation.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Middle Blocks",
+      "invariant_violated": "Multi-character consistency",
+      "description": "Blocks between the ends change completely (e.g. Green '3' replaced by Green '2' and new blocks appear) without movement shown.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "Rightmost Block (Number 6)",
+      "invariant_violated": "Object Permanence",
+      "description": "Block with number 6 present at 00:09 is absent at 00:10 without being removed by the hand.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left Block | Green cube, number 2, left position | Blue cube, number 2, left position | Color changed from Green to Blue.\",\n    \"Right Block | Green cube, number 2, right position | Blue cube, number 3, right position | Color and Number changed.\",\n    \"Hand | Right hand, fair skin | Right hand, fair skin | Moves across table placing blocks.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Left Block\",\n      \"invariant_violated\": \"Identity Consistency\",\n      \"description\": \"Block changes from Green '2' to Blue '2' instantly between cuts without on-screen transformation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Middle Blocks\",\n      \"invariant_violated\": \"Multi-character consistency\",\n      \"description\": \"Blocks between the ends change completely (e.g. Green '3' replaced by Green '2' and new blocks appear) without movement shown.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Rightmost Block (Number 6)\",\n      \"invariant_violated\": \"Object Permanence\",\n      \"description\": \"Block with number 6 present at 00:09 is absent at 00:10 without being removed by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

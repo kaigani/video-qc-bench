@@ -1,0 +1,47 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:02:29.374Z",
+  "latencyMs": 19181,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1826,
+    "total_tokens": 4682,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1683,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass jar | empty | contains mixed green and purple olives | purple olives appear abruptly"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "contents of the glass jar",
+      "invariant_violated": "object permanence / continuity",
+      "description": "Purple olives suddenly appear inside the jar alongside green olives between 00:01 and 00:02 without being poured or added in the visible footage.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass jar | empty | contains mixed green and purple olives | purple olives appear abruptly\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"contents of the glass jar\",\n      \"invariant_violated\": \"object permanence / continuity\",\n      \"description\": \"Purple olives suddenly appear inside the jar alongside green olives between 00:01 and 00:02 without being poured or added in the visible footage.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

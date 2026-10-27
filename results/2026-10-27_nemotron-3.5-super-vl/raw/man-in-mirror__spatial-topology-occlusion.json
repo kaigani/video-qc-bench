@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:32:24.556Z",
+  "latencyMs": 27225,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 3723,
+    "total_tokens": 6765,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3603,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror Frame | Wooden rectangular frame surrounding glass | Same | Static throughout",
+    "Door | Wooden door with gold knob, visible in reflection behind subject | Same | Static background element in reflection",
+    "Shelves | Wooden shelving unit with bottles, visible in reflection on right | Same | Static background element in reflection",
+    "Subject | Man in white shirt, dark hair, applying swab to face | Same | Moves hands from jawline to forehead and back down"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror Frame | Wooden rectangular frame surrounding glass | Same | Static throughout\",\n    \"Door | Wooden door with gold knob, visible in reflection behind subject | Same | Static background element in reflection\",\n    \"Shelves | Wooden shelving unit with bottles, visible in reflection on right | Same | Static background element in reflection\",\n    \"Subject | Man in white shirt, dark hair, applying swab to face | Same | Moves hands from jawline to forehead and back down\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:09:22.505Z",
+  "latencyMs": 102137,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 10386,
+    "total_tokens": 13425,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10202,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | touching/tweaking initial green block | tapping final blue block | continuous motion placing blocks sequentially",
+    "Block Row | 2 blocks visible (green/green) | 8 blocks visible (multi-colored row) | sequential addition of blocks to the right"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost block",
+      "invariant_violated": "effect_without_cause",
+      "description": "The block under the hand changes from green (at 00:00) to blue (at 00:01) instantly without a visible removal or swap action, creating an unexplained state change.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | touching/tweaking initial green block | tapping final blue block | continuous motion placing blocks sequentially\",\n    \"Block Row | 2 blocks visible (green/green) | 8 blocks visible (multi-colored row) | sequential addition of blocks to the right\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"leftmost block\",\n      \"invariant_violated\": \"effect_without_cause\",\n      \"description\": \"The block under the hand changes from green (at 00:00) to blue (at 00:01) instantly without a visible removal or swap action, creating an unexplained state change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

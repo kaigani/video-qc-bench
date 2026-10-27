@@ -1,0 +1,50 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:25:59.801Z",
+  "latencyMs": 70916,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 6155,
+    "total_tokens": 9197,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5915,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | Center frame, facing camera | Left side, facing left profile | Turns body to left and approaches door",
+    "Wooden double doors | Behind man, central background | Behind man and to his right | Camera cuts to side profile",
+    "Wall clock | Upper center background on door | Upper background behind man | Remains on door, but relative position to coat changes",
+    "Blue coat | Hanging on wall left of center | Hanging on wall right of center | Swaps sides relative to clock"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Blue coat and Wall clock",
+      "invariant_violated": "Scene layout consistency",
+      "description": "In the initial frontal shot, the blue coat hangs to the left of the wall clock. In the subsequent side-angle shot, the blue coat hangs to the right of the wall clock. The relative positions of these fixed architectural elements have inverted.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | Center frame, facing camera | Left side, facing left profile | Turns body to left and approaches door\",\n    \"Wooden double doors | Behind man, central background | Behind man and to his right | Camera cuts to side profile\",\n    \"Wall clock | Upper center background on door | Upper background behind man | Remains on door, but relative position to coat changes\",\n    \"Blue coat | Hanging on wall left of center | Hanging on wall right of center | Swaps sides relative to clock\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Blue coat and Wall clock\",\n      \"invariant_violated\": \"Scene layout consistency\",\n      \"description\": \"In the initial frontal shot, the blue coat hangs to the left of the wall clock. In the subsequent side-angle shot, the blue coat hangs to the right of the wall clock. The relative positions of these fixed architectural elements have inverted.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:58:35.235Z",
+  "latencyMs": 70024,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 6293,
+    "total_tokens": 9352,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5928,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cup Front-Left | 00:00: Front-left position, contains one visible coin | 00:10: Left position in row, contains stack of coins | Moved by hand during shuffle; contents change from single coin to stack without visible stacking action",
+    "Cup Back-Left | 00:00: Back-left position, contains one large gold coin | 00:10: Middle position in row, contains stack of coins | Moved by hand during shuffle; contents change unexplained",
+    "Cup Back-Right | 00:00: Back-right position, appears empty | 00:10: Right position in row, contains stack of coins | Moved by hand during shuffle; contents appear from nowhere",
+    "Loose Coins | 00:00: Scattered across table surface | 00:10: Mostly absent from surface, concentrated under cups | Moved by cups/hands, but quantity under cups exceeds visible source coins"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Cup contents (all three cups)",
+      "invariant_violated": "Physical state / Persistence",
+      "description": "Cups sit stationary on the table from 00:05 to 00:08 with dark/empty interiors visible. At 00:09, lifting the cups reveals stacks of coins inside each cup with no visible action placing them there during the stationary period.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cup Front-Left | 00:00: Front-left position, contains one visible coin | 00:10: Left position in row, contains stack of coins | Moved by hand during shuffle; contents change from single coin to stack without visible stacking action\",\n    \"Cup Back-Left | 00:00: Back-left position, contains one large gold coin | 00:10: Middle position in row, contains stack of coins | Moved by hand during shuffle; contents change unexplained\",\n    \"Cup Back-Right | 00:00: Back-right position, appears empty | 00:10: Right position in row, contains stack of coins | Moved by hand during shuffle; contents appear from nowhere\",\n    \"Loose Coins | 00:00: Scattered across table surface | 00:10: Mostly absent from surface, concentrated under cups | Moved by cups/hands, but quantity under cups exceeds visible source coins\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Cup contents (all three cups)\",\n      \"invariant_violated\": \"Physical state / Persistence\",\n      \"description\": \"Cups sit stationary on the table from 00:05 to 00:08 with dark/empty interiors visible. At 00:09, lifting the cups reveals stacks of coins inside each cup with no visible action placing them there during the stationary period.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

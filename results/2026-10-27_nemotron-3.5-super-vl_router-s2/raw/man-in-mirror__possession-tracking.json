@@ -1,0 +1,42 @@
+{
+  "key": "man-in-mirror__possession-tracking",
+  "video": "man-in-mirror.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:10:25.985Z",
+  "latencyMs": 16272,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 1464,
+    "total_tokens": 4464,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1304,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:02: Electric razor held in right hand, shaving upper lip area.",
+    "00:02 - 00:04: Electric razor held in right hand, moving to forehead/hairline.",
+    "00:04 - 00:06: Electric razor held in right hand, shaving nose bridge area.",
+    "00:06 - 00:09: Electric razor held in right hand, shaving chin and mouth area.",
+    "00:09 - 00:11: Electric razor held in right hand, touching forehead then lowering hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:02: Electric razor held in right hand, shaving upper lip area.\",\n    \"00:02 - 00:04: Electric razor held in right hand, moving to forehead/hairline.\",\n    \"00:04 - 00:06: Electric razor held in right hand, shaving nose bridge area.\",\n    \"00:06 - 00:09: Electric razor held in right hand, shaving chin and mouth area.\",\n    \"00:09 - 00:11: Electric razor held in right hand, touching forehead then lowering hand.\"\n  ],\n  \"findings\": []\n}"
+}

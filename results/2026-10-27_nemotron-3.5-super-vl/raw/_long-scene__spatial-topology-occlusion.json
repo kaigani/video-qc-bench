@@ -1,0 +1,51 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:23:13.000Z",
+  "latencyMs": 80881,
+  "usage": {
+    "prompt_tokens": 3076,
+    "completion_tokens": 7390,
+    "total_tokens": 10466,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7096,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner Building | Exterior: Right of truck, illuminated windows | Interior: Counter, booths, kitchen pass-through | Fixed architecture connecting exterior and interior",
+    "Semi-Truck | Exterior: Left of building, White cab/Dark trailer | Exterior: Right of building exit path, Dark cab/White trailer | Position and color scheme changed",
+    "Interior Counter | Runs parallel to windows, separates seating and service | Same | Waitress and Man interact across it",
+    "Booths | Left wall along windows | Same | Static seating",
+    "Front Door | Entry/Exit near windows | Same | Used by Man for entry and exit"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Semi-truck / Exterior Layout",
+      "invariant_violated": "Layout consistency",
+      "description": "At 00:00 the semi-truck is parked to the left of the diner building. At 01:41 the man exits the diner and walks towards a truck positioned to the right of the exit path, and the truck's cab/trailer colors have inverted (white cab/dark trailer vs dark cab/white trailer).",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner Building | Exterior: Right of truck, illuminated windows | Interior: Counter, booths, kitchen pass-through | Fixed architecture connecting exterior and interior\",\n    \"Semi-Truck | Exterior: Left of building, White cab/Dark trailer | Exterior: Right of building exit path, Dark cab/White trailer | Position and color scheme changed\",\n    \"Interior Counter | Runs parallel to windows, separates seating and service | Same | Waitress and Man interact across it\",\n    \"Booths | Left wall along windows | Same | Static seating\",\n    \"Front Door | Entry/Exit near windows | Same | Used by Man for entry and exit\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Semi-truck / Exterior Layout\",\n      \"invariant_violated\": \"Layout consistency\",\n      \"description\": \"At 00:00 the semi-truck is parked to the left of the diner building. At 01:41 the man exits the diner and walks towards a truck positioned to the right of the exit path, and the truck's cab/trailer colors have inverted (white cab/dark trailer vs dark cab/white trailer).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

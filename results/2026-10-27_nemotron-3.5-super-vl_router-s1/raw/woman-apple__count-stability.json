@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:55:41.075Z",
+  "latencyMs": 20383,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 2020,
+    "total_tokens": 5066,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1874,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tomato held by woman: count 1, visible 00:00-00:10, no change.",
+    "Pile of red tomatoes (left stall): count static pile, visible 00:00-00:10, occluded by passersby but static.",
+    "Pile of green fruit (left stall): count static pile, visible 00:00-00:10, static.",
+    "Pile of red tomatoes (right stall): count static pile, visible 00:00-00:10, static."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Tomato held by woman: count 1, visible 00:00-00:10, no change.\",\n    \"Pile of red tomatoes (left stall): count static pile, visible 00:00-00:10, occluded by passersby but static.\",\n    \"Pile of green fruit (left stall): count static pile, visible 00:00-00:10, static.\",\n    \"Pile of red tomatoes (right stall): count static pile, visible 00:00-00:10, static.\"\n  ],\n  \"findings\": []\n}"
+}

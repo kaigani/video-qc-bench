@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:38:29.062Z",
+  "latencyMs": 58244,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 8384,
+    "total_tokens": 11370,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8216,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Aerodynamic slipstream from car motion affecting hair",
+    "Aerodynamic slipstream from car motion affecting car antenna"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Car antenna",
+      "invariant_violated": "Air resistance on thin vertical objects during motion",
+      "description": "The vehicle is in motion (evidenced by moving background scenery and road markings), creating airflow over the roof. While the woman's hair streams back confirming airflow, the thin vertical antenna on the rear roof remains perfectly rigid and upright, showing no deflection or vibration from air resistance.",
+      "severity": "minor",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Aerodynamic slipstream from car motion affecting hair\",\n    \"Aerodynamic slipstream from car motion affecting car antenna\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Car antenna\",\n      \"invariant_violated\": \"Air resistance on thin vertical objects during motion\",\n      \"description\": \"The vehicle is in motion (evidenced by moving background scenery and road markings), creating airflow over the roof. While the woman's hair streams back confirming airflow, the thin vertical antenna on the rear roof remains perfectly rigid and upright, showing no deflection or vibration from air resistance.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

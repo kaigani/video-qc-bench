@@ -33,6 +33,7 @@ findings — produces measurably different (and per-model, diagnostic) results. 
 | Gemini 3.7 Flash | **22** | 25/141 | 7/48 | 3 | $0.15 |
 | Gemini Pro Latest (reasoning) | **22** | 70/141 | 24/48 | 48 | $2.15 |
 | Nemotron 3 Nano (free, reasoning) | **11** | 14/141 | 5/48 | 3 | $0.00 |
+| Nemotron 3.5 Super VL (free, reasoning)† | **9** | 25/141 | 8/48 | 16 | $0.00 |
 | TwelveLabs Pegasus 1.5 | **6** | 6/141 | 2/48 | 0 | ~$0.58 |
 
 \* Ox Alpha was OpenRouter's anonymized stealth slug for GLM 5.3 Flash (revealed 2026-08-26).
@@ -40,6 +41,12 @@ Pricing is $0.15/1M input tokens, $0.50/1M output tokens (cached input reads dis
 ~$0.03/1M). The stealth run itself was free under a promotional trial (actual cost $0.00); the
 figure above is the estimated cost at published pricing applied to the run's actual usage
 (664K input / 469K output tokens across 84 calls).
+
+† First model run under the full 2.0 protocol (v1 × 3 samples + feature router × 3 samples;
+see `results/2026-10-27_nemotron-3.5-super-vl_2.0-protocol.md`). The row above is the first v1
+sample, for comparability; the three identical v1 runs scored 9 / 17 / 13. Union across all six
+samples: 14/48 defects, 39/141 detection. The provider samples a fixed handful of frames per clip
+(same prompt-token count for 10 s and 2 min videos), which drives most of its FPs.
 
 Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
 false-positive finding. The ground truth includes 12 defects first surfaced or prompted by model findings and then

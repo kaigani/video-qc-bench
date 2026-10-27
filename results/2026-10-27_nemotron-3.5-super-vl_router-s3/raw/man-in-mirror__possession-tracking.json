@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__possession-tracking",
+  "video": "man-in-mirror.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:31:05.679Z",
+  "latencyMs": 18166,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 2443,
+    "total_tokens": 5443,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2325,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 Electric Shaver: Right Hand",
+    "00:00 Cotton Pad: Left Hand",
+    "00:02 Cotton Pad: Left Hand (applied to forehead)",
+    "00:05 Cotton Pad: Left Hand (moved to cheek/nose)",
+    "00:09 Electric Shaver: Right Hand (moved to cheek)",
+    "00:11 Both objects: Lowered and exited frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 Electric Shaver: Right Hand\",\n    \"00:00 Cotton Pad: Left Hand\",\n    \"00:02 Cotton Pad: Left Hand (applied to forehead)\",\n    \"00:05 Cotton Pad: Left Hand (moved to cheek/nose)\",\n    \"00:09 Electric Shaver: Right Hand (moved to cheek)\",\n    \"00:11 Both objects: Lowered and exited frame\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:36:49.940Z",
+  "latencyMs": 98114,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 12671,
+    "total_tokens": 15717,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12530,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "People: count 4 at 00:00 (main subject + 3 background pedestrians)",
+    "People: count 5 at 00:01 (woman in blue shirt enters left foreground)",
+    "People: count 6 at 00:02 (man in white shirt enters left foreground)",
+    "People: count 6 at 00:03 (occlusion by foreground pedestrians)",
+    "People: count varies at 00:04 (foreground pedestrians move right, background pedestrians occluded or exit left into stall)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"People: count 4 at 00:00 (main subject + 3 background pedestrians)\",\n    \"People: count 5 at 00:01 (woman in blue shirt enters left foreground)\",\n    \"People: count 6 at 00:02 (man in white shirt enters left foreground)\",\n    \"People: count 6 at 00:03 (occlusion by foreground pedestrians)\",\n    \"People: count varies at 00:04 (foreground pedestrians move right, background pedestrians occluded or exit left into stall)\"\n  ],\n  \"findings\": []\n}"
+}

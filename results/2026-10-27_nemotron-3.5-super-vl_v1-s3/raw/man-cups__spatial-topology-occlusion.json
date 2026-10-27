@@ -1,0 +1,42 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:30:38.039Z",
+  "latencyMs": 26778,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 2824,
+    "total_tokens": 5866,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2680,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table | round table covered in orange cloth with circular patterns | same table, full surface visible | camera pulls back to reveal extent",
+    "cups | three metal cans in triangular formation | same cans, positions shifted by hands | manipulated by magician",
+    "coins | scattered coins around base of cups | scattered coins | occluded/revealed by cup movement",
+    "magician | hands only, entering from top left | full upper body, blue suit | revealed by camera pullback",
+    "background | blurred windows and furniture | clear windows behind magician, chairs to sides | consistent room geometry"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"table | round table covered in orange cloth with circular patterns | same table, full surface visible | camera pulls back to reveal extent\",\n    \"cups | three metal cans in triangular formation | same cans, positions shifted by hands | manipulated by magician\",\n    \"coins | scattered coins around base of cups | scattered coins | occluded/revealed by cup movement\",\n    \"magician | hands only, entering from top left | full upper body, blue suit | revealed by camera pullback\",\n    \"background | blurred windows and furniture | clear windows behind magician, chairs to sides | consistent room geometry\"\n  ],\n  \"findings\": []\n}"
+}

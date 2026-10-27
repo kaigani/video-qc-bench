@@ -1,0 +1,43 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:37:57.748Z",
+  "latencyMs": 11423,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1254,
+    "total_tokens": 4296,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1077,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | Center frame, facing camera, striped shirt | Center frame, facing camera, striped shirt | Static position throughout",
+    "Tweezers | Held in right hand, pinching object held by left hand | Held in right hand, manipulating object | Rapid movement away and back to object around 00:05",
+    "Jewelry Object | Held between left thumb and forefinger | Held between left thumb and forefinger | Manipulated by tweezers",
+    "Watch | Visible on left wrist | Visible on left wrist | Static",
+    "Table Surface | Visible at bottom edge | Visible at bottom edge | Static",
+    "Background Wall | Plain light wall behind subject | Plain light wall behind subject | Static"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | Center frame, facing camera, striped shirt | Center frame, facing camera, striped shirt | Static position throughout\",\n    \"Tweezers | Held in right hand, pinching object held by left hand | Held in right hand, manipulating object | Rapid movement away and back to object around 00:05\",\n    \"Jewelry Object | Held between left thumb and forefinger | Held between left thumb and forefinger | Manipulated by tweezers\",\n    \"Watch | Visible on left wrist | Visible on left wrist | Static\",\n    \"Table Surface | Visible at bottom edge | Visible at bottom edge | Static\",\n    \"Background Wall | Plain light wall behind subject | Plain light wall behind subject | Static\"\n  ],\n  \"findings\": []\n}"
+}

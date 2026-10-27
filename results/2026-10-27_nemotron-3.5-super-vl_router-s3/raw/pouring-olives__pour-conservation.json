@@ -1,0 +1,68 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:32:19.531Z",
+  "latencyMs": 38747,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 5666,
+    "total_tokens": 8666,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5175,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Large Glass Jar: Empty.",
+    "00:00: Small Glass Bowl: Full of green olives.",
+    "00:00: Metal Bowl: Full of green olives (background).",
+    "00:01: Large Glass Jar: Contains green and purple olives.",
+    "00:01: Metal Bowl: Pouring green olives into jar.",
+    "00:02: Large Glass Jar: Fill level rising with mixed olives.",
+    "00:03: Large Glass Jar: Fill level rising.",
+    "00:04: Metal Bowl: Placed on counter, partially full.",
+    "00:05: Metal Bowl: Pouring green olives into jar.",
+    "00:06: Metal Bowl: Pouring green olives into jar.",
+    "00:07: Metal Bowl: Pouring green olives into jar.",
+    "00:08: Metal Bowl: Pouring green olives into jar.",
+    "00:09: Metal Bowl: Pouring green olives into jar.",
+    "00:10: Metal Bowl: Placed on counter, mostly empty."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Large Glass Jar",
+      "invariant_violated": "conservation",
+      "description": "Purple olives appear in the jar suddenly between 00:00 and 00:01. The jar was empty at 00:00, and no source containing purple olives was shown or emptied into it.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Source Container / Large Glass Jar",
+      "invariant_violated": "source contents match",
+      "description": "At 00:01, green olives are being poured from a metal bowl, but the destination jar already contains purple olives which did not originate from this source.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Large Glass Jar: Empty.\",\n    \"00:00: Small Glass Bowl: Full of green olives.\",\n    \"00:00: Metal Bowl: Full of green olives (background).\",\n    \"00:01: Large Glass Jar: Contains green and purple olives.\",\n    \"00:01: Metal Bowl: Pouring green olives into jar.\",\n    \"00:02: Large Glass Jar: Fill level rising with mixed olives.\",\n    \"00:03: Large Glass Jar: Fill level rising.\",\n    \"00:04: Metal Bowl: Placed on counter, partially full.\",\n    \"00:05: Metal Bowl: Pouring green olives into jar.\",\n    \"00:06: Metal Bowl: Pouring green olives into jar.\",\n    \"00:07: Metal Bowl: Pouring green olives into jar.\",\n    \"00:08: Metal Bowl: Pouring green olives into jar.\",\n    \"00:09: Metal Bowl: Pouring green olives into jar.\",\n    \"00:10: Metal Bowl: Placed on counter, mostly empty.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Large Glass Jar\",\n      \"invariant_violated\": \"conservation\",\n      \"description\": \"Purple olives appear in the jar suddenly between 00:00 and 00:01. The jar was empty at 00:00, and no source containing purple olives was shown or emptied into it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Source Container / Large Glass Jar\",\n      \"invariant_violated\": \"source contents match\",\n      \"description\": \"At 00:01, green olives are being poured from a metal bowl, but the destination jar already contains purple olives which did not originate from this source.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:14:49.262Z",
+  "latencyMs": 15869,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 1438,
+    "total_tokens": 4477,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1343,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on station wagon hood, arms crossed, full shot | close-up profile view, arms crossed | camera zooms in continuously, sunlight hits face",
+    "station wagon | full front grille and hood visible | hood and grille largely cropped out | camera zoom pushes past car body",
+    "hair | blowing in breeze | blowing across face | continuous wind action"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on station wagon hood, arms crossed, full shot | close-up profile view, arms crossed | camera zooms in continuously, sunlight hits face\",\n    \"station wagon | full front grille and hood visible | hood and grille largely cropped out | camera zoom pushes past car body\",\n    \"hair | blowing in breeze | blowing across face | continuous wind action\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,47 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:20:29.942Z",
+  "latencyMs": 58799,
+  "usage": {
+    "prompt_tokens": 2890,
+    "completion_tokens": 4750,
+    "total_tokens": 7640,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4563,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Truck | White/silver cab visible in opening exterior shot | Dark green cab with white stripes visible in later exterior shots | Vehicle appearance changes between scenes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:27",
+      "entity": "Truck",
+      "invariant_violated": "Continuity / Object Identity",
+      "description": "The semi-truck parked outside the diner changes appearance. In the opening shot (00:00), the cab appears white or light silver. In subsequent shots (00:27, 01:41), the truck is dark green with white stripes. It is implausible for the vehicle to change color without explanation.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Truck | White/silver cab visible in opening exterior shot | Dark green cab with white stripes visible in later exterior shots | Vehicle appearance changes between scenes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:27\",\n      \"entity\": \"Truck\",\n      \"invariant_violated\": \"Continuity / Object Identity\",\n      \"description\": \"The semi-truck parked outside the diner changes appearance. In the opening shot (00:00), the cab appears white or light silver. In subsequent shots (00:27, 01:41), the truck is dark green with white stripes. It is implausible for the vehicle to change color without explanation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

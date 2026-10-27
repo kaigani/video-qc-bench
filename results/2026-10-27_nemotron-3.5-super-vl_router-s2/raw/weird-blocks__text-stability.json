@@ -1,0 +1,57 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:16:19.100Z",
+  "latencyMs": 65582,
+  "usage": {
+    "prompt_tokens": 3006,
+    "completion_tokens": 7584,
+    "total_tokens": 10590,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7139,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Left green block reads '2'; Right green block reads '2'",
+    "00:02: Left blue block reads '2'; Right green block reads '2'",
+    "00:03: Left blue block reads '2'; Middle blue block reads '3'; Right green block reads '2'",
+    "00:04: Left blue block reads '2'; Middle blue block reads '3'; Right yellow block reads '3'",
+    "00:05: Left blue block reads '2'; Middle blue block reads '3'; Middle-right yellow block reads '3'; Right light blue block reads '3'",
+    "00:06: Left blue block reads '2'; Second blue block reads '3'; Third yellow block reads '3'; Fourth green block reads '5'; Fifth light blue block reads '2'",
+    "00:07: Sequence adds a sixth light blue block reading '3' at the end",
+    "00:08: Left blue block reads '2'; Right blue block reads '3'",
+    "00:09: Left blue block reads '2'; Middle blue block reads '3'; Right yellow block reads '3'",
+    "00:10: Left blue block reads '2'; Right blue block reads '3'",
+    "00:11: Left blue block reads '2'; Right blue block reads '2'"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:11",
+      "entity": "Rightmost blue block in the final pair",
+      "invariant_violated": "STABILITY",
+      "description": "At 00:10 the block clearly reads '3'. At 00:11 the same position holds a blue block reading '2'. No visible rotation or swap action bridges these two states in the provided frames.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Left green block reads '2'; Right green block reads '2'\",\n    \"00:02: Left blue block reads '2'; Right green block reads '2'\",\n    \"00:03: Left blue block reads '2'; Middle blue block reads '3'; Right green block reads '2'\",\n    \"00:04: Left blue block reads '2'; Middle blue block reads '3'; Right yellow block reads '3'\",\n    \"00:05: Left blue block reads '2'; Middle blue block reads '3'; Middle-right yellow block reads '3'; Right light blue block reads '3'\",\n    \"00:06: Left blue block reads '2'; Second blue block reads '3'; Third yellow block reads '3'; Fourth green block reads '5'; Fifth light blue block reads '2'\",\n    \"00:07: Sequence adds a sixth light blue block reading '3' at the end\",\n    \"00:08: Left blue block reads '2'; Right blue block reads '3'\",\n    \"00:09: Left blue block reads '2'; Middle blue block reads '3'; Right yellow block reads '3'\",\n    \"00:10: Left blue block reads '2'; Right blue block reads '3'\",\n    \"00:11: Left blue block reads '2'; Right blue block reads '2'\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:11\",\n      \"entity\": \"Rightmost blue block in the final pair\",\n      \"invariant_violated\": \"STABILITY\",\n      \"description\": \"At 00:10 the block clearly reads '3'. At 00:11 the same position holds a blue block reading '2'. No visible rotation or swap action bridges these two states in the provided frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

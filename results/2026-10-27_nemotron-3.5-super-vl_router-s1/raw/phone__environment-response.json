@@ -1,0 +1,40 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:50:50.178Z",
+  "latencyMs": 28601,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 2321,
+    "total_tokens": 5307,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2192,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background foliage behind railing (00:00-00:09): Remains rigid and static; no wind-induced fluttering or bending observed.",
+    "Background pedestrian (00:00-00:09): Walking away up stairs; clothing and carried bag move consistent with gait, not external wind force.",
+    "Phone screen reflections (00:03-00:07): Shadows shift across the display due to hand/phone movement relative to light source, consistent with physical handling."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Background foliage behind railing (00:00-00:09): Remains rigid and static; no wind-induced fluttering or bending observed.\",\n    \"Background pedestrian (00:00-00:09): Walking away up stairs; clothing and carried bag move consistent with gait, not external wind force.\",\n    \"Phone screen reflections (00:03-00:07): Shadows shift across the display due to hand/phone movement relative to light source, consistent with physical handling.\"\n  ],\n  \"findings\": []\n}"
+}

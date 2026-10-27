@@ -1,0 +1,42 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:02:10.176Z",
+  "latencyMs": 31389,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1697,
+    "total_tokens": 4739,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1554,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wall | Left edge of frame | Left edge of frame (blurred) | Static background element",
+    "Stairs | Bottom left corner | Center/Bottom left | Camera tilts down to reveal full staircase",
+    "Railing | Right side vertical bars | Right side diagonal bars | Camera angle shifts from phone to stairs",
+    "Person (background) | Top right, walking away with orange bag | Out of frame/focus | Walks further into the distance",
+    "Phone | Extreme foreground, held by hands | Moves out of focus/frame | Lowered by user at end of clip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wall | Left edge of frame | Left edge of frame (blurred) | Static background element\",\n    \"Stairs | Bottom left corner | Center/Bottom left | Camera tilts down to reveal full staircase\",\n    \"Railing | Right side vertical bars | Right side diagonal bars | Camera angle shifts from phone to stairs\",\n    \"Person (background) | Top right, walking away with orange bag | Out of frame/focus | Walks further into the distance\",\n    \"Phone | Extreme foreground, held by hands | Moves out of focus/frame | Lowered by user at end of clip\"\n  ],\n  \"findings\": []\n}"
+}

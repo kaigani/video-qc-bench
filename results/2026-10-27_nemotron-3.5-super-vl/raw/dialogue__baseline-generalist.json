@@ -1,0 +1,48 @@
+{
+  "key": "dialogue__baseline-generalist",
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:25:55.665Z",
+  "latencyMs": 55402,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 6870,
+    "total_tokens": 9726,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6609,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Sheldon Cooper | Green and white striped shirt, facing forward/center | Green and white striped shirt, facing left profile | Turns body to the left and approaches a door",
+    "Door and Wall | Wooden door with glass panels and clock behind actor | Solid wooden door with light switches on adjacent wall | Background elements change inconsistently during turn"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Door and adjacent wall fixtures",
+      "invariant_violated": "Set Continuity",
+      "description": "When Sheldon turns to face the door at 00:08, the door appears to be solid wood without glass panels, whereas the door behind him in the opening shots (00:00-00:06) clearly features glass panes near the top. Additionally, a bank of light switches appears on the wall to the left of the door frame at 00:08, which was not visible in the previous framing where only a coat hook was seen on that side.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Sheldon Cooper | Green and white striped shirt, facing forward/center | Green and white striped shirt, facing left profile | Turns body to the left and approaches a door\",\n    \"Door and Wall | Wooden door with glass panels and clock behind actor | Solid wooden door with light switches on adjacent wall | Background elements change inconsistently during turn\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Door and adjacent wall fixtures\",\n      \"invariant_violated\": \"Set Continuity\",\n      \"description\": \"When Sheldon turns to face the door at 00:08, the door appears to be solid wood without glass panels, whereas the door behind him in the opening shots (00:00-00:06) clearly features glass panes near the top. Additionally, a bank of light switches appears on the wall to the left of the door frame at 00:08, which was not visible in the previous framing where only a coat hook was seen on that side.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:23:22.673Z",
+  "latencyMs": 32680,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1869,
+    "total_tokens": 4911,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1767,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror wall | Right side of room | Right side of room | Static reflective surface",
+    "Double doors | Left wall | Left wall | Static architectural feature",
+    "Ballet barre | Back wall | Back wall | Static fixture",
+    "Blue bin | Back wall left of center | Back wall left of center | Static object",
+    "Woman | Center foreground | Center foreground | Performing arm movements"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror wall | Right side of room | Right side of room | Static reflective surface\",\n    \"Double doors | Left wall | Left wall | Static architectural feature\",\n    \"Ballet barre | Back wall | Back wall | Static fixture\",\n    \"Blue bin | Back wall left of center | Back wall left of center | Static object\",\n    \"Woman | Center foreground | Center foreground | Performing arm movements\"\n  ],\n  \"findings\": []\n}"
+}

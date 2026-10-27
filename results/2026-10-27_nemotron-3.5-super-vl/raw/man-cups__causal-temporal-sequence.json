@@ -1,0 +1,49 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:30:37.690Z",
+  "latencyMs": 53297,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 6459,
+    "total_tokens": 9498,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6200,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand holding coin | holding gold coin above table at 00:00 | hand empty, engaging cups at 00:01 | coin vanishes from grip without visible placement",
+    "cups | stationary at 00:00 | shuffled rapidly at 00:01-00:04 | cups move from center line to scattered positions",
+    "table coins | scattered on orange cloth at 00:00 | scattered on orange cloth at 00:04 | arrangement remains largely static"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "gold coin",
+      "invariant_violated": "proportionality & completion",
+      "description": "The hand holds a coin at 00:00 and moves downward toward the cups, but by 00:01 the coin is no longer visible in the hand or on the table, and has not been seen entering a cup. The initiated action of placing the coin dissolves without completion.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand holding coin | holding gold coin above table at 00:00 | hand empty, engaging cups at 00:01 | coin vanishes from grip without visible placement\",\n    \"cups | stationary at 00:00 | shuffled rapidly at 00:01-00:04 | cups move from center line to scattered positions\",\n    \"table coins | scattered on orange cloth at 00:00 | scattered on orange cloth at 00:04 | arrangement remains largely static\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"gold coin\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"The hand holds a coin at 00:00 and moves downward toward the cups, but by 00:01 the coin is no longer visible in the hand or on the table, and has not been seen entering a cup. The initiated action of placing the coin dissolves without completion.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

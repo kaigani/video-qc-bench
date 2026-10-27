@@ -1,0 +1,43 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:33:25.086Z",
+  "latencyMs": 17115,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1670,
+    "total_tokens": 4712,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1507,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Staircase | Left side, leading down into background | Left side, leading down into background | Static structure",
+    "Handrail | Right side, running diagonally along walkway | Right side, running diagonally along walkway | Static structure",
+    "Wall | Left edge bounding the staircase | Left edge bounding the staircase | Static structure",
+    "Greenery | Below railing on right side | Below railing on right side | Static vegetation",
+    "Person (background) | Walking away carrying red bag | Walks further away until out of frame | Moving away from camera",
+    "Phone | Held in foreground hand | Racks out of focus and exits view | Moving out of focal plane"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Staircase | Left side, leading down into background | Left side, leading down into background | Static structure\",\n    \"Handrail | Right side, running diagonally along walkway | Right side, running diagonally along walkway | Static structure\",\n    \"Wall | Left edge bounding the staircase | Left edge bounding the staircase | Static structure\",\n    \"Greenery | Below railing on right side | Below railing on right side | Static vegetation\",\n    \"Person (background) | Walking away carrying red bag | Walks further away until out of frame | Moving away from camera\",\n    \"Phone | Held in foreground hand | Racks out of focus and exits view | Moving out of focal plane\"\n  ],\n  \"findings\": []\n}"
+}

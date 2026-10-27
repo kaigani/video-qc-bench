@@ -1,0 +1,64 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:17:02.922Z",
+  "latencyMs": 203923,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 8412,
+    "total_tokens": 11458,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8051,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: 2 green blocks",
+    "00:01: 2 blocks (1 blue, 1 green)",
+    "00:03: 3 blocks",
+    "00:04: 4 blocks",
+    "00:05: 5 blocks",
+    "00:06: 6 blocks",
+    "00:07: 5 blocks",
+    "00:09: 4 blocks",
+    "00:10: 3 blocks",
+    "00:11: 2 blocks"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "green block labeled 3",
+      "invariant_violated": "object permanence",
+      "description": "The rightmost green block labeled 3 is visible at 00:06 but is missing at 00:07 without being visibly carried off-screen or removed.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:11",
+      "entity": "blocks",
+      "invariant_violated": "object permanence",
+      "description": "The scene resets from 3 blocks (orange 3, blue 5, light blue 2) at 00:10 to 2 blocks (blue 26, green 2) at 00:11 without any visible cause or mechanism.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: 2 green blocks\",\n    \"00:01: 2 blocks (1 blue, 1 green)\",\n    \"00:03: 3 blocks\",\n    \"00:04: 4 blocks\",\n    \"00:05: 5 blocks\",\n    \"00:06: 6 blocks\",\n    \"00:07: 5 blocks\",\n    \"00:09: 4 blocks\",\n    \"00:10: 3 blocks\",\n    \"00:11: 2 blocks\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"green block labeled 3\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The rightmost green block labeled 3 is visible at 00:06 but is missing at 00:07 without being visibly carried off-screen or removed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:11\",\n      \"entity\": \"blocks\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The scene resets from 3 blocks (orange 3, blue 5, light blue 2) at 00:10 to 2 blocks (blue 26, green 2) at 00:11 without any visible cause or mechanism.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

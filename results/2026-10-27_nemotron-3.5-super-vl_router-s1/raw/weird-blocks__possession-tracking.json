@@ -1,0 +1,82 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:55:20.627Z",
+  "latencyMs": 97726,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 7255,
+    "total_tokens": 10255,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6323,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Green block '2' (left): Held by left hand, placed on surface (00:00). Vanishes/replaced by Blue block '3' (00:01).",
+    "Green block '2' (right): On surface (00:00). Vanishes/replaced by Green block '3' (00:01).",
+    "Blue block '3': On surface (00:01-00:02). Vanishes/replaced by Blue block '2' and Green block '2' (00:03).",
+    "Green block '3': On surface (00:01-00:03). Vanishes/replaced by Yellow block '2' and Blue block '3' (00:04).",
+    "Blue block '2': On surface (00:03-00:10). Hand adjusts position (00:08).",
+    "Green block '2' (middle): On surface (00:03-00:10).",
+    "Yellow block '2': On surface (00:04-00:09). Vanishes (00:10).",
+    "Blue block '3' (right 00:04): On surface (00:04). Vanishes/replaced by Light blue block '3' (00:05).",
+    "Light blue block '3': On surface (00:05-00:08). Vanishes/replaced by new arrangement (00:09).",
+    "Green block '5': On surface (00:06-00:09). Vanishes (00:10).",
+    "Light blue block '2': On surface (00:06-00:09). Vanishes (00:10).",
+    "Light blue block '3' (rightmost 00:07): On surface (00:07-00:08). Vanishes (00:09)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Green blocks '2'",
+      "invariant_violated": "placement persistence",
+      "description": "Two green blocks labeled '2' are present at 00:00 but are instantly replaced by a blue block '3' and a green block '3' at 00:01 without visible transfer or container usage.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Blue block '3'",
+      "invariant_violated": "placement persistence",
+      "description": "The blue block '3' present at 00:02 vanishes and is replaced by a blue block '2' and a green block '2' at 00:03 with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Blue block '3' (from 00:04)",
+      "invariant_violated": "placement persistence",
+      "description": "A blue block '3' at the right end of the row at 00:04 vanishes and is replaced by a light blue block '3' and a green block '3' at 00:05.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "Yellow block '2', Green block '5', Light blue block '2', Light blue block '3'",
+      "invariant_violated": "placement persistence",
+      "description": "Four blocks present in the row at 00:09 vanish instantly between 00:09 and 00:10, leaving only the blue '2' and green '2' blocks.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Green block '2' (left): Held by left hand, placed on surface (00:00). Vanishes/replaced by Blue block '3' (00:01).\",\n    \"Green block '2' (right): On surface (00:00). Vanishes/replaced by Green block '3' (00:01).\",\n    \"Blue block '3': On surface (00:01-00:02). Vanishes/replaced by Blue block '2' and Green block '2' (00:03).\",\n    \"Green block '3': On surface (00:01-00:03). Vanishes/replaced by Yellow block '2' and Blue block '3' (00:04).\",\n    \"Blue block '2': On surface (00:03-00:10). Hand adjusts position (00:08).\",\n    \"Green block '2' (middle): On surface (00:03-00:10).\",\n    \"Yellow block '2': On surface (00:04-00:09). Vanishes (00:10).\",\n    \"Blue block '3' (right 00:04): On surface (00:04). Vanishes/replaced by Light blue block '3' (00:05).\",\n    \"Light blue block '3': On surface (00:05-00:08). Vanishes/replaced by new arrangement (00:09).\",\n    \"Green block '5': On surface (00:06-00:09). Vanishes (00:10).\",\n    \"Light blue block '2': On surface (00:06-00:09). Vanishes (00:10).\",\n    \"Light blue block '3' (rightmost 00:07): On surface (00:07-00:08). Vanishes (00:09).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Green blocks '2'\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"Two green blocks labeled '2' are present at 00:00 but are instantly replaced by a blue block '3' and a green block '3' at 00:01 without visible transfer or container usage.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Blue block '3'\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"The blue block '3' present at 00:02 vanishes and is replaced by a blue block '2' and a green block '2' at 00:03 with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Blue block '3' (from 00:04)\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"A blue block '3' at the right end of the row at 00:04 vanishes and is replaced by a light blue block '3' and a green block '3' at 00:05.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Yellow block '2', Green block '5', Light blue block '2', Light blue block '3'\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"Four blocks present in the row at 00:09 vanish instantly between 00:09 and 00:10, leaving only the blue '2' and green '2' blocks.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

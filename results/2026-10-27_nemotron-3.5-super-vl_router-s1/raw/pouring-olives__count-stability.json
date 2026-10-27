@@ -1,0 +1,66 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:51:30.683Z",
+  "latencyMs": 32654,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 5602,
+    "total_tokens": 8648,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4987,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 | Large Jar | Olives: 0 | State: Empty",
+    "00:01 | Large Jar | Green Olives: ~5 | Cause: Visible pouring from small glass bowl",
+    "00:02 | Large Jar | Mixed Olives (Green/Dark): ~15 | Cause: Unexplained appearance of dark olives (jump cut)",
+    "00:03 | Large Jar | Mixed Olives: ~25 | Cause: Visible pouring continues",
+    "00:04 | Large Jar | Mixed Olives: ~30 | Cause: Pouring finishes, vessel set down",
+    "00:05 | Large Jar | Mixed Olives: ~50 | Cause: Unexplained sudden increase in volume (jump cut)",
+    "00:06 | Large Jar | Mixed Olives: ~55 | Cause: Visible pouring from small bowl resumes",
+    "00:07 | Large Jar | Mixed Olives: ~65 | Cause: Visible pouring continues",
+    "00:08 | Large Jar | Mixed Olives: ~75 | Cause: Visible pouring continues",
+    "00:09 | Large Jar | Mixed Olives: ~85 | Cause: Visible pouring continues",
+    "00:10 | Large Jar | Mixed Olives: ~90 | Cause: Visible pouring continues",
+    "00:11 | Large Jar | Mixed Olives: ~95 | Cause: Pouring finishes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01-00:02",
+      "entity": "Dark olives in large jar and pouring vessel",
+      "invariant_violated": "Visible cause for object addition",
+      "description": "Between 00:01 and 00:02, dark purple olives suddenly appear in the large jar and inside the pouring vessel. At 00:01 only green olives are visible being poured. No action shows dark olives being added or swapped into the scene.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04-00:05",
+      "entity": "Olives in large jar",
+      "invariant_violated": "Visible cause for object addition",
+      "description": "Between 00:04 and 00:05, the count of olives in the large jar jumps significantly (from approx 30 to approx 50) without showing the pouring action that would account for the additional objects.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 | Large Jar | Olives: 0 | State: Empty\",\n    \"00:01 | Large Jar | Green Olives: ~5 | Cause: Visible pouring from small glass bowl\",\n    \"00:02 | Large Jar | Mixed Olives (Green/Dark): ~15 | Cause: Unexplained appearance of dark olives (jump cut)\",\n    \"00:03 | Large Jar | Mixed Olives: ~25 | Cause: Visible pouring continues\",\n    \"00:04 | Large Jar | Mixed Olives: ~30 | Cause: Pouring finishes, vessel set down\",\n    \"00:05 | Large Jar | Mixed Olives: ~50 | Cause: Unexplained sudden increase in volume (jump cut)\",\n    \"00:06 | Large Jar | Mixed Olives: ~55 | Cause: Visible pouring from small bowl resumes\",\n    \"00:07 | Large Jar | Mixed Olives: ~65 | Cause: Visible pouring continues\",\n    \"00:08 | Large Jar | Mixed Olives: ~75 | Cause: Visible pouring continues\",\n    \"00:09 | Large Jar | Mixed Olives: ~85 | Cause: Visible pouring continues\",\n    \"00:10 | Large Jar | Mixed Olives: ~90 | Cause: Visible pouring continues\",\n    \"00:11 | Large Jar | Mixed Olives: ~95 | Cause: Pouring finishes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01-00:02\",\n      \"entity\": \"Dark olives in large jar and pouring vessel\",\n      \"invariant_violated\": \"Visible cause for object addition\",\n      \"description\": \"Between 00:01 and 00:02, dark purple olives suddenly appear in the large jar and inside the pouring vessel. At 00:01 only green olives are visible being poured. No action shows dark olives being added or swapped into the scene.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04-00:05\",\n      \"entity\": \"Olives in large jar\",\n      \"invariant_violated\": \"Visible cause for object addition\",\n      \"description\": \"Between 00:04 and 00:05, the count of olives in the large jar jumps significantly (from approx 30 to approx 50) without showing the pouring action that would account for the additional objects.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

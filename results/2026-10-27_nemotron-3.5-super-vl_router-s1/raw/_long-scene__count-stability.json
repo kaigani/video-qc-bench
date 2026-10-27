@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:39:45.787Z",
+  "latencyMs": 62948,
+  "usage": {
+    "prompt_tokens": 3080,
+    "completion_tokens": 6311,
+    "total_tokens": 9391,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6084,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Stools: count 6 at 00:18, count 6 at 00:59.",
+    "Plates: count 2 stacks at 00:50, count 2 stacks at 01:00.",
+    "Cups: count 1 stack at 00:50, count 1 stack at 01:00.",
+    "Dollar bills: count 0 prior to 01:40, count 3 at 01:40."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:40",
+      "entity": "Dollar bills",
+      "invariant_violated": "Visible cause required for count change",
+      "description": "Three $100 bills appear on the counter at 01:40 without any visible transaction or placement action occurring between cuts.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Stools: count 6 at 00:18, count 6 at 00:59.\",\n    \"Plates: count 2 stacks at 00:50, count 2 stacks at 01:00.\",\n    \"Cups: count 1 stack at 00:50, count 1 stack at 01:00.\",\n    \"Dollar bills: count 0 prior to 01:40, count 3 at 01:40.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:40\",\n      \"entity\": \"Dollar bills\",\n      \"invariant_violated\": \"Visible cause required for count change\",\n      \"description\": \"Three $100 bills appear on the counter at 01:40 without any visible transaction or placement action occurring between cuts.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

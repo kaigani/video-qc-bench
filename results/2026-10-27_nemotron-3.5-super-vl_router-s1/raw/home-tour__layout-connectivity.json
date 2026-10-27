@@ -1,0 +1,50 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:47:32.465Z",
+  "latencyMs": 85436,
+  "usage": {
+    "prompt_tokens": 3016,
+    "completion_tokens": 9630,
+    "total_tokens": 12646,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9380,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen: Contains stove, countertop microwave, cabinets. Doorway on left leads to Hallway.",
+    "Hallway: Connects Kitchen (entry from left) and Bedroom (entry from right). Ends at French doors.",
+    "Bedroom: Contains bed, chandelier, windows. Doorway leads back to Hallway.",
+    "Traversal: Woman walks Kitchen -> Hallway -> Bedroom -> Hallway -> Kitchen area."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Kitchen fixtures/layout",
+      "invariant_violated": "Consistent layout / No duplicate spaces",
+      "description": "Upon returning to the kitchen area, the fixture above the stove has changed from upper cabinets (visible at 00:01) to an over-the-range microwave (visible at 00:09). This implies the traversal led to a second copy of the kitchen or an unexplained physical change in the same space without a time skip.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen: Contains stove, countertop microwave, cabinets. Doorway on left leads to Hallway.\",\n    \"Hallway: Connects Kitchen (entry from left) and Bedroom (entry from right). Ends at French doors.\",\n    \"Bedroom: Contains bed, chandelier, windows. Doorway leads back to Hallway.\",\n    \"Traversal: Woman walks Kitchen -> Hallway -> Bedroom -> Hallway -> Kitchen area.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Kitchen fixtures/layout\",\n      \"invariant_violated\": \"Consistent layout / No duplicate spaces\",\n      \"description\": \"Upon returning to the kitchen area, the fixture above the stove has changed from upper cabinets (visible at 00:01) to an over-the-range microwave (visible at 00:09). This implies the traversal led to a second copy of the kitchen or an unexplained physical change in the same space without a time skip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:01:23.210Z",
+  "latencyMs": 79103,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 4688,
+    "total_tokens": 7730,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4505,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (Physical) | Left profile visible, shaving chin with left hand | Left profile visible, shaving chin with left hand | Moves razor to forehead/temples then back to chin",
+    "Man (Reflection) | Frontal view visible in mirror, shaving chin | Frontal view visible in mirror, shaving chin | Mirrors physical man's movements precisely",
+    "Mirror | Wooden frame, vertical orientation | Wooden frame, vertical orientation | Static fixed element",
+    "Door | Visible in reflection left of reflected man, closed | Visible in reflection left of reflected man, closed | Static background element",
+    "Shelves | Visible in reflection right of reflected man, holding bottles | Visible in reflection right of reflected man, holding bottles | Static background element"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (Physical) | Left profile visible, shaving chin with left hand | Left profile visible, shaving chin with left hand | Moves razor to forehead/temples then back to chin\",\n    \"Man (Reflection) | Frontal view visible in mirror, shaving chin | Frontal view visible in mirror, shaving chin | Mirrors physical man's movements precisely\",\n    \"Mirror | Wooden frame, vertical orientation | Wooden frame, vertical orientation | Static fixed element\",\n    \"Door | Visible in reflection left of reflected man, closed | Visible in reflection left of reflected man, closed | Static background element\",\n    \"Shelves | Visible in reflection right of reflected man, holding bottles | Visible in reflection right of reflected man, holding bottles | Static background element\"\n  ],\n  \"findings\": []\n}"
+}

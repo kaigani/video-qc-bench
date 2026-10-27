@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:00:42.141Z",
+  "latencyMs": 51396,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 6473,
+    "total_tokens": 9539,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6283,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's Left Hand | Gripping electric razor, contact with neck at 00:00 | Gripping electric razor, contact with sideburn at 00:11 | Contact shifted to forehead at 00:02, chin at 00:05, cheek at 00:08",
+    "Electric Razor | Contact with neck skin at 00:00 | Contact with sideburn skin at 00:11 | Lifted from forehead at 00:04, re-contacted chin at 00:05",
+    "Man's Right Hand | No contact at 00:00 | Contact with left temple at 00:02, released by 00:05 | Stabilizes skin during forehead shave"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's Left Hand | Gripping electric razor, contact with neck at 00:00 | Gripping electric razor, contact with sideburn at 00:11 | Contact shifted to forehead at 00:02, chin at 00:05, cheek at 00:08\",\n    \"Electric Razor | Contact with neck skin at 00:00 | Contact with sideburn skin at 00:11 | Lifted from forehead at 00:04, re-contacted chin at 00:05\",\n    \"Man's Right Hand | No contact at 00:00 | Contact with left temple at 00:02, released by 00:05 | Stabilizes skin during forehead shave\"\n  ],\n  \"findings\": []\n}"
+}

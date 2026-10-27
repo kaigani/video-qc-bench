@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:44:48.509Z",
+  "latencyMs": 57279,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 4703,
+    "total_tokens": 7749,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4571,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: ~6 balls clearly visible in bowl (2 red, 2 green, 2 yellow).",
+    "00:01: Child removes 3 balls (2 red, 1 green) from bowl.",
+    "00:02: ~5 balls remain in bowl; child holds 3 balls.",
+    "00:03: Child returns 3 balls to bowl.",
+    "00:04 - 00:11: Child mixes balls in bowl; count remains constant."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: ~6 balls clearly visible in bowl (2 red, 2 green, 2 yellow).\",\n    \"00:01: Child removes 3 balls (2 red, 1 green) from bowl.\",\n    \"00:02: ~5 balls remain in bowl; child holds 3 balls.\",\n    \"00:03: Child returns 3 balls to bowl.\",\n    \"00:04 - 00:11: Child mixes balls in bowl; count remains constant.\"\n  ],\n  \"findings\": []\n}"
+}

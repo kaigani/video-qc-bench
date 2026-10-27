@@ -1,0 +1,45 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:12:08.488Z",
+  "latencyMs": 77652,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 2067,
+    "total_tokens": 5106,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1776,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with umbrella | walking forward holding red tomato and open blue umbrella | walking forward holding red tomato and open blue umbrella | continuous forward motion, slight smile maintained throughout",
+    "Tomato | held in both hands at chest level | held in both hands at chest level | slight compression by fingers visible around 00:06-00:10, returns to original shape",
+    "Umbrella | open blue canopy shielding woman | open blue canopy shielding woman | remains stationary relative to woman, no tilting or collapsing",
+    "Passerby (light blue tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, briefly occludes subject",
+    "Passerby (white tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, briefly occludes subject",
+    "Passerby (dark blue tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, looks toward subject",
+    "Passerby (light blue button-down) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, looks toward subject",
+    "Passerby (patterned top) | enters frame left edge | exits frame right of subject | crosses foreground from left to right"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with umbrella | walking forward holding red tomato and open blue umbrella | walking forward holding red tomato and open blue umbrella | continuous forward motion, slight smile maintained throughout\",\n    \"Tomato | held in both hands at chest level | held in both hands at chest level | slight compression by fingers visible around 00:06-00:10, returns to original shape\",\n    \"Umbrella | open blue canopy shielding woman | open blue canopy shielding woman | remains stationary relative to woman, no tilting or collapsing\",\n    \"Passerby (light blue tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, briefly occludes subject\",\n    \"Passerby (white tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, briefly occludes subject\",\n    \"Passerby (dark blue tee) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, looks toward subject\",\n    \"Passerby (light blue button-down) | enters frame left edge | exits frame right of subject | crosses foreground from left to right, looks toward subject\",\n    \"Passerby (patterned top) | enters frame left edge | exits frame right of subject | crosses foreground from left to right\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:17:00.104Z",
+  "latencyMs": 58996,
+  "usage": {
+    "prompt_tokens": 2890,
+    "completion_tokens": 2943,
+    "total_tokens": 5833,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2672,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | blue uniform, white apron | blue uniform, white apron | cleans counter, serves customer",
+    "customer | brown jacket, jeans | brown jacket, jeans | enters diner, eats breakfast, pays, leaves",
+    "coffee cup | white mug | white mug | filled with coffee, consumed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:14",
+      "entity": "waitress and counter area",
+      "invariant_violated": "visual compositing integrity",
+      "description": "Two large cartoon eyes and a mouth are superimposed over the center of the frame, obscuring the waitress and kitchen equipment.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:30",
+      "entity": "coffee pouring sequence",
+      "invariant_violated": "visual continuity / compositing integrity",
+      "description": "A ghostly image of the customer's face is superimposed and morphed over the coffee pot and stream during the pouring shot.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | blue uniform, white apron | blue uniform, white apron | cleans counter, serves customer\",\n    \"customer | brown jacket, jeans | brown jacket, jeans | enters diner, eats breakfast, pays, leaves\",\n    \"coffee cup | white mug | white mug | filled with coffee, consumed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:14\",\n      \"entity\": \"waitress and counter area\",\n      \"invariant_violated\": \"visual compositing integrity\",\n      \"description\": \"Two large cartoon eyes and a mouth are superimposed over the center of the frame, obscuring the waitress and kitchen equipment.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:30\",\n      \"entity\": \"coffee pouring sequence\",\n      \"invariant_violated\": \"visual continuity / compositing integrity\",\n      \"description\": \"A ghostly image of the customer's face is superimposed and morphed over the coffee pot and stream during the pouring shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

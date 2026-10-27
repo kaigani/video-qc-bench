@@ -6,9 +6,15 @@
 //   node src/run-benchmark.mjs --model google/gemini-3.6-flash --run-id my-run
 import { readdirSync, mkdirSync, existsSync, writeFileSync, readFileSync } from 'node:fs';
 import { join, basename } from 'node:path';
-import { PROJECT_ROOT, loadApiKey, encodeVideo, callModel, parseFindings } from './openrouter.mjs';
+import {
+  PROJECT_ROOT,
+  loadApiKey,
+  encodeVideo,
+  callModel,
+  parseFindings,
+} from './openrouter.mjs';
 import { loadTwelveLabsKey, callTwelveLabs } from './twelvelabs.mjs';
-import { getRoles } from './roles.mjs';
+import { getRoles as getRolesV1 } from './roles.mjs';
 
 let VIDEOS_DIR = join(PROJECT_ROOT, '00 test videos');
 const RESULTS_DIR = join(PROJECT_ROOT, 'results');
@@ -16,15 +22,17 @@ const DEFAULT_MODEL = 'google/gemini-3.6-flash';
 let CONCURRENCY = 3;
 
 function parseArgs(argv) {
-  const args = { model: DEFAULT_MODEL, videos: null, roles: null, runId: null, force: false, reasoning: false };
+  const args = { model: DEFAULT_MODEL, videos: null, roles: null, runId: null, force: false, reasoning: false, reasoningEffort: null, rolesFile: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--model') args.model = argv[++i];
     else if (a === '--reasoning') args.reasoning = true;
+    else if (a === '--reasoning-effort') args.reasoningEffort = argv[++i];
     else if (a === '--videos-dir') VIDEOS_DIR = argv[++i];
     else if (a === '--concurrency') CONCURRENCY = Number(argv[++i]);
     else if (a === '--videos') args.videos = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--roles') args.roles = argv[++i].split(',').map((s) => s.trim());
+    else if (a === '--roles-file') args.rolesFile = argv[++i];
     else if (a === '--run-id') args.runId = argv[++i];
     else if (a === '--force') args.force = true;
     else throw new Error(`Unknown argument: ${a}`);
@@ -47,6 +55,7 @@ async function main() {
   const isTwelveLabs = args.model.startsWith('twelvelabs/');
   const apiKey = isTwelveLabs ? loadTwelveLabsKey() : loadApiKey();
   const videos = listVideos(args.videos);
+  const getRoles = args.rolesFile ? (await import(join(PROJECT_ROOT, args.rolesFile))).getRoles : getRolesV1;
   const roles = getRoles(args.roles);
   const modelSlug = args.model.replace(/[^a-z0-9.-]+/gi, '-');
   const runId = args.runId ?? `${new Date().toISOString().slice(0, 10)}_${modelSlug}`;
@@ -57,7 +66,7 @@ async function main() {
   const manifestPath = join(runDir, 'manifest.json');
   const manifest = existsSync(manifestPath)
     ? JSON.parse(readFileSync(manifestPath, 'utf8'))
-    : { runId, model: args.model, reasoning: args.reasoning, started: new Date().toISOString(), calls: {} };
+    : { runId, model: args.model, reasoning: args.reasoning, reasoningEffort: args.reasoningEffort, started: new Date().toISOString(), calls: {} };
 
   // Build task list, skipping completed results unless --force.
   const tasks = [];
@@ -104,6 +113,7 @@ async function main() {
               prompt: role.prompt,
               videoDataUrl: dataUrl,
               reasoning: args.reasoning,
+              reasoningEffort: args.reasoningEffort,
             });
         const parsed = parseFindings(text);
         const result = {

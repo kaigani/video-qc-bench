@@ -1,0 +1,43 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:35:58.797Z",
+  "latencyMs": 24518,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 2581,
+    "total_tokens": 5623,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2428,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "concrete bowl | transition ramp curves down to flat area | same | static geometry",
+    "light poles | tall metal poles with multiple lamps in background distance | same | static geometry",
+    "trees | line of green trees lining the perimeter behind ramps | same | static geometry",
+    "white cylinders | two cylindrical objects on flat ground to the right | out of view | camera tilts up and pans away",
+    "skateboarder | crouched on board center frame | rolling away towards left | performs two flip tricks",
+    "skateboard | under feet | flips in air beneath skater | returns under feet for landing"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"concrete bowl | transition ramp curves down to flat area | same | static geometry\",\n    \"light poles | tall metal poles with multiple lamps in background distance | same | static geometry\",\n    \"trees | line of green trees lining the perimeter behind ramps | same | static geometry\",\n    \"white cylinders | two cylindrical objects on flat ground to the right | out of view | camera tilts up and pans away\",\n    \"skateboarder | crouched on board center frame | rolling away towards left | performs two flip tricks\",\n    \"skateboard | under feet | flips in air beneath skater | returns under feet for landing\"\n  ],\n  \"findings\": []\n}"
+}

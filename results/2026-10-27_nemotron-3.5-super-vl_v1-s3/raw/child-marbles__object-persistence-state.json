@@ -1,0 +1,50 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:22:03.467Z",
+  "latencyMs": 86049,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 4704,
+    "total_tokens": 7763,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4498,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Glass bowl | On wooden table, contains balls | On wooden table, contains balls | None",
+    "Plastic balls (in bowl) | Inside bowl | Inside bowl | Shuffled by child's hands",
+    "Green ball (table edge) | On table edge bottom right | Not visible | Vanished",
+    "Metal container | On table right with green contents | On table right with green contents | None"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Green ball (table edge)",
+      "invariant_violated": "Object persistence / Count",
+      "description": "A green ball is visible on the table edge at 00:00 but is absent at 00:01 with no visible agent moving it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Glass bowl | On wooden table, contains balls | On wooden table, contains balls | None\",\n    \"Plastic balls (in bowl) | Inside bowl | Inside bowl | Shuffled by child's hands\",\n    \"Green ball (table edge) | On table edge bottom right | Not visible | Vanished\",\n    \"Metal container | On table right with green contents | On table right with green contents | None\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Green ball (table edge)\",\n      \"invariant_violated\": \"Object persistence / Count\",\n      \"description\": \"A green ball is visible on the table edge at 00:00 but is absent at 00:01 with no visible agent moving it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

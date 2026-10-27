@@ -266,6 +266,21 @@ const DATA = {
    "cost": 0.53,
    "costEstimated": false,
    "avgLatencyS": 15.1
+  },
+  {
+   "key": "nemotron35",
+   "label": "Nemotron 3.5 Super VL",
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "reasoning": true,
+   "detection": 25,
+   "defectsFound": 8,
+   "tp": 14,
+   "extra": 0,
+   "fp": 16,
+   "findings": 30,
+   "cost": 0,
+   "costEstimated": false,
+   "avgLatencyS": 35.6
   }
  ],
  "coverage": [
@@ -289,7 +304,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -312,7 +328,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -335,7 +352,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -358,7 +376,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -381,7 +400,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -404,7 +424,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -427,7 +448,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -450,7 +472,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -473,7 +496,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -496,7 +520,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -519,7 +544,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -542,7 +568,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -565,7 +592,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": true
    }
   },
   {
@@ -588,7 +616,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -611,7 +640,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -634,7 +664,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -657,7 +688,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -680,7 +712,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -703,7 +736,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -726,7 +760,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -749,7 +784,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -772,7 +808,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -795,7 +832,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -818,7 +856,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": true
    }
   },
   {
@@ -841,7 +880,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -864,7 +904,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -887,7 +928,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -910,7 +952,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -933,7 +976,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -956,7 +1000,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": true
    }
   },
   {
@@ -979,7 +1024,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": true
    }
   },
   {
@@ -1002,7 +1048,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1025,7 +1072,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1048,7 +1096,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": true
    }
   },
   {
@@ -1071,7 +1120,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": true
    }
   },
   {
@@ -1094,7 +1144,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -1117,7 +1168,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -1140,7 +1192,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1163,7 +1216,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1186,7 +1240,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": true
    }
   },
   {
@@ -1209,7 +1264,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": true,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1232,7 +1288,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1255,7 +1312,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1278,7 +1336,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": true
+    "flash38": true,
+    "nemotron35": false
    }
   },
   {
@@ -1301,7 +1360,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1324,7 +1384,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": true,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": true
    }
   },
   {
@@ -1347,7 +1408,8 @@ const DATA = {
     "kimi": false,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   },
   {
@@ -1370,7 +1432,8 @@ const DATA = {
     "kimi": true,
     "qwen27b": false,
     "oxalpha": false,
-    "flash38": false
+    "flash38": false,
+    "nemotron35": false
    }
   }
  ],
@@ -1905,6 +1968,44 @@ const DATA = {
     "fp": 0,
     "extra": 0,
     "total": 0
+   }
+  },
+  "nemotron35": {
+   "baseline-generalist": {
+    "tp": 5,
+    "fp": 6,
+    "extra": 0,
+    "total": 11
+   },
+   "character-continuity": {
+    "tp": 0,
+    "fp": 0,
+    "extra": 0,
+    "total": 0
+   },
+   "object-persistence-state": {
+    "tp": 6,
+    "fp": 2,
+    "extra": 0,
+    "total": 8
+   },
+   "contact-interaction-kinematics": {
+    "tp": 1,
+    "fp": 2,
+    "extra": 0,
+    "total": 3
+   },
+   "spatial-topology-occlusion": {
+    "tp": 2,
+    "fp": 2,
+    "extra": 0,
+    "total": 4
+   },
+   "causal-temporal-sequence": {
+    "tp": 0,
+    "fp": 4,
+    "extra": 0,
+    "total": 4
    }
   }
  },

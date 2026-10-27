@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:41:58.215Z",
+  "latencyMs": 20959,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1541,
+    "total_tokens": 4583,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1413,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station Wagon Car | Parked on desert road facing camera | Same position | Camera perspective shifts from front-quarter to side profile via dolly/pan",
+    "Woman | Leaning arms crossed on hood near windshield | Same position | Camera pushes in/zooms toward her face",
+    "Road | Paved road with yellow dashes stretching behind car | Same | Background visible behind and beside car depending on angle",
+    "Desert Landscape | Dry scrub and mountains in distance | Same | Consistent background depth across shots"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Station Wagon Car | Parked on desert road facing camera | Same position | Camera perspective shifts from front-quarter to side profile via dolly/pan\",\n    \"Woman | Leaning arms crossed on hood near windshield | Same position | Camera pushes in/zooms toward her face\",\n    \"Road | Paved road with yellow dashes stretching behind car | Same | Background visible behind and beside car depending on angle\",\n    \"Desert Landscape | Dry scrub and mountains in distance | Same | Consistent background depth across shots\"\n  ],\n  \"findings\": []\n}"
+}

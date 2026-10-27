@@ -1,0 +1,40 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:02:15.135Z",
+  "latencyMs": 15555,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 1393,
+    "total_tokens": 4432,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1263,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Phone screen | Start: Displays code \"A7-42\" clearly | End: Displays code \"A7-42\" clearly | Notable transitions: Content remains static despite hand adjustments",
+    "Background pedestrian | Start: Walking up stairs away from camera | End: Further up the stairs near the top of the frame | Notable transitions: Continuous walking motion",
+    "Camera focus | Start: Sharp focus on phone in foreground | End: Blurry view of stairs and railing | Notable transitions: Focus shifts away from foreground object"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Phone screen | Start: Displays code \\\"A7-42\\\" clearly | End: Displays code \\\"A7-42\\\" clearly | Notable transitions: Content remains static despite hand adjustments\",\n    \"Background pedestrian | Start: Walking up stairs away from camera | End: Further up the stairs near the top of the frame | Notable transitions: Continuous walking motion\",\n    \"Camera focus | Start: Sharp focus on phone in foreground | End: Blurry view of stairs and railing | Notable transitions: Focus shifts away from foreground object\"\n  ],\n  \"findings\": []\n}"
+}

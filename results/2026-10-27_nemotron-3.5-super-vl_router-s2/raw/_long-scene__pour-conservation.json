@@ -1,0 +1,49 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:59:28.164Z",
+  "latencyMs": 97611,
+  "usage": {
+    "prompt_tokens": 3034,
+    "completion_tokens": 6540,
+    "total_tokens": 9574,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6314,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:18: White ceramic mug on counter contains light brown liquid (coffee with cream), fill level high/near full.",
+    "00:22: Glass carafe pours black coffee into white ceramic mug.",
+    "00:38: Man holds white ceramic mug containing dark coffee."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:18 - 00:22",
+      "entity": "White ceramic mug",
+      "invariant_violated": "Conservation of mass / Fill-level monotonicity",
+      "description": "At 00:18, the mug is shown full of light-colored liquid. At 00:22, black coffee is poured into the mug as if it were empty or lower. The light liquid disappears without a visible removal action, and adding more liquid to a full container would cause overflow.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:18: White ceramic mug on counter contains light brown liquid (coffee with cream), fill level high/near full.\",\n    \"00:22: Glass carafe pours black coffee into white ceramic mug.\",\n    \"00:38: Man holds white ceramic mug containing dark coffee.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:18 - 00:22\",\n      \"entity\": \"White ceramic mug\",\n      \"invariant_violated\": \"Conservation of mass / Fill-level monotonicity\",\n      \"description\": \"At 00:18, the mug is shown full of light-colored liquid. At 00:22, black coffee is poured into the mug as if it were empty or lower. The light liquid disappears without a visible removal action, and adding more liquid to a full container would cause overflow.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

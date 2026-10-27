@@ -1,0 +1,44 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:31:49.384Z",
+  "latencyMs": 31571,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1714,
+    "total_tokens": 4756,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1532,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror frame | Wooden frame surrounding reflective surface | Static throughout | None",
+    "Wall section | Beige wall visible to the left of the mirror frame | Static throughout | None",
+    "Door | Wooden door with brass knob visible in reflection background | Fixed position behind subject relative to room geometry | None",
+    "Shelf unit | Dark shelving with bottles visible in reflection on far right | Fixed position in room geometry | None",
+    "Subject | Man in white shirt facing mirror | Shaving chin/neck, then forehead, then chin | Hand position changes",
+    "Reflection | Mirror image of subject | Mirrors subject's actions precisely | Hand position changes",
+    "Razor | Electric shaver | Moves from neck to forehead and back to neck | Position changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror frame | Wooden frame surrounding reflective surface | Static throughout | None\",\n    \"Wall section | Beige wall visible to the left of the mirror frame | Static throughout | None\",\n    \"Door | Wooden door with brass knob visible in reflection background | Fixed position behind subject relative to room geometry | None\",\n    \"Shelf unit | Dark shelving with bottles visible in reflection on far right | Fixed position in room geometry | None\",\n    \"Subject | Man in white shirt facing mirror | Shaving chin/neck, then forehead, then chin | Hand position changes\",\n    \"Reflection | Mirror image of subject | Mirrors subject's actions precisely | Hand position changes\",\n    \"Razor | Electric shaver | Moves from neck to forehead and back to neck | Position changes\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:28:32.021Z",
+  "latencyMs": 68850,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 7605,
+    "total_tokens": 10647,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7420,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen | Microwave mounted on right wall, doorway to hall on left wall | Microwave on left wall relative to person entering from hall | Woman exits kitchen then re-enters from hall",
+    "Hallway | Connects kitchen and bedroom, kitchen counter/stove on left wall, wall art and switches on right | Same layout | Woman traverses hallway outbound and inbound",
+    "Bedroom | Accessible via right-hand door off hallway, bed centered against back wall, window on right wall | Same layout | Woman enters, turns, and exits back into hallway",
+    "Woman | Blue long-sleeve dress, starts in kitchen walking left | Blue long-sleeve dress, ends in kitchen hall facing window | Path: Kitchen -> Hallway -> Bedroom -> Hallway -> Kitchen"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen | Microwave mounted on right wall, doorway to hall on left wall | Microwave on left wall relative to person entering from hall | Woman exits kitchen then re-enters from hall\",\n    \"Hallway | Connects kitchen and bedroom, kitchen counter/stove on left wall, wall art and switches on right | Same layout | Woman traverses hallway outbound and inbound\",\n    \"Bedroom | Accessible via right-hand door off hallway, bed centered against back wall, window on right wall | Same layout | Woman enters, turns, and exits back into hallway\",\n    \"Woman | Blue long-sleeve dress, starts in kitchen walking left | Blue long-sleeve dress, ends in kitchen hall facing window | Path: Kitchen -> Hallway -> Bedroom -> Hallway -> Kitchen\"\n  ],\n  \"findings\": []\n}"
+}

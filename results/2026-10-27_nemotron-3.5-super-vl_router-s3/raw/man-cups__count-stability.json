@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:29:54.114Z",
+  "latencyMs": 36835,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 5138,
+    "total_tokens": 8184,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4951,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cups: Count is 3 at 00:00, 3 at 00:05, 3 at 00:10. No visible addition or removal of cups; they are only moved around the table.",
+    "Coins inside cups: Count varies. At 00:00, coins visible in middle cup. At 00:01, one coin added to left cup. At 00:03, multiple coins produced from left cup. At 00:04, cups rearranged and interiors appear empty. These changes are consistent with a deliberate magic performance.",
+    "Coins on table mat: Static background objects around the rim remain visible and unchanged in count from 00:00 to 00:11."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Cups: Count is 3 at 00:00, 3 at 00:05, 3 at 00:10. No visible addition or removal of cups; they are only moved around the table.\",\n    \"Coins inside cups: Count varies. At 00:00, coins visible in middle cup. At 00:01, one coin added to left cup. At 00:03, multiple coins produced from left cup. At 00:04, cups rearranged and interiors appear empty. These changes are consistent with a deliberate magic performance.\",\n    \"Coins on table mat: Static background objects around the rim remain visible and unchanged in count from 00:00 to 00:11.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:33:31.423Z",
+  "latencyMs": 29022,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 3900,
+    "total_tokens": 6959,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3629,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large Glass Jar | counter, empty | counter, full of mixed green and dark olives | filled by pouring olives from small bowl then metal bowl",
+    "Small Glass Bowl | hand, full of green olives | off-screen (put down) | emptied into large jar",
+    "Metal Bowl | counter behind jar, full of green olives | counter right, mostly empty | moved to hand (unseen), poured into jar, set down",
+    "Glass Bowl (right) | counter, full of green olives | counter, full of green olives | untouched"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Metal Bowl",
+      "invariant_violated": "location & ownership",
+      "description": "The metal bowl is visible on the counter behind the jar at 00:00. At 00:04 it is absent from the counter and the hands are empty. At 00:05 the metal bowl is suddenly in the person's hand being poured, with no visible pickup action bridging the gap.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large Glass Jar | counter, empty | counter, full of mixed green and dark olives | filled by pouring olives from small bowl then metal bowl\",\n    \"Small Glass Bowl | hand, full of green olives | off-screen (put down) | emptied into large jar\",\n    \"Metal Bowl | counter behind jar, full of green olives | counter right, mostly empty | moved to hand (unseen), poured into jar, set down\",\n    \"Glass Bowl (right) | counter, full of green olives | counter, full of green olives | untouched\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Metal Bowl\",\n      \"invariant_violated\": \"location & ownership\",\n      \"description\": \"The metal bowl is visible on the counter behind the jar at 00:00. At 00:04 it is absent from the counter and the hands are empty. At 00:05 the metal bowl is suddenly in the person's hand being poured, with no visible pickup action bridging the gap.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

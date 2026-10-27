@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:08:59.018Z",
+  "latencyMs": 59842,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 2119,
+    "total_tokens": 5165,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2008,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red cups: 3 visible at 00:00, count remains constant at 3 throughout the video as the magician shuffles and handles them.",
+    "Scattered coins: Numerous coins on the table surface; count changes only due to visible manipulation by the magician's hands (picking up, placing, moving).",
+    "Held coin: 1 coin held by magician at start, then placed/moved visibly."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Red cups: 3 visible at 00:00, count remains constant at 3 throughout the video as the magician shuffles and handles them.\",\n    \"Scattered coins: Numerous coins on the table surface; count changes only due to visible manipulation by the magician's hands (picking up, placing, moving).\",\n    \"Held coin: 1 coin held by magician at start, then placed/moved visibly.\"\n  ],\n  \"findings\": []\n}"
+}

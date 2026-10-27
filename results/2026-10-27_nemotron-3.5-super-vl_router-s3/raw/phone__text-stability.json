@@ -1,0 +1,40 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:31:40.764Z",
+  "latencyMs": 15990,
+  "usage": {
+    "prompt_tokens": 3006,
+    "completion_tokens": 1706,
+    "total_tokens": 4712,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1563,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Phone screen main text 'A742': visible at 00:00 (blurry), sharpest at 00:04-00:08 reading 'A742'.",
+    "Phone screen subtext '* AZ-12': visible at 00:04-00:06 reading '* AZ-12' or 'AZ-12'.",
+    "Phone screen header text 'A742': visible at top left at 00:04-00:05 reading 'A742'."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Phone screen main text 'A742': visible at 00:00 (blurry), sharpest at 00:04-00:08 reading 'A742'.\",\n    \"Phone screen subtext '* AZ-12': visible at 00:04-00:06 reading '* AZ-12' or 'AZ-12'.\",\n    \"Phone screen header text 'A742': visible at top left at 00:04-00:05 reading 'A742'.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__pour-conservation",
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:47:40.161Z",
+  "latencyMs": 75082,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 5313,
+    "total_tokens": 8313,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5084,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Four metal cups on table. Middle cup contains coins. Front-left, back-left, and back-right cups appear empty.",
+    "00:01: Hand deposits a coin into the front-left cup.",
+    "00:02: Hand scoops multiple coins from the table surface into the front-left cup.",
+    "00:04: Camera cuts to wider shot. Only three metal cups are visible being manipulated on the table. One container is missing."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Metal cups (containers)",
+      "invariant_violated": "Container identity",
+      "description": "Four metal cups are visible at the start (00:00). By 00:04, only three cups remain on the table. One container disappeared without being visibly removed from the scene.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Four metal cups on table. Middle cup contains coins. Front-left, back-left, and back-right cups appear empty.\",\n    \"00:01: Hand deposits a coin into the front-left cup.\",\n    \"00:02: Hand scoops multiple coins from the table surface into the front-left cup.\",\n    \"00:04: Camera cuts to wider shot. Only three metal cups are visible being manipulated on the table. One container is missing.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Metal cups (containers)\",\n      \"invariant_violated\": \"Container identity\",\n      \"description\": \"Four metal cups are visible at the start (00:00). By 00:04, only three cups remain on the table. One container disappeared without being visibly removed from the scene.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__environment-response",
+  "video": "woman-apple.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:37:21.381Z",
+  "latencyMs": 17477,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 1735,
+    "total_tokens": 4721,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1579,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wind implied by backward motion of subject's hair.",
+    "Wind should affect lightweight hanging produce on stalls.",
+    "Wind should affect loose fabric of subject's skirt."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "hanging red tomatoes/produce",
+      "invariant_violated": "consistent environmental response to wind",
+      "description": "The main subject's hair is blown backwards indicating airflow, but the lightweight hanging produce above the stalls remains completely stationary despite being exposed to the same implied wind.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Wind implied by backward motion of subject's hair.\",\n    \"Wind should affect lightweight hanging produce on stalls.\",\n    \"Wind should affect loose fabric of subject's skirt.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"hanging red tomatoes/produce\",\n      \"invariant_violated\": \"consistent environmental response to wind\",\n      \"description\": \"The main subject's hair is blown backwards indicating airflow, but the lightweight hanging produce above the stalls remains completely stationary despite being exposed to the same implied wind.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

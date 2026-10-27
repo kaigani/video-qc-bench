@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__possession-tracking",
+  "video": "woman-apple.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:36:52.119Z",
+  "latencyMs": 22626,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 2743,
+    "total_tokens": 5743,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2607,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:05: Red tomato held continuously in both hands of the woman in the navy top.",
+    "00:06 - 00:10: Red tomato held continuously in the right hand of the woman in the navy top.",
+    "00:00 - 00:05: Blue umbrella held/shaft supported near the woman's hands.",
+    "00:06 - 00:10: Blue umbrella held in the left hand of the woman in the navy top."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:05: Red tomato held continuously in both hands of the woman in the navy top.\",\n    \"00:06 - 00:10: Red tomato held continuously in the right hand of the woman in the navy top.\",\n    \"00:00 - 00:05: Blue umbrella held/shaft supported near the woman's hands.\",\n    \"00:06 - 00:10: Blue umbrella held in the left hand of the woman in the navy top.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:23:08.596Z",
+  "latencyMs": 53486,
+  "usage": {
+    "prompt_tokens": 3007,
+    "completion_tokens": 3025,
+    "total_tokens": 6032,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2843,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - White semi-truck cab parked outside diner.",
+    "01:39 - Dark blue semi-truck cab with green trailer parked outside diner."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:39",
+      "entity": "Semi-truck",
+      "invariant_violated": "Identity (Color/Configuration)",
+      "description": "The vehicle appearing at 00:00 is a white semi-truck cab. The vehicle appearing at 01:39 is a dark blue semi-truck cab attached to a long green trailer. The color and trailer configuration differ significantly without a visible swap or explanation.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - White semi-truck cab parked outside diner.\",\n    \"01:39 - Dark blue semi-truck cab with green trailer parked outside diner.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"Semi-truck\",\n      \"invariant_violated\": \"Identity (Color/Configuration)\",\n      \"description\": \"The vehicle appearing at 00:00 is a white semi-truck cab. The vehicle appearing at 01:39 is a dark blue semi-truck cab attached to a long green trailer. The color and trailer configuration differ significantly without a visible swap or explanation.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

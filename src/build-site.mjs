@@ -37,6 +37,7 @@ const LABELS = {
   qwen27b: 'Qwen 3.8 27B',
   oxalpha: 'GLM 5.3 Flash (was Ox Alpha)',
   flash38: 'Gemini 3.8 Flash',
+  nemotron35: 'Nemotron 3.5 Super VL',
 };
 
 const models = [];

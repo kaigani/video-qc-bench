@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:05:56.463Z",
+  "latencyMs": 17300,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 887,
+    "total_tokens": 3929,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 792,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "camera | static frontal view | static frontal view | no movement or cuts",
+    "background | plain white wall | plain white wall | unchanged",
+    "subject | seated center, blue striped shirt | seated center, blue striped shirt | continuous hand movement",
+    "held object | wire/chain piece in hands | wire/chain piece in hands | manipulated continuously"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"camera | static frontal view | static frontal view | no movement or cuts\",\n    \"background | plain white wall | plain white wall | unchanged\",\n    \"subject | seated center, blue striped shirt | seated center, blue striped shirt | continuous hand movement\",\n    \"held object | wire/chain piece in hands | wire/chain piece in hands | manipulated continuously\"\n  ],\n  \"findings\": []\n}"
+}

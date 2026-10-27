@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:51:33.396Z",
+  "latencyMs": 20908,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 826,
+    "total_tokens": 3868,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 709,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | foreground surface, center | static throughout | hosts bowl and cup",
+    "glass bowl | center-left on table | static position | contains colorful balls, partially occluded by hands",
+    "metal cup | right side on table | static position | unmoving background object",
+    "child's hands | enter from top/left | move inside bowl | occlude balls and bowl interior",
+    "background pavement | behind table | static | visible behind table edge"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | foreground surface, center | static throughout | hosts bowl and cup\",\n    \"glass bowl | center-left on table | static position | contains colorful balls, partially occluded by hands\",\n    \"metal cup | right side on table | static position | unmoving background object\",\n    \"child's hands | enter from top/left | move inside bowl | occlude balls and bowl interior\",\n    \"background pavement | behind table | static | visible behind table edge\"\n  ],\n  \"findings\": []\n}"
+}

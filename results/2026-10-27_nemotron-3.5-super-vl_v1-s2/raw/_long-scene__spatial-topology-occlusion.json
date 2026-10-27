@@ -1,0 +1,51 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:50:53.024Z",
+  "latencyMs": 121229,
+  "usage": {
+    "prompt_tokens": 3076,
+    "completion_tokens": 10256,
+    "total_tokens": 13332,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10015,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner Building | Fixed structure with large front windows and side entrance | Same | Static architecture",
+    "Semi-truck | Parked left of building, facing Left | Parked near building, facing Right | Orientation flipped between night and morning shots",
+    "Counter | Runs along the service side with stools aligned | Same | Static furniture",
+    "Kitchen Pass-through | Center back wall opening | Same | Static architectural feature",
+    "Front Windows | Left wall showing exterior twilight/sunrise | Same | Static architectural feature"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:37",
+      "entity": "Semi-truck",
+      "invariant_violated": "Fixed object orientation",
+      "description": "The truck faces Left in the opening night shot (00:00) but faces Right in the morning shot (01:37) without being shown moving or the scene cutting to a different location that would justify the flip.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner Building | Fixed structure with large front windows and side entrance | Same | Static architecture\",\n    \"Semi-truck | Parked left of building, facing Left | Parked near building, facing Right | Orientation flipped between night and morning shots\",\n    \"Counter | Runs along the service side with stools aligned | Same | Static furniture\",\n    \"Kitchen Pass-through | Center back wall opening | Same | Static architectural feature\",\n    \"Front Windows | Left wall showing exterior twilight/sunrise | Same | Static architectural feature\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:37\",\n      \"entity\": \"Semi-truck\",\n      \"invariant_violated\": \"Fixed object orientation\",\n      \"description\": \"The truck faces Left in the opening night shot (00:00) but faces Right in the morning shot (01:37) without being shown moving or the scene cutting to a different location that would justify the flip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

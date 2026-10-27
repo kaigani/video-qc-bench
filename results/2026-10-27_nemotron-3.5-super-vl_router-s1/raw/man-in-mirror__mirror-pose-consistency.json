@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:49:48.093Z",
+  "latencyMs": 41025,
+  "usage": {
+    "prompt_tokens": 2993,
+    "completion_tokens": 3118,
+    "total_tokens": 6111,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2956,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Subject shaving chin with right hand, reflection shaving chin with left hand (mirrored)",
+    "00:02 - Subject shaving right cheek, reflection shaving left cheek (mirrored)",
+    "00:03 - Subject touching forehead/hair with both hands, reflection touching forehead/hair with both hands",
+    "00:05 - Subject shaving upper lip/nose area, reflection shaving upper lip/nose area",
+    "00:10 - Subject wiping nose with right hand, reflection wiping nose with left hand",
+    "00:11 - Subject shaving cheek, reflection shaving cheek"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Subject shaving chin with right hand, reflection shaving chin with left hand (mirrored)\",\n    \"00:02 - Subject shaving right cheek, reflection shaving left cheek (mirrored)\",\n    \"00:03 - Subject touching forehead/hair with both hands, reflection touching forehead/hair with both hands\",\n    \"00:05 - Subject shaving upper lip/nose area, reflection shaving upper lip/nose area\",\n    \"00:10 - Subject wiping nose with right hand, reflection wiping nose with left hand\",\n    \"00:11 - Subject shaving cheek, reflection shaving cheek\"\n  ],\n  \"findings\": []\n}"
+}

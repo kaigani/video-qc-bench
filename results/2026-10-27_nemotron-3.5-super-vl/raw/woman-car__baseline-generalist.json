@@ -1,0 +1,56 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:42:31.704Z",
+  "latencyMs": 27625,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1695,
+    "total_tokens": 4551,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1455,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car | parked on dirt road | background changes to paved road with markings | sudden environmental shift",
+    "woman | hair calm and styled | hair blowing vigorously | sudden onset of wind effect"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "road background",
+      "invariant_violated": "environmental continuity",
+      "description": "The road surface behind the car abruptly changes from unpaved dirt to paved asphalt with yellow lane markings and a 'SCHOOL' stencil without camera movement justifying the change.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "woman",
+      "invariant_violated": "motion continuity",
+      "description": "The woman's hair transitions instantly from being still to blowing wildly in the wind, suggesting a cut or mismatched wind effects.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"car | parked on dirt road | background changes to paved road with markings | sudden environmental shift\",\n    \"woman | hair calm and styled | hair blowing vigorously | sudden onset of wind effect\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"road background\",\n      \"invariant_violated\": \"environmental continuity\",\n      \"description\": \"The road surface behind the car abruptly changes from unpaved dirt to paved asphalt with yellow lane markings and a 'SCHOOL' stencil without camera movement justifying the change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"woman\",\n      \"invariant_violated\": \"motion continuity\",\n      \"description\": \"The woman's hair transitions instantly from being still to blowing wildly in the wind, suggesting a cut or mismatched wind effects.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

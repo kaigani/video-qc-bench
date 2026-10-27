@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__possession-tracking",
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:30:10.259Z",
+  "latencyMs": 25575,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 2821,
+    "total_tokens": 5821,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2571,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Gold coin: right hand (00:00) -> dropped into center brown cup (00:01) -> inside center cup during lift/shuffle (00:02-00:05) -> inside one of the cups on table (00:06-00:10)",
+    "Center brown cup: table (00:00) -> right hand grabs/lifts (00:01-00:02) -> moved/shuffled with other cups (00:03-00:05) -> table (00:06-00:10)",
+    "Left brown cup: table (00:00) -> moved/shuffled (00:03-00:05) -> table (00:06-00:10)",
+    "Right brown cup: table (00:00) -> moved/shuffled (00:03-00:05) -> table (00:06-00:10)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Gold coin: right hand (00:00) -> dropped into center brown cup (00:01) -> inside center cup during lift/shuffle (00:02-00:05) -> inside one of the cups on table (00:06-00:10)\",\n    \"Center brown cup: table (00:00) -> right hand grabs/lifts (00:01-00:02) -> moved/shuffled with other cups (00:03-00:05) -> table (00:06-00:10)\",\n    \"Left brown cup: table (00:00) -> moved/shuffled (00:03-00:05) -> table (00:06-00:10)\",\n    \"Right brown cup: table (00:00) -> moved/shuffled (00:03-00:05) -> table (00:06-00:10)\"\n  ],\n  \"findings\": []\n}"
+}

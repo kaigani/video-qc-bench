@@ -1,0 +1,49 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:34:36.821Z",
+  "latencyMs": 31095,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 4457,
+    "total_tokens": 7523,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4206,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand & small glass bowl (green olives) | fingers wrapped around bowl at 00:00 | bowl removed from frame at 00:04 | pouring green olives into jar",
+    "left hand & glass jar | hand open near jar at 00:00 | fingers touch jar rim at 00:05 | stabilizing jar during pour",
+    "right hand & small glass bowl (mixed olives) | bowl appears in hand at 00:05 | bowl emptied and moved away at 00:09 | pouring mixed olives into jar"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "small glass bowl (mixed olives)",
+      "invariant_violated": "missing contact",
+      "description": "The bowl appears in the right hand already mid-pour; no frames show the hand making contact or lifting the bowl, jumping from empty hands at 00:04.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand & small glass bowl (green olives) | fingers wrapped around bowl at 00:00 | bowl removed from frame at 00:04 | pouring green olives into jar\",\n    \"left hand & glass jar | hand open near jar at 00:00 | fingers touch jar rim at 00:05 | stabilizing jar during pour\",\n    \"right hand & small glass bowl (mixed olives) | bowl appears in hand at 00:05 | bowl emptied and moved away at 00:09 | pouring mixed olives into jar\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"small glass bowl (mixed olives)\",\n      \"invariant_violated\": \"missing contact\",\n      \"description\": \"The bowl appears in the right hand already mid-pour; no frames show the hand making contact or lifting the bowl, jumping from empty hands at 00:04.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

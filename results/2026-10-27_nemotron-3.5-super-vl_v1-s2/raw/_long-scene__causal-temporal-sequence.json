@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:50:06.923Z",
+  "latencyMs": 117572,
+  "usage": {
+    "prompt_tokens": 3073,
+    "completion_tokens": 9830,
+    "total_tokens": 12903,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9469,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Trucker | Approaches entrance | Enters diner | Crosses threshold",
+    "Waitress | Pours coffee | Mug fills | Liquid dispensed",
+    "Waitress | Places plate | Plate rests on counter | Food served",
+    "Trucker | Places cash | Cash rests on counter | Payment made",
+    "Waitress | Retrieves cash | Cash in hand | Payment accepted",
+    "Trucker | Exits building | Walks to vehicle | Departure",
+    "Waitress | Observes exterior | Looks out window | Visual reaction",
+    "Waitress | Wipes counter | Surface cleaned | Cleaning action"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Truck",
+      "invariant_violated": "Effect-without-cause",
+      "description": "The truck is parked facing left at the start (00:00) but is facing right when the trucker approaches it (01:41), with no intervening action showing it being turned or driven.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:37",
+      "entity": "Money",
+      "invariant_violated": "Effect-without-cause",
+      "description": "The waitress picks up the money at 01:34, but at 01:37 the money is shown fanned on the counter again without a visible action of placing it down.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Trucker | Approaches entrance | Enters diner | Crosses threshold\",\n    \"Waitress | Pours coffee | Mug fills | Liquid dispensed\",\n    \"Waitress | Places plate | Plate rests on counter | Food served\",\n    \"Trucker | Places cash | Cash rests on counter | Payment made\",\n    \"Waitress | Retrieves cash | Cash in hand | Payment accepted\",\n    \"Trucker | Exits building | Walks to vehicle | Departure\",\n    \"Waitress | Observes exterior | Looks out window | Visual reaction\",\n    \"Waitress | Wipes counter | Surface cleaned | Cleaning action\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Truck\",\n      \"invariant_violated\": \"Effect-without-cause\",\n      \"description\": \"The truck is parked facing left at the start (00:00) but is facing right when the trucker approaches it (01:41), with no intervening action showing it being turned or driven.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:37\",\n      \"entity\": \"Money\",\n      \"invariant_violated\": \"Effect-without-cause\",\n      \"description\": \"The waitress picks up the money at 01:34, but at 01:37 the money is shown fanned on the counter again without a visible action of placing it down.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

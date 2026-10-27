@@ -1,0 +1,58 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:58:21.578Z",
+  "latencyMs": 172102,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 11715,
+    "total_tokens": 14757,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 11327,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen Counter/Microwave | Start: Microwave under cabinets, wooden cabinets to right | End: Microwave under cabinets, window with curtains to right | Notable transition: Fixed wall geometry changed from cabinetry to window upon re-entry",
+    "Hallway Right Wall | Start: Light switches visible near entrance | End: Framed geometric art visible near entrance | Notable transition: Wall decor changed between outbound and inbound shots",
+    "Bedroom | Start: Entered via right turn from hall | End: Exited facing hall end | Notable transition: Spatial relationship maintained",
+    "French Doors | Start: Terminus of hallway | End: Terminus of hallway | Notable transition: Consistent background"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Hallway Right Wall",
+      "invariant_violated": "Layout consistency",
+      "description": "On the outbound path (00:01), the wall to the right of the hallway entrance features light switches. On the inbound path (00:08), approaching the same area, the wall features a large framed geometric picture instead.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Kitchen Wall",
+      "invariant_violated": "Fixed elements geometry",
+      "description": "In the opening shot (00:00), the wall section to the right of the microwave contains wooden cabinets. Upon re-entering the kitchen area (00:09), the same wall section features a window with curtains.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen Counter/Microwave | Start: Microwave under cabinets, wooden cabinets to right | End: Microwave under cabinets, window with curtains to right | Notable transition: Fixed wall geometry changed from cabinetry to window upon re-entry\",\n    \"Hallway Right Wall | Start: Light switches visible near entrance | End: Framed geometric art visible near entrance | Notable transition: Wall decor changed between outbound and inbound shots\",\n    \"Bedroom | Start: Entered via right turn from hall | End: Exited facing hall end | Notable transition: Spatial relationship maintained\",\n    \"French Doors | Start: Terminus of hallway | End: Terminus of hallway | Notable transition: Consistent background\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Hallway Right Wall\",\n      \"invariant_violated\": \"Layout consistency\",\n      \"description\": \"On the outbound path (00:01), the wall to the right of the hallway entrance features light switches. On the inbound path (00:08), approaching the same area, the wall features a large framed geometric picture instead.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Kitchen Wall\",\n      \"invariant_violated\": \"Fixed elements geometry\",\n      \"description\": \"In the opening shot (00:00), the wall section to the right of the microwave contains wooden cabinets. Upon re-entering the kitchen area (00:09), the same wall section features a window with curtains.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

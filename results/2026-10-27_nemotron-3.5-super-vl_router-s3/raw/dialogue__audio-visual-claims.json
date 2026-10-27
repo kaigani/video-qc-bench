@@ -1,0 +1,38 @@
+{
+  "key": "dialogue__audio-visual-claims",
+  "video": "dialogue.mp4",
+  "role": "audio-visual-claims",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:27:14.920Z",
+  "latencyMs": 16639,
+  "usage": {
+    "prompt_tokens": 2920,
+    "completion_tokens": 1622,
+    "total_tokens": 4542,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1581,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Audio track is not available to the model; no speech claims can be extracted or verified against visual evidence."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Audio track is not available to the model; no speech claims can be extracted or verified against visual evidence.\"\n  ],\n  \"findings\": []\n}"
+}

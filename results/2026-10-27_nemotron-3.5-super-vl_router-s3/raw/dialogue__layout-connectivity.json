@@ -1,0 +1,44 @@
+{
+  "key": "dialogue__layout-connectivity",
+  "video": "dialogue.mp4",
+  "role": "layout-connectivity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:28:11.249Z",
+  "latencyMs": 69750,
+  "usage": {
+    "prompt_tokens": 3016,
+    "completion_tokens": 8887,
+    "total_tokens": 11903,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8753,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space: Interior hallway with wood wainscoting and paneling.",
+    "Opening: Door panel on left wall (screen left), adjacent to coat hooks.",
+    "Opening: Door panel edge on right wall (screen right), visible with knob.",
+    "Fixture: Coat hooks holding a blue garment on the left wall.",
+    "Fixture: Wall clock mounted on the rear wall.",
+    "Traversal: Subject turns toward the left wall and approaches the door near the coat hooks.",
+    "Action: Subject places hands on the door panel and pushes it open."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Space: Interior hallway with wood wainscoting and paneling.\",\n    \"Opening: Door panel on left wall (screen left), adjacent to coat hooks.\",\n    \"Opening: Door panel edge on right wall (screen right), visible with knob.\",\n    \"Fixture: Coat hooks holding a blue garment on the left wall.\",\n    \"Fixture: Wall clock mounted on the rear wall.\",\n    \"Traversal: Subject turns toward the left wall and approaches the door near the coat hooks.\",\n    \"Action: Subject places hands on the door panel and pushes it open.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,84 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:37:51.390Z",
+  "latencyMs": 40190,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 5962,
+    "total_tokens": 9021,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5119,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block_A (Green '2' start left) | start: table left, green face '2' | end: removed by hand at 00:09 | transitions: rotated to reveal blue face '2' (00:01), changed to green '2' (00:07 - unexplained)",
+    "Block_B (Green '2' start right) | start: table right, green face '2' | end: part of line | transitions: changed to green '3' (00:02 - unexplained), changed to green '5' (00:06 - unexplained)",
+    "Block_C (Green '3' added 00:03) | start: placed at position 3 | end: part of line | transitions: changed to green '2' (00:06 - unexplained)",
+    "Block_D (Yellow '2' added 00:04) | start: placed at position 4 | end: replaced at 00:06 | transitions: changed to green '5' (00:06 - unexplained)",
+    "Block_E (Blue '3' added 00:05) | start: placed at position 5 | end: part of line | transitions: changed to blue '6' (00:08 - unexplained)",
+    "Block_F (Blue '3' added 00:05 pos 5) | start: placed at position 5 | end: part of line | transitions: changed to green '3' (00:06 - unexplained)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Rightmost block (Block_B)",
+      "invariant_violated": "State (number/color)",
+      "description": "Block changes from Green '2' to Green '3' while the hand is occupied manipulating the left block, with no visible action touching this block.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Middle blocks (Block_C, Block_D, Block_E)",
+      "invariant_violated": "State (number/color)",
+      "description": "Multiple blocks change identities simultaneously: Yellow '2' becomes Green '5', Blue '3' becomes Green '2', and another Blue '3' becomes Green '3' between frames with no hand interaction causing the change.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Leftmost block (Block_A)",
+      "invariant_violated": "State (color)",
+      "description": "Block changes from Blue '2' to Green '2' without being touched or moved.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Rightmost block (Block_E)",
+      "invariant_violated": "State (number)",
+      "description": "Block changes from Blue '3' to Blue '6' without visible action.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "Line of blocks",
+      "invariant_violated": "Count/Configuration",
+      "description": "After removing one block at 00:09, the remaining blocks completely swap to a different set (Blue '2', Green '3', Yellow '2', Blue '6') with no visible transition.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block_A (Green '2' start left) | start: table left, green face '2' | end: removed by hand at 00:09 | transitions: rotated to reveal blue face '2' (00:01), changed to green '2' (00:07 - unexplained)\",\n    \"Block_B (Green '2' start right) | start: table right, green face '2' | end: part of line | transitions: changed to green '3' (00:02 - unexplained), changed to green '5' (00:06 - unexplained)\",\n    \"Block_C (Green '3' added 00:03) | start: placed at position 3 | end: part of line | transitions: changed to green '2' (00:06 - unexplained)\",\n    \"Block_D (Yellow '2' added 00:04) | start: placed at position 4 | end: replaced at 00:06 | transitions: changed to green '5' (00:06 - unexplained)\",\n    \"Block_E (Blue '3' added 00:05) | start: placed at position 5 | end: part of line | transitions: changed to blue '6' (00:08 - unexplained)\",\n    \"Block_F (Blue '3' added 00:05 pos 5) | start: placed at position 5 | end: part of line | transitions: changed to green '3' (00:06 - unexplained)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Rightmost block (Block_B)\",\n      \"invariant_violated\": \"State (number/color)\",\n      \"description\": \"Block changes from Green '2' to Green '3' while the hand is occupied manipulating the left block, with no visible action touching this block.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Middle blocks (Block_C, Block_D, Block_E)\",\n      \"invariant_violated\": \"State (number/color)\",\n      \"description\": \"Multiple blocks change identities simultaneously: Yellow '2' becomes Green '5', Blue '3' becomes Green '2', and another Blue '3' becomes Green '3' between frames with no hand interaction causing the change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Leftmost block (Block_A)\",\n      \"invariant_violated\": \"State (color)\",\n      \"description\": \"Block changes from Blue '2' to Green '2' without being touched or moved.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Rightmost block (Block_E)\",\n      \"invariant_violated\": \"State (number)\",\n      \"description\": \"Block changes from Blue '3' to Blue '6' without visible action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Line of blocks\",\n      \"invariant_violated\": \"Count/Configuration\",\n      \"description\": \"After removing one block at 00:09, the remaining blocks completely swap to a different set (Blue '2', Green '3', Yellow '2', Blue '6') with no visible transition.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

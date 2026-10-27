@@ -1,0 +1,42 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:59:01.125Z",
+  "latencyMs": 25875,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 2223,
+    "total_tokens": 5265,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2050,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Table | Orange cloth with circular pattern, central light-colored patch | Same | Camera zooms out revealing full surface",
+    "Cups | Three reddish cylindrical cups clustered near center | Three reddish cups spread across central patch | Magician rearranges them during performance",
+    "Coins | Various coins scattered on table surface | Coins remain on table, some placed under/near cups | Magician manipulates coins into cups",
+    "Magician | Hands and forearms visible entering from left | Full upper body of man in blue suit visible | Camera pulls back to reveal performer",
+    "Background | Blurry chairs and windows in distance | Clear view of windows on left wall and framed pictures on right wall | Camera movement reveals more of the room geometry"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Table | Orange cloth with circular pattern, central light-colored patch | Same | Camera zooms out revealing full surface\",\n    \"Cups | Three reddish cylindrical cups clustered near center | Three reddish cups spread across central patch | Magician rearranges them during performance\",\n    \"Coins | Various coins scattered on table surface | Coins remain on table, some placed under/near cups | Magician manipulates coins into cups\",\n    \"Magician | Hands and forearms visible entering from left | Full upper body of man in blue suit visible | Camera pulls back to reveal performer\",\n    \"Background | Blurry chairs and windows in distance | Clear view of windows on left wall and framed pictures on right wall | Camera movement reveals more of the room geometry\"\n  ],\n  \"findings\": []\n}"
+}

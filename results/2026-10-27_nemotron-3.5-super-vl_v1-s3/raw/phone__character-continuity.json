@@ -1,0 +1,39 @@
+{
+  "key": "phone__character-continuity",
+  "video": "phone.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:32:06.646Z",
+  "latencyMs": 17248,
+  "usage": {
+    "prompt_tokens": 3044,
+    "completion_tokens": 1490,
+    "total_tokens": 4534,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1406,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person holding phone | hands holding smartphone | hands holding smartphone | remains in foreground, adjusting phone angle continuously",
+    "person in background | blue t-shirt, blue jeans, carrying red bag | blue t-shirt, blue jeans, carrying red bag (further away) | walks continuously up the paved path away from camera"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person holding phone | hands holding smartphone | hands holding smartphone | remains in foreground, adjusting phone angle continuously\",\n    \"person in background | blue t-shirt, blue jeans, carrying red bag | blue t-shirt, blue jeans, carrying red bag (further away) | walks continuously up the paved path away from camera\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,77 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:37:11.190Z",
+  "latencyMs": 46815,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 7122,
+    "total_tokens": 9978,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6693,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Green block",
+      "invariant_violated": "Object identity continuity",
+      "description": "The green block to the right of the blue '23' block changes from displaying '28' to '23' without being swapped or removed.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Rightmost blue block",
+      "invariant_violated": "Object identity continuity",
+      "description": "The blue block at the end of the sequence changes from displaying '32' to '6' between frames.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Block sequence",
+      "invariant_violated": "Scene continuity",
+      "description": "The long line of six blocks is abruptly replaced by a different arrangement of four blocks.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:11",
+      "entity": "Rightmost blue block",
+      "invariant_violated": "Object permanence",
+      "description": "The blue block '6' at the end of the row disappears between frames.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:12",
+      "entity": "Rightmost green block",
+      "invariant_violated": "Object permanence",
+      "description": "The green block '3' at the end of the row disappears between frames.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Green block\",\n      \"invariant_violated\": \"Object identity continuity\",\n      \"description\": \"The green block to the right of the blue '23' block changes from displaying '28' to '23' without being swapped or removed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Rightmost blue block\",\n      \"invariant_violated\": \"Object identity continuity\",\n      \"description\": \"The blue block at the end of the sequence changes from displaying '32' to '6' between frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Block sequence\",\n      \"invariant_violated\": \"Scene continuity\",\n      \"description\": \"The long line of six blocks is abruptly replaced by a different arrangement of four blocks.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:11\",\n      \"entity\": \"Rightmost blue block\",\n      \"invariant_violated\": \"Object permanence\",\n      \"description\": \"The blue block '6' at the end of the row disappears between frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:12\",\n      \"entity\": \"Rightmost green block\",\n      \"invariant_violated\": \"Object permanence\",\n      \"description\": \"The green block '3' at the end of the row disappears between frames.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

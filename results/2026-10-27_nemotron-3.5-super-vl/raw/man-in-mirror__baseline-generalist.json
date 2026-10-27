@@ -1,0 +1,47 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:31:06.454Z",
+  "latencyMs": 28746,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 3104,
+    "total_tokens": 5960,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2905,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in white shirt | shaving neck and chin | shaving forehead and neck | repetitive cutting between body parts"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Man shaving",
+      "invariant_violated": "temporal continuity / unique action segments",
+      "description": "The video repeats the segment of the man shaving his neck seen at 00:00-00:01, appearing again identically at 00:05-00:09. Additionally, the forehead shaving segment from 00:02-00:04 is repeated at 00:10-00:11, indicating a looping error or redundant editing.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in white shirt | shaving neck and chin | shaving forehead and neck | repetitive cutting between body parts\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Man shaving\",\n      \"invariant_violated\": \"temporal continuity / unique action segments\",\n      \"description\": \"The video repeats the segment of the man shaving his neck seen at 00:00-00:01, appearing again identically at 00:05-00:09. Additionally, the forehead shaving segment from 00:02-00:04 is repeated at 00:10-00:11, indicating a looping error or redundant editing.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

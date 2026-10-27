@@ -1,0 +1,40 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:38:59.063Z",
+  "latencyMs": 67664,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 9936,
+    "total_tokens": 12978,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9830,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Table | Fixed wooden surface occupying lower frame | Fixed wooden surface occupying lower frame | Static throughout",
+    "Background | Blurry dark vertical structures (chair legs) at top | Blurry dark vertical structures at top | Static throughout",
+    "Block Line | Starts with 2 blocks aligned left-to-right | Ends with 2 blocks aligned left-to-right | Dynamic count via cuts/placement; always single file on table"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Table | Fixed wooden surface occupying lower frame | Fixed wooden surface occupying lower frame | Static throughout\",\n    \"Background | Blurry dark vertical structures (chair legs) at top | Blurry dark vertical structures at top | Static throughout\",\n    \"Block Line | Starts with 2 blocks aligned left-to-right | Ends with 2 blocks aligned left-to-right | Dynamic count via cuts/placement; always single file on table\"\n  ],\n  \"findings\": []\n}"
+}

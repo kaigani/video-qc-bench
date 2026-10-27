@@ -1,0 +1,48 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:27:08.216Z",
+  "latencyMs": 67636,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 4461,
+    "total_tokens": 7317,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4278,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | blue dress, blonde hair | blue dress, blonde hair | walks from kitchen through bedroom and back",
+    "kitchen environment | countertop microwave, tile backsplash | over-the-range microwave, matching cabinetry | appliance inconsistency"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen appliances",
+      "invariant_violated": "set dressing consistency",
+      "description": "The microwave changes from a countertop model sitting on the counter (visible at 00:00) to an over-the-range model mounted above the stove (visible at 00:09), despite the cabinetry and kitchen layout appearing identical.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | blue dress, blonde hair | blue dress, blonde hair | walks from kitchen through bedroom and back\",\n    \"kitchen environment | countertop microwave, tile backsplash | over-the-range microwave, matching cabinetry | appliance inconsistency\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"kitchen appliances\",\n      \"invariant_violated\": \"set dressing consistency\",\n      \"description\": \"The microwave changes from a countertop model sitting on the counter (visible at 00:00) to an over-the-range model mounted above the stove (visible at 00:09), despite the cabinetry and kitchen layout appearing identical.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

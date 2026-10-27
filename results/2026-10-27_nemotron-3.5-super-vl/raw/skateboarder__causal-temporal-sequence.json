@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:36:09.380Z",
+  "latencyMs": 10565,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 780,
+    "total_tokens": 3819,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 712,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouching on flat ground | landing and rolling away | pops tail, jumps, lands",
+    "skateboard | stationary under feet | rolling after landing | lifted into air, rotates, returns to ground"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouching on flat ground | landing and rolling away | pops tail, jumps, lands\",\n    \"skateboard | stationary under feet | rolling after landing | lifted into air, rotates, returns to ground\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,68 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:15:13.487Z",
+  "latencyMs": 63955,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 7387,
+    "total_tokens": 10387,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6920,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Hand holds Green Block '2'; Table has Green Block '2'",
+    "00:01: Hand holds Blue Block '3'; Table has Green Block '2'",
+    "00:02: Table has Blue Block '2', Blue Block '3', Green Block '2'",
+    "00:05: Table has Blue '2', Blue '3', Green '2', Tan '2', Light Blue '3', Light Blue '3'",
+    "00:06: Table has Tan '5', Green '2', Light Blue '3', Light Blue '2'",
+    "00:08: Table has Blue '2', Blue '3', Tan '2', Light Blue '6'"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Left Green Block '2'",
+      "invariant_violated": "Object Kind Change",
+      "description": "Block manipulated by hand changes color from Green to Blue and number from 2 to 3 without a visible swap.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block Sequence",
+      "invariant_violated": "Placement Persistence / Spontaneous Appearance",
+      "description": "Blocks Blue '2', Blue '3', Tan '2' vanish; Tan '5' appears; lineup completely changes without transition.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Block Sequence",
+      "invariant_violated": "Placement Persistence / Object Identity",
+      "description": "Tan '5' vanishes; Light Blue '2' changes to Light Blue '6'; Blue blocks reappear after vanishing at 00:06.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Hand holds Green Block '2'; Table has Green Block '2'\",\n    \"00:01: Hand holds Blue Block '3'; Table has Green Block '2'\",\n    \"00:02: Table has Blue Block '2', Blue Block '3', Green Block '2'\",\n    \"00:05: Table has Blue '2', Blue '3', Green '2', Tan '2', Light Blue '3', Light Blue '3'\",\n    \"00:06: Table has Tan '5', Green '2', Light Blue '3', Light Blue '2'\",\n    \"00:08: Table has Blue '2', Blue '3', Tan '2', Light Blue '6'\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Left Green Block '2'\",\n      \"invariant_violated\": \"Object Kind Change\",\n      \"description\": \"Block manipulated by hand changes color from Green to Blue and number from 2 to 3 without a visible swap.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Block Sequence\",\n      \"invariant_violated\": \"Placement Persistence / Spontaneous Appearance\",\n      \"description\": \"Blocks Blue '2', Blue '3', Tan '2' vanish; Tan '5' appears; lineup completely changes without transition.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Block Sequence\",\n      \"invariant_violated\": \"Placement Persistence / Object Identity\",\n      \"description\": \"Tan '5' vanishes; Light Blue '2' changes to Light Blue '6'; Blue blocks reappear after vanishing at 00:06.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

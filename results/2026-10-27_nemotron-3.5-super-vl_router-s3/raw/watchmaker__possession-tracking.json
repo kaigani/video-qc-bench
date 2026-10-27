@@ -1,0 +1,39 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:33:45.683Z",
+  "latencyMs": 17794,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 1836,
+    "total_tokens": 4836,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1752,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Ring: 00:00-00:03 Right hand -> 00:04-00:14 Both hands",
+    "Tweezers: 00:00-00:03 Left hand -> 00:04 Exited frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Ring: 00:00-00:03 Right hand -> 00:04-00:14 Both hands\",\n    \"Tweezers: 00:00-00:03 Left hand -> 00:04 Exited frame\"\n  ],\n  \"findings\": []\n}"
+}

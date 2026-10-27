@@ -1,0 +1,57 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:08:15.728Z",
+  "latencyMs": 73722,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 9791,
+    "total_tokens": 12833,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 9467,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | flat surface spanning foreground | flat surface spanning foreground | static",
+    "background architecture | dark area with chair legs top center | dark area with chair legs top center | static",
+    "numbered blocks | green '2', green '2' left/right | blue '2', blue '3' left/right | sequential addition/removal/repositioning"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "row of numbered blocks",
+      "invariant_violated": "layout consistency",
+      "description": "Between 00:06 and 00:07, the block row shifts leftward; the blue block '2' moves from a central position to the far left edge without camera movement or shown translation of the remaining blocks.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "row of numbered blocks",
+      "invariant_violated": "layout consistency",
+      "description": "Between 00:08 and 00:09, the beige block '5' is removed from the third position, and the blue block '6' shifts left to fill the gap without animated motion, closing the space inexplicably.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | flat surface spanning foreground | flat surface spanning foreground | static\",\n    \"background architecture | dark area with chair legs top center | dark area with chair legs top center | static\",\n    \"numbered blocks | green '2', green '2' left/right | blue '2', blue '3' left/right | sequential addition/removal/repositioning\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"row of numbered blocks\",\n      \"invariant_violated\": \"layout consistency\",\n      \"description\": \"Between 00:06 and 00:07, the block row shifts leftward; the blue block '2' moves from a central position to the far left edge without camera movement or shown translation of the remaining blocks.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"row of numbered blocks\",\n      \"invariant_violated\": \"layout consistency\",\n      \"description\": \"Between 00:08 and 00:09, the beige block '5' is removed from the third position, and the blue block '6' shifts left to fill the gap without animated motion, closing the space inexplicably.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

@@ -1,0 +1,46 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:03:40.932Z",
+  "latencyMs": 123840,
+  "usage": {
+    "prompt_tokens": 3050,
+    "completion_tokens": 7033,
+    "total_tokens": 10083,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6816,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space: Exterior Parking Lot. Connected to Diner Interior via Front Door and Windows.",
+    "Space: Diner Interior. Connected to Exterior via Front Door/Windows and Rear Exit Door. Connected to Kitchen via Service Window.",
+    "Space: Kitchen (visible through pass-through). Connected to Diner via Service Window.",
+    "Traversal: Man enters Diner from Exterior (approx 00:18).",
+    "Traversal: Man exits Diner to Exterior via Front Door (approx 01:21).",
+    "Traversal: Waitress moves toward rear/Kitchen area (approx 00:45).",
+    "View Check: Front Window from Interior shows Parking Lot/Sky (consistent with Exterior).",
+    "View Check: Service Window from Interior shows Kitchen Equipment/Stove (consistent).",
+    "View Check: Rear Exit Door from Interior shows dark Exterior (consistent)."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Space: Exterior Parking Lot. Connected to Diner Interior via Front Door and Windows.\",\n    \"Space: Diner Interior. Connected to Exterior via Front Door/Windows and Rear Exit Door. Connected to Kitchen via Service Window.\",\n    \"Space: Kitchen (visible through pass-through). Connected to Diner via Service Window.\",\n    \"Traversal: Man enters Diner from Exterior (approx 00:18).\",\n    \"Traversal: Man exits Diner to Exterior via Front Door (approx 01:21).\",\n    \"Traversal: Waitress moves toward rear/Kitchen area (approx 00:45).\",\n    \"View Check: Front Window from Interior shows Parking Lot/Sky (consistent with Exterior).\",\n    \"View Check: Service Window from Interior shows Kitchen Equipment/Stove (consistent).\",\n    \"View Check: Rear Exit Door from Interior shows dark Exterior (consistent).\"\n  ],\n  \"findings\": []\n}"
+}

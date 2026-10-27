@@ -1,0 +1,76 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:43:35.615Z",
+  "latencyMs": 135329,
+  "usage": {
+    "prompt_tokens": 3089,
+    "completion_tokens": 7717,
+    "total_tokens": 10806,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6830,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:07, exterior wide shot of diner and truck",
+    "shot 2: 00:08-00:12, waitress behind counter facing right",
+    "shot 3: 00:13-00:16, man enters from left and sits at counter",
+    "shot 4: 00:17-00:19, waitress wiping counter",
+    "shot 5: 00:20-00:22, man drinking coffee at counter",
+    "shot 6: 00:23-00:25, waitress standing behind counter",
+    "shot 7: 00:26-00:28, man holding mug at counter",
+    "shot 8: 00:29-00:34, close-up coffee pouring into mug",
+    "shot 9: 00:35-00:41, man sitting with coffee",
+    "shot 10: 00:42-00:50, waitress wiping counter foreground, man blurred in background",
+    "shot 11: 00:51-00:57, empty counter area",
+    "shot 12: 00:58-01:06, man sitting at counter, waitress standing by kitchen pass-through in background",
+    "shot 13: 01:07-01:17, close-up interaction: waitress places plate at counter next to man",
+    "shot 14: 01:18-01:25, man eating, waitress standing in background",
+    "shot 15: 01:26-01:31, close-up man's face",
+    "shot 16: 01:32-01:40, close-up waitress's face",
+    "shot 17: 01:41-01:43, exterior: man walking from diner towards truck",
+    "shot 18: 01:44-01:46, close-up hand placing cash on counter",
+    "shot 19: 01:47-01:50, waitress standing behind counter",
+    "shot 20: 01:51-01:52, man walking inside from counter towards door",
+    "shot 21: 01:53-01:55, empty counter area",
+    "shot 22: 01:56-01:59, waitress picking up cash from counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Man (Truck Driver)",
+      "invariant_violated": "spatial_teleportation",
+      "description": "At 01:41 the man is seen outside walking toward the truck. In the very next shot (01:44), cash is placed on the counter inside, implying his presence. Then at 01:51 he is seen walking inside toward the exit. He cannot be outside at the truck and simultaneously inside paying/leaving without an intervening re-entry shot.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:07",
+      "entity": "Waitress",
+      "invariant_violated": "unshown_crossing",
+      "description": "In the previous shot (00:58-01:06), the waitress is standing near the kitchen pass-through in the background. In this shot, she is instantly positioned directly at the counter next to the man placing food. No movement across the space is shown.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:07, exterior wide shot of diner and truck\",\n    \"shot 2: 00:08-00:12, waitress behind counter facing right\",\n    \"shot 3: 00:13-00:16, man enters from left and sits at counter\",\n    \"shot 4: 00:17-00:19, waitress wiping counter\",\n    \"shot 5: 00:20-00:22, man drinking coffee at counter\",\n    \"shot 6: 00:23-00:25, waitress standing behind counter\",\n    \"shot 7: 00:26-00:28, man holding mug at counter\",\n    \"shot 8: 00:29-00:34, close-up coffee pouring into mug\",\n    \"shot 9: 00:35-00:41, man sitting with coffee\",\n    \"shot 10: 00:42-00:50, waitress wiping counter foreground, man blurred in background\",\n    \"shot 11: 00:51-00:57, empty counter area\",\n    \"shot 12: 00:58-01:06, man sitting at counter, waitress standing by kitchen pass-through in background\",\n    \"shot 13: 01:07-01:17, close-up interaction: waitress places plate at counter next to man\",\n    \"shot 14: 01:18-01:25, man eating, waitress standing in background\",\n    \"shot 15: 01:26-01:31, close-up man's face\",\n    \"shot 16: 01:32-01:40, close-up waitress's face\",\n    \"shot 17: 01:41-01:43, exterior: man walking from diner towards truck\",\n    \"shot 18: 01:44-01:46, close-up hand placing cash on counter\",\n    \"shot 19: 01:47-01:50, waitress standing behind counter\",\n    \"shot 20: 01:51-01:52, man walking inside from counter towards door\",\n    \"shot 21: 01:53-01:55, empty counter area\",\n    \"shot 22: 01:56-01:59, waitress picking up cash from counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Man (Truck Driver)\",\n      \"invariant_violated\": \"spatial_teleportation\",\n      \"description\": \"At 01:41 the man is seen outside walking toward the truck. In the very next shot (01:44), cash is placed on the counter inside, implying his presence. Then at 01:51 he is seen walking inside toward the exit. He cannot be outside at the truck and simultaneously inside paying/leaving without an intervening re-entry shot.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:07\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"unshown_crossing\",\n      \"description\": \"In the previous shot (00:58-01:06), the waitress is standing near the kitchen pass-through in the background. In this shot, she is instantly positioned directly at the counter next to the man placing food. No movement across the space is shown.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

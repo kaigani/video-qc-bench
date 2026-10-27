@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:25:00.245Z",
+  "latencyMs": 10144,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 927,
+    "total_tokens": 3969,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 808,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dance studio | double doors on left wall, mirror wall on right | same configuration throughout | static camera",
+    "dancer | standing center-left, black outfit | performs arm movements and turns | reflection in mirror synchronizes perfectly",
+    "mirror wall | spans right side of frame | reflects back wall with ballet barre and picture frame | reflection geometry matches room layout",
+    "ballet barre | visible in reflection on back wall | remains stationary in reflection | consistent depth relative to dancer"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dance studio | double doors on left wall, mirror wall on right | same configuration throughout | static camera\",\n    \"dancer | standing center-left, black outfit | performs arm movements and turns | reflection in mirror synchronizes perfectly\",\n    \"mirror wall | spans right side of frame | reflects back wall with ballet barre and picture frame | reflection geometry matches room layout\",\n    \"ballet barre | visible in reflection on back wall | remains stationary in reflection | consistent depth relative to dancer\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:17:38.401Z",
+  "latencyMs": 35438,
+  "usage": {
+    "prompt_tokens": 3046,
+    "completion_tokens": 2945,
+    "total_tokens": 5991,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2829,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red fruit (tomato) held by woman: 00:00 count 1, 00:05 count 1, 00:10 count 1. Cause: None (count remains constant).",
+    "Blue umbrella held by woman: 00:00 count 1, 00:05 count 1, 00:10 count 1. Cause: None (count remains constant)."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Red fruit (tomato) held by woman: 00:00 count 1, 00:05 count 1, 00:10 count 1. Cause: None (count remains constant).\",\n    \"Blue umbrella held by woman: 00:00 count 1, 00:05 count 1, 00:10 count 1. Cause: None (count remains constant).\"\n  ],\n  \"findings\": []\n}"
+}

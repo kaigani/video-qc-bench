@@ -1,0 +1,51 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:28:18.116Z",
+  "latencyMs": 132761,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 8318,
+    "total_tokens": 11360,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8051,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | Center frame facing camera | Left profile facing door | Spins left",
+    "Blue coat | Hanging on hook, viewer's left edge | Hanging on hook, viewer's right edge near door | Stays on right side of frame",
+    "Wooden door | Behind man | Man approaches and opens it | Subject moves to it",
+    "Picture frame | Wall on viewer's right | Wall on viewer's right behind coat | Stays on right side of frame",
+    "Wall sconce | Wall on viewer's right | Wall on viewer's left edge | Moves to left side of frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Room Layout",
+      "invariant_violated": "Relative positions of fixed objects",
+      "description": "The blue coat and picture frame remain on the right side of the frame after the man turns left to face the door. Given the subject's initial orientation and leftward turn, background elements fixed on the right should shift towards the left or behind him, not remain fixed on the right.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | Center frame facing camera | Left profile facing door | Spins left\",\n    \"Blue coat | Hanging on hook, viewer's left edge | Hanging on hook, viewer's right edge near door | Stays on right side of frame\",\n    \"Wooden door | Behind man | Man approaches and opens it | Subject moves to it\",\n    \"Picture frame | Wall on viewer's right | Wall on viewer's right behind coat | Stays on right side of frame\",\n    \"Wall sconce | Wall on viewer's right | Wall on viewer's left edge | Moves to left side of frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Room Layout\",\n      \"invariant_violated\": \"Relative positions of fixed objects\",\n      \"description\": \"The blue coat and picture frame remain on the right side of the frame after the man turns left to face the door. Given the subject's initial orientation and leftward turn, background elements fixed on the right should shift towards the left or behind him, not remain fixed on the right.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

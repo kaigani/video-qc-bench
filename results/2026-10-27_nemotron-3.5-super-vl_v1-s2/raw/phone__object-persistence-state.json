@@ -1,0 +1,41 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:01:37.515Z",
+  "latencyMs": 10762,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 643,
+    "total_tokens": 3702,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 538,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in hand, screen displaying 'A7 42' | held in hand, screen blurry | tilted and moved by hand",
+    "red bag | carried by person in background walking up stairs | carried further up stairs | moved by person walking",
+    "metal railing | fixed along stairs | fixed along stairs | none",
+    "concrete stairs | fixed | fixed | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in hand, screen displaying 'A7 42' | held in hand, screen blurry | tilted and moved by hand\",\n    \"red bag | carried by person in background walking up stairs | carried further up stairs | moved by person walking\",\n    \"metal railing | fixed along stairs | fixed along stairs | none\",\n    \"concrete stairs | fixed | fixed | none\"\n  ],\n  \"findings\": []\n}"
+}

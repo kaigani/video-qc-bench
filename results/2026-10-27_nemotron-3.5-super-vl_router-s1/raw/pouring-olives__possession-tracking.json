@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:52:54.907Z",
+  "latencyMs": 90059,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 1766,
+    "total_tokens": 4766,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1601,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:03: Olives pour from small glass container held in left hand into large glass jar on cutting board.",
+    "00:03 - 00:05: Empty small glass container placed on countertop to the right.",
+    "00:05 - 00:06: Second small glass bowl containing olives picked up from countertop.",
+    "00:06 - 00:09: Olives pour from second small glass bowl into large glass jar.",
+    "00:09 - 00:10: Empty second small glass bowl placed on countertop next to the first container."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:03: Olives pour from small glass container held in left hand into large glass jar on cutting board.\",\n    \"00:03 - 00:05: Empty small glass container placed on countertop to the right.\",\n    \"00:05 - 00:06: Second small glass bowl containing olives picked up from countertop.\",\n    \"00:06 - 00:09: Olives pour from second small glass bowl into large glass jar.\",\n    \"00:09 - 00:10: Empty second small glass bowl placed on countertop next to the first container.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,65 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:25:05.290Z",
+  "latencyMs": 98224,
+  "usage": {
+    "prompt_tokens": 3089,
+    "completion_tokens": 6997,
+    "total_tokens": 10086,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6262,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:07, exterior wide, diner and truck",
+    "shot 2: 00:08-00:16, interior medium, waitress behind counter near kitchen",
+    "shot 3: 00:17-00:20, interior long, man seated in booth left, waitress at counter right",
+    "shot 4: 00:21-00:32, interior long, man walks from door to counter stool right",
+    "shot 5: 00:33-00:36, close up, food and coffee pouring",
+    "shot 6: 00:37-00:45, interior medium, man seated at counter holding mug",
+    "shot 7: 00:46-00:54, interior medium, waitress wiping counter foreground, man visible in background window",
+    "shot 8: 00:55-00:58, interior static, empty counter",
+    "shot 9: 00:59-01:08, interior wide, man seated at counter left, waitress at counter right end",
+    "shot 10: 01:09-01:18, interior medium two-shot, man left with mug, waitress right with plate",
+    "shot 11: 01:19-01:21, interior medium, waitress close up",
+    "shot 12: 01:22-01:24, interior medium, man close up",
+    "shot 13: 01:25-01:28, interior medium, waitress close up",
+    "shot 14: 01:29-01:32, interior medium, man close up",
+    "shot 15: 01:33-01:34, interior close up, man smiling",
+    "shot 16: 01:35-01:39, close up, mug on counter with reflections",
+    "shot 17: 01:40-01:44, exterior medium, man walking to truck",
+    "shot 18: 01:45-01:46, interior medium, waitress turning away",
+    "shot 19: 01:47-01:49, exterior long, truck driving away"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:21",
+      "entity": "Man (brown jacket)",
+      "invariant_violated": "Continuity of presence",
+      "description": "In shot 3 (00:17-00:20), the man is already seated inside the diner in a booth near the front window. In the immediately following shot 4 (00:21-00:32), the man is seen walking from the front entrance towards the counter as if arriving for the first time. He cannot be both seated inside and entering from outside in consecutive shots without an intervening exit/re-entry.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:07, exterior wide, diner and truck\",\n    \"shot 2: 00:08-00:16, interior medium, waitress behind counter near kitchen\",\n    \"shot 3: 00:17-00:20, interior long, man seated in booth left, waitress at counter right\",\n    \"shot 4: 00:21-00:32, interior long, man walks from door to counter stool right\",\n    \"shot 5: 00:33-00:36, close up, food and coffee pouring\",\n    \"shot 6: 00:37-00:45, interior medium, man seated at counter holding mug\",\n    \"shot 7: 00:46-00:54, interior medium, waitress wiping counter foreground, man visible in background window\",\n    \"shot 8: 00:55-00:58, interior static, empty counter\",\n    \"shot 9: 00:59-01:08, interior wide, man seated at counter left, waitress at counter right end\",\n    \"shot 10: 01:09-01:18, interior medium two-shot, man left with mug, waitress right with plate\",\n    \"shot 11: 01:19-01:21, interior medium, waitress close up\",\n    \"shot 12: 01:22-01:24, interior medium, man close up\",\n    \"shot 13: 01:25-01:28, interior medium, waitress close up\",\n    \"shot 14: 01:29-01:32, interior medium, man close up\",\n    \"shot 15: 01:33-01:34, interior close up, man smiling\",\n    \"shot 16: 01:35-01:39, close up, mug on counter with reflections\",\n    \"shot 17: 01:40-01:44, exterior medium, man walking to truck\",\n    \"shot 18: 01:45-01:46, interior medium, waitress turning away\",\n    \"shot 19: 01:47-01:49, exterior long, truck driving away\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:21\",\n      \"entity\": \"Man (brown jacket)\",\n      \"invariant_violated\": \"Continuity of presence\",\n      \"description\": \"In shot 3 (00:17-00:20), the man is already seated inside the diner in a booth near the front window. In the immediately following shot 4 (00:21-00:32), the man is seen walking from the front entrance towards the counter as if arriving for the first time. He cannot be both seated inside and entering from outside in consecutive shots without an intervening exit/re-entry.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

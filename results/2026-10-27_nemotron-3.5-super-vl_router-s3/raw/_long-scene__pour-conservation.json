@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:21:47.117Z",
+  "latencyMs": 119554,
+  "usage": {
+    "prompt_tokens": 3034,
+    "completion_tokens": 10790,
+    "total_tokens": 13824,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10510,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:27: Glass coffee carafe - Contents: Coffee - Fill: High",
+    "00:27: White ceramic mug - Contents: Coffee - Fill: Rising (Empty to Full)",
+    "00:36: White ceramic mug - Contents: Coffee - Fill: High",
+    "01:25: White ceramic mug - Contents: Coffee - Fill: Low/Empty (removed by waitress)",
+    "01:33: Glass coffee carafe - Contents: Coffee - Fill: High",
+    "01:33: White ceramic mug - Contents: Coffee - Fill: Rising (Empty to Full)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:33",
+      "entity": "Glass coffee carafe",
+      "invariant_violated": "Refill without cause",
+      "description": "The coffee carafe is used to pour coffee at 00:27, depleting its contents. At 01:33, the same carafe is shown full again and used to pour coffee, with no visible refilling of the carafe in the intervening time.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:27: Glass coffee carafe - Contents: Coffee - Fill: High\",\n    \"00:27: White ceramic mug - Contents: Coffee - Fill: Rising (Empty to Full)\",\n    \"00:36: White ceramic mug - Contents: Coffee - Fill: High\",\n    \"01:25: White ceramic mug - Contents: Coffee - Fill: Low/Empty (removed by waitress)\",\n    \"01:33: Glass coffee carafe - Contents: Coffee - Fill: High\",\n    \"01:33: White ceramic mug - Contents: Coffee - Fill: Rising (Empty to Full)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:33\",\n      \"entity\": \"Glass coffee carafe\",\n      \"invariant_violated\": \"Refill without cause\",\n      \"description\": \"The coffee carafe is used to pour coffee at 00:27, depleting its contents. At 01:33, the same carafe is shown full again and used to pour coffee, with no visible refilling of the carafe in the intervening time.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

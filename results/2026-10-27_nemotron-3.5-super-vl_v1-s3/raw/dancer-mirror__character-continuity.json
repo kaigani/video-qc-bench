@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:24:13.774Z",
+  "latencyMs": 121585,
+  "usage": {
+    "prompt_tokens": 3044,
+    "completion_tokens": 10375,
+    "total_tokens": 13419,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10171,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer | Female, brown hair in bun, black sports bra, black leggings, tattoos on right arm, barefoot, facing mirror/back to camera | Female, brown hair in bun, black sports bra, black leggings, tattoos on right arm, barefoot, facing mirror/back to camera | Continuous dance performance with apparent jump in arm movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:10",
+      "entity": "Dancer (left arm)",
+      "invariant_violated": "movement continuity",
+      "description": "At 00:09 the left arm is raised high. At 00:10 the left arm is down by the side. The lowering motion is skipped between frames, implying an unexplained transition.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer | Female, brown hair in bun, black sports bra, black leggings, tattoos on right arm, barefoot, facing mirror/back to camera | Female, brown hair in bun, black sports bra, black leggings, tattoos on right arm, barefoot, facing mirror/back to camera | Continuous dance performance with apparent jump in arm movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Dancer (left arm)\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"At 00:09 the left arm is raised high. At 00:10 the left arm is down by the side. The lowering motion is skipped between frames, implying an unexplained transition.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

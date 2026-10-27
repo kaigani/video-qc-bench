@@ -1,0 +1,68 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:23:55.707Z",
+  "latencyMs": 59935,
+  "usage": {
+    "prompt_tokens": 3073,
+    "completion_tokens": 6039,
+    "total_tokens": 9112,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5635,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Standing behind counter facing kitchen | Walking to kitchen area | Turns and walks away from counter",
+    "Man | Standing outside doorway | Seated at counter holding mug | Walks inside and sits down",
+    "Coffee Mug | Empty on counter | Filled with coffee | Liquid poured into mug",
+    "Food Plate | On service window | Placed on counter | Waitress carries plate to customer",
+    "Truck | Parked outside | Driving away | Truck moves from stationary to driving",
+    "Exterior Lighting | Deep blue twilight | Bright golden sunlight | Sky brightens abruptly between cuts"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:42",
+      "entity": "Man's hands / Cash",
+      "invariant_violated": "Effect without cause",
+      "description": "The man is suddenly holding a fan of cash without retrieving it from his pockets or receiving it from anyone.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:36",
+      "entity": "Exterior lighting",
+      "invariant_violated": "Light changes only when a switch/source changes",
+      "description": "The sky shifts from deep blue twilight to bright golden sunlight abruptly between cuts, implying an unexplained time jump.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:36",
+      "entity": "Truck",
+      "invariant_violated": "Effect without cause",
+      "description": "The truck is seen moving past the window without a preceding shot of the engine starting or a driver entering.",
+      "severity": "minor",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Standing behind counter facing kitchen | Walking to kitchen area | Turns and walks away from counter\",\n    \"Man | Standing outside doorway | Seated at counter holding mug | Walks inside and sits down\",\n    \"Coffee Mug | Empty on counter | Filled with coffee | Liquid poured into mug\",\n    \"Food Plate | On service window | Placed on counter | Waitress carries plate to customer\",\n    \"Truck | Parked outside | Driving away | Truck moves from stationary to driving\",\n    \"Exterior Lighting | Deep blue twilight | Bright golden sunlight | Sky brightens abruptly between cuts\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:42\",\n      \"entity\": \"Man's hands / Cash\",\n      \"invariant_violated\": \"Effect without cause\",\n      \"description\": \"The man is suddenly holding a fan of cash without retrieving it from his pockets or receiving it from anyone.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:36\",\n      \"entity\": \"Exterior lighting\",\n      \"invariant_violated\": \"Light changes only when a switch/source changes\",\n      \"description\": \"The sky shifts from deep blue twilight to bright golden sunlight abruptly between cuts, implying an unexplained time jump.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"01:36\",\n      \"entity\": \"Truck\",\n      \"invariant_violated\": \"Effect without cause\",\n      \"description\": \"The truck is seen moving past the window without a preceding shot of the engine starting or a driver entering.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

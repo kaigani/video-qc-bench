@@ -1,0 +1,40 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:24:20.457Z",
+  "latencyMs": 23127,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 1698,
+    "total_tokens": 4764,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1533,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Child's right hand | hovering above table | stirring balls inside bowl | touches red ball at 00:01, grips and lifts red ball at 00:02, releases ball back into bowl at 00:03, stirs contents continuously thereafter",
+    "Child's left hand | hovering above table | resting near bowl rim | contacts bowl rim and balls intermittently, assists in holding the red ball between 00:02-00:03",
+    "Red ball | resting in bowl | resting in bowl | lifted out of bowl briefly between 00:02-00:03, returned to bowl at 00:03"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Child's right hand | hovering above table | stirring balls inside bowl | touches red ball at 00:01, grips and lifts red ball at 00:02, releases ball back into bowl at 00:03, stirs contents continuously thereafter\",\n    \"Child's left hand | hovering above table | resting near bowl rim | contacts bowl rim and balls intermittently, assists in holding the red ball between 00:02-00:03\",\n    \"Red ball | resting in bowl | resting in bowl | lifted out of bowl briefly between 00:02-00:03, returned to bowl at 00:03\"\n  ],\n  \"findings\": []\n}"
+}

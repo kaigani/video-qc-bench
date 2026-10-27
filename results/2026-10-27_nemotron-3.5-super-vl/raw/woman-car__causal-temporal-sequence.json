@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:45:10.896Z",
+  "latencyMs": 108649,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 4776,
+    "total_tokens": 7815,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4663,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Car/Road | car angled on roadside with dirt visible | car positioned on road with yellow lane markings visible | forward motion reveals road markings",
+    "Woman's Hair | hair settled around face and shoulders | hair blowing back vigorously | wind force increases corresponding to car motion",
+    "Camera/Lighting | soft side lighting, wide shot of car front | strong lens flare on left, tight shot on woman | camera pushes in and angle shifts relative to sun"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Car/Road | car angled on roadside with dirt visible | car positioned on road with yellow lane markings visible | forward motion reveals road markings\",\n    \"Woman's Hair | hair settled around face and shoulders | hair blowing back vigorously | wind force increases corresponding to car motion\",\n    \"Camera/Lighting | soft side lighting, wide shot of car front | strong lens flare on left, tight shot on woman | camera pushes in and angle shifts relative to sun\"\n  ],\n  \"findings\": []\n}"
+}

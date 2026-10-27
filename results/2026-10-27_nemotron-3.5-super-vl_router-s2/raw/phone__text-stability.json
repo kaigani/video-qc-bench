@@ -1,0 +1,40 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:11:08.100Z",
+  "latencyMs": 23360,
+  "usage": {
+    "prompt_tokens": 3006,
+    "completion_tokens": 2447,
+    "total_tokens": 5453,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2259,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Entity: Phone screen main text 'A742'; Moment 00:00: Visible but blurred/motion smear; Moment 00:01: Visible but blurred; Moment 00:06: Sharp reading 'A742'; Moment 00:07: Sharp reading 'A742'",
+    "Entity: Phone screen status bar text 'AZ-12'; Moment 00:06: Sharp reading 'AZ-12'; Moment 00:07: Sharp reading 'AZ-12'",
+    "Entity: Phone screen bottom text 'AZ-12'; Moment 00:06: Sharp reading 'AZ-12'; Moment 00:07: Sharp reading 'AZ-12'"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Entity: Phone screen main text 'A742'; Moment 00:00: Visible but blurred/motion smear; Moment 00:01: Visible but blurred; Moment 00:06: Sharp reading 'A742'; Moment 00:07: Sharp reading 'A742'\",\n    \"Entity: Phone screen status bar text 'AZ-12'; Moment 00:06: Sharp reading 'AZ-12'; Moment 00:07: Sharp reading 'AZ-12'\",\n    \"Entity: Phone screen bottom text 'AZ-12'; Moment 00:06: Sharp reading 'AZ-12'; Moment 00:07: Sharp reading 'AZ-12'\"\n  ],\n  \"findings\": []\n}"
+}

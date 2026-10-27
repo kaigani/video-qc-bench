@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:19:15.852Z",
+  "latencyMs": 100268,
+  "usage": {
+    "prompt_tokens": 3100,
+    "completion_tokens": 3388,
+    "total_tokens": 6488,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3211,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Leaning on counter with forearms and hands | Standing near window looking out | Transitions: wiping counter, serving plate, exchanging cash",
+    "Customer | Enters diner and sits on stool | Exits diner and enters truck | Transitions: holding mug, standing up, paying",
+    "Coffee Mug | Being filled with liquid from carafe | Resting on counter on napkin | Transitions: gripped and held by customer",
+    "Plate of food | Carried by waitress from kitchen area | Placed on counter in front of customer | Transitions: set down and released",
+    "Cash bills | Held in fan shape in waitress's hand | Transferred to customer's hand | Transitions: hand-to-hand contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Leaning on counter with forearms and hands | Standing near window looking out | Transitions: wiping counter, serving plate, exchanging cash\",\n    \"Customer | Enters diner and sits on stool | Exits diner and enters truck | Transitions: holding mug, standing up, paying\",\n    \"Coffee Mug | Being filled with liquid from carafe | Resting on counter on napkin | Transitions: gripped and held by customer\",\n    \"Plate of food | Carried by waitress from kitchen area | Placed on counter in front of customer | Transitions: set down and released\",\n    \"Cash bills | Held in fan shape in waitress's hand | Transferred to customer's hand | Transitions: hand-to-hand contact\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:50:51.323Z",
+  "latencyMs": 37292,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 4534,
+    "total_tokens": 7390,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4260,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child | full upper body visible in blue hoodie | only hands and forearms visible | sudden cut to close-up",
+    "bowl of balls | contains red, green, and yellow balls | contains red, green, yellow, and orange balls | orange balls appear without source"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Camera framing",
+      "invariant_violated": "Continuous shot",
+      "description": "The video cuts abruptly from a medium shot showing the child's face and torso to a close-up of just the hands and bowl, causing the side table and small pot to disappear from view.",
+      "severity": "moderate",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Balls in bowl",
+      "invariant_violated": "Object conservation",
+      "description": "Orange balls appear in the bowl during the close-up sequence, but only red, green, and yellow balls were visible in the initial wide shot at 00:00.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child | full upper body visible in blue hoodie | only hands and forearms visible | sudden cut to close-up\",\n    \"bowl of balls | contains red, green, and yellow balls | contains red, green, yellow, and orange balls | orange balls appear without source\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Camera framing\",\n      \"invariant_violated\": \"Continuous shot\",\n      \"description\": \"The video cuts abruptly from a medium shot showing the child's face and torso to a close-up of just the hands and bowl, causing the side table and small pot to disappear from view.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Balls in bowl\",\n      \"invariant_violated\": \"Object conservation\",\n      \"description\": \"Orange balls appear in the bowl during the close-up sequence, but only red, green, and yellow balls were visible in the initial wide shot at 00:00.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:02:53.471Z",
+  "latencyMs": 24083,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 2602,
+    "total_tokens": 5668,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2527,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Person's hands | gripping small glass jar tilted over large glass jar | jar moved away to counter | olives transferred into large jar",
+    "Person's hands | gripping metal bowl tilted over large glass jar | bowl moved away to counter | olives transferred into large jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Person's hands | gripping small glass jar tilted over large glass jar | jar moved away to counter | olives transferred into large jar\",\n    \"Person's hands | gripping metal bowl tilted over large glass jar | bowl moved away to counter | olives transferred into large jar\"\n  ],\n  \"findings\": []\n}"
+}

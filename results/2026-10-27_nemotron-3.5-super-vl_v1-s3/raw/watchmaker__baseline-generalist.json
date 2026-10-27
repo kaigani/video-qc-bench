@@ -1,0 +1,47 @@
+{
+  "key": "watchmaker__baseline-generalist",
+  "video": "watchmaker.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:35:29.847Z",
+  "latencyMs": 14707,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1570,
+    "total_tokens": 4426,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1413,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | wearing navy striped shirt, holding thin metal tool in right hand | wearing navy striped shirt, hands empty of tool | metal tool disappears abruptly"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "metal tool",
+      "invariant_violated": "continuity_of_object",
+      "description": "A thin metal tool held in the person's right hand vanishes abruptly between 00:02 and 00:03 without being set down on camera, indicating a jump cut.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person | wearing navy striped shirt, holding thin metal tool in right hand | wearing navy striped shirt, hands empty of tool | metal tool disappears abruptly\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"metal tool\",\n      \"invariant_violated\": \"continuity_of_object\",\n      \"description\": \"A thin metal tool held in the person's right hand vanishes abruptly between 00:02 and 00:03 without being set down on camera, indicating a jump cut.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

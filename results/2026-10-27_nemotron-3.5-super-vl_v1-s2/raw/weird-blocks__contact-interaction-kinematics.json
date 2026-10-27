@@ -1,0 +1,58 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:07:02.000Z",
+  "latencyMs": 31284,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 4165,
+    "total_tokens": 7231,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3833,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | contacts top of Green Block '2' | contacts top of Blue Block '3' | Block identity changes without release or new grasp shown",
+    "Hand | places Green Block '3' next to Green Block '2' | releases Green Block '3' | Stable placement and release",
+    "Hand | places Blue Block '3' at right end | contacts top of Blue Block '3' | Continuous contact maintained",
+    "Hand | contacts top of Blue Block '6' at right end | contacts top of Blue Block '2' at left end | Hand snaps across table; intermediate blocks vanish"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Leftmost block",
+      "invariant_violated": "Missing contact",
+      "description": "The block under the hand changes from Green '2' to Blue '3' between frames without the hand releasing the first object or grasping the second.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Hand and block row",
+      "invariant_violated": "Limb trajectory",
+      "description": "The hand moves from the rightmost block of a five-block row to the leftmost block of a two-block row instantly; the intervening blocks disappear without contact.",
+      "severity": "severe",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | contacts top of Green Block '2' | contacts top of Blue Block '3' | Block identity changes without release or new grasp shown\",\n    \"Hand | places Green Block '3' next to Green Block '2' | releases Green Block '3' | Stable placement and release\",\n    \"Hand | places Blue Block '3' at right end | contacts top of Blue Block '3' | Continuous contact maintained\",\n    \"Hand | contacts top of Blue Block '6' at right end | contacts top of Blue Block '2' at left end | Hand snaps across table; intermediate blocks vanish\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Leftmost block\",\n      \"invariant_violated\": \"Missing contact\",\n      \"description\": \"The block under the hand changes from Green '2' to Blue '3' between frames without the hand releasing the first object or grasping the second.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Hand and block row\",\n      \"invariant_violated\": \"Limb trajectory\",\n      \"description\": \"The hand moves from the rightmost block of a five-block row to the leftmost block of a two-block row instantly; the intervening blocks disappear without contact.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

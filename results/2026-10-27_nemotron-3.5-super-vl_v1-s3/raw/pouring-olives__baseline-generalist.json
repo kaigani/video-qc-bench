@@ -1,0 +1,48 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:33:16.293Z",
+  "latencyMs": 38229,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 5179,
+    "total_tokens": 8035,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5007,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass jar | Empty at start | Full of mixed green and dark olives at end | Filled by pouring from bowls",
+    "metal bowls | Full of green olives at start | Empty at end | Emptied into jar"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "glass jar",
+      "invariant_violated": "Continuity",
+      "description": "Dark purple olives appear at the bottom of the jar at 00:01, despite the jar being empty at 00:00 and the visible pouring bowl containing only green olives.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass jar | Empty at start | Full of mixed green and dark olives at end | Filled by pouring from bowls\",\n    \"metal bowls | Full of green olives at start | Empty at end | Emptied into jar\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"glass jar\",\n      \"invariant_violated\": \"Continuity\",\n      \"description\": \"Dark purple olives appear at the bottom of the jar at 00:01, despite the jar being empty at 00:00 and the visible pouring bowl containing only green olives.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

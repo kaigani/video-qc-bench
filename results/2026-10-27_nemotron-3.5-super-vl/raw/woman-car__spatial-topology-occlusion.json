@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:43:22.230Z",
+  "latencyMs": 37115,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 5609,
+    "total_tokens": 8651,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5413,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station Wagon | Parked on desert road shoulder, front facing camera-left initially | Side view as camera pans right, wood paneling visible | Camera movement reveals different angles of same fixed vehicle",
+    "Woman | Leaning on hood near windshield, arms crossed | Remains in same position relative to car, hair blows in wind | Occludes car interior and hood surface correctly",
+    "Road | Two-lane paved road behind car, running into distance | Visible behind woman and car side as camera pans | Consistent perspective with vanishing point",
+    "Desert Landscape | Dry scrub brush and distant mountains in background | Background shifts left as camera pans right | Mountains and scrub maintain relative positions",
+    "Camera | Starts front-quarter view of car | Pans right to side-quarter close-up | Geometrically compatible movement along the car's axis"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Station Wagon | Parked on desert road shoulder, front facing camera-left initially | Side view as camera pans right, wood paneling visible | Camera movement reveals different angles of same fixed vehicle\",\n    \"Woman | Leaning on hood near windshield, arms crossed | Remains in same position relative to car, hair blows in wind | Occludes car interior and hood surface correctly\",\n    \"Road | Two-lane paved road behind car, running into distance | Visible behind woman and car side as camera pans | Consistent perspective with vanishing point\",\n    \"Desert Landscape | Dry scrub brush and distant mountains in background | Background shifts left as camera pans right | Mountains and scrub maintain relative positions\",\n    \"Camera | Starts front-quarter view of car | Pans right to side-quarter close-up | Geometrically compatible movement along the car's axis\"\n  ],\n  \"findings\": []\n}"
+}

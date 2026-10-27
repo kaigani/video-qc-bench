@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:57:50.154Z",
+  "latencyMs": 19538,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 1475,
+    "total_tokens": 4461,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1302,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wind influence: evidenced by woman's hair streaming back; should affect background dry grass and loose clothing; affects hair only, leaves grass static.",
+    "Stationary car influence: evidenced by lack of vibration; should affect nothing moving; consistent throughout."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "background desert vegetation",
+      "invariant_violated": "consistent wind response across like materials",
+      "description": "The woman's hair is blown strongly by wind, indicating significant airflow, but the dry grass and bushes in the immediate background remain perfectly rigid and static, contradicting the implied environmental force.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Wind influence: evidenced by woman's hair streaming back; should affect background dry grass and loose clothing; affects hair only, leaves grass static.\",\n    \"Stationary car influence: evidenced by lack of vibration; should affect nothing moving; consistent throughout.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"background desert vegetation\",\n      \"invariant_violated\": \"consistent wind response across like materials\",\n      \"description\": \"The woman's hair is blown strongly by wind, indicating significant airflow, but the dry grass and bushes in the immediate background remain perfectly rigid and static, contradicting the implied environmental force.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

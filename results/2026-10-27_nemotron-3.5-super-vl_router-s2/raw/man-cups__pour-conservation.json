@@ -1,0 +1,53 @@
+{
+  "key": "man-cups__pour-conservation",
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:08:54.541Z",
+  "latencyMs": 87847,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 7119,
+    "total_tokens": 10119,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6811,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Cup Back-Left contains 1 coin, Cup Middle contains a stack of coins, Cup Front-Left contains 1 coin",
+    "00:01: Hand adds a coin to Cup Back-Left",
+    "00:02-00:04: Hands pour coins from table into Cup Front-Left and Cup Middle",
+    "00:05: Three cups lined up in a row, all appear empty inside",
+    "00:06: Cup Right lifted, coins revealed underneath on table",
+    "00:07: Cup Middle lifted, coins revealed underneath on table",
+    "00:08: Cup Left lifted, coins revealed underneath on table"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "The cups",
+      "invariant_violated": "fill-level monotonicity",
+      "description": "Coins are visibly poured into the cups between 00:02 and 00:04. By 00:05, the cups are rearranged and appear empty inside with no visible emptying action. Subsequently, coins appear underneath the cups at 00:06 without a visible transfer from inside to underneath.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Cup Back-Left contains 1 coin, Cup Middle contains a stack of coins, Cup Front-Left contains 1 coin\",\n    \"00:01: Hand adds a coin to Cup Back-Left\",\n    \"00:02-00:04: Hands pour coins from table into Cup Front-Left and Cup Middle\",\n    \"00:05: Three cups lined up in a row, all appear empty inside\",\n    \"00:06: Cup Right lifted, coins revealed underneath on table\",\n    \"00:07: Cup Middle lifted, coins revealed underneath on table\",\n    \"00:08: Cup Left lifted, coins revealed underneath on table\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"The cups\",\n      \"invariant_violated\": \"fill-level monotonicity\",\n      \"description\": \"Coins are visibly poured into the cups between 00:02 and 00:04. By 00:05, the cups are rearranged and appear empty inside with no visible emptying action. Subsequently, coins appear underneath the cups at 00:06 without a visible transfer from inside to underneath.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

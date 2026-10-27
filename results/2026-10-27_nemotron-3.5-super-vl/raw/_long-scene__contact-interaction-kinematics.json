@@ -1,0 +1,61 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:22:55.725Z",
+  "latencyMs": 110063,
+  "usage": {
+    "prompt_tokens": 3100,
+    "completion_tokens": 11160,
+    "total_tokens": 14260,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10819,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Leaning on counter with forearms | Wiping counter with cloth | Transitions between leaning, walking, serving",
+    "Man | Opens diner door | Steps into truck cab | Transitions from entering diner to sitting, paying, entering truck",
+    "Stool | Empty | Occupied by man | Support for sitting",
+    "Mug | Resting on counter | Held by man then waitress | Contact transfer",
+    "Counter | Wiped by cloth | Holds money and plate | Surface support",
+    "Coffee Pot | Tilted pouring | Pouring stream | No visible hand grip",
+    "Truck Door | Closed | Open | Man operates handle"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "Coffee Pot",
+      "invariant_violated": "Contact points",
+      "description": "Coffee pot is tilted and pouring liquid, but no hand is visibly gripping or supporting it.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:44",
+      "entity": "Man",
+      "invariant_violated": "Limb trajectories continuous",
+      "description": "Man is seen entering the truck cab at 01:39, then appears walking outside the truck at 01:44 without an intervening exit action.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Leaning on counter with forearms | Wiping counter with cloth | Transitions between leaning, walking, serving\",\n    \"Man | Opens diner door | Steps into truck cab | Transitions from entering diner to sitting, paying, entering truck\",\n    \"Stool | Empty | Occupied by man | Support for sitting\",\n    \"Mug | Resting on counter | Held by man then waitress | Contact transfer\",\n    \"Counter | Wiped by cloth | Holds money and plate | Surface support\",\n    \"Coffee Pot | Tilted pouring | Pouring stream | No visible hand grip\",\n    \"Truck Door | Closed | Open | Man operates handle\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"Coffee Pot\",\n      \"invariant_violated\": \"Contact points\",\n      \"description\": \"Coffee pot is tilted and pouring liquid, but no hand is visibly gripping or supporting it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:44\",\n      \"entity\": \"Man\",\n      \"invariant_violated\": \"Limb trajectories continuous\",\n      \"description\": \"Man is seen entering the truck cab at 01:39, then appears walking outside the truck at 01:44 without an intervening exit action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:12:02.040Z",
+  "latencyMs": 14848,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 1174,
+    "total_tokens": 4174,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1033,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:04: Batch of green and black olives held in small glass jar by hands, poured into large glass jar on counter",
+    "00:04 - 00:05: Empty small glass jar placed on counter by hands",
+    "00:05 - 00:06: Batch of green olives in metal bowl on counter, picked up by hands",
+    "00:06 - 00:10: Batch of green olives poured from metal bowl into large glass jar"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:04: Batch of green and black olives held in small glass jar by hands, poured into large glass jar on counter\",\n    \"00:04 - 00:05: Empty small glass jar placed on counter by hands\",\n    \"00:05 - 00:06: Batch of green olives in metal bowl on counter, picked up by hands\",\n    \"00:06 - 00:10: Batch of green olives poured from metal bowl into large glass jar\"\n  ],\n  \"findings\": []\n}"
+}

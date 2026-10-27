@@ -1,0 +1,40 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:32:45.666Z",
+  "latencyMs": 18127,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 1861,
+    "total_tokens": 4900,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1757,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | Display shows 'A742', held by hands | Screen blurs and leaves frame | Device is tilted and moved rapidly away",
+    "pedestrian | Walking up stairs with red bag | Further up stairs, partially obscured | Continuous walking motion away from camera",
+    "camera viewpoint | Focused on smartphone screen | Focused on empty stone stairs | Rapid movement and cut to new angle"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | Display shows 'A742', held by hands | Screen blurs and leaves frame | Device is tilted and moved rapidly away\",\n    \"pedestrian | Walking up stairs with red bag | Further up stairs, partially obscured | Continuous walking motion away from camera\",\n    \"camera viewpoint | Focused on smartphone screen | Focused on empty stone stairs | Rapid movement and cut to new angle\"\n  ],\n  \"findings\": []\n}"
+}

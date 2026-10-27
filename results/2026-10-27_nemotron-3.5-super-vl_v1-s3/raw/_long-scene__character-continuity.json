@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:17:35.433Z",
+  "latencyMs": 94729,
+  "usage": {
+    "prompt_tokens": 3078,
+    "completion_tokens": 7484,
+    "total_tokens": 10562,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7250,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Dark hair in bun, light blue short-sleeve shirt, white apron, glasses hanging from collar | Same attire, last seen walking toward back kitchen area | Moves between coffee station, counter edge, and register area; serves food and interacts with customer",
+    "Customer | Grey/brown hair, brown jacket over plaid shirt, blue jeans | Same attire, last seen seated alone at counter | Enters diner, sits at counter, drinks coffee, pays, (appears outside arriving), sits alone"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:40",
+      "entity": "Customer",
+      "invariant_violated": "Placement continuity",
+      "description": "Customer is seen inside paying at the counter at 01:39, then immediately appears outside walking from his truck toward the diner entrance at 01:40 with no exit or travel time shown.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Dark hair in bun, light blue short-sleeve shirt, white apron, glasses hanging from collar | Same attire, last seen walking toward back kitchen area | Moves between coffee station, counter edge, and register area; serves food and interacts with customer\",\n    \"Customer | Grey/brown hair, brown jacket over plaid shirt, blue jeans | Same attire, last seen seated alone at counter | Enters diner, sits at counter, drinks coffee, pays, (appears outside arriving), sits alone\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:40\",\n      \"entity\": \"Customer\",\n      \"invariant_violated\": \"Placement continuity\",\n      \"description\": \"Customer is seen inside paying at the counter at 01:39, then immediately appears outside walking from his truck toward the diner entrance at 01:40 with no exit or travel time shown.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:13:38.964Z",
+  "latencyMs": 30734,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 2179,
+    "total_tokens": 5179,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2074,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:03: Ring held in Right Hand",
+    "00:00 - 00:03: Tweezers held in Left Hand",
+    "00:03: Tweezers dropped and Exits Frame",
+    "00:03 - 00:10: Ring held in Right Hand then transferred to Both Hands"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:03: Ring held in Right Hand\",\n    \"00:00 - 00:03: Tweezers held in Left Hand\",\n    \"00:03: Tweezers dropped and Exits Frame\",\n    \"00:03 - 00:10: Ring held in Right Hand then transferred to Both Hands\"\n  ],\n  \"findings\": []\n}"
+}

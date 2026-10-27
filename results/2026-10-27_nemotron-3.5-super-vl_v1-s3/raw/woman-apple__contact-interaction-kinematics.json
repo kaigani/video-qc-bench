@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:40:17.756Z",
+  "latencyMs": 15156,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 1487,
+    "total_tokens": 4553,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1381,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with umbrella | grips red fruit with both hands and holds umbrella shaft | maintains grip on fruit and umbrella throughout walk | continuous contact established at start, no release observed",
+    "Pedestrian in blue shirt | walks past subject on left | exits frame left | no physical contact with subject",
+    "Pedestrian in white shirt | walks past subject on left | exits frame left | no physical contact with subject"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with umbrella | grips red fruit with both hands and holds umbrella shaft | maintains grip on fruit and umbrella throughout walk | continuous contact established at start, no release observed\",\n    \"Pedestrian in blue shirt | walks past subject on left | exits frame left | no physical contact with subject\",\n    \"Pedestrian in white shirt | walks past subject on left | exits frame left | no physical contact with subject\"\n  ],\n  \"findings\": []\n}"
+}

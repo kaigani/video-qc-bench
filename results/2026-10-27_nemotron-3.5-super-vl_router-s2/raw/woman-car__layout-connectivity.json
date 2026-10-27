@@ -1,0 +1,43 @@
+{
+  "key": "woman-car__layout-connectivity",
+  "video": "woman-car.mp4",
+  "role": "layout-connectivity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:19:47.292Z",
+  "latencyMs": 73071,
+  "usage": {
+    "prompt_tokens": 3016,
+    "completion_tokens": 5274,
+    "total_tokens": 8290,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5173,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space: Exterior Desert Road",
+    "Space: Interior of Station Wagon (inferred via window)",
+    "Opening: Passenger Side Window connecting Exterior and Interior",
+    "View through Window (from Exterior): Woman leaning on window sill, interior door panel/seat visible behind her",
+    "View through Window (from Interior): Exterior desert road (implied)",
+    "Traversal: None observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Space: Exterior Desert Road\",\n    \"Space: Interior of Station Wagon (inferred via window)\",\n    \"Opening: Passenger Side Window connecting Exterior and Interior\",\n    \"View through Window (from Exterior): Woman leaning on window sill, interior door panel/seat visible behind her\",\n    \"View through Window (from Interior): Exterior desert road (implied)\",\n    \"Traversal: None observed\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:59:50.739Z",
+  "latencyMs": 67165,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 5142,
+    "total_tokens": 8181,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5049,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | Grasping coin above table | Touching and moving cups | Hand moves from holding coin to contacting cups",
+    "Coin | Suspended in hand | Inside a cup | Coin is deposited into a cup by the hand",
+    "Cups | Stationary on table | Lined up in a row | Cups are slid and shuffled by hands"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | Grasping coin above table | Touching and moving cups | Hand moves from holding coin to contacting cups\",\n    \"Coin | Suspended in hand | Inside a cup | Coin is deposited into a cup by the hand\",\n    \"Cups | Stationary on table | Lined up in a row | Cups are slid and shuffled by hands\"\n  ],\n  \"findings\": []\n}"
+}

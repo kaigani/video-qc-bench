@@ -1,0 +1,51 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:53:57.701Z",
+  "latencyMs": 21741,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 2539,
+    "total_tokens": 5581,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2259,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing center facing forward | standing left facing left opening door | turns body left and walks toward door",
+    "blue coat | hanging on hook on wall to the left of the frame | hanging on hook on wall to the right of the door being opened | relative position swapped",
+    "wall switches/phone | mounted on wall to the right of the doors | mounted on wall to the left of the door being opened | relative position swapped",
+    "wooden doors | double doors behind man | single door panel on left being opened | layout mismatch",
+    "clock | visible above door frame center-left | visible above door frame center-right | position shifted"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "background architecture and fixed objects",
+      "invariant_violated": "scene layout",
+      "description": "Between the medium shot and the side profile cut, the relative positions of fixed elements flip impossibly. Initially, the blue coat is on the left and wall switches are on the right. In the subsequent shot, the switches are on the left and the coat is on the right relative to the door being opened.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing center facing forward | standing left facing left opening door | turns body left and walks toward door\",\n    \"blue coat | hanging on hook on wall to the left of the frame | hanging on hook on wall to the right of the door being opened | relative position swapped\",\n    \"wall switches/phone | mounted on wall to the right of the doors | mounted on wall to the left of the door being opened | relative position swapped\",\n    \"wooden doors | double doors behind man | single door panel on left being opened | layout mismatch\",\n    \"clock | visible above door frame center-left | visible above door frame center-right | position shifted\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"background architecture and fixed objects\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"Between the medium shot and the side profile cut, the relative positions of fixed elements flip impossibly. Initially, the blue coat is on the left and wall switches are on the right. In the subsequent shot, the switches are on the left and the coat is on the right relative to the door being opened.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

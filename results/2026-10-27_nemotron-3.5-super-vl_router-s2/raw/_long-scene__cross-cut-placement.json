@@ -1,0 +1,83 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:03:23.466Z",
+  "latencyMs": 120955,
+  "usage": {
+    "prompt_tokens": 3089,
+    "completion_tokens": 11943,
+    "total_tokens": 15032,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 10725,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:05, exterior wide shot of diner and truck",
+    "shot 2: 00:07-00:09, interior medium shot of waitress behind counter",
+    "shot 3: 00:09-00:10, close up of coffee pouring",
+    "shot 4: 00:10-00:13, interior wide shot of waitress at far end of counter",
+    "shot 5: 00:13-00:18, interior medium shot of waitress leaning on counter",
+    "shot 6: 00:18-00:23, interior wide shot of man walking to counter",
+    "shot 7: 00:23-00:24, close up of coffee pouring",
+    "shot 8: 00:24-00:26, close up of food plate",
+    "shot 9: 00:26-00:29, interior medium shot of man sitting at counter",
+    "shot 10: 00:29-00:30, interior medium shot of waitress wiping counter",
+    "shot 11: 00:30-00:34, close up of coffee pouring",
+    "shot 12: 00:34-00:44, interior medium shot of man sitting at counter",
+    "shot 13: 00:44-00:51, interior medium shot of waitress wiping counter",
+    "shot 14: 00:51-00:54, close up of coffee pouring",
+    "shot 15: 00:54-00:57, interior wide shot of empty counter",
+    "shot 16: 00:57-01:07, interior wide shot of man sitting and waitress at far end",
+    "shot 17: 01:07-01:15, interior medium two-shot of man and waitress exchanging plate",
+    "shot 18: 01:15-01:17, interior close up of man holding mug",
+    "shot 19: 01:17-01:19, interior wide shot of man standing up and leaving counter",
+    "shot 20: 01:19-01:21, interior medium shot of waitress alone behind counter",
+    "shot 21: 01:21-01:24, interior close up of man's face",
+    "shot 22: 01:24-01:26, interior medium shot of waitress alone",
+    "shot 23: 01:26-01:27, interior close up of man's face",
+    "shot 24: 01:27-01:29, interior medium shot of waitress alone",
+    "shot 25: 01:29-01:30, interior close up of man holding mug",
+    "shot 26: 01:30-01:32, interior medium shot of waitress alone",
+    "shot 27: 01:32-01:34, interior medium shot of man sitting at counter",
+    "shot 28: 01:34-01:35, interior medium shot of waitress looking out door",
+    "shot 29: 01:35-01:37, exterior shot through window of man walking to truck",
+    "shot 30: 01:37-01:39, interior medium shot of waitress looking out window",
+    "shot 31: 01:39-01:40, close up of money on counter",
+    "shot 32: 01:40-01:42, exterior shot of man walking to truck cab",
+    "shot 33: 01:42-01:44, interior medium shot of waitress watching man leave",
+    "shot 34: 01:44-01:46, interior medium shot of waitress bending to pick up money",
+    "shot 35: 01:46-01:48, interior wide shot of empty counter",
+    "shot 36: 01:48-01:50, close up of money on counter",
+    "shot 37: 01:50-01:52, exterior shot of truck driving away"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:21",
+      "entity": "Man (Customer)",
+      "invariant_violated": "person_continuity",
+      "description": "The man exits the counter area at 01:17 (shot 19). In the subsequent shot at 01:21 (shot 21), he is shown in close-up at the counter holding his mug, and again at 01:32 (shot 27) sitting at the counter, without any shot showing him re-entering or sitting back down.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:05, exterior wide shot of diner and truck\",\n    \"shot 2: 00:07-00:09, interior medium shot of waitress behind counter\",\n    \"shot 3: 00:09-00:10, close up of coffee pouring\",\n    \"shot 4: 00:10-00:13, interior wide shot of waitress at far end of counter\",\n    \"shot 5: 00:13-00:18, interior medium shot of waitress leaning on counter\",\n    \"shot 6: 00:18-00:23, interior wide shot of man walking to counter\",\n    \"shot 7: 00:23-00:24, close up of coffee pouring\",\n    \"shot 8: 00:24-00:26, close up of food plate\",\n    \"shot 9: 00:26-00:29, interior medium shot of man sitting at counter\",\n    \"shot 10: 00:29-00:30, interior medium shot of waitress wiping counter\",\n    \"shot 11: 00:30-00:34, close up of coffee pouring\",\n    \"shot 12: 00:34-00:44, interior medium shot of man sitting at counter\",\n    \"shot 13: 00:44-00:51, interior medium shot of waitress wiping counter\",\n    \"shot 14: 00:51-00:54, close up of coffee pouring\",\n    \"shot 15: 00:54-00:57, interior wide shot of empty counter\",\n    \"shot 16: 00:57-01:07, interior wide shot of man sitting and waitress at far end\",\n    \"shot 17: 01:07-01:15, interior medium two-shot of man and waitress exchanging plate\",\n    \"shot 18: 01:15-01:17, interior close up of man holding mug\",\n    \"shot 19: 01:17-01:19, interior wide shot of man standing up and leaving counter\",\n    \"shot 20: 01:19-01:21, interior medium shot of waitress alone behind counter\",\n    \"shot 21: 01:21-01:24, interior close up of man's face\",\n    \"shot 22: 01:24-01:26, interior medium shot of waitress alone\",\n    \"shot 23: 01:26-01:27, interior close up of man's face\",\n    \"shot 24: 01:27-01:29, interior medium shot of waitress alone\",\n    \"shot 25: 01:29-01:30, interior close up of man holding mug\",\n    \"shot 26: 01:30-01:32, interior medium shot of waitress alone\",\n    \"shot 27: 01:32-01:34, interior medium shot of man sitting at counter\",\n    \"shot 28: 01:34-01:35, interior medium shot of waitress looking out door\",\n    \"shot 29: 01:35-01:37, exterior shot through window of man walking to truck\",\n    \"shot 30: 01:37-01:39, interior medium shot of waitress looking out window\",\n    \"shot 31: 01:39-01:40, close up of money on counter\",\n    \"shot 32: 01:40-01:42, exterior shot of man walking to truck cab\",\n    \"shot 33: 01:42-01:44, interior medium shot of waitress watching man leave\",\n    \"shot 34: 01:44-01:46, interior medium shot of waitress bending to pick up money\",\n    \"shot 35: 01:46-01:48, interior wide shot of empty counter\",\n    \"shot 36: 01:48-01:50, close up of money on counter\",\n    \"shot 37: 01:50-01:52, exterior shot of truck driving away\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:21\",\n      \"entity\": \"Man (Customer)\",\n      \"invariant_violated\": \"person_continuity\",\n      \"description\": \"The man exits the counter area at 01:17 (shot 19). In the subsequent shot at 01:21 (shot 21), he is shown in close-up at the counter holding his mug, and again at 01:32 (shot 27) sitting at the counter, without any shot showing him re-entering or sitting back down.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

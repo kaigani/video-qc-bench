@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__environment-response",
+  "video": "dialogue.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:06:48.647Z",
+  "latencyMs": 18538,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 1506,
+    "total_tokens": 4492,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1380,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:07: Man's head and hair move due to his own speech and turning; no external wind affects hair or loose clothing.",
+    "00:00 - 00:11: Blue coat hanging on hook remains stationary throughout the clip despite nearby door movement.",
+    "00:07 - 00:11: Man's arm motion knocks on door; shirt fabric moves only in response to direct arm movement, consistent with muscular force."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:07: Man's head and hair move due to his own speech and turning; no external wind affects hair or loose clothing.\",\n    \"00:00 - 00:11: Blue coat hanging on hook remains stationary throughout the clip despite nearby door movement.\",\n    \"00:07 - 00:11: Man's arm motion knocks on door; shirt fabric moves only in response to direct arm movement, consistent with muscular force.\"\n  ],\n  \"findings\": []\n}"
+}

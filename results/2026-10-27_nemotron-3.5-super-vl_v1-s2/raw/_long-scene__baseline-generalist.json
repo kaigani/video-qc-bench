@@ -1,0 +1,65 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:46:13.574Z",
+  "latencyMs": 58409,
+  "usage": {
+    "prompt_tokens": 2890,
+    "completion_tokens": 3723,
+    "total_tokens": 6613,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3388,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck | white cab parked outside | green cab parked outside | color change between scenes",
+    "man | seated at counter | leaves then reseats | discontinuous presence",
+    "cash | not present | fanned bills on counter | sudden appearance"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:42",
+      "entity": "truck",
+      "invariant_violated": "color consistency",
+      "description": "The truck parked outside changes from a white cab at the start of the video to a dark green cab at the end.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:31",
+      "entity": "man",
+      "invariant_violated": "temporal continuity",
+      "description": "The man is seen leaving the diner at 01:15 but is seated back at the counter drinking coffee at 01:31 without re-entering.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:37",
+      "entity": "cash",
+      "invariant_violated": "object state continuity",
+      "description": "A fan of cash appears on the counter next to the coffee mug without any visible action of it being placed there.",
+      "severity": "minor",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"truck | white cab parked outside | green cab parked outside | color change between scenes\",\n    \"man | seated at counter | leaves then reseats | discontinuous presence\",\n    \"cash | not present | fanned bills on counter | sudden appearance\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:42\",\n      \"entity\": \"truck\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The truck parked outside changes from a white cab at the start of the video to a dark green cab at the end.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:31\",\n      \"entity\": \"man\",\n      \"invariant_violated\": \"temporal continuity\",\n      \"description\": \"The man is seen leaving the diner at 01:15 but is seated back at the counter drinking coffee at 01:31 without re-entering.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:37\",\n      \"entity\": \"cash\",\n      \"invariant_violated\": \"object state continuity\",\n      \"description\": \"A fan of cash appears on the counter next to the coffee mug without any visible action of it being placed there.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

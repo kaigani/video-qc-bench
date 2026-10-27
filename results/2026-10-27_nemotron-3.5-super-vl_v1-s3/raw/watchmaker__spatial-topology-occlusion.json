@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:36:24.358Z",
+  "latencyMs": 20248,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1266,
+    "total_tokens": 4308,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1186,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | torso centered, striped shirt | torso centered, striped shirt | static subject",
+    "background | plain light wall behind subject | plain light wall behind subject | static environment",
+    "hands/tool | foreground center, manipulating object | foreground center, manipulating object | continuous motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | torso centered, striped shirt | torso centered, striped shirt | static subject\",\n    \"background | plain light wall behind subject | plain light wall behind subject | static environment\",\n    \"hands/tool | foreground center, manipulating object | foreground center, manipulating object | continuous motion\"\n  ],\n  \"findings\": []\n}"
+}

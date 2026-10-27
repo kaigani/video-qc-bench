@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:39:47.193Z",
+  "latencyMs": 23692,
+  "usage": {
+    "prompt_tokens": 3044,
+    "completion_tokens": 2734,
+    "total_tokens": 5778,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2548,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main Woman | Dark ponytail, navy blue button-up cardigan, light grey shorts, holding red apple and blue umbrella, walking forward center | Same attire, walking past stalls, profile then back view | Continuous forward movement, no cuts detected",
+    "Man (Beige shirt) | Beige t-shirt, blue shorts, walking forward behind main woman | Exits frame forward | Continuous walking",
+    "Woman (Light blue shirt) | Light blue t-shirt, jeans, crossbody bag, enters from left | Exits frame left | Continuous crossing",
+    "Man (White shirt) | White t-shirt, jeans, enters left foreground | Moves to left background | Continuous walking",
+    "Man (Blue shirt) | Blue t-shirt, enters left foreground | Moves right background | Continuous walking"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Main Woman | Dark ponytail, navy blue button-up cardigan, light grey shorts, holding red apple and blue umbrella, walking forward center | Same attire, walking past stalls, profile then back view | Continuous forward movement, no cuts detected\",\n    \"Man (Beige shirt) | Beige t-shirt, blue shorts, walking forward behind main woman | Exits frame forward | Continuous walking\",\n    \"Woman (Light blue shirt) | Light blue t-shirt, jeans, crossbody bag, enters from left | Exits frame left | Continuous crossing\",\n    \"Man (White shirt) | White t-shirt, jeans, enters left foreground | Moves to left background | Continuous walking\",\n    \"Man (Blue shirt) | Blue t-shirt, enters left foreground | Moves right background | Continuous walking\"\n  ],\n  \"findings\": []\n}"
+}

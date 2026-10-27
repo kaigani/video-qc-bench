@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:37:47.888Z",
+  "latencyMs": 30194,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 3386,
+    "total_tokens": 6452,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3267,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right_hand_tweezers | grips tweezers, tip contacting ring held by left hand | maintains grip on tweezers | tool tip separates from ring ~00:03 then re-contacts",
+    "left_hand_ring | grips small metal ring | maintains grip on ring | adjusts finger position on ring",
+    "small_metal_ring | held stationary by left hand | manipulated by hands | briefly released by tool tip ~00:03"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right_hand_tweezers | grips tweezers, tip contacting ring held by left hand | maintains grip on tweezers | tool tip separates from ring ~00:03 then re-contacts\",\n    \"left_hand_ring | grips small metal ring | maintains grip on ring | adjusts finger position on ring\",\n    \"small_metal_ring | held stationary by left hand | manipulated by hands | briefly released by tool tip ~00:03\"\n  ],\n  \"findings\": []\n}"
+}

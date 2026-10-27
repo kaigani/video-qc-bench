@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:11:47.181Z",
+  "latencyMs": 39044,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 3212,
+    "total_tokens": 6212,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2735,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Small glass jar (green olives, nearly full); Large glass jar (empty); Metal bowl (green olives); Glass bowl (green olives)",
+    "00:01: Small glass jar (pouring green olives); Large glass jar (green olives falling in, purple olives suddenly visible at bottom); Metal bowl (green olives)",
+    "00:02: Small glass jar (pouring green olives); Large glass jar (accumulating green and purple olives); Metal bowl (green olives)",
+    "00:03: Small glass jar (emptying); Large glass jar (partially full of mixed olives); Metal bowl (green olives)",
+    "00:04: Small glass jar (empty, put down); Large glass jar (partially full of mixed olives); Metal bowl (green olives, moved into position)",
+    "00:05: Metal bowl (green olives, being lifted); Large glass jar (partially full of mixed olives)",
+    "00:06: Metal bowl (pouring green olives); Large glass jar (filling with mixed olives)",
+    "00:07: Metal bowl (pouring green olives); Large glass jar (more full)",
+    "00:08: Metal bowl (pouring green olives); Large glass jar (more full)",
+    "00:09: Metal bowl (emptying); Large glass jar (nearly full)",
+    "00:10: Metal bowl (empty); Large glass jar (full of mixed olives)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Large glass jar",
+      "invariant_violated": "source contents",
+      "description": "Purple olives appear at the bottom of the large jar which was empty at 00:00. The source container (small glass jar) visibly contained only green olives prior to pouring, and no purple olives were shown entering the jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Small glass jar (green olives, nearly full); Large glass jar (empty); Metal bowl (green olives); Glass bowl (green olives)\",\n    \"00:01: Small glass jar (pouring green olives); Large glass jar (green olives falling in, purple olives suddenly visible at bottom); Metal bowl (green olives)\",\n    \"00:02: Small glass jar (pouring green olives); Large glass jar (accumulating green and purple olives); Metal bowl (green olives)\",\n    \"00:03: Small glass jar (emptying); Large glass jar (partially full of mixed olives); Metal bowl (green olives)\",\n    \"00:04: Small glass jar (empty, put down); Large glass jar (partially full of mixed olives); Metal bowl (green olives, moved into position)\",\n    \"00:05: Metal bowl (green olives, being lifted); Large glass jar (partially full of mixed olives)\",\n    \"00:06: Metal bowl (pouring green olives); Large glass jar (filling with mixed olives)\",\n    \"00:07: Metal bowl (pouring green olives); Large glass jar (more full)\",\n    \"00:08: Metal bowl (pouring green olives); Large glass jar (more full)\",\n    \"00:09: Metal bowl (emptying); Large glass jar (nearly full)\",\n    \"00:10: Metal bowl (empty); Large glass jar (full of mixed olives)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Large glass jar\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"Purple olives appear at the bottom of the large jar which was empty at 00:00. The source container (small glass jar) visibly contained only green olives prior to pouring, and no purple olives were shown entering the jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

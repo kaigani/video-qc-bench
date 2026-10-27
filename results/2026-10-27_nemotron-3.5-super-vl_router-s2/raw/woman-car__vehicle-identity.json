@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__vehicle-identity",
+  "video": "woman-car.mp4",
+  "role": "vehicle-identity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:18:35.223Z",
+  "latencyMs": 13057,
+  "usage": {
+    "prompt_tokens": 2973,
+    "completion_tokens": 779,
+    "total_tokens": 3752,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 658,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: White station wagon with wood paneling, license plate SFC 627, parked on road shoulder.",
+    "00:01: Same white station wagon, front grille view, license plate SFC 627 visible.",
+    "00:02: Same white station wagon, woman leaning on hood.",
+    "00:03 - 00:11: Same white station wagon, remains parked with woman leaning on hood."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: White station wagon with wood paneling, license plate SFC 627, parked on road shoulder.\",\n    \"00:01: Same white station wagon, front grille view, license plate SFC 627 visible.\",\n    \"00:02: Same white station wagon, woman leaning on hood.\",\n    \"00:03 - 00:11: Same white station wagon, remains parked with woman leaning on hood.\"\n  ],\n  \"findings\": []\n}"
+}

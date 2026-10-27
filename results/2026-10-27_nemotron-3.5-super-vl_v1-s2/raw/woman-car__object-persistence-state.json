@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:14:33.333Z",
+  "latencyMs": 13158,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 720,
+    "total_tokens": 3779,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 565,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car (cream station wagon) | parked on desert road, facing right, supported by tires | stationary on desert road, facing right, supported by tires | camera pans/zooms but object remains static; no state changes",
+    "license plate \"STEEPY\" | attached to front bumper | attached to front bumper | no movement or state change",
+    "hood ornaments | mounted on hood | mounted on hood | no movement or state change",
+    "roof rack | mounted on roof | mounted on roof | no movement or state change",
+    "side mirror | mounted on driver door | mounted on driver door | no movement or state change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"car (cream station wagon) | parked on desert road, facing right, supported by tires | stationary on desert road, facing right, supported by tires | camera pans/zooms but object remains static; no state changes\",\n    \"license plate \\\"STEEPY\\\" | attached to front bumper | attached to front bumper | no movement or state change\",\n    \"hood ornaments | mounted on hood | mounted on hood | no movement or state change\",\n    \"roof rack | mounted on roof | mounted on roof | no movement or state change\",\n    \"side mirror | mounted on driver door | mounted on driver door | no movement or state change\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:36:04.177Z",
+  "latencyMs": 17118,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 1012,
+    "total_tokens": 4078,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 919,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "left hand | gripping metal tool tip at chest level | releasing tool tip and moving hand away | continuous contact maintained until release",
+    "right hand | holding metal tool handle/base | holding small metal ring/object | continuous support maintained",
+    "metal tool | held between both hands | removed from frame by left hand | contact established at start, broken at end"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"left hand | gripping metal tool tip at chest level | releasing tool tip and moving hand away | continuous contact maintained until release\",\n    \"right hand | holding metal tool handle/base | holding small metal ring/object | continuous support maintained\",\n    \"metal tool | held between both hands | removed from frame by left hand | contact established at start, broken at end\"\n  ],\n  \"findings\": []\n}"
+}

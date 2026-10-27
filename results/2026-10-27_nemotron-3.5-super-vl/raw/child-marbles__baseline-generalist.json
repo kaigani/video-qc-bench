@@ -1,0 +1,56 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:23:41.205Z",
+  "latencyMs": 28169,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 3072,
+    "total_tokens": 5928,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2837,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child | wearing blue zip-up hoodie | wearing blue zip-up hoodie | reaches into bowl and shakes contents",
+    "bowl | clear glass bowl containing red, yellow, green balls | clear glass bowl containing same balls | shaken vigorously by child"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red balls and child's hands",
+      "invariant_violated": "object continuity",
+      "description": "Child holds two red balls above the table, then immediately has hands back inside the bowl without visibly depositing the balls.",
+      "severity": "minor",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "video feed",
+      "invariant_violated": "stable framing",
+      "description": "Severe camera shake and motion blur obscures the bowl contents during the shaking action.",
+      "severity": "minor",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child | wearing blue zip-up hoodie | wearing blue zip-up hoodie | reaches into bowl and shakes contents\",\n    \"bowl | clear glass bowl containing red, yellow, green balls | clear glass bowl containing same balls | shaken vigorously by child\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red balls and child's hands\",\n      \"invariant_violated\": \"object continuity\",\n      \"description\": \"Child holds two red balls above the table, then immediately has hands back inside the bowl without visibly depositing the balls.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"video feed\",\n      \"invariant_violated\": \"stable framing\",\n      \"description\": \"Severe camera shake and motion blur obscures the bowl contents during the shaking action.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:30:11.248Z",
+  "latencyMs": 20996,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 2014,
+    "total_tokens": 5080,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1891,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | grips coin above table | releases coin into front-left cup | contact established at fingers, released upon drop",
+    "left hand | approaches front-left cup | grips cup rim and slides it backward | continuous contact with cup surface",
+    "right hand | approaches rear-right cup | grips cup rim and slides it forward | continuous contact with cup surface",
+    "three cups | rest stationary on tablecloth | rearranged into cluster on table | supported by table, moved via hand contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | grips coin above table | releases coin into front-left cup | contact established at fingers, released upon drop\",\n    \"left hand | approaches front-left cup | grips cup rim and slides it backward | continuous contact with cup surface\",\n    \"right hand | approaches rear-right cup | grips cup rim and slides it forward | continuous contact with cup surface\",\n    \"three cups | rest stationary on tablecloth | rearranged into cluster on table | supported by table, moved via hand contact\"\n  ],\n  \"findings\": []\n}"
+}

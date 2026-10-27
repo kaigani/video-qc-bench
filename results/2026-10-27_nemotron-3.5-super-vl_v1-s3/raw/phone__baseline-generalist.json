@@ -1,0 +1,56 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:32:11.215Z",
+  "latencyMs": 29597,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 2862,
+    "total_tokens": 5718,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2554,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone | Screen displays 'A742' clearly | Screen displays 'A742', 'ATA', 'AZ-12' then becomes heavily blurred | Text appears spontaneously on screen without visible agent",
+    "Background pedestrian | Walking away up stairs carrying red bag | Exits frame at top | Person continues walking away until obscured/out of frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen",
+      "invariant_violated": "Continuity of visual elements",
+      "description": "The text 'ATA' suddenly appears at the top of the phone screen between frames 00:03 and 00:04 without a visible hand or writing instrument causing the change.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Smartphone screen",
+      "invariant_violated": "Continuity of visual elements",
+      "description": "The text 'AZ-12' suddenly appears at the bottom right of the phone screen between frames 00:05 and 00:06 without a visible hand or writing instrument causing the change.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone | Screen displays 'A742' clearly | Screen displays 'A742', 'ATA', 'AZ-12' then becomes heavily blurred | Text appears spontaneously on screen without visible agent\",\n    \"Background pedestrian | Walking away up stairs carrying red bag | Exits frame at top | Person continues walking away until obscured/out of frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen\",\n      \"invariant_violated\": \"Continuity of visual elements\",\n      \"description\": \"The text 'ATA' suddenly appears at the top of the phone screen between frames 00:03 and 00:04 without a visible hand or writing instrument causing the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Smartphone screen\",\n      \"invariant_violated\": \"Continuity of visual elements\",\n      \"description\": \"The text 'AZ-12' suddenly appears at the bottom right of the phone screen between frames 00:05 and 00:06 without a visible hand or writing instrument causing the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

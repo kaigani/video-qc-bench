@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:36:51.347Z",
+  "latencyMs": 81899,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 3491,
+    "total_tokens": 6557,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3401,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | feet on skateboard, board on ground | feet on skateboard, board rolling | crouches, pops board into air, board flips, feet re-engage board for landing",
+    "skateboard | stationary on concrete | rolling on concrete | lifted by foot pop, airborne flip, lands under feet"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | feet on skateboard, board on ground | feet on skateboard, board rolling | crouches, pops board into air, board flips, feet re-engage board for landing\",\n    \"skateboard | stationary on concrete | rolling on concrete | lifted by foot pop, airborne flip, lands under feet\"\n  ],\n  \"findings\": []\n}"
+}

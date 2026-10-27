@@ -1,0 +1,57 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:35:29.431Z",
+  "latencyMs": 28700,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 4339,
+    "total_tokens": 7195,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3999,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | black shirt, black pants, green socks, red shoes, stationary | black shirt, black pants, green socks, red shoes, landed | performs tricks across disjointed clips",
+    "skateboard | wooden deck, light wheels, on ground | wooden deck, light wheels, on ground | flips during aerial maneuvers",
+    "skatepark | concrete ramps, blue sky, light poles | concrete ramps, blue sky, light poles | background environment remains consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "skateboarder",
+      "invariant_violated": "temporal continuity",
+      "description": "The skateboarder is shown at the peak of a jump in mid-air at 00:03, then instantly appears grounded and riding away at 00:04, skipping the landing phase entirely.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "skateboarder",
+      "invariant_violated": "temporal continuity",
+      "description": "The skateboarder is shown crouching on the ground preparing to jump at 00:08, then instantly appears high in mid-air at 00:09, skipping the takeoff and ascent phase.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | black shirt, black pants, green socks, red shoes, stationary | black shirt, black pants, green socks, red shoes, landed | performs tricks across disjointed clips\",\n    \"skateboard | wooden deck, light wheels, on ground | wooden deck, light wheels, on ground | flips during aerial maneuvers\",\n    \"skatepark | concrete ramps, blue sky, light poles | concrete ramps, blue sky, light poles | background environment remains consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"skateboarder\",\n      \"invariant_violated\": \"temporal continuity\",\n      \"description\": \"The skateboarder is shown at the peak of a jump in mid-air at 00:03, then instantly appears grounded and riding away at 00:04, skipping the landing phase entirely.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"skateboarder\",\n      \"invariant_violated\": \"temporal continuity\",\n      \"description\": \"The skateboarder is shown crouching on the ground preparing to jump at 00:08, then instantly appears high in mid-air at 00:09, skipping the takeoff and ascent phase.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

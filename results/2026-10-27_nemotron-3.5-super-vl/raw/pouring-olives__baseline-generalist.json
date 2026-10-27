@@ -1,0 +1,48 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:33:36.322Z",
+  "latencyMs": 11217,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1114,
+    "total_tokens": 3970,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 934,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "small glass jar | held in hands, pouring green olives | removed from frame / off-screen | sudden cut to metal bowl",
+    "metal bowl | off-screen / not visible | held in hands, pouring green olives | sudden appearance in hands"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "container being poured",
+      "invariant_violated": "object continuity",
+      "description": "At 00:05, the person abruptly switches from pouring olives out of a small glass jar to pouring them out of a metal bowl without any intervening shot showing him setting down the jar and picking up the bowl.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"small glass jar | held in hands, pouring green olives | removed from frame / off-screen | sudden cut to metal bowl\",\n    \"metal bowl | off-screen / not visible | held in hands, pouring green olives | sudden appearance in hands\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"container being poured\",\n      \"invariant_violated\": \"object continuity\",\n      \"description\": \"At 00:05, the person abruptly switches from pouring olives out of a small glass jar to pouring them out of a metal bowl without any intervening shot showing him setting down the jar and picking up the bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

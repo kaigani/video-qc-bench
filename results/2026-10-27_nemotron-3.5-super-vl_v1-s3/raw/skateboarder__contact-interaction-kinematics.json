@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:34:59.414Z",
+  "latencyMs": 24340,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 2354,
+    "total_tokens": 5420,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2265,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder feet | planted on grip tape, knees bent at start | feet on deck, riding away at end | contact broken mid-air during ollie, re-established on landing",
+    "Skateboard wheels | rolling on concrete at start | rolling on concrete at end | airborne during trick, contact with ground broken and re-established"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder feet | planted on grip tape, knees bent at start | feet on deck, riding away at end | contact broken mid-air during ollie, re-established on landing\",\n    \"Skateboard wheels | rolling on concrete at start | rolling on concrete at end | airborne during trick, contact with ground broken and re-established\"\n  ],\n  \"findings\": []\n}"
+}

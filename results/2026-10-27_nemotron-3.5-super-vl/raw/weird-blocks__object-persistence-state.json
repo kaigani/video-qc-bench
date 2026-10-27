@@ -1,0 +1,84 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:38:55.884Z",
+  "latencyMs": 39433,
+  "usage": {
+    "prompt_tokens": 3059,
+    "completion_tokens": 7488,
+    "total_tokens": 10547,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6630,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (Initial Left) | Green cube '2', held by hand | Blue cube '2', table | Transformed to Blue '3' upon placement; later changed to '2'",
+    "Block 2 (Initial Right) | Green cube '2', table | Blue cube '3', table | Transformed color Green->Blue and face '2'->'3' between 00:06 and 00:07",
+    "Block 3 (Position 3) | Green cube '3', table | Tan cube '2', table | Transformed color Green->Tan and face '3'->'2' between 00:03 and 00:04",
+    "Block 4 (Position 4) | Light blue cube '3', table | Green cube '5', table | Transformed color Light Blue->Green and face '3'->'5' between 00:05 and 00:06",
+    "Block 5 (Position 5) | Light blue cube '2', table | Vanished | Disappeared during hand sweep at 00:10",
+    "Block 6 (Position 6) | Light blue cube '6', table | Vanished | Disappeared during hand sweep at 00:10"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Block held in hand (Block 1)",
+      "invariant_violated": "Identity & Persistence",
+      "description": "Object transitions from a green block with face '2' to a blue block showing faces '2' and '3' instantly while being held, with no visible mechanism for color or geometry change.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Block at third position (Block 3)",
+      "invariant_violated": "Identity & Persistence",
+      "description": "Object changes from a green block with face '3' to a tan block with face '2' between frames 00:03 and 00:04 without visible action causing the transformation.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block at fourth position (Block 4)",
+      "invariant_violated": "Identity & Persistence",
+      "description": "Object changes from a light blue block with face '3' to a green block with face '5' between frames 00:05 and 00:06 without visible cause.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Leftmost block (Block 1)",
+      "invariant_violated": "Physical State",
+      "description": "The leftmost block changes its visible number from '3' to '2' while stationary on the table between frames 00:06 and 00:07, with no hand interaction on that specific block.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "Blocks at positions 3 through 6",
+      "invariant_violated": "Existence & Count",
+      "description": "Four blocks (Tan '2', Green '5', Light Blue '2', Light Blue '6') vanish from the table during a hand sweep, leaving only two blocks. No clear removal action (carrying off-screen) is visible to account for their disappearance.",
+      "severity": "severe",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (Initial Left) | Green cube '2', held by hand | Blue cube '2', table | Transformed to Blue '3' upon placement; later changed to '2'\",\n    \"Block 2 (Initial Right) | Green cube '2', table | Blue cube '3', table | Transformed color Green->Blue and face '2'->'3' between 00:06 and 00:07\",\n    \"Block 3 (Position 3) | Green cube '3', table | Tan cube '2', table | Transformed color Green->Tan and face '3'->'2' between 00:03 and 00:04\",\n    \"Block 4 (Position 4) | Light blue cube '3', table | Green cube '5', table | Transformed color Light Blue->Green and face '3'->'5' between 00:05 and 00:06\",\n    \"Block 5 (Position 5) | Light blue cube '2', table | Vanished | Disappeared during hand sweep at 00:10\",\n    \"Block 6 (Position 6) | Light blue cube '6', table | Vanished | Disappeared during hand sweep at 00:10\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Block held in hand (Block 1)\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"Object transitions from a green block with face '2' to a blue block showing faces '2' and '3' instantly while being held, with no visible mechanism for color or geometry change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Block at third position (Block 3)\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"Object changes from a green block with face '3' to a tan block with face '2' between frames 00:03 and 00:04 without visible action causing the transformation.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Block at fourth position (Block 4)\",\n      \"invariant_violated\": \"Identity & Persistence\",\n      \"description\": \"Object changes from a light blue block with face '3' to a green block with face '5' between frames 00:05 and 00:06 without visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Leftmost block (Block 1)\",\n      \"invariant_violated\": \"Physical State\",\n      \"description\": \"The leftmost block changes its visible number from '3' to '2' while stationary on the table between frames 00:06 and 00:07, with no hand interaction on that specific block.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.90\n    },\n    {\n      \"timestamp\": \"00:10\",\n      \"entity\": \"Blocks at positions 3 through 6\",\n      \"invariant_violated\": \"Existence & Count\",\n      \"description\": \"Four blocks (Tan '2', Green '5', Light Blue '2', Light Blue '6') vanish from the table during a hand sweep, leaving only two blocks. No clear removal action (carrying off-screen) is visible to account for their disappearance.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.90\n    }\n  ]\n}"
+}

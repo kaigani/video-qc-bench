@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:21:52.060Z",
+  "latencyMs": 82063,
+  "usage": {
+    "prompt_tokens": 3093,
+    "completion_tokens": 8600,
+    "total_tokens": 11693,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8266,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck (white cab) | parked outside left 00:00 | replaced by dark truck 01:40 | time lapse implied by lighting change",
+    "white mug (waitress) | placed on counter near caddy 00:06 | missing from counter 00:51 | unexplained disappearance",
+    "white mug (customer) | held by customer entering 00:20 | on counter 01:42 | coffee poured into it 00:29",
+    "breakfast plate | on counter 00:11 | served to customer 01:10 | state change: waiting -> served",
+    "sugar/creamer caddy | on counter 00:06 | on counter 01:38 | static position",
+    "stack of plates | near window 00:18 | unknown later | static/used"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:51",
+      "entity": "white ceramic mug (placed by waitress)",
+      "invariant_violated": "object persistence",
+      "description": "The white mug placed on the counter by the waitress at 00:06 is absent in subsequent clear shots of that counter section (00:51, 01:38) without a visible action removing it.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck (white cab) | parked outside left 00:00 | replaced by dark truck 01:40 | time lapse implied by lighting change\",\n    \"white mug (waitress) | placed on counter near caddy 00:06 | missing from counter 00:51 | unexplained disappearance\",\n    \"white mug (customer) | held by customer entering 00:20 | on counter 01:42 | coffee poured into it 00:29\",\n    \"breakfast plate | on counter 00:11 | served to customer 01:10 | state change: waiting -> served\",\n    \"sugar/creamer caddy | on counter 00:06 | on counter 01:38 | static position\",\n    \"stack of plates | near window 00:18 | unknown later | static/used\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:51\",\n      \"entity\": \"white ceramic mug (placed by waitress)\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"The white mug placed on the counter by the waitress at 00:06 is absent in subsequent clear shots of that counter section (00:51, 01:38) without a visible action removing it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

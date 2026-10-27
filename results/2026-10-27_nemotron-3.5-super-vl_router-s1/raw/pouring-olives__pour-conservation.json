@@ -1,0 +1,63 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:51:24.836Z",
+  "latencyMs": 34628,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 4841,
+    "total_tokens": 7841,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4412,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 | Large Glass Jar | Empty",
+    "00:00 | Small Glass Bowl | Green olives",
+    "00:00 | Metal Bowl (Back) | Green olives",
+    "00:00 | Metal Bowl (Front) | Green olives",
+    "00:01 | Large Glass Jar | Green and Black olives (low level)",
+    "00:01 | Small Glass Bowl | Tilting, pouring green olives",
+    "00:02 | Large Glass Jar | Green and Black olives (medium level)",
+    "00:02 | Small Glass Bowl | Emptying",
+    "00:04 | Large Glass Jar | Mixed olives (higher level)",
+    "00:04 | Small Glass Bowl | Empty, set down",
+    "00:05 | Metal Bowl (Back) | Pouring green olives into jar",
+    "00:06 | Metal Bowl (Back) | Nearly empty, set down",
+    "00:06 | Metal Bowl (Front) | Full, on counter",
+    "00:07 | Metal Bowl (Front) | Pouring green olives into jar",
+    "00:08 | Large Glass Jar | Near full with green olives",
+    "00:09 | Metal Bowl (Front) | Emptying",
+    "00:10 | Large Glass Jar | Full with mixed olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Large Glass Jar",
+      "invariant_violated": "Source contents match",
+      "description": "Black olives appear in the destination jar immediately upon pouring, but the source bowl at 00:00 visibly contained only green olives.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 | Large Glass Jar | Empty\",\n    \"00:00 | Small Glass Bowl | Green olives\",\n    \"00:00 | Metal Bowl (Back) | Green olives\",\n    \"00:00 | Metal Bowl (Front) | Green olives\",\n    \"00:01 | Large Glass Jar | Green and Black olives (low level)\",\n    \"00:01 | Small Glass Bowl | Tilting, pouring green olives\",\n    \"00:02 | Large Glass Jar | Green and Black olives (medium level)\",\n    \"00:02 | Small Glass Bowl | Emptying\",\n    \"00:04 | Large Glass Jar | Mixed olives (higher level)\",\n    \"00:04 | Small Glass Bowl | Empty, set down\",\n    \"00:05 | Metal Bowl (Back) | Pouring green olives into jar\",\n    \"00:06 | Metal Bowl (Back) | Nearly empty, set down\",\n    \"00:06 | Metal Bowl (Front) | Full, on counter\",\n    \"00:07 | Metal Bowl (Front) | Pouring green olives into jar\",\n    \"00:08 | Large Glass Jar | Near full with green olives\",\n    \"00:09 | Metal Bowl (Front) | Emptying\",\n    \"00:10 | Large Glass Jar | Full with mixed olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Large Glass Jar\",\n      \"invariant_violated\": \"Source contents match\",\n      \"description\": \"Black olives appear in the destination jar immediately upon pouring, but the source bowl at 00:00 visibly contained only green olives.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:46:46.229Z",
+  "latencyMs": 91231,
+  "usage": {
+    "prompt_tokens": 3078,
+    "completion_tokens": 5088,
+    "total_tokens": 8166,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4857,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Female, brown hair in bun, light blue shirt, white apron, glasses on collar | Same attire | Inside facing kitchen (00:09), exits door (00:14), reappears inside at machines (00:17), serves customer.",
+    "Customer | Male, beard, brown jacket, grey shirt, jeans | Same attire | Enters door (00:21), sits at counter, leaves to truck (01:36)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:17",
+      "entity": "Waitress",
+      "invariant_violated": "Placement inconsistency",
+      "description": "At 00:16 the waitress is walking out the front door. At 00:17 she is suddenly standing inside near the coffee machines with no on-screen movement to explain her return to the interior.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Female, brown hair in bun, light blue shirt, white apron, glasses on collar | Same attire | Inside facing kitchen (00:09), exits door (00:14), reappears inside at machines (00:17), serves customer.\",\n    \"Customer | Male, beard, brown jacket, grey shirt, jeans | Same attire | Enters door (00:21), sits at counter, leaves to truck (01:36).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:17\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"Placement inconsistency\",\n      \"description\": \"At 00:16 the waitress is walking out the front door. At 00:17 she is suddenly standing inside near the coffee machines with no on-screen movement to explain her return to the interior.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

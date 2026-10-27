@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:42:04.033Z",
+  "latencyMs": 41524,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 5313,
+    "total_tokens": 8355,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5030,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left Market Stall | Hanging red tomatoes, boxes of peppers/tomatoes on left side | Same static layout | Stationary architecture",
+    "Right Market Stall | Crates of green and red produce on right side | Same static layout | Stationary architecture",
+    "Central Walkway | Paved path between stalls | Same static layout | Stationary architecture",
+    "Main Subject (Woman w/ Umbrella) | Center path, holding red tomato | Turns right, back partially to camera | Walking forward along walkway",
+    "Man in White Shirt | Background center walking forward | Foreground left exiting frame | Reappears in background center at 00:05"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Man in White Shirt",
+      "invariant_violated": "connectivity",
+      "description": "The man in the white t-shirt and grey shorts exits the frame to the left foreground at 00:03-00:04 after passing the camera, but reappears in the background center at 00:05 without traversing the intervening space.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left Market Stall | Hanging red tomatoes, boxes of peppers/tomatoes on left side | Same static layout | Stationary architecture\",\n    \"Right Market Stall | Crates of green and red produce on right side | Same static layout | Stationary architecture\",\n    \"Central Walkway | Paved path between stalls | Same static layout | Stationary architecture\",\n    \"Main Subject (Woman w/ Umbrella) | Center path, holding red tomato | Turns right, back partially to camera | Walking forward along walkway\",\n    \"Man in White Shirt | Background center walking forward | Foreground left exiting frame | Reappears in background center at 00:05\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Man in White Shirt\",\n      \"invariant_violated\": \"connectivity\",\n      \"description\": \"The man in the white t-shirt and grey shorts exits the frame to the left foreground at 00:03-00:04 after passing the camera, but reappears in the background center at 00:05 without traversing the intervening space.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

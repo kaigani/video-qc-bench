@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:29:44.377Z",
+  "latencyMs": 25485,
+  "usage": {
+    "prompt_tokens": 3066,
+    "completion_tokens": 3210,
+    "total_tokens": 6276,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3102,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | holding coin above center cup | touching table surface right of cups | dropped coin into cup, shuffled cups, touched table",
+    "left hand | hovering near left cup | resting near left cup | grabbed and slid left cup",
+    "coin | held between thumb and forefinger | inside center cup | released from hand into cup",
+    "cups | scattered positions | aligned in horizontal row | slid by hands across table"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | holding coin above center cup | touching table surface right of cups | dropped coin into cup, shuffled cups, touched table\",\n    \"left hand | hovering near left cup | resting near left cup | grabbed and slid left cup\",\n    \"coin | held between thumb and forefinger | inside center cup | released from hand into cup\",\n    \"cups | scattered positions | aligned in horizontal row | slid by hands across table\"\n  ],\n  \"findings\": []\n}"
+}

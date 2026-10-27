@@ -1,0 +1,39 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:25:12.374Z",
+  "latencyMs": 14542,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 1271,
+    "total_tokens": 4310,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1175,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer_right_arm | starts extended slightly forward | ends lowered after two raise-and-lower cycles | rises smoothly from shoulder to overhead position, holds briefly, lowers to hip, then repeats extension and raise",
+    "reflection_right_arm | mirrors dancer's right arm start | mirrors dancer's right arm end | moves in perfect temporal and spatial synchronization with the source arm"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer_right_arm | starts extended slightly forward | ends lowered after two raise-and-lower cycles | rises smoothly from shoulder to overhead position, holds briefly, lowers to hip, then repeats extension and raise\",\n    \"reflection_right_arm | mirrors dancer's right arm start | mirrors dancer's right arm end | moves in perfect temporal and spatial synchronization with the source arm\"\n  ],\n  \"findings\": []\n}"
+}

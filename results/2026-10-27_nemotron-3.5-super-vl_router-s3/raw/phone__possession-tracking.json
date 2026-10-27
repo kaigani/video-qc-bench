@@ -1,0 +1,40 @@
+{
+  "key": "phone__possession-tracking",
+  "video": "phone.mp4",
+  "role": "possession-tracking",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:31:24.761Z",
+  "latencyMs": 19067,
+  "usage": {
+    "prompt_tokens": 3000,
+    "completion_tokens": 1951,
+    "total_tokens": 4951,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1868,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone: Held in hand 00:00 - 00:09",
+    "Smartphone: Exits frame / camera pans away 00:09",
+    "Paper: Touched by finger on surface 00:10 - 00:11"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone: Held in hand 00:00 - 00:09\",\n    \"Smartphone: Exits frame / camera pans away 00:09\",\n    \"Paper: Touched by finger on surface 00:10 - 00:11\"\n  ],\n  \"findings\": []\n}"
+}

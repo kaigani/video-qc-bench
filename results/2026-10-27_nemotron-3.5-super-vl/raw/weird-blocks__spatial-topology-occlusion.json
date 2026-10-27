@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:40:25.970Z",
+  "latencyMs": 90078,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 12755,
+    "total_tokens": 15797,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 12632,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Table | Fixed, light brown wooden surface occupying bottom plane | Fixed, light brown wooden surface occupying bottom plane | None",
+    "Background | Fixed, out-of-focus dark vertical structures | Fixed, out-of-focus dark vertical structures | None",
+    "Hand | Enters from top, manipulates blocks | Exits frame | Occludes blocks during contact",
+    "Block Cluster | Linear arrangement of numbered cubes on table | Linear arrangement changes (stop motion) | Blocks added, removed, and reordered between timestamps"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Table | Fixed, light brown wooden surface occupying bottom plane | Fixed, light brown wooden surface occupying bottom plane | None\",\n    \"Background | Fixed, out-of-focus dark vertical structures | Fixed, out-of-focus dark vertical structures | None\",\n    \"Hand | Enters from top, manipulates blocks | Exits frame | Occludes blocks during contact\",\n    \"Block Cluster | Linear arrangement of numbered cubes on table | Linear arrangement changes (stop motion) | Blocks added, removed, and reordered between timestamps\"\n  ],\n  \"findings\": []\n}"
+}

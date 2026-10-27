@@ -1,0 +1,58 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:07:25.220Z",
+  "latencyMs": 99994,
+  "usage": {
+    "prompt_tokens": 2993,
+    "completion_tokens": 13752,
+    "total_tokens": 16745,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13422,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Subject back to camera, left arm extended forward; Reflection facing camera, arms down at sides",
+    "00:03 - Subject arms raised in ballet position; Reflection arms raised in mirrored ballet position",
+    "00:06 - Subject right arm extended forward; Reflection right arm extended forward (viewer's left)",
+    "00:09 - Subject standing with weight shift; Reflection standing with corresponding weight shift"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Subject's left arm / Reflection",
+      "invariant_violated": "pose synchronization",
+      "description": "At 00:00, the subject extends her left arm forward towards the mirror, but the reflection's arms remain down at her sides, failing to reflect the subject's current pose.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Subject's right arm / Reflection",
+      "invariant_violated": "mirrored side",
+      "description": "At 00:06, the subject extends her right arm forward (viewer's right), but the reflection extends her right arm (viewer's left) instead of her left arm, violating left-right mirroring.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Subject back to camera, left arm extended forward; Reflection facing camera, arms down at sides\",\n    \"00:03 - Subject arms raised in ballet position; Reflection arms raised in mirrored ballet position\",\n    \"00:06 - Subject right arm extended forward; Reflection right arm extended forward (viewer's left)\",\n    \"00:09 - Subject standing with weight shift; Reflection standing with corresponding weight shift\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Subject's left arm / Reflection\",\n      \"invariant_violated\": \"pose synchronization\",\n      \"description\": \"At 00:00, the subject extends her left arm forward towards the mirror, but the reflection's arms remain down at her sides, failing to reflect the subject's current pose.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Subject's right arm / Reflection\",\n      \"invariant_violated\": \"mirrored side\",\n      \"description\": \"At 00:06, the subject extends her right arm forward (viewer's right), but the reflection extends her right arm (viewer's left) instead of her left arm, violating left-right mirroring.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "child-marbles__environment-response",
+  "video": "child-marbles.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:26:49.666Z",
+  "latencyMs": 21274,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 2225,
+    "total_tokens": 5211,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2086,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Influence: Hand contact. Evidence: Child's hands grasping and moving balls. Should affect: Balls in bowl. Does affect: Balls roll and shift positions.",
+    "Influence: Gravity. Evidence: Balls resting at bottom of bowl. Should affect: Balls and bowl. Does affect: Balls stay low; bowl remains stationary on table.",
+    "Influence: Ambient air/wind (checked). Evidence: None visible. Should affect: Hair, loose jacket fabric, background potted plants. Does affect: Nothing; all elements remain static except when manually touched."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Influence: Hand contact. Evidence: Child's hands grasping and moving balls. Should affect: Balls in bowl. Does affect: Balls roll and shift positions.\",\n    \"Influence: Gravity. Evidence: Balls resting at bottom of bowl. Should affect: Balls and bowl. Does affect: Balls stay low; bowl remains stationary on table.\",\n    \"Influence: Ambient air/wind (checked). Evidence: None visible. Should affect: Hair, loose jacket fabric, background potted plants. Does affect: Nothing; all elements remain static except when manually touched.\"\n  ],\n  \"findings\": []\n}"
+}

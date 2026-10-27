@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:24:23.758Z",
+  "latencyMs": 11310,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 1099,
+    "total_tokens": 4141,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 976,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden table | large surface occupying right and bottom of frame | large surface occupying right and bottom of frame | static",
+    "Glass bowl | center-left on table | center-left on table | static",
+    "Metal tin | far right edge on table | far right edge on table | static",
+    "Paved patio | background visible behind table | background visible behind table | static",
+    "Child's arms | left side reaching into bowl | left side stirring balls in bowl | moving occluders"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden table | large surface occupying right and bottom of frame | large surface occupying right and bottom of frame | static\",\n    \"Glass bowl | center-left on table | center-left on table | static\",\n    \"Metal tin | far right edge on table | far right edge on table | static\",\n    \"Paved patio | background visible behind table | background visible behind table | static\",\n    \"Child's arms | left side reaching into bowl | left side stirring balls in bowl | moving occluders\"\n  ],\n  \"findings\": []\n}"
+}

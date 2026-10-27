@@ -1,0 +1,50 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:29:47.145Z",
+  "latencyMs": 135895,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 14390,
+    "total_tokens": 17432,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 14040,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen stove/counter | Located on the left wall of the hallway when exiting (00:02) | Located on the left wall of the hallway when returning (00:09) | Failed to switch sides relative to camera direction",
+    "Hallway | Connects Kitchen to Bedroom via straight path | Connects Kitchen to Bedroom via straight path | Connectivity maintained but lateral positioning inconsistent",
+    "Bedroom | Accessed via doorway on the right wall of the hallway (00:03) | Accessed via doorway on the right wall of the hallway (00:08) | Door location consistent relative to outbound path",
+    "Wall decor (switches/art) | Right wall features switches and small picture (00:02) | Right wall features large geometric painting and console table (00:08) | Decor changed between passes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Kitchen stove/counter",
+      "invariant_violated": "Viewpoint consistency",
+      "description": "When exiting the kitchen at 00:02, the stove is on the left side of the hallway. When returning down the same hallway at 00:09 (walking in the opposite direction), the stove remains on the left side. Geometrically, it should appear on the right side of the frame if the camera is facing the opposite way down the same corridor.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen stove/counter | Located on the left wall of the hallway when exiting (00:02) | Located on the left wall of the hallway when returning (00:09) | Failed to switch sides relative to camera direction\",\n    \"Hallway | Connects Kitchen to Bedroom via straight path | Connects Kitchen to Bedroom via straight path | Connectivity maintained but lateral positioning inconsistent\",\n    \"Bedroom | Accessed via doorway on the right wall of the hallway (00:03) | Accessed via doorway on the right wall of the hallway (00:08) | Door location consistent relative to outbound path\",\n    \"Wall decor (switches/art) | Right wall features switches and small picture (00:02) | Right wall features large geometric painting and console table (00:08) | Decor changed between passes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Kitchen stove/counter\",\n      \"invariant_violated\": \"Viewpoint consistency\",\n      \"description\": \"When exiting the kitchen at 00:02, the stove is on the left side of the hallway. When returning down the same hallway at 00:09 (walking in the opposite direction), the stove remains on the left side. Geometrically, it should appear on the right side of the frame if the camera is facing the opposite way down the same corridor.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:42:05.991Z",
+  "latencyMs": 21121,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 2605,
+    "total_tokens": 5644,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2444,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman in blue dress | Walking forward holding tomato under blue umbrella | Walking forward turning body right holding tomato under blue umbrella | Continuous forward motion, slight pivot to right",
+    "Woman in light blue shirt | Not visible | Not visible | Enters left foreground, crosses right, exits frame",
+    "Man in white shirt | Not visible | Not visible | Enters left foreground, crosses right, exits frame",
+    "Man in blue shirt | Not visible | Visible mid-frame left | Enters from left, walks right behind main subject",
+    "Man in light blue shirt (background) | Not visible | Standing near stall | Appears near stall on left, looks toward main subject"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman in blue dress | Walking forward holding tomato under blue umbrella | Walking forward turning body right holding tomato under blue umbrella | Continuous forward motion, slight pivot to right\",\n    \"Woman in light blue shirt | Not visible | Not visible | Enters left foreground, crosses right, exits frame\",\n    \"Man in white shirt | Not visible | Not visible | Enters left foreground, crosses right, exits frame\",\n    \"Man in blue shirt | Not visible | Visible mid-frame left | Enters from left, walks right behind main subject\",\n    \"Man in light blue shirt (background) | Not visible | Standing near stall | Appears near stall on left, looks toward main subject\"\n  ],\n  \"findings\": []\n}"
+}

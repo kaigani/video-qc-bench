@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__environment-response",
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:44:33.561Z",
+  "latencyMs": 57840,
+  "usage": {
+    "prompt_tokens": 3020,
+    "completion_tokens": 4613,
+    "total_tokens": 7633,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4476,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Exterior scene 00:00: Truck parked, surroundings static, no wind detected.",
+    "Interior scene 00:34: Steam rises vertically from coffee and food, indicating still air.",
+    "Scene 00:21: Door opens to exterior, no draft visible affecting waitress's hair or clothing.",
+    "Scene 00:58: Vehicle passes outside window, interior objects remain undisturbed.",
+    "Exterior scene 01:39: Man walks to truck, no dust kicked up, truck static."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Exterior scene 00:00: Truck parked, surroundings static, no wind detected.\",\n    \"Interior scene 00:34: Steam rises vertically from coffee and food, indicating still air.\",\n    \"Scene 00:21: Door opens to exterior, no draft visible affecting waitress's hair or clothing.\",\n    \"Scene 00:58: Vehicle passes outside window, interior objects remain undisturbed.\",\n    \"Exterior scene 01:39: Man walks to truck, no dust kicked up, truck static.\"\n  ],\n  \"findings\": []\n}"
+}

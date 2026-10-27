@@ -1,0 +1,47 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:06:30.536Z",
+  "latencyMs": 34063,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 4437,
+    "total_tokens": 7293,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4305,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Number blocks | Single green '2' block | Row of blocks ending with '6' | Displayed numbers change spontaneously via cuts"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Number blocks",
+      "invariant_violated": "Continuity of object state",
+      "description": "Blocks displaying the number '2' instantly change to display '3' without being rotated or physically altered.",
+      "severity": "moderate",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Number blocks | Single green '2' block | Row of blocks ending with '6' | Displayed numbers change spontaneously via cuts\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Number blocks\",\n      \"invariant_violated\": \"Continuity of object state\",\n      \"description\": \"Blocks displaying the number '2' instantly change to display '3' without being rotated or physically altered.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

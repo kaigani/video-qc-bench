@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:21:41.277Z",
+  "latencyMs": 16669,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 926,
+    "total_tokens": 3968,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 803,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wooden table | Occupies right and bottom of frame | Remains stationary | Fixed surface",
+    "Glass bowl | Centered on table, contains red, green, yellow balls | Remains stationary | Fixed object",
+    "Child | Left side of frame, blue shirt | Arms move into bowl | Moving entity",
+    "Metal cup | Far right edge of table | Remains stationary | Fixed object",
+    "Background patio | Visible behind table and child | Remains stationary | Fixed architectural element"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wooden table | Occupies right and bottom of frame | Remains stationary | Fixed surface\",\n    \"Glass bowl | Centered on table, contains red, green, yellow balls | Remains stationary | Fixed object\",\n    \"Child | Left side of frame, blue shirt | Arms move into bowl | Moving entity\",\n    \"Metal cup | Far right edge of table | Remains stationary | Fixed object\",\n    \"Background patio | Visible behind table and child | Remains stationary | Fixed architectural element\"\n  ],\n  \"findings\": []\n}"
+}

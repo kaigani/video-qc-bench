@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:17:53.347Z",
+  "latencyMs": 53171,
+  "usage": {
+    "prompt_tokens": 3093,
+    "completion_tokens": 3115,
+    "total_tokens": 6208,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2724,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | parked outside diner, left side | parked outside diner, left side | stationary throughout",
+    "white mug | filled with coffee by pot | held by man at counter | filled with hot liquid",
+    "breakfast plate | on table in close-up | placed on counter by waitress | placed on counter, later missing",
+    "condiment shakers | lined up on counter ledge | lined up on counter ledge | stationary",
+    "stack of cash | not visible | lying on counter surface near window | appears without visible action"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "breakfast plate",
+      "invariant_violated": "object persistence",
+      "description": "A plate of food (eggs, toast, ham) is placed on the counter by the waitress at 01:07 and is visible at 01:17. By 01:20, the man is sitting in the same spot holding a mug, but the plate has vanished. No visible action removed the plate.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "stack of cash",
+      "invariant_violated": "object persistence",
+      "description": "A stack of dollar bills appears on the counter surface near the window at 01:41. In the preceding shot at 01:37, the man walks out the door with empty hands while the waitress is clearing the counter. No visible action placed the money there.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck | parked outside diner, left side | parked outside diner, left side | stationary throughout\",\n    \"white mug | filled with coffee by pot | held by man at counter | filled with hot liquid\",\n    \"breakfast plate | on table in close-up | placed on counter by waitress | placed on counter, later missing\",\n    \"condiment shakers | lined up on counter ledge | lined up on counter ledge | stationary\",\n    \"stack of cash | not visible | lying on counter surface near window | appears without visible action\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:20\",\n      \"entity\": \"breakfast plate\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"A plate of food (eggs, toast, ham) is placed on the counter by the waitress at 01:07 and is visible at 01:17. By 01:20, the man is sitting in the same spot holding a mug, but the plate has vanished. No visible action removed the plate.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"stack of cash\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"A stack of dollar bills appears on the counter surface near the window at 01:41. In the preceding shot at 01:37, the man walks out the door with empty hands while the waitress is clearing the counter. No visible action placed the money there.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

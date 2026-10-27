@@ -1,0 +1,43 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:20:37.399Z",
+  "latencyMs": 81451,
+  "usage": {
+    "prompt_tokens": 3073,
+    "completion_tokens": 6320,
+    "total_tokens": 9393,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6163,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | Walking into diner | Sitting at counter | Enters, approaches counter, sits on stool.",
+    "Coffee | In glass carafe | In white ceramic mug | Liquid poured from pot into cup.",
+    "Waitress | Standing behind counter | Placing plate | Sets meal on counter in front of man.",
+    "Money | Held by man | Resting on counter | Customer places cash bills on countertop.",
+    "Man | Sitting at counter | Walking outside | Pays bill, leaves diner, walks toward semi-truck.",
+    "Waitress | Interacting with man | Wiping counter alone | Customer leaves, she resumes cleaning duties."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | Walking into diner | Sitting at counter | Enters, approaches counter, sits on stool.\",\n    \"Coffee | In glass carafe | In white ceramic mug | Liquid poured from pot into cup.\",\n    \"Waitress | Standing behind counter | Placing plate | Sets meal on counter in front of man.\",\n    \"Money | Held by man | Resting on counter | Customer places cash bills on countertop.\",\n    \"Man | Sitting at counter | Walking outside | Pays bill, leaves diner, walks toward semi-truck.\",\n    \"Waitress | Interacting with man | Wiping counter alone | Customer leaves, she resumes cleaning duties.\"\n  ],\n  \"findings\": []\n}"
+}

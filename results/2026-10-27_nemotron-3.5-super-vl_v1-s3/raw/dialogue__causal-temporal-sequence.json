@@ -1,0 +1,42 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:26:31.236Z",
+  "latencyMs": 31423,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 2303,
+    "total_tokens": 5342,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2187,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's face | speaking, mouth animated | mouth closed, neutral expression | stops speaking as head turns",
+    "Man's head | facing forward | facing left towards door | rotates left",
+    "Man's torso | facing forward | facing door | rotates left to align with door",
+    "Man's hands | lowered/out of frame | pressed against door surface | extend forward to make contact",
+    "Door | closed and stationary | being pushed | force applied by hands"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's face | speaking, mouth animated | mouth closed, neutral expression | stops speaking as head turns\",\n    \"Man's head | facing forward | facing left towards door | rotates left\",\n    \"Man's torso | facing forward | facing door | rotates left to align with door\",\n    \"Man's hands | lowered/out of frame | pressed against door surface | extend forward to make contact\",\n    \"Door | closed and stationary | being pushed | force applied by hands\"\n  ],\n  \"findings\": []\n}"
+}

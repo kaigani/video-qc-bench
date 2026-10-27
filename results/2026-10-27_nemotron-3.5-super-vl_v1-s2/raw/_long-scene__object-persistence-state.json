@@ -1,0 +1,53 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:47:48.470Z",
+  "latencyMs": 94847,
+  "usage": {
+    "prompt_tokens": 3093,
+    "completion_tokens": 8277,
+    "total_tokens": 11370,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8003,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | parked outside diner | parked outside diner | stationary throughout",
+    "coffee pot | pouring black coffee | pouring complete | liquid transferred to mug",
+    "white mug | empty on counter | filled, held by man, then on counter | filled by pouring, held, placed down",
+    "breakfast plate | not visible | on counter with food | appears, vanishes, reappears",
+    "cleaning cloth | held by waitress | wiping counter surface | used to clean counter",
+    "condiment bottles | grouped on counter | grouped on counter | stationary",
+    "stack of plates | on kitchen shelf | on kitchen shelf | stationary"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:58",
+      "entity": "breakfast plate",
+      "invariant_violated": "object persistence",
+      "description": "A plate of food is visible on the table at 00:27, but the table is empty at 00:58 with no visible removal action. The plate reappears at 01:05 when the waitress places it down.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck | parked outside diner | parked outside diner | stationary throughout\",\n    \"coffee pot | pouring black coffee | pouring complete | liquid transferred to mug\",\n    \"white mug | empty on counter | filled, held by man, then on counter | filled by pouring, held, placed down\",\n    \"breakfast plate | not visible | on counter with food | appears, vanishes, reappears\",\n    \"cleaning cloth | held by waitress | wiping counter surface | used to clean counter\",\n    \"condiment bottles | grouped on counter | grouped on counter | stationary\",\n    \"stack of plates | on kitchen shelf | on kitchen shelf | stationary\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:58\",\n      \"entity\": \"breakfast plate\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"A plate of food is visible on the table at 00:27, but the table is empty at 00:58 with no visible removal action. The plate reappears at 01:05 when the waitress places it down.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

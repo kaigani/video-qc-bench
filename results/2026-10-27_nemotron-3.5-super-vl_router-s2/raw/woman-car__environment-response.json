@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:18:59.564Z",
+  "latencyMs": 24317,
+  "usage": {
+    "prompt_tokens": 2986,
+    "completion_tokens": 1772,
+    "total_tokens": 4758,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1591,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's hair blowing back vigorously from 00:05 onwards",
+    "Background desert foliage and bushes remain static throughout",
+    "Woman's denim jacket shows minimal movement compared to hair"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Background desert foliage and bushes",
+      "invariant_violated": "Physical influence must affect everything it should",
+      "description": "Starting at 00:05, strong wind visibly streams the subject's hair backwards. However, the dry grass and bushes in the background remain completely rigid and static, showing no response to the implied airflow that is affecting the hair.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's hair blowing back vigorously from 00:05 onwards\",\n    \"Background desert foliage and bushes remain static throughout\",\n    \"Woman's denim jacket shows minimal movement compared to hair\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Background desert foliage and bushes\",\n      \"invariant_violated\": \"Physical influence must affect everything it should\",\n      \"description\": \"Starting at 00:05, strong wind visibly streams the subject's hair backwards. However, the dry grass and bushes in the background remain completely rigid and static, showing no response to the implied airflow that is affecting the hair.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

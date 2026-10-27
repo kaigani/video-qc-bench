@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T23:40:51.622Z",
+  "latencyMs": 16403,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1468,
+    "total_tokens": 4324,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1297,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on car hood, arms crossed | leaning on car hood, arms crossed | camera pushes in",
+    "car | cream station wagon, wood paneling | cream station wagon, wood paneling | static",
+    "background | dirt road, no markings | paved road with yellow dashed lines | sudden appearance of lane markings"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "background road",
+      "invariant_violated": "background continuity",
+      "description": "Yellow dashed road markings suddenly appear behind the car, whereas previous frames showed only a dirt road with no markings.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on car hood, arms crossed | leaning on car hood, arms crossed | camera pushes in\",\n    \"car | cream station wagon, wood paneling | cream station wagon, wood paneling | static\",\n    \"background | dirt road, no markings | paved road with yellow dashed lines | sudden appearance of lane markings\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"background road\",\n      \"invariant_violated\": \"background continuity\",\n      \"description\": \"Yellow dashed road markings suddenly appear behind the car, whereas previous frames showed only a dirt road with no markings.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

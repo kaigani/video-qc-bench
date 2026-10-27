@@ -1,0 +1,47 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "timestamp": "2026-10-27T22:28:48.874Z",
+  "latencyMs": 16818,
+  "usage": {
+    "prompt_tokens": 2856,
+    "completion_tokens": 1883,
+    "total_tokens": 4739,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1712,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "cups | 3 cups visible in close-up | 4 cups visible in wide shot | cut reveals additional cup"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "cups",
+      "invariant_violated": "object consistency",
+      "description": "In the close-up shots from 00:00 to 00:04, only three cups are visible on the table. When the camera cuts to the wide shot at 00:05, there are suddenly four cups lined up on the table, indicating a continuity error in the prop setup.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"cups | 3 cups visible in close-up | 4 cups visible in wide shot | cut reveals additional cup\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"cups\",\n      \"invariant_violated\": \"object consistency\",\n      \"description\": \"In the close-up shots from 00:00 to 00:04, only three cups are visible on the table. When the camera cuts to the wide shot at 00:05, there are suddenly four cups lined up on the table, indicating a continuity error in the prop setup.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}
