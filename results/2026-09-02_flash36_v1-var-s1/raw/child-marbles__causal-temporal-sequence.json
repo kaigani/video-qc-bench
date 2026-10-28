@@ -1,0 +1,39 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:29:35.695Z",
+  "latencyMs": 15481,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 777,
+    "total_tokens": 2202,
+    "cost": 0.0039825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0039825,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00291375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 672,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands | reaching into bowl | stirring balls in bowl | picks up red ball at 00:01, drops back at 00:02, stirs balls from 00:04 to 00:09",
+    "colored balls in bowl | resting in glass bowl | swirling under hand motion | pushed and rolled proportionally by child's hand contact throughout clip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands | reaching into bowl | stirring balls in bowl | picks up red ball at 00:01, drops back at 00:02, stirs balls from 00:04 to 00:09\",\n    \"colored balls in bowl | resting in glass bowl | swirling under hand motion | pushed and rolled proportionally by child's hand contact throughout clip\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,72 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:29:06.814Z",
+  "latencyMs": 251152,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 12838,
+    "total_tokens": 18733,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | enters top-left placing first cube | exits top-right after 8th placement | places number cubes sequentially left-to-right, one placement per ~1-2s, single continuous shot",
+    "cube row | 2 green '2' cubes on table at 0:00 | 8 cubes reading 2-3-2-2-3-5-2-6 at 0:08 | grows via placements at ~0:02, 0:04, 0:06, 0:08; several cube identities mutate between sampled moments",
+    "cube position 1 | green '2' being placed at 0:00 | blue '2' stationary from 0:02 | color/body changed green to blue with no visible swap or hand contact",
+    "green '2' cube (original position 2) | stationary and untouched at position 2 at 0:00 | green '2' at position 3 from 0:02 | shifted one slot right with blue '3' inserted behind it; hand never shown moving it",
+    "blue '3' cube (position 2) | mid-placement, motion-blurred at 0:02 | stationary at 0:04 | placement completes normally",
+    "orange '2' cube (position 4) | mid-placement, motion-blurred at 0:04 | stationary at position 4 at 0:06 | placement completes but one slot left of its blurred position at 0:04",
+    "green '2' cube handled at position 4-5 | hand resting on it at 0:04 | absent at 0:06 | disappears; replaced by light-blue '3' never shown being placed",
+    "green '5' cube (position 6) | absent at 0:04 | stationary at 0:06 | plausibly hand-placed between sampled frames",
+    "green '2' cube (position 7) | mid-placement at 0:06 | stationary at 0:08 | placement completes normally",
+    "blue '6' cube (position 8) | mid-placement at 0:08 | placement in progress at clip end | cause (hand) present, effect pending"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "cube at position 1",
+      "invariant_violated": "effect-without-cause / completion mismatch",
+      "description": "At 0:00 the hand completes placing a green '2' cube at position 1. By 0:02 the same position holds a blue '2' cube. No swap, flip, or hand contact capable of changing the cube's color is shown between the two moments, so the completed placement's effect does not match its cause.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "0:02",
+      "entity": "green '2' cube originally at position 2",
+      "invariant_violated": "effect-without-cause",
+      "description": "At 0:00 this cube sits stationary at position 2 while the hand is still occupied at position 1. By 0:02 it occupies position 3 with a blue '3' cube being inserted at position 2. The hand is never shown grasping or sliding the stationary cube, so its displacement is an uncaused effect.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "cubes at positions 4-5",
+      "invariant_violated": "effect-without-cause",
+      "description": "At 0:04 positions 4-5 contain a green '2' (hand resting on its knob) and an orange '2' (mid-placement blur). At 0:06 position 4 holds the orange '2' and position 5 holds a light-blue '3' that was never shown being placed; the green '2' being handled at 0:04 has vanished. Cube identities mutate between consecutive moments of a continuous shot with no intervening visible cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | enters top-left placing first cube | exits top-right after 8th placement | places number cubes sequentially left-to-right, one placement per ~1-2s, single continuous shot\",\n    \"cube row | 2 green '2' cubes on table at 0:00 | 8 cubes reading 2-3-2-2-3-5-2-6 at 0:08 | grows via placements at ~0:02, 0:04, 0:06, 0:08; several cube identities mutate between sampled moments\",\n    \"cube position 1 | green '2' being placed at 0:00 | blue '2' stationary from 0:02 | color/body changed green to blue with no visible swap or hand contact\",\n    \"green '2' cube (original position 2) | stationary and untouched at position 2 at 0:00 | green '2' at position 3 from 0:02 | shifted one slot right with blue '3' inserted behind it; hand never shown moving it\",\n    \"blue '3' cube (position 2) | mid-placement, motion-blurred at 0:02 | stationary at 0:04 | placement completes normally\",\n    \"orange '2' cube (position 4) | mid-placement, motion-blurred at 0:04 | stationary at position 4 at 0:06 | placement completes but one slot left of its blurred position at 0:04\",\n    \"green '2' cube handled at position 4-5 | hand resting on it at 0:04 | absent at 0:06 | disappears; replaced by light-blue '3' never shown being placed\",\n    \"green '5' cube (position 6) | absent at 0:04 | stationary at 0:06 | plausibly hand-placed between sampled frames\",\n    \"green '2' cube (position 7) | mid-placement at 0:06 | stationary at 0:08 | placement completes normally\",\n    \"blue '6' cube (position 8) | mid-placement at 0:08 | placement in progress at clip end | cause (hand) present, effect pending\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"cube at position 1\",\n      \"invariant_violated\": \"effect-without-cause / completion mismatch\",\n      \"description\": \"At 0:00 the hand completes placing a green '2' cube at position 1. By 0:02 the same position holds a blue '2' cube. No swap, flip, or hand contact capable of changing the cube's color is shown between the two moments, so the completed placement's effect does not match its cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"green '2' cube originally at position 2\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"At 0:00 this cube sits stationary at position 2 while the hand is still occupied at position 1. By 0:02 it occupies position 3 with a blue '3' cube being inserted at position 2. The hand is never shown grasping or sliding the stationary cube, so its displacement is an uncaused effect.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"cubes at positions 4-5\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"At 0:04 positions 4-5 contain a green '2' (hand resting on its knob) and an orange '2' (mid-placement blur). At 0:06 position 4 holds the orange '2' and position 5 holds a light-blue '3' that was never shown being placed; the green '2' being handled at 0:04 has vanished. Cube identities mutate between consecutive moments of a continuous shot with no intervening visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

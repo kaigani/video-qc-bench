@@ -1,0 +1,46 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:22:57.111Z",
+  "latencyMs": 313456,
+  "usage": {
+    "prompt_tokens": 6237,
+    "completion_tokens": 13397,
+    "total_tokens": 19634,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | enters from top of frame gripping a green '2' cube at position 1 | releases blue '6' cube at position 8 and exits | places cubes sequentially (positions 1, 2, 4, 6, 8 sampled mid-placement with visible finger contact; positions 5 and 7 placed between samples), re-grips cube at position 3 at 0:04; grip contact visible in every frame, natural pinch poses, no handedness change",
+    "position-1 number cube ('2') | green body, black '2' front, '6' glyph on right side face, gripped by hand, seated on table | blue body, black '2' front, seated in final row | body color changes green to blue between 0:00 and 0:02 while position and number remain constant; no green cube visible elsewhere after 0:00",
+    "position-2 cube (blue '3') | not present | seated between cubes 1 and 3 with hinge pin visible | placed by hand ~0:02 with fingers clearly gripping cube during motion",
+    "position-3 cube (green '2') | already seated at 0:00, sharp | seated in final row | stationary at 0:00-0:02; hand re-grips and adjusts it at 0:04 (cube shows motion blur under fingers), then stationary through end",
+    "position-4 cube (orange '2') | not present | seated | placed ~0:04, motion-blurred while hand grips adjacent cube 3, consistent with just-released settling",
+    "position-5 cube (light blue '3') | not present | seated between cubes 4 and 6 | placed between 0:04 and 0:06",
+    "position-6 cube (green '5') | not present | seated | placed ~0:06 with hand gripping cube during motion",
+    "position-7 cube (green '2') | not present | seated | placed between 0:06 and 0:08",
+    "position-8 cube (blue '6') | not present | seated, hand fingers still in contact at 0:08 | placed ~0:08, completes row reading 2 3 2 2 3 5 2 6"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | enters from top of frame gripping a green '2' cube at position 1 | releases blue '6' cube at position 8 and exits | places cubes sequentially (positions 1, 2, 4, 6, 8 sampled mid-placement with visible finger contact; positions 5 and 7 placed between samples), re-grips cube at position 3 at 0:04; grip contact visible in every frame, natural pinch poses, no handedness change\",\n    \"position-1 number cube ('2') | green body, black '2' front, '6' glyph on right side face, gripped by hand, seated on table | blue body, black '2' front, seated in final row | body color changes green to blue between 0:00 and 0:02 while position and number remain constant; no green cube visible elsewhere after 0:00\",\n    \"position-2 cube (blue '3') | not present | seated between cubes 1 and 3 with hinge pin visible | placed by hand ~0:02 with fingers clearly gripping cube during motion\",\n    \"position-3 cube (green '2') | already seated at 0:00, sharp | seated in final row | stationary at 0:00-0:02; hand re-grips and adjusts it at 0:04 (cube shows motion blur under fingers), then stationary through end\",\n    \"position-4 cube (orange '2') | not present | seated | placed ~0:04, motion-blurred while hand grips adjacent cube 3, consistent with just-released settling\",\n    \"position-5 cube (light blue '3') | not present | seated between cubes 4 and 6 | placed between 0:04 and 0:06\",\n    \"position-6 cube (green '5') | not present | seated | placed ~0:06 with hand gripping cube during motion\",\n    \"position-7 cube (green '2') | not present | seated | placed between 0:06 and 0:08\",\n    \"position-8 cube (blue '6') | not present | seated, hand fingers still in contact at 0:08 | placed ~0:08, completes row reading 2 3 2 2 3 5 2 6\"\n  ],\n  \"findings\": []\n}"
+}

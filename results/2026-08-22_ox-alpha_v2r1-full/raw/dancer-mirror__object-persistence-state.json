@@ -1,0 +1,65 @@
+{
+  "key": "dancer-mirror__object-persistence-state",
+  "video": "dancer-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:11:10.229Z",
+  "latencyMs": 422365,
+  "usage": {
+    "prompt_tokens": 6238,
+    "completion_tokens": 18713,
+    "total_tokens": 24951,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer's mirror reflection (large studio mirror wall) | at 0:00 pose matches dancer exactly (arms relaxed slightly out, matching stance) | diverges from dancer during all arm raises | at 0:02 reflection shows one arm extended horizontally at shoulder height while dancer's actual left arm hangs at her side, and reflection's raised arm sits on viewer-LEFT of figure while dancer's raised right arm is on viewer-RIGHT; same mismatch pattern at 0:04; at 0:08 raised arm again appears on opposite screen side (viewer-left) from dancer's raised right arm",
+    "blue storage bin (visible only within mirror reflection, against far wall) | closed, stationary on floor, present from 0:00 | unchanged at end | no transitions",
+    "ballet barre, wall poster, doors (background/reflected fixtures) | doors closed, barre and poster intact and fixed | unchanged | no transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "dancer's mirror reflection (arms)",
+      "invariant_violated": "real-mirror reflection must depict the same pose at the same instant",
+      "description": "Within the same frame, the dancer's left arm hangs at her side and her right arm is raised diagonally (~45 degrees, upper-right), but her reflection shows one arm extended horizontally at shoulder height and the raised arm positioned on the viewer-LEFT side of the figure with a flopped hand. A plane mirror preserves screen-side position, so the reflection depicts a different and laterally swapped pose at the same moment.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "0:04",
+      "entity": "dancer's mirror reflection (left arm)",
+      "invariant_violated": "real-mirror reflection must depict the same pose at the same instant",
+      "description": "The dancer's left arm hangs down at her side, yet the reflection shows the corresponding arm bent at the elbow with the hand held out at shoulder height; the reflection's raised arm is again on the viewer-left side of the figure while the dancer's actual raised right arm is on the viewer-right side. No visible action accounts for the extra active arm in the reflection.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "dancer's mirror reflection (raised arm)",
+      "invariant_violated": "mirror left-right consistency",
+      "description": "The dancer raises her right arm straight up (arm on the viewer-right side of her body, left arm down), but in the reflection the raised vertical arm appears on the viewer-LEFT side of the figure with the hand flopped leftward. The one-arm-up/one-arm-down configuration otherwise matches, indicating a left-right swap impossible for a plane mirror.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer's mirror reflection (large studio mirror wall) | at 0:00 pose matches dancer exactly (arms relaxed slightly out, matching stance) | diverges from dancer during all arm raises | at 0:02 reflection shows one arm extended horizontally at shoulder height while dancer's actual left arm hangs at her side, and reflection's raised arm sits on viewer-LEFT of figure while dancer's raised right arm is on viewer-RIGHT; same mismatch pattern at 0:04; at 0:08 raised arm again appears on opposite screen side (viewer-left) from dancer's raised right arm\",\n    \"blue storage bin (visible only within mirror reflection, against far wall) | closed, stationary on floor, present from 0:00 | unchanged at end | no transitions\",\n    \"ballet barre, wall poster, doors (background/reflected fixtures) | doors closed, barre and poster intact and fixed | unchanged | no transitions\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"dancer's mirror reflection (arms)\",\n      \"invariant_violated\": \"real-mirror reflection must depict the same pose at the same instant\",\n      \"description\": \"Within the same frame, the dancer's left arm hangs at her side and her right arm is raised diagonally (~45 degrees, upper-right), but her reflection shows one arm extended horizontally at shoulder height and the raised arm positioned on the viewer-LEFT side of the figure with a flopped hand. A plane mirror preserves screen-side position, so the reflection depicts a different and laterally swapped pose at the same moment.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"0:04\",\n      \"entity\": \"dancer's mirror reflection (left arm)\",\n      \"invariant_violated\": \"real-mirror reflection must depict the same pose at the same instant\",\n      \"description\": \"The dancer's left arm hangs down at her side, yet the reflection shows the corresponding arm bent at the elbow with the hand held out at shoulder height; the reflection's raised arm is again on the viewer-left side of the figure while the dancer's actual raised right arm is on the viewer-right side. No visible action accounts for the extra active arm in the reflection.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"dancer's mirror reflection (raised arm)\",\n      \"invariant_violated\": \"mirror left-right consistency\",\n      \"description\": \"The dancer raises her right arm straight up (arm on the viewer-right side of her body, left arm down), but in the reflection the raised vertical arm appears on the viewer-LEFT side of the figure with the hand flopped leftward. The one-arm-up/one-arm-down configuration otherwise matches, indicating a left-right swap impossible for a plane mirror.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:18:40.563Z",
+  "latencyMs": 25416,
+  "usage": {
+    "prompt_tokens": 10589,
+    "completion_tokens": 1054,
+    "total_tokens": 11643,
+    "cost": 0.01189425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01189425,
+      "upstream_inference_prompt_cost": 0.00794175,
+      "upstream_inference_completions_cost": 0.0039525
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 949,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:27 coffee pot held by waitress right hand -> poured into white mug on counter",
+    "01:10 food plate carried by waitress hands -> placed on counter surface",
+    "01:12 second coffee mug carried by waitress right hand -> placed on counter surface",
+    "01:38 folded banknote cash held by man right hand -> placed on counter surface next to mug",
+    "01:51 coffee mug on counter -> picked up by waitress right hand and carried behind counter"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"00:27 coffee pot held by waitress right hand -> poured into white mug on counter\",\"01:10 food plate carried by waitress hands -> placed on counter surface\",\"01:12 second coffee mug carried by waitress right hand -> placed on counter surface\",\"01:38 folded banknote cash held by man right hand -> placed on counter surface next to mug\",\"01:51 coffee mug on counter -> picked up by waitress right hand and carried behind counter\"],\"findings\":[]}"
+}

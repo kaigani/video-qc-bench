@@ -1,0 +1,59 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:44:06.785Z",
+  "latencyMs": 23905,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2717,
+    "total_tokens": 4111,
+    "cost": 0.01123425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01123425,
+      "upstream_inference_prompt_cost": 0.0010455,
+      "upstream_inference_completions_cost": 0.01018875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2351,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Kitchen/hallway view: kitchen counter and stove on left wall, hallway leading ahead to white exterior door.",
+    "00:02 - Traversal: Person turns right in kitchen hallway to enter bedroom through doorway on right side wall.",
+    "00:05 - Bedroom interior: Bed against back wall with two chairs placed facing directly into the footboard; windows on adjacent walls.",
+    "00:07 - Traversal: Person turns around to exit bedroom back into hallway.",
+    "00:08 - Bedroom exit view: Looking straight through bedroom door, the white exterior door is straight ahead and kitchen counter is on the left."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Bedroom seating",
+      "invariant_violated": "functional_arrangement_defect",
+      "description": "Two wooden chairs are placed directly against and facing the footboard of the bed without a table or desk present.",
+      "severity": "minor",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Bedroom doorway and hallway spatial orientation",
+      "invariant_violated": "connectivity_violation",
+      "description": "When entering the bedroom, the doorway is on a side wall perpendicular to the hallway leading to the white front door. Upon exiting the same doorway, the white front door is positioned directly straight ahead through the opening.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Kitchen/hallway view: kitchen counter and stove on left wall, hallway leading ahead to white exterior door.\",\n    \"00:02 - Traversal: Person turns right in kitchen hallway to enter bedroom through doorway on right side wall.\",\n    \"00:05 - Bedroom interior: Bed against back wall with two chairs placed facing directly into the footboard; windows on adjacent walls.\",\n    \"00:07 - Traversal: Person turns around to exit bedroom back into hallway.\",\n    \"00:08 - Bedroom exit view: Looking straight through bedroom door, the white exterior door is straight ahead and kitchen counter is on the left.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Bedroom seating\",\n      \"invariant_violated\": \"functional_arrangement_defect\",\n      \"description\": \"Two wooden chairs are placed directly against and facing the footboard of the bed without a table or desk present.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Bedroom doorway and hallway spatial orientation\",\n      \"invariant_violated\": \"connectivity_violation\",\n      \"description\": \"When entering the bedroom, the doorway is on a side wall perpendicular to the hallway leading to the white front door. Upon exiting the same doorway, the white front door is positioned directly straight ahead through the opening.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

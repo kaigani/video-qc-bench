@@ -1,0 +1,59 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:41:51.222Z",
+  "latencyMs": 20796,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 1839,
+    "total_tokens": 3233,
+    "cost": 0.024856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024856,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.022068
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1479,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - woman in kitchen, looking down hallway towards front door",
+    "00:03 - woman turns right from hallway into a bedroom",
+    "00:06 - woman turns around in bedroom, two chairs facing a blank wall",
+    "00:06 - view out of bedroom doorway shows hallway leading straight to front door",
+    "00:08 - woman walks back out into hallway"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom doorway view",
+      "invariant_violated": "spatial layout consistency",
+      "description": "When looking out of the bedroom doorway, the view shows a straight path down the hallway to the front door, with the kitchen on the left. Because the woman turned right from the hallway to enter the bedroom, looking back out should show the opposite wall of the hallway, with the front door to the right and the kitchen to the left. The doorway's orientation relative to the rest of the house has changed.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom chairs",
+      "invariant_violated": "functional arrangement",
+      "description": "Two chairs in the bedroom are arranged side-by-side facing a blank wall, not tucked under a desk or oriented towards any logical focal point.",
+      "severity": "minor",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - woman in kitchen, looking down hallway towards front door\",\n    \"00:03 - woman turns right from hallway into a bedroom\",\n    \"00:06 - woman turns around in bedroom, two chairs facing a blank wall\",\n    \"00:06 - view out of bedroom doorway shows hallway leading straight to front door\",\n    \"00:08 - woman walks back out into hallway\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"bedroom doorway view\",\n      \"invariant_violated\": \"spatial layout consistency\",\n      \"description\": \"When looking out of the bedroom doorway, the view shows a straight path down the hallway to the front door, with the kitchen on the left. Because the woman turned right from the hallway to enter the bedroom, looking back out should show the opposite wall of the hallway, with the front door to the right and the kitchen to the left. The doorway's orientation relative to the rest of the house has changed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"bedroom chairs\",\n      \"invariant_violated\": \"functional arrangement\",\n      \"description\": \"Two chairs in the bedroom are arranged side-by-side facing a blank wall, not tucked under a desk or oriented towards any logical focal point.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

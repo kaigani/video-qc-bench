@@ -1,0 +1,43 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:32:54.761Z",
+  "latencyMs": 71234,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 1028,
+    "total_tokens": 6868,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Sunlight/shadow (0:00-0:08): soft shadow sweeps across phone screen; consistent with railing/holder's body occluding sun as phone tilts — cause present, response consistent",
+    "Gravity on red bag (0:00-0:02): bag carried by background pedestrian hangs vertically and swings naturally with gait — correct response",
+    "Pedestrian motion (0:00-0:02): background figure walks away with natural gait; jeans and shirt show no wind streaming, implying calm air",
+    "Foliage by railing (0:00-0:08): shrubs remain static across all frames; no deformation — consistent with no implied wind (no hair/flag/clothing motion anywhere else)",
+    "Phone in hands (0:00-0:08): device tilts and shifts only under visible finger/thumb control; no anomalous autonomous motion",
+    "Camera motion (0:00-0:08): background displacement tracks hand movement; judged only via object deformation, no independent element motion detected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Sunlight/shadow (0:00-0:08): soft shadow sweeps across phone screen; consistent with railing/holder's body occluding sun as phone tilts — cause present, response consistent\",\n    \"Gravity on red bag (0:00-0:02): bag carried by background pedestrian hangs vertically and swings naturally with gait — correct response\",\n    \"Pedestrian motion (0:00-0:02): background figure walks away with natural gait; jeans and shirt show no wind streaming, implying calm air\",\n    \"Foliage by railing (0:00-0:08): shrubs remain static across all frames; no deformation — consistent with no implied wind (no hair/flag/clothing motion anywhere else)\",\n    \"Phone in hands (0:00-0:08): device tilts and shifts only under visible finger/thumb control; no anomalous autonomous motion\",\n    \"Camera motion (0:00-0:08): background displacement tracks hand movement; judged only via object deformation, no independent element motion detected\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,71 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:16:43.625Z",
+  "latencyMs": 98600,
+  "usage": {
+    "prompt_tokens": 10642,
+    "completion_tokens": 5884,
+    "total_tokens": 16526,
+    "cost": 0.091892,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 10115
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.091892,
+      "upstream_inference_prompt_cost": 0.021284,
+      "upstream_inference_completions_cost": 0.070608
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4979,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:09, exterior wide. anchors: counter, door. State: Man absent, Waitress absent.",
+    "shot 2: 00:10-00:18, interior med. anchors: counter, door. State: Waitress present behind counter wiping; Man absent.",
+    "shot 3: 00:19-00:26, interior wide. anchors: counter, door. State: Waitress present behind counter; Man present, enters door, sits on customer side of counter.",
+    "shot 4: 00:27-00:31, close up. State: Waitress hands pouring; Man hands holding mug.",
+    "shot 5: 00:32-00:35, close up food. State: Man absent, Waitress absent.",
+    "shot 6: 00:36-00:44, interior wide. anchors: counter, door. State: Man present sitting customer side of counter; Waitress absent.",
+    "shot 7: 00:45-00:50, interior from kitchen pass-through. anchors: counter, door. State: Waitress present kitchen side; Man present customer side.",
+    "shot 8: 00:51-00:59, interior time lapse. State: Man absent, Waitress absent.",
+    "shot 9: 01:00-01:08, interior wide. anchors: counter, door. State: Man present sitting customer side; Waitress present behind counter.",
+    "shot 10: 01:09-01:17, interior med. anchors: counter, door. State: Man present sitting customer side; Waitress present behind counter serving food.",
+    "shot 11: 01:18-01:26, interior wide. anchors: counter, door. State: Man present sitting customer side; Waitress present on customer side, walking and sitting down next to man.",
+    "shot 12: 01:27-01:34, interior med. anchors: counter, door. State: Man present sitting customer side; Waitress present sitting customer side.",
+    "shot 13: 01:35-01:36, interior med empty counter. State: Man absent, Waitress absent.",
+    "shot 14: 01:37-01:40, close up hands. State: Man hands present; Waitress absent.",
+    "shot 15: 01:41-01:45, interior looking out window. State: Man present outside; Waitress absent.",
+    "shot 16: 01:46-01:49, interior med looking out window. State: Waitress present inside near window; Man present outside.",
+    "shot 17: 01:50-01:59, interior wide. anchors: counter, door. State: Waitress present in three locations simultaneously (sitting at counter, wiping table near door, walking behind counter); Man absent."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:18",
+      "entity": "Waitress",
+      "invariant_violated": "opposite side of anchor",
+      "description": "In the shot ending at 01:17, the waitress is standing behind the counter serving food. In the immediate next shot at 01:18, she is instantly on the customer side of the counter, sitting down next to the man, with no time elapsed to allow her to walk around.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "duplicate person",
+      "description": "Three identical instances of the waitress are visible in the same continuous shot: one sitting at the customer side of the counter, a second one wiping a booth table near the door in the background, and starting at 01:52, a third one walking in from the right behind the counter.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"shot 1: 00:00-00:09, exterior wide. anchors: counter, door. State: Man absent, Waitress absent.\",\n    \"shot 2: 00:10-00:18, interior med. anchors: counter, door. State: Waitress present behind counter wiping; Man absent.\",\n    \"shot 3: 00:19-00:26, interior wide. anchors: counter, door. State: Waitress present behind counter; Man present, enters door, sits on customer side of counter.\",\n    \"shot 4: 00:27-00:31, close up. State: Waitress hands pouring; Man hands holding mug.\",\n    \"shot 5: 00:32-00:35, close up food. State: Man absent, Waitress absent.\",\n    \"shot 6: 00:36-00:44, interior wide. anchors: counter, door. State: Man present sitting customer side of counter; Waitress absent.\",\n    \"shot 7: 00:45-00:50, interior from kitchen pass-through. anchors: counter, door. State: Waitress present kitchen side; Man present customer side.\",\n    \"shot 8: 00:51-00:59, interior time lapse. State: Man absent, Waitress absent.\",\n    \"shot 9: 01:00-01:08, interior wide. anchors: counter, door. State: Man present sitting customer side; Waitress present behind counter.\",\n    \"shot 10: 01:09-01:17, interior med. anchors: counter, door. State: Man present sitting customer side; Waitress present behind counter serving food.\",\n    \"shot 11: 01:18-01:26, interior wide. anchors: counter, door. State: Man present sitting customer side; Waitress present on customer side, walking and sitting down next to man.\",\n    \"shot 12: 01:27-01:34, interior med. anchors: counter, door. State: Man present sitting customer side; Waitress present sitting customer side.\",\n    \"shot 13: 01:35-01:36, interior med empty counter. State: Man absent, Waitress absent.\",\n    \"shot 14: 01:37-01:40, close up hands. State: Man hands present; Waitress absent.\",\n    \"shot 15: 01:41-01:45, interior looking out window. State: Man present outside; Waitress absent.\",\n    \"shot 16: 01:46-01:49, interior med looking out window. State: Waitress present inside near window; Man present outside.\",\n    \"shot 17: 01:50-01:59, interior wide. anchors: counter, door. State: Waitress present in three locations simultaneously (sitting at counter, wiping table near door, walking behind counter); Man absent.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:18\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"opposite side of anchor\",\n      \"description\": \"In the shot ending at 01:17, the waitress is standing behind the counter serving food. In the immediate next shot at 01:18, she is instantly on the customer side of the counter, sitting down next to the man, with no time elapsed to allow her to walk around.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"duplicate person\",\n      \"description\": \"Three identical instances of the waitress are visible in the same continuous shot: one sitting at the customer side of the counter, a second one wiping a booth table near the door in the background, and starting at 01:52, a third one walking in from the right behind the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

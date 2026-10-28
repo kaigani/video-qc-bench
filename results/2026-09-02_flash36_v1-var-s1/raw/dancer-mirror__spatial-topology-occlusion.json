@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:29:48.612Z",
+  "latencyMs": 7425,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 546,
+    "total_tokens": 1972,
+    "cost": 0.003117,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003117,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0020475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 409,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio room | mirror wall along front wall, double exit doors on left rear wall | same spatial layout throughout | static single-shot view",
+    "Person | standing in foreground facing mirror wall, occluding mirror plane | remains in position performing arm motions | consistent occlusion relative to mirror plane",
+    "Double exit doors | positioned on back-left wall with green exit signs | fixed position throughout | static relative geometry",
+    "Ballet studio mirror | reflects front of person and opposite studio wall with barre | reflections geometrically consistent with room layout | static mirror interface"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio room | mirror wall along front wall, double exit doors on left rear wall | same spatial layout throughout | static single-shot view\",\n    \"Person | standing in foreground facing mirror wall, occluding mirror plane | remains in position performing arm motions | consistent occlusion relative to mirror plane\",\n    \"Double exit doors | positioned on back-left wall with green exit signs | fixed position throughout | static relative geometry\",\n    \"Ballet studio mirror | reflects front of person and opposite studio wall with barre | reflections geometrically consistent with room layout | static mirror interface\"\n  ],\n  \"findings\": []\n}"
+}

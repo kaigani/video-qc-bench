@@ -1,0 +1,48 @@
+{
+  "key": "child-marbles__environment-response",
+  "video": "child-marbles.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:16:58.843Z",
+  "latencyMs": 15199,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 1271,
+    "total_tokens": 2630,
+    "cost": 0.01797,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01797,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.015252
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1094,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Gravity acting on balls dropping into the bowl: consistent.",
+    "Physical force of child's hand manipulating the balls: consistent initially, highly inconsistent during the swirling action."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "colorful balls in bowl",
+      "invariant_violated": "Proportional physical response",
+      "description": "The child moves his hand in a slow circular motion to swirl the balls, but the balls instantly accelerate to an impossibly high speed, blurring into a continuous ring of color. The slow physical input from the hand cannot plausibly cause this extreme kinetic energy.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Gravity acting on balls dropping into the bowl: consistent.\",\n    \"Physical force of child's hand manipulating the balls: consistent initially, highly inconsistent during the swirling action.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"colorful balls in bowl\",\n      \"invariant_violated\": \"Proportional physical response\",\n      \"description\": \"The child moves his hand in a slow circular motion to swirl the balls, but the balls instantly accelerate to an impossibly high speed, blurring into a continuous ring of color. The slow physical input from the hand cannot plausibly cause this extreme kinetic energy.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

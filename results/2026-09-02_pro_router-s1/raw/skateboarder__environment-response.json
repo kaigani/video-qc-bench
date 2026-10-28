@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__environment-response",
+  "video": "skateboarder.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:47.837Z",
+  "latencyMs": 12963,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 650,
+    "total_tokens": 2009,
+    "cost": 0.010518,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010518,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.0078
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 527,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater's motion: implies relative wind, should affect loose clothing. Skater's T-shirt and pants flap appropriately during movement and jumps, consistent with his speed.",
+    "Gravity: implies skater and skateboard should return to the ground after jumps. Both skater and board follow natural trajectories and land back on the concrete surface.",
+    "Sunlight: implies shadows cast on the ground. Shadows accurately follow the skater and detach when he is airborne, consistent with the position of the light source."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skater's motion: implies relative wind, should affect loose clothing. Skater's T-shirt and pants flap appropriately during movement and jumps, consistent with his speed.\",\n    \"Gravity: implies skater and skateboard should return to the ground after jumps. Both skater and board follow natural trajectories and land back on the concrete surface.\",\n    \"Sunlight: implies shadows cast on the ground. Shadows accurately follow the skater and detach when he is airborne, consistent with the position of the light source.\"\n  ],\n  \"findings\": []\n}"
+}

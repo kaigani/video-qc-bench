@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:19:42.643Z",
+  "latencyMs": 97547,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1739,
+    "total_tokens": 7635,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 glass bowl colored toy balls (red/green/yellow): 8 visible in bowl; child's hands blurred above bowl, no ball in hand visible",
+    "0:02 bowl balls: 8 visible in bowl + 1 red ball held in both hands above bowl (9 total in group); red ball's entry into scene is via the child's hands (visible carry)",
+    "0:04 bowl balls: red ball from hands now placed into bowl; ~8 visible with 1 likely occluded under child's spread fingers — count consistent with 9 total, change explained by visible placement",
+    "0:06 bowl balls: ~7-8 visible; child's right hand reaching into bowl occludes at least one ball — occlusion, not disappearance; no visible add/remove",
+    "0:08 bowl balls: heavy motion blur from child stirring balls; individual count not resolvable (confound noted); colors present match prior red/green/yellow set, no visible count change",
+    "0:00-0:08 loose balls at right table edge (red, green, partially cropped by frame): 2-3 constant across all frames, untouched by child",
+    "0:00-0:08 silver cup with decorated egg on right table: 1, constant, no interaction"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 glass bowl colored toy balls (red/green/yellow): 8 visible in bowl; child's hands blurred above bowl, no ball in hand visible\",\n    \"0:02 bowl balls: 8 visible in bowl + 1 red ball held in both hands above bowl (9 total in group); red ball's entry into scene is via the child's hands (visible carry)\",\n    \"0:04 bowl balls: red ball from hands now placed into bowl; ~8 visible with 1 likely occluded under child's spread fingers — count consistent with 9 total, change explained by visible placement\",\n    \"0:06 bowl balls: ~7-8 visible; child's right hand reaching into bowl occludes at least one ball — occlusion, not disappearance; no visible add/remove\",\n    \"0:08 bowl balls: heavy motion blur from child stirring balls; individual count not resolvable (confound noted); colors present match prior red/green/yellow set, no visible count change\",\n    \"0:00-0:08 loose balls at right table edge (red, green, partially cropped by frame): 2-3 constant across all frames, untouched by child\",\n    \"0:00-0:08 silver cup with decorated egg on right table: 1, constant, no interaction\"\n  ],\n  \"findings\": []\n}"
+}

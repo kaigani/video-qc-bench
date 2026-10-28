@@ -1,0 +1,207 @@
+{
+  "video": "man-in-mirror",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:29:00.940Z",
+  "latencyMs": 15742,
+  "usage": {
+    "prompt_tokens": 1859,
+    "completion_tokens": 1812,
+    "total_tokens": 3671,
+    "cost": 0.025462,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025462,
+      "upstream_inference_prompt_cost": 0.003718,
+      "upstream_inference_completions_cost": 0.021744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1076,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|man-in-mirror|baseline-generalist|0",
+      "cls": "TP:MIRR-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "handheld tool",
+        "invariant_violated": "Reflection consistency",
+        "description": "The object held by the man in the foreground is a white stick, but its reflection in the mirror appears as a blue razor.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|baseline-generalist|1",
+      "cls": "TP:MIRR-2",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "tool in reflection",
+        "invariant_violated": "Object permanence",
+        "description": "The blue razor in the mirror reflection morphs into a black comb as the man brings it to his hair, and then morphs back into a razor when he returns it to his face.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|causal-temporal-sequence|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "man's right hand and arm",
+        "invariant_violated": "temporal flow",
+        "description": "The motion of the hand brushing against the face and hair is created by rapidly looping the same few frames forward and backward (a 'boomerang' effect). This violates the forward flow of time and creates unnatural repeated beats.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|causal-temporal-sequence|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "audio/visual sync",
+        "invariant_violated": "effect-without-cause",
+        "description": "A rapid, continuous scratching/clicking sound effect plays throughout the video, but the frequency and timing of the sound do not match the visual strokes of the object against the man's face or hair. There is no visible cause for the continuous sound.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Man's right arm and hand",
+        "invariant_violated": "continuous limb trajectories",
+        "description": "The man's right arm instantly teleports from his cheek to the top of his head without continuous movement, and his fingers snap from a curled grip to a flat pose in a single frame.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|contact-interaction-kinematics|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "Man's right arm and hand",
+        "invariant_violated": "continuous limb trajectories",
+        "description": "The man's right arm instantly teleports from the top of his head back down to his cheek, and his hand snaps from a flat pose back to a curled grip in a single frame.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|object-persistence-state|0",
+      "cls": "TP:MIRR-2",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Comb",
+        "invariant_violated": "Identity & Persistence",
+        "description": "As the man raises his hand from his face to his hair, the small clear comb in his hand spontaneously transforms into a larger black comb. There is no visible action to explain swapping the object.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|object-persistence-state|1",
+      "cls": "TP:MIRR-2",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "Comb",
+        "invariant_violated": "Identity & Persistence",
+        "description": "As the man lowers his hand from his hair back to his face, the large black comb spontaneously transforms back into the small clear comb. No swap or object exchange is visible.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|man-in-mirror|spatial-topology-occlusion|0",
+      "cls": "TP:MIRR-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "mirror reflection",
+        "invariant_violated": "impossible geometry",
+        "description": "The spatial trajectory of the foreground man's hand moves backwards over his head, while the reflection's hand moves downwards across the forehead. The reflection's geometric movement is completely uncoupled from the physical object it reflects.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "REJECT",
+      "reason": "The object in the foreground and its reflection both appear to be the same clear/white razor. There is no inconsistency.",
+      "innocent_explanation": "not applicable",
+      "confidence": 0.9
+    },
+    {
+      "id": "F2",
+      "verdict": "REJECT",
+      "reason": "The object does not morph; there is a visible jump cut between the shaving and combing scenes.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "The movement of the man's hand is clearly created by looping a few frames back and forth, creating an unnatural jittery boomerang effect.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "There is a continuous scratching sound that does not match the jerky, looped visual strokes seen in the video.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F5",
+      "verdict": "REJECT",
+      "reason": "The instant change in limb position is due to a jump cut to a different clip, not a teleportation within a continuous shot.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "The jump from the top of the head back down to the cheek is another jump cut, not an instant teleportation in a continuous shot.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F7",
+      "verdict": "REJECT",
+      "reason": "The swap between the razor and the comb happens across a jump cut.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F8",
+      "verdict": "REJECT",
+      "reason": "The transformation back to a razor is just a jump cut returning to the shaving footage.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F9",
+      "verdict": "REJECT",
+      "reason": "The spatial trajectory in the reflection matches the foreground movement of combing backwards through the hair.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The object in the foreground and its reflection both appear to be the same clear/white razor. There is no inconsistency.\",\n      \"innocent_explanation\": \"not applicable\",\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The object does not morph; there is a visible jump cut between the shaving and combing scenes.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The movement of the man's hand is clearly created by looping a few frames back and forth, creating an unnatural jittery boomerang effect.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"There is a continuous scratching sound that does not match the jerky, looped visual strokes seen in the video.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The instant change in limb position is due to a jump cut to a different clip, not a teleportation within a continuous shot.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The jump from the top of the head back down to the cheek is another jump cut, not an instant teleportation in a continuous shot.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The swap between the razor and the comb happens across a jump cut.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The transformation back to a razor is just a jump cut returning to the shaving footage.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The spatial trajectory in the reflection matches the foreground movement of combing backwards through the hair.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:41:36.362Z",
+  "latencyMs": 32118,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 4045,
+    "total_tokens": 5421,
+    "cost": 0.051292,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.051292,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.04854
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3786,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:04 subject and reflection visible, arms moving",
+    "00:04-00:09 subject and reflection visible, arms moving"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "reflection",
+      "invariant_violated": "pose mismatch",
+      "description": "The real subject raises her left arm (which has a large tattoo), but the reflection raises the arm on the viewer's right side (which does not have the large tattoo).",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "reflection",
+      "invariant_violated": "pose mismatch",
+      "description": "The real subject raises her right arm (which has no large tattoo), but the reflection raises the arm on the viewer's left side (which has the large tattoo).",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:04 subject and reflection visible, arms moving\",\n    \"00:04-00:09 subject and reflection visible, arms moving\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"reflection\",\n      \"invariant_violated\": \"pose mismatch\",\n      \"description\": \"The real subject raises her left arm (which has a large tattoo), but the reflection raises the arm on the viewer's right side (which does not have the large tattoo).\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"reflection\",\n      \"invariant_violated\": \"pose mismatch\",\n      \"description\": \"The real subject raises her right arm (which has no large tattoo), but the reflection raises the arm on the viewer's left side (which has the large tattoo).\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

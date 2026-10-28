@@ -1,0 +1,49 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:44:38.746Z",
+  "latencyMs": 173285,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 7758,
+    "total_tokens": 13797,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (foreground, back to camera) | white dress shirt, dark combed hair, holding applicator stick to chin | same man | stick path across clip: chin (0:00) -> cheek (0:02) -> brow/forehead (0:04) -> chin (0:06) -> cheek (0:08)",
+    "Mirror reflection of man | shows white stick applied to upper lip/philtrum | shows white stick at lower cheek/lip corner | reflection shows upper-lip application while real stick is at chin at 0:00 and 0:06",
+    "Applicator stick | dark-looking stick in foreground profile at 0:00, bright white tube in reflection | white stick in both views by 0:06-0:08 | appearance between man and reflection inconsistent at 0:00"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:00",
+      "entity": "Mirror reflection vs. real man's applicator stick",
+      "invariant_violated": "reflection-action consistency",
+      "description": "In a continuous shot with no cut, the man's actual stick is pressed to his chin/lower lip (clearly below the mouth line in the profile view), while his mirror reflection at the same instant shows the white stick applied to the upper lip/philtrum, just below the nose. A real mirror must show the stick at the same facial position as the real action. The same vertical mismatch recurs at 0:06 (foreground stick at chin, reflection stick at upper lip). Additionally, at 0:00 the foreground stick reads as dark while the reflected stick is bright white, suggesting the reflection does not depict the same object state.",
+      "severity": "moderate",
+      "confidence": 0.72
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (foreground, back to camera) | white dress shirt, dark combed hair, holding applicator stick to chin | same man | stick path across clip: chin (0:00) -> cheek (0:02) -> brow/forehead (0:04) -> chin (0:06) -> cheek (0:08)\",\n    \"Mirror reflection of man | shows white stick applied to upper lip/philtrum | shows white stick at lower cheek/lip corner | reflection shows upper-lip application while real stick is at chin at 0:00 and 0:06\",\n    \"Applicator stick | dark-looking stick in foreground profile at 0:00, bright white tube in reflection | white stick in both views by 0:06-0:08 | appearance between man and reflection inconsistent at 0:00\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:00\",\n      \"entity\": \"Mirror reflection vs. real man's applicator stick\",\n      \"invariant_violated\": \"reflection-action consistency\",\n      \"description\": \"In a continuous shot with no cut, the man's actual stick is pressed to his chin/lower lip (clearly below the mouth line in the profile view), while his mirror reflection at the same instant shows the white stick applied to the upper lip/philtrum, just below the nose. A real mirror must show the stick at the same facial position as the real action. The same vertical mismatch recurs at 0:06 (foreground stick at chin, reflection stick at upper lip). Additionally, at 0:00 the foreground stick reads as dark while the reflected stick is bright white, suggesting the reflection does not depict the same object state.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.72\n    }\n  ]\n}"
+}

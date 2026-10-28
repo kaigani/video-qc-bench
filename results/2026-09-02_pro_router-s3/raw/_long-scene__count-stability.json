@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:14:30.115Z",
+  "latencyMs": 21986,
+  "usage": {
+    "prompt_tokens": 10623,
+    "completion_tokens": 887,
+    "total_tokens": 11510,
+    "cost": 0.03189,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03189,
+      "upstream_inference_prompt_cost": 0.021246,
+      "upstream_inference_completions_cost": 0.010644
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 706,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "01:38, 100 dollar bills, 1, placed on counter by man",
+    "01:40, 100 dollar bills, 3, suddenly multiplied after hand tap"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:39",
+      "entity": "100 dollar bills",
+      "invariant_violated": "Conservation of count",
+      "description": "A single folded $100 bill is placed on the counter. When the man taps it, it instantly transforms into a stack of three $100 bills with no visible addition.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"01:38, 100 dollar bills, 1, placed on counter by man\",\n    \"01:40, 100 dollar bills, 3, suddenly multiplied after hand tap\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"100 dollar bills\",\n      \"invariant_violated\": \"Conservation of count\",\n      \"description\": \"A single folded $100 bill is placed on the counter. When the man taps it, it instantly transforms into a stack of three $100 bills with no visible addition.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}\n```"
+}

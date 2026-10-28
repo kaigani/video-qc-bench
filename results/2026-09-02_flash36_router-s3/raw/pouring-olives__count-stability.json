@@ -1,0 +1,58 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:00.216Z",
+  "latencyMs": 10533,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1659,
+    "total_tokens": 3077,
+    "cost": 0.00728475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00728475,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.00622125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1309,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Green olives contained in small glass measuring cup are poured into an empty large glass jar",
+    "00:01-00:03 - Dark/purple olives spontaneously appear mixed with green olives as they fall into the large glass jar (total count ~16)",
+    "00:04-00:06 - Performer scoops green olives from a side bowl into the small container",
+    "00:07-00:09 - Performer pours green olives from small container; dark/purple olives emerge during the pour and fill the jar (total count ~32)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "object_kind_transformation",
+      "description": "Green olives poured from a small container containing only green olives transform into dark/purple olives mid-pour as they enter the large jar without a visible cause or mechanism.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives",
+      "invariant_violated": "object_kind_transformation",
+      "description": "Green olives placed into the small container emerge as a mix of green and dark/purple olives when poured into the large glass jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Green olives contained in small glass measuring cup are poured into an empty large glass jar\",\n    \"00:01-00:03 - Dark/purple olives spontaneously appear mixed with green olives as they fall into the large glass jar (total count ~16)\",\n    \"00:04-00:06 - Performer scoops green olives from a side bowl into the small container\",\n    \"00:07-00:09 - Performer pours green olives from small container; dark/purple olives emerge during the pour and fill the jar (total count ~32)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"object_kind_transformation\",\n      \"description\": \"Green olives poured from a small container containing only green olives transform into dark/purple olives mid-pour as they enter the large jar without a visible cause or mechanism.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"object_kind_transformation\",\n      \"description\": \"Green olives placed into the small container emerge as a mix of green and dark/purple olives when poured into the large glass jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

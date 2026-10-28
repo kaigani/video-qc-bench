@@ -1,0 +1,47 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:23:00.094Z",
+  "latencyMs": 799923,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 33255,
+    "total_tokens": 39123,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 Kitchen: counter run with microwave, tiled backsplash, upper/lower cabinets, slow cooker; wide open doorway on one side leads to hallway",
+    "0:00 View from kitchen through doorway: wood-floored hallway, framed art on walls, white glazed front door with window at far end",
+    "0:01-0:03 Hallway runs from kitchen doorway toward white front door; kitchen doorway on one side (stove, range hood, sink window with red kettle visible looking back), flower-art print on opposite wall",
+    "0:01-0:02 View back into kitchen from hallway matches established kitchen (hood, stove, window, white cabinets) - consistent",
+    "0:04 Traversal: woman turns right at north end of hallway, past flower-art wall, into open bedroom doorway; white front door remains ahead-left on hallway's end wall",
+    "0:05-0:06 Bedroom off hallway: bed against far wall with art above, nightstand with lamp, tan-curtained windows on both side walls showing green exterior, chandelier, chair at bed foot, rug",
+    "0:07 Traversal: woman turns around and walks back across bedroom to the doorway",
+    "0:07 View from bedroom: doorway ahead shows hallway; north-side window with tan curtains on right, dresser with framed photo on left - consistent with 0:05-0:06 room layout",
+    "0:08-0:09 View through bedroom doorway: white front door at end of hallway, flower-art print on near-left wall, bright kitchen doorway with window light beyond it on left - matches layout built at 0:00-0:04",
+    "0:09 Sequence ends with woman standing in bedroom doorway; no route leads outside the established kitchen-hallway-bedroom plan"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 Kitchen: counter run with microwave, tiled backsplash, upper/lower cabinets, slow cooker; wide open doorway on one side leads to hallway\",\n    \"0:00 View from kitchen through doorway: wood-floored hallway, framed art on walls, white glazed front door with window at far end\",\n    \"0:01-0:03 Hallway runs from kitchen doorway toward white front door; kitchen doorway on one side (stove, range hood, sink window with red kettle visible looking back), flower-art print on opposite wall\",\n    \"0:01-0:02 View back into kitchen from hallway matches established kitchen (hood, stove, window, white cabinets) - consistent\",\n    \"0:04 Traversal: woman turns right at north end of hallway, past flower-art wall, into open bedroom doorway; white front door remains ahead-left on hallway's end wall\",\n    \"0:05-0:06 Bedroom off hallway: bed against far wall with art above, nightstand with lamp, tan-curtained windows on both side walls showing green exterior, chandelier, chair at bed foot, rug\",\n    \"0:07 Traversal: woman turns around and walks back across bedroom to the doorway\",\n    \"0:07 View from bedroom: doorway ahead shows hallway; north-side window with tan curtains on right, dresser with framed photo on left - consistent with 0:05-0:06 room layout\",\n    \"0:08-0:09 View through bedroom doorway: white front door at end of hallway, flower-art print on near-left wall, bright kitchen doorway with window light beyond it on left - matches layout built at 0:00-0:04\",\n    \"0:09 Sequence ends with woman standing in bedroom doorway; no route leads outside the established kitchen-hallway-bedroom plan\"\n  ],\n  \"findings\": []\n}"
+}

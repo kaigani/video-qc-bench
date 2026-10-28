@@ -1,0 +1,70 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T14:43:33.267Z",
+  "latencyMs": 475878,
+  "usage": {
+    "prompt_tokens": 35067,
+    "completion_tokens": 20462,
+    "total_tokens": 55529,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "White semi truck (tractor + tall trailer, idling with exhaust steam) | parked beside diner, pre-dawn, 0:00-0:10 | never seen again | no shot of it departing",
+    "Dark green single-unit box truck (chrome stacks, white stripe on box) | first appears 1:43 | man walks to its cab door at 1:47 | unexplained replacement of the opening semi",
+    "Waitress (gray bun, light blue polo, white apron, glasses on chest) | alone wiping counter at 0:12 | watches man leave, resumes cleaning at 1:53 | pours coffee, serves plate twice, sits with man at sunrise",
+    "Trucker (gray hair, brown jacket, plaid shirt) | enters ~0:22, sits at counter | exits and walks to green truck 1:43-1:47 | shows double-exposure ghosting during walk-out",
+    "Breakfast plate (cornbread slice + fried egg) | served ~0:34, in front of man at 0:38-0:45 | absent by 1:29 two-shot | served a second time at 1:10-1:16, then carried off at 1:18",
+    "White diner coffee mug | filled at 0:30 | in man's hands through 1:41 | consistent",
+    "Neon OPEN sign | lit at 0:00 | still lit at 1:10 | consistent (window reflections excluded)",
+    "$100 bills | placed on counter at 1:39 | reached for/taken at 1:41 | consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "Trucker's vehicle",
+      "invariant_violated": "Prop identity / vehicle continuity",
+      "description": "The rig established at the opening (0:00-0:10) is a white semi tractor pulling a tall trailer, idling with exhaust steam beside the diner. When the man walks out to leave (1:43-1:47), the vehicle is a completely different dark-green single-unit box truck with a long-hood conventional cab and chrome exhaust stacks. No shot shows the semi leaving or the box truck arriving, and the video implies the opening rig is his (lone driver stops at pre-dawn diner, rig idling outside). Comparing the 0:04 and 1:45 frames side by side shows two clearly different vehicles.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "1:10",
+      "entity": "Breakfast plate",
+      "invariant_violated": "Object duplication / serving continuity",
+      "description": "The man is already shown with the plated cornbread-and-egg meal in front of him at 0:38-0:45 (following the 0:34 food close-up), yet at 1:10-1:16 the waitress serves him the same plated meal again, lowering it onto the counter before him while he holds his mug; at 1:18 she is then shown carrying a plate away, and by the 1:29 two-shot the plate has vanished entirely. The meal is thus served twice and then disappears with no clearing shown.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "1:43",
+      "entity": "Trucker walking to truck",
+      "invariant_violated": "Ghosting / double-exposure artifact",
+      "description": "During the continuous walk-out shot (1:43-1:47), the man renders as a semi-transparent figure with offset ghost copies of himself superimposed over the truck and background. This is not motion blur (the background truck stays sharp while his body is translucent and doubled) and occurs mid-shot rather than at a cut, indicating a generation/compositing artifact that would need a re-render.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"White semi truck (tractor + tall trailer, idling with exhaust steam) | parked beside diner, pre-dawn, 0:00-0:10 | never seen again | no shot of it departing\",\n    \"Dark green single-unit box truck (chrome stacks, white stripe on box) | first appears 1:43 | man walks to its cab door at 1:47 | unexplained replacement of the opening semi\",\n    \"Waitress (gray bun, light blue polo, white apron, glasses on chest) | alone wiping counter at 0:12 | watches man leave, resumes cleaning at 1:53 | pours coffee, serves plate twice, sits with man at sunrise\",\n    \"Trucker (gray hair, brown jacket, plaid shirt) | enters ~0:22, sits at counter | exits and walks to green truck 1:43-1:47 | shows double-exposure ghosting during walk-out\",\n    \"Breakfast plate (cornbread slice + fried egg) | served ~0:34, in front of man at 0:38-0:45 | absent by 1:29 two-shot | served a second time at 1:10-1:16, then carried off at 1:18\",\n    \"White diner coffee mug | filled at 0:30 | in man's hands through 1:41 | consistent\",\n    \"Neon OPEN sign | lit at 0:00 | still lit at 1:10 | consistent (window reflections excluded)\",\n    \"$100 bills | placed on counter at 1:39 | reached for/taken at 1:41 | consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"Trucker's vehicle\",\n      \"invariant_violated\": \"Prop identity / vehicle continuity\",\n      \"description\": \"The rig established at the opening (0:00-0:10) is a white semi tractor pulling a tall trailer, idling with exhaust steam beside the diner. When the man walks out to leave (1:43-1:47), the vehicle is a completely different dark-green single-unit box truck with a long-hood conventional cab and chrome exhaust stacks. No shot shows the semi leaving or the box truck arriving, and the video implies the opening rig is his (lone driver stops at pre-dawn diner, rig idling outside). Comparing the 0:04 and 1:45 frames side by side shows two clearly different vehicles.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"1:10\",\n      \"entity\": \"Breakfast plate\",\n      \"invariant_violated\": \"Object duplication / serving continuity\",\n      \"description\": \"The man is already shown with the plated cornbread-and-egg meal in front of him at 0:38-0:45 (following the 0:34 food close-up), yet at 1:10-1:16 the waitress serves him the same plated meal again, lowering it onto the counter before him while he holds his mug; at 1:18 she is then shown carrying a plate away, and by the 1:29 two-shot the plate has vanished entirely. The meal is thus served twice and then disappears with no clearing shown.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"Trucker walking to truck\",\n      \"invariant_violated\": \"Ghosting / double-exposure artifact\",\n      \"description\": \"During the continuous walk-out shot (1:43-1:47), the man renders as a semi-transparent figure with offset ghost copies of himself superimposed over the truck and background. This is not motion blur (the background truck stays sharp while his body is translucent and doubled) and occurs mid-shot rather than at a cut, indicating a generation/compositing artifact that would need a re-render.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:21.995Z",
+  "latencyMs": 21932,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1483,
+    "total_tokens": 2935,
+    "cost": 0.00665025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00665025,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00556125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1398,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | upper body leaning out of driver-side window with arms crossed on window sill | same posture maintained in close-up | forearms remain continuously supported by car door window frame",
+    "station wagon | stationary vehicle with open driver-side window | stationary vehicle | provides continuous support to woman's arms"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | upper body leaning out of driver-side window with arms crossed on window sill | same posture maintained in close-up | forearms remain continuously supported by car door window frame\",\n    \"station wagon | stationary vehicle with open driver-side window | stationary vehicle | provides continuous support to woman's arms\"\n  ],\n  \"findings\": []\n}"
+}

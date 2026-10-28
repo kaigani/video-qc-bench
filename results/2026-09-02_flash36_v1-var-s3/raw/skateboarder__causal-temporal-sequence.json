@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:24.499Z",
+  "latencyMs": 9469,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 988,
+    "total_tokens": 2413,
+    "cost": 0.00477375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00477375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.003705
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 821,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder | riding on concrete ramp | rolling forward post-landing | crouches and pops board tail at 00:01, executes air flip, lands cleanly at 00:03; sets up at 00:07, pops ollie at 00:08, lands at 00:09",
+    "Skateboard | rolling beneath skater | rolling on concrete | receives tail pop force at 00:01, rotates in air, meets skater feet at 00:02, impacts ground at 00:03; pops into air at 00:08, lands on wheels at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder | riding on concrete ramp | rolling forward post-landing | crouches and pops board tail at 00:01, executes air flip, lands cleanly at 00:03; sets up at 00:07, pops ollie at 00:08, lands at 00:09\",\n    \"Skateboard | rolling beneath skater | rolling on concrete | receives tail pop force at 00:01, rotates in air, meets skater feet at 00:02, impacts ground at 00:03; pops into air at 00:08, lands on wheels at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

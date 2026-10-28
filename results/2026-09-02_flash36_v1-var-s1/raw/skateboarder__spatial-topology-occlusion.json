@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:15.165Z",
+  "latencyMs": 13977,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1155,
+    "total_tokens": 2581,
+    "cost": 0.00540075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00540075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00433125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1030,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skatepark terrain & ramps | concrete bowl structures and flat ground features | maintained consistently throughout continuous tracking shot | spatial relationships between banks and bowls remain fixed",
+    "Perimeter light poles & tree line | double-fixture light poles and dense tree line along perimeter | background elements stay stationary relative to ground geometry | camera pans and rotates logically around features",
+    "Skateboarder | dynamic object moving across concrete surface | navigates flat ground to bank transition | correctly occludes background elements according to low-angle perspective"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skatepark terrain & ramps | concrete bowl structures and flat ground features | maintained consistently throughout continuous tracking shot | spatial relationships between banks and bowls remain fixed\",\n    \"Perimeter light poles & tree line | double-fixture light poles and dense tree line along perimeter | background elements stay stationary relative to ground geometry | camera pans and rotates logically around features\",\n    \"Skateboarder | dynamic object moving across concrete surface | navigates flat ground to bank transition | correctly occludes background elements according to low-angle perspective\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,51 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:45:44.317Z",
+  "latencyMs": 80813,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 2305,
+    "total_tokens": 8526,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | standing at mirror, applying shaving cream with razor to chin/jaw | continuing application to cheek | cream appears on skin only where razor contacts; transfer is localized and proportional",
+    "Razor (cream-loaded) | white cream visible on blade/head | still cream-loaded at end | moves between chin (0:00), upper lip (0:02, 0:06), forehead (0:04), cheek (0:08); no vanishing or duplication of the tool",
+    "Mirror reflection | synchronous with man's actions | synchronous throughout | no lag, mismatch, or independent motion detected between man and reflection",
+    "Shaving cream on forehead | applied in visible white streak above eyebrow at 0:04 | no longer visible at 0:06 | disappeared between frames with no wiping or shaving pass over that area",
+    "Background (closed door, brass knob, shelf with bottles, light switch) | static | static | no uncaused changes across the shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "shaving cream on forehead",
+      "invariant_violated": "effect-vanishing-without-cause",
+      "description": "At 0:04 a clear white streak of shaving cream is applied to the forehead/eyebrow area via the razor. By 0:06 the forehead is clean again, yet in the continuous shot no wiping, hand pass, or shaving stroke over the forehead occurs that would remove it; the substance simply ceases to be visible.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | standing at mirror, applying shaving cream with razor to chin/jaw | continuing application to cheek | cream appears on skin only where razor contacts; transfer is localized and proportional\",\n    \"Razor (cream-loaded) | white cream visible on blade/head | still cream-loaded at end | moves between chin (0:00), upper lip (0:02, 0:06), forehead (0:04), cheek (0:08); no vanishing or duplication of the tool\",\n    \"Mirror reflection | synchronous with man's actions | synchronous throughout | no lag, mismatch, or independent motion detected between man and reflection\",\n    \"Shaving cream on forehead | applied in visible white streak above eyebrow at 0:04 | no longer visible at 0:06 | disappeared between frames with no wiping or shaving pass over that area\",\n    \"Background (closed door, brass knob, shelf with bottles, light switch) | static | static | no uncaused changes across the shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"shaving cream on forehead\",\n      \"invariant_violated\": \"effect-vanishing-without-cause\",\n      \"description\": \"At 0:04 a clear white streak of shaving cream is applied to the forehead/eyebrow area via the razor. By 0:06 the forehead is clean again, yet in the continuous shot no wiping, hand pass, or shaving stroke over the forehead occurs that would remove it; the substance simply ceases to be visible.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

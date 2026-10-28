@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__contact-interaction-kinematics",
+  "video": "home-tour.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:22.844Z",
+  "latencyMs": 10938,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 657,
+    "total_tokens": 2109,
+    "cost": 0.00355275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00355275,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00246375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 545,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | walking through kitchen/hallway at 00:00 | walking back into kitchen at 00:09 | walks into bedroom, turns around, and walks back into hallway without making physical contact with walls, doors, or furniture",
+    "Floor | static ground surface at 00:00 | static ground surface at 00:09 | provides continuous weight support during locomotion without foot sliding or clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | walking through kitchen/hallway at 00:00 | walking back into kitchen at 00:09 | walks into bedroom, turns around, and walks back into hallway without making physical contact with walls, doors, or furniture\",\n    \"Floor | static ground surface at 00:00 | static ground surface at 00:09 | provides continuous weight support during locomotion without foot sliding or clipping\"\n  ],\n  \"findings\": []\n}"
+}

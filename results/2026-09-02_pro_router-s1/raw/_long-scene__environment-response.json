@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__environment-response",
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:33:44.254Z",
+  "latencyMs": 29710,
+  "usage": {
+    "prompt_tokens": 10564,
+    "completion_tokens": 1791,
+    "total_tokens": 12355,
+    "cost": 0.04262,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04262,
+      "upstream_inference_prompt_cost": 0.021128,
+      "upstream_inference_completions_cost": 0.021492
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Truck exhaust (0:00): smoke drifts left, implying light wind; no comparable outdoor elements visible to check.",
+    "Coffee pour (0:27): liquid falls straight down; consistent with gravity.",
+    "Food steam (0:32): steam rises and wavers; consistent with heat and slight indoor air currents.",
+    "Window reflection (1:46): glass reflects the subject; should move exactly in sync with the subject; moves independently."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:46",
+      "entity": "window reflection",
+      "invariant_violated": "reflection synchronization",
+      "description": "The reflection of the waitress in the window turns its head and changes posture, but the actual physical waitress standing in the foreground remains completely still, violating the physical laws of optical reflection.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Truck exhaust (0:00): smoke drifts left, implying light wind; no comparable outdoor elements visible to check.\",\n    \"Coffee pour (0:27): liquid falls straight down; consistent with gravity.\",\n    \"Food steam (0:32): steam rises and wavers; consistent with heat and slight indoor air currents.\",\n    \"Window reflection (1:46): glass reflects the subject; should move exactly in sync with the subject; moves independently.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:46\",\n      \"entity\": \"window reflection\",\n      \"invariant_violated\": \"reflection synchronization\",\n      \"description\": \"The reflection of the waitress in the window turns its head and changes posture, but the actual physical waitress standing in the foreground remains completely still, violating the physical laws of optical reflection.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```"
+}

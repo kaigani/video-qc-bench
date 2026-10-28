@@ -1,0 +1,169 @@
+{
+  "video": "weird-blocks",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:27.045Z",
+  "latencyMs": 18309,
+  "usage": {
+    "prompt_tokens": 1687,
+    "completion_tokens": 1920,
+    "total_tokens": 3607,
+    "cost": 0.026414,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026414,
+      "upstream_inference_prompt_cost": 0.003374,
+      "upstream_inference_completions_cost": 0.02304
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1359,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|weird-blocks|baseline-generalist|0",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "block in hand",
+        "invariant_violated": "Object Constancy",
+        "description": "The block held by the hand continuously morphs, changing color and number (e.g., from a green '2' to a blue '3', then a yellow '2', etc.) as it is dragged across the table.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|weird-blocks|causal-temporal-sequence|0",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Blocks",
+        "invariant_violated": "effect-without-cause",
+        "description": "As the hand moves to the right, new blocks continuously materialize on the table behind it. There is no physical source or container providing these blocks, making their spontaneous appearance an effect without a valid physical cause.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|weird-blocks|causal-temporal-sequence|1",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "Hand",
+        "invariant_violated": "temporal flow",
+        "description": "The hand instantaneously teleports from the far right end of the block row to the middle of the row, violating the principle of continuous motion within a single shot.",
+        "severity": "severe",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|weird-blocks|object-persistence-state|0",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Trail Blocks",
+        "invariant_violated": "identity & persistence (spontaneous generation)",
+        "description": "As the hand drags the green block, a continuous stream of new blocks (blue, green, yellow) spontaneously appears from behind it.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|weird-blocks|object-persistence-state|1",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Stationary Green Block",
+        "invariant_violated": "identity & persistence (disappearance)",
+        "description": "The green '2' block that was initially stationary on the right side of the table vanishes as the moving block passes through its location.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|weird-blocks|object-persistence-state|2",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Held Green Block",
+        "invariant_violated": "physical state transitions",
+        "description": "The number printed on the green block held by the hand spontaneously changes from '2' to '3' while being dragged.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|weird-blocks|object-persistence-state|3",
+      "cls": "TP:BLOC-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Held Green Block",
+        "invariant_violated": "physical state transitions",
+        "description": "The number printed on the green block held by the hand spontaneously changes from '3' to '6' while being dragged.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "The block held by the fingers continuously morphs in both color and the number printed on it as it is dragged across the table.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "As the hand drags a single block to the right, a continuous trail of new blocks materializes behind it out of thin air.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F3",
+      "verdict": "REJECT",
+      "reason": "The hand's sudden change in position at 00:08 is a standard jump cut editing technique, not a physically impossible motion within a continuous shot.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.95
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "New blocks of various colors and numbers spontaneously generate from behind the held block as it slides.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "The stationary green '2' block present at the start of the video is absorbed or vanishes entirely as the hand drags the other block into and through its space.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "The number on the held block physically morphs from a '2' to a '3' as it is being dragged.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "The number on the held block physically morphs from a '3' into a '6' towards the end of the drag.",
+      "innocent_explanation": null,
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The block held by the fingers continuously morphs in both color and the number printed on it as it is dragged across the table.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"As the hand drags a single block to the right, a continuous trail of new blocks materializes behind it out of thin air.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The hand's sudden change in position at 00:08 is a standard jump cut editing technique, not a physically impossible motion within a continuous shot.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"New blocks of various colors and numbers spontaneously generate from behind the held block as it slides.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The stationary green '2' block present at the start of the video is absorbed or vanishes entirely as the hand drags the other block into and through its space.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The number on the held block physically morphs from a '2' to a '3' as it is being dragged.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The number on the held block physically morphs from a '3' into a '6' towards the end of the drag.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

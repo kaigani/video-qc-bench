@@ -1,0 +1,49 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:56.367Z",
+  "latencyMs": 18995,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2480,
+    "total_tokens": 3718,
+    "cost": 0.0102285,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0102285,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0093
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2264,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "magician | wearing blue suit and red tie | performing trick with cups and coins at circular table | camera pulls back from close-up to medium wide shot",
+    "cups | four red/metal cups on green felt mat | four cups arranged on table | consistent number throughout",
+    "coins on green mat | no coins on mat surface at start | three coins appear on mat around 00:03 | remain on mat"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coins on green table mat",
+      "invariant_violated": "spontaneous object appearance",
+      "description": "Three gold coins spontaneously appear lying flat on the green felt mat in front of the cups during the camera pullback, despite neither of the magician's hands placing them there.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"magician | wearing blue suit and red tie | performing trick with cups and coins at circular table | camera pulls back from close-up to medium wide shot\",\n    \"cups | four red/metal cups on green felt mat | four cups arranged on table | consistent number throughout\",\n    \"coins on green mat | no coins on mat surface at start | three coins appear on mat around 00:03 | remain on mat\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coins on green table mat\",\n      \"invariant_violated\": \"spontaneous object appearance\",\n      \"description\": \"Three gold coins spontaneously appear lying flat on the green felt mat in front of the cups during the camera pullback, despite neither of the magician's hands placing them there.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

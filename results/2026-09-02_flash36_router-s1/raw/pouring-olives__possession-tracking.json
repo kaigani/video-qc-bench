@@ -1,0 +1,52 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:18.649Z",
+  "latencyMs": 17041,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 1610,
+    "total_tokens": 2994,
+    "cost": 0.0070755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0070755,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.0060375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1357,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Empty large glass jar sits on cutting board",
+    "00:00 - Small glass jar filled with green olives is held over the large jar",
+    "00:01 - Olives poured from small jar into large jar; dark purple olives appear among green olives in large jar",
+    "00:04 - Small glass jar set aside; green olives picked up from metal bowl",
+    "00:06 - Small glass jar with green olives held above large jar",
+    "00:07 - Olives poured into large jar, including dark purple olives not visible prior to pour"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "transfer_completeness",
+      "description": "The small glass jar initially contains only bright green olives, but dark purple olives emerge and land inside the large glass jar during the pour.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Empty large glass jar sits on cutting board\",\n    \"00:00 - Small glass jar filled with green olives is held over the large jar\",\n    \"00:01 - Olives poured from small jar into large jar; dark purple olives appear among green olives in large jar\",\n    \"00:04 - Small glass jar set aside; green olives picked up from metal bowl\",\n    \"00:06 - Small glass jar with green olives held above large jar\",\n    \"00:07 - Olives poured into large jar, including dark purple olives not visible prior to pour\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"transfer_completeness\",\n      \"description\": \"The small glass jar initially contains only bright green olives, but dark purple olives emerge and land inside the large glass jar during the pour.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

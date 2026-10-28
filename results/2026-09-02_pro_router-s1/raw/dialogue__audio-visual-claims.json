@@ -1,0 +1,56 @@
+{
+  "key": "dialogue__audio-visual-claims",
+  "video": "dialogue.mp4",
+  "role": "audio-visual-claims",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:34:26.043Z",
+  "latencyMs": 11832,
+  "usage": {
+    "prompt_tokens": 1296,
+    "completion_tokens": 1220,
+    "total_tokens": 2516,
+    "cost": 0.017232,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017232,
+      "upstream_inference_prompt_cost": 0.002592,
+      "upstream_inference_completions_cost": 0.01464
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 949,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:02: Speaker claims 'The red door is locked', but the visible doors behind him are brown wood.",
+    "00:03 - 00:06: Speaker claims 'The blue door is open', but there is no blue door visible, and the visible doors are closed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "doors",
+      "invariant_violated": "Audio-Visual Consistency",
+      "description": "The speaker mentions a 'red door', but the doors visible in the room behind him are brown wood.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "doors",
+      "invariant_violated": "Audio-Visual Consistency",
+      "description": "The speaker states 'The blue door is open', but there are no blue doors visible, and all visible doors in the scene are closed.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:02: Speaker claims 'The red door is locked', but the visible doors behind him are brown wood.\",\n    \"00:03 - 00:06: Speaker claims 'The blue door is open', but there is no blue door visible, and the visible doors are closed.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"doors\",\n      \"invariant_violated\": \"Audio-Visual Consistency\",\n      \"description\": \"The speaker mentions a 'red door', but the doors visible in the room behind him are brown wood.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"doors\",\n      \"invariant_violated\": \"Audio-Visual Consistency\",\n      \"description\": \"The speaker states 'The blue door is open', but there are no blue doors visible, and all visible doors in the scene are closed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,59 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:36:53.503Z",
+  "latencyMs": 448522,
+  "usage": {
+    "prompt_tokens": 5844,
+    "completion_tokens": 16057,
+    "total_tokens": 21901,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — Subject (back to camera, facing true wall mirror): right arm extended low/out at ~45° with hand well away from body, left arm at side, standing | Reflection (facing camera): both arms hanging at sides, no mirrored extension of the right arm",
+    "00:02 — Subject: right arm arcing overhead, left arm down, feet apart | Reflection: mirrored right arm arcing overhead on viewer-left of reflection, left arm down — in sync",
+    "00:04 — Subject: right arm bent at elbow, hand at head height, palm out | Reflection: mirrored right arm bent at elbow, hand at head height — in sync",
+    "00:06 — Subject: both arms hanging down at sides | Reflection: left arm (viewer-right side of reflection) bent ~90° at elbow with hand raised near chest while the real left arm hangs straight down",
+    "00:08 — Subject: left arm raised straight overhead, right arm down | Reflection: mirrored left arm raised straight overhead on viewer-right of reflection, right arm down — in sync"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Subject's left arm and its reflection",
+      "invariant_violated": "pose mismatch (reflection must show the subject's current mirrored pose)",
+      "description": "At 00:06 the subject's left arm hangs straight down at her side, but the reflection shows that same (mirrored) arm bent at the elbow with the hand lifted to chest/waist height. A true mirror cannot display a different limb position at the same instant; the reflection appears to show an earlier moment of the arm's descent from the 00:04 raised position.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Subject's right arm and its reflection",
+      "invariant_violated": "pose mismatch (reflection must show the subject's current mirrored pose)",
+      "description": "At 00:00 the subject's right arm is clearly extended outward and downward at ~45° with a wide gap between hand and body, but the reflected right arm (viewer-left side of the reflection) hangs alongside the torso with no visible extension, contradicting the simultaneous pose.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — Subject (back to camera, facing true wall mirror): right arm extended low/out at ~45° with hand well away from body, left arm at side, standing | Reflection (facing camera): both arms hanging at sides, no mirrored extension of the right arm\",\n    \"00:02 — Subject: right arm arcing overhead, left arm down, feet apart | Reflection: mirrored right arm arcing overhead on viewer-left of reflection, left arm down — in sync\",\n    \"00:04 — Subject: right arm bent at elbow, hand at head height, palm out | Reflection: mirrored right arm bent at elbow, hand at head height — in sync\",\n    \"00:06 — Subject: both arms hanging down at sides | Reflection: left arm (viewer-right side of reflection) bent ~90° at elbow with hand raised near chest while the real left arm hangs straight down\",\n    \"00:08 — Subject: left arm raised straight overhead, right arm down | Reflection: mirrored left arm raised straight overhead on viewer-right of reflection, right arm down — in sync\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Subject's left arm and its reflection\",\n      \"invariant_violated\": \"pose mismatch (reflection must show the subject's current mirrored pose)\",\n      \"description\": \"At 00:06 the subject's left arm hangs straight down at her side, but the reflection shows that same (mirrored) arm bent at the elbow with the hand lifted to chest/waist height. A true mirror cannot display a different limb position at the same instant; the reflection appears to show an earlier moment of the arm's descent from the 00:04 raised position.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Subject's right arm and its reflection\",\n      \"invariant_violated\": \"pose mismatch (reflection must show the subject's current mirrored pose)\",\n      \"description\": \"At 00:00 the subject's right arm is clearly extended outward and downward at ~45° with a wide gap between hand and body, but the reflected right arm (viewer-left side of the reflection) hangs alongside the torso with no visible extension, contradicting the simultaneous pose.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

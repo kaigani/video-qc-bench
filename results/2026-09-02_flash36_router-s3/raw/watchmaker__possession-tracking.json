@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:08.224Z",
+  "latencyMs": 7995,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 770,
+    "total_tokens": 2154,
+    "cost": 0.0039255,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0039255,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.0028875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 627,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Jewelry piece held continuously in left hand.",
+    "00:00-00:03: Tweezers held in right hand, manipulating jewelry piece.",
+    "00:03-00:04: Right hand puts down tweezers on table.",
+    "00:04-00:05: Right hand picks up small screwdriver from table.",
+    "00:05-00:09: Screwdriver held in right hand, adjusting jewelry piece in left hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Jewelry piece held continuously in left hand.\",\n    \"00:00-00:03: Tweezers held in right hand, manipulating jewelry piece.\",\n    \"00:03-00:04: Right hand puts down tweezers on table.\",\n    \"00:04-00:05: Right hand picks up small screwdriver from table.\",\n    \"00:05-00:09: Screwdriver held in right hand, adjusting jewelry piece in left hand.\"\n  ],\n  \"findings\": []\n}"
+}

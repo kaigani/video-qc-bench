@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__environment-response",
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:07:29.867Z",
+  "latencyMs": 215477,
+  "usage": {
+    "prompt_tokens": 34868,
+    "completion_tokens": 7009,
+    "total_tokens": 41877,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 exterior night: intermittent vapor puffs from the parked white semi (engine/reefer exhaust) near cab-trailer gap, drifting left and dissipating — implies a running engine and gentle ambient airflow; no other wind-sensitive elements (flags, foliage, loose clothing) are in frame to cross-check the implied breeze",
+    "00:30-00:33 interior: coffee pour shows a steady, laminar stream filling the mug with no splash or flow anomalies; no visible steam, but lighting makes absence inconclusive",
+    "00:34-00:37 interior: steam rises near-vertically off the plated egg/toast and drifts only slightly — consistent with still indoor air, matches the no-draft behavior of the pour and the counter cloth",
+    "00:54-01:10 dawn transition: window light warms and brightens smoothly across the dissolve; passing road traffic (01:02-01:10) moves consistently with the established road layout",
+    "01:38-01:41 counter: banknotes slid by hand bend and settle naturally on the countertop, no anomalous rigidity or float",
+    "01:43-01:52 morning exterior: man exits and approaches a green box truck; truck is stationary, cold (no exhaust vapor), consistent with engine-off — but the vehicle itself does not match the one established at night"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "parked truck outside the diner",
+      "invariant_violated": "temporal consistency of environmental state",
+      "description": "The night exterior (00:00-00:10) establishes a white sleeper semi parked at the lot with active exhaust vapor, implying an idling engine while the driver is inside. When the man exits at 01:43 he walks to a green box truck with a cold, vapor-free exhaust. No shot shows the white semi departing or the green truck arriving, so the parked vehicle's identity and physical state change discontinuously between night and morning without any depicted cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 exterior night: intermittent vapor puffs from the parked white semi (engine/reefer exhaust) near cab-trailer gap, drifting left and dissipating — implies a running engine and gentle ambient airflow; no other wind-sensitive elements (flags, foliage, loose clothing) are in frame to cross-check the implied breeze\",\n    \"00:30-00:33 interior: coffee pour shows a steady, laminar stream filling the mug with no splash or flow anomalies; no visible steam, but lighting makes absence inconclusive\",\n    \"00:34-00:37 interior: steam rises near-vertically off the plated egg/toast and drifts only slightly — consistent with still indoor air, matches the no-draft behavior of the pour and the counter cloth\",\n    \"00:54-01:10 dawn transition: window light warms and brightens smoothly across the dissolve; passing road traffic (01:02-01:10) moves consistently with the established road layout\",\n    \"01:38-01:41 counter: banknotes slid by hand bend and settle naturally on the countertop, no anomalous rigidity or float\",\n    \"01:43-01:52 morning exterior: man exits and approaches a green box truck; truck is stationary, cold (no exhaust vapor), consistent with engine-off — but the vehicle itself does not match the one established at night\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"parked truck outside the diner\",\n      \"invariant_violated\": \"temporal consistency of environmental state\",\n      \"description\": \"The night exterior (00:00-00:10) establishes a white sleeper semi parked at the lot with active exhaust vapor, implying an idling engine while the driver is inside. When the man exits at 01:43 he walks to a green box truck with a cold, vapor-free exhaust. No shot shows the white semi departing or the green truck arriving, so the parked vehicle's identity and physical state change discontinuously between night and morning without any depicted cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

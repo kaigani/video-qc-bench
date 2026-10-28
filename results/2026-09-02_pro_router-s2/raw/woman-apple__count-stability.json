@@ -1,0 +1,59 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:44.552Z",
+  "latencyMs": 17977,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1581,
+    "total_tokens": 2999,
+    "cost": 0.021808,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021808,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.018972
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1256,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 1 red fruit held in the woman's left hand",
+    "00:05 - 1 red fruit held in the woman's left hand",
+    "00:07 - 0 red fruits held in the woman's hands; vanished",
+    "00:00 - Large group of green avocados in a green bin on the left market stand",
+    "00:04 - Group of green avocados is no longer present; the stand now displays oranges and bright blue fruits"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Red fruit",
+      "invariant_violated": "Object disappearance",
+      "description": "The red fruit held in the woman's left hand vanishes completely as she moves her hand down to grasp the umbrella pole.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Green avocados",
+      "invariant_violated": "Unexplained transformation/disappearance",
+      "description": "The large green bin full of avocados on the left stand disappears and is replaced by a flat display of oranges and bright blue fruits as the camera pans.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 1 red fruit held in the woman's left hand\",\n    \"00:05 - 1 red fruit held in the woman's left hand\",\n    \"00:07 - 0 red fruits held in the woman's hands; vanished\",\n    \"00:00 - Large group of green avocados in a green bin on the left market stand\",\n    \"00:04 - Group of green avocados is no longer present; the stand now displays oranges and bright blue fruits\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Red fruit\",\n      \"invariant_violated\": \"Object disappearance\",\n      \"description\": \"The red fruit held in the woman's left hand vanishes completely as she moves her hand down to grasp the umbrella pole.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Green avocados\",\n      \"invariant_violated\": \"Unexplained transformation/disappearance\",\n      \"description\": \"The large green bin full of avocados on the left stand disappears and is replaced by a flat display of oranges and bright blue fruits as the camera pans.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

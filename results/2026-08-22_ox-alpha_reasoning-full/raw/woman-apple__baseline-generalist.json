@@ -1,0 +1,58 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:29:48.655Z",
+  "latencyMs": 252897,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 5865,
+    "total_tokens": 11578,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman | navy cardigan, gray shorts, ponytail, watch on left wrist, blue umbrella in left hand, red apple in right hand | same outfit, apple now in left hand, umbrella not held by either hand | turns from facing camera to left-facing profile while walking toward camera",
+    "Blue umbrella | open canopy, shaft gripped by woman's left hand | canopy still open, shaft terminates at her chest with no hand gripping it | shaft loses its support/hand contact by 0:08",
+    "Red apple | held in woman's right hand at chest height | held in woman's left (near) hand | at 0:06 it appears attached to the umbrella shaft above her left grip instead of being held, with no visible hand-to-hand transfer",
+    "Market background | fruit stalls, red tarps, multiple pedestrians walking | consistent stalls and pedestrian flow | no notable anomalies"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "Red apple / umbrella shaft / woman's right hand",
+      "invariant_violated": "object attachment continuity",
+      "description": "At 0:04 the apple is clearly gripped in her right hand. At 0:06 the apple sits directly on top of the umbrella shaft above her left fist, appearing skewered/merged with the pole, while her right hand is open with fingers spread and not holding anything. No transfer motion is shown; by 0:08 the apple is in her other hand.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "Blue umbrella",
+      "invariant_violated": "prop support / floating object",
+      "description": "In the profile shot at 0:08 the umbrella shaft descends from the canopy and terminates at her upper chest with no hand gripping it. Her near (left) hand holds the apple and her far (right) hand is not in contact with the pole, so the open umbrella floats unsupported.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman | navy cardigan, gray shorts, ponytail, watch on left wrist, blue umbrella in left hand, red apple in right hand | same outfit, apple now in left hand, umbrella not held by either hand | turns from facing camera to left-facing profile while walking toward camera\",\n    \"Blue umbrella | open canopy, shaft gripped by woman's left hand | canopy still open, shaft terminates at her chest with no hand gripping it | shaft loses its support/hand contact by 0:08\",\n    \"Red apple | held in woman's right hand at chest height | held in woman's left (near) hand | at 0:06 it appears attached to the umbrella shaft above her left grip instead of being held, with no visible hand-to-hand transfer\",\n    \"Market background | fruit stalls, red tarps, multiple pedestrians walking | consistent stalls and pedestrian flow | no notable anomalies\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"Red apple / umbrella shaft / woman's right hand\",\n      \"invariant_violated\": \"object attachment continuity\",\n      \"description\": \"At 0:04 the apple is clearly gripped in her right hand. At 0:06 the apple sits directly on top of the umbrella shaft above her left fist, appearing skewered/merged with the pole, while her right hand is open with fingers spread and not holding anything. No transfer motion is shown; by 0:08 the apple is in her other hand.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"Blue umbrella\",\n      \"invariant_violated\": \"prop support / floating object\",\n      \"description\": \"In the profile shot at 0:08 the umbrella shaft descends from the canopy and terminates at her upper chest with no hand gripping it. Her near (left) hand holds the apple and her far (right) hand is not in contact with the pole, so the open umbrella floats unsupported.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

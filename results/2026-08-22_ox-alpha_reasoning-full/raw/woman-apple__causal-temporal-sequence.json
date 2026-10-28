@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:49:26.420Z",
+  "latencyMs": 75523,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 1994,
+    "total_tokens": 7889,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman in navy cardigan | walking toward camera, holding open blue umbrella aloft in left hand, red apple in right | passing camera at right of frame, umbrella still open overhead, apple still in hand | continuous forward walk, head turn and smile toward passing pedestrian at ~0:06 as social response",
+    "blue umbrella | open, held above woman's head, canopy steady | open, canopy steady as she passes | no spontaneous opening/closing/folding; position tracks her walk continuously",
+    "red apple | held at chest level, occasionally cupped in one or both hands | still held as she passes camera | hand-to-hand adjustments occur while object is in grasp; no teleportation or state change",
+    "background pedestrians | walking along market aisle in both directions | continue walking past camera | continuous gait, no one appears/disappears abruptly; woman's smile at ~0:06 follows the approach of a passerby",
+    "market stalls (produce, crates, hanging lamps) | static on both sides of aisle | static | no uncaused motion or state change; apparent size changes match camera translation"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman in navy cardigan | walking toward camera, holding open blue umbrella aloft in left hand, red apple in right | passing camera at right of frame, umbrella still open overhead, apple still in hand | continuous forward walk, head turn and smile toward passing pedestrian at ~0:06 as social response\",\n    \"blue umbrella | open, held above woman's head, canopy steady | open, canopy steady as she passes | no spontaneous opening/closing/folding; position tracks her walk continuously\",\n    \"red apple | held at chest level, occasionally cupped in one or both hands | still held as she passes camera | hand-to-hand adjustments occur while object is in grasp; no teleportation or state change\",\n    \"background pedestrians | walking along market aisle in both directions | continue walking past camera | continuous gait, no one appears/disappears abruptly; woman's smile at ~0:06 follows the approach of a passerby\",\n    \"market stalls (produce, crates, hanging lamps) | static on both sides of aisle | static | no uncaused motion or state change; apparent size changes match camera translation\"\n  ],\n  \"findings\": []\n}"
+}

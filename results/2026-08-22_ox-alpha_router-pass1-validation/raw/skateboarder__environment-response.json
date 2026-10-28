@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__environment-response",
+  "video": "skateboarder.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:26:21.497Z",
+  "latencyMs": 99445,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 1315,
+    "total_tokens": 7155,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Gravity (skater + board): skater performs an ollie around 0:01-0:03, body and board airborne, then lands and continues rolling; fall and landing timing plausible for ~0.5s airtime",
+    "Ground shadow (solar lighting): sharp shadow visible beneath skater at 0:00, during airtime at 0:02-0:03, and while riding at 0:05-0:09; direction (down-left of subject) consistent across all shots, shadow stays on ground plane while skater is airborne",
+    "Wind / ambient airflow: no positive wind indicators in scene (no flags, no debris, no visible foliage flutter); trees and skater's loose t-shirt hang still, mutually consistent with calm conditions",
+    "Self-generated airflow from riding speed: loose black t-shirt shows only minor disturbance while rolling, plausible for ~5-10 mph skate speed; no streaming that would demand a stronger implied cause",
+    "Background elements (trees, light poles, concrete obstacles): static, rigid; only apparent motion is from camera translation, no deformation observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Gravity (skater + board): skater performs an ollie around 0:01-0:03, body and board airborne, then lands and continues rolling; fall and landing timing plausible for ~0.5s airtime\",\n    \"Ground shadow (solar lighting): sharp shadow visible beneath skater at 0:00, during airtime at 0:02-0:03, and while riding at 0:05-0:09; direction (down-left of subject) consistent across all shots, shadow stays on ground plane while skater is airborne\",\n    \"Wind / ambient airflow: no positive wind indicators in scene (no flags, no debris, no visible foliage flutter); trees and skater's loose t-shirt hang still, mutually consistent with calm conditions\",\n    \"Self-generated airflow from riding speed: loose black t-shirt shows only minor disturbance while rolling, plausible for ~5-10 mph skate speed; no streaming that would demand a stronger implied cause\",\n    \"Background elements (trees, light poles, concrete obstacles): static, rigid; only apparent motion is from camera translation, no deformation observed\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:15:42.410Z",
+  "latencyMs": 8952,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 965,
+    "total_tokens": 2390,
+    "cost": 0.0046875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0046875,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00361875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 862,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background pedestrian | walking up stairs carrying red object at 00:00 | walks away into background by 00:02 | continuous forward locomotion following physical movement",
+    "Smartphone screen & handler | held in foreground showing display at 00:00 | lowered down at 00:09 | phone moves closer to camera, thumb interacts with screen, device lowers smoothly"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Background pedestrian | walking up stairs carrying red object at 00:00 | walks away into background by 00:02 | continuous forward locomotion following physical movement\",\n    \"Smartphone screen & handler | held in foreground showing display at 00:00 | lowered down at 00:09 | phone moves closer to camera, thumb interacts with screen, device lowers smoothly\"\n  ],\n  \"findings\": []\n}"
+}

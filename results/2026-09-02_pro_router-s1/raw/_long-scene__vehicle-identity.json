@@ -1,0 +1,47 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:32:36.309Z",
+  "latencyMs": 26050,
+  "usage": {
+    "prompt_tokens": 10547,
+    "completion_tokens": 852,
+    "total_tokens": 11399,
+    "cost": 0.031318,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.031318,
+      "upstream_inference_prompt_cost": 0.021094,
+      "upstream_inference_completions_cost": 0.010224
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 675,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's truck parked outside diner: seen at 00:00 (white semi tractor-trailer facing left) and 01:41 (green Kenworth box truck facing right)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Man's truck parked outside diner",
+      "invariant_violated": "Identity",
+      "description": "The truck parked outside the diner completely changes from a white semi tractor-trailer facing left in the opening shot to a green Kenworth straight box truck facing right when the man exits, with no on-screen event explaining the swap.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's truck parked outside diner: seen at 00:00 (white semi tractor-trailer facing left) and 01:41 (green Kenworth box truck facing right)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Man's truck parked outside diner\",\n      \"invariant_violated\": \"Identity\",\n      \"description\": \"The truck parked outside the diner completely changes from a white semi tractor-trailer facing left in the opening shot to a green Kenworth straight box truck facing right when the man exits, with no on-screen event explaining the swap.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

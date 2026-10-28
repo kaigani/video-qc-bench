@@ -1,0 +1,49 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:21:02.179Z",
+  "latencyMs": 126764,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 4028,
+    "total_tokens": 9741,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skater | Black logo t-shirt, black pants, green socks, red shoes, dark hair | same attire, crouched riding away | performs flip trick mid-air ~0:02, lands ~0:04",
+    "Skateboard | dark deck, light/white-appearing wheels | dark deck, cream/yellow-appearing wheels | airborne flip ~0:02, back on ground ~0:04",
+    "Skatepark environment | open concrete plaza, round bench, two light poles, trees, sunny sky | transition ramp with metal edging, fence line in background | camera rolls/rotates heavily between 0:02 and 0:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "Skateboard wheels",
+      "invariant_violated": "Prop continuity / color consistency",
+      "description": "At 0:00 the skateboard's wheels read as white/very light gray; by 0:06 and 0:08 the same wheels appear distinctly cream/yellow. The lighting is consistently sunny across the clip and no event (trick, board swap) explains a wheel change, so the color shift looks like an unexplained continuity inconsistency, though warm backlighting could partially account for it.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skater | Black logo t-shirt, black pants, green socks, red shoes, dark hair | same attire, crouched riding away | performs flip trick mid-air ~0:02, lands ~0:04\",\n    \"Skateboard | dark deck, light/white-appearing wheels | dark deck, cream/yellow-appearing wheels | airborne flip ~0:02, back on ground ~0:04\",\n    \"Skatepark environment | open concrete plaza, round bench, two light poles, trees, sunny sky | transition ramp with metal edging, fence line in background | camera rolls/rotates heavily between 0:02 and 0:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"Skateboard wheels\",\n      \"invariant_violated\": \"Prop continuity / color consistency\",\n      \"description\": \"At 0:00 the skateboard's wheels read as white/very light gray; by 0:06 and 0:08 the same wheels appear distinctly cream/yellow. The lighting is consistently sunny across the clip and no event (trick, board swap) explains a wheel change, so the color shift looks like an unexplained continuity inconsistency, though warm backlighting could partially account for it.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

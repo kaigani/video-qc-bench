@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:49.692Z",
+  "latencyMs": 15231,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 868,
+    "total_tokens": 2320,
+    "cost": 0.004344,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004344,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.003255
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 740,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | holding gold coin with pinch grip | resting near cup | lowers coin into foreground red cup from 00:00 to 00:02, releases contact cleanly",
+    "Left hand | holding gold coin with pinch grip | resting on table | places coin near middle cup between 00:01 and 00:04, releases contact",
+    "Metal cups and coins | supported by table surface and cup rims | stationary on table | accept coins with natural contact and support"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | holding gold coin with pinch grip | resting near cup | lowers coin into foreground red cup from 00:00 to 00:02, releases contact cleanly\",\n    \"Left hand | holding gold coin with pinch grip | resting on table | places coin near middle cup between 00:01 and 00:04, releases contact\",\n    \"Metal cups and coins | supported by table surface and cup rims | stationary on table | accept coins with natural contact and support\"\n  ],\n  \"findings\": []\n}"
+}

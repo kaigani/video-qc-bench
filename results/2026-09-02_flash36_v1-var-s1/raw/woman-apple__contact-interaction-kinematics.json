@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:48.956Z",
+  "latencyMs": 33159,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 2689,
+    "total_tokens": 4141,
+    "cost": 0.01117275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01117275,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.01008375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2536,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman | walking forward holding umbrella in right hand and tomato in left hand | walking forward as camera orbits to her left profile | continuous grounded gait and consistent physical contact with objects",
+    "umbrella | supported by central woman's right hand gripping the metal shaft | supported by right hand grip below runner | stable contact and proper support throughout",
+    "tomato | held in central woman's left hand cupped near umbrella shaft | held in left hand cupped near umbrella shaft | continuous finger contact without floating or clipping",
+    "background pedestrians | walking along market path | passing by central woman | natural foot placement and proper spatial separation without clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"central woman | walking forward holding umbrella in right hand and tomato in left hand | walking forward as camera orbits to her left profile | continuous grounded gait and consistent physical contact with objects\",\n    \"umbrella | supported by central woman's right hand gripping the metal shaft | supported by right hand grip below runner | stable contact and proper support throughout\",\n    \"tomato | held in central woman's left hand cupped near umbrella shaft | held in left hand cupped near umbrella shaft | continuous finger contact without floating or clipping\",\n    \"background pedestrians | walking along market path | passing by central woman | natural foot placement and proper spatial separation without clipping\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,52 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:52:52.497Z",
+  "latencyMs": 328870,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 13882,
+    "total_tokens": 19921,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar with pour spout | empty at start on wooden board | ~45-50% full of green/dark olives by 0:08 | fill level rises 0:00-0:04, then drops across the cut at ~0:05 before rising again",
+    "small glass bowl of olives | held above jar, pouring, 0:00-0:04 | gone from frame after 0:04 | presumably set down off-screen during cut",
+    "stainless steel bowl of green olives | full, right side of counter at start | partially emptied into jar by 0:08 | picked up at ~0:06 and poured",
+    "small ceramic bowl of green olives | full, front right of counter | unchanged through 0:08 | no transitions",
+    "clear glass bottle | not visible in early framing | visible at right edge from 0:06 | plausibly just off-frame earlier due to reframe",
+    "person (dark blue shirt, white tee) | pouring olives from small bowl | pouring from steel bowl at 0:08 | beaded bracelet on left wrist visible at 0:08 only (hand position change)"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "large glass jar (olive fill level)",
+      "invariant_violated": "continuity across camera cut / non-monotonic fill",
+      "description": "At 0:04 the jar is filled just past its halfway point with olives. After the camera cut, at 0:06, the olive level has fallen to roughly one-third of the jar's height even though olives are only ever being added. At 0:08, after pouring a portion of the steel bowl in, the jar (~45% full) is still visibly below its pre-cut 0:04 level. Comparing the 0:04 and 0:06 paused frames side by side, the olive surface sits above the jar midpoint in the first and well below it in the second; the fill fraction is not plausibly explained by the change in camera angle. The 0:06-0:08 footage appears to come from a different take with a less-filled jar.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar with pour spout | empty at start on wooden board | ~45-50% full of green/dark olives by 0:08 | fill level rises 0:00-0:04, then drops across the cut at ~0:05 before rising again\",\n    \"small glass bowl of olives | held above jar, pouring, 0:00-0:04 | gone from frame after 0:04 | presumably set down off-screen during cut\",\n    \"stainless steel bowl of green olives | full, right side of counter at start | partially emptied into jar by 0:08 | picked up at ~0:06 and poured\",\n    \"small ceramic bowl of green olives | full, front right of counter | unchanged through 0:08 | no transitions\",\n    \"clear glass bottle | not visible in early framing | visible at right edge from 0:06 | plausibly just off-frame earlier due to reframe\",\n    \"person (dark blue shirt, white tee) | pouring olives from small bowl | pouring from steel bowl at 0:08 | beaded bracelet on left wrist visible at 0:08 only (hand position change)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"large glass jar (olive fill level)\",\n      \"invariant_violated\": \"continuity across camera cut / non-monotonic fill\",\n      \"description\": \"At 0:04 the jar is filled just past its halfway point with olives. After the camera cut, at 0:06, the olive level has fallen to roughly one-third of the jar's height even though olives are only ever being added. At 0:08, after pouring a portion of the steel bowl in, the jar (~45% full) is still visibly below its pre-cut 0:04 level. Comparing the 0:04 and 0:06 paused frames side by side, the olive surface sits above the jar midpoint in the first and well below it in the second; the fill fraction is not plausibly explained by the change in camera angle. The 0:06-0:08 footage appears to come from a different take with a less-filled jar.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "dialogue__audio-visual-claims",
+  "video": "dialogue.mp4",
+  "role": "audio-visual-claims",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:11:51.475Z",
+  "latencyMs": 10529,
+  "usage": {
+    "prompt_tokens": 1296,
+    "completion_tokens": 666,
+    "total_tokens": 1962,
+    "cost": 0.010584,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010584,
+      "upstream_inference_prompt_cost": 0.002592,
+      "upstream_inference_completions_cost": 0.007992
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 405,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Speaker states 'The red door is locked'. Visuals show only brown wooden doors.",
+    "00:02: Speaker states 'The blue door is open'. Visuals show only brown wooden doors, and both visible doors are closed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Red door",
+      "invariant_violated": "Speech-Visual Consistency",
+      "description": "The speaker explicitly mentions a 'red door', but the visible doors in the scene are brown.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Blue door",
+      "invariant_violated": "Speech-Visual Consistency",
+      "description": "The speaker explicitly mentions a 'blue door' that is 'open'. However, there are no blue doors visible (they are brown), and all visible doors are closed.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Speaker states 'The red door is locked'. Visuals show only brown wooden doors.\",\n    \"00:02: Speaker states 'The blue door is open'. Visuals show only brown wooden doors, and both visible doors are closed.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Red door\",\n      \"invariant_violated\": \"Speech-Visual Consistency\",\n      \"description\": \"The speaker explicitly mentions a 'red door', but the visible doors in the scene are brown.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Blue door\",\n      \"invariant_violated\": \"Speech-Visual Consistency\",\n      \"description\": \"The speaker explicitly mentions a 'blue door' that is 'open'. However, there are no blue doors visible (they are brown), and all visible doors are closed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

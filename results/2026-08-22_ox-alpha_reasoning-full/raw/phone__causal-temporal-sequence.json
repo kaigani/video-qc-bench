@@ -1,0 +1,41 @@
+{
+  "key": "phone__causal-temporal-sequence",
+  "video": "phone.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:44:47.595Z",
+  "latencyMs": 57811,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 974,
+    "total_tokens": 6869,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone in foreground | held in hand, teal chat screen showing message 'A7-42' | same screen content, thumb resting on screen edge | phone tilted and lowered toward camera between 0:02-0:06, shadow sweeps across screen 0:04-0:08 consistent with ambient occlusion from holder/camera",
+    "Background pedestrian with red bag | walking away on paved area near railing, mid-stride at 0:00 | continues receding, exits upper frame by ~0:04 | continuous forward walking motion, no interactions, no abrupt changes",
+    "Phone screen content | static teal interface with 'A7-42' text and status icons | unchanged throughout | no touch input that would alter content; thumb contact at 0:06-0:08 is a grip, no tap event implied, so no screen change expected",
+    "Shadow across phone screen | absent at 0:00, present from ~0:04 | moves across screen surface as phone angle changes | timing coincides with phone repositioning, plausible cause"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone in foreground | held in hand, teal chat screen showing message 'A7-42' | same screen content, thumb resting on screen edge | phone tilted and lowered toward camera between 0:02-0:06, shadow sweeps across screen 0:04-0:08 consistent with ambient occlusion from holder/camera\",\n    \"Background pedestrian with red bag | walking away on paved area near railing, mid-stride at 0:00 | continues receding, exits upper frame by ~0:04 | continuous forward walking motion, no interactions, no abrupt changes\",\n    \"Phone screen content | static teal interface with 'A7-42' text and status icons | unchanged throughout | no touch input that would alter content; thumb contact at 0:06-0:08 is a grip, no tap event implied, so no screen change expected\",\n    \"Shadow across phone screen | absent at 0:00, present from ~0:04 | moves across screen surface as phone angle changes | timing coincides with phone repositioning, plausible cause\"\n  ],\n  \"findings\": []\n}"
+}

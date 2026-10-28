@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:40.772Z",
+  "latencyMs": 22999,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 2533,
+    "total_tokens": 3951,
+    "cost": 0.01056225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01056225,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.00949875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2290,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Red fruit held by woman: count = 1",
+    "00:02 - Red fruit held by woman: count = 1",
+    "00:04 - Red fruit held by woman: count = 1",
+    "00:06 - Red fruit held by woman: count = 1",
+    "00:07 - Red fruit held by woman: count = 0 (vanished without physical cause)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red fruit held by woman",
+      "invariant_violated": "unexplained disappearance",
+      "description": "The red fruit held continuously by the woman from 00:00 to 00:06 vanishes from her hands as she shifts her grip on the umbrella handle, with no dropping, storing, or visible movement off-screen.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Red fruit held by woman: count = 1\",\n    \"00:02 - Red fruit held by woman: count = 1\",\n    \"00:04 - Red fruit held by woman: count = 1\",\n    \"00:06 - Red fruit held by woman: count = 1\",\n    \"00:07 - Red fruit held by woman: count = 0 (vanished without physical cause)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"red fruit held by woman\",\n      \"invariant_violated\": \"unexplained disappearance\",\n      \"description\": \"The red fruit held continuously by the woman from 00:00 to 00:06 vanishes from her hands as she shifts her grip on the umbrella handle, with no dropping, storing, or visible movement off-screen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

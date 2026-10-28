@@ -1,0 +1,60 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:19:55.113Z",
+  "latencyMs": 12437,
+  "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 1586,
+    "total_tokens": 2967,
+    "cost": 0.00698325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00698325,
+      "upstream_inference_prompt_cost": 0.00103575,
+      "upstream_inference_completions_cost": 0.0059475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1210,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Large clear glass jar is empty on wooden cutting board; small glass jar contains bright green olives",
+    "00:01 - Green olives poured from small glass jar into large jar, but dark purple/black olives appear in the falling stream and accumulate in destination jar",
+    "00:03 - First small glass jar is emptied; large glass jar now contains a mix of green and dark purple olives",
+    "00:05 - Person picks up second small glass jar filled with green olives",
+    "00:07 - Second small glass jar is poured into large glass jar; dark purple olives again drop into destination jar",
+    "00:09 - Second small glass jar is emptied; large jar fill level increases with green and dark purple olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives / Source container contents",
+      "invariant_violated": "source contents",
+      "description": "Dark purple/black olives emerge in mid-air and fall into the destination jar from a source container that visibly held only green olives.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Olives / Source container contents",
+      "invariant_violated": "source contents",
+      "description": "Dark purple/black olives again stream into the destination jar during a pour from a container containing green olives.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Large clear glass jar is empty on wooden cutting board; small glass jar contains bright green olives\",\n    \"00:01 - Green olives poured from small glass jar into large jar, but dark purple/black olives appear in the falling stream and accumulate in destination jar\",\n    \"00:03 - First small glass jar is emptied; large glass jar now contains a mix of green and dark purple olives\",\n    \"00:05 - Person picks up second small glass jar filled with green olives\",\n    \"00:07 - Second small glass jar is poured into large glass jar; dark purple olives again drop into destination jar\",\n    \"00:09 - Second small glass jar is emptied; large jar fill level increases with green and dark purple olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives / Source container contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"Dark purple/black olives emerge in mid-air and fall into the destination jar from a source container that visibly held only green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Olives / Source container contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"Dark purple/black olives again stream into the destination jar during a pour from a container containing green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

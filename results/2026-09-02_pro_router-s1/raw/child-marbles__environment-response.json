@@ -1,0 +1,48 @@
+{
+  "key": "child-marbles__environment-response",
+  "video": "child-marbles.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:34:07.460Z",
+  "latencyMs": 15348,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 1196,
+    "total_tokens": 2555,
+    "cost": 0.01707,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01707,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.014352
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 990,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Gravity acts on the dropped balls, causing them to fall and settle in the bowl (00:00-00:04).",
+    "Child's hand moves to stir the balls, which should cause physical displacement of the balls through contact (00:05-00:09)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05-00:09",
+      "entity": "Colored balls and child's hand",
+      "invariant_violated": "Cause and effect / Physical interaction",
+      "description": "The child's hand moves rapidly in a stirring motion, but the hand phases through the balls without solid physical contact, while the balls swirl rapidly as if being physically pushed by the hand.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Gravity acts on the dropped balls, causing them to fall and settle in the bowl (00:00-00:04).\",\n    \"Child's hand moves to stir the balls, which should cause physical displacement of the balls through contact (00:05-00:09).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05-00:09\",\n      \"entity\": \"Colored balls and child's hand\",\n      \"invariant_violated\": \"Cause and effect / Physical interaction\",\n      \"description\": \"The child's hand moves rapidly in a stirring motion, but the hand phases through the balls without solid physical contact, while the balls swirl rapidly as if being physically pushed by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

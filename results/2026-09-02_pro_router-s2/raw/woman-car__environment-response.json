@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:14:07.804Z",
+  "latencyMs": 11138,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 677,
+    "total_tokens": 2036,
+    "cost": 0.010842,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010842,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.008124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 501,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's hair: blown strongly backwards starting around 00:03, implying strong wind or forward motion.",
+    "Car and environment: stationary, no forward motion. Car antenna: perfectly still, not vibrating or bending in the supposed wind."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Woman's hair",
+      "invariant_violated": "Unexplained effect",
+      "description": "The woman's hair blows strongly backwards, suggesting forward motion or a strong headwind, but the car is stationary and the thin antenna on the hood remains perfectly still.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's hair: blown strongly backwards starting around 00:03, implying strong wind or forward motion.\",\n    \"Car and environment: stationary, no forward motion. Car antenna: perfectly still, not vibrating or bending in the supposed wind.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Woman's hair\",\n      \"invariant_violated\": \"Unexplained effect\",\n      \"description\": \"The woman's hair blows strongly backwards, suggesting forward motion or a strong headwind, but the car is stationary and the thin antenna on the hood remains perfectly still.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

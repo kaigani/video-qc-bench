@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__pour-conservation",
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:26:33.108Z",
+  "latencyMs": 266644,
+  "usage": {
+    "prompt_tokens": 5853,
+    "completion_tokens": 9947,
+    "total_tokens": 15800,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 | Cup A (back-left, small maroon cup, steel rim): empty",
+    "0:00 | Cup B (back-right, maroon cup, steel rim): empty",
+    "0:00 | Cup C (center, maroon cup, steel rim): one large embossed gold coin resting on top",
+    "0:00 | Cup D (front-left, maroon cup, steel rim): one gold coin visible at bottom; performer's hand holds one gold coin above the mouth",
+    "0:02 | Cup D: held coin released into cup mouth (motion blur); expected contents now 2 gold coins; Cups A/B still empty, Cup C unchanged",
+    "0:04 | Cup D: only ONE gold coin visible, sitting at rim level; original coin at 0:00 rested clearly below the rim",
+    "0:04 | Cup C: embossed gold coin still on top",
+    "0:04 | Cup A: performer's right hand deposits a dark coin-sized object into the previously empty cup (source pickup not shown; many loose coins on table)",
+    "0:04 | Cup B: still empty",
+    "0:06 | wide shot: all four cups same vessels; no embossed coin visible on Cup C; a plain gold coin lies on the table right of the cups under the performer's left hand; Cup D still shows a single coin at rim",
+    "0:08 | performer gathers cups with both hands; Cup D still shows single coin at rim; Cup C gripped by left hand with top obscured; no visible refill of any cup"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:04",
+      "entity": "front-left cup (Cup D)",
+      "invariant_violated": "conservation / fill-level monotonicity",
+      "description": "A second gold coin was released into this cup at 0:02 on top of the coin already inside, yet at 0:04 only one coin is visible and it sits at the rim, whereas the original coin rested about a centimeter below the rim at 0:00. The added coin is never seen settling at the bottom or being lifted out, indicating a false transfer (coin retained at the rim/palmed) rather than a completed deposit.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "center cup (Cup C) embossed gold coin",
+      "invariant_violated": "conservation (disappearance without visible transfer)",
+      "description": "The large embossed gold coin resting on top of the center cup at 0:00-0:04 is no longer visible from 0:06 onward; instead a plain gold coin lies on the table beside the cups. No on-screen action shows the embossed coin being removed, and the coin on the table does not clearly match the embossed design. The change occurs across the camera pull-back between 0:04 and 0:06, so a hidden removal is possible but unconfirmed.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 | Cup A (back-left, small maroon cup, steel rim): empty\",\n    \"0:00 | Cup B (back-right, maroon cup, steel rim): empty\",\n    \"0:00 | Cup C (center, maroon cup, steel rim): one large embossed gold coin resting on top\",\n    \"0:00 | Cup D (front-left, maroon cup, steel rim): one gold coin visible at bottom; performer's hand holds one gold coin above the mouth\",\n    \"0:02 | Cup D: held coin released into cup mouth (motion blur); expected contents now 2 gold coins; Cups A/B still empty, Cup C unchanged\",\n    \"0:04 | Cup D: only ONE gold coin visible, sitting at rim level; original coin at 0:00 rested clearly below the rim\",\n    \"0:04 | Cup C: embossed gold coin still on top\",\n    \"0:04 | Cup A: performer's right hand deposits a dark coin-sized object into the previously empty cup (source pickup not shown; many loose coins on table)\",\n    \"0:04 | Cup B: still empty\",\n    \"0:06 | wide shot: all four cups same vessels; no embossed coin visible on Cup C; a plain gold coin lies on the table right of the cups under the performer's left hand; Cup D still shows a single coin at rim\",\n    \"0:08 | performer gathers cups with both hands; Cup D still shows single coin at rim; Cup C gripped by left hand with top obscured; no visible refill of any cup\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:04\",\n      \"entity\": \"front-left cup (Cup D)\",\n      \"invariant_violated\": \"conservation / fill-level monotonicity\",\n      \"description\": \"A second gold coin was released into this cup at 0:02 on top of the coin already inside, yet at 0:04 only one coin is visible and it sits at the rim, whereas the original coin rested about a centimeter below the rim at 0:00. The added coin is never seen settling at the bottom or being lifted out, indicating a false transfer (coin retained at the rim/palmed) rather than a completed deposit.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"center cup (Cup C) embossed gold coin\",\n      \"invariant_violated\": \"conservation (disappearance without visible transfer)\",\n      \"description\": \"The large embossed gold coin resting on top of the center cup at 0:00-0:04 is no longer visible from 0:06 onward; instead a plain gold coin lies on the table beside the cups. No on-screen action shows the embossed coin being removed, and the coin on the table does not clearly match the embossed design. The change occurs across the camera pull-back between 0:04 and 0:06, so a hidden removal is possible but unconfirmed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

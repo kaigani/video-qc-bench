@@ -1,0 +1,59 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:37:12.633Z",
+  "latencyMs": 170726,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 5165,
+    "total_tokens": 11061,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — number cubes: 2 visible (both green, digit '2'), hand gripping left cube; no count change",
+    "00:02 — number cubes: 3 visible (blue '2', blue '3' being placed, green '2'); +1 caused by hand visibly placing blue '3'; NOTE leftmost cube is now blue though it was green at 00:00",
+    "00:04 — number cubes: 4 visible (blue '2', blue '3', green '2', green '2' being placed); +1 caused by hand visibly placing 4th cube",
+    "00:06 — number cubes: 6 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green cube being placed); +2 caused by hand visibly placing cubes 5 and 6; NOTE 4th cube is now orange though it was green at 00:04",
+    "00:08 — number cubes: 8 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5', green '2', blue '6' being placed); +2 caused by hand visibly placing cubes 7 and 8"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "leftmost number cube",
+      "invariant_violated": "unexplained kind/color transformation",
+      "description": "The leftmost cube is green with digit '2' at 00:00; at 00:02 the same leftmost cube is blue with digit '2'. The hand was in contact with it, but no visible swap, replacement, or recoloring mechanism is shown, so the green-to-blue change is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "4th number cube from left",
+      "invariant_violated": "unexplained kind/color transformation",
+      "description": "The 4th cube, placed as green with digit '2' at 00:04, appears orange with digit '2' at 00:06 while the hand has moved away to place other cubes. No visible mechanism (rotation, swap, or contact) explains the green-to-orange color change.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — number cubes: 2 visible (both green, digit '2'), hand gripping left cube; no count change\",\n    \"00:02 — number cubes: 3 visible (blue '2', blue '3' being placed, green '2'); +1 caused by hand visibly placing blue '3'; NOTE leftmost cube is now blue though it was green at 00:00\",\n    \"00:04 — number cubes: 4 visible (blue '2', blue '3', green '2', green '2' being placed); +1 caused by hand visibly placing 4th cube\",\n    \"00:06 — number cubes: 6 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green cube being placed); +2 caused by hand visibly placing cubes 5 and 6; NOTE 4th cube is now orange though it was green at 00:04\",\n    \"00:08 — number cubes: 8 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5', green '2', blue '6' being placed); +2 caused by hand visibly placing cubes 7 and 8\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"leftmost number cube\",\n      \"invariant_violated\": \"unexplained kind/color transformation\",\n      \"description\": \"The leftmost cube is green with digit '2' at 00:00; at 00:02 the same leftmost cube is blue with digit '2'. The hand was in contact with it, but no visible swap, replacement, or recoloring mechanism is shown, so the green-to-blue change is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"4th number cube from left\",\n      \"invariant_violated\": \"unexplained kind/color transformation\",\n      \"description\": \"The 4th cube, placed as green with digit '2' at 00:04, appears orange with digit '2' at 00:06 while the hand has moved away to place other cubes. No visible mechanism (rotation, swap, or contact) explains the green-to-orange color change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

@@ -1,0 +1,58 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:42:35.321Z",
+  "latencyMs": 28732,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2484,
+    "total_tokens": 3860,
+    "cost": 0.03256,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03256,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.029808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2141,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Subject and mirror reflection visible simultaneously.",
+    "00:00-00:01: Subject holds a dark object (comb), performs shaving motion.",
+    "00:02-00:03: Subject moves comb to hair; reflection matches motion.",
+    "00:04-00:09: Subject returns dark object to face for shaving motion."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "held prop",
+      "invariant_violated": "prop consistency",
+      "description": "The real subject is holding a dark grey/black comb while performing a shaving motion, but the reflection shows him holding a bright white object (resembling a disposable razor).",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "held prop",
+      "invariant_violated": "prop consistency",
+      "description": "After the reflection correctly shows a dark comb during the hair-combing sequence (00:02-00:03), the object in the reflection's hand changes back into a bright white razor-like object for the second shaving sequence, while the real subject continuously holds the dark comb.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Subject and mirror reflection visible simultaneously.\",\n    \"00:00-00:01: Subject holds a dark object (comb), performs shaving motion.\",\n    \"00:02-00:03: Subject moves comb to hair; reflection matches motion.\",\n    \"00:04-00:09: Subject returns dark object to face for shaving motion.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"held prop\",\n      \"invariant_violated\": \"prop consistency\",\n      \"description\": \"The real subject is holding a dark grey/black comb while performing a shaving motion, but the reflection shows him holding a bright white object (resembling a disposable razor).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"held prop\",\n      \"invariant_violated\": \"prop consistency\",\n      \"description\": \"After the reflection correctly shows a dark comb during the hair-combing sequence (00:02-00:03), the object in the reflection's hand changes back into a bright white razor-like object for the second shaving sequence, while the real subject continuously holds the dark comb.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

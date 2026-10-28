@@ -1,0 +1,63 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:46:08.390Z",
+  "latencyMs": 184252,
+  "usage": {
+    "prompt_tokens": 5858,
+    "completion_tokens": 6935,
+    "total_tokens": 12793,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 | Block 1 (numeral '2'): carried in from above frame in right hand, set on table at position 1 (leftmost); cube face reads green at this moment",
+    "00:02 | Block 1 ('2'): stationary on table position 1, no hand contact; face now reads blue; hand has moved to position 2",
+    "00:02 | Block 2 (numeral '3'): carried in from off-frame top in right hand, being set on table at position 2",
+    "00:04 | Block 2 ('3', blue): stationary at position 2; Block 3 ('2', green) being set at position 3",
+    "00:04 | Block 4 (numeral '2'): in right hand being set at position 4; heavily motion-blurred, faces read pale green/tan",
+    "00:06 | Block 4 ('2'): stationary at position 4, now solid orange; Block 5 ('3', light blue) already in place at position 5 (placed ~00:05, between sampled frames)",
+    "00:06 | Block 6 (numeral '5', green): carried in from off-frame, being set at position 6",
+    "00:08 | Block 6 ('5', green): stationary at position 6; Block 7 ('2', green) already in place at position 7 (placed ~00:07, between sampled frames)",
+    "00:08 | Block 8 (numeral '6', blue): carried in from off-frame, being set at position 8 (rightmost); all 8 cubes remain stationary on the table through end of clip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Block 1 (leftmost cube, numeral '2')",
+      "invariant_violated": "placement persistence / identity continuity",
+      "description": "The cube is set down at 00:00 reading green (same hue as its right neighbor). By 00:02 the same stationary cube, untouched since placement, reads blue. No swap, rotation to a differently colored face, or other intervention is shown, so the object's appearance changes with no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block 4 (fourth cube, numeral '2')",
+      "invariant_violated": "identity continuity (appearance)",
+      "description": "At placement (00:04) the cube's blurred visible faces read pale green/tan; by 00:06 the same stationary cube is solid orange. Motion blur at placement limits certainty, but the hue discontinuity matches the green-to-blue shift observed on Block 1.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 | Block 1 (numeral '2'): carried in from above frame in right hand, set on table at position 1 (leftmost); cube face reads green at this moment\",\n    \"00:02 | Block 1 ('2'): stationary on table position 1, no hand contact; face now reads blue; hand has moved to position 2\",\n    \"00:02 | Block 2 (numeral '3'): carried in from off-frame top in right hand, being set on table at position 2\",\n    \"00:04 | Block 2 ('3', blue): stationary at position 2; Block 3 ('2', green) being set at position 3\",\n    \"00:04 | Block 4 (numeral '2'): in right hand being set at position 4; heavily motion-blurred, faces read pale green/tan\",\n    \"00:06 | Block 4 ('2'): stationary at position 4, now solid orange; Block 5 ('3', light blue) already in place at position 5 (placed ~00:05, between sampled frames)\",\n    \"00:06 | Block 6 (numeral '5', green): carried in from off-frame, being set at position 6\",\n    \"00:08 | Block 6 ('5', green): stationary at position 6; Block 7 ('2', green) already in place at position 7 (placed ~00:07, between sampled frames)\",\n    \"00:08 | Block 8 (numeral '6', blue): carried in from off-frame, being set at position 8 (rightmost); all 8 cubes remain stationary on the table through end of clip\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Block 1 (leftmost cube, numeral '2')\",\n      \"invariant_violated\": \"placement persistence / identity continuity\",\n      \"description\": \"The cube is set down at 00:00 reading green (same hue as its right neighbor). By 00:02 the same stationary cube, untouched since placement, reads blue. No swap, rotation to a differently colored face, or other intervention is shown, so the object's appearance changes with no visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Block 4 (fourth cube, numeral '2')\",\n      \"invariant_violated\": \"identity continuity (appearance)\",\n      \"description\": \"At placement (00:04) the cube's blurred visible faces read pale green/tan; by 00:06 the same stationary cube is solid orange. Motion blur at placement limits certainty, but the hue discontinuity matches the green-to-blue shift observed on Block 1.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

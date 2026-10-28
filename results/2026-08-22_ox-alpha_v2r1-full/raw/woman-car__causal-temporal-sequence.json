@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:40:13.635Z",
+  "latencyMs": 58769,
+  "usage": {
+    "prompt_tokens": 5741,
+    "completion_tokens": 1819,
+    "total_tokens": 7560,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car (cream/woodgrain station wagon) | parked or slow-moving on desert highway at 00:00, sharp background, no road markings in view | moving forward by 00:04-00:08, road center lines and utility poles streaming past with motion blur | background parallax shifts rearward relative to car, consistent with forward acceleration; continuous motion, no cuts",
+    "woman leaning out passenger window | arms crossed on window frame, hair relatively calm at 00:00-00:03 | same crossed-arm pose maintained, hair streaming backward by 00:05-00:08 | hair motion begins only after car's forward motion is established (road markings passing), wind direction (blowing toward rear of car) matches cause; delay plausible",
+    "camera | wide shot showing full front of car and license plate | tight close-up on woman's face and arms | continuous dolly-in over ~8 seconds, no cuts, no frozen frames, no repeated beats; foreground/background parallax coherent",
+    "wind | no visible wind effect on hair or clothing at 00:00 | visible wind effect on hair from ~00:04 onward | cause (car's forward speed implied by passing road markings and poles) precedes effect (hair streaming) with plausible delay and matching direction"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"car (cream/woodgrain station wagon) | parked or slow-moving on desert highway at 00:00, sharp background, no road markings in view | moving forward by 00:04-00:08, road center lines and utility poles streaming past with motion blur | background parallax shifts rearward relative to car, consistent with forward acceleration; continuous motion, no cuts\",\n    \"woman leaning out passenger window | arms crossed on window frame, hair relatively calm at 00:00-00:03 | same crossed-arm pose maintained, hair streaming backward by 00:05-00:08 | hair motion begins only after car's forward motion is established (road markings passing), wind direction (blowing toward rear of car) matches cause; delay plausible\",\n    \"camera | wide shot showing full front of car and license plate | tight close-up on woman's face and arms | continuous dolly-in over ~8 seconds, no cuts, no frozen frames, no repeated beats; foreground/background parallax coherent\",\n    \"wind | no visible wind effect on hair or clothing at 00:00 | visible wind effect on hair from ~00:04 onward | cause (car's forward speed implied by passing road markings and poles) precedes effect (hair streaming) with plausible delay and matching direction\"\n  ],\n  \"findings\": []\n}"
+}

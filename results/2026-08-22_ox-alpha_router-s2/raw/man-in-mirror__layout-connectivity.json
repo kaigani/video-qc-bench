@@ -1,0 +1,44 @@
+{
+  "key": "man-in-mirror__layout-connectivity",
+  "video": "man-in-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:32:45.446Z",
+  "latencyMs": 357705,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 11942,
+    "total_tokens": 17810,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space 1 — Bathroom vanity zone: man in white shirt stands stationary at a wall-mounted gold-framed mirror for the entire clip (0:00-0:08), shaving; sink implied below mirror, not visible",
+    "Opening 1 — Dark wood six-panel door with brass knob, located behind and camera-left of the man; visible only via mirror reflection; remains CLOSED for the full clip; far side never shown",
+    "Fixture — Light switch plate on wall beside the door (seen in reflection), stable position across all frames",
+    "Fixture — Toiletry shelf/cabinet with bottles at far right of mirror view (behind/beside the man), consistent with bathroom storage; position stable across all frames",
+    "Mirror-consistency check: razor held in man's right hand in both direct view and reflection at all times; ~0:04 raise to forehead/hairline and return to jaw match between man and reflection",
+    "Traversal check: no person crosses any opening; the man never leaves the vanity position, so no route is implied or violated",
+    "View-through-opening check: door never opens, so no far-side content is ever exposed; no window views present"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Space 1 — Bathroom vanity zone: man in white shirt stands stationary at a wall-mounted gold-framed mirror for the entire clip (0:00-0:08), shaving; sink implied below mirror, not visible\",\n    \"Opening 1 — Dark wood six-panel door with brass knob, located behind and camera-left of the man; visible only via mirror reflection; remains CLOSED for the full clip; far side never shown\",\n    \"Fixture — Light switch plate on wall beside the door (seen in reflection), stable position across all frames\",\n    \"Fixture — Toiletry shelf/cabinet with bottles at far right of mirror view (behind/beside the man), consistent with bathroom storage; position stable across all frames\",\n    \"Mirror-consistency check: razor held in man's right hand in both direct view and reflection at all times; ~0:04 raise to forehead/hairline and return to jaw match between man and reflection\",\n    \"Traversal check: no person crosses any opening; the man never leaves the vanity position, so no route is implied or violated\",\n    \"View-through-opening check: door never opens, so no far-side content is ever exposed; no window views present\"\n  ],\n  \"findings\": []\n}"
+}

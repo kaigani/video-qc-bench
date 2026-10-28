@@ -1,0 +1,42 @@
+{
+  "key": "man-cups__structural-plausibility",
+  "video": "man-cups.mp4",
+  "role": "structural-plausibility",
+  "model": "google/gemma-4-31b-it",
+  "timestamp": "2026-08-15T15:53:03.873Z",
+  "latencyMs": 40642,
+  "usage": {
+    "prompt_tokens": 3264,
+    "completion_tokens": 862,
+    "total_tokens": 4126,
+    "cost": 0.00061948,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00061948,
+      "upstream_inference_prompt_cost": 0.0003264,
+      "upstream_inference_completions_cost": 0.00029308
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 593,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand/fingers (00:00) -> 5 fingers -> shown -> OK",
+    "cups (00:00) -> 3 cups -> shown -> OK",
+    "table arrangement (00:00) -> coins and cups on surface -> shown -> OK",
+    "hand/fingers (00:04) -> 5 fingers -> shown -> OK",
+    "man's anatomy (00:06) -> 2 arms, 1 head -> shown -> OK"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"hand/fingers (00:00) -> 5 fingers -> shown -> OK\",\n    \"cups (00:00) -> 3 cups -> shown -> OK\",\n    \"table arrangement (00:00) -> coins and cups on surface -> shown -> OK\",\n    \"hand/fingers (00:04) -> 5 fingers -> shown -> OK\",\n    \"man's anatomy (00:06) -> 2 arms, 1 head -> shown -> OK\"\n  ],\n  \"findings\": []\n}\n```"
+}

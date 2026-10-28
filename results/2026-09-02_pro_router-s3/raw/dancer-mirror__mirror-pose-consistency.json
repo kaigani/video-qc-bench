@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:17:07.792Z",
+  "latencyMs": 20980,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2414,
+    "total_tokens": 3790,
+    "cost": 0.03172,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03172,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.028968
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2192,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Subject raises right arm (tattooed), reflection matches",
+    "00:02-00:04: Subject lowers arms into an asymmetrical pose, real and reflection poses diverge",
+    "00:05-00:09: Subject raises right arm (tattooed) again, reflection matches"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "subject's arms in reflection",
+      "invariant_violated": "pose mismatch",
+      "description": "The real subject places her right arm (with the tattoo) behind her back and her left arm in front of her body. The reflection simultaneously shows the opposite pose, with the tattooed right arm placed in front of her body and her left arm behind her back.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Subject raises right arm (tattooed), reflection matches\",\n    \"00:02-00:04: Subject lowers arms into an asymmetrical pose, real and reflection poses diverge\",\n    \"00:05-00:09: Subject raises right arm (tattooed) again, reflection matches\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"subject's arms in reflection\",\n      \"invariant_violated\": \"pose mismatch\",\n      \"description\": \"The real subject places her right arm (with the tattoo) behind her back and her left arm in front of her body. The reflection simultaneously shows the opposite pose, with the tattooed right arm placed in front of her body and her left arm behind her back.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

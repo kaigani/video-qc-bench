@@ -1,0 +1,46 @@
+{
+  "key": "skateboarder__environment-response",
+  "video": "skateboarder.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:53:36.088Z",
+  "latencyMs": 166829,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 2984,
+    "total_tokens": 8824,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Ambient wind: no independent evidence of wind (no flags, no streaming hair/clothing, foliage static across 0:00-0:08); calm-air baseline established",
+    "Background tree foliage (0:00-0:08): rigid/static across all frames — consistent with the calm-air baseline, no wind implied by any other element",
+    "Skater's loose black t-shirt (0:00-0:08): hangs naturally while rolling and during airtime; no flutter, consistent with calm air and moderate skate speed",
+    "Skater's tied hair/top knot (0:00): no streaming or loose strands moving — consistent with no-wind baseline",
+    "Gravity on skater+board during ollie (0:01-0:04): coherent rise, apex with board under feet, descent and landing at 0:03-0:04 — ballistic arc consistent",
+    "Skater's shadow (0:00, 0:05-0:08): direction and length shift smoothly across shots; screen-direction changes match the orbiting follow-cam, anchored to ground contact rather than frame position — consistent single sun source",
+    "Cloud field (0:00-0:08): static across all shots, as expected over seconds — no time-lapse inconsistency",
+    "Pant legs/socks during airborne moment (0:02): hang downward, plausible during ascent-phase relative airflow; no contradictory billow",
+    "Camera-induced background motion (0:02-0:08): background displacement tracks camera orbit/follow motion; object deformation (none) used for judgment, so no false wind/motion attribution"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Ambient wind: no independent evidence of wind (no flags, no streaming hair/clothing, foliage static across 0:00-0:08); calm-air baseline established\",\n    \"Background tree foliage (0:00-0:08): rigid/static across all frames — consistent with the calm-air baseline, no wind implied by any other element\",\n    \"Skater's loose black t-shirt (0:00-0:08): hangs naturally while rolling and during airtime; no flutter, consistent with calm air and moderate skate speed\",\n    \"Skater's tied hair/top knot (0:00): no streaming or loose strands moving — consistent with no-wind baseline\",\n    \"Gravity on skater+board during ollie (0:01-0:04): coherent rise, apex with board under feet, descent and landing at 0:03-0:04 — ballistic arc consistent\",\n    \"Skater's shadow (0:00, 0:05-0:08): direction and length shift smoothly across shots; screen-direction changes match the orbiting follow-cam, anchored to ground contact rather than frame position — consistent single sun source\",\n    \"Cloud field (0:00-0:08): static across all shots, as expected over seconds — no time-lapse inconsistency\",\n    \"Pant legs/socks during airborne moment (0:02): hang downward, plausible during ascent-phase relative airflow; no contradictory billow\",\n    \"Camera-induced background motion (0:02-0:08): background displacement tracks camera orbit/follow motion; object deformation (none) used for judgment, so no false wind/motion attribution\"\n  ],\n  \"findings\": []\n}"
+}

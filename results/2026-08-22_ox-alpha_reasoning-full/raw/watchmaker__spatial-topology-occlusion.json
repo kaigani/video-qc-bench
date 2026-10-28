@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:22:38.272Z",
+  "latencyMs": 30495,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 890,
+    "total_tokens": 6791,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "plain white background wall | uniform, featureless, fills frame behind subject | unchanged throughout | no openings or features ever visible",
+    "subject torso (navy striped shirt, gold necklace) | center frame, facing camera, seated | same position throughout | single continuous shot, no cuts or camera movement",
+    "left hand with small round jewelry/watch component | viewer-right side, holds object at chest height, watch on left wrist, ring on ring finger | still holding object at end | object never transfers hands; watch and ring stay on same hand",
+    "right hand with tweezers | viewer-left side, tweezers tip touching object at 0:00-0:02 | tweezers withdrawn ~0:04, hands together ~0:06, tweezers re-enter from lower frame at ~0:08 | re-entry from below is consistent with tweezers being set down out of frame and picked back up",
+    "table surface (implied, bottom edge of frame) | only a sliver visible at frame bottom | unchanged | consistent with hands working above a work surface"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"plain white background wall | uniform, featureless, fills frame behind subject | unchanged throughout | no openings or features ever visible\",\n    \"subject torso (navy striped shirt, gold necklace) | center frame, facing camera, seated | same position throughout | single continuous shot, no cuts or camera movement\",\n    \"left hand with small round jewelry/watch component | viewer-right side, holds object at chest height, watch on left wrist, ring on ring finger | still holding object at end | object never transfers hands; watch and ring stay on same hand\",\n    \"right hand with tweezers | viewer-left side, tweezers tip touching object at 0:00-0:02 | tweezers withdrawn ~0:04, hands together ~0:06, tweezers re-enter from lower frame at ~0:08 | re-entry from below is consistent with tweezers being set down out of frame and picked back up\",\n    \"table surface (implied, bottom edge of frame) | only a sliver visible at frame bottom | unchanged | consistent with hands working above a work surface\"\n  ],\n  \"findings\": []\n}"
+}

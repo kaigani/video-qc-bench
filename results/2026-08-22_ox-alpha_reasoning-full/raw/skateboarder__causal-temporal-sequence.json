@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:21:47.278Z",
+  "latencyMs": 45081,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 1244,
+    "total_tokens": 7139,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouched, rolling forward on flat concrete, weight loaded | upright, balanced, rolling away after landing | crouch-load (0:00) -> pop into airborne flip trick (0:02) -> board caught under feet -> landing (0:04) -> roll-away with arms out for balance (0:06) -> fresh crouch loading next maneuver (0:08); each phase follows the prior with plausible delay",
+    "skateboard | flat on ground under rider's feet, rolling | under rider's feet, rolling away on wheels | leaves ground only after rider's pop (0:02), flips/tilts mid-air while rider airborne, levels out before feet catch it (0:04), touches down wheels-first (0:04-0:06); board motion proportional to rider's input",
+    "skater shadow | cast on concrete beneath moving rider | remains consistent with sun position | during airborne trick (0:02) shadow stays on ground while body rises, then rejoins feet on landing; ground-contact and shadow state stay causally synchronized",
+    "camera (follow cam) | low, tracking rider across flat ground | continues tracking as rider rides away | tilts up in response to rider's ascent (0:02) and settles back down during landing (0:04); camera motion reacts to, and lags slightly behind, rider motion as expected"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouched, rolling forward on flat concrete, weight loaded | upright, balanced, rolling away after landing | crouch-load (0:00) -> pop into airborne flip trick (0:02) -> board caught under feet -> landing (0:04) -> roll-away with arms out for balance (0:06) -> fresh crouch loading next maneuver (0:08); each phase follows the prior with plausible delay\",\n    \"skateboard | flat on ground under rider's feet, rolling | under rider's feet, rolling away on wheels | leaves ground only after rider's pop (0:02), flips/tilts mid-air while rider airborne, levels out before feet catch it (0:04), touches down wheels-first (0:04-0:06); board motion proportional to rider's input\",\n    \"skater shadow | cast on concrete beneath moving rider | remains consistent with sun position | during airborne trick (0:02) shadow stays on ground while body rises, then rejoins feet on landing; ground-contact and shadow state stay causally synchronized\",\n    \"camera (follow cam) | low, tracking rider across flat ground | continues tracking as rider rides away | tilts up in response to rider's ascent (0:02) and settles back down during landing (0:04); camera motion reacts to, and lags slightly behind, rider motion as expected\"\n  ],\n  \"findings\": []\n}"
+}

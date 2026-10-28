@@ -1,0 +1,74 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:20:32.390Z",
+  "latencyMs": 26043,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 3318,
+    "total_tokens": 4694,
+    "cost": 0.042568,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042568,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.039816
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2751,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 2 (second from left): '3' at 0:01, garbled symbol at 0:08",
+    "Block 3 (third from left): '2' at 0:01, '3' at 0:02",
+    "Block 4 (fourth from left): '3' at 0:02, '2' at 0:04",
+    "Block 5 (fifth from left): '3' at 0:03, '2' at 0:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:01",
+      "entity": "Block 2 (second from left)",
+      "invariant_violated": "Legibility",
+      "description": "The number on the blue block starts as a clear '3' at 0:01, but morphs into a garbled, illegible symbol resembling an arrow by 0:03 and remains that way.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "0:01",
+      "entity": "Block 3 (third from left)",
+      "invariant_violated": "Stability",
+      "description": "The number on the blue block is initially a '2' at 0:01, but changes to a '3' by 0:02 without any interaction.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "0:02",
+      "entity": "Block 4 (fourth from left)",
+      "invariant_violated": "Stability",
+      "description": "The number on the green block is a '3' when first clearly visible at 0:02, but morphs into a '2' by 0:04.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "0:03",
+      "entity": "Block 5 (fifth from left)",
+      "invariant_violated": "Stability",
+      "description": "The number on the yellow block is a '3' when placed at 0:03, but changes to a '2' by 0:04.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Block 2 (second from left): '3' at 0:01, garbled symbol at 0:08\",\n    \"Block 3 (third from left): '2' at 0:01, '3' at 0:02\",\n    \"Block 4 (fourth from left): '3' at 0:02, '2' at 0:04\",\n    \"Block 5 (fifth from left): '3' at 0:03, '2' at 0:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:01\",\n      \"entity\": \"Block 2 (second from left)\",\n      \"invariant_violated\": \"Legibility\",\n      \"description\": \"The number on the blue block starts as a clear '3' at 0:01, but morphs into a garbled, illegible symbol resembling an arrow by 0:03 and remains that way.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"0:01\",\n      \"entity\": \"Block 3 (third from left)\",\n      \"invariant_violated\": \"Stability\",\n      \"description\": \"The number on the blue block is initially a '2' at 0:01, but changes to a '3' by 0:02 without any interaction.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"Block 4 (fourth from left)\",\n      \"invariant_violated\": \"Stability\",\n      \"description\": \"The number on the green block is a '3' when first clearly visible at 0:02, but morphs into a '2' by 0:04.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"0:03\",\n      \"entity\": \"Block 5 (fifth from left)\",\n      \"invariant_violated\": \"Stability\",\n      \"description\": \"The number on the yellow block is a '3' when placed at 0:03, but changes to a '2' by 0:04.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}\n```"
+}

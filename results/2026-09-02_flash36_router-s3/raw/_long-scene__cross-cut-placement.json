@@ -1,0 +1,63 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:40.719Z",
+  "latencyMs": 56985,
+  "usage": {
+    "prompt_tokens": 10641,
+    "completion_tokens": 2507,
+    "total_tokens": 13148,
+    "cost": 0.017382,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017382,
+      "upstream_inference_prompt_cost": 0.00798075,
+      "upstream_inference_completions_cost": 0.00940125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1801,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Shot 1 (00:00-00:09): Diner exterior wide at dusk; white truck parked outside; no people clearly visible.",
+    "Shot 2 (00:10-00:18): Diner interior medium shot; waitress behind counter cleaning surface.",
+    "Shot 3 (00:19-00:26): Wide interior shot; truck driver enters from left, walks to counter, sits on stool; waitress behind counter.",
+    "Shot 4 (00:27-00:31): Close-up of coffee being poured into white mug on counter.",
+    "Shot 5 (00:32-00:35): Close-up of plate with egg and toast on counter.",
+    "Shot 6 (00:36-00:44): Wide interior shot; driver seated at counter holding coffee mug.",
+    "Shot 7 (00:45-00:50): Framing from inside kitchen looking through window; waitress in foreground, driver seated at counter.",
+    "Shot 8 (00:51-00:59): Medium interior shot of counter area; empty.",
+    "Shot 9 (01:00-01:08): Wide interior shot; driver seated on stool, waitress standing behind counter.",
+    "Shot 10 (01:09-01:17): Medium 2-shot over counter; waitress hands driver plate of food.",
+    "Shot 11 (01:18-01:26): Wide shot; waitress walks around counter and sits on stool next to driver.",
+    "Shot 12 (01:27-01:34): Medium 2-shot; waitress and driver seated side by side on counter stools.",
+    "Shot 13 (01:35-01:36): Empty interior shot of counter area.",
+    "Shot 14 (01:37-01:40): Extreme close-up of hands placing cash next to coffee mug on counter.",
+    "Shot 15 (01:41-01:45): View through window; driver exits diner and walks toward green truck.",
+    "Shot 16 (01:46-01:49): Interior shot; waitress stands near window watching driver outside.",
+    "Shot 17 (01:50-01:58): Wide interior shot; waitress sitting on customer stool gets up and walks right while a second identical waitress is simultaneously visible working behind the kitchen counter."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "duplicate_person",
+      "description": "Two identical instances of the waitress appear in the shot at the same time: one standing up from a customer counter stool on the left/center, and another simultaneously wiping the counter in the kitchen area behind the counter.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Shot 1 (00:00-00:09): Diner exterior wide at dusk; white truck parked outside; no people clearly visible.\",\n    \"Shot 2 (00:10-00:18): Diner interior medium shot; waitress behind counter cleaning surface.\",\n    \"Shot 3 (00:19-00:26): Wide interior shot; truck driver enters from left, walks to counter, sits on stool; waitress behind counter.\",\n    \"Shot 4 (00:27-00:31): Close-up of coffee being poured into white mug on counter.\",\n    \"Shot 5 (00:32-00:35): Close-up of plate with egg and toast on counter.\",\n    \"Shot 6 (00:36-00:44): Wide interior shot; driver seated at counter holding coffee mug.\",\n    \"Shot 7 (00:45-00:50): Framing from inside kitchen looking through window; waitress in foreground, driver seated at counter.\",\n    \"Shot 8 (00:51-00:59): Medium interior shot of counter area; empty.\",\n    \"Shot 9 (01:00-01:08): Wide interior shot; driver seated on stool, waitress standing behind counter.\",\n    \"Shot 10 (01:09-01:17): Medium 2-shot over counter; waitress hands driver plate of food.\",\n    \"Shot 11 (01:18-01:26): Wide shot; waitress walks around counter and sits on stool next to driver.\",\n    \"Shot 12 (01:27-01:34): Medium 2-shot; waitress and driver seated side by side on counter stools.\",\n    \"Shot 13 (01:35-01:36): Empty interior shot of counter area.\",\n    \"Shot 14 (01:37-01:40): Extreme close-up of hands placing cash next to coffee mug on counter.\",\n    \"Shot 15 (01:41-01:45): View through window; driver exits diner and walks toward green truck.\",\n    \"Shot 16 (01:46-01:49): Interior shot; waitress stands near window watching driver outside.\",\n    \"Shot 17 (01:50-01:58): Wide interior shot; waitress sitting on customer stool gets up and walks right while a second identical waitress is simultaneously visible working behind the kitchen counter.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"duplicate_person\",\n      \"description\": \"Two identical instances of the waitress appear in the shot at the same time: one standing up from a customer counter stool on the left/center, and another simultaneously wiping the counter in the kitchen area behind the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

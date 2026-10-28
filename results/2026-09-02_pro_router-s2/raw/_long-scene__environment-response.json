@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__environment-response",
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:40:46.759Z",
+  "latencyMs": 43636,
+  "usage": {
+    "prompt_tokens": 10564,
+    "completion_tokens": 3394,
+    "total_tokens": 13958,
+    "cost": 0.061856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.061856,
+      "upstream_inference_prompt_cost": 0.021128,
+      "upstream_inference_completions_cost": 0.040728
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3211,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Truck exhaust smoke (drifts left, implies light wind)",
+    "Coffee pouring (gravity pulling fluid downward)",
+    "Steam from food (convection/heat causing it to rise)",
+    "Cars moving outside window (implied physical motion)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:27",
+      "entity": "Pouring coffee liquid",
+      "invariant_violated": "Plausible cause / physical boundary",
+      "description": "The stream of coffee pours directly out of the solid bottom of the glass pot, passing straight through the glass sphere rather than flowing out of the spout at the top.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Truck exhaust smoke (drifts left, implies light wind)\",\n    \"Coffee pouring (gravity pulling fluid downward)\",\n    \"Steam from food (convection/heat causing it to rise)\",\n    \"Cars moving outside window (implied physical motion)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:27\",\n      \"entity\": \"Pouring coffee liquid\",\n      \"invariant_violated\": \"Plausible cause / physical boundary\",\n      \"description\": \"The stream of coffee pours directly out of the solid bottom of the glass pot, passing straight through the glass sphere rather than flowing out of the spout at the top.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```"
+}

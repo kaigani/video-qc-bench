@@ -1,0 +1,62 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:28:08.530Z",
+  "latencyMs": 247278,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 11909,
+    "total_tokens": 18130,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Position-1 block | green cube showing '2', hand resting on top | blue cube showing '2' | color changed green to blue between 0:00 and 0:02 with no visible swap or replacement",
+    "Position-2 block | green cube showing '2' | blue cube showing '3' mid-placement | original green cube gone by 0:02; no removal shown",
+    "Position-3 block | absent at 0:00 | green cube showing '2' | present by 0:02; plausibly hand-placed between frames",
+    "Position-4 block | absent | orange cube showing '2' | hand-placed around 0:04; order and delay plausible",
+    "Position-5 block | absent | light-blue cube showing '3' | freshly placed at 0:06; translucency consistent with motion blur",
+    "Position-6 block | absent | green cube showing '5' | hand-placed at 0:06; plausible",
+    "Position-7 block | absent | green cube showing '2' | present by 0:08; plausible",
+    "Position-8 block | absent | blue cube showing '6' | being placed at 0:08; plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "leftmost numbered block (position 1)",
+      "invariant_violated": "effect-without-cause",
+      "description": "At 0:00 the first block is a sharp green cube showing '2' with the hand resting on it; at 0:02 the same position holds a sharp blue cube showing '2'. No swap, replacement, or occlusion is shown — the hand simply moves from this block to place the next one. A stationary object's material color changes with no visible cause; the displaced green cube is never seen in the hand or elsewhere on the table.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "0:02",
+      "entity": "second numbered block (position 2)",
+      "invariant_violated": "cause-without-effect",
+      "description": "At 0:00 a green '2' cube stands at position 2. By 0:02 a blue '3' cube is mid-placement at that position and the green cube has vanished. The hand is never shown gripping or removing the green cube (it is on position 1 at 0:00 and on the incoming blue '3' at 0:02), so the removal of the original block is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Position-1 block | green cube showing '2', hand resting on top | blue cube showing '2' | color changed green to blue between 0:00 and 0:02 with no visible swap or replacement\",\n    \"Position-2 block | green cube showing '2' | blue cube showing '3' mid-placement | original green cube gone by 0:02; no removal shown\",\n    \"Position-3 block | absent at 0:00 | green cube showing '2' | present by 0:02; plausibly hand-placed between frames\",\n    \"Position-4 block | absent | orange cube showing '2' | hand-placed around 0:04; order and delay plausible\",\n    \"Position-5 block | absent | light-blue cube showing '3' | freshly placed at 0:06; translucency consistent with motion blur\",\n    \"Position-6 block | absent | green cube showing '5' | hand-placed at 0:06; plausible\",\n    \"Position-7 block | absent | green cube showing '2' | present by 0:08; plausible\",\n    \"Position-8 block | absent | blue cube showing '6' | being placed at 0:08; plausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"leftmost numbered block (position 1)\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"At 0:00 the first block is a sharp green cube showing '2' with the hand resting on it; at 0:02 the same position holds a sharp blue cube showing '2'. No swap, replacement, or occlusion is shown — the hand simply moves from this block to place the next one. A stationary object's material color changes with no visible cause; the displaced green cube is never seen in the hand or elsewhere on the table.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"second numbered block (position 2)\",\n      \"invariant_violated\": \"cause-without-effect\",\n      \"description\": \"At 0:00 a green '2' cube stands at position 2. By 0:02 a blue '3' cube is mid-placement at that position and the green cube has vanished. The hand is never shown gripping or removing the green cube (it is on position 1 at 0:00 and on the incoming blue '3' at 0:02), so the removal of the original block is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

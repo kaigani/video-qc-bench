@@ -1,0 +1,43 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:58.160Z",
+  "latencyMs": 16824,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 1084,
+    "total_tokens": 2460,
+    "cost": 0.005097,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005097,
+      "upstream_inference_prompt_cost": 0.001032,
+      "upstream_inference_completions_cost": 0.004065
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 931,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Subject extends left arm toward mirror, reflection mirrors pose and arm angle.",
+    "00:01 - Subject raises left arm overhead, reflection moves in exact temporal sync.",
+    "00:02 - Subject holds left arm fully extended overhead, reflection holds identical pose.",
+    "00:04 - Subject lowers left arm toward chest, reflection lowers mirrored arm in sync.",
+    "00:06 - Subject extends left arm outward again, reflection stays perfectly synchronized.",
+    "00:08 - Subject raises left arm overhead while pointing right foot, reflection mirrors pose flawlessly."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Subject extends left arm toward mirror, reflection mirrors pose and arm angle.\",\n    \"00:01 - Subject raises left arm overhead, reflection moves in exact temporal sync.\",\n    \"00:02 - Subject holds left arm fully extended overhead, reflection holds identical pose.\",\n    \"00:04 - Subject lowers left arm toward chest, reflection lowers mirrored arm in sync.\",\n    \"00:06 - Subject extends left arm outward again, reflection stays perfectly synchronized.\",\n    \"00:08 - Subject raises left arm overhead while pointing right foot, reflection mirrors pose flawlessly.\"\n  ],\n  \"findings\": []\n}"
+}

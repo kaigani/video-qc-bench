@@ -1,0 +1,63 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:17:57.383Z",
+  "latencyMs": 26517,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2911,
+    "total_tokens": 4305,
+    "cost": 0.03772,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03772,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.034932
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2571,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen interior with blue flower artwork",
+    "hallway with front door at end",
+    "opening connecting kitchen to hallway",
+    "person walks from kitchen into hallway",
+    "doorway on right side of hallway",
+    "person turns right into doorway",
+    "bedroom interior with bed and two chairs",
+    "person turns around in bedroom to exit",
+    "view looking out of bedroom doorway"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "bedroom chairs",
+      "invariant_violated": "functional arrangement",
+      "description": "Two dining-style chairs are placed side-by-side in the bedroom, spaced and positioned as if tucked under a table, but there is no table present.",
+      "severity": "minor",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "bedroom doorway view",
+      "invariant_violated": "spatial layout topology",
+      "description": "The woman entered the bedroom by turning right from the hallway, meaning the doorway is perpendicular to the hall. However, when looking out the doorway to exit, the view looks straight down the hallway to the front door, perfectly matching the original view from the kitchen opening. The bedroom has impossibly replaced the kitchen's position in the layout.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen interior with blue flower artwork\",\n    \"hallway with front door at end\",\n    \"opening connecting kitchen to hallway\",\n    \"person walks from kitchen into hallway\",\n    \"doorway on right side of hallway\",\n    \"person turns right into doorway\",\n    \"bedroom interior with bed and two chairs\",\n    \"person turns around in bedroom to exit\",\n    \"view looking out of bedroom doorway\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"bedroom chairs\",\n      \"invariant_violated\": \"functional arrangement\",\n      \"description\": \"Two dining-style chairs are placed side-by-side in the bedroom, spaced and positioned as if tucked under a table, but there is no table present.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"bedroom doorway view\",\n      \"invariant_violated\": \"spatial layout topology\",\n      \"description\": \"The woman entered the bedroom by turning right from the hallway, meaning the doorway is perpendicular to the hall. However, when looking out the doorway to exit, the view looks straight down the hallway to the front door, perfectly matching the original view from the kitchen opening. The bedroom has impossibly replaced the kitchen's position in the layout.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

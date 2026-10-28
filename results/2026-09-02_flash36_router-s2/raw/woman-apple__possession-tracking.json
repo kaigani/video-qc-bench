@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__possession-tracking",
+  "video": "woman-apple.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:40:26.578Z",
+  "latencyMs": 19002,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 1396,
+    "total_tokens": 2780,
+    "cost": 0.006273,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006273,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.005235
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1172,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:06: Red apple/tomato held between woman's hands in front of chest",
+    "00:00-00:09: Blue umbrella shaft held by woman's hands",
+    "00:07-00:09: Red apple/tomato is missing from woman's hands and unaccounted for"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple/tomato",
+      "invariant_violated": "continuous chain of custody",
+      "description": "The red object held between the woman's hands from 00:00 to 00:06 spontaneously vanishes from her hands at 00:07 as she turns, without being dropped, placed, or stowed.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:06: Red apple/tomato held between woman's hands in front of chest\",\n    \"00:00-00:09: Blue umbrella shaft held by woman's hands\",\n    \"00:07-00:09: Red apple/tomato is missing from woman's hands and unaccounted for\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"red apple/tomato\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"The red object held between the woman's hands from 00:00 to 00:06 spontaneously vanishes from her hands at 00:07 as she turns, without being dropped, placed, or stowed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

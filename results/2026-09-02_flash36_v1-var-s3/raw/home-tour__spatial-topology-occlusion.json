@@ -1,0 +1,49 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:45.217Z",
+  "latencyMs": 32474,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3070,
+    "total_tokens": 4496,
+    "cost": 0.012582,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012582,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0115125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2826,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen | stove on left countertop, standalone microwave on right countertop | stove on left with built-in overhead microwave | kitchen geometry shifts upon re-entry at 00:08",
+    "hallway | connects kitchen, exterior back door, and bedroom doorway | blue flower art on gray wall | background through doorway morphs between shots",
+    "bedroom | bed centered with chandelier and side windows | view back toward hallway doorway | internal bedroom geometry remains consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "kitchen layout",
+      "invariant_violated": "scene layout",
+      "description": "When exiting the bedroom back into the adjacent space, the kitchen architecture changes compared to 00:00: the microwave, originally sitting on the right countertop, is now a built-in unit mounted directly above the stove on the left counter, and the right counter area has transformed into a plain wall.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen | stove on left countertop, standalone microwave on right countertop | stove on left with built-in overhead microwave | kitchen geometry shifts upon re-entry at 00:08\",\n    \"hallway | connects kitchen, exterior back door, and bedroom doorway | blue flower art on gray wall | background through doorway morphs between shots\",\n    \"bedroom | bed centered with chandelier and side windows | view back toward hallway doorway | internal bedroom geometry remains consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"kitchen layout\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"When exiting the bedroom back into the adjacent space, the kitchen architecture changes compared to 00:00: the microwave, originally sitting on the right countertop, is now a built-in unit mounted directly above the stove on the left counter, and the right counter area has transformed into a plain wall.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

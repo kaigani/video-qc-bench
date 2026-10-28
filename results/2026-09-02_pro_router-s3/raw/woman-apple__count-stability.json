@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:20:41.583Z",
+  "latencyMs": 16305,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1465,
+    "total_tokens": 2883,
+    "cost": 0.020416,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020416,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.01758
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1271,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:07: Woman is holding 1 red fruit in her hands.",
+    "00:08 - 00:09: The red fruit is no longer in her hands (count becomes 0), and she is instead holding the umbrella handle."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07-00:08",
+      "entity": "red fruit",
+      "invariant_violated": "Object Permanence",
+      "description": "The red fruit held by the woman suddenly vanishes from her hands without being dropped, eaten, or stored as she turns around. Her empty hands are then seen holding the umbrella handle.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:07: Woman is holding 1 red fruit in her hands.\",\n    \"00:08 - 00:09: The red fruit is no longer in her hands (count becomes 0), and she is instead holding the umbrella handle.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07-00:08\",\n      \"entity\": \"red fruit\",\n      \"invariant_violated\": \"Object Permanence\",\n      \"description\": \"The red fruit held by the woman suddenly vanishes from her hands without being dropped, eaten, or stored as she turns around. Her empty hands are then seen holding the umbrella handle.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

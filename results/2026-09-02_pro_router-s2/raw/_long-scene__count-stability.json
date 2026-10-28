@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:39:03.996Z",
+  "latencyMs": 49431,
+  "usage": {
+    "prompt_tokens": 10623,
+    "completion_tokens": 4141,
+    "total_tokens": 14764,
+    "cost": 0.070938,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.070938,
+      "upstream_inference_prompt_cost": 0.021246,
+      "upstream_inference_completions_cost": 0.049692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3813,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "bills, 00:00-01:37, 0",
+    "bills, 01:38-01:40, 3, man places them on the counter",
+    "bills, 01:50-01:58, 0",
+    "sponges, 00:00-01:49, 0",
+    "sponges, 01:50-01:58, 1"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "bills",
+      "invariant_violated": "count changed without visible cause",
+      "description": "The three bills the man placed on the counter vanish between shots; when the counter is shown again, they are gone without anyone having removed them.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "sponges",
+      "invariant_violated": "count changed without visible cause",
+      "description": "A yellow sponge suddenly appears on the counter in the exact spot where the bills had been placed, without anyone bringing it there.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"bills, 00:00-01:37, 0\",\n    \"bills, 01:38-01:40, 3, man places them on the counter\",\n    \"bills, 01:50-01:58, 0\",\n    \"sponges, 00:00-01:49, 0\",\n    \"sponges, 01:50-01:58, 1\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"bills\",\n      \"invariant_violated\": \"count changed without visible cause\",\n      \"description\": \"The three bills the man placed on the counter vanish between shots; when the counter is shown again, they are gone without anyone having removed them.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"sponges\",\n      \"invariant_violated\": \"count changed without visible cause\",\n      \"description\": \"A yellow sponge suddenly appears on the counter in the exact spot where the bills had been placed, without anyone bringing it there.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

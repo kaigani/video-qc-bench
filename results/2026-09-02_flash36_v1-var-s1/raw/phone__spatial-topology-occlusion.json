@@ -1,0 +1,40 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:14.759Z",
+  "latencyMs": 10872,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 690,
+    "total_tokens": 2116,
+    "cost": 0.003657,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003657,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0025875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 574,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "staircase and railing | positioned to right of wall, leading up to paved upper walkway | consistent layout throughout shot | partially occluded by foreground phone",
+    "paved upper walkway | located at top of stairs | consistently visible behind stairs and person | background terrain matches across camera movement",
+    "foreground smartphone | held in observer's hands in foreground | moves between out-of-focus foreground and centered closeup | smoothly occludes stairs and railing behind it"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"staircase and railing | positioned to right of wall, leading up to paved upper walkway | consistent layout throughout shot | partially occluded by foreground phone\",\n    \"paved upper walkway | located at top of stairs | consistently visible behind stairs and person | background terrain matches across camera movement\",\n    \"foreground smartphone | held in observer's hands in foreground | moves between out-of-focus foreground and centered closeup | smoothly occludes stairs and railing behind it\"\n  ],\n  \"findings\": []\n}"
+}

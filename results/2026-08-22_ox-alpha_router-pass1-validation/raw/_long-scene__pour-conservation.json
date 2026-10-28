@@ -1,0 +1,58 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:08:34.008Z",
+  "latencyMs": 247165,
+  "usage": {
+    "prompt_tokens": 34881,
+    "completion_tokens": 6436,
+    "total_tokens": 41317,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:10 White sleeper-cab tractor-trailer (refrigerated box) parked left of diner; idling (steam from trailer); contents not visible; stationary",
+    "0:26-0:28 Glass coffee carafe, black lid/handle, filled with black coffee, lifted by waitress from coffee station",
+    "0:28-0:33 Carafe tilted over mug, pours steady black stream; level drops only slightly; carafe still mostly full after pour",
+    "0:28-0:33 White ceramic diner mug on counter: empty at start of pour, fills with black coffee from carafe stream",
+    "0:34-0:37 Ceramic plate: cornbread slice and fried egg, steaming, on counter",
+    "0:38-0:45 Mug held in man's hands at counter, full; plate of food in front of him",
+    "1:01-1:10 Mug resting on counter before seated man; carafe visible back at coffee station",
+    "1:11-1:18 Waitress lifts and removes plate from counter",
+    "1:21-1:28 Carafe at coffee station behind counter; waitress works near machine (cut may hide any self-pour)",
+    "1:29-1:37 Man's white mug plus a second white mug (waitress's) on counter, both in use, sunset light",
+    "1:39-1:41 Man's mug on counter beside folded $100 bill he lays down",
+    "1:43-1:51 Green Kenworth day-cab box truck parked outside; man walks to it and opens the driver's door"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:03",
+      "entity": "Truck parked outside the diner",
+      "invariant_violated": "container identity",
+      "description": "The exterior shots at 0:00-0:10 show a white sleeper-cab tractor-trailer with a refrigerated box idling beside the diner. At 1:03 the vehicle outside is a green Kenworth day-cab with a dry van box - different cab color, configuration, wheels, and hardware. No departure of the white semi or arrival of the green truck is ever shown, yet the man walks to the green truck and opens its door as his own at 1:43-1:51. The long cut (dusk to sunrise) could hide a legitimate vehicle swap, so this is flagged rather than stated as certain.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:10 White sleeper-cab tractor-trailer (refrigerated box) parked left of diner; idling (steam from trailer); contents not visible; stationary\",\n    \"0:26-0:28 Glass coffee carafe, black lid/handle, filled with black coffee, lifted by waitress from coffee station\",\n    \"0:28-0:33 Carafe tilted over mug, pours steady black stream; level drops only slightly; carafe still mostly full after pour\",\n    \"0:28-0:33 White ceramic diner mug on counter: empty at start of pour, fills with black coffee from carafe stream\",\n    \"0:34-0:37 Ceramic plate: cornbread slice and fried egg, steaming, on counter\",\n    \"0:38-0:45 Mug held in man's hands at counter, full; plate of food in front of him\",\n    \"1:01-1:10 Mug resting on counter before seated man; carafe visible back at coffee station\",\n    \"1:11-1:18 Waitress lifts and removes plate from counter\",\n    \"1:21-1:28 Carafe at coffee station behind counter; waitress works near machine (cut may hide any self-pour)\",\n    \"1:29-1:37 Man's white mug plus a second white mug (waitress's) on counter, both in use, sunset light\",\n    \"1:39-1:41 Man's mug on counter beside folded $100 bill he lays down\",\n    \"1:43-1:51 Green Kenworth day-cab box truck parked outside; man walks to it and opens the driver's door\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:03\",\n      \"entity\": \"Truck parked outside the diner\",\n      \"invariant_violated\": \"container identity\",\n      \"description\": \"The exterior shots at 0:00-0:10 show a white sleeper-cab tractor-trailer with a refrigerated box idling beside the diner. At 1:03 the vehicle outside is a green Kenworth day-cab with a dry van box - different cab color, configuration, wheels, and hardware. No departure of the white semi or arrival of the green truck is ever shown, yet the man walks to the green truck and opens its door as his own at 1:43-1:51. The long cut (dusk to sunrise) could hide a legitimate vehicle swap, so this is flagged rather than stated as certain.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

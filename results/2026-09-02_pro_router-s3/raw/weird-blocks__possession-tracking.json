@@ -1,0 +1,57 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:20:25.243Z",
+  "latencyMs": 24124,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 2706,
+    "total_tokens": 4090,
+    "cost": 0.03524,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03524,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.032472
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2387,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Hand holding green block '2'",
+    "00:00 - Green block '2' resting on table",
+    "00:01 - 00:07 - Hand moves across table, depositing a series of new blocks: blue '2', blue '3', green '2', yellow '2', light blue '3', green '5', green '2', light blue '6', green '3'"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Blocks",
+      "invariant_violated": "transfer completeness",
+      "description": "The hand starts with only one block but deposits a continuous trail of multiple new blocks onto the table as it moves. The new blocks appear out of nowhere without any source.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Held block",
+      "invariant_violated": "object identity",
+      "description": "The block held by the hand continuously changes its appearance (color and number) throughout the motion to match the blocks being deposited, starting as a green '2' and ending as a green '3'.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Hand holding green block '2'\",\n    \"00:00 - Green block '2' resting on table\",\n    \"00:01 - 00:07 - Hand moves across table, depositing a series of new blocks: blue '2', blue '3', green '2', yellow '2', light blue '3', green '5', green '2', light blue '6', green '3'\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Blocks\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The hand starts with only one block but deposits a continuous trail of multiple new blocks onto the table as it moves. The new blocks appear out of nowhere without any source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Held block\",\n      \"invariant_violated\": \"object identity\",\n      \"description\": \"The block held by the hand continuously changes its appearance (color and number) throughout the motion to match the blocks being deposited, starting as a green '2' and ending as a green '3'.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

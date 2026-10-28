@@ -1,0 +1,49 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:39:10.375Z",
+  "latencyMs": 32242,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 3547,
+    "total_tokens": 4973,
+    "cost": 0.01437075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01437075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.01330125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3278,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen counter | on left side of corridor leading from kitchen to hallway | rebuilt with over-the-range microwave at end | location relative to bedroom door shifts",
+    "bedroom doorway | located on right side wall of hallway perpendicular to corridor | rendered facing straight down hallway corridor when viewed from inside | orientation rotates 90 degrees between entry and exit",
+    "hallway with white door | located straight ahead at end of main corridor | visible through bedroom doorway facing down corridor | connectivity contradicts side-entry position"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "bedroom doorway and hallway spatial layout",
+      "invariant_violated": "connectivity",
+      "description": "The character enters the bedroom by turning right through a doorway on the side wall of the hallway (00:03). When she turns around inside the bedroom (00:07), looking through the same doorway shows a view aligned straight down the hallway toward the white exterior door, which is geometrically impossible since the doorway was on a side wall perpendicular to that axis.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen counter | on left side of corridor leading from kitchen to hallway | rebuilt with over-the-range microwave at end | location relative to bedroom door shifts\",\n    \"bedroom doorway | located on right side wall of hallway perpendicular to corridor | rendered facing straight down hallway corridor when viewed from inside | orientation rotates 90 degrees between entry and exit\",\n    \"hallway with white door | located straight ahead at end of main corridor | visible through bedroom doorway facing down corridor | connectivity contradicts side-entry position\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"bedroom doorway and hallway spatial layout\",\n      \"invariant_violated\": \"connectivity\",\n      \"description\": \"The character enters the bedroom by turning right through a doorway on the side wall of the hallway (00:03). When she turns around inside the bedroom (00:07), looking through the same doorway shows a view aligned straight down the hallway toward the white exterior door, which is geometrically impossible since the doorway was on a side wall perpendicular to that axis.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

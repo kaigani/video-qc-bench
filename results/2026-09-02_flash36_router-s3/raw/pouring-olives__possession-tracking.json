@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:11.438Z",
+  "latencyMs": 19491,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 2088,
+    "total_tokens": 3472,
+    "cost": 0.008868,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008868,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.00783
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1941,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Person holds a small glass container filled with green and dark olives above an empty large glass jar on a wooden board.",
+    "00:01-00:03 - Olives are poured from the small glass container into the large glass jar, settling at the bottom.",
+    "00:04 - Person sets aside the empty small glass container and reaches for another container to the right.",
+    "00:05-00:06 - Person picks up a second small glass container filled with olives.",
+    "00:07-00:09 - Second batch of olives is poured from the small container into the large glass jar."
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\":[\"00:00 - Person holds a small glass container filled with green and dark olives above an empty large glass jar on a wooden board.\",\"00:01-00:03 - Olives are poured from the small glass container into the large glass jar, settling at the bottom.\",\"00:04 - Person sets aside the empty small glass container and reaches for another container to the right.\",\"00:05-00:06 - Person picks up a second small glass container filled with olives.\",\"00:07-00:09 - Second batch of olives is poured from the small container into the large glass jar.\"],\"findings\":[]}"
+}

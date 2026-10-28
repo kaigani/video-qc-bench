@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:12:18.977Z",
+  "latencyMs": 74833,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 1962,
+    "total_tokens": 7863,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (foreground) | stands facing mirror, back to camera at left of frame, razor in right hand at chin | same stance, razor moves to upper lip then cheek | single continuous shot, no camera cuts, movements smooth",
+    "Man's reflection | right half of mirror, left-right inversion correct (razor in reflection appears on his right side matching foreground right hand) | same | reflection tracks foreground actions with correct mirror parity throughout",
+    "Wall mirror with ornate gold frame | mounted on cream wall, occupies right ~2/3 of frame | unchanged | frame edges occluded by man's head/shoulder in foreground, occlusion edges evolve smoothly as he moves",
+    "Wooden door with brass doorknob | seen open in mirror reflection, center of reflected view, knob on right side of door | unchanged | door position and swing orientation constant across all frames",
+    "Shelf/cabinet with toiletry bottles | seen in mirror reflection far right, behind camera in real space | unchanged | position and contents constant",
+    "Light switch/outlet plate | in reflection on wall between door and man's reflection | unchanged | constant position across all frames"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (foreground) | stands facing mirror, back to camera at left of frame, razor in right hand at chin | same stance, razor moves to upper lip then cheek | single continuous shot, no camera cuts, movements smooth\",\n    \"Man's reflection | right half of mirror, left-right inversion correct (razor in reflection appears on his right side matching foreground right hand) | same | reflection tracks foreground actions with correct mirror parity throughout\",\n    \"Wall mirror with ornate gold frame | mounted on cream wall, occupies right ~2/3 of frame | unchanged | frame edges occluded by man's head/shoulder in foreground, occlusion edges evolve smoothly as he moves\",\n    \"Wooden door with brass doorknob | seen open in mirror reflection, center of reflected view, knob on right side of door | unchanged | door position and swing orientation constant across all frames\",\n    \"Shelf/cabinet with toiletry bottles | seen in mirror reflection far right, behind camera in real space | unchanged | position and contents constant\",\n    \"Light switch/outlet plate | in reflection on wall between door and man's reflection | unchanged | constant position across all frames\"\n  ],\n  \"findings\": []\n}"
+}

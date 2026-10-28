@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:52:13.328Z",
+  "latencyMs": 170163,
+  "usage": {
+    "prompt_tokens": 34939,
+    "completion_tokens": 5821,
+    "total_tokens": 40760,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | wiping counter with cloth behind counter, night interior | leaning on counter with own mug at sunrise, then resuming wipe-down | cloth-counter contact maintained during wipes; lifts coffee pot ~26s and pours 28-32s; grips and clears customer's plate 72-77s; receives cash 99-101s; all hand-object contacts visibly established before objects move",
+    "male customer | enters diner at night, approaches counter | walks out to truck at sunrise | sits on counter stool ~26s with stool/counter support; grips mug with both hands from ~38s onward; slides cash across counter 99-101s after contact; continuous gait to truck 103-107s",
+    "coffee pot | resting at coffee machine behind counter | returned after pour | lifted by waitress ~26s, tilt-pour stream enters mug 28-32s, pour stops as pot retracts 32s",
+    "coffee mug | empty, stationary on counter | held by customer at counter | remains supported by counter during pour; no motion before or without contact",
+    "plate of food | placed in front of customer | carried away by waitress toward kitchen | stationary on counter until waitress grips it 72-77s; carried with both hands",
+    "cash bills | in customer's hand | lying flat on counter | contact with counter established as hand slides them 99-101s; no movement before contact",
+    "truck outside | parked, idling at night | customer reaches door at sunrise | static throughout; no unsupported motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | wiping counter with cloth behind counter, night interior | leaning on counter with own mug at sunrise, then resuming wipe-down | cloth-counter contact maintained during wipes; lifts coffee pot ~26s and pours 28-32s; grips and clears customer's plate 72-77s; receives cash 99-101s; all hand-object contacts visibly established before objects move\",\n    \"male customer | enters diner at night, approaches counter | walks out to truck at sunrise | sits on counter stool ~26s with stool/counter support; grips mug with both hands from ~38s onward; slides cash across counter 99-101s after contact; continuous gait to truck 103-107s\",\n    \"coffee pot | resting at coffee machine behind counter | returned after pour | lifted by waitress ~26s, tilt-pour stream enters mug 28-32s, pour stops as pot retracts 32s\",\n    \"coffee mug | empty, stationary on counter | held by customer at counter | remains supported by counter during pour; no motion before or without contact\",\n    \"plate of food | placed in front of customer | carried away by waitress toward kitchen | stationary on counter until waitress grips it 72-77s; carried with both hands\",\n    \"cash bills | in customer's hand | lying flat on counter | contact with counter established as hand slides them 99-101s; no movement before contact\",\n    \"truck outside | parked, idling at night | customer reaches door at sunrise | static throughout; no unsupported motion\"\n  ],\n  \"findings\": []\n}"
+}

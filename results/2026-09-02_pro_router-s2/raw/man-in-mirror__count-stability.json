@@ -1,0 +1,57 @@
+{
+  "key": "man-in-mirror__count-stability",
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:12:55.921Z",
+  "latencyMs": 18468,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1855,
+    "total_tokens": 3273,
+    "cost": 0.025096,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025096,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.02226
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1536,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:02: 1 tool in foreground hand (comb), 1 tool in reflection hand (razor)",
+    "00:02 - 00:04: 1 tool in foreground hand (comb), 1 tool in reflection hand (comb)",
+    "00:04 - 00:09: 1 tool in foreground hand (comb), 1 tool in reflection hand (razor)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "tool in reflection",
+      "invariant_violated": "No Unexplained Transformations",
+      "description": "The tool held in the reflection spontaneously transforms from a white razor into a dark comb as the man moves his hand towards his hair, with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "tool in reflection",
+      "invariant_violated": "No Unexplained Transformations",
+      "description": "The tool held in the reflection spontaneously transforms back from a dark comb to a white razor as the man moves his hand back towards his face, with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:02: 1 tool in foreground hand (comb), 1 tool in reflection hand (razor)\",\n    \"00:02 - 00:04: 1 tool in foreground hand (comb), 1 tool in reflection hand (comb)\",\n    \"00:04 - 00:09: 1 tool in foreground hand (comb), 1 tool in reflection hand (razor)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"tool in reflection\",\n      \"invariant_violated\": \"No Unexplained Transformations\",\n      \"description\": \"The tool held in the reflection spontaneously transforms from a white razor into a dark comb as the man moves his hand towards his hair, with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"tool in reflection\",\n      \"invariant_violated\": \"No Unexplained Transformations\",\n      \"description\": \"The tool held in the reflection spontaneously transforms back from a dark comb to a white razor as the man moves his hand back towards his face, with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

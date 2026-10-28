@@ -1,0 +1,50 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:46:50.675Z",
+  "latencyMs": 96931,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 3191,
+    "total_tokens": 9087,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 — Large glass jar: 0 olives, empty with bottom clearly visible",
+    "0:02 — Large glass jar: ~14 olives (green and dark purple mix); cause: person visibly pouring olives from small glass bowl into jar",
+    "0:04 — Large glass jar: ~24 olives; cause: continued visible pouring from small glass bowl",
+    "0:06 — Large glass jar: ~34 olives; cause: continued visible pouring from small glass bowl",
+    "0:08 — Large glass jar: ~40 olives; cause: continued visible pouring from small glass bowl",
+    "0:00 — Small glass bowl in hands: ~5 green olives (partially hand-occluded), tipped and emptied into jar by 0:02",
+    "0:06 — Small glass bowl in hands: refilled with ~6 olives, again poured into jar through 0:08",
+    "0:00 — Stainless steel bowl (rear): ~11 green olives",
+    "0:02-0:04 — Stainless steel bowl: ~10-11 green olives, essentially unchanged",
+    "0:06-0:08 — Stainless steel bowl: ~6 green olives; decrease consistent with person refilling the pour bowl from it across jump cuts (implied transfer, same kind of object, ongoing manipulation)",
+    "0:00 — White ceramic bowl (front right): ~9 green olives",
+    "0:08 — White ceramic bowl: ~8 green olives, count stable within occlusion/angle tolerance",
+    "All olives remain olives throughout; no object changes kind at any tracked moment"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 — Large glass jar: 0 olives, empty with bottom clearly visible\",\n    \"0:02 — Large glass jar: ~14 olives (green and dark purple mix); cause: person visibly pouring olives from small glass bowl into jar\",\n    \"0:04 — Large glass jar: ~24 olives; cause: continued visible pouring from small glass bowl\",\n    \"0:06 — Large glass jar: ~34 olives; cause: continued visible pouring from small glass bowl\",\n    \"0:08 — Large glass jar: ~40 olives; cause: continued visible pouring from small glass bowl\",\n    \"0:00 — Small glass bowl in hands: ~5 green olives (partially hand-occluded), tipped and emptied into jar by 0:02\",\n    \"0:06 — Small glass bowl in hands: refilled with ~6 olives, again poured into jar through 0:08\",\n    \"0:00 — Stainless steel bowl (rear): ~11 green olives\",\n    \"0:02-0:04 — Stainless steel bowl: ~10-11 green olives, essentially unchanged\",\n    \"0:06-0:08 — Stainless steel bowl: ~6 green olives; decrease consistent with person refilling the pour bowl from it across jump cuts (implied transfer, same kind of object, ongoing manipulation)\",\n    \"0:00 — White ceramic bowl (front right): ~9 green olives\",\n    \"0:08 — White ceramic bowl: ~8 green olives, count stable within occlusion/angle tolerance\",\n    \"All olives remain olives throughout; no object changes kind at any tracked moment\"\n  ],\n  \"findings\": []\n}"
+}

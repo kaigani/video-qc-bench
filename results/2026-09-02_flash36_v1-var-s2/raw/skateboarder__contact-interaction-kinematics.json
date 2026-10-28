@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:41:23.267Z",
+  "latencyMs": 12370,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 686,
+    "total_tokens": 2138,
+    "cost": 0.0036615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0036615,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.0025725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 536,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skateboarder | Standing/crouching on skateboard deck | Rolling away on skateboard deck | Pops board off ground at 00:01, catches deck airborne at 00:02, lands on deck at 00:03; pops second trick at 00:08, lands cleanly at 00:09",
+    "Skateboard | Four wheels contacting concrete surface | Four wheels contacting concrete surface | Separates from feet during jump at 00:01-00:03 and 00:08-00:09 under realistic physical trajectories"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skateboarder | Standing/crouching on skateboard deck | Rolling away on skateboard deck | Pops board off ground at 00:01, catches deck airborne at 00:02, lands on deck at 00:03; pops second trick at 00:08, lands cleanly at 00:09\",\n    \"Skateboard | Four wheels contacting concrete surface | Four wheels contacting concrete surface | Separates from feet during jump at 00:01-00:03 and 00:08-00:09 under realistic physical trajectories\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:41:05.138Z",
+  "latencyMs": 18997,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1692,
+    "total_tokens": 3117,
+    "cost": 0.00741375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00741375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.006345
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1452,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person hands | holding small glass container of green olives at 00:00 | pouring into jar at 00:03 | tipped container to release olives into jar",
+    "poured olives | green in source container at 00:00 | mix of green and dark purple in jar at 00:03 | green olives transform into dark purple olives mid-fall inside the jar",
+    "second container of olives | picked up at 00:05 | emptied into jar at 00:09 | poured olives into jar"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "falling olives",
+      "invariant_violated": "effect_without_cause",
+      "description": "As green olives are poured from the small glass container into the jar, several dark purple olives spontaneously materialize and transform mid-fall without any physical cause.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person hands | holding small glass container of green olives at 00:00 | pouring into jar at 00:03 | tipped container to release olives into jar\",\n    \"poured olives | green in source container at 00:00 | mix of green and dark purple in jar at 00:03 | green olives transform into dark purple olives mid-fall inside the jar\",\n    \"second container of olives | picked up at 00:05 | emptied into jar at 00:09 | poured olives into jar\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"falling olives\",\n      \"invariant_violated\": \"effect_without_cause\",\n      \"description\": \"As green olives are poured from the small glass container into the jar, several dark purple olives spontaneously materialize and transform mid-fall without any physical cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:40:05.997Z",
+  "latencyMs": 11704,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1291,
+    "total_tokens": 2529,
+    "cost": 0.00576975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00576975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00484125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1032,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background person | carrying red jug walking away | walking away without jug | red jug disappears around 00:01",
+    "smartphone display | foreground, blurred | foreground, in focus showing morphing text | text and numbers display garbled AI artifacts"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red container / jug carried by background walker",
+      "invariant_violated": "object permanence",
+      "description": "The red jug carried in the right hand of the person in the background vanishes abruptly from frame while they walk forward.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "smartphone screen text",
+      "invariant_violated": "text stability and legibility",
+      "description": "The text and numerals on the smartphone display morph dynamically into garbled, nonsensical AI artifacts as the device enters focus.",
+      "severity": "minor",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"background person | carrying red jug walking away | walking away without jug | red jug disappears around 00:01\",\n    \"smartphone display | foreground, blurred | foreground, in focus showing morphing text | text and numbers display garbled AI artifacts\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"red container / jug carried by background walker\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The red jug carried in the right hand of the person in the background vanishes abruptly from frame while they walk forward.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"smartphone screen text\",\n      \"invariant_violated\": \"text stability and legibility\",\n      \"description\": \"The text and numerals on the smartphone display morph dynamically into garbled, nonsensical AI artifacts as the device enters focus.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

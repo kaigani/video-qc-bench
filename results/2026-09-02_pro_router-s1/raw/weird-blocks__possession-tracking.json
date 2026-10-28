@@ -1,0 +1,67 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:37:23.684Z",
+  "latencyMs": 33118,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 4049,
+    "total_tokens": 5433,
+    "cost": 0.051356,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.051356,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.048588
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3586,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Left Green '2' block in Right Hand",
+    "00:00: Right Green '2' block on Table",
+    "00:01-00:07: Block in hand dragged across Table, generating a line of new blocks",
+    "00:01: Right Green '2' block disappears",
+    "00:01-00:07: Multiple new blocks (Blue '2', Blue '3', Green '2', Green '2', Yellow '2', Yellow '3', Blue '5', Green '2', Blue '6') appear sequentially on Table"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Right Green '2' block",
+      "invariant_violated": "placement persistence",
+      "description": "The green block with the number '2' initially sitting on the right side of the table vanishes without being moved as the hand drags the other block over its position.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Generated blocks",
+      "invariant_violated": "continuous chain of custody",
+      "description": "Multiple new blocks spontaneously materialize on the table, left behind by the dragged block. They appear from thin air with no prior location or physical source.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Dragged block",
+      "invariant_violated": "object identity",
+      "description": "The block held and dragged by the hand continuously changes its physical properties, transforming into different colors and numbers (e.g., from a green '2' to a blue '3') while in plain view.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Left Green '2' block in Right Hand\",\n    \"00:00: Right Green '2' block on Table\",\n    \"00:01-00:07: Block in hand dragged across Table, generating a line of new blocks\",\n    \"00:01: Right Green '2' block disappears\",\n    \"00:01-00:07: Multiple new blocks (Blue '2', Blue '3', Green '2', Green '2', Yellow '2', Yellow '3', Blue '5', Green '2', Blue '6') appear sequentially on Table\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Right Green '2' block\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"The green block with the number '2' initially sitting on the right side of the table vanishes without being moved as the hand drags the other block over its position.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Generated blocks\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"Multiple new blocks spontaneously materialize on the table, left behind by the dragged block. They appear from thin air with no prior location or physical source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Dragged block\",\n      \"invariant_violated\": \"object identity\",\n      \"description\": \"The block held and dragged by the hand continuously changes its physical properties, transforming into different colors and numbers (e.g., from a green '2' to a blue '3') while in plain view.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

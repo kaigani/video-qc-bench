@@ -1,0 +1,60 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:41:45.493Z",
+  "latencyMs": 100861,
+  "usage": {
+    "prompt_tokens": 5360,
+    "completion_tokens": 2516,
+    "total_tokens": 7876,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Establishing shot; woman's hair largely settled; hood whip antenna perfectly straight and vertical; desert scrub static (rigid woody material, not expected to deform); background road/poles translating past camera implying vehicle motion or tracking pan",
+    "00:04-00:06: Strong relative airflow now implied — woman's hair begins streaming noticeably rearward; antenna still straight; jacket fabric still; background parallax continues",
+    "00:06-00:08: Hair streams dramatically backward (substantial airflow, equivalent to highway-speed relative wind); whip antenna remains rigidly vertical in every frame; jacket collar/shoulder fabric shows no visible flutter; arms-crossed pose pins much of the jacket",
+    "Whip antenna: thin, light, fully exposed element on the hood — the single most wind-sensitive object in frame besides hair",
+    "Woman's chambray/cotton jacket: light-to-medium fabric; collar and shoulder area exposed to the same airflow as hair, though torso fabric is constrained by her crossed arms on the window sill",
+    "Desert scrub and distant brush: rigid materials; excluded from wind-response comparison per material confound"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "car whip antenna",
+      "invariant_violated": "physical influence must affect everything it should",
+      "description": "From ~00:04 onward the woman's hair streams dramatically backward, implying strong relative airflow (moving vehicle or wind). The thin whip antenna on the hood — a light, fully exposed element that should flex rearward under the same airflow — remains perfectly straight and vertical in every frame through 00:08, contradicting the implied cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "woman's jacket collar and shoulders",
+      "invariant_violated": "wind affects all comparably exposed light materials",
+      "description": "At peak hair streaming (00:06-00:08) the exposed collar and shoulder fabric of her cotton jacket shows no flutter at all, while her hair is blown violently. Partially mitigated by the arms-crossed pose pinning the fabric and the heavier material relative to hair, so flagged as minor with reduced confidence.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Establishing shot; woman's hair largely settled; hood whip antenna perfectly straight and vertical; desert scrub static (rigid woody material, not expected to deform); background road/poles translating past camera implying vehicle motion or tracking pan\",\n    \"00:04-00:06: Strong relative airflow now implied — woman's hair begins streaming noticeably rearward; antenna still straight; jacket fabric still; background parallax continues\",\n    \"00:06-00:08: Hair streams dramatically backward (substantial airflow, equivalent to highway-speed relative wind); whip antenna remains rigidly vertical in every frame; jacket collar/shoulder fabric shows no visible flutter; arms-crossed pose pins much of the jacket\",\n    \"Whip antenna: thin, light, fully exposed element on the hood — the single most wind-sensitive object in frame besides hair\",\n    \"Woman's chambray/cotton jacket: light-to-medium fabric; collar and shoulder area exposed to the same airflow as hair, though torso fabric is constrained by her crossed arms on the window sill\",\n    \"Desert scrub and distant brush: rigid materials; excluded from wind-response comparison per material confound\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"car whip antenna\",\n      \"invariant_violated\": \"physical influence must affect everything it should\",\n      \"description\": \"From ~00:04 onward the woman's hair streams dramatically backward, implying strong relative airflow (moving vehicle or wind). The thin whip antenna on the hood — a light, fully exposed element that should flex rearward under the same airflow — remains perfectly straight and vertical in every frame through 00:08, contradicting the implied cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"woman's jacket collar and shoulders\",\n      \"invariant_violated\": \"wind affects all comparably exposed light materials\",\n      \"description\": \"At peak hair streaming (00:06-00:08) the exposed collar and shoulder fabric of her cotton jacket shows no flutter at all, while her hair is blown violently. Partially mitigated by the arms-crossed pose pinning the fabric and the heavier material relative to hair, so flagged as minor with reduced confidence.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

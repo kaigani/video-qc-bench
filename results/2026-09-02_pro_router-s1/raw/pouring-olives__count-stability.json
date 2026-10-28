@@ -1,0 +1,52 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:23.863Z",
+  "latencyMs": 13329,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 977,
+    "total_tokens": 2395,
+    "cost": 0.01456,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01456,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.011724
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 715,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Person starts pouring green olives from a small jar into a large empty jar.",
+    "00:01 - As the green olives enter the large jar, some appear as black olives.",
+    "00:02 - The large jar continues to fill with a mix of green and black olives, despite only green olives being poured.",
+    "00:04 - The first small jar is emptied.",
+    "00:05 - Person starts pouring from a second small jar, which visibly contains only green olives.",
+    "00:06-00:08 - Again, black olives appear in the large jar as the green olives are poured."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "Object kind transformation",
+      "description": "The person pours only green olives from a small jar, but black olives mysteriously appear and accumulate in the large jar without any visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Person starts pouring green olives from a small jar into a large empty jar.\",\n    \"00:01 - As the green olives enter the large jar, some appear as black olives.\",\n    \"00:02 - The large jar continues to fill with a mix of green and black olives, despite only green olives being poured.\",\n    \"00:04 - The first small jar is emptied.\",\n    \"00:05 - Person starts pouring from a second small jar, which visibly contains only green olives.\",\n    \"00:06-00:08 - Again, black olives appear in the large jar as the green olives are poured.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"Object kind transformation\",\n      \"description\": \"The person pours only green olives from a small jar, but black olives mysteriously appear and accumulate in the large jar without any visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,61 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:18.795Z",
+  "latencyMs": 27041,
+  "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 2834,
+    "total_tokens": 4215,
+    "cost": 0.01166325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01166325,
+      "upstream_inference_prompt_cost": 0.00103575,
+      "upstream_inference_completions_cost": 0.0106275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2397,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Large glass jar: empty (0% fill)",
+    "00:00 - Small glass jar 1: filled with green olives (~100% fill)",
+    "00:01-00:03 - Small glass jar 1: emptying to 0%, pouring green and dark purple/black olives into large glass jar",
+    "00:04 - Large glass jar: filled to ~30% with a mixture of green and black/purple olives",
+    "00:05-00:06 - Small glass jar 2: filled with green olives (~100% fill)",
+    "00:07-00:09 - Small glass jar 2: emptying to 0%, pouring green and dark purple/black olives into large glass jar",
+    "00:09 - Large glass jar: filled to ~60% with a mixture of green and black/purple olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Small glass jar 1 / poured olives",
+      "invariant_violated": "source_contents",
+      "description": "The small transparent glass container visibly holds only green olives prior to pouring, but dark purple/black olives appear mid-air and fall into the large jar as it is tipped.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Small glass jar 2 / poured olives",
+      "invariant_violated": "source_contents",
+      "description": "The second small glass container holds predominantly green olives, but dark purple/black olives spontaneously emerge from it while pouring into the main jar.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Large glass jar: empty (0% fill)\",\n    \"00:00 - Small glass jar 1: filled with green olives (~100% fill)\",\n    \"00:01-00:03 - Small glass jar 1: emptying to 0%, pouring green and dark purple/black olives into large glass jar\",\n    \"00:04 - Large glass jar: filled to ~30% with a mixture of green and black/purple olives\",\n    \"00:05-00:06 - Small glass jar 2: filled with green olives (~100% fill)\",\n    \"00:07-00:09 - Small glass jar 2: emptying to 0%, pouring green and dark purple/black olives into large glass jar\",\n    \"00:09 - Large glass jar: filled to ~60% with a mixture of green and black/purple olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Small glass jar 1 / poured olives\",\n      \"invariant_violated\": \"source_contents\",\n      \"description\": \"The small transparent glass container visibly holds only green olives prior to pouring, but dark purple/black olives appear mid-air and fall into the large jar as it is tipped.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Small glass jar 2 / poured olives\",\n      \"invariant_violated\": \"source_contents\",\n      \"description\": \"The second small glass container holds predominantly green olives, but dark purple/black olives spontaneously emerge from it while pouring into the main jar.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

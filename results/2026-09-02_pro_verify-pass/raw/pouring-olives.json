@@ -1,0 +1,283 @@
+{
+  "video": "pouring-olives",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:58.722Z",
+  "latencyMs": 24062,
+  "usage": {
+    "prompt_tokens": 2055,
+    "completion_tokens": 2482,
+    "total_tokens": 4537,
+    "cost": 0.033894,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.033894,
+      "upstream_inference_prompt_cost": 0.00411,
+      "upstream_inference_completions_cost": 0.029784
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1368,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|pouring-olives|baseline-generalist|0",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "olives being poured",
+        "invariant_violated": "color consistency",
+        "description": "The small jar initially contains only green olives, but as they are poured into the large jar, several black/dark purple olives fall out, changing color mid-air.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|pouring-olives|baseline-generalist|1",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "olives in second jar",
+        "invariant_violated": "color consistency",
+        "description": "The second small jar also appears to contain only green olives before being poured, but black olives fall from it into the large jar.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|pouring-olives|causal-temporal-sequence|0",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "falling olives",
+        "invariant_violated": "proportionality & completion",
+        "description": "The person pours from a jar containing only green olives, but a mixture of green and dark purple/black olives falls out and lands in the larger jar. The effect does not match the cause.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|pouring-olives|causal-temporal-sequence|1",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "falling olives",
+        "invariant_violated": "proportionality & completion",
+        "description": "The person pours from a second jar containing only green olives. As the olives fall, a mix of green and dark olives comes out of the jar and lands in the larger container.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|pouring-olives|character-continuity|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Person",
+        "invariant_violated": "Accessory Continuity",
+        "description": "A watch with a light blue band suddenly appears on the person's left wrist as they reach towards the bowls on the right, whereas the wrist was clearly bare earlier in the same continuous shot.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|pouring-olives|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "falling olives / large jar",
+        "invariant_violated": "solidity",
+        "description": "The stream of falling olives renders over the top of the large jar's front rim, clipping directly through the solid glass barrier rather than falling behind it into the opening.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|pouring-olives|contact-interaction-kinematics|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "olives",
+        "invariant_violated": "solidity",
+        "description": "As the olives settle at the bottom of the large jar, they fail to behave as solid rigid bodies, visibly clipping into and merging with one another in the pile.",
+        "severity": "severe",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|pouring-olives|contact-interaction-kinematics|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "falling olives / large jar",
+        "invariant_violated": "solidity",
+        "description": "During the second pour, the falling stream of olives again clips through the front glass rim of the large jar instead of passing cleanly through the opening.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|pouring-olives|object-persistence-state|0",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "poured olives (first pour)",
+        "invariant_violated": "identity",
+        "description": "The olives in the small jar are uniformly green. As they are poured and fall through the air into the large jar, many of them instantly transform into black/dark purple olives.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|pouring-olives|object-persistence-state|1",
+      "cls": "TP:OLIV-2",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "olives in large jar",
+        "invariant_violated": "persistence",
+        "description": "Across a cut, the volume of olives in the large jar abruptly decreases. The jar goes from being approximately half full at 00:03 to noticeably less full at 00:05, with no visible action of removal.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|pouring-olives|object-persistence-state|2",
+      "cls": "TP:OLIV-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "poured olives (second pour)",
+        "invariant_violated": "identity",
+        "description": "During the second pour, the olives inside the small jar are again exclusively green, but transform into a mix of green and black olives as they fall into the large jar.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|pouring-olives|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "falling olives",
+        "invariant_violated": "depth ordering & occlusion",
+        "description": "As the olives are poured, the stream of falling olives is rendered in front of the near-side rim of the large receiving jar. Since they are falling into the jar's opening, they should be occluded by the front rim.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|pouring-olives|spatial-topology-occlusion|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "pouring jar and falling olives",
+        "invariant_violated": "depth ordering & occlusion",
+        "description": "During the second pour, the bottom edge of the small pouring jar and the falling olives are again rendered overlapping the front rim of the large jar, violating the expected depth ordering for objects entering the opening.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "The small jar is clearly filled with only green olives, but as they fall from the jar, dark purple/black olives appear in the stream.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "During the second pour at 00:06, the small jar contains only green olives, but black olives fall out of it into the larger jar.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "The visual effect of black olives falling out of a jar that only contains green olives is a clear hallucination or error in generation.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "This defect is clearly visible during the second pour; green olives in the small jar turn into a mix of green and black olives as they fall.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "REJECT",
+      "reason": "There is a noticeable cut at 00:04, after which a watch appears on his wrist and a small bottle appears on the table. The shot is not continuous.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "At 00:01, the motion blur and stream of the falling olives visibly render over the top of the front glass rim of the large jar, instead of passing behind it into the opening.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "As the olives accumulate in the large jar, their shapes warp and merge into each other, failing to maintain rigid body collision.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F8",
+      "verdict": "CONFIRM",
+      "reason": "At 00:06, the second stream of falling olives again renders over the front rim of the large jar, clipping through the glass.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F9",
+      "verdict": "CONFIRM",
+      "reason": "The olives undergo a spontaneous identity/color change from green to black mid-air as they are poured.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F10",
+      "verdict": "REJECT",
+      "reason": "There is a clear cut at 00:04. During this time skip, a watch appears, a small bottle is placed on the table, and the volume of olives changes. This implies elapsed time, during which olives could have been removed.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.95
+    },
+    {
+      "id": "F11",
+      "verdict": "CONFIRM",
+      "reason": "The green olives in the second jar spontaneously transform into a mix of green and black olives as they fall.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F12",
+      "verdict": "CONFIRM",
+      "reason": "The stream of olives is incorrectly rendered in front of the large jar's near-side rim, violating expected depth occlusion for objects falling into an opening.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F13",
+      "verdict": "CONFIRM",
+      "reason": "At 00:06-00:07, the bottom of the small jar and the falling olives render over the front rim of the large jar, which should occlude them.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The small jar is clearly filled with only green olives, but as they fall from the jar, dark purple/black olives appear in the stream.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"During the second pour at 00:06, the small jar contains only green olives, but black olives fall out of it into the larger jar.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The visual effect of black olives falling out of a jar that only contains green olives is a clear hallucination or error in generation.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"This defect is clearly visible during the second pour; green olives in the small jar turn into a mix of green and black olives as they fall.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"There is a noticeable cut at 00:04, after which a watch appears on his wrist and a small bottle appears on the table. The shot is not continuous.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:01, the motion blur and stream of the falling olives visibly render over the top of the front glass rim of the large jar, instead of passing behind it into the opening.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"As the olives accumulate in the large jar, their shapes warp and merge into each other, failing to maintain rigid body collision.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:06, the second stream of falling olives again renders over the front rim of the large jar, clipping through the glass.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The olives undergo a spontaneous identity/color change from green to black mid-air as they are poured.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F10\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"There is a clear cut at 00:04. During this time skip, a watch appears, a small bottle is placed on the table, and the volume of olives changes. This implies elapsed time, during which olives could have been removed.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F11\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The green olives in the second jar spontaneously transform into a mix of green and black olives as they fall.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F12\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The stream of olives is incorrectly rendered in front of the large jar's near-side rim, violating expected depth occlusion for objects falling into an opening.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F13\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:06-00:07, the bottom of the small jar and the falling olives render over the front rim of the large jar, which should occlude them.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

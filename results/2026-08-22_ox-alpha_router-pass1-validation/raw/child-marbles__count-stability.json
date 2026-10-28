@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:04:27.613Z",
+  "latencyMs": 47186,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1898,
+    "total_tokens": 7794,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — Glass bowl: 8 plastic balls visible (2 red, 3 yellow, 3 green); baseline count on sharp frame",
+    "00:02 — Bowl: 8 balls + 1 red ball held above bowl by child; count change (8→9) has visible cause (child adding red ball)",
+    "00:04 — Bowl: ~9 balls (3 red, 3 yellow, 3 green); added red ball now inside; child's hands in bowl, some balls occluded by hands",
+    "00:06 — Bowl: ~7 balls visible + 1 yellow ball lifted in child's right hand; apparent decrease explained by visible pickup, remaining balls partially occluded by hand",
+    "00:08 — Bowl: child stirring balls, heavy motion blur; count not resolvable on this frame; no count change inferred from blurred frame",
+    "00:00-00:08 — Decorated egg in silver cup (right of table): count 1, static, no change",
+    "00:00-00:02 — Loose balls at right frame edge (red, green, yellow): cropped by frame edge, treated as present, not counted in bowl"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — Glass bowl: 8 plastic balls visible (2 red, 3 yellow, 3 green); baseline count on sharp frame\",\n    \"00:02 — Bowl: 8 balls + 1 red ball held above bowl by child; count change (8→9) has visible cause (child adding red ball)\",\n    \"00:04 — Bowl: ~9 balls (3 red, 3 yellow, 3 green); added red ball now inside; child's hands in bowl, some balls occluded by hands\",\n    \"00:06 — Bowl: ~7 balls visible + 1 yellow ball lifted in child's right hand; apparent decrease explained by visible pickup, remaining balls partially occluded by hand\",\n    \"00:08 — Bowl: child stirring balls, heavy motion blur; count not resolvable on this frame; no count change inferred from blurred frame\",\n    \"00:00-00:08 — Decorated egg in silver cup (right of table): count 1, static, no change\",\n    \"00:00-00:02 — Loose balls at right frame edge (red, green, yellow): cropped by frame edge, treated as present, not counted in bowl\"\n  ],\n  \"findings\": []\n}"
+}

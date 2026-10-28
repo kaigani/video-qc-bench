@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:36:06.784Z",
+  "latencyMs": 48692,
+  "usage": {
+    "prompt_tokens": 10443,
+    "completion_tokens": 2355,
+    "total_tokens": 12798,
+    "cost": 0.0166635,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0166635,
+      "upstream_inference_prompt_cost": 0.00783225,
+      "upstream_inference_completions_cost": 0.00883125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2070,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | female diner employee wearing blue shirt and white apron | duplicated in frame at 01:52",
+    "semi-truck | white aerodynamic semi-truck parked outside diner | changes to a dark green conventional truck at 01:41"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "semi-truck",
+      "invariant_violated": "appearance_inconsistency",
+      "description": "The semi-truck parked outside the diner changes from a white aerodynamic cab at 00:00 to a dark green conventional truck with chrome exhaust stacks.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "entity_duplication",
+      "description": "As the waitress gets up from the counter stool and moves to the right, an identical second waitress is seen standing at the kitchen pass-through counter in the background, resulting in two waitresses simultaneously in the frame.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | female diner employee wearing blue shirt and white apron | duplicated in frame at 01:52\",\n    \"semi-truck | white aerodynamic semi-truck parked outside diner | changes to a dark green conventional truck at 01:41\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"semi-truck\",\n      \"invariant_violated\": \"appearance_inconsistency\",\n      \"description\": \"The semi-truck parked outside the diner changes from a white aerodynamic cab at 00:00 to a dark green conventional truck with chrome exhaust stacks.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"entity_duplication\",\n      \"description\": \"As the waitress gets up from the counter stool and moves to the right, an identical second waitress is seen standing at the kitchen pass-through counter in the background, resulting in two waitresses simultaneously in the frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

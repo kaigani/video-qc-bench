@@ -1,0 +1,61 @@
+{
+  "key": "woman-apple__environment-response",
+  "video": "woman-apple.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:26:21.740Z",
+  "latencyMs": 140606,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 3280,
+    "total_tokens": 9120,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Open blue umbrella carried by subject for entire clip (0:00-0:08) - implies active precipitation or strong direct sun",
+    "Damp/reflective ground patch near subject at 0:00 - consistent with recent rain, but no active rainfall visible in any frame",
+    "Corridor pedestrians (man in green polo, women in pink/red) walking 0:00-0:08 - no umbrellas, no hoods, no rain-avoidance behavior",
+    "Uncovered produce in open crates lining both sides - dry surfaces, no water droplets, vendors not shielding goods",
+    "Subject's ponytail and loose cardigan - no wind streaming or flutter, consistent with still air",
+    "Stall awnings, canopies, and hanging items - completely static, no flutter; consistent with calm conditions",
+    "Lighting - diffuse/overcast with no harsh cast shadows anywhere in the market"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:00",
+      "entity": "open umbrella / implied precipitation",
+      "invariant_violated": "effect requires visible or plausible cause",
+      "description": "The subject holds an umbrella fully open for the entire clip, implying active rain or strong sun. No rain is visible in any frame, the lighting is diffuse and overcast with no shadows (ruling out strong sun), and the only supporting evidence is a damp ground patch indicating past rather than current rain. The implied cause for the umbrella is contradicted by the environment.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "0:04",
+      "entity": "pedestrians and uncovered produce",
+      "invariant_violated": "influence must propagate to all exposed elements",
+      "description": "If precipitation is occurring as the umbrella implies, every other exposed element shows zero response: corridor pedestrians walk casually with no umbrellas, hoods, or hurried sheltering, and fruit sits uncovered in open crates with no droplets or vendor covering behavior. The implied weather influence affects only the subject and nothing else it should touch.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Open blue umbrella carried by subject for entire clip (0:00-0:08) - implies active precipitation or strong direct sun\",\n    \"Damp/reflective ground patch near subject at 0:00 - consistent with recent rain, but no active rainfall visible in any frame\",\n    \"Corridor pedestrians (man in green polo, women in pink/red) walking 0:00-0:08 - no umbrellas, no hoods, no rain-avoidance behavior\",\n    \"Uncovered produce in open crates lining both sides - dry surfaces, no water droplets, vendors not shielding goods\",\n    \"Subject's ponytail and loose cardigan - no wind streaming or flutter, consistent with still air\",\n    \"Stall awnings, canopies, and hanging items - completely static, no flutter; consistent with calm conditions\",\n    \"Lighting - diffuse/overcast with no harsh cast shadows anywhere in the market\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:00\",\n      \"entity\": \"open umbrella / implied precipitation\",\n      \"invariant_violated\": \"effect requires visible or plausible cause\",\n      \"description\": \"The subject holds an umbrella fully open for the entire clip, implying active rain or strong sun. No rain is visible in any frame, the lighting is diffuse and overcast with no shadows (ruling out strong sun), and the only supporting evidence is a damp ground patch indicating past rather than current rain. The implied cause for the umbrella is contradicted by the environment.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"0:04\",\n      \"entity\": \"pedestrians and uncovered produce\",\n      \"invariant_violated\": \"influence must propagate to all exposed elements\",\n      \"description\": \"If precipitation is occurring as the umbrella implies, every other exposed element shows zero response: corridor pedestrians walk casually with no umbrellas, hoods, or hurried sheltering, and fruit sits uncovered in open crates with no droplets or vendor covering behavior. The implied weather influence affects only the subject and nothing else it should touch.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

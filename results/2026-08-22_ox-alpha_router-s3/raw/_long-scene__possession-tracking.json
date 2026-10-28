@@ -1,0 +1,53 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:19:39.593Z",
+  "latencyMs": 210892,
+  "usage": {
+    "prompt_tokens": 34886,
+    "completion_tokens": 8661,
+    "total_tokens": 43547,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cleaning cloth: on counter in waitress's hand wiping counter 0:12-0:18 -> held/set on kitchen-side counter -> used again 0:46-0:52 -> off-frame -> used again wiping counter 1:53-1:59 (continuous, same cloth)",
+    "Coffee pot: on coffee machine 0:20 -> lifted by waitress 0:22-0:26 -> tilted pouring into mug 0:28-0:32 -> exits frame with waitress after pour",
+    "White ceramic mug (customer's): on counter 0:28 -> coffee poured into it 0:28-0:32 -> held in both hands by man 0:38-0:44 -> resting on counter in front of man 0:46-1:10 -> held by man 1:11-1:19 -> held at counter 1:21-1:37 -> placed on counter 1:37-1:41 -> remains on counter as man exits to truck 1:43+",
+    "Plate with toast and fried egg: on counter in front of man 0:34-1:10 -> picked up by waitress with both hands 1:11-1:19 -> carried behind counter toward kitchen 1:21-1:27 -> exits frame with waitress",
+    "Second white mug (waitress's): enters frame held in waitress's hands 1:29-1:37 (off-screen origin consistent with coffee station she passed 1:21-1:27) -> held while seated next to man -> still held at cut to money close-up",
+    "Folded stack of $100 bills: enters frame in man's hand 1:37-1:39 -> placed flat on counter beside mug 1:39 -> grasped and removed by waitress's hand 1:41 -> exits frame with her",
+    "Truck (scene-level, not hand-manipulated): white semi with trailer at exterior 0:00-0:10; dark green Kenworth box truck approached by man 1:43-1:51"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "Truck outside diner",
+      "invariant_violated": "transfer completeness (object identity)",
+      "description": "The vehicle parked outside at 0:00-0:10 is a white conventional semi tractor with a white trailer; the vehicle the man walks to and opens at 1:43-1:51 is a dark green Kenworth with a green box trailer. The man's exit implies it is the same vehicle, but its kind and appearance changed with no visible cause. Reported as scene-level observation; outside the small-object hand-activity scope, hence not treated as a custody break of tracked items.",
+      "severity": "minor",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cleaning cloth: on counter in waitress's hand wiping counter 0:12-0:18 -> held/set on kitchen-side counter -> used again 0:46-0:52 -> off-frame -> used again wiping counter 1:53-1:59 (continuous, same cloth)\",\n    \"Coffee pot: on coffee machine 0:20 -> lifted by waitress 0:22-0:26 -> tilted pouring into mug 0:28-0:32 -> exits frame with waitress after pour\",\n    \"White ceramic mug (customer's): on counter 0:28 -> coffee poured into it 0:28-0:32 -> held in both hands by man 0:38-0:44 -> resting on counter in front of man 0:46-1:10 -> held by man 1:11-1:19 -> held at counter 1:21-1:37 -> placed on counter 1:37-1:41 -> remains on counter as man exits to truck 1:43+\",\n    \"Plate with toast and fried egg: on counter in front of man 0:34-1:10 -> picked up by waitress with both hands 1:11-1:19 -> carried behind counter toward kitchen 1:21-1:27 -> exits frame with waitress\",\n    \"Second white mug (waitress's): enters frame held in waitress's hands 1:29-1:37 (off-screen origin consistent with coffee station she passed 1:21-1:27) -> held while seated next to man -> still held at cut to money close-up\",\n    \"Folded stack of $100 bills: enters frame in man's hand 1:37-1:39 -> placed flat on counter beside mug 1:39 -> grasped and removed by waitress's hand 1:41 -> exits frame with her\",\n    \"Truck (scene-level, not hand-manipulated): white semi with trailer at exterior 0:00-0:10; dark green Kenworth box truck approached by man 1:43-1:51\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"Truck outside diner\",\n      \"invariant_violated\": \"transfer completeness (object identity)\",\n      \"description\": \"The vehicle parked outside at 0:00-0:10 is a white conventional semi tractor with a white trailer; the vehicle the man walks to and opens at 1:43-1:51 is a dark green Kenworth with a green box trailer. The man's exit implies it is the same vehicle, but its kind and appearance changed with no visible cause. Reported as scene-level observation; outside the small-object hand-activity scope, hence not treated as a custody break of tracked items.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:38.993Z",
+  "latencyMs": 11706,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1174,
+    "total_tokens": 2626,
+    "cost": 0.0054915,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0054915,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.0044025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 980,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left Hand | Holding circular metallic object with pinch grip at start | Holding circular metallic object at end | Maintains continuous firm grip on the object throughout",
+    "Right Hand | Gripping tweezers at 00:00 | Gripping small key tool at 00:09 | Releases tweezers at 00:04, moves off-camera, returns at 00:05 holding key tool",
+    "Tweezers | Held by right hand fingers at 00:00 | Put down off-camera at 00:04 | Tip makes direct physical contact with metallic object",
+    "Small Key Tool | Picked up off-camera at 00:05 | Inserted into metallic object at 00:07 | Manipulated continuously by right hand against object in left hand"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Left Hand | Holding circular metallic object with pinch grip at start | Holding circular metallic object at end | Maintains continuous firm grip on the object throughout\",\n    \"Right Hand | Gripping tweezers at 00:00 | Gripping small key tool at 00:09 | Releases tweezers at 00:04, moves off-camera, returns at 00:05 holding key tool\",\n    \"Tweezers | Held by right hand fingers at 00:00 | Put down off-camera at 00:04 | Tip makes direct physical contact with metallic object\",\n    \"Small Key Tool | Picked up off-camera at 00:05 | Inserted into metallic object at 00:07 | Manipulated continuously by right hand against object in left hand\"\n  ],\n  \"findings\": []\n}"
+}

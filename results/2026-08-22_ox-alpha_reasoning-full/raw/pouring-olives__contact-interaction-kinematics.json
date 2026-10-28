@@ -1,0 +1,51 @@
+{
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:19:12.698Z",
+  "latencyMs": 99400,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 4368,
+    "total_tokens": 10279,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand + small glass jar #1 (mixed green/dark olives) | gripped over rim, tilted above big jar at 00:00 | released and gone from frame by 00:06 | continuous pour 00:00-00:04, fingers wrapped over mouth, no slip",
+    "olives from jar #1 | contained in small jar at 00:00 | settled in bottom layer of big jar by 00:04 | fall trajectory from small-jar mouth into big-jar mouth, contact (landing) occurs only after pour starts, pile accumulates progressively",
+    "big glass jar | empty, stationary on cutting board at 00:00 | partially filled (~1/3) at 00:08, still stationary | receives olives at 00:01-00:04 and 00:07-00:08; base never slides or lifts",
+    "right hand -> stainless steel bowl | hand extends toward bowl rim at 00:06 with open fingers, bowl stationary on counter | bowl still on counter at 00:08, untouched | reach initiated but grasp never completed on camera",
+    "both hands + small glass jar #2 (green olives only) | not present in frame at 00:06 | held two-handed, tilted, pouring into big jar at 00:08 | grasp acquisition occurs off-camera between 00:06 and 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "small glass jar #2 (green olives) in both hands",
+      "invariant_violated": "effect-before-contact / unexplained object acquisition",
+      "description": "At 00:06 the right hand is reaching toward the stainless steel bowl, which contains mixed green and dark olives. At 00:08 the hands are holding a different container — a small clear jar containing only green olives — already in a pouring grip, while the steel bowl remains on the counter untouched. The grasp of this second jar is never shown, and its contents do not match the bowl that was being reached for. This is consistent with a jump cut / object teleport rather than a continuous grasp-and-pour action.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand + small glass jar #1 (mixed green/dark olives) | gripped over rim, tilted above big jar at 00:00 | released and gone from frame by 00:06 | continuous pour 00:00-00:04, fingers wrapped over mouth, no slip\",\n    \"olives from jar #1 | contained in small jar at 00:00 | settled in bottom layer of big jar by 00:04 | fall trajectory from small-jar mouth into big-jar mouth, contact (landing) occurs only after pour starts, pile accumulates progressively\",\n    \"big glass jar | empty, stationary on cutting board at 00:00 | partially filled (~1/3) at 00:08, still stationary | receives olives at 00:01-00:04 and 00:07-00:08; base never slides or lifts\",\n    \"right hand -> stainless steel bowl | hand extends toward bowl rim at 00:06 with open fingers, bowl stationary on counter | bowl still on counter at 00:08, untouched | reach initiated but grasp never completed on camera\",\n    \"both hands + small glass jar #2 (green olives only) | not present in frame at 00:06 | held two-handed, tilted, pouring into big jar at 00:08 | grasp acquisition occurs off-camera between 00:06 and 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"small glass jar #2 (green olives) in both hands\",\n      \"invariant_violated\": \"effect-before-contact / unexplained object acquisition\",\n      \"description\": \"At 00:06 the right hand is reaching toward the stainless steel bowl, which contains mixed green and dark olives. At 00:08 the hands are holding a different container — a small clear jar containing only green olives — already in a pouring grip, while the steel bowl remains on the counter untouched. The grasp of this second jar is never shown, and its contents do not match the bowl that was being reached for. This is consistent with a jump cut / object teleport rather than a continuous grasp-and-pour action.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

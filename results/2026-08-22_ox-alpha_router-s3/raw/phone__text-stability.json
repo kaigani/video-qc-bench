@@ -1,0 +1,41 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:37:51.314Z",
+  "latencyMs": 41607,
+  "usage": {
+    "prompt_tokens": 5854,
+    "completion_tokens": 1933,
+    "total_tokens": 7787,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:02 — Smartphone screen held in foreground, heavily out of focus: a large dark code on a teal screen reads approximately 'A742'; surrounding UI text is too defocused to read (blur, not judged as defect)",
+    "0:04 — Smartphone screen pulling into focus at an angle: large central code reads 'A7-42'; smaller code at bottom foreshortened by screen angle, consistent with 'AZ-12'; small 'A A' markers near top",
+    "0:06 — Smartphone screen at sharpest: top-left label '7A2' beside green icon, two 'A A' map-style markers, large central code 'A7-42', smaller lower code 'AZ-12' — all coherent alphanumeric strings, plausible as address/access-code UI",
+    "0:08 — Same smartphone screen, equally sharp: identical readings — '7A2' top-left, 'A A' markers, central 'A7-42', lower 'AZ-12'; no character changes between the two legible moments"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:02 — Smartphone screen held in foreground, heavily out of focus: a large dark code on a teal screen reads approximately 'A742'; surrounding UI text is too defocused to read (blur, not judged as defect)\",\n    \"0:04 — Smartphone screen pulling into focus at an angle: large central code reads 'A7-42'; smaller code at bottom foreshortened by screen angle, consistent with 'AZ-12'; small 'A A' markers near top\",\n    \"0:06 — Smartphone screen at sharpest: top-left label '7A2' beside green icon, two 'A A' map-style markers, large central code 'A7-42', smaller lower code 'AZ-12' — all coherent alphanumeric strings, plausible as address/access-code UI\",\n    \"0:08 — Same smartphone screen, equally sharp: identical readings — '7A2' top-left, 'A A' markers, central 'A7-42', lower 'AZ-12'; no character changes between the two legible moments\"\n  ],\n  \"findings\": []\n}"
+}

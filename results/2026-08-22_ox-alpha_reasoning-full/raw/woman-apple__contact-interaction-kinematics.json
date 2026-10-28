@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:29:34.448Z",
+  "latencyMs": 129030,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 3808,
+    "total_tokens": 9719,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (main subject) left hand <-> blue umbrella shaft | firm fist grip on shaft at chest height at 0:00, umbrella open overhead | same grip maintained through 0:08 as she turns to profile, hand occluded by her body but shaft trajectory continuous | no release, no re-grip, shaft never slips through fist",
+    "Woman (main subject) right hand <-> red fruit | finger-wrapped hold at chest height at 0:00 | fruit pressed between right palm/fingers and her chest at 0:08 | continuous hold; grip transitions (finger grip -> open-palm cradle at 0:06 -> chest press at 0:08) are smooth with fruit never airborne or unsupported",
+    "Woman (main subject) feet <-> ground | mid-stride walk toward camera at 0:00 | standing/turning at 0:08 | alternating step cycle with visible foot-plant before weight transfer; no foot sliding or floating detected",
+    "Passing pedestrians (teal-shirt woman ~0:02, white-shirt man ~0:04, blue-shirt man ~0:06) | walking through foreground, independent ground support | exit frame | occlusion of main subject only, no inter-body penetration or contact with her or the umbrella",
+    "Blue umbrella canopy <-> background awnings/structures | canopy overlaps red awnings visually from 0:00 | same overlap as she moves | overlap consistent with depth ordering (canopy nearer camera), no intersection evidence"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (main subject) left hand <-> blue umbrella shaft | firm fist grip on shaft at chest height at 0:00, umbrella open overhead | same grip maintained through 0:08 as she turns to profile, hand occluded by her body but shaft trajectory continuous | no release, no re-grip, shaft never slips through fist\",\n    \"Woman (main subject) right hand <-> red fruit | finger-wrapped hold at chest height at 0:00 | fruit pressed between right palm/fingers and her chest at 0:08 | continuous hold; grip transitions (finger grip -> open-palm cradle at 0:06 -> chest press at 0:08) are smooth with fruit never airborne or unsupported\",\n    \"Woman (main subject) feet <-> ground | mid-stride walk toward camera at 0:00 | standing/turning at 0:08 | alternating step cycle with visible foot-plant before weight transfer; no foot sliding or floating detected\",\n    \"Passing pedestrians (teal-shirt woman ~0:02, white-shirt man ~0:04, blue-shirt man ~0:06) | walking through foreground, independent ground support | exit frame | occlusion of main subject only, no inter-body penetration or contact with her or the umbrella\",\n    \"Blue umbrella canopy <-> background awnings/structures | canopy overlaps red awnings visually from 0:00 | same overlap as she moves | overlap consistent with depth ordering (canopy nearer camera), no intersection evidence\"\n  ],\n  \"findings\": []\n}"
+}

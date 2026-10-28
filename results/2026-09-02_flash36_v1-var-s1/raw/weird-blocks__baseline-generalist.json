@@ -1,0 +1,64 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:41.696Z",
+  "latencyMs": 12494,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2009,
+    "total_tokens": 3247,
+    "cost": 0.00846225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00846225,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00753375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1626,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | moving green block '2' on table | adjusting blocks | shifts and manipulates blocks",
+    "block sequence | starts with two green '2' blocks | ends with nine numbered blocks (2,3,2,2,3,5,2,6,3) | blocks morph, change color, and multiply spontaneously"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered blocks",
+      "invariant_violated": "object_morphing",
+      "description": "The green block '2' on the left morphs into a blue block '2', and a blue block '3' spontaneously appears alongside it.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "green block text",
+      "invariant_violated": "text_morphing",
+      "description": "The digit '2' printed on the green block morphs into a digit '3' as the hand touches it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered blocks",
+      "invariant_violated": "spontaneous_generation",
+      "description": "Additional blocks (orange '2', blue '3', green '5', green '2', blue '6') spontaneously emerge out of thin air as the hand slides the block to the right.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | moving green block '2' on table | adjusting blocks | shifts and manipulates blocks\",\n    \"block sequence | starts with two green '2' blocks | ends with nine numbered blocks (2,3,2,2,3,5,2,6,3) | blocks morph, change color, and multiply spontaneously\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"object_morphing\",\n      \"description\": \"The green block '2' on the left morphs into a blue block '2', and a blue block '3' spontaneously appears alongside it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"green block text\",\n      \"invariant_violated\": \"text_morphing\",\n      \"description\": \"The digit '2' printed on the green block morphs into a digit '3' as the hand touches it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"spontaneous_generation\",\n      \"description\": \"Additional blocks (orange '2', blue '3', green '5', green '2', blue '6') spontaneously emerge out of thin air as the hand slides the block to the right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

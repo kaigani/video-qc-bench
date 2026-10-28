@@ -1,0 +1,66 @@
+{
+  "key": "woman-car__vehicle-identity",
+  "video": "woman-car.mp4",
+  "role": "vehicle-identity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:21:10.548Z",
+  "latencyMs": 17366,
+  "usage": {
+    "prompt_tokens": 1342,
+    "completion_tokens": 1638,
+    "total_tokens": 2980,
+    "cost": 0.02234,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02234,
+      "upstream_inference_prompt_cost": 0.002684,
+      "upstream_inference_completions_cost": 0.019656
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1236,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Station wagon with upright hood ornament, roof rack crossbars, standard wipers, and front plate STE 897",
+    "00:03 - Same station wagon, hood ornament vanishes",
+    "00:04 - Same station wagon, wiper base structure changes",
+    "00:05 - Same station wagon, roof rack crossbars disappear"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Hood ornament",
+      "invariant_violated": "attached hardware",
+      "description": "A prominent, upright hood ornament is visible on the front center of the car's hood at the beginning of the video. As the camera moves closer, this ornament completely disappears.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Windshield wipers",
+      "invariant_violated": "attached hardware",
+      "description": "The structure at the base of the windshield wipers changes as the camera zooms in, with an extra metallic shape appearing near the driver's side wiper.",
+      "severity": "minor",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Roof rack",
+      "invariant_violated": "attached hardware",
+      "description": "At the start of the video, the roof rack has several distinct crossbars connecting the side rails. As the camera gets closer, these crossbars vanish, leaving only the side rails visible.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Station wagon with upright hood ornament, roof rack crossbars, standard wipers, and front plate STE 897\",\n    \"00:03 - Same station wagon, hood ornament vanishes\",\n    \"00:04 - Same station wagon, wiper base structure changes\",\n    \"00:05 - Same station wagon, roof rack crossbars disappear\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Hood ornament\",\n      \"invariant_violated\": \"attached hardware\",\n      \"description\": \"A prominent, upright hood ornament is visible on the front center of the car's hood at the beginning of the video. As the camera moves closer, this ornament completely disappears.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Windshield wipers\",\n      \"invariant_violated\": \"attached hardware\",\n      \"description\": \"The structure at the base of the windshield wipers changes as the camera zooms in, with an extra metallic shape appearing near the driver's side wiper.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.80\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Roof rack\",\n      \"invariant_violated\": \"attached hardware\",\n      \"description\": \"At the start of the video, the roof rack has several distinct crossbars connecting the side rails. As the camera gets closer, these crossbars vanish, leaving only the side rails visible.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

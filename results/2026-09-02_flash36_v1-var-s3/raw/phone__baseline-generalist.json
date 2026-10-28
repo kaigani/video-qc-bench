@@ -1,0 +1,48 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:15:22.546Z",
+  "latencyMs": 9530,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1114,
+    "total_tokens": 2352,
+    "cost": 0.005106,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005106,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0041775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 942,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person in background | blue shirt, jeans, carrying red container | walking away with empty hand | red container suddenly disappears at 00:01",
+    "smartphone | held in foreground, screen out of focus | screen comes into focus displaying text | text morphs slightly"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red container held by background person",
+      "invariant_violated": "object_permanence",
+      "description": "The red container carried in the right hand of the person walking away in the background suddenly disappears mid-step.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"person in background | blue shirt, jeans, carrying red container | walking away with empty hand | red container suddenly disappears at 00:01\",\n    \"smartphone | held in foreground, screen out of focus | screen comes into focus displaying text | text morphs slightly\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"red container held by background person\",\n      \"invariant_violated\": \"object_permanence\",\n      \"description\": \"The red container carried in the right hand of the person walking away in the background suddenly disappears mid-step.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

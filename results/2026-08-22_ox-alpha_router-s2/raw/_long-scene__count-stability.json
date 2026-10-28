@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:42:56.647Z",
+  "latencyMs": 387351,
+  "usage": {
+    "prompt_tokens": 34924,
+    "completion_tokens": 14737,
+    "total_tokens": 49661,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "coffee mug (white): 1 on counter while coffee is poured 00:28-00:33; 1 held by customer 00:38-00:45; 1 on counter 01:00-01:10; 1 held by customer as plate is served 01:11-01:18; 2 total at 01:29-01:37 (waitress now holds a second mug, acquired off-screen between shots); 1 mug beside cash 01:38-01:42",
+    "meal plate (cornbread wedge + fried egg): 1 appears in close-up 00:34-00:37 (serving not shown); 1 sitting in front of customer 00:38-00:45; 0 on counter 00:53-00:59 (removal not shown); still 0 at 01:00-01:10; 1 carried in and set down by waitress 01:11-01:18; 1 before customer 01:19-01:28; not visible from 01:29 onward; absent during cleanup 01:52-01:58",
+    "cash bills (folded stack, $100 on top, at least one bill beneath): 0 until customer places stack on counter 01:38-01:40; stack resting on counter 01:40-01:41; grasped and carried away by waitress's hand 01:41-01:42 (explained removal)",
+    "truck outside diner: 1 white semi tractor-trailer parked at angle 00:00-00:11; at 01:43-01:51 the vehicle the customer walks out to is a dark-green single-unit box truck of a completely different type; no shot shows the semi leaving or the box truck arriving",
+    "counter stools: ~3 visible 00:12-00:19; row of ~5-6 visible 00:20-00:27; customer seated on one 01:19-01:28; ~4 visible 01:52-01:58 (differences consistent with camera angle/cropping, no on-screen count change)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "truck parked outside the diner",
+      "invariant_violated": "kind-transformation without visible mechanism",
+      "description": "The establishing shot (00:00-00:11) shows a white semi tractor-trailer parked outside the diner, implying the customer arrived with it. When the customer exits to depart (01:43-01:51), the vehicle is a dark-green single-unit box truck — different color, different cab, no trailer. No footage shows the semi driving away or the box truck arriving, so the vehicle effectively transforms from one kind of truck into another with no visible cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:11",
+      "entity": "meal plate (cornbread + fried egg)",
+      "invariant_violated": "unexplained count change / duplicate serving",
+      "description": "An identical cornbread-and-fried-egg plate is in front of the customer at 00:38-00:45, is confirmed gone when the counter is shown empty at 00:53-00:59 (no clearing or consumption shown), and then the waitress serves the exact same meal again at 01:11-01:18. The plate count in front of the customer goes 1 → 0 with no visible cause, and the same meal is presented a second time, indicating a duplicated/unresolved plate continuity error.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"coffee mug (white): 1 on counter while coffee is poured 00:28-00:33; 1 held by customer 00:38-00:45; 1 on counter 01:00-01:10; 1 held by customer as plate is served 01:11-01:18; 2 total at 01:29-01:37 (waitress now holds a second mug, acquired off-screen between shots); 1 mug beside cash 01:38-01:42\",\n    \"meal plate (cornbread wedge + fried egg): 1 appears in close-up 00:34-00:37 (serving not shown); 1 sitting in front of customer 00:38-00:45; 0 on counter 00:53-00:59 (removal not shown); still 0 at 01:00-01:10; 1 carried in and set down by waitress 01:11-01:18; 1 before customer 01:19-01:28; not visible from 01:29 onward; absent during cleanup 01:52-01:58\",\n    \"cash bills (folded stack, $100 on top, at least one bill beneath): 0 until customer places stack on counter 01:38-01:40; stack resting on counter 01:40-01:41; grasped and carried away by waitress's hand 01:41-01:42 (explained removal)\",\n    \"truck outside diner: 1 white semi tractor-trailer parked at angle 00:00-00:11; at 01:43-01:51 the vehicle the customer walks out to is a dark-green single-unit box truck of a completely different type; no shot shows the semi leaving or the box truck arriving\",\n    \"counter stools: ~3 visible 00:12-00:19; row of ~5-6 visible 00:20-00:27; customer seated on one 01:19-01:28; ~4 visible 01:52-01:58 (differences consistent with camera angle/cropping, no on-screen count change)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"truck parked outside the diner\",\n      \"invariant_violated\": \"kind-transformation without visible mechanism\",\n      \"description\": \"The establishing shot (00:00-00:11) shows a white semi tractor-trailer parked outside the diner, implying the customer arrived with it. When the customer exits to depart (01:43-01:51), the vehicle is a dark-green single-unit box truck — different color, different cab, no trailer. No footage shows the semi driving away or the box truck arriving, so the vehicle effectively transforms from one kind of truck into another with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"01:11\",\n      \"entity\": \"meal plate (cornbread + fried egg)\",\n      \"invariant_violated\": \"unexplained count change / duplicate serving\",\n      \"description\": \"An identical cornbread-and-fried-egg plate is in front of the customer at 00:38-00:45, is confirmed gone when the counter is shown empty at 00:53-00:59 (no clearing or consumption shown), and then the waitress serves the exact same meal again at 01:11-01:18. The plate count in front of the customer goes 1 → 0 with no visible cause, and the same meal is presented a second time, indicating a duplicated/unresolved plate continuity error.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

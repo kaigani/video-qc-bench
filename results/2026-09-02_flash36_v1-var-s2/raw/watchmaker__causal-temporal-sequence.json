@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:48.965Z",
+  "latencyMs": 14961,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1106,
+    "total_tokens": 2531,
+    "cost": 0.00521625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00521625,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.0041475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 945,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's hands | holding tweezers and small metallic ring at 00:00 | holding key tool and small metallic ring at 00:09 | lowered right hand to exchange tool around 00:04, resumed object manipulation at 00:05",
+    "tweezers | held in right hand at 00:00 | lowered out of frame at 00:04 | moved away from object following hand motion",
+    "key tool | brought into frame in right hand at 00:05 | engaged with ring mechanism at 00:09 | inserted into object and turned continuously under applied hand force"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's hands | holding tweezers and small metallic ring at 00:00 | holding key tool and small metallic ring at 00:09 | lowered right hand to exchange tool around 00:04, resumed object manipulation at 00:05\",\n    \"tweezers | held in right hand at 00:00 | lowered out of frame at 00:04 | moved away from object following hand motion\",\n    \"key tool | brought into frame in right hand at 00:05 | engaged with ring mechanism at 00:09 | inserted into object and turned continuously under applied hand force\"\n  ],\n  \"findings\": []\n}"
+}

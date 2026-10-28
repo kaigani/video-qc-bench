@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__text-stability",
+  "video": "woman-car.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:16:18.751Z",
+  "latencyMs": 103208,
+  "usage": {
+    "prompt_tokens": 5374,
+    "completion_tokens": 2769,
+    "total_tokens": 8143,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 — Front license plate (white plate, dark lettering) on wood-paneled station wagon, sharp and fully legible: reads 'STE097' (S-T-E-0-9-7)",
+    "0:02 — Same license plate, partially cut by bottom frame edge as camera moves in; visible characters read 'STE197' (fourth character now a narrow '1' instead of '0')",
+    "0:00-0:02 — Individual chrome letters along hood leading edge above grille: too small and low-contrast to read reliably at any moment; not judged as defect",
+    "0:04-0:08 — License plate and hood lettering no longer in frame; no other legible text elements appear (no signs, screens, or labels in desert background)"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "Front license plate",
+      "invariant_violated": "Stability — same text element must read identically across legible moments absent a visible action",
+      "description": "At 0:00 the plate clearly reads 'STE097'; at 0:02 the same plate (partially cropped at frame bottom but with character tops sharp) reads 'STE197' — the fourth character has changed from '0' to '1'. No visible action (plate swap, cleaning, camera trick) explains the alteration; the camera is merely dollying toward the car.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 — Front license plate (white plate, dark lettering) on wood-paneled station wagon, sharp and fully legible: reads 'STE097' (S-T-E-0-9-7)\",\n    \"0:02 — Same license plate, partially cut by bottom frame edge as camera moves in; visible characters read 'STE197' (fourth character now a narrow '1' instead of '0')\",\n    \"0:00-0:02 — Individual chrome letters along hood leading edge above grille: too small and low-contrast to read reliably at any moment; not judged as defect\",\n    \"0:04-0:08 — License plate and hood lettering no longer in frame; no other legible text elements appear (no signs, screens, or labels in desert background)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"Front license plate\",\n      \"invariant_violated\": \"Stability — same text element must read identically across legible moments absent a visible action\",\n      \"description\": \"At 0:00 the plate clearly reads 'STE097'; at 0:02 the same plate (partially cropped at frame bottom but with character tops sharp) reads 'STE197' — the fourth character has changed from '0' to '1'. No visible action (plate swap, cleaning, camera trick) explains the alteration; the camera is merely dollying toward the car.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

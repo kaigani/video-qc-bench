@@ -1,0 +1,50 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:39:32.772Z",
+  "latencyMs": 23473,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1576,
+    "total_tokens": 2994,
+    "cost": 0.0069735,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0069735,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.00591
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1325,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Small glass jar contains only green olives; large glass jar is completely empty.",
+    "00:01 - Green olives are poured from the small jar into the large jar; dark/black olives appear inside the jar during pouring.",
+    "00:04 - Large jar contains a mixture of green and dark purple/black olives; performer retrieves more green olives from a side bowl.",
+    "00:07 - Performer pours second batch of olives into the main jar, further increasing the count of both green and dark olives."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives inside the glass jar",
+      "invariant_violated": "unexplained object transformation",
+      "description": "Only green olives are present in the source jar being poured, but dark purple/black olives appear inside the receiving jar as the olives fall, representing an unexplained transformation into a different kind of object.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Small glass jar contains only green olives; large glass jar is completely empty.\",\n    \"00:01 - Green olives are poured from the small jar into the large jar; dark/black olives appear inside the jar during pouring.\",\n    \"00:04 - Large jar contains a mixture of green and dark purple/black olives; performer retrieves more green olives from a side bowl.\",\n    \"00:07 - Performer pours second batch of olives into the main jar, further increasing the count of both green and dark olives.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives inside the glass jar\",\n      \"invariant_violated\": \"unexplained object transformation\",\n      \"description\": \"Only green olives are present in the source jar being poured, but dark purple/black olives appear inside the receiving jar as the olives fall, representing an unexplained transformation into a different kind of object.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

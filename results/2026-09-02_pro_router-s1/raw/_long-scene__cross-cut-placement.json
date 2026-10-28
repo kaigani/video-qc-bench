@@ -1,0 +1,63 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:33:14.505Z",
+  "latencyMs": 42622,
+  "usage": {
+    "prompt_tokens": 10641,
+    "completion_tokens": 3420,
+    "total_tokens": 14061,
+    "cost": 0.062322,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.062322,
+      "upstream_inference_prompt_cost": 0.021282,
+      "upstream_inference_completions_cost": 0.04104
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2675,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Shot 1: 00:00-00:10, exterior wide, truck parked at diner",
+    "Shot 2: 00:10-00:18, interior medium, counter in foreground. Waitress present, behind counter, wiping it.",
+    "Shot 3: 00:18-00:27, interior wide. Waitress behind counter. Man enters, walks to front of counter, sits.",
+    "Shot 4: 00:27-00:32, close up. Hands pouring coffee.",
+    "Shot 5: 00:32-00:36, close up. Food plate on counter.",
+    "Shot 6: 00:36-00:44, interior wide. Man sitting at front of counter. Waitress absent. Elapsed time implied.",
+    "Shot 7: 00:44-00:51, interior medium. Waitress wiping pass-through window. Man visible in background sitting at counter.",
+    "Shot 8: 00:51-01:00, interior medium. Counter empty. Elapsed time implied (lighting changes).",
+    "Shot 9: 01:00-01:09, interior wide. Man sitting at front of counter. Waitress behind counter.",
+    "Shot 10: 01:09-01:17, interior medium. Waitress behind counter serves food to man at front of counter.",
+    "Shot 11: 01:17-01:26, interior wide. Waitress walks from behind counter to sit next to man at front of counter.",
+    "Shot 12: 01:26-01:35, interior medium. Waitress and man sitting together at front of counter.",
+    "Shot 13: 01:35-01:37, interior medium. Empty counter.",
+    "Shot 14: 01:37-01:40, close up. Hands leaving money on counter.",
+    "Shot 15: 01:40-01:46, exterior. Man walking to truck. Waitress reflection seen.",
+    "Shot 16: 01:46-01:49, interior medium. Waitress standing by window booth, looking outside.",
+    "Shot 17: 01:49-01:59, interior wide. Waitress sitting at front of counter, stands up and walks right. Simultaneously, a second instance of the waitress is visible in the background standing by the window booths."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:49",
+      "entity": "Waitress",
+      "invariant_violated": "Duplicate Person",
+      "description": "Immediately after the cut from Shot 16 (where the waitress is standing by the window), Shot 17 shows the waitress sitting at the counter in the foreground. Simultaneously, a duplicate instance of the waitress wearing the same uniform is visible in the background, standing by the window booths.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Shot 1: 00:00-00:10, exterior wide, truck parked at diner\",\n    \"Shot 2: 00:10-00:18, interior medium, counter in foreground. Waitress present, behind counter, wiping it.\",\n    \"Shot 3: 00:18-00:27, interior wide. Waitress behind counter. Man enters, walks to front of counter, sits.\",\n    \"Shot 4: 00:27-00:32, close up. Hands pouring coffee.\",\n    \"Shot 5: 00:32-00:36, close up. Food plate on counter.\",\n    \"Shot 6: 00:36-00:44, interior wide. Man sitting at front of counter. Waitress absent. Elapsed time implied.\",\n    \"Shot 7: 00:44-00:51, interior medium. Waitress wiping pass-through window. Man visible in background sitting at counter.\",\n    \"Shot 8: 00:51-01:00, interior medium. Counter empty. Elapsed time implied (lighting changes).\",\n    \"Shot 9: 01:00-01:09, interior wide. Man sitting at front of counter. Waitress behind counter.\",\n    \"Shot 10: 01:09-01:17, interior medium. Waitress behind counter serves food to man at front of counter.\",\n    \"Shot 11: 01:17-01:26, interior wide. Waitress walks from behind counter to sit next to man at front of counter.\",\n    \"Shot 12: 01:26-01:35, interior medium. Waitress and man sitting together at front of counter.\",\n    \"Shot 13: 01:35-01:37, interior medium. Empty counter.\",\n    \"Shot 14: 01:37-01:40, close up. Hands leaving money on counter.\",\n    \"Shot 15: 01:40-01:46, exterior. Man walking to truck. Waitress reflection seen.\",\n    \"Shot 16: 01:46-01:49, interior medium. Waitress standing by window booth, looking outside.\",\n    \"Shot 17: 01:49-01:59, interior wide. Waitress sitting at front of counter, stands up and walks right. Simultaneously, a second instance of the waitress is visible in the background standing by the window booths.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:49\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"Duplicate Person\",\n      \"description\": \"Immediately after the cut from Shot 16 (where the waitress is standing by the window), Shot 17 shows the waitress sitting at the counter in the foreground. Simultaneously, a duplicate instance of the waitress wearing the same uniform is visible in the background, standing by the window booths.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

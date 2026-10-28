@@ -1,0 +1,43 @@
+{
+  "key": "child-marbles__pour-conservation",
+  "video": "child-marbles.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:01:10.619Z",
+  "latencyMs": 86677,
+  "usage": {
+    "prompt_tokens": 5853,
+    "completion_tokens": 2066,
+    "total_tokens": 7919,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - Clear glass bowl on wooden table: contains ~8 plastic balls (red, green, yellow); small silver cup with decorative egg sits at right, unchanged; loose red/green/yellow balls at table's right edge",
+    "0:00-0:01 - Child's hands: enter frame from above, empty, then grasp two red balls (source of the transfer)",
+    "0:01-0:02 - Transfer event: child holds 2 red balls above the glass bowl and releases them into it; balls are red in hand and red on arrival (color match)",
+    "0:02 - Glass bowl: fill level rises by exactly the 2 transferred red balls (~8 to ~10 balls); no other balls appear or vanish",
+    "0:03-0:05 - Glass bowl: same ~10 red/green/yellow balls as child reaches in and rearranges them; silver cup and loose table balls unchanged; bowl identity constant (same clear glass, same shape/rim)",
+    "0:06-0:09 - Glass bowl (closer, lower angle): child stirs the balls; same red/green/yellow set visible, count consistent, no additions or removals; bowl remains the same clear glass vessel"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - Clear glass bowl on wooden table: contains ~8 plastic balls (red, green, yellow); small silver cup with decorative egg sits at right, unchanged; loose red/green/yellow balls at table's right edge\",\n    \"0:00-0:01 - Child's hands: enter frame from above, empty, then grasp two red balls (source of the transfer)\",\n    \"0:01-0:02 - Transfer event: child holds 2 red balls above the glass bowl and releases them into it; balls are red in hand and red on arrival (color match)\",\n    \"0:02 - Glass bowl: fill level rises by exactly the 2 transferred red balls (~8 to ~10 balls); no other balls appear or vanish\",\n    \"0:03-0:05 - Glass bowl: same ~10 red/green/yellow balls as child reaches in and rearranges them; silver cup and loose table balls unchanged; bowl identity constant (same clear glass, same shape/rim)\",\n    \"0:06-0:09 - Glass bowl (closer, lower angle): child stirs the balls; same red/green/yellow set visible, count consistent, no additions or removals; bowl remains the same clear glass vessel\"\n  ],\n  \"findings\": []\n}"
+}

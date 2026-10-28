@@ -1,0 +1,49 @@
+{
+  "key": "skateboarder__text-stability",
+  "video": "skateboarder.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:39.434Z",
+  "latencyMs": 15551,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 965,
+    "total_tokens": 2341,
+    "cost": 0.014332,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014332,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.01158
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 745,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Skateboarder's t-shirt text - garbled green and white glyphs",
+    "00:04: Skateboarder's t-shirt text - garbled green and white glyphs",
+    "00:06: Skateboarder's t-shirt text - garbled green and white glyphs"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Text on skateboarder's t-shirt",
+      "invariant_violated": "Legibility",
+      "description": "The text printed on the front of the t-shirt is visible and large enough to be read, but it consists of garbled, illegible glyphs rather than coherent words. This remains true throughout the video whenever the shirt front is visible.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Skateboarder's t-shirt text - garbled green and white glyphs\",\n    \"00:04: Skateboarder's t-shirt text - garbled green and white glyphs\",\n    \"00:06: Skateboarder's t-shirt text - garbled green and white glyphs\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Text on skateboarder's t-shirt\",\n      \"invariant_violated\": \"Legibility\",\n      \"description\": \"The text printed on the front of the t-shirt is visible and large enough to be read, but it consists of garbled, illegible glyphs rather than coherent words. This remains true throughout the video whenever the shirt front is visible.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

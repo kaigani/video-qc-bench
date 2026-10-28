@@ -1,0 +1,226 @@
+{
+  "video": "child-marbles",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:29:41.845Z",
+  "latencyMs": 26849,
+  "usage": {
+    "prompt_tokens": 1948,
+    "completion_tokens": 2595,
+    "total_tokens": 4543,
+    "cost": 0.035036,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.035036,
+      "upstream_inference_prompt_cost": 0.003896,
+      "upstream_inference_completions_cost": 0.03114
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1694,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|child-marbles|baseline-generalist|0",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "balls in bowl",
+        "invariant_violated": "Solid object physics",
+        "description": "When the child's hand begins to spin the balls, the balls lose their solid shapes and merge into a blurry, liquid-like state that defies physics.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|child-marbles|causal-temporal-sequence|0",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Child's hand and balls",
+        "invariant_violated": "Proportionality & Completion",
+        "description": "The rapid, continuous circular motion of the balls does not correspond to the movement of the child's hand. The hand's motion does not impart the correct force or direction to cause this effect, and the fingers appear to morph and dissolve as they pass through the balls, failing to complete a physical interaction.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|child-marbles|character-continuity|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Young boy (left hand)",
+        "invariant_violated": "movement continuity",
+        "description": "Before the cut, the boy's left hand rests on the rim of the glass bowl. After the cut, it instantly teleports to an elevated position above the bowl, holding a ball alongside his right hand.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|child-marbles|character-continuity|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Young boy (right hand)",
+        "invariant_violated": "movement continuity",
+        "description": "Before the cut, the boy's right hand is resting on the right side of the bowl's rim. After the cut, it instantly appears in mid-air above the center of the bowl.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|child-marbles|character-continuity|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Young boy (right hand)",
+        "invariant_violated": "movement continuity",
+        "description": "Before the cut, the boy's right hand is moving slowly inside the bowl. After the cut, it instantly transitions to a very rapid, blurred swirling motion without any time for acceleration.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|child-marbles|contact-interaction-kinematics|0",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "child's left hand and colored balls",
+        "invariant_violated": "solidity",
+        "description": "As the child's left hand reaches into the bowl, the fingers pass directly through the solid structure of the red and green balls.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|child-marbles|contact-interaction-kinematics|1",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "child's left hand and colored balls",
+        "invariant_violated": "solidity",
+        "description": "While swirling the balls, the fingers of the child's left hand are completely submerged inside the volume of the solid balls without displacing them.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|child-marbles|contact-interaction-kinematics|2",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "colored balls",
+        "invariant_violated": "solidity",
+        "description": "During the swirling motion, the colored balls clip through each other and morph together, losing their solid spherical form.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|child-marbles|object-persistence-state|0",
+      "cls": "TP:MARB-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Colorful balls in bowl",
+        "invariant_violated": "Identity & Persistence",
+        "description": "The solid, opaque balls (red, yellow, green) inside the bowl abruptly transform into translucent, hollow, shell-like objects as the child begins to mix them. The original solid objects vanish and are replaced by these new objects without any logical physical transition.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|child-marbles|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "background environment",
+        "invariant_violated": "scene layout",
+        "description": "In the initial shot, the background visible beyond the paving stones is a flat edge of dirt or grass. After the cut to a wider angle at 00:00, the background layout changes entirely, revealing a row of large terracotta pots lined up on a ledge or step that should have been visible in the geometry of the first shot.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "When the child begins swirling the balls, they lose their distinct spherical shapes and blend into a continuous, liquid-like ring of smeared colors that defies solid physics.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "The balls spin in a rapid, perfect circle like a centrifuge, which doesn't match the slower, erratic movement of the child's hand. Additionally, the fingers of the hand morph and clip into the swirling mass of colors.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F3",
+      "verdict": "REJECT",
+      "reason": "The change in the hand's position occurs across a clear camera cut, which implies a scene change or elapsed time.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "REJECT",
+      "reason": "The right hand's position change happens across a direct camera cut.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "REJECT",
+      "reason": "The sudden transition from slow movement to rapid swirling occurs at a camera cut/angle change at 00:04 to 00:05.",
+      "innocent_explanation": "a deliberate time-skip or scene transition implying elapsed time",
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "The fingers do not clearly pass through the balls; they go behind or between them, which is normal occlusion.",
+      "innocent_explanation": "occlusion — hidden behind a hand, person, or object (still present, not gone)",
+      "confidence": 0.9
+    },
+    {
+      "id": "F7",
+      "verdict": "REJECT",
+      "reason": "The left hand is resting outside on the rim of the glass bowl during the swirling, not submerged inside the balls. The right hand is the one swirling the balls.",
+      "innocent_explanation": "description mischaracterizes what actually happens",
+      "confidence": 0.99
+    },
+    {
+      "id": "F8",
+      "verdict": "CONFIRM",
+      "reason": "During the rapid swirling motion, the individual balls clip through one another and smear together, completely losing their distinct solid boundaries.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F9",
+      "verdict": "REJECT",
+      "reason": "The balls do not specifically become translucent hollow shells; the visual effect is more accurately described as severe motion blur and smearing of the colors as they spin.",
+      "innocent_explanation": "motion blur or compression smear (not morphing, duplication, or vanishing)",
+      "confidence": 0.8
+    },
+    {
+      "id": "F10",
+      "verdict": "REJECT",
+      "reason": "The initial shot is a close-up angled downwards, meaning the distant terracotta pots would be outside the field of view. The wider angle shot reveals them naturally.",
+      "innocent_explanation": "a camera cut or angle change (not a scene mutation)",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"When the child begins swirling the balls, they lose their distinct spherical shapes and blend into a continuous, liquid-like ring of smeared colors that defies solid physics.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The balls spin in a rapid, perfect circle like a centrifuge, which doesn't match the slower, erratic movement of the child's hand. Additionally, the fingers of the hand morph and clip into the swirling mass of colors.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The change in the hand's position occurs across a clear camera cut, which implies a scene change or elapsed time.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The right hand's position change happens across a direct camera cut.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The sudden transition from slow movement to rapid swirling occurs at a camera cut/angle change at 00:04 to 00:05.\",\n      \"innocent_explanation\": \"a deliberate time-skip or scene transition implying elapsed time\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The fingers do not clearly pass through the balls; they go behind or between them, which is normal occlusion.\",\n      \"innocent_explanation\": \"occlusion \\u2014 hidden behind a hand, person, or object (still present, not gone)\",\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The left hand is resting outside on the rim of the glass bowl during the swirling, not submerged inside the balls. The right hand is the one swirling the balls.\",\n      \"innocent_explanation\": \"description mischaracterizes what actually happens\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"During the rapid swirling motion, the individual balls clip through one another and smear together, completely losing their distinct solid boundaries.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The balls do not specifically become translucent hollow shells; the visual effect is more accurately described as severe motion blur and smearing of the colors as they spin.\",\n      \"innocent_explanation\": \"motion blur or compression smear (not morphing, duplication, or vanishing)\",\n      \"confidence\": 0.8\n    },\n    {\n      \"id\": \"F10\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The initial shot is a close-up angled downwards, meaning the distant terracotta pots would be outside the field of view. The wider angle shot reveals them naturally.\",\n      \"innocent_explanation\": \"a camera cut or angle change (not a scene mutation)\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,71 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:44.436Z",
+  "latencyMs": 63478,
+  "usage": {
+    "prompt_tokens": 10641,
+    "completion_tokens": 4544,
+    "total_tokens": 15185,
+    "cost": 0.02502075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02502075,
+      "upstream_inference_prompt_cost": 0.00798075,
+      "upstream_inference_completions_cost": 0.01704
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3709,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Shot 1: 00:00-00:10, exterior view of diner and semi-truck at dusk",
+    "Shot 2: 00:10-00:18, interior medium shot of waitress wiping counter",
+    "Shot 3: 00:18-00:26, wide interior shot as truck driver enters diner and sits at counter",
+    "Shot 4: 00:26-00:31, extreme close-up of coffee pouring into mug on counter",
+    "Shot 5: 00:31-00:35, close-up of plate with fried egg and toast",
+    "Shot 6: 00:35-00:44, medium-wide shot of driver sitting at counter with food plate already in front of him",
+    "Shot 7: 00:44-00:50, view from kitchen pass-through window as waitress wipes counter",
+    "Shot 8: 00:50-00:59, interior shot of empty counter area",
+    "Shot 9: 00:59-01:08, wide interior shot of driver seated at counter",
+    "Shot 10: 01:08-01:17, medium shot of waitress delivering and placing food plate in front of driver",
+    "Shot 11: 01:17-01:26, wide shot as waitress walks around counter and sits on stool next to driver",
+    "Shot 12: 01:26-01:34, medium shot of waitress and driver sitting side-by-side at counter",
+    "Shot 13: 01:34-01:36, interior shot of empty diner counter in morning sunlight",
+    "Shot 14: 01:36-01:40, close-up of driver placing cash on counter beside coffee mug",
+    "Shot 15: 01:40-01:46, view through window as driver walks outside toward truck",
+    "Shot 16: 01:46-01:49, interior view of waitress watching driver walk outside",
+    "Shot 17: 01:50-01:58, wide interior shot where waitress gets up from stool while a duplicate waitress is already working behind counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:35",
+      "entity": "plate of food / driver",
+      "invariant_violated": "temporal_out_of_order",
+      "description": "In shot 6 (00:35-00:44), the plate of breakfast food is already sitting on the counter in front of the driver, but in shot 10 (01:09), the waitress carries the plate out and serves it to him for the first time.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "waitress",
+      "invariant_violated": "duplicate_person",
+      "description": "In shot 17 (01:50-01:58), two identical instances of the waitress wearing the same blue shirt and white apron appear simultaneously in the frame: one gets up from a counter stool while another is standing behind the counter wiping the surface near the kitchen pass-through.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Shot 1: 00:00-00:10, exterior view of diner and semi-truck at dusk\",\n    \"Shot 2: 00:10-00:18, interior medium shot of waitress wiping counter\",\n    \"Shot 3: 00:18-00:26, wide interior shot as truck driver enters diner and sits at counter\",\n    \"Shot 4: 00:26-00:31, extreme close-up of coffee pouring into mug on counter\",\n    \"Shot 5: 00:31-00:35, close-up of plate with fried egg and toast\",\n    \"Shot 6: 00:35-00:44, medium-wide shot of driver sitting at counter with food plate already in front of him\",\n    \"Shot 7: 00:44-00:50, view from kitchen pass-through window as waitress wipes counter\",\n    \"Shot 8: 00:50-00:59, interior shot of empty counter area\",\n    \"Shot 9: 00:59-01:08, wide interior shot of driver seated at counter\",\n    \"Shot 10: 01:08-01:17, medium shot of waitress delivering and placing food plate in front of driver\",\n    \"Shot 11: 01:17-01:26, wide shot as waitress walks around counter and sits on stool next to driver\",\n    \"Shot 12: 01:26-01:34, medium shot of waitress and driver sitting side-by-side at counter\",\n    \"Shot 13: 01:34-01:36, interior shot of empty diner counter in morning sunlight\",\n    \"Shot 14: 01:36-01:40, close-up of driver placing cash on counter beside coffee mug\",\n    \"Shot 15: 01:40-01:46, view through window as driver walks outside toward truck\",\n    \"Shot 16: 01:46-01:49, interior view of waitress watching driver walk outside\",\n    \"Shot 17: 01:50-01:58, wide interior shot where waitress gets up from stool while a duplicate waitress is already working behind counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:35\",\n      \"entity\": \"plate of food / driver\",\n      \"invariant_violated\": \"temporal_out_of_order\",\n      \"description\": \"In shot 6 (00:35-00:44), the plate of breakfast food is already sitting on the counter in front of the driver, but in shot 10 (01:09), the waitress carries the plate out and serves it to him for the first time.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"duplicate_person\",\n      \"description\": \"In shot 17 (01:50-01:58), two identical instances of the waitress wearing the same blue shirt and white apron appear simultaneously in the frame: one gets up from a counter stool while another is standing behind the counter wiping the surface near the kitchen pass-through.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

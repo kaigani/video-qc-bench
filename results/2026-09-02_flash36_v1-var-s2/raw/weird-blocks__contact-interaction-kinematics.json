@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:42:11.479Z",
+  "latencyMs": 24246,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 2473,
+    "total_tokens": 3925,
+    "cost": 0.01036275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01036275,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00927375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2292,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand | gripping metal peg of block at top-left | touching block peg near middle | moves rightward pulling line of blocks, then reaches back left",
+    "numbered blocks | two blocks on wooden table | line of eight blocks on wooden table | new blocks sequentially clip and emerge out of preceding blocks as hand slides right"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "numbered blocks",
+      "invariant_violated": "solidity",
+      "description": "As the hand slides to the right, subsequent numbered blocks emerge directly from inside the volume of preceding blocks, clipping through their solid faces.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand | gripping metal peg of block at top-left | touching block peg near middle | moves rightward pulling line of blocks, then reaches back left\",\n    \"numbered blocks | two blocks on wooden table | line of eight blocks on wooden table | new blocks sequentially clip and emerge out of preceding blocks as hand slides right\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the hand slides to the right, subsequent numbered blocks emerge directly from inside the volume of preceding blocks, clipping through their solid faces.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "pouring-olives__cross-cut-placement",
+  "video": "pouring-olives.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:19:06.239Z",
+  "latencyMs": 236069,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 7515,
+    "total_tokens": 13410,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 0:00-0:05, frontal counter-height camera, large glass jar centered on wooden cutting board, stove control panel in background, two olive bowls (stainless + white speckled) on counter right",
+    "shot 2: 0:05-0:07, slightly wider/higher angle, stovetop grates and back counter visible, small glass bottle now visible at right near white bowl",
+    "shot 3: 0:07-0:09, lower/closer angle, oven door prominent below stovetop, jar larger in frame, bottle at right edge",
+    "person (cook, navy overshirt over white tee): present in all shots, standing behind counter facing camera, torso only in frame, head cropped, position relative to jar and stove constant",
+    "anchor A - large glass jar with pour spout: fill level ~0% at 0:00, ~20% at 0:02, ~35% at 0:04, ~65% at 0:06, ~40% at 0:08",
+    "anchor B - stainless bowl and white bowl of olives: right side of counter in all shots, depleting gradually",
+    "small glass bottle: absent from shot 1 framing, present in shots 2-3 (consistent with framing change, not a state change)"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:07",
+      "entity": "large glass jar / olive fill level",
+      "invariant_violated": "prop state continuity across cut",
+      "description": "Across the cut between shot 2 and shot 3, the jar drops from roughly two-thirds full of olives at 0:06 to roughly one-third full at 0:08. The action is a continuous olive-filling task in the same scene with no implied elapsed time and no shot of olives being removed, so the olive mass cannot legitimately decrease. The shot at 0:08 appears to be from an earlier point in the filling process, making the olives vanish across the cut.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 0:00-0:05, frontal counter-height camera, large glass jar centered on wooden cutting board, stove control panel in background, two olive bowls (stainless + white speckled) on counter right\",\n    \"shot 2: 0:05-0:07, slightly wider/higher angle, stovetop grates and back counter visible, small glass bottle now visible at right near white bowl\",\n    \"shot 3: 0:07-0:09, lower/closer angle, oven door prominent below stovetop, jar larger in frame, bottle at right edge\",\n    \"person (cook, navy overshirt over white tee): present in all shots, standing behind counter facing camera, torso only in frame, head cropped, position relative to jar and stove constant\",\n    \"anchor A - large glass jar with pour spout: fill level ~0% at 0:00, ~20% at 0:02, ~35% at 0:04, ~65% at 0:06, ~40% at 0:08\",\n    \"anchor B - stainless bowl and white bowl of olives: right side of counter in all shots, depleting gradually\",\n    \"small glass bottle: absent from shot 1 framing, present in shots 2-3 (consistent with framing change, not a state change)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:07\",\n      \"entity\": \"large glass jar / olive fill level\",\n      \"invariant_violated\": \"prop state continuity across cut\",\n      \"description\": \"Across the cut between shot 2 and shot 3, the jar drops from roughly two-thirds full of olives at 0:06 to roughly one-third full at 0:08. The action is a continuous olive-filling task in the same scene with no implied elapsed time and no shot of olives being removed, so the olive mass cannot legitimately decrease. The shot at 0:08 appears to be from an earlier point in the filling process, making the olives vanish across the cut.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:22.575Z",
+  "latencyMs": 11880,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 947,
+    "total_tokens": 2185,
+    "cost": 0.00447975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00447975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00355125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 771,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "olives in container | green olives in small glass container | green and dark purple olives | dark purple olives spontaneously appear during pouring",
+    "large jar | empty glass jar | partially filled with green and black olives | receives black olives from a container holding only green olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "object_consistency",
+      "description": "The small glass container contains only green olives, but when poured into the large jar, dark purple and black olives spontaneously appear in the stream and accumulate in the jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"olives in container | green olives in small glass container | green and dark purple olives | dark purple olives spontaneously appear during pouring\",\n    \"large jar | empty glass jar | partially filled with green and black olives | receives black olives from a container holding only green olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"object_consistency\",\n      \"description\": \"The small glass container contains only green olives, but when poured into the large jar, dark purple and black olives spontaneously appear in the stream and accumulate in the jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:12.593Z",
+  "latencyMs": 16929,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1921,
+    "total_tokens": 3346,
+    "cost": 0.0082725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0082725,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00720375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1633,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's hands & small container 1 | holding container filled with olives at 00:00 | placing empty container on counter at 00:04 | tilted container at 00:00 to pour olives into large jar, set aside empty container at 00:04",
+    "First batch of olives | inside small container at 00:00 | settled at bottom of large glass jar at 00:03 | poured out under gravity 00:01-00:02, impacted jar interior and settled by 00:03",
+    "Man's hands & small container 2 | picked up from bowl/counter at 00:05 | empty above glass jar at 00:09 | moved above large jar at 00:06, tilted to pour at 00:07, fully emptied by 00:09",
+    "Second batch of olives | inside small container 2 at 00:05 | settled on top of existing olives in jar at 00:09 | poured downward 00:07-00:08, bounced on impact and came to rest by 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's hands & small container 1 | holding container filled with olives at 00:00 | placing empty container on counter at 00:04 | tilted container at 00:00 to pour olives into large jar, set aside empty container at 00:04\",\n    \"First batch of olives | inside small container at 00:00 | settled at bottom of large glass jar at 00:03 | poured out under gravity 00:01-00:02, impacted jar interior and settled by 00:03\",\n    \"Man's hands & small container 2 | picked up from bowl/counter at 00:05 | empty above glass jar at 00:09 | moved above large jar at 00:06, tilted to pour at 00:07, fully emptied by 00:09\",\n    \"Second batch of olives | inside small container 2 at 00:05 | settled on top of existing olives in jar at 00:09 | poured downward 00:07-00:08, bounced on impact and came to rest by 00:09\"\n  ],\n  \"findings\": []\n}"
+}

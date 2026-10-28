@@ -1,0 +1,123 @@
+{
+  "_comment": "Human-derived expected feature values for validating pass-1 checklists. Derived from ground-truth defect descriptions, review notes, and prior model findings across 12 systems. Fields omitted = not confidently known / not scored. 'triggered_expected' = checks that SHOULD fire for the video's known defect classes to be catchable.",
+  "_long-scene": {
+    "people_count": 2,
+    "mirror_present": false,
+    "vehicle_present": true,
+    "vehicle_seen_multiple_moments": true,
+    "liquid_or_granular_transfer": true,
+    "hands_manipulating_small_objects": true,
+    "legible_text_present": "multiple",
+    "camera_has_cuts": true,
+    "setting": "both",
+    "windows_or_doorways_visible": true,
+    "person_contacts_furniture_or_fixtures": true,
+    "triggered_expected": ["pour-conservation", "vehicle-identity", "cross-cut-placement", "layout-connectivity", "text-stability"]
+  },
+  "child-marbles": {
+    "people_count": 1,
+    "mirror_present": false,
+    "vehicle_present": false,
+    "liquid_or_granular_transfer": true,
+    "countable_object_group": true,
+    "hands_manipulating_small_objects": true,
+    "setting": "interior",
+    "triggered_expected": ["count-stability", "possession-tracking"]
+  },
+  "dancer-mirror": {
+    "people_count": 1,
+    "mirror_present": true,
+    "vehicle_present": false,
+    "countable_object_group": false,
+    "setting": "interior",
+    "triggered_expected": ["mirror-pose-consistency"]
+  },
+  "dialogue": {
+    "people_count": 2,
+    "mirror_present": false,
+    "spoken_dialogue": true,
+    "camera_has_cuts": true,
+    "setting": "interior",
+    "triggered_expected": ["audio-visual-claims", "cross-cut-placement"]
+  },
+  "home-tour": {
+    "people_count": 1,
+    "mirror_present": false,
+    "vehicle_present": false,
+    "windows_or_doorways_visible": true,
+    "setting": "interior",
+    "triggered_expected": ["layout-connectivity"]
+  },
+  "man-cups": {
+    "people_count": 1,
+    "mirror_present": false,
+    "countable_object_group": true,
+    "hands_manipulating_small_objects": true,
+    "setting": "interior",
+    "triggered_expected": ["count-stability", "possession-tracking"]
+  },
+  "man-in-mirror": {
+    "people_count": 1,
+    "mirror_present": true,
+    "vehicle_present": false,
+    "hands_manipulating_small_objects": true,
+    "setting": "interior",
+    "triggered_expected": ["mirror-pose-consistency", "possession-tracking"]
+  },
+  "phone": {
+    "people_count": 1,
+    "mirror_present": false,
+    "legible_text_present": "multiple",
+    "hands_manipulating_small_objects": true,
+    "triggered_expected": ["text-stability"]
+  },
+  "pouring-olives": {
+    "people_count": 1,
+    "mirror_present": false,
+    "liquid_or_granular_transfer": true,
+    "countable_object_group": true,
+    "hands_manipulating_small_objects": true,
+    "setting": "interior",
+    "triggered_expected": ["pour-conservation", "count-stability"]
+  },
+  "skateboarder": {
+    "people_count": 1,
+    "mirror_present": false,
+    "setting": "exterior",
+    "triggered_expected": ["environment-response"]
+  },
+  "watchmaker": {
+    "people_count": 1,
+    "mirror_present": false,
+    "hands_manipulating_small_objects": true,
+    "setting": "interior",
+    "triggered_expected": ["possession-tracking"]
+  },
+  "weird-blocks": {
+    "people_count": 1,
+    "mirror_present": false,
+    "countable_object_group": true,
+    "hands_manipulating_small_objects": true,
+    "legible_text_present": "multiple",
+    "setting": "interior",
+    "triggered_expected": ["count-stability", "possession-tracking", "text-stability"]
+  },
+  "woman-apple": {
+    "people_count": 3,
+    "mirror_present": false,
+    "countable_object_group": true,
+    "legible_text_present": "multiple",
+    "setting": "exterior",
+    "triggered_expected": ["count-stability", "text-stability", "environment-response"]
+  },
+  "woman-car": {
+    "people_count": 1,
+    "mirror_present": false,
+    "vehicle_present": true,
+    "vehicle_seen_multiple_moments": true,
+    "legible_text_present": "once",
+    "setting": "exterior",
+    "person_contacts_furniture_or_fixtures": true,
+    "triggered_expected": ["vehicle-identity", "text-stability", "environment-response"]
+  }
+}

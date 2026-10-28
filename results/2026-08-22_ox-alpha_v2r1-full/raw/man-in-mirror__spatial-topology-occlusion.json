@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:16:34.235Z",
+  "latencyMs": 108561,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 4056,
+    "total_tokens": 10283,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing facing wall mirror, seen from behind-left, shaving jaw/chin with right hand | same position and posture | brief raise of hand to forehead/hairline ~4s, then resumes shaving chin",
+    "mirror | wall-mounted, ornate wooden frame, reflects man and bathroom behind him | unchanged | none",
+    "door (seen in reflection) | dark wood door with brass knob, directly behind reflected man | unchanged | none",
+    "light switch (seen in reflection) | white switch plate on wall, left of reflected face | unchanged | none",
+    "shelf with bottles (seen in reflection) | toiletry shelf on right side of reflected background | unchanged | none",
+    "razor | held in man's right hand, blade visible in reflection | same | moves chin -> forehead -> chin in sync with real hand"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing facing wall mirror, seen from behind-left, shaving jaw/chin with right hand | same position and posture | brief raise of hand to forehead/hairline ~4s, then resumes shaving chin\",\n    \"mirror | wall-mounted, ornate wooden frame, reflects man and bathroom behind him | unchanged | none\",\n    \"door (seen in reflection) | dark wood door with brass knob, directly behind reflected man | unchanged | none\",\n    \"light switch (seen in reflection) | white switch plate on wall, left of reflected face | unchanged | none\",\n    \"shelf with bottles (seen in reflection) | toiletry shelf on right side of reflected background | unchanged | none\",\n    \"razor | held in man's right hand, blade visible in reflection | same | moves chin -> forehead -> chin in sync with real hand\"\n  ],\n  \"findings\": []\n}"
+}

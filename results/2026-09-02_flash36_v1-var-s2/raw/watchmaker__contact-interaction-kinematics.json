@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:41:48.420Z",
+  "latencyMs": 15103,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 966,
+    "total_tokens": 2418,
+    "cost": 0.0047115,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0047115,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.0036225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 808,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | holding tweezers between thumb and index finger | holding small winding key tool and rotating it | released tweezers around 00:04, picked up key tool at 00:05",
+    "Left hand | holding small metallic object between fingers | holding small metallic object stably | maintained continuous support throughout",
+    "Tweezers | gripped by right hand fingers with tip touching watch component | set down out of frame | contact released at 00:04",
+    "Winding tool | picked up by right hand at 00:05 | tip inserted into central axis of watch object and rotated | continuous mechanical contact established and maintained"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | holding tweezers between thumb and index finger | holding small winding key tool and rotating it | released tweezers around 00:04, picked up key tool at 00:05\",\n    \"Left hand | holding small metallic object between fingers | holding small metallic object stably | maintained continuous support throughout\",\n    \"Tweezers | gripped by right hand fingers with tip touching watch component | set down out of frame | contact released at 00:04\",\n    \"Winding tool | picked up by right hand at 00:05 | tip inserted into central axis of watch object and rotated | continuous mechanical contact established and maintained\"\n  ],\n  \"findings\": []\n}"
+}

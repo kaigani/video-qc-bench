@@ -1,0 +1,41 @@
+{
+  "key": "skateboarder__causal-temporal-sequence",
+  "video": "skateboarder.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:58:31.468Z",
+  "latencyMs": 37408,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 896,
+    "total_tokens": 7117,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouched, rolling forward on flat concrete, black tee, green socks, red shoes | rolling upright after landing trick | crouch (0:00-0:01) → pop/flip airborne (0:02-0:03) → landing (0:04) → roll away (0:05-0:07); order and delay plausible",
+    "skateboard | flat on ground under skater, wheels down | flat under skater, rolling | airborne flip with skater (0:02-0:03) → re-contact with feet (0:04) → rolling contact (0:05-0:07) → tilt initiating second trick (0:08-0:09); flip completes with visible catch, no orphaned cause",
+    "skater's shadow | cast on concrete, matching pose | matching pose | shadow tracks body continuously through jump and landing; scale and direction consistent with overhead sun",
+    "skatepark environment | ramps, bowls, trees, light poles, partly cloudy sky | unchanged | static background, only perspective shifts from camera movement and fisheye lens; no uncaused changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouched, rolling forward on flat concrete, black tee, green socks, red shoes | rolling upright after landing trick | crouch (0:00-0:01) → pop/flip airborne (0:02-0:03) → landing (0:04) → roll away (0:05-0:07); order and delay plausible\",\n    \"skateboard | flat on ground under skater, wheels down | flat under skater, rolling | airborne flip with skater (0:02-0:03) → re-contact with feet (0:04) → rolling contact (0:05-0:07) → tilt initiating second trick (0:08-0:09); flip completes with visible catch, no orphaned cause\",\n    \"skater's shadow | cast on concrete, matching pose | matching pose | shadow tracks body continuously through jump and landing; scale and direction consistent with overhead sun\",\n    \"skatepark environment | ramps, bowls, trees, light poles, partly cloudy sky | unchanged | static background, only perspective shifts from camera movement and fisheye lens; no uncaused changes\"\n  ],\n  \"findings\": []\n}"
+}

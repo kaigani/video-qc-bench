@@ -1,0 +1,62 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:19:32.736Z",
+  "latencyMs": 10110,
+  "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 962,
+    "total_tokens": 2343,
+    "cost": 0.014306,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014306,
+      "upstream_inference_prompt_cost": 0.002762,
+      "upstream_inference_completions_cost": 0.011544
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 562,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Large jar is empty.",
+    "00:00: Small jar 1 contains only green olives.",
+    "00:01-00:04: Small jar 1 is being emptied, only green olives are visible inside.",
+    "00:01-00:04: Large jar is being filled. A mix of green and black olives appear in the large jar.",
+    "00:05: Large jar contains a mix of green and black olives.",
+    "00:05: Small jar 2 contains only green olives.",
+    "00:06-00:09: Small jar 2 is being emptied, only green olives are visible inside.",
+    "00:06-00:09: Large jar is being filled. A mix of green and black olives continue to appear in the large jar."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives",
+      "invariant_violated": "source contents",
+      "description": "The person is pouring from a jar that contains only green olives, but some of the olives falling into the destination jar are black.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Olives",
+      "invariant_violated": "source contents",
+      "description": "The person is pouring from a second jar that contains only green olives, but black olives appear to fall from it into the destination jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Large jar is empty.\",\n    \"00:00: Small jar 1 contains only green olives.\",\n    \"00:01-00:04: Small jar 1 is being emptied, only green olives are visible inside.\",\n    \"00:01-00:04: Large jar is being filled. A mix of green and black olives appear in the large jar.\",\n    \"00:05: Large jar contains a mix of green and black olives.\",\n    \"00:05: Small jar 2 contains only green olives.\",\n    \"00:06-00:09: Small jar 2 is being emptied, only green olives are visible inside.\",\n    \"00:06-00:09: Large jar is being filled. A mix of green and black olives continue to appear in the large jar.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"The person is pouring from a jar that contains only green olives, but some of the olives falling into the destination jar are black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"The person is pouring from a second jar that contains only green olives, but black olives appear to fall from it into the destination jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

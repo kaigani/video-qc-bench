@@ -1,0 +1,49 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:11:57.847Z",
+  "latencyMs": 16805,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1099,
+    "total_tokens": 2517,
+    "cost": 0.016024,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016024,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.013188
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 888,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:04: Bowl contains approximately 10 matte plastic balls (red, yellow, green).",
+    "00:00 - 00:04: A small container and some balls are visible on the right side of the table.",
+    "00:05 - 00:09: Bowl contains approximately 8 shiny, metallic-looking balls (red, yellow, green)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Balls in the bowl",
+      "invariant_violated": "Object Transformation",
+      "description": "The matte plastic balls in the bowl suddenly change into shiny, metallic-looking balls. This transformation happens instantaneously without any visible mechanism.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:04: Bowl contains approximately 10 matte plastic balls (red, yellow, green).\",\n    \"00:00 - 00:04: A small container and some balls are visible on the right side of the table.\",\n    \"00:05 - 00:09: Bowl contains approximately 8 shiny, metallic-looking balls (red, yellow, green).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Balls in the bowl\",\n      \"invariant_violated\": \"Object Transformation\",\n      \"description\": \"The matte plastic balls in the bowl suddenly change into shiny, metallic-looking balls. This transformation happens instantaneously without any visible mechanism.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

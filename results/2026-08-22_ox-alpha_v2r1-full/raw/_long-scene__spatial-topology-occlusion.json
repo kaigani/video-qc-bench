@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:10:28.172Z",
+  "latencyMs": 566034,
+  "usage": {
+    "prompt_tokens": 35255,
+    "completion_tokens": 22550,
+    "total_tokens": 57805,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 35200,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner building | storefront with centered glass double doors, OPEN neon sign in window band right of doors, kitchen wing to the right; interior: windowed wall with booths, counter with stool row parallel to it, kitchen pass-through and exit door on back wall | unchanged across all interior/exterior shots | exterior and interior geometry reconcile into one consistent layout",
+    "Truck (trucker's vehicle) | 0:00-0:10: white conventional semi tractor with large sleeper cab, parked in lot left of diner, cab facing the building, steam at front | 1:43-1:51: dark green box truck with white stripe, day cab with exhaust stack, parked abeam the windows, cab toward building | vehicle type, cab style, and color change between opening and closing exteriors",
+    "Counter + stools | runs parallel to windowed wall, ~7-8 red-topped stools, napkin/sugar dispensers on counter | unchanged | man sits at mid-counter in every wide shot",
+    "Booths | upholstered booths under the windowed (storefront) wall | unchanged |",
+    "Kitchen pass-through + exit door | lit pass-through at back wall center, exit door with EXIT sign at back-right, clock above pass-through | unchanged |",
+    "Waitress | works behind counter, coffee station at back-right | seated beside man at counter by 1:29 | off-screen move around counter end is geometrically plausible",
+    "Trucker (man) | enters via back door ~0:22, sits mid-counter, eats, pays at 1:39 | exits front and walks to truck cab 1:43-1:51 | path compatible with layout",
+    "Exterior backdrop through windows | house across street and road; white sedan parked outside appears by morning (1:02) | consistent with lot/road layout | new car plausibly arrived off-screen overnight"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "Truck outside the diner",
+      "invariant_violated": "Fixed-object continuity / scene layout consistency",
+      "description": "The establishing exterior (0:00-0:10) shows the trucker's vehicle as a white semi tractor with a large sleeper cab, parked left of the diner with the cab facing the building. When the man walks out to it at 1:43-1:51, the vehicle in the same position and orientation is a dark green box truck with a white stripe and a day cab (no sleeper). Same narrative vehicle, same parking spot, but body type, cab configuration, and color are all different — a fixed scene element rendered two incompatible ways across shots.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner building | storefront with centered glass double doors, OPEN neon sign in window band right of doors, kitchen wing to the right; interior: windowed wall with booths, counter with stool row parallel to it, kitchen pass-through and exit door on back wall | unchanged across all interior/exterior shots | exterior and interior geometry reconcile into one consistent layout\",\n    \"Truck (trucker's vehicle) | 0:00-0:10: white conventional semi tractor with large sleeper cab, parked in lot left of diner, cab facing the building, steam at front | 1:43-1:51: dark green box truck with white stripe, day cab with exhaust stack, parked abeam the windows, cab toward building | vehicle type, cab style, and color change between opening and closing exteriors\",\n    \"Counter + stools | runs parallel to windowed wall, ~7-8 red-topped stools, napkin/sugar dispensers on counter | unchanged | man sits at mid-counter in every wide shot\",\n    \"Booths | upholstered booths under the windowed (storefront) wall | unchanged |\",\n    \"Kitchen pass-through + exit door | lit pass-through at back wall center, exit door with EXIT sign at back-right, clock above pass-through | unchanged |\",\n    \"Waitress | works behind counter, coffee station at back-right | seated beside man at counter by 1:29 | off-screen move around counter end is geometrically plausible\",\n    \"Trucker (man) | enters via back door ~0:22, sits mid-counter, eats, pays at 1:39 | exits front and walks to truck cab 1:43-1:51 | path compatible with layout\",\n    \"Exterior backdrop through windows | house across street and road; white sedan parked outside appears by morning (1:02) | consistent with lot/road layout | new car plausibly arrived off-screen overnight\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"Truck outside the diner\",\n      \"invariant_violated\": \"Fixed-object continuity / scene layout consistency\",\n      \"description\": \"The establishing exterior (0:00-0:10) shows the trucker's vehicle as a white semi tractor with a large sleeper cab, parked left of the diner with the cab facing the building. When the man walks out to it at 1:43-1:51, the vehicle in the same position and orientation is a dark green box truck with a white stripe and a day cab (no sleeper). Same narrative vehicle, same parking spot, but body type, cab configuration, and color are all different — a fixed scene element rendered two incompatible ways across shots.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

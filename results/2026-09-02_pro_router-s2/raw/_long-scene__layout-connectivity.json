@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:40:43.646Z",
+  "latencyMs": 57673,
+  "usage": {
+    "prompt_tokens": 10599,
+    "completion_tokens": 6147,
+    "total_tokens": 16746,
+    "cost": 0.094962,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.094962,
+      "upstream_inference_prompt_cost": 0.021198,
+      "upstream_inference_completions_cost": 0.073764
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5897,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner Exterior (parking lot, building front)",
+    "Diner Interior (counter, seating, entrance door, windows, pass-through to kitchen)",
+    "Kitchen (visible through pass-through window)",
+    "Exterior parking lot (visible through interior windows)",
+    "Traversal: Man enters Diner Interior from Diner Exterior through the front door (0:19)",
+    "Traversal: Man exits Diner Interior to Exterior (implied before 1:41)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "Front entrance door",
+      "invariant_violated": "opening consistency",
+      "description": "The exterior shot at 0:00 establishes the front entrance as a recessed set of double glass doors. However, from the interior perspective at 0:19, the entrance is a single glass door that is flush with the wall, contradicting the established architectural structure of the opening.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Diner Exterior (parking lot, building front)\",\n    \"Diner Interior (counter, seating, entrance door, windows, pass-through to kitchen)\",\n    \"Kitchen (visible through pass-through window)\",\n    \"Exterior parking lot (visible through interior windows)\",\n    \"Traversal: Man enters Diner Interior from Diner Exterior through the front door (0:19)\",\n    \"Traversal: Man exits Diner Interior to Exterior (implied before 1:41)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"Front entrance door\",\n      \"invariant_violated\": \"opening consistency\",\n      \"description\": \"The exterior shot at 0:00 establishes the front entrance as a recessed set of double glass doors. However, from the interior perspective at 0:19, the entrance is a single glass door that is flush with the wall, contradicting the established architectural structure of the opening.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}\n```"
+}

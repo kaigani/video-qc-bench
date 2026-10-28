@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:32:30.021Z",
+  "latencyMs": 101004,
+  "usage": {
+    "prompt_tokens": 5431,
+    "completion_tokens": 2528,
+    "total_tokens": 7959,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's crossed forearms | resting on driver's door window frame, arms crossed, one hand gripping opposite forearm, contact pre-established at video start | identical supported pose at end, no slippage or drift | no transitions; stable continuous contact 00:00-00:09, fingers remain wrapped around forearm, no floating grip",
+    "woman's torso | leaning out through open driver's window, upper body weight borne by window frame and door top | same lean maintained | only small postural adjustments and wind-blown hair; lean trajectory continuous, no snapping between poses",
+    "station wagon body (door frame/hood) | parked, tires on desert ground, static | unchanged | serves as passive support surface; no visible deformation, no clipping with the woman's arms or torso",
+    "woman-car interface overall | single persistent contact pair (forearms vs. window frame) | contact never released during clip | no new contacts formed, no effect-before-contact events, no object motion preceding contact"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's crossed forearms | resting on driver's door window frame, arms crossed, one hand gripping opposite forearm, contact pre-established at video start | identical supported pose at end, no slippage or drift | no transitions; stable continuous contact 00:00-00:09, fingers remain wrapped around forearm, no floating grip\",\n    \"woman's torso | leaning out through open driver's window, upper body weight borne by window frame and door top | same lean maintained | only small postural adjustments and wind-blown hair; lean trajectory continuous, no snapping between poses\",\n    \"station wagon body (door frame/hood) | parked, tires on desert ground, static | unchanged | serves as passive support surface; no visible deformation, no clipping with the woman's arms or torso\",\n    \"woman-car interface overall | single persistent contact pair (forearms vs. window frame) | contact never released during clip | no new contacts formed, no effect-before-contact events, no object motion preceding contact\"\n  ],\n  \"findings\": []\n}"
+}

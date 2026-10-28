@@ -1,0 +1,49 @@
+{
+  "key": "dialogue__layout-connectivity",
+  "video": "dialogue.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:17:37.226Z",
+  "latencyMs": 19799,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2316,
+    "total_tokens": 3710,
+    "cost": 0.03058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03058,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.027792
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2012,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Initial state - Man facing camera. Background wall from viewer's left to right: Door edge, wall section with blue coat on hook, double door with glass panels, wall section with buzzer plate and picture frame, door edge.",
+    "00:06: Man turns to his right (viewer's left) and walks towards a door.",
+    "00:07: Second shot state - Man facing a solid wood double door. Wall section to the right of this door contains, from left to right: a complex buzzer panel, the blue coat on a hook, and the picture frame."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Wall fixtures and layout",
+      "invariant_violated": "Spatial Continuity",
+      "description": "The spatial arrangement of the room's features changes completely when the camera angle cuts. In the initial shot, the coat hook and the picture frame are separated by a double door, located on opposite sides of the man. In the second shot, after he turns, the coat hook, picture frame, and a buzzer panel are all located on the same continuous section of wall to the right of the door he is facing.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Initial state - Man facing camera. Background wall from viewer's left to right: Door edge, wall section with blue coat on hook, double door with glass panels, wall section with buzzer plate and picture frame, door edge.\",\n    \"00:06: Man turns to his right (viewer's left) and walks towards a door.\",\n    \"00:07: Second shot state - Man facing a solid wood double door. Wall section to the right of this door contains, from left to right: a complex buzzer panel, the blue coat on a hook, and the picture frame.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Wall fixtures and layout\",\n      \"invariant_violated\": \"Spatial Continuity\",\n      \"description\": \"The spatial arrangement of the room's features changes completely when the camera angle cuts. In the initial shot, the coat hook and the picture frame are separated by a double door, located on opposite sides of the man. In the second shot, after he turns, the coat hook, picture frame, and a buzzer panel are all located on the same continuous section of wall to the right of the door he is facing.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

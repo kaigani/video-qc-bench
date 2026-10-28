@@ -1,0 +1,43 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:30:13.116Z",
+  "latencyMs": 140339,
+  "usage": {
+    "prompt_tokens": 5853,
+    "completion_tokens": 4413,
+    "total_tokens": 10266,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:08 large clear spouted glass jar (center, on cutting board): empty at 0:00; fills monotonically with mixed green and dark olives — roughly one layer at 0:02, ~quarter full at 0:04, ~third at 0:06, ~40% at 0:08; same jar (spout, threaded neck) in every frame",
+    "0:00-0:04 small clear glass bowl (source 1, held over jar): green olives visible on top at 0:00 (dark olives plausibly hidden beneath/behind hand and bowl wall); tipped and poured into jar, visible contents decrease 0:02-0:04; right hand occludes bowl interior at 0:04 so it is never shown empty",
+    "0:06 small clear glass bowl (source 1): not visible (presumed set down outside frame while stainless bowl is handled)",
+    "0:08 small clear glass bowl (source 1): back over jar containing mixed green/dark olives, pouring; contents consistent with olives never fully emptied at 0:04 (bowl was hand-occluded, not shown empty)",
+    "0:00-0:08 stainless steel bowl (source 2, right of jar): full of green olives 0:00-0:04; held tilted over jar at 0:06 with visibly fewer olives and dark olives now on top (consistent with having poured, dark ones previously hidden beneath in opaque bowl); back on counter at 0:08 further reduced — monotonic depletion matching jar inflow",
+    "0:00-0:08 white ceramic bowl (source 3, far right): full of green olives in every frame, never picked up or poured, unchanged"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:08 large clear spouted glass jar (center, on cutting board): empty at 0:00; fills monotonically with mixed green and dark olives — roughly one layer at 0:02, ~quarter full at 0:04, ~third at 0:06, ~40% at 0:08; same jar (spout, threaded neck) in every frame\",\n    \"0:00-0:04 small clear glass bowl (source 1, held over jar): green olives visible on top at 0:00 (dark olives plausibly hidden beneath/behind hand and bowl wall); tipped and poured into jar, visible contents decrease 0:02-0:04; right hand occludes bowl interior at 0:04 so it is never shown empty\",\n    \"0:06 small clear glass bowl (source 1): not visible (presumed set down outside frame while stainless bowl is handled)\",\n    \"0:08 small clear glass bowl (source 1): back over jar containing mixed green/dark olives, pouring; contents consistent with olives never fully emptied at 0:04 (bowl was hand-occluded, not shown empty)\",\n    \"0:00-0:08 stainless steel bowl (source 2, right of jar): full of green olives 0:00-0:04; held tilted over jar at 0:06 with visibly fewer olives and dark olives now on top (consistent with having poured, dark ones previously hidden beneath in opaque bowl); back on counter at 0:08 further reduced — monotonic depletion matching jar inflow\",\n    \"0:00-0:08 white ceramic bowl (source 3, far right): full of green olives in every frame, never picked up or poured, unchanged\"\n  ],\n  \"findings\": []\n}"
+}

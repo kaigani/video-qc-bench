@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:18:53.753Z",
+  "latencyMs": 12153,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 964,
+    "total_tokens": 2382,
+    "cost": 0.0046785,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0046785,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.003615
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 814,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Colorful balls in glass bowl: total count = 6 (2 red, 2 yellow, 2 green).",
+    "00:01 - Child lifts 1 red ball from bowl; 5 balls remain inside bowl (total count = 6).",
+    "00:02 - Child places red ball back into bowl (total count = 6).",
+    "00:03-00:09 - Child stirs balls in the bowl; all 6 balls (2 red, 2 yellow, 2 green) remain accounted for throughout."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Colorful balls in glass bowl: total count = 6 (2 red, 2 yellow, 2 green).\",\n    \"00:01 - Child lifts 1 red ball from bowl; 5 balls remain inside bowl (total count = 6).\",\n    \"00:02 - Child places red ball back into bowl (total count = 6).\",\n    \"00:03-00:09 - Child stirs balls in the bowl; all 6 balls (2 red, 2 yellow, 2 green) remain accounted for throughout.\"\n  ],\n  \"findings\": []\n}"
+}

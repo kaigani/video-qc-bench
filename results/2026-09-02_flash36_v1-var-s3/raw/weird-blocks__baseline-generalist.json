@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:47.936Z",
+  "latencyMs": 13009,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2152,
+    "total_tokens": 3390,
+    "cost": 0.0089985,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0089985,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00807
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1983,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand | right hand sliding blocks | active throughout",
+    "numbered blocks | blue and green cube blocks | sequence expands as new blocks spontaneously spawn in gap when sliding"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "numbered blocks",
+      "invariant_violated": "spontaneous_generation",
+      "description": "As the hand drags the rightmost block to the right, new numbered blocks (tan 2, blue 3, green 5, green 2, blue 6) spontaneously materialize in the opening space without being placed.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand | right hand sliding blocks | active throughout\",\n    \"numbered blocks | blue and green cube blocks | sequence expands as new blocks spontaneously spawn in gap when sliding\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"spontaneous_generation\",\n      \"description\": \"As the hand drags the rightmost block to the right, new numbered blocks (tan 2, blue 3, green 5, green 2, blue 6) spontaneously materialize in the opening space without being placed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

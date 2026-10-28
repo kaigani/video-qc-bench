@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:46:27.251Z",
+  "latencyMs": 441206,
+  "usage": {
+    "prompt_tokens": 6218,
+    "completion_tokens": 20574,
+    "total_tokens": 26792,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (woman) | brown hair in ponytail, black racerback sports bra, black capri leggings, barefoot, dark tattoos on right shoulder/upper arm | identical wardrobe, hair, and tattoos at end | single continuous shot with no cuts; performs continuous port de bras: right arm sweeps up overhead in a curve (0:02), lowers bent past the face (0:04), both arms settle at hips with a small step toward mirror (0:06), right arm re-rises to full straight overhead extension (0:08); reflection in the real studio mirror wall tracks her front view throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:08",
+      "entity": "Dancer's reflection in the studio mirror (right arm)",
+      "invariant_violated": "Mirror reflection must instantaneously match the subject's pose",
+      "description": "At 0:08 the dancer's actual right arm is fully extended in a straight vertical line overhead, hand open near the top of the frame well above her head. Her reflection in the mirror at the same instant shows that arm bent at the elbow with the hand only just above head level — matching an earlier phase of the arm's rise (similar to the bent pose at 0:04). A real mirror cannot display a different arm pose than the body at the same moment; the reflected arm is visibly shorter/bent relative to the sharply rendered real arm, indicating a desynced or incorrect reflection.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (woman) | brown hair in ponytail, black racerback sports bra, black capri leggings, barefoot, dark tattoos on right shoulder/upper arm | identical wardrobe, hair, and tattoos at end | single continuous shot with no cuts; performs continuous port de bras: right arm sweeps up overhead in a curve (0:02), lowers bent past the face (0:04), both arms settle at hips with a small step toward mirror (0:06), right arm re-rises to full straight overhead extension (0:08); reflection in the real studio mirror wall tracks her front view throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"Dancer's reflection in the studio mirror (right arm)\",\n      \"invariant_violated\": \"Mirror reflection must instantaneously match the subject's pose\",\n      \"description\": \"At 0:08 the dancer's actual right arm is fully extended in a straight vertical line overhead, hand open near the top of the frame well above her head. Her reflection in the mirror at the same instant shows that arm bent at the elbow with the hand only just above head level — matching an earlier phase of the arm's rise (similar to the bent pose at 0:04). A real mirror cannot display a different arm pose than the body at the same moment; the reflected arm is visibly shorter/bent relative to the sharply rendered real arm, indicating a desynced or incorrect reflection.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

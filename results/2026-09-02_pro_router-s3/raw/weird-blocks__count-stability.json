@@ -1,0 +1,56 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:20:06.340Z",
+  "latencyMs": 14048,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1487,
+    "total_tokens": 2905,
+    "cost": 0.02068,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02068,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.017844
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1137,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: 2 blocks (1 held by hand, 1 on table)",
+    "00:01: 3 blocks (1 held by hand, 2 on table)",
+    "00:02: 3 blocks (1 held by hand, 2 on table)",
+    "00:03: 4 blocks (1 held by hand, 3 on table)",
+    "00:04: 6 blocks (1 held by hand, 5 on table)",
+    "00:05: 8 blocks (1 held by hand, 7 on table)",
+    "00:06: 9 blocks (1 held by hand, 8 on table)",
+    "00:07: 10 blocks (1 held by hand, 9 on table)",
+    "00:08: 10 blocks (hand is touching one of the blocks, 10 on table)",
+    "00:09: 10 blocks (all on table)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Blocks",
+      "invariant_violated": "Unexplained count increase",
+      "description": "As the hand drags a block to the right, new blocks continuously spawn from behind it, increasing the total count from 2 to 10 without any visible source.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: 2 blocks (1 held by hand, 1 on table)\",\n    \"00:01: 3 blocks (1 held by hand, 2 on table)\",\n    \"00:02: 3 blocks (1 held by hand, 2 on table)\",\n    \"00:03: 4 blocks (1 held by hand, 3 on table)\",\n    \"00:04: 6 blocks (1 held by hand, 5 on table)\",\n    \"00:05: 8 blocks (1 held by hand, 7 on table)\",\n    \"00:06: 9 blocks (1 held by hand, 8 on table)\",\n    \"00:07: 10 blocks (1 held by hand, 9 on table)\",\n    \"00:08: 10 blocks (hand is touching one of the blocks, 10 on table)\",\n    \"00:09: 10 blocks (all on table)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Blocks\",\n      \"invariant_violated\": \"Unexplained count increase\",\n      \"description\": \"As the hand drags a block to the right, new blocks continuously spawn from behind it, increasing the total count from 2 to 10 without any visible source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

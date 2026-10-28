@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:18:21.667Z",
+  "latencyMs": 50446,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 2244,
+    "total_tokens": 8465,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red ball in child's hands | held above bowl at 0:02 | inside bowl among other balls by 0:04 | drop action completes, ball joins pile - order plausible",
+    "glass bowl of plastic balls | ~8 balls (red/green/yellow) resting at 0:00 | ~10-11 balls being stirred at 0:04-0:08 | count increase explained by child adding balls during blurred motion at 0:00-0:02 and spare balls visible on table right edge",
+    "child's hand stirring action | reaches into bowl at 0:04 | continuous stirring through 0:08 | balls shift positions in direct response to hand contact, motion blur consistent with stirring speed",
+    "spare balls on table right edge | red and green visible at 0:00 | red/yellow/green visible at 0:02 | framing change from camera pullback accounts for visibility differences; plausible source for balls added to bowl",
+    "metal egg cup on table | present at right edge 0:00-0:04 | exits frame as camera zooms toward bowl at 0:06-0:08 | leaving frame, not disappearance - plausible off-screen persistence"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"red ball in child's hands | held above bowl at 0:02 | inside bowl among other balls by 0:04 | drop action completes, ball joins pile - order plausible\",\n    \"glass bowl of plastic balls | ~8 balls (red/green/yellow) resting at 0:00 | ~10-11 balls being stirred at 0:04-0:08 | count increase explained by child adding balls during blurred motion at 0:00-0:02 and spare balls visible on table right edge\",\n    \"child's hand stirring action | reaches into bowl at 0:04 | continuous stirring through 0:08 | balls shift positions in direct response to hand contact, motion blur consistent with stirring speed\",\n    \"spare balls on table right edge | red and green visible at 0:00 | red/yellow/green visible at 0:02 | framing change from camera pullback accounts for visibility differences; plausible source for balls added to bowl\",\n    \"metal egg cup on table | present at right edge 0:00-0:04 | exits frame as camera zooms toward bowl at 0:06-0:08 | leaving frame, not disappearance - plausible off-screen persistence\"\n  ],\n  \"findings\": []\n}"
+}

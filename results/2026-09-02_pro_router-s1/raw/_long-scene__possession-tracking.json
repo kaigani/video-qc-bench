@@ -1,0 +1,53 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:32:10.219Z",
+  "latencyMs": 38062,
+  "usage": {
+    "prompt_tokens": 10589,
+    "completion_tokens": 2024,
+    "total_tokens": 12613,
+    "cost": 0.045466,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.045466,
+      "upstream_inference_prompt_cost": 0.021178,
+      "upstream_inference_completions_cost": 0.024288
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1693,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:10 - 00:18: cleaning rag in waitress's right hand",
+    "00:26 - 00:31: coffee pot in waitress's right hand",
+    "01:09 - 01:11: plate of food in waitress's hands -> placed on counter",
+    "01:12 - 01:14: coffee mug in waitress's right hand -> placed on counter",
+    "01:38: folded $100 bills in customer's right hand -> placed on counter",
+    "01:38 - 01:40: folded $100 bills on counter",
+    "01:50 - 01:52: coffee mug on counter -> picked up by waitress's right hand"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "folded $100 bills",
+      "invariant_violated": "placement persistence",
+      "description": "The folded bills were placed on the counter next to the coffee mug at 01:38 and left there. When the scene returns to that exact section of the counter at 01:50, the bills have vanished with no visible action removing them.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:10 - 00:18: cleaning rag in waitress's right hand\",\n    \"00:26 - 00:31: coffee pot in waitress's right hand\",\n    \"01:09 - 01:11: plate of food in waitress's hands -> placed on counter\",\n    \"01:12 - 01:14: coffee mug in waitress's right hand -> placed on counter\",\n    \"01:38: folded $100 bills in customer's right hand -> placed on counter\",\n    \"01:38 - 01:40: folded $100 bills on counter\",\n    \"01:50 - 01:52: coffee mug on counter -> picked up by waitress's right hand\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"folded $100 bills\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"The folded bills were placed on the counter next to the coffee mug at 01:38 and left there. When the scene returns to that exact section of the counter at 01:50, the bills have vanished with no visible action removing them.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:37:37.389Z",
+  "latencyMs": 13683,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1145,
+    "total_tokens": 2563,
+    "cost": 0.016576,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016576,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.01374
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 867,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Woman holds 1 red fruit. 2 hanging bags of red fruits visible in background left.",
+    "00:03 - Right hanging bag of red fruits disappears.",
+    "00:05 - Left hanging bag of red fruits disappears."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Right hanging bag of red fruits",
+      "invariant_violated": "Unexplained disappearance",
+      "description": "One of the two hanging bags of red fruits visible in the background on the left suddenly disappears from the frame without any visible cause, while the structure it was hanging from remains visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Left hanging bag of red fruits",
+      "invariant_violated": "Unexplained disappearance",
+      "description": "The second hanging bag of red fruits in the background on the left suddenly disappears from the frame without any visible cause.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Woman holds 1 red fruit. 2 hanging bags of red fruits visible in background left.\",\n    \"00:03 - Right hanging bag of red fruits disappears.\",\n    \"00:05 - Left hanging bag of red fruits disappears.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Right hanging bag of red fruits\",\n      \"invariant_violated\": \"Unexplained disappearance\",\n      \"description\": \"One of the two hanging bags of red fruits visible in the background on the left suddenly disappears from the frame without any visible cause, while the structure it was hanging from remains visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Left hanging bag of red fruits\",\n      \"invariant_violated\": \"Unexplained disappearance\",\n      \"description\": \"The second hanging bag of red fruits in the background on the left suddenly disappears from the frame without any visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

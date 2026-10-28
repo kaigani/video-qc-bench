@@ -1,0 +1,62 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:28.423Z",
+  "latencyMs": 16977,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 3309,
+    "total_tokens": 4685,
+    "cost": 0.01344075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01344075,
+      "upstream_inference_prompt_cost": 0.001032,
+      "upstream_inference_completions_cost": 0.01240875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2835,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (blue): '2' (00:01 - 00:09)",
+    "Block 2 (blue): '3' (00:01 - 00:09)",
+    "Block 3 (green): '2' at 00:01, '3' at 00:02, '2' (00:03 - 00:09)",
+    "Block 4 (beige): '2' (00:04 - 00:09)",
+    "Block 5 (light blue): '3' (00:05 - 00:09)",
+    "Block 6 (dark green): '5' (00:06 - 00:09)",
+    "Block 7 (green): '2' (00:07 - 00:09)",
+    "Block 8 (blue): '3' at 00:07, '6' at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Green block in 3rd position",
+      "invariant_violated": "stability",
+      "description": "The digit on the third green block changes to '3' at 00:02, before reverting to '2' at 00:03 without any action altering it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Blue block in 8th position",
+      "invariant_violated": "stability",
+      "description": "The digit on the blue block on the far right appears as '3' at 00:07 while being placed, but changes to '6' at 00:08 once set down.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (blue): '2' (00:01 - 00:09)\",\n    \"Block 2 (blue): '3' (00:01 - 00:09)\",\n    \"Block 3 (green): '2' at 00:01, '3' at 00:02, '2' (00:03 - 00:09)\",\n    \"Block 4 (beige): '2' (00:04 - 00:09)\",\n    \"Block 5 (light blue): '3' (00:05 - 00:09)\",\n    \"Block 6 (dark green): '5' (00:06 - 00:09)\",\n    \"Block 7 (green): '2' (00:07 - 00:09)\",\n    \"Block 8 (blue): '3' at 00:07, '6' at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Green block in 3rd position\",\n      \"invariant_violated\": \"stability\",\n      \"description\": \"The digit on the third green block changes to '3' at 00:02, before reverting to '2' at 00:03 without any action altering it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Blue block in 8th position\",\n      \"invariant_violated\": \"stability\",\n      \"description\": \"The digit on the blue block on the far right appears as '3' at 00:07 while being placed, but changes to '6' at 00:08 once set down.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

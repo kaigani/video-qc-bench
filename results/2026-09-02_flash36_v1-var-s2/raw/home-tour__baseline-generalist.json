@@ -1,0 +1,48 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:38:35.705Z",
+  "latencyMs": 18193,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1337,
+    "total_tokens": 2575,
+    "cost": 0.00594225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00594225,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00501375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1199,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing dark blue dress, short brown hair | walking through house",
+    "kitchen/hallway | kitchen with countertop microwave on right at start | kitchen reconfigured with microwave above stove at end"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "kitchen environment",
+      "invariant_violated": "spatial_consistency",
+      "description": "When the woman exits the bedroom back into the kitchen area, the layout of the kitchen has morphed: the microwave is now mounted over the stove on the left, whereas at 00:00 the microwave was sitting on the countertop on the right side and the stove was arranged differently.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\"ledger\":[\"woman | wearing dark blue dress, short brown hair | walking through house\",\"kitchen/hallway | kitchen with countertop microwave on right at start | kitchen reconfigured with microwave above stove at end\"],\"findings\":[{\"timestamp\":\"00:08\",\"entity\":\"kitchen environment\",\"invariant_violated\":\"spatial_consistency\",\"description\":\"When the woman exits the bedroom back into the kitchen area, the layout of the kitchen has morphed: the microwave is now mounted over the stove on the left, whereas at 00:00 the microwave was sitting on the countertop on the right side and the stove was arranged differently.\",\"severity\":\"moderate\",\"confidence\":0.95}]}"
+}

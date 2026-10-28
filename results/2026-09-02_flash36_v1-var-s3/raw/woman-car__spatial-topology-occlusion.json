@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:18:11.919Z",
+  "latencyMs": 16544,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1464,
+    "total_tokens": 2890,
+    "cost": 0.0065595,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0065595,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00549
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1336,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon | parked on shoulder of desert road, front grill and driver side visible | stationary position on roadside | smooth camera pan from front-quarter view to close-up on driver side",
+    "woman | leaning on hood near driver-side A-pillar | remains fixed relative to hood and windshield | occludes car windshield, partially occluded by hood surface",
+    "desert road | runs parallel to car on left side into background | maintains position relative to vehicle | occluded appropriately by car hood as camera angle changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon | parked on shoulder of desert road, front grill and driver side visible | stationary position on roadside | smooth camera pan from front-quarter view to close-up on driver side\",\n    \"woman | leaning on hood near driver-side A-pillar | remains fixed relative to hood and windshield | occludes car windshield, partially occluded by hood surface\",\n    \"desert road | runs parallel to car on left side into background | maintains position relative to vehicle | occluded appropriately by car hood as camera angle changes\"\n  ],\n  \"findings\": []\n}"
+}

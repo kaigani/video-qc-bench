@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:39:52.760Z",
+  "latencyMs": 19885,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1765,
+    "total_tokens": 3209,
+    "cost": 0.00770175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00770175,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00661875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1454,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white toothbrush | held in right hand at 00:00 | held in right hand at 00:09 | vanishes at 00:02, reappears at 00:04",
+    "black comb | absent at 00:00 | absent at 00:09 | appears in right hand at 00:02, vanishes at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "white toothbrush / black comb",
+      "invariant_violated": "object identity transformation",
+      "description": "The white toothbrush held in the man's right hand instantaneously transforms into a black comb as he raises his hand to his hair without any visible swap or retrieval action.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "black comb / white toothbrush",
+      "invariant_violated": "object identity transformation",
+      "description": "The black comb held in the man's right hand instantaneously transforms back into the white toothbrush as his hand moves back down from his hair to his face.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white toothbrush | held in right hand at 00:00 | held in right hand at 00:09 | vanishes at 00:02, reappears at 00:04\",\n    \"black comb | absent at 00:00 | absent at 00:09 | appears in right hand at 00:02, vanishes at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"white toothbrush / black comb\",\n      \"invariant_violated\": \"object identity transformation\",\n      \"description\": \"The white toothbrush held in the man's right hand instantaneously transforms into a black comb as he raises his hand to his hair without any visible swap or retrieval action.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"black comb / white toothbrush\",\n      \"invariant_violated\": \"object identity transformation\",\n      \"description\": \"The black comb held in the man's right hand instantaneously transforms back into the white toothbrush as his hand moves back down from his hair to his face.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

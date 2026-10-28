@@ -1,0 +1,68 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:24:48.172Z",
+  "latencyMs": 352249,
+  "usage": {
+    "prompt_tokens": 34923,
+    "completion_tokens": 12765,
+    "total_tokens": 47688,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 0:00-0:10, exterior wide at dusk; white conventional semi tractor idling left of diner, OPEN sign lit, no people visible",
+    "shot 2: 0:12-0:19, interior counter medium; waitress alone wiping counter, moves off frame right toward coffee station",
+    "shot 3: 0:20-0:28, interior wide from dining room; waitress behind counter; man in brown jacket enters from door (left), sits at near counter end; waitress pours coffee",
+    "shot 4: 0:30-0:33, counter close-up; carafe fills white mug; man's hands (watch, left wrist) at frame left",
+    "shot 5: 0:34-0:38, close-up; plate of fried egg + cornbread with steam; booth and dim window behind",
+    "shot 6: 0:38-0:46, interior wide; man at counter holding mug, egg plate in front of him; waitress absent from frame",
+    "shot 7: 0:46-0:52, kitchen-side view through pass; waitress wiping ledge in foreground; man seated at counter in background",
+    "shot 8: 0:53-0:59, counter wide from dining side; counter completely empty — man, waitress, plate all gone; crossfade in/out implies elapsed time",
+    "shot 9: 1:00-1:11, interior wide; man back at counter head-down; waitress working at coffee station right",
+    "shot 10: 1:11-1:18, interior medium; waitress carries and sets a breakfast plate in front of the man",
+    "shot 11: 1:19-1:28, interior wide; man at counter; waitress rounds counter end and sits beside him",
+    "shot 12: 1:29-1:37, counter two-shot; both hold mugs, sunrise through window; man glances to camera then turns left",
+    "shot 13: 1:37-1:39, counter close-up; hand from left lays folded $100 bills beside mug; second hand from right reaches",
+    "shot 14: 1:43-1:49, through-window shot; man crosses lot to a green single-unit box truck; waitress inside at window with reflection doubled in glass"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "vehicle outside diner (man's truck)",
+      "invariant_violated": "fixed anchor continuity",
+      "description": "At 0:00-0:10 the vehicle parked beside the diner is a white conventional semi tractor; at 1:43 the man exits and walks to a green/teal single-unit box truck in the same spot. No swap or second vehicle arrival is shown, the man entered on foot at 0:22, and no other patron appears all night, so the truck he departs in is not the one established outside. Implied overnight elapsed time legitimately relocates people but does not explain a different vehicle being the one he walks to.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "1:12",
+      "entity": "breakfast plate / man at counter",
+      "invariant_violated": "duplicate prop state across cut",
+      "description": "An egg-and-cornbread plate is served and sits before the man at 0:34-0:46; at 0:53-0:59 the counter is shown fully cleared (crossfade-implied time gap, which covers the man's temporary absence); at 1:12-1:16 the waitress serves an identical breakfast plate again. The man is never shown leaving his stool, the plate being bussed, or reordering, so the second identical service is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 0:00-0:10, exterior wide at dusk; white conventional semi tractor idling left of diner, OPEN sign lit, no people visible\",\n    \"shot 2: 0:12-0:19, interior counter medium; waitress alone wiping counter, moves off frame right toward coffee station\",\n    \"shot 3: 0:20-0:28, interior wide from dining room; waitress behind counter; man in brown jacket enters from door (left), sits at near counter end; waitress pours coffee\",\n    \"shot 4: 0:30-0:33, counter close-up; carafe fills white mug; man's hands (watch, left wrist) at frame left\",\n    \"shot 5: 0:34-0:38, close-up; plate of fried egg + cornbread with steam; booth and dim window behind\",\n    \"shot 6: 0:38-0:46, interior wide; man at counter holding mug, egg plate in front of him; waitress absent from frame\",\n    \"shot 7: 0:46-0:52, kitchen-side view through pass; waitress wiping ledge in foreground; man seated at counter in background\",\n    \"shot 8: 0:53-0:59, counter wide from dining side; counter completely empty — man, waitress, plate all gone; crossfade in/out implies elapsed time\",\n    \"shot 9: 1:00-1:11, interior wide; man back at counter head-down; waitress working at coffee station right\",\n    \"shot 10: 1:11-1:18, interior medium; waitress carries and sets a breakfast plate in front of the man\",\n    \"shot 11: 1:19-1:28, interior wide; man at counter; waitress rounds counter end and sits beside him\",\n    \"shot 12: 1:29-1:37, counter two-shot; both hold mugs, sunrise through window; man glances to camera then turns left\",\n    \"shot 13: 1:37-1:39, counter close-up; hand from left lays folded $100 bills beside mug; second hand from right reaches\",\n    \"shot 14: 1:43-1:49, through-window shot; man crosses lot to a green single-unit box truck; waitress inside at window with reflection doubled in glass\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"vehicle outside diner (man's truck)\",\n      \"invariant_violated\": \"fixed anchor continuity\",\n      \"description\": \"At 0:00-0:10 the vehicle parked beside the diner is a white conventional semi tractor; at 1:43 the man exits and walks to a green/teal single-unit box truck in the same spot. No swap or second vehicle arrival is shown, the man entered on foot at 0:22, and no other patron appears all night, so the truck he departs in is not the one established outside. Implied overnight elapsed time legitimately relocates people but does not explain a different vehicle being the one he walks to.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"1:12\",\n      \"entity\": \"breakfast plate / man at counter\",\n      \"invariant_violated\": \"duplicate prop state across cut\",\n      \"description\": \"An egg-and-cornbread plate is served and sits before the man at 0:34-0:46; at 0:53-0:59 the counter is shown fully cleared (crossfade-implied time gap, which covers the man's temporary absence); at 1:12-1:16 the waitress serves an identical breakfast plate again. The man is never shown leaving his stool, the plate being bussed, or reordering, so the second identical service is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

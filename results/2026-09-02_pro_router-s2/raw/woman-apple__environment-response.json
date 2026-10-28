@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__environment-response",
+  "video": "woman-apple.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:59.560Z",
+  "latencyMs": 14986,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 891,
+    "total_tokens": 2250,
+    "cost": 0.01341,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01341,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.010692
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 729,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's walking motion: causes her ponytail to bounce naturally, consistent with her steps.",
+    "Gravity on the umbrella: should pull the umbrella down if not supported by her hands."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "umbrella",
+      "invariant_violated": "Gravity and Support",
+      "description": "The woman brings both hands together to hold and clap the apple, leaving the umbrella pole completely unsupported. Despite this, the umbrella remains floating in its position above her head, violating gravity.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's walking motion: causes her ponytail to bounce naturally, consistent with her steps.\",\n    \"Gravity on the umbrella: should pull the umbrella down if not supported by her hands.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"umbrella\",\n      \"invariant_violated\": \"Gravity and Support\",\n      \"description\": \"The woman brings both hands together to hold and clap the apple, leaving the umbrella pole completely unsupported. Despite this, the umbrella remains floating in its position above her head, violating gravity.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

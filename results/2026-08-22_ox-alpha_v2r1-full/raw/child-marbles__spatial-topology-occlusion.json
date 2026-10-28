@@ -1,0 +1,43 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:42:59.899Z",
+  "latencyMs": 95881,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 3500,
+    "total_tokens": 9727,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | clear bowl centered on wooden table, holds colored balls | same position and orientation throughout | no transitions; transparent walls consistently show balls inside",
+    "colored balls (red/yellow/green) | ~8 in bowl at 0:00, additional supply visible on table right edge | count varies slightly across shots | child visibly adds a red ball ~0:02 and handles/stirs balls 0:04-0:09; changes explained by on-screen manipulation and hand occlusion",
+    "wooden table | grain runs lower-left to upper-right, far edge diagonal behind bowl | identical surface and edge line whenever visible | no transitions",
+    "egg cup with decorated egg | small metal cup on right side of table | exits frame as camera zooms in ~0:06 | leaving frame via zoom, not disappearance",
+    "child in blue jacket | seated at left/behind bowl, both hands operate over bowl | same position throughout | reaches into bowl, stirs balls; hands consistently emerge from the correct side (child's side, upper left)",
+    "background patio | brick paving, terracotta pots upper right | consistent in all wider shots (0:00-0:04) | cropped out by zoom in later shots"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | clear bowl centered on wooden table, holds colored balls | same position and orientation throughout | no transitions; transparent walls consistently show balls inside\",\n    \"colored balls (red/yellow/green) | ~8 in bowl at 0:00, additional supply visible on table right edge | count varies slightly across shots | child visibly adds a red ball ~0:02 and handles/stirs balls 0:04-0:09; changes explained by on-screen manipulation and hand occlusion\",\n    \"wooden table | grain runs lower-left to upper-right, far edge diagonal behind bowl | identical surface and edge line whenever visible | no transitions\",\n    \"egg cup with decorated egg | small metal cup on right side of table | exits frame as camera zooms in ~0:06 | leaving frame via zoom, not disappearance\",\n    \"child in blue jacket | seated at left/behind bowl, both hands operate over bowl | same position throughout | reaches into bowl, stirs balls; hands consistently emerge from the correct side (child's side, upper left)\",\n    \"background patio | brick paving, terracotta pots upper right | consistent in all wider shots (0:00-0:04) | cropped out by zoom in later shots\"\n  ],\n  \"findings\": []\n}"
+}

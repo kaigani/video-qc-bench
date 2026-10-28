@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:35:14.095Z",
+  "latencyMs": 16628,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1274,
+    "total_tokens": 2700,
+    "cost": 0.005847,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005847,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0047775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1151,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon | parked on desert roadside with wood paneling on side and antenna on passenger fender | maintains identical relative position and geometry throughout | shot continuously pans and zooms in toward driver side",
+    "woman | leaning against the driver-side hood and window area | remains stationary relative to the vehicle | camera zooms closer while maintaining spatial perspective",
+    "desert landscape and road | road with yellow lines stretching into distant mountains behind vehicle | visible through windows and around car body | perspective shifts consistently with camera move"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon | parked on desert roadside with wood paneling on side and antenna on passenger fender | maintains identical relative position and geometry throughout | shot continuously pans and zooms in toward driver side\",\n    \"woman | leaning against the driver-side hood and window area | remains stationary relative to the vehicle | camera zooms closer while maintaining spatial perspective\",\n    \"desert landscape and road | road with yellow lines stretching into distant mountains behind vehicle | visible through windows and around car body | perspective shifts consistently with camera move\"\n  ],\n  \"findings\": []\n}"
+}

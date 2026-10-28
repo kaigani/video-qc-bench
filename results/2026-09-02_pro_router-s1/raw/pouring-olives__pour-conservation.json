@@ -1,0 +1,60 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:21.567Z",
+  "latencyMs": 15317,
+  "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 1422,
+    "total_tokens": 2803,
+    "cost": 0.019826,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019826,
+      "upstream_inference_prompt_cost": 0.002762,
+      "upstream_inference_completions_cost": 0.017064
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1004,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Large jar: empty. Small jar 1: full of green olives. Background bowls: full of green olives.",
+    "00:01 - Small jar 1: pouring. Large jar: receiving green and dark purple/black olives.",
+    "00:03 - Small jar 1: empty. Large jar: partially filled with mixed olives.",
+    "00:04 - Camera cut. Background bowl now mostly empty with brown debris. Small jar 2: full of green olives.",
+    "00:06 - Small jar 2: pouring. Large jar: receiving green and dark purple/black olives.",
+    "00:08 - Small jar 2: empty. Large jar: about half full of mixed olives."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Small jar 1 contents",
+      "invariant_violated": "source contents",
+      "description": "The small jar visibly contains only green olives before pouring. As pouring begins, dark purple/black olives fall from the jar into the destination. Because the source jar is transparent, the dark olives should have been visible before pouring.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Small jar 2 contents",
+      "invariant_violated": "source contents",
+      "description": "After a camera cut, a second small jar is shown visibly containing only green olives. When poured, dark purple/black olives once again fall from the jar alongside the green ones. As the jar is transparent, the dark olives should have been visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Large jar: empty. Small jar 1: full of green olives. Background bowls: full of green olives.\",\n    \"00:01 - Small jar 1: pouring. Large jar: receiving green and dark purple/black olives.\",\n    \"00:03 - Small jar 1: empty. Large jar: partially filled with mixed olives.\",\n    \"00:04 - Camera cut. Background bowl now mostly empty with brown debris. Small jar 2: full of green olives.\",\n    \"00:06 - Small jar 2: pouring. Large jar: receiving green and dark purple/black olives.\",\n    \"00:08 - Small jar 2: empty. Large jar: about half full of mixed olives.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Small jar 1 contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"The small jar visibly contains only green olives before pouring. As pouring begins, dark purple/black olives fall from the jar into the destination. Because the source jar is transparent, the dark olives should have been visible before pouring.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Small jar 2 contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"After a camera cut, a second small jar is shown visibly containing only green olives. When poured, dark purple/black olives once again fall from the jar alongside the green ones. As the jar is transparent, the dark olives should have been visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

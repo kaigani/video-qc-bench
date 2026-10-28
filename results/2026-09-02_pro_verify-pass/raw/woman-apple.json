@@ -1,0 +1,226 @@
+{
+  "video": "woman-apple",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:42.244Z",
+  "latencyMs": 31434,
+  "usage": {
+    "prompt_tokens": 1900,
+    "completion_tokens": 2717,
+    "total_tokens": 4617,
+    "cost": 0.036404,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036404,
+      "upstream_inference_prompt_cost": 0.0038,
+      "upstream_inference_completions_cost": 0.032604
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1859,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|woman-apple|baseline-generalist|0",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Umbrella shaft and woman's hands",
+        "invariant_violated": "Solid object intersection",
+        "description": "As the woman brings her hands together around the apple, the metal shaft of the umbrella passes directly through her hands and the apple. The umbrella remains upright and floats in position despite not being physically held or supported by her hands.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-apple|causal-temporal-sequence|0",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Umbrella",
+        "invariant_violated": "effect-without-cause",
+        "description": "The umbrella remains elevated and moves synchronously with the woman, but neither of her hands are gripping its shaft to support it (her hands are occupied holding and clapping an apple), providing no physical cause for the umbrella to remain upright.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|woman-apple|character-continuity|0",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Main character's right arm",
+        "invariant_violated": "movement continuity",
+        "description": "The character's hands are clasped together holding the apple at chest level. As the camera angle shifts to her side, her right arm is suddenly raised, gripping the umbrella pole at shoulder level without any transitional movement shown.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|woman-apple|contact-interaction-kinematics|0",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Woman's hands",
+        "invariant_violated": "limb mechanics",
+        "description": "An extra hand appears and claps against the woman's left hand (which is holding the apple), while her actual right arm and hand are simultaneously visible holding the umbrella on her right side.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-apple|contact-interaction-kinematics|1",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Umbrella shaft",
+        "invariant_violated": "solidity",
+        "description": "As the woman turns and the camera pans around her, the shaft of the umbrella passes directly through her shoulder and neck area instead of moving around her body.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|woman-apple|object-persistence-state|0",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Umbrella",
+        "invariant_violated": "location & orientation",
+        "description": "The umbrella's shaft instantaneously teleports from being positioned behind the woman's right shoulder to being in front of her left shoulder without any visible movement.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-apple|object-persistence-state|1",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Umbrella",
+        "invariant_violated": "location & orientation",
+        "description": "The umbrella's shaft teleports again, instantly moving from the woman's left side back to her right side.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-apple|object-persistence-state|2",
+      "cls": "TP:APPL-1",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Umbrella",
+        "invariant_violated": "ownership & possession",
+        "description": "The woman's right hand, which was previously holding the apple along with her left hand, is instantly shown holding the umbrella shaft. The shaft materializes in her grip without being moved there, and its physical thickness noticeably increases.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-apple|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "background crowd",
+        "invariant_violated": "scene layout",
+        "description": "The distinct group of people in the background right, including a man in a green shirt and a woman in a red shirt, dissolve and vanish into a completely different crowd layout without being occluded or leaving the frame.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|woman-apple|spatial-topology-occlusion|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "left market stalls",
+        "invariant_violated": "scene layout",
+        "description": "As the camera moves along the path, the physical architecture of the stalls on the left morphs from tiered structural displays to flat tables with purple trays, failing to maintain consistent geometry.",
+        "severity": "moderate",
+        "confidence": 0.85
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "REJECT",
+      "reason": "There is no umbrella shaft visible at 00:01, so it cannot be passing through her hands.",
+      "innocent_explanation": "mischaracterizes the video",
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "The umbrella canopy floats above the woman's head from the beginning of the video, moving with her despite having no shaft and not being held by either of her hands.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "Around 00:05, an extra right arm suddenly appears on the edge of the frame holding an umbrella shaft, while her original two hands are still clearly visible clapping the apple.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F4",
+      "verdict": "REJECT",
+      "reason": "The extra hand does not appear at 00:02. At 00:02, she only has two hands visible, and the umbrella has no shaft.",
+      "innocent_explanation": "mischaracterizes the video",
+      "confidence": 0.95
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "As the camera pans around the woman from 00:06 to 00:08, the umbrella shaft merges into and passes directly through her neck and shoulder area.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "There is no umbrella shaft visible at 00:03 to teleport anywhere.",
+      "innocent_explanation": "mischaracterizes the video",
+      "confidence": 0.95
+    },
+    {
+      "id": "F7",
+      "verdict": "REJECT",
+      "reason": "The shaft does not teleport from the left side to the right side; instead, an extra hand and shaft simply materialize on the right side of the screen.",
+      "innocent_explanation": "mischaracterizes the video",
+      "confidence": 0.9
+    },
+    {
+      "id": "F8",
+      "verdict": "CONFIRM",
+      "reason": "The woman's hands morph dramatically; her right hand goes from clapping the apple to being seamlessly merged with the umbrella shaft that passes through her body.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F9",
+      "verdict": "CONFIRM",
+      "reason": "The people in the background right (man in green, woman in red) dissolve into a completely different arrangement of people and objects as the camera moves forward.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F10",
+      "verdict": "CONFIRM",
+      "reason": "The stalls on the left undergo a complete structural mutation, changing from tiered green bins of fruit to flat tables with purple trays of baked goods without any camera cut.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"There is no umbrella shaft visible at 00:01, so it cannot be passing through her hands.\",\n      \"innocent_explanation\": \"mischaracterizes the video\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The umbrella canopy floats above the woman's head from the beginning of the video, moving with her despite having no shaft and not being held by either of her hands.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"Around 00:05, an extra right arm suddenly appears on the edge of the frame holding an umbrella shaft, while her original two hands are still clearly visible clapping the apple.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The extra hand does not appear at 00:02. At 00:02, she only has two hands visible, and the umbrella has no shaft.\",\n      \"innocent_explanation\": \"mischaracterizes the video\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"As the camera pans around the woman from 00:06 to 00:08, the umbrella shaft merges into and passes directly through her neck and shoulder area.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"There is no umbrella shaft visible at 00:03 to teleport anywhere.\",\n      \"innocent_explanation\": \"mischaracterizes the video\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The shaft does not teleport from the left side to the right side; instead, an extra hand and shaft simply materialize on the right side of the screen.\",\n      \"innocent_explanation\": \"mischaracterizes the video\",\n      \"confidence\": 0.90\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The woman's hands morph dramatically; her right hand goes from clapping the apple to being seamlessly merged with the umbrella shaft that passes through her body.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The people in the background right (man in green, woman in red) dissolve into a completely different arrangement of people and objects as the camera moves forward.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F10\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The stalls on the left undergo a complete structural mutation, changing from tiered green bins of fruit to flat tables with purple trays of baked goods without any camera cut.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

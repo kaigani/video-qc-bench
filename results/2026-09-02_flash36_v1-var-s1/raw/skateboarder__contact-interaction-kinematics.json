@@ -1,0 +1,39 @@
+{
+  "key": "skateboarder__contact-interaction-kinematics",
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:09.476Z",
+  "latencyMs": 15468,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1189,
+    "total_tokens": 2641,
+    "cost": 0.00554775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00554775,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00445875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 998,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | feet planted on skateboard deck at 00:00 | feet planted on deck after second landing at 00:09 | pops first trick at 00:01, airborne 00:02, lands 00:03; pops second trick at 00:07, airborne 00:08, lands 00:09",
+    "skateboard | four wheels in contact with concrete bowl at 00:00 | four wheels in contact with concrete surface at 00:09 | launches into air via tail pop at 00:01, rotates cleanly under rider, lands at 00:03; pops at 00:07, rotates in air, lands at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | feet planted on skateboard deck at 00:00 | feet planted on deck after second landing at 00:09 | pops first trick at 00:01, airborne 00:02, lands 00:03; pops second trick at 00:07, airborne 00:08, lands 00:09\",\n    \"skateboard | four wheels in contact with concrete bowl at 00:00 | four wheels in contact with concrete surface at 00:09 | launches into air via tail pop at 00:01, rotates cleanly under rider, lands at 00:03; pops at 00:07, rotates in air, lands at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:39.901Z",
+  "latencyMs": 15059,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2018,
+    "total_tokens": 3444,
+    "cost": 0.008637,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008637,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0075675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1858,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "kitchen_and_hallway | kitchen counter on left with stove and sink, front door visible at end of corridor | kitchen counter on left, front door at end of corridor | character moves from kitchen past bedroom doorway and returns",
+    "bedroom_doorway | door opening on right side of hallway, framed by artwork on adjacent walls | door opening connecting back to hallway | character enters room at 00:03 and exits back through threshold at 00:08",
+    "bedroom | bed centered against back wall, windows on left/right, central chandelier | same layout viewed in reverse upon turning around | character walks into room, turns around, and exits"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"kitchen_and_hallway | kitchen counter on left with stove and sink, front door visible at end of corridor | kitchen counter on left, front door at end of corridor | character moves from kitchen past bedroom doorway and returns\",\n    \"bedroom_doorway | door opening on right side of hallway, framed by artwork on adjacent walls | door opening connecting back to hallway | character enters room at 00:03 and exits back through threshold at 00:08\",\n    \"bedroom | bed centered against back wall, windows on left/right, central chandelier | same layout viewed in reverse upon turning around | character walks into room, turns around, and exits\"\n  ],\n  \"findings\": []\n}"
+}

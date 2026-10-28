@@ -1,0 +1,52 @@
+{
+  "key": "woman-apple__environment-response",
+  "video": "woman-apple.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T02:30:51.785Z",
+  "latencyMs": 93334,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 1776,
+    "total_tokens": 7616,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Open blue umbrella held by main subject (0:00-0:09): implies active rain; should produce wet ground, rain streaks, drips off canopy, and rain protection behavior in other pedestrians",
+    "Market walkway ground: appears dry across all frames - matte gray pavement, no puddles, no wet reflections, scattered dry debris",
+    "Other pedestrians in exposed central walkway (man in green polo, woman in red polo, man in blue shirt, woman with blue bag): none carry umbrellas or wear rain gear",
+    "Wind: no visible wind evidence anywhere - red tarps/awnings hang taut and still, hanging bulbs static, hanging produce bags still",
+    "Main subject's ponytail and clothing (navy top, pleated shorts): move only with walking gait, no wind flutter - consistent with calm air",
+    "Background pedestrian motion: walking speeds and directions consistent across frames, no teleporting or sliding"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:00",
+      "entity": "open blue umbrella held by main subject",
+      "invariant_violated": "effect must have a visible or plausible cause",
+      "description": "The subject holds a fully open, taut umbrella for the entire clip, implying active rain, but the environment contradicts rain everywhere: the walkway pavement is dry with no puddles or streaks, no drips fall from the canopy or the overhead tarps, the lighting is diffuse overcast (not sun requiring a shade), and every other pedestrian in the exposed central walkway goes without umbrella or rain gear. The umbrella's implied cause (precipitation) is contradicted by the entire scene.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Open blue umbrella held by main subject (0:00-0:09): implies active rain; should produce wet ground, rain streaks, drips off canopy, and rain protection behavior in other pedestrians\",\n    \"Market walkway ground: appears dry across all frames - matte gray pavement, no puddles, no wet reflections, scattered dry debris\",\n    \"Other pedestrians in exposed central walkway (man in green polo, woman in red polo, man in blue shirt, woman with blue bag): none carry umbrellas or wear rain gear\",\n    \"Wind: no visible wind evidence anywhere - red tarps/awnings hang taut and still, hanging bulbs static, hanging produce bags still\",\n    \"Main subject's ponytail and clothing (navy top, pleated shorts): move only with walking gait, no wind flutter - consistent with calm air\",\n    \"Background pedestrian motion: walking speeds and directions consistent across frames, no teleporting or sliding\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:00\",\n      \"entity\": \"open blue umbrella held by main subject\",\n      \"invariant_violated\": \"effect must have a visible or plausible cause\",\n      \"description\": \"The subject holds a fully open, taut umbrella for the entire clip, implying active rain, but the environment contradicts rain everywhere: the walkway pavement is dry with no puddles or streaks, no drips fall from the canopy or the overhead tarps, the lighting is diffuse overcast (not sun requiring a shade), and every other pedestrian in the exposed central walkway goes without umbrella or rain gear. The umbrella's implied cause (precipitation) is contradicted by the entire scene.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

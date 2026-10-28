@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__possession-tracking",
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:35:06.539Z",
+  "latencyMs": 20804,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 2177,
+    "total_tokens": 3561,
+    "cost": 0.028892,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028892,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.026124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1939,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:01: Coin held in left hand transferred into the left cup.",
+    "00:00 - 00:02: Coin held in right hand transferred into the right cup.",
+    "00:00 - 00:09: Coin resting on top of the middle cup remains in place throughout.",
+    "00:03 - 00:06: Coin picked up from the table by the left hand, transferred into the left cup.",
+    "00:04 - 00:06: Coin picked up from the table by the right hand, transferred into the right cup.",
+    "00:07 - 00:09: Coin picked up from the table by the left hand, transferred into the left cup.",
+    "00:07 - 00:09: Coin picked up from the table by the right hand, transferred into the right cup."
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"00:00 - 00:01: Coin held in left hand transferred into the left cup.\",\n    \"00:00 - 00:02: Coin held in right hand transferred into the right cup.\",\n    \"00:00 - 00:09: Coin resting on top of the middle cup remains in place throughout.\",\n    \"00:03 - 00:06: Coin picked up from the table by the left hand, transferred into the left cup.\",\n    \"00:04 - 00:06: Coin picked up from the table by the right hand, transferred into the right cup.\",\n    \"00:07 - 00:09: Coin picked up from the table by the left hand, transferred into the left cup.\",\n    \"00:07 - 00:09: Coin picked up from the table by the right hand, transferred into the right cup.\"\n  ],\n  \"findings\": []\n}\n```"
+}

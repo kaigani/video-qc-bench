@@ -1,0 +1,44 @@
+{
+  "key": "dancer-mirror__cut-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "cut-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:53:25.194Z",
+  "latencyMs": 61529,
+  "usage": {
+    "prompt_tokens": 6283,
+    "completion_tokens": 2321,
+    "total_tokens": 8604,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:09, single continuous static wide shot, camera positioned behind-left of the dancer at fixed height, mirror wall occupying right half of frame, no camera cuts or angle changes detected across the entire clip",
+    "fixed anchor A: black double doors with window panels and green exit sign on the left wall, position and appearance identical in every sampled frame",
+    "fixed anchor B: wall-mounted ballet barre plus blue storage bin, visible only via the mirror reflection on the right, position constant throughout",
+    "fixed anchor C: mirror wall panel seams (vertical lines) at consistent x-positions in all frames, confirming no reframing or cut",
+    "dancer (real): present 00:00-00:09, back to camera facing the mirror, standing left of frame center, performing port de bras (right-side arm raise 00:01-00:05, lower, re-raise 00:07-00:09)",
+    "dancer (mirror reflection): present 00:00-00:09 inside mirror on right, facing camera-left toward the real dancer, raised arm consistently appears on the frame-top side of the reflection matching the world-side position of the real raised arm, correct mirror left-right reversal",
+    "continuity check: dancer position relative to doors, mirror seams, and reflected barre/bin unchanged across all frames; no character enters or exits; no occlusion with scene geometry"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:09, single continuous static wide shot, camera positioned behind-left of the dancer at fixed height, mirror wall occupying right half of frame, no camera cuts or angle changes detected across the entire clip\",\n    \"fixed anchor A: black double doors with window panels and green exit sign on the left wall, position and appearance identical in every sampled frame\",\n    \"fixed anchor B: wall-mounted ballet barre plus blue storage bin, visible only via the mirror reflection on the right, position constant throughout\",\n    \"fixed anchor C: mirror wall panel seams (vertical lines) at consistent x-positions in all frames, confirming no reframing or cut\",\n    \"dancer (real): present 00:00-00:09, back to camera facing the mirror, standing left of frame center, performing port de bras (right-side arm raise 00:01-00:05, lower, re-raise 00:07-00:09)\",\n    \"dancer (mirror reflection): present 00:00-00:09 inside mirror on right, facing camera-left toward the real dancer, raised arm consistently appears on the frame-top side of the reflection matching the world-side position of the real raised arm, correct mirror left-right reversal\",\n    \"continuity check: dancer position relative to doors, mirror seams, and reflected barre/bin unchanged across all frames; no character enters or exits; no occlusion with scene geometry\"\n  ],\n  \"findings\": []\n}"
+}

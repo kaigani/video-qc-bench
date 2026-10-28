@@ -1,0 +1,43 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:12:10.509Z",
+  "latencyMs": 100969,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 2589,
+    "total_tokens": 8429,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background pedestrian (blue top, jeans): walks away along paved path from 0:00 to 0:02; stride, pace (~1-1.5 m/s over ~2s), and leg positions are physically plausible; no motion anomalies",
+    "Red shopping bag carried by pedestrian: hangs from hand under gravity, holds a semi-rigid open shape typical of a paper/stiff bag; slight positional shift while walking is consistent with being carried; no flutter implies no significant wind, and nothing else in the scene implies wind either",
+    "Green shrubs beside railing (0:00-0:04): remain still across all frames; no other element (hair, clothing, bag) shows wind response, so stillness is consistent with calm/very light air rather than an unexplained inert response",
+    "Metal stair railing: rigid structure, correctly shows no bending or deformation; only apparent displacement comes from handheld camera movement, not object motion",
+    "Foreground phone and hands: handheld micro-movement; glossy screen shows specular sky/sun glare at 0:04 and shifting soft shadows at 0:06-0:08 consistent with the railing/hand occluding sun as the phone rotates; plausible causes present",
+    "Lighting/shadows overall: sunny outdoor conditions with consistent shadow directions on pavement, stairs, and railing across all frames"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Background pedestrian (blue top, jeans): walks away along paved path from 0:00 to 0:02; stride, pace (~1-1.5 m/s over ~2s), and leg positions are physically plausible; no motion anomalies\",\n    \"Red shopping bag carried by pedestrian: hangs from hand under gravity, holds a semi-rigid open shape typical of a paper/stiff bag; slight positional shift while walking is consistent with being carried; no flutter implies no significant wind, and nothing else in the scene implies wind either\",\n    \"Green shrubs beside railing (0:00-0:04): remain still across all frames; no other element (hair, clothing, bag) shows wind response, so stillness is consistent with calm/very light air rather than an unexplained inert response\",\n    \"Metal stair railing: rigid structure, correctly shows no bending or deformation; only apparent displacement comes from handheld camera movement, not object motion\",\n    \"Foreground phone and hands: handheld micro-movement; glossy screen shows specular sky/sun glare at 0:04 and shifting soft shadows at 0:06-0:08 consistent with the railing/hand occluding sun as the phone rotates; plausible causes present\",\n    \"Lighting/shadows overall: sunny outdoor conditions with consistent shadow directions on pavement, stairs, and railing across all frames\"\n  ],\n  \"findings\": []\n}"
+}

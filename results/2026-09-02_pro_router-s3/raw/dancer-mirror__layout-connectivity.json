@@ -1,0 +1,58 @@
+{
+  "key": "dancer-mirror__layout-connectivity",
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:17:30.848Z",
+  "latencyMs": 23048,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2719,
+    "total_tokens": 4113,
+    "cost": 0.035416,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.035416,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.032628
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2446,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio interior with wooden floor",
+    "Left wall: two black doors with green EXIT signs",
+    "Front wall: large mirror reflecting the room and the woman",
+    "Right wall: ballet barre"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "EXIT signs in mirror",
+      "invariant_violated": "Reflection consistency",
+      "description": "The green EXIT signs reflected in the mirror read normally from left to right. In a true mirror reflection, the text should be reversed.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's reflection",
+      "invariant_violated": "Reflection consistency",
+      "description": "The woman has a tattoo on her right arm. In the mirror, the tattoo appears on the left side of the reflected image (the reflection's right arm). A true mirror would show the tattoo on the right side of the reflected image.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio interior with wooden floor\",\n    \"Left wall: two black doors with green EXIT signs\",\n    \"Front wall: large mirror reflecting the room and the woman\",\n    \"Right wall: ballet barre\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"EXIT signs in mirror\",\n      \"invariant_violated\": \"Reflection consistency\",\n      \"description\": \"The green EXIT signs reflected in the mirror read normally from left to right. In a true mirror reflection, the text should be reversed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman's reflection\",\n      \"invariant_violated\": \"Reflection consistency\",\n      \"description\": \"The woman has a tattoo on her right arm. In the mirror, the tattoo appears on the left side of the reflected image (the reflection's right arm). A true mirror would show the tattoo on the right side of the reflected image.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

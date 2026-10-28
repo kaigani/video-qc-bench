@@ -1,0 +1,46 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:20:17.743Z",
+  "latencyMs": 13870,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1762,
+    "total_tokens": 3180,
+    "cost": 0.007671,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007671,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.0066075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1498,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Hand places blue block '2' next to green block '2' (count: 2 blocks)",
+    "00:01 - Hand inserts blue block '3' into the sequence (count: 3 blocks)",
+    "00:02 - Hand adds green block '3' to the sequence (count: 4 blocks)",
+    "00:03 - Hand inserts beige block '2' into the sequence (count: 5 blocks)",
+    "00:04 - Hand inserts light blue block '3' into the sequence (count: 6 blocks)",
+    "00:05 - Hand inserts dark blue block '5' into the sequence (count: 7 blocks)",
+    "00:06 - Hand inserts green block '2' into the sequence (count: 8 blocks)",
+    "00:07 - Hand inserts dark blue block '6' into the sequence (count: 9 blocks)",
+    "00:08-00:09 - Hand adjusts and aligns the 9 numbered blocks (count: 9 blocks)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Hand places blue block '2' next to green block '2' (count: 2 blocks)\",\n    \"00:01 - Hand inserts blue block '3' into the sequence (count: 3 blocks)\",\n    \"00:02 - Hand adds green block '3' to the sequence (count: 4 blocks)\",\n    \"00:03 - Hand inserts beige block '2' into the sequence (count: 5 blocks)\",\n    \"00:04 - Hand inserts light blue block '3' into the sequence (count: 6 blocks)\",\n    \"00:05 - Hand inserts dark blue block '5' into the sequence (count: 7 blocks)\",\n    \"00:06 - Hand inserts green block '2' into the sequence (count: 8 blocks)\",\n    \"00:07 - Hand inserts dark blue block '6' into the sequence (count: 9 blocks)\",\n    \"00:08-00:09 - Hand adjusts and aligns the 9 numbered blocks (count: 9 blocks)\"\n  ],\n  \"findings\": []\n}"
+}

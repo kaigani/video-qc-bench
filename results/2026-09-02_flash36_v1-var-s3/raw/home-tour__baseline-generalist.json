@@ -1,0 +1,47 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:11.894Z",
+  "latencyMs": 16030,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2321,
+    "total_tokens": 3559,
+    "cost": 0.00963225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00963225,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00870375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2143,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | short blonde hair, blue dress | walks from kitchen through hallway into bedroom and turns back | continuous AI camera movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "kitchen layout and appliances",
+      "invariant_violated": "spatial_consistency",
+      "description": "When the character walks back into the kitchen area, the layout and appliances differ from the opening shot: an over-the-range microwave appears mounted on the left wall above the stove, whereas at 00:00 the microwave was sitting on the right countertop and the stove on the left had no overhead microwave.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | short blonde hair, blue dress | walks from kitchen through hallway into bedroom and turns back | continuous AI camera movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"kitchen layout and appliances\",\n      \"invariant_violated\": \"spatial_consistency\",\n      \"description\": \"When the character walks back into the kitchen area, the layout and appliances differ from the opening shot: an over-the-range microwave appears mounted on the left wall above the stove, whereas at 00:00 the microwave was sitting on the right countertop and the stove on the left had no overhead microwave.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

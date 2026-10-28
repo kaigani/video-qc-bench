@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:21:10.395Z",
+  "latencyMs": 14780,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 1168,
+    "total_tokens": 2527,
+    "cost": 0.016734,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016734,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.014016
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 966,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Subject's hair: exhibits sudden, violent blowing backward starting around 0:04, implying a strong gust of wind from the front.",
+    "Car antenna: thin, flexible metal rod on the front hood; remains completely rigid throughout the entire video.",
+    "Background vegetation: dry desert brush; shows no signs of movement from wind."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Car antenna",
+      "invariant_violated": "Inconsistent wind effect",
+      "description": "A strong wind suddenly and violently blows the subject's hair backward, but the thin, flexible radio antenna on the car hood remains completely rigid, failing to react to the strong implied airflow in its immediate vicinity.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Subject's hair: exhibits sudden, violent blowing backward starting around 0:04, implying a strong gust of wind from the front.\",\n    \"Car antenna: thin, flexible metal rod on the front hood; remains completely rigid throughout the entire video.\",\n    \"Background vegetation: dry desert brush; shows no signs of movement from wind.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Car antenna\",\n      \"invariant_violated\": \"Inconsistent wind effect\",\n      \"description\": \"A strong wind suddenly and violently blows the subject's hair backward, but the thin, flexible radio antenna on the car hood remains completely rigid, failing to react to the strong implied airflow in its immediate vicinity.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

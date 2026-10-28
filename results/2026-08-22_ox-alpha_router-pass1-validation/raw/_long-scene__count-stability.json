@@ -1,0 +1,41 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:00:20.928Z",
+  "latencyMs": 183292,
+  "usage": {
+    "prompt_tokens": 34924,
+    "completion_tokens": 8724,
+    "total_tokens": 43648,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Coffee mugs: 1 white mug on counter being filled from carafe at 0:28-0:33; 1 mug held by man at 0:38-0:45; 1 mug on counter near man at 1:11-1:18; 2 mugs (man's + waitress's) at 1:29-1:37, second mug explainable as waitress self-served from behind counter; 1 mug visible in close-up at 1:38-1:42 with second out of frame",
+    "Plates: 1 plate with toast and fried egg shown in close-up at 0:34-0:37; same 1 plate in front of man at 0:38-0:45; 1 plate picked up and carried off by waitress at 1:11-1:18 (visible cause: waitress removes it); 0 plates on counter after removal",
+    "Stools: 5 stools consistently visible at counter in wide shots at 0:20-0:27, 0:38-0:45, 1:01-1:10, and 1:52-1:57; count stable across all wide-angle views; fewer visible in close-ups due to framing crop",
+    "Money: 0 bills until 1:38; 2 bills ($100 bill visible on top, second bill edge underneath) placed on counter by man's hand at 1:38 (visible cause: hand placement); count stable at 2 bills through 1:42"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Coffee mugs: 1 white mug on counter being filled from carafe at 0:28-0:33; 1 mug held by man at 0:38-0:45; 1 mug on counter near man at 1:11-1:18; 2 mugs (man's + waitress's) at 1:29-1:37, second mug explainable as waitress self-served from behind counter; 1 mug visible in close-up at 1:38-1:42 with second out of frame\",\n    \"Plates: 1 plate with toast and fried egg shown in close-up at 0:34-0:37; same 1 plate in front of man at 0:38-0:45; 1 plate picked up and carried off by waitress at 1:11-1:18 (visible cause: waitress removes it); 0 plates on counter after removal\",\n    \"Stools: 5 stools consistently visible at counter in wide shots at 0:20-0:27, 0:38-0:45, 1:01-1:10, and 1:52-1:57; count stable across all wide-angle views; fewer visible in close-ups due to framing crop\",\n    \"Money: 0 bills until 1:38; 2 bills ($100 bill visible on top, second bill edge underneath) placed on counter by man's hand at 1:38 (visible cause: hand placement); count stable at 2 bills through 1:42\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,51 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T14:49:40.001Z",
+  "latencyMs": 488090,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 20883,
+    "total_tokens": 27110,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left wall | two closed dark doors with glass panes, green exit signs above them, notice panel left of first door | identical in all frames | no state or position changes",
+    "Mirror wall | large mirror starting near room corner (left edge ~x560-620) and running past right frame edge, black base at floor | unchanged | single continuous reflection surface, no cuts",
+    "Far wall seen in reflection | ballet barres along wall, dark poster at right end, blue bin at left end near barres | unchanged | relative arrangement of bin/barres/poster stable in every frame",
+    "Dancer | back to camera facing mirror, center-left of frame, black sports bra and leggings, tattoos on arms | same | performs repeated left-arm raises: straight overhead at 0:02, bent elbow with open palm at 0:04, straight overhead again at 0:08, with small stance shifts",
+    "Dancer's mirror reflection | left-right flipped copy; her raised left arm correctly appears on the viewer-right side of the reflection figure | same | pose matches the real dancer at 0:00, 0:04, 0:06 but reads arched/bent when the real arm is straight at 0:02 and 0:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "dancer's mirror reflection (raised left arm)",
+      "invariant_violated": "mirror reflection pose fidelity",
+      "description": "In the same frame, the dancer's left arm is fully extended in a straight vertical line overhead, but her reflection shows that arm bent at the elbow with the hand arched/curved over toward the head; her other arm also reads at a different angle (real arm rising above horizontal vs reflection at/below horizontal). A real mirror must show the exact mirrored pose at the same instant, so the reflection is animating a different arm shape. The same straight-vs-arched mismatch recurs at 0:08, while the bent-arm pose at 0:04 matches, indicating the reflection's arm motion systematically diverges whenever the real arm goes fully straight overhead.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Left wall | two closed dark doors with glass panes, green exit signs above them, notice panel left of first door | identical in all frames | no state or position changes\",\n    \"Mirror wall | large mirror starting near room corner (left edge ~x560-620) and running past right frame edge, black base at floor | unchanged | single continuous reflection surface, no cuts\",\n    \"Far wall seen in reflection | ballet barres along wall, dark poster at right end, blue bin at left end near barres | unchanged | relative arrangement of bin/barres/poster stable in every frame\",\n    \"Dancer | back to camera facing mirror, center-left of frame, black sports bra and leggings, tattoos on arms | same | performs repeated left-arm raises: straight overhead at 0:02, bent elbow with open palm at 0:04, straight overhead again at 0:08, with small stance shifts\",\n    \"Dancer's mirror reflection | left-right flipped copy; her raised left arm correctly appears on the viewer-right side of the reflection figure | same | pose matches the real dancer at 0:00, 0:04, 0:06 but reads arched/bent when the real arm is straight at 0:02 and 0:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"dancer's mirror reflection (raised left arm)\",\n      \"invariant_violated\": \"mirror reflection pose fidelity\",\n      \"description\": \"In the same frame, the dancer's left arm is fully extended in a straight vertical line overhead, but her reflection shows that arm bent at the elbow with the hand arched/curved over toward the head; her other arm also reads at a different angle (real arm rising above horizontal vs reflection at/below horizontal). A real mirror must show the exact mirrored pose at the same instant, so the reflection is animating a different arm shape. The same straight-vs-arched mismatch recurs at 0:08, while the bent-arm pose at 0:04 matches, indicating the reflection's arm motion systematically diverges whenever the real arm goes fully straight overhead.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

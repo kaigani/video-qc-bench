@@ -1,0 +1,59 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:37:05.823Z",
+  "latencyMs": 17980,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1923,
+    "total_tokens": 3341,
+    "cost": 0.025912,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025912,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.023076
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1548,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 2 blocks are visible on the table (two green '2' blocks).",
+    "00:01 - The hand drags the left block; a third block appears behind it. 3 blocks total.",
+    "00:02 - As dragging continues, a fourth block appears. The dragged block changes color/number. 4 blocks total.",
+    "00:04 - More blocks continue to spawn from the drag. 6 blocks total.",
+    "00:07 - Hand finishes dragging. 9 blocks are now visible."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "the block held by the hand",
+      "invariant_violated": "kind-transformation",
+      "description": "The block being held and dragged continuously changes its color and the number printed on it (starting as a green '2', then becoming a blue '2', green '3', yellow '2', etc.) with no visible mechanism causing the change.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "group of blocks",
+      "invariant_violated": "unexplained count increase",
+      "description": "As the hand drags one block, new blocks spontaneously appear in a trail behind it, increasing the total count from 2 to 9 by the end of the movement without any objects being added from off-screen.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 2 blocks are visible on the table (two green '2' blocks).\",\n    \"00:01 - The hand drags the left block; a third block appears behind it. 3 blocks total.\",\n    \"00:02 - As dragging continues, a fourth block appears. The dragged block changes color/number. 4 blocks total.\",\n    \"00:04 - More blocks continue to spawn from the drag. 6 blocks total.\",\n    \"00:07 - Hand finishes dragging. 9 blocks are now visible.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"the block held by the hand\",\n      \"invariant_violated\": \"kind-transformation\",\n      \"description\": \"The block being held and dragged continuously changes its color and the number printed on it (starting as a green '2', then becoming a blue '2', green '3', yellow '2', etc.) with no visible mechanism causing the change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"group of blocks\",\n      \"invariant_violated\": \"unexplained count increase\",\n      \"description\": \"As the hand drags one block, new blocks spontaneously appear in a trail behind it, increasing the total count from 2 to 9 by the end of the movement without any objects being added from off-screen.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

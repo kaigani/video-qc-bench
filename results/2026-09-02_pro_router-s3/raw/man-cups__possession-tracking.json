@@ -1,0 +1,40 @@
+{
+  "key": "man-cups__possession-tracking",
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:18:41.144Z",
+  "latencyMs": 43745,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 5673,
+    "total_tokens": 7057,
+    "cost": 0.070844,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.070844,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.068076
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5542,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "coin 1: right hand (00:00) -> inside cup A (00:01)",
+    "coin 2: top of cup B (00:00) -> right hand (00:03) -> inside cup A (00:06)",
+    "coin 3: table next to cup C (00:00) -> left hand (00:04) -> table next to cup C (00:07)"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"coin 1: right hand (00:00) -> inside cup A (00:01)\",\n    \"coin 2: top of cup B (00:00) -> right hand (00:03) -> inside cup A (00:06)\",\n    \"coin 3: table next to cup C (00:00) -> left hand (00:04) -> table next to cup C (00:07)\"\n  ],\n  \"findings\": []\n}\n```"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:37:37.162Z",
+  "latencyMs": 31331,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 4173,
+    "total_tokens": 5549,
+    "cost": 0.052828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.052828,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.050076
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3803,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block held and dragged by hand: reads '2' at 00:00, changes to '3' at 00:01, '5' at 00:03, '2' at 00:03, and '3' at 00:04.",
+    "Row of stationary blocks left on table: text characters remain stable (reading 2, 3, 2, 2, 2, 3, 5, 2, 6, 3 from left to right) even when block colors shift at 00:06."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02-00:03",
+      "entity": "Block held and dragged by hand",
+      "invariant_violated": "Text Stability",
+      "description": "The number on the face of the block held by the hand spontaneously changes from '3' to '5' as it is dragged across the table.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:03-00:04",
+      "entity": "Block held and dragged by hand",
+      "invariant_violated": "Text Stability",
+      "description": "The number on the face of the block held by the hand spontaneously changes from '5' to '2', and then to '3', as the continuous dragging motion proceeds.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Block held and dragged by hand: reads '2' at 00:00, changes to '3' at 00:01, '5' at 00:03, '2' at 00:03, and '3' at 00:04.\",\n    \"Row of stationary blocks left on table: text characters remain stable (reading 2, 3, 2, 2, 2, 3, 5, 2, 6, 3 from left to right) even when block colors shift at 00:06.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02-00:03\",\n      \"entity\": \"Block held and dragged by hand\",\n      \"invariant_violated\": \"Text Stability\",\n      \"description\": \"The number on the face of the block held by the hand spontaneously changes from '3' to '5' as it is dragged across the table.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:03-00:04\",\n      \"entity\": \"Block held and dragged by hand\",\n      \"invariant_violated\": \"Text Stability\",\n      \"description\": \"The number on the face of the block held by the hand spontaneously changes from '5' to '2', and then to '3', as the continuous dragging motion proceeds.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

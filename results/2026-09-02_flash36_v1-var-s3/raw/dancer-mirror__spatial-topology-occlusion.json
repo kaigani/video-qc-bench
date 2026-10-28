@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:13:38.844Z",
+  "latencyMs": 7394,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 831,
+    "total_tokens": 2257,
+    "cost": 0.00418575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00418575,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00311625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 722,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance Studio Room | Double exit doors on left wall, mirror wall ahead, ballet barre on right wall | Same spatial layout maintained throughout | Single static camera angle",
+    "Dancer | Standing on wooden floor facing mirror | Position maintained in front of mirror wall | Performs arm movements with reflection matching motion",
+    "Mirror Reflection | Reflects dancer and studio room geometry accurately | Reflection maintains exact spatial relationship and occlusion | Continuous matching reflection"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance Studio Room | Double exit doors on left wall, mirror wall ahead, ballet barre on right wall | Same spatial layout maintained throughout | Single static camera angle\",\n    \"Dancer | Standing on wooden floor facing mirror | Position maintained in front of mirror wall | Performs arm movements with reflection matching motion\",\n    \"Mirror Reflection | Reflects dancer and studio room geometry accurately | Reflection maintains exact spatial relationship and occlusion | Continuous matching reflection\"\n  ],\n  \"findings\": []\n}"
+}

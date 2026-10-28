@@ -1,0 +1,50 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T14:57:00.049Z",
+  "latencyMs": 278598,
+  "usage": {
+    "prompt_tokens": 6238,
+    "completion_tokens": 12530,
+    "total_tokens": 18768,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "razor/applicator stick | start (~0:00): held in man's right hand, white-cream-coated tip at right jaw/cheek below sideburn | end (~0:08): still in right hand, tip at right cheek near mouth corner | transitions: tip at upper-lip area (0:00-0:02) -> raised to eyebrow/forehead (0:04) -> chin/lower lip (0:06) -> right cheek (0:08); never released or set down",
+    "white shaving cream | start: coating razor tip plus a streak on the man's upper lip (visible only in mirror) | end: smears on upper lip, right cheek, and a streak at the eyebrow | transitions: applied to upper lip (0:00-0:02), streak applied to eyebrow (0:04, hand visibly moved there), applied to right cheek (0:08); eyebrow streak no longer distinct by 0:06, plausibly smeared by the passing razor",
+    "bathroom mirror (real mirror, in scope) | wall-mounted, fixed, gold frame | unchanged as an object | reflection content vs direct view mismatch flagged at 0:00",
+    "background shelf bottles, wooden door with brass knob, wall light switch (seen via mirror) | static on shelf/door/wall | no transitions across 0:00-0:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:00",
+      "entity": "razor (and the cream streak on the upper lip)",
+      "invariant_violated": "real-mirror reflection must match the direct view of the same object at the same moment",
+      "description": "In the direct view the razor's white tip sits at the man's right jaw, below the sideburn and below mouth level, yet the mirror reflection in the same frame shows the razor tip up at his upper lip depositing the cream streak there. The same object is thus shown at two different face locations at one instant, and the direct view never shows the razor reaching the upper-lip position that the reflection (and the resulting lip cream) require. A milder version of the same offset recurs at 0:02 and 0:08, where the reflection places the razor more centrally at the mouth than the direct view does.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"razor/applicator stick | start (~0:00): held in man's right hand, white-cream-coated tip at right jaw/cheek below sideburn | end (~0:08): still in right hand, tip at right cheek near mouth corner | transitions: tip at upper-lip area (0:00-0:02) -> raised to eyebrow/forehead (0:04) -> chin/lower lip (0:06) -> right cheek (0:08); never released or set down\",\n    \"white shaving cream | start: coating razor tip plus a streak on the man's upper lip (visible only in mirror) | end: smears on upper lip, right cheek, and a streak at the eyebrow | transitions: applied to upper lip (0:00-0:02), streak applied to eyebrow (0:04, hand visibly moved there), applied to right cheek (0:08); eyebrow streak no longer distinct by 0:06, plausibly smeared by the passing razor\",\n    \"bathroom mirror (real mirror, in scope) | wall-mounted, fixed, gold frame | unchanged as an object | reflection content vs direct view mismatch flagged at 0:00\",\n    \"background shelf bottles, wooden door with brass knob, wall light switch (seen via mirror) | static on shelf/door/wall | no transitions across 0:00-0:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:00\",\n      \"entity\": \"razor (and the cream streak on the upper lip)\",\n      \"invariant_violated\": \"real-mirror reflection must match the direct view of the same object at the same moment\",\n      \"description\": \"In the direct view the razor's white tip sits at the man's right jaw, below the sideburn and below mouth level, yet the mirror reflection in the same frame shows the razor tip up at his upper lip depositing the cream streak there. The same object is thus shown at two different face locations at one instant, and the direct view never shows the razor reaching the upper-lip position that the reflection (and the resulting lip cream) require. A milder version of the same offset recurs at 0:02 and 0:08, where the reflection places the razor more centrally at the mouth than the direct view does.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

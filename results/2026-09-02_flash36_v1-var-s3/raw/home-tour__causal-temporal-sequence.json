@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:26.573Z",
+  "latencyMs": 12957,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 730,
+    "total_tokens": 2155,
+    "cost": 0.00380625,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00380625,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.0027375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 590,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman walking in kitchen | walking forward at 00:00 | turning right towards doorway at 00:03 | smooth locomotion and head turns towards hallway",
+    "woman walking into bedroom | entering bedroom doorway at 00:03 | turning back around at 00:06 | continuous movement forward, head turns to scan bedroom environment",
+    "woman walking back to hallway | exiting bedroom doorway at 00:06 | entering kitchen hallway at 00:09 | continuous forward movement back through doorway"
+  ],
+  "findings": [],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"woman walking in kitchen | walking forward at 00:00 | turning right towards doorway at 00:03 | smooth locomotion and head turns towards hallway\",\n    \"woman walking into bedroom | entering bedroom doorway at 00:03 | turning back around at 00:06 | continuous movement forward, head turns to scan bedroom environment\",\n    \"woman walking back to hallway | exiting bedroom doorway at 00:06 | entering kitchen hallway at 00:09 | continuous forward movement back through doorway\"\n  ],\n  \"findings\": []\n}\n```"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:14:04.207Z",
+  "latencyMs": 15087,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2069,
+    "total_tokens": 3495,
+    "cost": 0.00882825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00882825,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00775875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1887,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "middle double doors | background behind actor initially | remains fixed in center | actor stands in front of them from 00:00 to 00:06",
+    "coat hook with blue jacket | mounted on panel between middle doors and left door | stays fixed on wall panel | visible to left of actor at 00:00, to right of left door at 00:08",
+    "left door | wooden door panel to left of coat hook | target of actor's movement | actor walks over and knocks on it at 00:08",
+    "green wall panel | adjacent wall section with light switches and brass plate | stays fixed to left of left door | revealed as camera pans left at 00:08"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"middle double doors | background behind actor initially | remains fixed in center | actor stands in front of them from 00:00 to 00:06\",\n    \"coat hook with blue jacket | mounted on panel between middle doors and left door | stays fixed on wall panel | visible to left of actor at 00:00, to right of left door at 00:08\",\n    \"left door | wooden door panel to left of coat hook | target of actor's movement | actor walks over and knocks on it at 00:08\",\n    \"green wall panel | adjacent wall section with light switches and brass plate | stays fixed to left of left door | revealed as camera pans left at 00:08\"\n  ],\n  \"findings\": []\n}"
+}

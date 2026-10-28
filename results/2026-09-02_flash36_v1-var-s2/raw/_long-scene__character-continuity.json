@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:36:12.834Z",
+  "latencyMs": 54550,
+  "usage": {
+    "prompt_tokens": 10629,
+    "completion_tokens": 2597,
+    "total_tokens": 13226,
+    "cost": 0.0177105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0177105,
+      "upstream_inference_prompt_cost": 0.00797175,
+      "upstream_inference_completions_cost": 0.00973875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2371,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Older woman with graying hair in a bun, blue polo shirt, white apron, glasses around neck | Same appearance | Duplicate copy of the waitress appears in the background at 01:52 while primary waitress walks in foreground",
+    "Male Customer | Middle-aged man, short gray hair, brown canvas jacket, plaid button-up shirt, blue jeans | Same appearance throughout | Enters diner, sits at counter, drinks coffee, leaves cash, and exits to truck"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "multi-character consistency",
+      "description": "An identical duplicate of the waitress appears in the background kitchen pass-through wiping the counter, while the foreground waitress stands up from the stool and walks right within the same continuous shot.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Older woman with graying hair in a bun, blue polo shirt, white apron, glasses around neck | Same appearance | Duplicate copy of the waitress appears in the background at 01:52 while primary waitress walks in foreground\",\n    \"Male Customer | Middle-aged man, short gray hair, brown canvas jacket, plaid button-up shirt, blue jeans | Same appearance throughout | Enters diner, sits at counter, drinks coffee, leaves cash, and exits to truck\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"multi-character consistency\",\n      \"description\": \"An identical duplicate of the waitress appears in the background kitchen pass-through wiping the counter, while the foreground waitress stands up from the stool and walks right within the same continuous shot.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

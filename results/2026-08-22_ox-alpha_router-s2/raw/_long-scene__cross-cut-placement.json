@@ -1,0 +1,70 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:26:08.885Z",
+  "latencyMs": 581009,
+  "usage": {
+    "prompt_tokens": 34923,
+    "completion_tokens": 20521,
+    "total_tokens": 55444,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 0:00-0:10, exterior wide, diner at pre-dawn, OPEN neon lit, white sleeper-cab semi with white trailer parked tight against left corner, exhaust steam, no people resolvable",
+    "shot 2: 0:12-0:19, interior from behind counter facing kitchen pass window, waitress alone wiping counter",
+    "shot 3: 0:20-0:28, interior wide from dining room, waitress at coffee-machine end of counter, man enters rear door and sits at nearest stool, waitress pours coffee at his seat",
+    "shot 4: 0:30-0:32, counter close-up, coffee stream into white mug, man's brown-sleeved wrist with dark watch band at frame left",
+    "shot 5: 0:34-0:36, insert close-up, breakfast plate (fried egg + bread) steaming on counter",
+    "shot 6: 0:38-0:44, dining-room wide, man at near-end stool holding mug with both hands, breakfast plate already in front of him, waitress out of frame",
+    "shot 7: 0:46-0:52, kitchen-side reverse angle, waitress wiping foreground counter, man at far end of counter by EXIT door leaning forward",
+    "shot 8: 0:54-0:59, same behind-counter angle as shot 2, counter completely empty, no staff or customer in frame",
+    "shot 9: 1:00-1:10, dining-room wide, man slumped head-down at near-end stool with mug on counter, waitress behind counter at right, picks up a plate and walks toward him at ~1:08",
+    "shot 10: 1:12-1:18, medium two-shot, waitress sets a breakfast plate down in front of the seated man",
+    "shot 11: 1:21-1:27, dining-room wide, waitress rounds counter end and stands/leans beside the man at his stool",
+    "shot 12: 1:29-1:37, close two-shot, waitress and man side by side at counter each holding a mug, sunrise in windows behind them",
+    "shot 13: 1:39-1:41, insert close-up, folded $100 bills slid across counter, second hand with dark watch band takes them beside a white mug",
+    "shot 14: 1:43-1:47, shot from inside through front window, man walks across lot to a dark green Kenworth day-cab with green/white box trailer and reaches the cab door",
+    "shot 15: 1:47-1:51, interior, waitress at front window watching man at the truck through the glass",
+    "shot 16: 1:53-1:58, dining-room wide, waitress clears mug and plate from his stool and carries them toward the kitchen pass window"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "truck (man's departure vehicle)",
+      "invariant_violated": "prop continuity across cuts",
+      "description": "The opening exterior (0:00-0:10) establishes a white conventional sleeper-cab semi tractor with a long white trailer parked immediately against the diner's left corner with exhaust steam, implying the arriving driver's rig. At 1:43 the man walks to a dark green Kenworth day-cab (no sleeper) with a green/white box trailer parked farther out in the lot. The white semi is never shown again and no vehicle swap is depicted, so the established truck is silently replaced by a differently colored and configured vehicle.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "1:12",
+      "entity": "breakfast plate / meal service",
+      "invariant_violated": "duplicate object-action across cuts",
+      "description": "A breakfast plate is already placed in front of the man at 0:38-0:44, immediately following the 0:34 food insert, and a plate still appears to sit before him in the 1:00-1:08 wide shot. Yet at 1:12-1:17 the waitress carries and sets down an identical breakfast plate in front of him again. No clearing or removal of the first plate is ever shown, so the same meal is served twice across the cut sequence.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 0:00-0:10, exterior wide, diner at pre-dawn, OPEN neon lit, white sleeper-cab semi with white trailer parked tight against left corner, exhaust steam, no people resolvable\",\n    \"shot 2: 0:12-0:19, interior from behind counter facing kitchen pass window, waitress alone wiping counter\",\n    \"shot 3: 0:20-0:28, interior wide from dining room, waitress at coffee-machine end of counter, man enters rear door and sits at nearest stool, waitress pours coffee at his seat\",\n    \"shot 4: 0:30-0:32, counter close-up, coffee stream into white mug, man's brown-sleeved wrist with dark watch band at frame left\",\n    \"shot 5: 0:34-0:36, insert close-up, breakfast plate (fried egg + bread) steaming on counter\",\n    \"shot 6: 0:38-0:44, dining-room wide, man at near-end stool holding mug with both hands, breakfast plate already in front of him, waitress out of frame\",\n    \"shot 7: 0:46-0:52, kitchen-side reverse angle, waitress wiping foreground counter, man at far end of counter by EXIT door leaning forward\",\n    \"shot 8: 0:54-0:59, same behind-counter angle as shot 2, counter completely empty, no staff or customer in frame\",\n    \"shot 9: 1:00-1:10, dining-room wide, man slumped head-down at near-end stool with mug on counter, waitress behind counter at right, picks up a plate and walks toward him at ~1:08\",\n    \"shot 10: 1:12-1:18, medium two-shot, waitress sets a breakfast plate down in front of the seated man\",\n    \"shot 11: 1:21-1:27, dining-room wide, waitress rounds counter end and stands/leans beside the man at his stool\",\n    \"shot 12: 1:29-1:37, close two-shot, waitress and man side by side at counter each holding a mug, sunrise in windows behind them\",\n    \"shot 13: 1:39-1:41, insert close-up, folded $100 bills slid across counter, second hand with dark watch band takes them beside a white mug\",\n    \"shot 14: 1:43-1:47, shot from inside through front window, man walks across lot to a dark green Kenworth day-cab with green/white box trailer and reaches the cab door\",\n    \"shot 15: 1:47-1:51, interior, waitress at front window watching man at the truck through the glass\",\n    \"shot 16: 1:53-1:58, dining-room wide, waitress clears mug and plate from his stool and carries them toward the kitchen pass window\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"truck (man's departure vehicle)\",\n      \"invariant_violated\": \"prop continuity across cuts\",\n      \"description\": \"The opening exterior (0:00-0:10) establishes a white conventional sleeper-cab semi tractor with a long white trailer parked immediately against the diner's left corner with exhaust steam, implying the arriving driver's rig. At 1:43 the man walks to a dark green Kenworth day-cab (no sleeper) with a green/white box trailer parked farther out in the lot. The white semi is never shown again and no vehicle swap is depicted, so the established truck is silently replaced by a differently colored and configured vehicle.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"1:12\",\n      \"entity\": \"breakfast plate / meal service\",\n      \"invariant_violated\": \"duplicate object-action across cuts\",\n      \"description\": \"A breakfast plate is already placed in front of the man at 0:38-0:44, immediately following the 0:34 food insert, and a plate still appears to sit before him in the 1:00-1:08 wide shot. Yet at 1:12-1:17 the waitress carries and sets down an identical breakfast plate in front of him again. No clearing or removal of the first plate is ever shown, so the same meal is served twice across the cut sequence.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

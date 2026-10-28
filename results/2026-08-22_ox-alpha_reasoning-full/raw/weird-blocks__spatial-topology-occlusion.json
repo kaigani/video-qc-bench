@@ -1,0 +1,59 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:26:56.578Z",
+  "latencyMs": 170360,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 13748,
+    "total_tokens": 19649,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table surface | light wood, back edge at ~y=100 spanning full frame | unchanged | stable support plane; all blocks rest on it, no warping",
+    "background room (defocused) | dark band across top; chair-like dark shape with vertical edge at x~875 on right side; no diagonal streaks | diagonal leg-like streak at top-left (x~140-270) and streak at top-right; right-side chair edge no longer discernible | background features appear and vanish between frames even though foreground is pixel-stable",
+    "hand | enters from top-left, pinch-gripping block knobs | exits top-right after placing 8th block | travels steadily left-to-right above the row; correctly occludes any block it passes over",
+    "block row | two green '2' blocks at positions 1 (x~90-250) and 3 (x~410-540), position 2 empty | eight blocks reading 2-3-2-2-3-5-2-6, left end slightly nearer camera (right side faces visible on each cube) | new blocks added one at a time at the right end; once placed, blocks stay pixel-fixed",
+    "block 1 | green '2' at x~90-250 | blue '2' at x~120-280 | color and ~30px position change between 00:00 and 00:02 (object appearance/state - outside spatial-topology scope, not filed as finding)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "background furniture, right side",
+      "invariant_violated": "fixed-background layout consistency under static camera",
+      "description": "A dark chair-like shape with a clear vertical edge at x~875 is visible in the top-right background at 00:00-00:02. By 00:04 it is gone and the top-right dark region has a different, softer contour. The foreground blocks do not move a single pixel across the same interval, so the camera is static and this background reconfiguration cannot be explained by camera motion.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "background furniture, top-left",
+      "invariant_violated": "fixed-background layout consistency under static camera",
+      "description": "A light diagonal streak resembling a defocused chair/table leg appears at top-left (x~140-270, y~0-90) at 00:06 and persists at 00:08. In frames 00:00-00:04 that region is uniformly dark with no such element. With a locked-off camera (blocks and table edge stationary in frame), a fixed background object cannot newly appear; this indicates an unstable generated background.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"table surface | light wood, back edge at ~y=100 spanning full frame | unchanged | stable support plane; all blocks rest on it, no warping\",\n    \"background room (defocused) | dark band across top; chair-like dark shape with vertical edge at x~875 on right side; no diagonal streaks | diagonal leg-like streak at top-left (x~140-270) and streak at top-right; right-side chair edge no longer discernible | background features appear and vanish between frames even though foreground is pixel-stable\",\n    \"hand | enters from top-left, pinch-gripping block knobs | exits top-right after placing 8th block | travels steadily left-to-right above the row; correctly occludes any block it passes over\",\n    \"block row | two green '2' blocks at positions 1 (x~90-250) and 3 (x~410-540), position 2 empty | eight blocks reading 2-3-2-2-3-5-2-6, left end slightly nearer camera (right side faces visible on each cube) | new blocks added one at a time at the right end; once placed, blocks stay pixel-fixed\",\n    \"block 1 | green '2' at x~90-250 | blue '2' at x~120-280 | color and ~30px position change between 00:00 and 00:02 (object appearance/state - outside spatial-topology scope, not filed as finding)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"background furniture, right side\",\n      \"invariant_violated\": \"fixed-background layout consistency under static camera\",\n      \"description\": \"A dark chair-like shape with a clear vertical edge at x~875 is visible in the top-right background at 00:00-00:02. By 00:04 it is gone and the top-right dark region has a different, softer contour. The foreground blocks do not move a single pixel across the same interval, so the camera is static and this background reconfiguration cannot be explained by camera motion.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"background furniture, top-left\",\n      \"invariant_violated\": \"fixed-background layout consistency under static camera\",\n      \"description\": \"A light diagonal streak resembling a defocused chair/table leg appears at top-left (x~140-270, y~0-90) at 00:06 and persists at 00:08. In frames 00:00-00:04 that region is uniformly dark with no such element. With a locked-off camera (blocks and table edge stationary in frame), a fixed background object cannot newly appear; this indicates an unstable generated background.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__vehicle-identity",
+  "video": "woman-car.mp4",
+  "role": "vehicle-identity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:43:43.761Z",
+  "latencyMs": 17189,
+  "usage": {
+    "prompt_tokens": 1342,
+    "completion_tokens": 1310,
+    "total_tokens": 2652,
+    "cost": 0.018404,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018404,
+      "upstream_inference_prompt_cost": 0.002684,
+      "upstream_inference_completions_cost": 0.01572
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1145,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Station wagon with wood paneling, front grille, hood ornament, and license plate visible.",
+    "00:05 - Station wagon, closer angle, hood ornament is missing and front end structure has altered."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Station wagon",
+      "invariant_violated": "Attached Hardware",
+      "description": "The prominent hood ornament visible at the beginning of the clip disappears as the camera zooms in, and the front edge of the hood becomes completely smooth.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Station wagon with wood paneling, front grille, hood ornament, and license plate visible.\",\n    \"00:05 - Station wagon, closer angle, hood ornament is missing and front end structure has altered.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Station wagon\",\n      \"invariant_violated\": \"Attached Hardware\",\n      \"description\": \"The prominent hood ornament visible at the beginning of the clip disappears as the camera zooms in, and the front edge of the hood becomes completely smooth.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

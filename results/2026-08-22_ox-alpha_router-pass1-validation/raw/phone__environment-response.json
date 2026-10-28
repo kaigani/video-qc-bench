@@ -1,0 +1,42 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:00:34.764Z",
+  "latencyMs": 60894,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 1110,
+    "total_tokens": 6950,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:10 Sunlight: bright direct sun implied by warm tones and sharp shadows; should cast consistent shadows on pavement, railing, and phone screen — shadow of railing bars on pavement and shadow of holder's hand/fingers on phone screen are present and track hand position plausibly",
+    "0:00-0:04 Background pedestrian: self-propelled walking up stairs with red bag; legs, bag, and body move coherently at consistent pace until exiting frame — motion is self-caused, no anomaly",
+    "0:00-0:10 Shrubs/foliage near railing: no wind is implied anywhere in scene (no streaming hair, no fluttering fabric, no flags); foliage remains static across frames — consistent with calm air",
+    "0:04-0:10 Phone screen shadow: soft hand/finger shadow on screen shifts as thumb presses and hand repositions — cause (sun + held hand) is visible and consistent",
+    "0:02-0:10 Background blur/railing motion: apparent background displacement matches camera repositioning and rack focus onto phone; railing bars show no independent deformation — attributable to camera, not an environmental force"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:10 Sunlight: bright direct sun implied by warm tones and sharp shadows; should cast consistent shadows on pavement, railing, and phone screen — shadow of railing bars on pavement and shadow of holder's hand/fingers on phone screen are present and track hand position plausibly\",\n    \"0:00-0:04 Background pedestrian: self-propelled walking up stairs with red bag; legs, bag, and body move coherently at consistent pace until exiting frame — motion is self-caused, no anomaly\",\n    \"0:00-0:10 Shrubs/foliage near railing: no wind is implied anywhere in scene (no streaming hair, no fluttering fabric, no flags); foliage remains static across frames — consistent with calm air\",\n    \"0:04-0:10 Phone screen shadow: soft hand/finger shadow on screen shifts as thumb presses and hand repositions — cause (sun + held hand) is visible and consistent\",\n    \"0:02-0:10 Background blur/railing motion: apparent background displacement matches camera repositioning and rack focus onto phone; railing bars show no independent deformation — attributable to camera, not an environmental force\"\n  ],\n  \"findings\": []\n}"
+}

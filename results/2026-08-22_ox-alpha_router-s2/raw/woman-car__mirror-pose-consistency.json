@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__mirror-pose-consistency",
+  "video": "woman-car.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:05:40.067Z",
+  "latencyMs": 105370,
+  "usage": {
+    "prompt_tokens": 5364,
+    "completion_tokens": 2494,
+    "total_tokens": 7858,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — Subject: woman leaning on hood, arms crossed, facing camera. True mirrors in frame: car rearview mirror (seen through windshield) and driver-side exterior mirror. Rearview mirror face is too small/dark to resolve any reflection; side mirror faces rearward and shows only road/desert, not the subject. Subject's image appears only in windshield glass — out of scope.",
+    "00:02 — Subject: same arms-crossed pose on hood, head slightly turned. Rearview and side mirrors still present; neither resolves a reflection of the subject. Windshield shows only landscape/sky reflection (glass, out of scope).",
+    "00:04 — Subject: arms crossed, leaning, gazing left. Rearview mirror visible through windshield but reflection unreadable at this size; side mirror no longer clearly resolvable. No comparable true-mirror image of the subject exists at this instant.",
+    "00:06 — Subject: arms crossed, hair blowing, looking toward road, smiling. Rearview mirror no longer clearly in frame; windshield shows glare only (glass, out of scope). No true-mirror reflection available for comparison.",
+    "00:08 — Subject: close-up, arms crossed on hood, hair blowing. No mirror face visible anywhere in frame. No true-mirror reflection available. Inventory verification: the only true mirrors in the video are the vehicle's rearview and exterior side mirrors; neither ever displays a resolvable reflection of the subject, and the only subject reflections present are in windshield/window glass, which is excluded by scope. Zero comparable moments."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — Subject: woman leaning on hood, arms crossed, facing camera. True mirrors in frame: car rearview mirror (seen through windshield) and driver-side exterior mirror. Rearview mirror face is too small/dark to resolve any reflection; side mirror faces rearward and shows only road/desert, not the subject. Subject's image appears only in windshield glass — out of scope.\",\n    \"00:02 — Subject: same arms-crossed pose on hood, head slightly turned. Rearview and side mirrors still present; neither resolves a reflection of the subject. Windshield shows only landscape/sky reflection (glass, out of scope).\",\n    \"00:04 — Subject: arms crossed, leaning, gazing left. Rearview mirror visible through windshield but reflection unreadable at this size; side mirror no longer clearly resolvable. No comparable true-mirror image of the subject exists at this instant.\",\n    \"00:06 — Subject: arms crossed, hair blowing, looking toward road, smiling. Rearview mirror no longer clearly in frame; windshield shows glare only (glass, out of scope). No true-mirror reflection available for comparison.\",\n    \"00:08 — Subject: close-up, arms crossed on hood, hair blowing. No mirror face visible anywhere in frame. No true-mirror reflection available. Inventory verification: the only true mirrors in the video are the vehicle's rearview and exterior side mirrors; neither ever displays a resolvable reflection of the subject, and the only subject reflections present are in windshield/window glass, which is excluded by scope. Zero comparable moments.\"\n  ],\n  \"findings\": []\n}"
+}

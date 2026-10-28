@@ -1,0 +1,55 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:18:59.882Z",
+  "latencyMs": 18721,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2023,
+    "total_tokens": 3399,
+    "cost": 0.027028,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027028,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.024276
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1776,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Subject and reflection visible. Subject holding comb near face."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00-00:09",
+      "entity": "subject reflection",
+      "invariant_violated": "left-right mirroring",
+      "description": "The real subject holds the comb in his right arm, but the reflection is holding it in its left arm (appearing on the right side of the mirror instead of the left).",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02-00:05",
+      "entity": "subject reflection",
+      "invariant_violated": "synchronous motion",
+      "description": "The reflection raises the comb and runs it through its hair, while the real subject's arm remains stationary near his chin.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Subject and reflection visible. Subject holding comb near face.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00-00:09\",\n      \"entity\": \"subject reflection\",\n      \"invariant_violated\": \"left-right mirroring\",\n      \"description\": \"The real subject holds the comb in his right arm, but the reflection is holding it in its left arm (appearing on the right side of the mirror instead of the left).\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02-00:05\",\n      \"entity\": \"subject reflection\",\n      \"invariant_violated\": \"synchronous motion\",\n      \"description\": \"The reflection raises the comb and runs it through its hair, while the real subject's arm remains stationary near his chin.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:35.758Z",
+  "latencyMs": 22055,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1639,
+    "total_tokens": 3083,
+    "cost": 0.00722925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00722925,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00614625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1395,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red apple | held in woman's left hand at chest level | vanished from hand | disappeared between 00:06 and 00:08 without visible placement, transfer, or dropping",
+    "Blue umbrella | held open by woman | held open by woman with both hands on shaft | persistent throughout clip",
+    "Fruit market stalls and crates | positioned along walkway | stationary on stalls | persistent throughout clip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Red apple",
+      "invariant_violated": "identity & persistence",
+      "description": "The red apple held in the woman's left hand from 00:00 to 00:06 vanishes when the camera pans to her right side at 00:08. Both of her hands are shown holding the umbrella shaft with no visible action showing the apple being put away, dropped, or transferred.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Red apple | held in woman's left hand at chest level | vanished from hand | disappeared between 00:06 and 00:08 without visible placement, transfer, or dropping\",\n    \"Blue umbrella | held open by woman | held open by woman with both hands on shaft | persistent throughout clip\",\n    \"Fruit market stalls and crates | positioned along walkway | stationary on stalls | persistent throughout clip\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Red apple\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red apple held in the woman's left hand from 00:00 to 00:06 vanishes when the camera pans to her right side at 00:08. Both of her hands are shown holding the umbrella shaft with no visible action showing the apple being put away, dropped, or transferred.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

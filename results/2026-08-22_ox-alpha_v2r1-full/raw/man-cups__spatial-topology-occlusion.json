@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:13:14.882Z",
+  "latencyMs": 175844,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 7951,
+    "total_tokens": 14178,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Round table | red tablecloth with cream center panel and medallion border; cups clustered on panel | unchanged | camera performs continuous leftward orbit from overhead close-up to frontal wide shot; no cuts",
+    "Red metal cups with silver rims | 0:00-0:04 four cups in diamond arrangement (back, right, center with coin stack, front-left) | 0:06-0:08 three cups visible in a row | performer's hands actively manipulate cups throughout; 4th cup plausibly occluded behind center cup at wide angle and/or handled as trick prop",
+    "Gold and silver coins | scattered on border and panel; stacks visible in center and front-left cups at 0:00 | redistributed across panel by performer | counts/positions change as part of obvious cup-and-coin sleight-of-hand routine (exempt category)",
+    "Magician (blue suit, red tie) | enters frame upper-left at 0:00 reaching across table | centered behind table facing camera at 0:08 | consistent with camera orbiting ~180 degrees to his front; arms always emerge from correct sides",
+    "Room background | dark hall, bright windows on far wall, wooden chairs, patrons at tables | same room throughout | windows sweep from upper-left (0:04) to center (0:06-0:08) and right-side patron shifts rightward, matching parallax of leftward orbit",
+    "Depth ordering | cups and coins correctly occlude tablecloth; magician's arms always render in front of table surface when reaching | unchanged | no background element ever renders over a foreground element"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Round table | red tablecloth with cream center panel and medallion border; cups clustered on panel | unchanged | camera performs continuous leftward orbit from overhead close-up to frontal wide shot; no cuts\",\n    \"Red metal cups with silver rims | 0:00-0:04 four cups in diamond arrangement (back, right, center with coin stack, front-left) | 0:06-0:08 three cups visible in a row | performer's hands actively manipulate cups throughout; 4th cup plausibly occluded behind center cup at wide angle and/or handled as trick prop\",\n    \"Gold and silver coins | scattered on border and panel; stacks visible in center and front-left cups at 0:00 | redistributed across panel by performer | counts/positions change as part of obvious cup-and-coin sleight-of-hand routine (exempt category)\",\n    \"Magician (blue suit, red tie) | enters frame upper-left at 0:00 reaching across table | centered behind table facing camera at 0:08 | consistent with camera orbiting ~180 degrees to his front; arms always emerge from correct sides\",\n    \"Room background | dark hall, bright windows on far wall, wooden chairs, patrons at tables | same room throughout | windows sweep from upper-left (0:04) to center (0:06-0:08) and right-side patron shifts rightward, matching parallax of leftward orbit\",\n    \"Depth ordering | cups and coins correctly occlude tablecloth; magician's arms always render in front of table surface when reaching | unchanged | no background element ever renders over a foreground element\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:40:48.450Z",
+  "latencyMs": 12873,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1142,
+    "total_tokens": 2568,
+    "cost": 0.005352,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005352,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0042825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1028,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | placed on wooden board in center foreground | filled with green and dark olives in center foreground | remains stationary on cutting board",
+    "wooden cutting board | covers bottom foreground surface | covers bottom foreground surface | stationary base element",
+    "kitchen stove and oven | background center behind jar | background center behind jar | fixed background appliance",
+    "bowls of olives | background right of jar | background right of jar | stationary on counter"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | placed on wooden board in center foreground | filled with green and dark olives in center foreground | remains stationary on cutting board\",\n    \"wooden cutting board | covers bottom foreground surface | covers bottom foreground surface | stationary base element\",\n    \"kitchen stove and oven | background center behind jar | background center behind jar | fixed background appliance\",\n    \"bowls of olives | background right of jar | background right of jar | stationary on counter\"\n  ],\n  \"findings\": []\n}"
+}

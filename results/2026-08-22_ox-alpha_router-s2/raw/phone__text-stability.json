@@ -1,0 +1,42 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:20:42.960Z",
+  "latencyMs": 92887,
+  "usage": {
+    "prompt_tokens": 5854,
+    "completion_tokens": 1610,
+    "total_tokens": 7464,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Phone screen, large central code: heavily out of focus at 0:00-0:02 (reads vaguely like '2742' only due to blur), sharpens to 'A7-42' at 0:04, partially crossed by a shadow but still 'A7-42' at 0:06, sharpest reading 'A7-42' at 0:08",
+    "Phone screen, small text below main code: illegible at 0:00-0:04, reads 'A2-12' at 0:06 and 0:08",
+    "Phone screen, top-left status text with green icon: too small and soft to read reliably at 0:00-0:02; approximates '7A2'/'A2' at 0:04-0:08 but never clearly legible enough to compare",
+    "Phone screen, top-center small glyphs ('A A' / triangle-like marks): consistently present but too small to resolve as words at any moment",
+    "Background environment (pavement, railing, person with red bag): contains no legible text elements"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Phone screen, large central code: heavily out of focus at 0:00-0:02 (reads vaguely like '2742' only due to blur), sharpens to 'A7-42' at 0:04, partially crossed by a shadow but still 'A7-42' at 0:06, sharpest reading 'A7-42' at 0:08\",\n    \"Phone screen, small text below main code: illegible at 0:00-0:04, reads 'A2-12' at 0:06 and 0:08\",\n    \"Phone screen, top-left status text with green icon: too small and soft to read reliably at 0:00-0:02; approximates '7A2'/'A2' at 0:04-0:08 but never clearly legible enough to compare\",\n    \"Phone screen, top-center small glyphs ('A A' / triangle-like marks): consistently present but too small to resolve as words at any moment\",\n    \"Background environment (pavement, railing, person with red bag): contains no legible text elements\"\n  ],\n  \"findings\": []\n}"
+}

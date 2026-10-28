@@ -1,0 +1,55 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:40:06.838Z",
+  "latencyMs": 325570,
+  "usage": {
+    "prompt_tokens": 35266,
+    "completion_tokens": 13121,
+    "total_tokens": 48387,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "White sleeper-cab semi tractor (bobtail, no trailer) | parked in lot left of diner facing right, engine idling with steam, unoccupied | last visible in exterior shot ending ~00:10, never seen again | none on-screen",
+    "Green conventional-cab box truck | first visible 01:43 parked in diner lot at sunrise | man walks along its side to the cab door 01:43-01:47 | appears with no on-screen arrival",
+    "White ceramic mug (customer's) | on counter in front of man's seat, empty | on counter beside $100 bills at 01:39-01:42 | filled by waitress pouring from carafe 00:26-00:33; held by man 00:38-00:45, 01:13-01:19, 01:29-01:37; set down between shots",
+    "Glass coffee carafe | held by waitress, full of dark coffee | pour finished by 00:33 | pours roughly one mug into customer's mug 00:26-00:33, level drops accordingly",
+    "Plate with fried egg and bread wedge | on counter in front of man (close-up 00:34-00:37) | gone from counter after 01:19 | lifted and carried off toward kitchen by waitress 01:15-01:19",
+    "Folded $100 bills | placed on counter by man's hand at 01:39 | lying flattened beside mug at 01:42 | placed and smoothed 01:39-01:42",
+    "OPEN neon sign | lit red in diner window, legible from outside at 00:00 | still lit in every interior shot through 01:28 | none (steady, consistent with double-sided sign)",
+    "Counter condiment caddies and napkin dispensers | distributed along counter | unchanged across all counter shots | none",
+    "Second white mug (waitress's) | absent from earlier shots | held by waitress at counter 01:29-01:37 | appears without visible origin; plausible off-screen pour, not flagged as violation"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "customer's truck outside the diner",
+      "invariant_violated": "identity & persistence",
+      "description": "The opening exterior (00:00-00:10) establishes a white sleeper-cab semi tractor parked at the diner with its engine running/steaming. When the man exits to his vehicle at 01:43-01:47, a dark green conventional-cab box truck of an entirely different type and color occupies the lot, implying the vehicle changed identity between the two exterior shots with no on-screen departure, arrival, or swap. Flagged at moderate confidence because the white truck could in principle be an unrelated vehicle that left off-screen.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"White sleeper-cab semi tractor (bobtail, no trailer) | parked in lot left of diner facing right, engine idling with steam, unoccupied | last visible in exterior shot ending ~00:10, never seen again | none on-screen\",\n    \"Green conventional-cab box truck | first visible 01:43 parked in diner lot at sunrise | man walks along its side to the cab door 01:43-01:47 | appears with no on-screen arrival\",\n    \"White ceramic mug (customer's) | on counter in front of man's seat, empty | on counter beside $100 bills at 01:39-01:42 | filled by waitress pouring from carafe 00:26-00:33; held by man 00:38-00:45, 01:13-01:19, 01:29-01:37; set down between shots\",\n    \"Glass coffee carafe | held by waitress, full of dark coffee | pour finished by 00:33 | pours roughly one mug into customer's mug 00:26-00:33, level drops accordingly\",\n    \"Plate with fried egg and bread wedge | on counter in front of man (close-up 00:34-00:37) | gone from counter after 01:19 | lifted and carried off toward kitchen by waitress 01:15-01:19\",\n    \"Folded $100 bills | placed on counter by man's hand at 01:39 | lying flattened beside mug at 01:42 | placed and smoothed 01:39-01:42\",\n    \"OPEN neon sign | lit red in diner window, legible from outside at 00:00 | still lit in every interior shot through 01:28 | none (steady, consistent with double-sided sign)\",\n    \"Counter condiment caddies and napkin dispensers | distributed along counter | unchanged across all counter shots | none\",\n    \"Second white mug (waitress's) | absent from earlier shots | held by waitress at counter 01:29-01:37 | appears without visible origin; plausible off-screen pour, not flagged as violation\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"customer's truck outside the diner\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The opening exterior (00:00-00:10) establishes a white sleeper-cab semi tractor parked at the diner with its engine running/steaming. When the man exits to his vehicle at 01:43-01:47, a dark green conventional-cab box truck of an entirely different type and color occupies the lot, implying the vehicle changed identity between the two exterior shots with no on-screen departure, arrival, or swap. Flagged at moderate confidence because the white truck could in principle be an unrelated vehicle that left off-screen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

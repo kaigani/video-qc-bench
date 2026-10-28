@@ -1,0 +1,528 @@
+{
+  "runId": "2026-09-02_flash36_router-s1",
+  "model": "google/gemini-3.6-flash",
+  "mode": "two-pass",
+  "reasoning": false,
+  "started": "2026-09-03T04:27:47.299Z",
+  "pass1": {
+    "_long-scene": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "pour-conservation",
+        "count-stability",
+        "possession-tracking",
+        "text-stability",
+        "vehicle-identity",
+        "audio-visual-claims",
+        "cross-cut-placement",
+        "layout-connectivity",
+        "environment-response"
+      ],
+      "latencyMs": 31765,
+      "tokens": 12287
+    },
+    "child-marbles": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "count-stability",
+        "possession-tracking",
+        "environment-response"
+      ],
+      "latencyMs": 9443,
+      "tokens": 2370
+    },
+    "dancer-mirror": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "mirror-pose-consistency",
+        "text-stability",
+        "layout-connectivity"
+      ],
+      "latencyMs": 8058,
+      "tokens": 2271
+    },
+    "dialogue": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "audio-visual-claims"
+      ],
+      "latencyMs": 9650,
+      "tokens": 2433
+    },
+    "home-tour": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "count-stability",
+        "layout-connectivity",
+        "environment-response"
+      ],
+      "latencyMs": 13664,
+      "tokens": 2855
+    },
+    "man-cups": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "count-stability",
+        "possession-tracking",
+        "text-stability",
+        "layout-connectivity",
+        "environment-response"
+      ],
+      "latencyMs": 8514,
+      "tokens": 2367
+    },
+    "man-in-mirror": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "mirror-pose-consistency",
+        "count-stability",
+        "possession-tracking",
+        "layout-connectivity"
+      ],
+      "latencyMs": 11133,
+      "tokens": 2446
+    },
+    "phone": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "possession-tracking",
+        "text-stability",
+        "environment-response"
+      ],
+      "latencyMs": 9201,
+      "tokens": 2421
+    },
+    "pouring-olives": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "pour-conservation",
+        "count-stability",
+        "possession-tracking"
+      ],
+      "latencyMs": 8389,
+      "tokens": 2166
+    },
+    "skateboarder": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "environment-response"
+      ],
+      "latencyMs": 8394,
+      "tokens": 2382
+    },
+    "watchmaker": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "possession-tracking"
+      ],
+      "latencyMs": 8995,
+      "tokens": 2345
+    },
+    "weird-blocks": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "count-stability",
+        "possession-tracking",
+        "text-stability"
+      ],
+      "latencyMs": 11326,
+      "tokens": 2458
+    },
+    "woman-apple": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "count-stability",
+        "possession-tracking",
+        "environment-response"
+      ],
+      "latencyMs": 11286,
+      "tokens": 2881
+    },
+    "woman-car": {
+      "status": "ok",
+      "parseOk": true,
+      "triggered": [
+        "text-stability",
+        "vehicle-identity",
+        "environment-response"
+      ],
+      "latencyMs": 10133,
+      "tokens": 2600
+    }
+  },
+  "calls": {
+    "_long-scene__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 37652,
+      "tokens": 11236,
+      "cost": 0.010368
+    },
+    "_long-scene__pour-conservation": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 41428,
+      "tokens": 12126,
+      "cost": 0.0137145
+    },
+    "_long-scene__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 43565,
+      "tokens": 12365,
+      "cost": 0.01449975
+    },
+    "_long-scene__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 36924,
+      "tokens": 11434,
+      "cost": 0.0111345
+    },
+    "_long-scene__audio-visual-claims": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 37983,
+      "tokens": 10958,
+      "cost": 0.0095895
+    },
+    "_long-scene__vehicle-identity": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 40695,
+      "tokens": 11937,
+      "cost": 0.01312275
+    },
+    "_long-scene__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 32247,
+      "tokens": 12219,
+      "cost": 0.01412925
+    },
+    "_long-scene__cross-cut-placement": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 42254,
+      "tokens": 13932,
+      "cost": 0.020322
+    },
+    "_long-scene__layout-connectivity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 42749,
+      "tokens": 14570,
+      "cost": 0.0228405
+    },
+    "child-marbles__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12297,
+      "tokens": 2234,
+      "cost": 0.0041235
+    },
+    "child-marbles__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11830,
+      "tokens": 2056,
+      "cost": 0.003558
+    },
+    "child-marbles__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11227,
+      "tokens": 1869,
+      "cost": 0.00293175
+    },
+    "dancer-mirror__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 9016,
+      "tokens": 1983,
+      "cost": 0.00330825
+    },
+    "dancer-mirror__layout-connectivity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 8879,
+      "tokens": 2103,
+      "cost": 0.00370425
+    },
+    "dialogue__audio-visual-claims": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 9463,
+      "tokens": 2593,
+      "cost": 0.00583575
+    },
+    "dancer-mirror__mirror-pose-consistency": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 22277,
+      "tokens": 4176,
+      "cost": 0.011532
+    },
+    "home-tour__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 14182,
+      "tokens": 3223,
+      "cost": 0.00783225
+    },
+    "home-tour__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 10007,
+      "tokens": 2169,
+      "cost": 0.00405675
+    },
+    "home-tour__layout-connectivity": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 20975,
+      "tokens": 4602,
+      "cost": 0.0130755
+    },
+    "man-cups__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 10627,
+      "tokens": 2180,
+      "cost": 0.003921
+    },
+    "man-cups__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12361,
+      "tokens": 2436,
+      "cost": 0.004983
+    },
+    "man-cups__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 13004,
+      "tokens": 1813,
+      "cost": 0.00272175
+    },
+    "man-cups__layout-connectivity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 16876,
+      "tokens": 2256,
+      "cost": 0.004278
+    },
+    "man-cups__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 19580,
+      "tokens": 2560,
+      "cost": 0.005472
+    },
+    "man-in-mirror__mirror-pose-consistency": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7803,
+      "tokens": 2079,
+      "cost": 0.00366825
+    },
+    "man-in-mirror__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 5145,
+      "tokens": 1781,
+      "cost": 0.00252675
+    },
+    "man-in-mirror__count-stability": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 13756,
+      "tokens": 3600,
+      "cost": 0.009246
+    },
+    "phone__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 7552,
+      "tokens": 1745,
+      "cost": 0.00239175
+    },
+    "man-in-mirror__layout-connectivity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 11715,
+      "tokens": 2607,
+      "cost": 0.00559425
+    },
+    "phone__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12444,
+      "tokens": 2421,
+      "cost": 0.00495075
+    },
+    "phone__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 13206,
+      "tokens": 2339,
+      "cost": 0.00469425
+    },
+    "pouring-olives__count-stability": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 15486,
+      "tokens": 2902,
+      "cost": 0.0066285
+    },
+    "pouring-olives__possession-tracking": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 17041,
+      "tokens": 2994,
+      "cost": 0.0070755
+    },
+    "pouring-olives__pour-conservation": {
+      "status": "ok",
+      "findings": 2,
+      "parseOk": true,
+      "latencyMs": 27041,
+      "tokens": 4215,
+      "cost": 0.01166325
+    },
+    "skateboarder__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12289,
+      "tokens": 2484,
+      "cost": 0.005238
+    },
+    "watchmaker__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12462,
+      "tokens": 2174,
+      "cost": 0.0040005
+    },
+    "weird-blocks__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 13424,
+      "tokens": 3080,
+      "cost": 0.007296
+    },
+    "weird-blocks__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12214,
+      "tokens": 3243,
+      "cost": 0.00803325
+    },
+    "woman-apple__count-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 18999,
+      "tokens": 3013,
+      "cost": 0.00704475
+    },
+    "weird-blocks__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 30679,
+      "tokens": 4736,
+      "cost": 0.013608
+    },
+    "woman-apple__possession-tracking": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 16402,
+      "tokens": 2458,
+      "cost": 0.0050655
+    },
+    "woman-apple__environment-response": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 12718,
+      "tokens": 2195,
+      "cost": 0.00415425
+    },
+    "woman-car__text-stability": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 14726,
+      "tokens": 2019,
+      "cost": 0.00344325
+    },
+    "woman-car__vehicle-identity": {
+      "status": "ok",
+      "findings": 0,
+      "parseOk": true,
+      "latencyMs": 16006,
+      "tokens": 2160,
+      "cost": 0.004074
+    },
+    "woman-car__environment-response": {
+      "status": "ok",
+      "findings": 1,
+      "parseOk": true,
+      "latencyMs": 16814,
+      "tokens": 2484,
+      "cost": 0.005238
+    }
+  }
+}

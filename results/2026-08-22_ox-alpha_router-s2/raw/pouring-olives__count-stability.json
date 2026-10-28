@@ -1,0 +1,84 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:14:35.518Z",
+  "latencyMs": 382823,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 14928,
+    "total_tokens": 20824,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 large jar: 0 olives (empty)",
+    "0:01 large jar: 0 olives; small glass bowl begins pouring green olives into it (visible cause for increase)",
+    "0:02 large jar: ~16 olives (mix of ~8 green and ~7-8 dark purple) added via visible pour from small bowl",
+    "0:04 large jar: ~25 olives, increased via continued visible pour from small bowl",
+    "0:05 large jar: ~27 olives, no active pour, unchanged",
+    "0:06 large jar: ~28 olives, unchanged",
+    "0:08 large jar: ~35 olives, increased via visible pour from small glass bowl",
+    "0:00 small glass bowl: ~5 green olives visible (hands occlude rest of bowl)",
+    "0:02 small glass bowl: ~4-5 green olives remaining, visibly pouring out",
+    "0:04 small glass bowl: ~0-1 olives, essentially emptied by visible pour",
+    "0:06 small glass bowl: ~5-6 green olives present again with no visible refill action",
+    "0:08 small glass bowl: ~4-5 green olives, visibly pouring into jar",
+    "0:00 metal bowl: ~10 green olives",
+    "0:02 metal bowl: ~10 green olives (unchanged)",
+    "0:04 metal bowl: ~10 green olives (unchanged)",
+    "0:05 metal bowl: ~9-10 green olives (unchanged)",
+    "0:06 metal bowl: lifted by hand, ~6-8 olives visible (partial hand occlusion)",
+    "0:08 metal bowl: ~5 olives on counter, fewer than at 0:05 with no pour from it shown",
+    "0:00 ceramic bowl: ~8 green olives",
+    "0:02 ceramic bowl: ~8 green olives (unchanged)",
+    "0:04 ceramic bowl: ~8 green olives (unchanged)",
+    "0:08 ceramic bowl: ~8 green olives (constant throughout clip)"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "dark purple olives in the large jar",
+      "invariant_violated": "unexplained kind-appearance / addition without visible cause",
+      "description": "At 0:00-0:01 the small glass bowl being emptied into the jar visibly contains only green olives, and the olives seen falling are green. At 0:02 the jar contains ~7-8 dark purple (kalamata-type) olives mixed with the green ones. No olive is seen changing color and no second source container is shown, so the dark olives appear without a visible mechanism.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "small glass bowl",
+      "invariant_violated": "unexplained count increase (off-screen refill)",
+      "description": "The small glass bowl was poured essentially empty into the jar by 0:04, but at 0:06 it holds ~5-6 green olives again. No refilling action is visible between these moments; the olives reappeared while the bowl was not clearly tracked.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "0:08",
+      "entity": "olives in the metal bowl",
+      "invariant_violated": "unexplained count decrease",
+      "description": "The metal bowl holds ~9-10 green olives at 0:05, but only ~5 at 0:08. The only pour visible at 0:08 comes from the small glass bowl, not the metal bowl, so the removal of ~4-5 olives has no visible cause in the provided footage (a transfer may have occurred in an unsampled frame).",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 large jar: 0 olives (empty)\",\n    \"0:01 large jar: 0 olives; small glass bowl begins pouring green olives into it (visible cause for increase)\",\n    \"0:02 large jar: ~16 olives (mix of ~8 green and ~7-8 dark purple) added via visible pour from small bowl\",\n    \"0:04 large jar: ~25 olives, increased via continued visible pour from small bowl\",\n    \"0:05 large jar: ~27 olives, no active pour, unchanged\",\n    \"0:06 large jar: ~28 olives, unchanged\",\n    \"0:08 large jar: ~35 olives, increased via visible pour from small glass bowl\",\n    \"0:00 small glass bowl: ~5 green olives visible (hands occlude rest of bowl)\",\n    \"0:02 small glass bowl: ~4-5 green olives remaining, visibly pouring out\",\n    \"0:04 small glass bowl: ~0-1 olives, essentially emptied by visible pour\",\n    \"0:06 small glass bowl: ~5-6 green olives present again with no visible refill action\",\n    \"0:08 small glass bowl: ~4-5 green olives, visibly pouring into jar\",\n    \"0:00 metal bowl: ~10 green olives\",\n    \"0:02 metal bowl: ~10 green olives (unchanged)\",\n    \"0:04 metal bowl: ~10 green olives (unchanged)\",\n    \"0:05 metal bowl: ~9-10 green olives (unchanged)\",\n    \"0:06 metal bowl: lifted by hand, ~6-8 olives visible (partial hand occlusion)\",\n    \"0:08 metal bowl: ~5 olives on counter, fewer than at 0:05 with no pour from it shown\",\n    \"0:00 ceramic bowl: ~8 green olives\",\n    \"0:02 ceramic bowl: ~8 green olives (unchanged)\",\n    \"0:04 ceramic bowl: ~8 green olives (unchanged)\",\n    \"0:08 ceramic bowl: ~8 green olives (constant throughout clip)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"dark purple olives in the large jar\",\n      \"invariant_violated\": \"unexplained kind-appearance / addition without visible cause\",\n      \"description\": \"At 0:00-0:01 the small glass bowl being emptied into the jar visibly contains only green olives, and the olives seen falling are green. At 0:02 the jar contains ~7-8 dark purple (kalamata-type) olives mixed with the green ones. No olive is seen changing color and no second source container is shown, so the dark olives appear without a visible mechanism.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"small glass bowl\",\n      \"invariant_violated\": \"unexplained count increase (off-screen refill)\",\n      \"description\": \"The small glass bowl was poured essentially empty into the jar by 0:04, but at 0:06 it holds ~5-6 green olives again. No refilling action is visible between these moments; the olives reappeared while the bowl was not clearly tracked.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    },\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"olives in the metal bowl\",\n      \"invariant_violated\": \"unexplained count decrease\",\n      \"description\": \"The metal bowl holds ~9-10 green olives at 0:05, but only ~5 at 0:08. The only pour visible at 0:08 comes from the small glass bowl, not the metal bowl, so the removal of ~4-5 olives has no visible cause in the provided footage (a transfer may have occurred in an unsampled frame).\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

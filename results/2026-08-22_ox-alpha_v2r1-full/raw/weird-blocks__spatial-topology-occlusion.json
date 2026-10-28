@@ -1,0 +1,43 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:08:57.755Z",
+  "latencyMs": 177719,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 5285,
+    "total_tokens": 11512,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "camera | static close-up, fixed framing of wooden table with dark out-of-focus background | identical framing at end | no cuts, no movement",
+    "table surface | light wood grain, back edge running horizontally near top of frame | unchanged | consistent across all frames",
+    "background | dark blurred room with indistinct vertical/diagonal shapes (furniture legs) behind table edge | unchanged | static, no layout contradiction",
+    "hand | enters from top of frame, places cubes one at a time | working from left to right along the row at end | every cube entry/exit coincides with hand contact",
+    "cube row | begins with two cubes (green '2' at x~155, green '2' at x~470) | ends with eight evenly spaced cubes reading 2-3-2-2-3-5-2-6 | row grows strictly left-to-right, spacing ~135px consistent; cube at x~470 at 0:00 is repositioned to x~330 by the hand by 0:02, which is plausible manual placement",
+    "cube faces (colors/digits) | cubes show different colored/numbered faces at different times (green '2' becomes blue '2'/'3', etc.) | final row shows mixed colors | hand is in contact with each cube when its visible face changes; consistent with multi-face flip cubes being rotated - object-state change, outside spatial scope"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"camera | static close-up, fixed framing of wooden table with dark out-of-focus background | identical framing at end | no cuts, no movement\",\n    \"table surface | light wood grain, back edge running horizontally near top of frame | unchanged | consistent across all frames\",\n    \"background | dark blurred room with indistinct vertical/diagonal shapes (furniture legs) behind table edge | unchanged | static, no layout contradiction\",\n    \"hand | enters from top of frame, places cubes one at a time | working from left to right along the row at end | every cube entry/exit coincides with hand contact\",\n    \"cube row | begins with two cubes (green '2' at x~155, green '2' at x~470) | ends with eight evenly spaced cubes reading 2-3-2-2-3-5-2-6 | row grows strictly left-to-right, spacing ~135px consistent; cube at x~470 at 0:00 is repositioned to x~330 by the hand by 0:02, which is plausible manual placement\",\n    \"cube faces (colors/digits) | cubes show different colored/numbered faces at different times (green '2' becomes blue '2'/'3', etc.) | final row shows mixed colors | hand is in contact with each cube when its visible face changes; consistent with multi-face flip cubes being rotated - object-state change, outside spatial scope\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,51 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:47:13.378Z",
+  "latencyMs": 658872,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 25293,
+    "total_tokens": 31332,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "main woman | navy buttoned cardigan, gray high-waisted shorts, brown ponytail, silver watch on left wrist, thin bracelet on right wrist, ring on left hand | same outfit, seen in left profile at end | walks toward camera, then turns to her right; by 00:08 apple has moved to her left hand and umbrella to her right hand (off-screen transfer)",
+    "blue umbrella | large blue canopy, metallic shaft, gripped in her left hand at chest/face height | canopy out of frame top, shaft visible upper-left at 00:08, now held in right hand (occluded behind head) | hand transfer between 00:06-00:08 not shown on screen",
+    "red apple | uniformly bright red, glossy, carried in her right hand | red with large pale yellow-green upper region around stem, cradled palm-up in her left hand at 00:08 | hand transfer off-screen; visible surface coloring changes",
+    "wrist accessories | watch on left wrist, thin bracelet on right wrist (clearly visible 00:02-00:06) | watch visible on apple-holding left wrist at 00:08; bracelet on occluded right umbrella hand | consistent, no wrist-swap detected",
+    "market background | fruit stalls with crates, red tarps, hanging produce, walking shoppers | consistent parallax as camera/subject advance | no morphing or duplicated people detected"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple held by main woman",
+      "invariant_violated": "object appearance continuity",
+      "description": "From 00:00 through 00:06 the apple's visible surface is uniformly bright red in every close view, including stem-up presentations at 00:00 and 00:04. At 00:08 the upper portion around the stem is pale yellow-green with a fairly defined contour, so the fruit reads as a different coloring/variety than in all prior frames. A broad sky reflection on the waxy skin is a possible innocent explanation, which limits confidence.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"main woman | navy buttoned cardigan, gray high-waisted shorts, brown ponytail, silver watch on left wrist, thin bracelet on right wrist, ring on left hand | same outfit, seen in left profile at end | walks toward camera, then turns to her right; by 00:08 apple has moved to her left hand and umbrella to her right hand (off-screen transfer)\",\n    \"blue umbrella | large blue canopy, metallic shaft, gripped in her left hand at chest/face height | canopy out of frame top, shaft visible upper-left at 00:08, now held in right hand (occluded behind head) | hand transfer between 00:06-00:08 not shown on screen\",\n    \"red apple | uniformly bright red, glossy, carried in her right hand | red with large pale yellow-green upper region around stem, cradled palm-up in her left hand at 00:08 | hand transfer off-screen; visible surface coloring changes\",\n    \"wrist accessories | watch on left wrist, thin bracelet on right wrist (clearly visible 00:02-00:06) | watch visible on apple-holding left wrist at 00:08; bracelet on occluded right umbrella hand | consistent, no wrist-swap detected\",\n    \"market background | fruit stalls with crates, red tarps, hanging produce, walking shoppers | consistent parallax as camera/subject advance | no morphing or duplicated people detected\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple held by main woman\",\n      \"invariant_violated\": \"object appearance continuity\",\n      \"description\": \"From 00:00 through 00:06 the apple's visible surface is uniformly bright red in every close view, including stem-up presentations at 00:00 and 00:04. At 00:08 the upper portion around the stem is pale yellow-green with a fairly defined contour, so the fruit reads as a different coloring/variety than in all prior frames. A broad sky reflection on the waxy skin is a possible innocent explanation, which limits confidence.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.35\n    }\n  ]\n}"
+}

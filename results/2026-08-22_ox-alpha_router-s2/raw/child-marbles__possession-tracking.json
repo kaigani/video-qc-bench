@@ -1,0 +1,44 @@
+{
+  "key": "child-marbles__possession-tracking",
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:22:12.969Z",
+  "latencyMs": 141310,
+  "usage": {
+    "prompt_tokens": 5858,
+    "completion_tokens": 2404,
+    "total_tokens": 8262,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:08 glass bowl: stationary on wooden table, center of frame, never lifted or moved",
+    "00:00 colored plastic balls (~8, green/yellow/red): inside glass bowl",
+    "00:02 red ball: held in child's both hands above bowl (picked up between 00:00 and 00:02, source consistent with bowl/corner pile)",
+    "00:02-00:04 red ball: released from child's hands into bowl; red ball visible inside bowl at 00:04 near drop point",
+    "00:04-00:08 all balls: inside bowl; child's right hand stirs/mixes them (brief finger occlusion only); no ball exits bowl",
+    "00:00-00:06 decorated object in metal egg cup: stationary on table right side; exits frame ~00:08 due to camera crop/motion blur, not hand movement",
+    "00:00-00:02 loose balls at table bottom-right corner: stationary; exit frame ~00:04 due to camera pan (allowed exited-frame state)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:08 glass bowl: stationary on wooden table, center of frame, never lifted or moved\",\n    \"00:00 colored plastic balls (~8, green/yellow/red): inside glass bowl\",\n    \"00:02 red ball: held in child's both hands above bowl (picked up between 00:00 and 00:02, source consistent with bowl/corner pile)\",\n    \"00:02-00:04 red ball: released from child's hands into bowl; red ball visible inside bowl at 00:04 near drop point\",\n    \"00:04-00:08 all balls: inside bowl; child's right hand stirs/mixes them (brief finger occlusion only); no ball exits bowl\",\n    \"00:00-00:06 decorated object in metal egg cup: stationary on table right side; exits frame ~00:08 due to camera crop/motion blur, not hand movement\",\n    \"00:00-00:02 loose balls at table bottom-right corner: stationary; exit frame ~00:04 due to camera pan (allowed exited-frame state)\"\n  ],\n  \"findings\": []\n}"
+}

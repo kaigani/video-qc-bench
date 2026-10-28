@@ -1,0 +1,60 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:51.436Z",
+  "latencyMs": 28996,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 3273,
+    "total_tokens": 4717,
+    "cost": 0.01335675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01335675,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.01227375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2858,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty on wooden cutting board | ~2/3 full of green and purple olives | filled twice by pouring from glass containers",
+    "glass measuring cup 1 | held above jar, containing green and purple olives | empty | poured olives into large jar (00:01-00:03)",
+    "glass measuring cup 2 | held near right side, containing green and purple olives | empty | picked up at 00:05, poured into large jar (00:07-00:09)",
+    "stainless steel bowl | full of green olives behind jar | partially empty with pits/remnants | contents spontaneously change at 00:04 without visible action",
+    "ceramic bowl | full of green olives on right | full of green olives on right | no changes",
+    "small glass dropper bottle | absent from board | standing on cutting board | spontaneously appears at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "stainless steel bowl contents",
+      "invariant_violated": "unexplained_state_change",
+      "description": "The stainless steel bowl in the background instantaneously changes from full of whole green olives to mostly empty with olive pits and debris without any visible action.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small glass dropper bottle",
+      "invariant_violated": "spontaneous_appearance",
+      "description": "A small glass dropper bottle suddenly appears on the cutting board between the stainless steel bowl and the ceramic bowl without being placed there.",
+      "severity": "minor",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty on wooden cutting board | ~2/3 full of green and purple olives | filled twice by pouring from glass containers\",\n    \"glass measuring cup 1 | held above jar, containing green and purple olives | empty | poured olives into large jar (00:01-00:03)\",\n    \"glass measuring cup 2 | held near right side, containing green and purple olives | empty | picked up at 00:05, poured into large jar (00:07-00:09)\",\n    \"stainless steel bowl | full of green olives behind jar | partially empty with pits/remnants | contents spontaneously change at 00:04 without visible action\",\n    \"ceramic bowl | full of green olives on right | full of green olives on right | no changes\",\n    \"small glass dropper bottle | absent from board | standing on cutting board | spontaneously appears at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"stainless steel bowl contents\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"The stainless steel bowl in the background instantaneously changes from full of whole green olives to mostly empty with olive pits and debris without any visible action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"small glass dropper bottle\",\n      \"invariant_violated\": \"spontaneous_appearance\",\n      \"description\": \"A small glass dropper bottle suddenly appears on the cutting board between the stainless steel bowl and the ceramic bowl without being placed there.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

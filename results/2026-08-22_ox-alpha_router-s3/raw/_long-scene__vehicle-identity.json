@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T02:17:10.245Z",
+  "latencyMs": 158942,
+  "usage": {
+    "prompt_tokens": 34848,
+    "completion_tokens": 2408,
+    "total_tokens": 37256,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:10 exterior pre-dawn: semi truck parked left of diner — white/silver conventional tractor with sleeper cab pulling a long white box trailer; steam rising near cab; no legible markings at this distance/light",
+    "1:43-1:52 exterior sunrise (seen through diner window): dark green single-unit box truck (integral cab-and-box, no trailer) with chrome exhaust stacks and white side stripe; illegible door text; man walks to driver-side door"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "truck parked outside the diner (the man's vehicle)",
+      "invariant_violated": "vehicle identity continuity",
+      "description": "At 0:00-0:10 the truck outside is a white/silver conventional sleeper-cab semi tractor towing a long box trailer; at 1:43-1:52 the man exits and walks to a dark green single-unit box truck with an integral cargo body and chrome stacks. Body type, configuration, and color all differ, so this is not a lighting/angle artifact. The story-time gap (pre-dawn to sunrise) could allow an off-screen swap, but no swap is shown or implied by any second vehicle, and the scene reads as the same truck he arrived in — an unexplained identity discontinuity.",
+      "severity": "severe",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:10 exterior pre-dawn: semi truck parked left of diner — white/silver conventional tractor with sleeper cab pulling a long white box trailer; steam rising near cab; no legible markings at this distance/light\",\n    \"1:43-1:52 exterior sunrise (seen through diner window): dark green single-unit box truck (integral cab-and-box, no trailer) with chrome exhaust stacks and white side stripe; illegible door text; man walks to driver-side door\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"truck parked outside the diner (the man's vehicle)\",\n      \"invariant_violated\": \"vehicle identity continuity\",\n      \"description\": \"At 0:00-0:10 the truck outside is a white/silver conventional sleeper-cab semi tractor towing a long box trailer; at 1:43-1:52 the man exits and walks to a dark green single-unit box truck with an integral cargo body and chrome stacks. Body type, configuration, and color all differ, so this is not a lighting/angle artifact. The story-time gap (pre-dawn to sunrise) could allow an off-screen swap, but no swap is shown or implied by any second vehicle, and the scene reads as the same truck he arrived in — an unexplained identity discontinuity.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

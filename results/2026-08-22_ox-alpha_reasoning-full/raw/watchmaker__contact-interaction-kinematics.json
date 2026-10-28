@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:23:12.859Z",
+  "latencyMs": 71318,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 1283,
+    "total_tokens": 7194,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand + tweezers | pinching tweezers at 0:00, firm tripod grip, fingers wrapped around shaft | tweezers no longer in hand by 0:06 | grip maintained 0:00-~0:05; release occurs as hand dips below frame bottom between 0:04 and 0:06, consistent with setting tweezers down out of view",
+    "tweezers tip + small object in left hand | tip in light contact with object surface at 0:00 | contact broken by ~0:05 | steady manipulation 0:00-0:04, tip visibly touching object each frame; withdrawal precedes hand lowering, no effect-before-contact",
+    "left hand + small object | object pinched between thumb and index/middle fingers at 0:00 | same pinch grip at 0:09 | continuous, unbroken contact for full clip; object never moves independently of fingers",
+    "right hand + small object | not touching object at 0:00 | fingertips on object at 0:06-0:08 | contact established on-screen as fingers close on object after tweezers are set down; grip is a visible fingertip pinch with no floating",
+    "right hand (late clip) | manipulating object at 0:06 | rapid blurred downward motion at 0:08 | trajectory continuous with prior pose, consistent with reaching below frame; no pose snapping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand + tweezers | pinching tweezers at 0:00, firm tripod grip, fingers wrapped around shaft | tweezers no longer in hand by 0:06 | grip maintained 0:00-~0:05; release occurs as hand dips below frame bottom between 0:04 and 0:06, consistent with setting tweezers down out of view\",\n    \"tweezers tip + small object in left hand | tip in light contact with object surface at 0:00 | contact broken by ~0:05 | steady manipulation 0:00-0:04, tip visibly touching object each frame; withdrawal precedes hand lowering, no effect-before-contact\",\n    \"left hand + small object | object pinched between thumb and index/middle fingers at 0:00 | same pinch grip at 0:09 | continuous, unbroken contact for full clip; object never moves independently of fingers\",\n    \"right hand + small object | not touching object at 0:00 | fingertips on object at 0:06-0:08 | contact established on-screen as fingers close on object after tweezers are set down; grip is a visible fingertip pinch with no floating\",\n    \"right hand (late clip) | manipulating object at 0:06 | rapid blurred downward motion at 0:08 | trajectory continuous with prior pose, consistent with reaching below frame; no pose snapping\"\n  ],\n  \"findings\": []\n}"
+}

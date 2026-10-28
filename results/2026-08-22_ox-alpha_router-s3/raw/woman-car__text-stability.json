@@ -1,0 +1,51 @@
+{
+  "key": "woman-car__text-stability",
+  "video": "woman-car.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:40:23.150Z",
+  "latencyMs": 106530,
+  "usage": {
+    "prompt_tokens": 5374,
+    "completion_tokens": 1729,
+    "total_tokens": 7103,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 front license plate (dark red characters on white plate, front bumper, left of frame): sharpest reading 'STE 097' — three letters followed by three digits, plausible plate format",
+    "0:02 front license plate (camera panning right, plate now at bottom edge, partially cropped and motion-smeared): reading 'STE 197' — the character after 'STE' appears as a vertical '1' rather than the oval '0' seen at 0:00",
+    "0:00 hood front lettering (spaced chrome letters along hood leading edge): only isolated letters 'T' and 'I' clearly visible; remainder too small/out of frame to read",
+    "0:04 hood front lettering (closer crop): single letter 'T' visible at hood edge, consistent with the partial lettering seen at 0:00",
+    "0:06-0:08 no text elements legible; frame centers on the woman and windshield, plate and hood lettering out of frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "front license plate",
+      "invariant_violated": "stability of legible text",
+      "description": "The plate reads 'STE 097' at 0:00 (sharpest frame) but appears as 'STE 197' at 0:02 — the second digit changed from a wide oval '0' to a narrow '1'. No visible action (plate swap, occlusion, tampering) explains the change; the plate is only partially cropped at the frame bottom and lightly motion-smeared, but the digit shape difference exceeds what blur would produce.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 front license plate (dark red characters on white plate, front bumper, left of frame): sharpest reading 'STE 097' — three letters followed by three digits, plausible plate format\",\n    \"0:02 front license plate (camera panning right, plate now at bottom edge, partially cropped and motion-smeared): reading 'STE 197' — the character after 'STE' appears as a vertical '1' rather than the oval '0' seen at 0:00\",\n    \"0:00 hood front lettering (spaced chrome letters along hood leading edge): only isolated letters 'T' and 'I' clearly visible; remainder too small/out of frame to read\",\n    \"0:04 hood front lettering (closer crop): single letter 'T' visible at hood edge, consistent with the partial lettering seen at 0:00\",\n    \"0:06-0:08 no text elements legible; frame centers on the woman and windshield, plate and hood lettering out of frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"front license plate\",\n      \"invariant_violated\": \"stability of legible text\",\n      \"description\": \"The plate reads 'STE 097' at 0:00 (sharpest frame) but appears as 'STE 197' at 0:02 — the second digit changed from a wide oval '0' to a narrow '1'. No visible action (plate swap, occlusion, tampering) explains the change; the plate is only partially cropped at the frame bottom and lightly motion-smeared, but the digit shape difference exceeds what blur would produce.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

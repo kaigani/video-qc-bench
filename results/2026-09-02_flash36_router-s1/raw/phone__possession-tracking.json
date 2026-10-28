@@ -1,0 +1,41 @@
+{
+  "key": "phone__possession-tracking",
+  "video": "phone.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:48.379Z",
+  "latencyMs": 7552,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 361,
+    "total_tokens": 1745,
+    "cost": 0.00239175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00239175,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.00135375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 251,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Smartphone held in right hand and left hand of the person in the foreground.",
+    "00:03 - Smartphone remains held in both hands while right thumb interacts with screen.",
+    "00:07 - Smartphone remains continuously in person's hands as screen orientation/display updates.",
+    "00:09 - Smartphone continues to be held in both hands at end of clip."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Smartphone held in right hand and left hand of the person in the foreground.\",\n    \"00:03 - Smartphone remains held in both hands while right thumb interacts with screen.\",\n    \"00:07 - Smartphone remains continuously in person's hands as screen orientation/display updates.\",\n    \"00:09 - Smartphone continues to be held in both hands at end of clip.\"\n  ],\n  \"findings\": []\n}"
+}

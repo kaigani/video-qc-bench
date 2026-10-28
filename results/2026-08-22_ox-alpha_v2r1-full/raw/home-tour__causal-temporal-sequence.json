@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:02:36.998Z",
+  "latencyMs": 120919,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 2688,
+    "total_tokens": 8909,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (dark teal top, blonde bob) | standing in kitchen, facing left toward hallway | walking back through bedroom doorway toward hallway | continuous walk kitchen -> hallway -> bedroom -> turn-around -> exit; motion continuous, no teleports",
+    "Hallway | white door at far end closed, pictures on right wall, kitchen on left | unchanged | door remains closed throughout; pictures consistent when viewed in reverse from bedroom doorway",
+    "Bedroom | bed with white bedding, lit table lamp, chandelier, curtained windows, chair | unchanged | all furnishings static while woman looks around; no light or object state changes without cause",
+    "Kitchen (microwave, cabinets, tiled backsplash) | static set dressing | unchanged | no interactions with kitchen objects"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (dark teal top, blonde bob) | standing in kitchen, facing left toward hallway | walking back through bedroom doorway toward hallway | continuous walk kitchen -> hallway -> bedroom -> turn-around -> exit; motion continuous, no teleports\",\n    \"Hallway | white door at far end closed, pictures on right wall, kitchen on left | unchanged | door remains closed throughout; pictures consistent when viewed in reverse from bedroom doorway\",\n    \"Bedroom | bed with white bedding, lit table lamp, chandelier, curtained windows, chair | unchanged | all furnishings static while woman looks around; no light or object state changes without cause\",\n    \"Kitchen (microwave, cabinets, tiled backsplash) | static set dressing | unchanged | no interactions with kitchen objects\"\n  ],\n  \"findings\": []\n}"
+}

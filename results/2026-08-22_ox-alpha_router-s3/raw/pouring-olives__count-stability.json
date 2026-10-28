@@ -1,0 +1,46 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:38:27.505Z",
+  "latencyMs": 36174,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1360,
+    "total_tokens": 7256,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 — Large glass jar on cutting board: 0 olives, empty and open",
+    "0:01 — Jar: ~6 olives visible (green and dark varieties); cause: person pours olives from small glass bowl, olives visibly falling into jar",
+    "0:02 — Jar: ~10 olives; cause: continued pouring from small bowl, one olive mid-fall",
+    "0:04 — Jar: ~18-20 olives; cause: continued pouring from small glass bowl (now emptied)",
+    "0:06 — Jar: ~25 olives; cause: person lifts stainless steel bowl from counter and begins pouring its olives into jar",
+    "0:08 — Jar: ~30+ olives; cause: continued pouring from stainless steel bowl",
+    "0:00-0:08 — Small glass bowl in hands: ~6-8 green olives at start, visibly depleted to empty by ~0:04 via pouring into jar",
+    "0:00-0:04 — Stainless steel bowl on counter: ~10 green olives, count decreases only when person picks it up at ~0:06 to pour into jar",
+    "0:00-0:08 — White ceramic bowl on counter right: ~8-9 green olives, count unchanged throughout; person never manipulates this bowl"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 — Large glass jar on cutting board: 0 olives, empty and open\",\n    \"0:01 — Jar: ~6 olives visible (green and dark varieties); cause: person pours olives from small glass bowl, olives visibly falling into jar\",\n    \"0:02 — Jar: ~10 olives; cause: continued pouring from small bowl, one olive mid-fall\",\n    \"0:04 — Jar: ~18-20 olives; cause: continued pouring from small glass bowl (now emptied)\",\n    \"0:06 — Jar: ~25 olives; cause: person lifts stainless steel bowl from counter and begins pouring its olives into jar\",\n    \"0:08 — Jar: ~30+ olives; cause: continued pouring from stainless steel bowl\",\n    \"0:00-0:08 — Small glass bowl in hands: ~6-8 green olives at start, visibly depleted to empty by ~0:04 via pouring into jar\",\n    \"0:00-0:04 — Stainless steel bowl on counter: ~10 green olives, count decreases only when person picks it up at ~0:06 to pour into jar\",\n    \"0:00-0:08 — White ceramic bowl on counter right: ~8-9 green olives, count unchanged throughout; person never manipulates this bowl\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__mirror-pose-consistency",
+  "video": "woman-car.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:34:17.026Z",
+  "latencyMs": 39389,
+  "usage": {
+    "prompt_tokens": 5364,
+    "completion_tokens": 1300,
+    "total_tokens": 6664,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:04 — Car side-view mirror (driver's door, right edge of frame) is visible; it is a true mirror. Its face shows only bright sky/rearward desert scene; the subject leaning on the hood is not within its reflecting cone, which is geometrically correct for a rear-facing mirror.",
+    "0:00-0:04 — Subject (woman, arms crossed on hood) fully visible; her faint image on the windshield is a window reflection and is excluded from scope per instructions.",
+    "0:06 — Camera zooms in; side mirror exits frame; subject visible with arms crossed. No mirror-subject co-visibility.",
+    "0:08 — Close-up of subject, arms crossed, hair moving in wind; no true mirror in frame. No mirror-subject co-visibility.",
+    "Verification result: the only true mirror present (car side mirror) never shows the subject at any shared instant; no reflection comparison is possible. Chrome bumper/hubcap and windshield are incidental reflective/window surfaces, out of scope."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:04 — Car side-view mirror (driver's door, right edge of frame) is visible; it is a true mirror. Its face shows only bright sky/rearward desert scene; the subject leaning on the hood is not within its reflecting cone, which is geometrically correct for a rear-facing mirror.\",\n    \"0:00-0:04 — Subject (woman, arms crossed on hood) fully visible; her faint image on the windshield is a window reflection and is excluded from scope per instructions.\",\n    \"0:06 — Camera zooms in; side mirror exits frame; subject visible with arms crossed. No mirror-subject co-visibility.\",\n    \"0:08 — Close-up of subject, arms crossed, hair moving in wind; no true mirror in frame. No mirror-subject co-visibility.\",\n    \"Verification result: the only true mirror present (car side mirror) never shows the subject at any shared instant; no reflection comparison is possible. Chrome bumper/hubcap and windshield are incidental reflective/window surfaces, out of scope.\"\n  ],\n  \"findings\": []\n}"
+}

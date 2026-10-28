@@ -1,0 +1,60 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:38:26.477Z",
+  "latencyMs": 25090,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2618,
+    "total_tokens": 4012,
+    "cost": 0.010863,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010863,
+      "upstream_inference_prompt_cost": 0.0010455,
+      "upstream_inference_completions_cost": 0.0098175
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2250,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Kitchen with stove and sink on left counter, countertop microwave on right, opening to central hallway",
+    "00:02 - Central hallway featuring blue flower art piece, white exterior front door ahead, and bedroom doorway on right",
+    "00:04 - Traversal: woman walks from hallway into bedroom",
+    "00:05 - Bedroom space containing bed, chandelier, windows, and chairs placed at the footboard",
+    "00:07 - Traversal: woman exits bedroom back into hallway",
+    "00:09 - Hallway/kitchen space view shows over-the-range microwave mounted above stove on left counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "bedroom chairs",
+      "invariant_violated": "functional arrangement",
+      "description": "Two chairs are tucked directly against the footboard of the bed, facing into the footboard as though it were a dining table or desk.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen microwave",
+      "invariant_violated": "object persistence",
+      "description": "Upon exiting the bedroom back into the hallway, an over-the-range microwave appears mounted above the stove on the left counter, whereas at 00:00 the microwave was sitting on the opposite right countertop.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Kitchen with stove and sink on left counter, countertop microwave on right, opening to central hallway\",\n    \"00:02 - Central hallway featuring blue flower art piece, white exterior front door ahead, and bedroom doorway on right\",\n    \"00:04 - Traversal: woman walks from hallway into bedroom\",\n    \"00:05 - Bedroom space containing bed, chandelier, windows, and chairs placed at the footboard\",\n    \"00:07 - Traversal: woman exits bedroom back into hallway\",\n    \"00:09 - Hallway/kitchen space view shows over-the-range microwave mounted above stove on left counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"bedroom chairs\",\n      \"invariant_violated\": \"functional arrangement\",\n      \"description\": \"Two chairs are tucked directly against the footboard of the bed, facing into the footboard as though it were a dining table or desk.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"kitchen microwave\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"Upon exiting the bedroom back into the hallway, an over-the-range microwave appears mounted above the stove on the left counter, whereas at 00:00 the microwave was sitting on the opposite right countertop.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

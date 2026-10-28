@@ -1,0 +1,264 @@
+{
+  "video": "home-tour",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:28.618Z",
+  "latencyMs": 25331,
+  "usage": {
+    "prompt_tokens": 1920,
+    "completion_tokens": 3050,
+    "total_tokens": 4970,
+    "cost": 0.04044,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04044,
+      "upstream_inference_prompt_cost": 0.00384,
+      "upstream_inference_completions_cost": 0.0366
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1897,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|home-tour|baseline-generalist|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "framed picture (kitchen)",
+        "invariant_violated": "Temporal Consistency",
+        "description": "The image within the framed picture on the right wall shifts and changes shape, appearing to move, as the woman's shadow passes over it.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|home-tour|baseline-generalist|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "framed picture (kitchen)",
+        "invariant_violated": "Temporal Consistency",
+        "description": "As the woman walks back toward the kitchen, the framed picture visible through the doorway morphs significantly; the image becomes abstract and unrecognizable, and the frame distorts.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|home-tour|character-continuity|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Woman",
+        "invariant_violated": "Identity Continuity",
+        "description": "A large blue dangle earring is visible on her left ear when she turns her head, which was not present in the earlier profile view.",
+        "severity": "minor",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|home-tour|character-continuity|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Woman",
+        "invariant_violated": "Identity Continuity",
+        "description": "The dress suddenly features gathered, slightly puffed seams on the shoulders, and her hair appears noticeably curlier and shorter.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|home-tour|character-continuity|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:05",
+        "entity": "Woman",
+        "invariant_violated": "Identity Continuity",
+        "description": "The gathered seams on the dress shoulders disappear between cuts, reverting to smooth shoulders.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|home-tour|character-continuity|3",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Woman",
+        "invariant_violated": "Identity Continuity",
+        "description": "A distinct V-shaped seam or yoke appears on the upper back of the dress.",
+        "severity": "minor",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|home-tour|character-continuity|4",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "Woman",
+        "invariant_violated": "Identity Continuity",
+        "description": "The seam detail on the upper back of the dress changes from V-shaped to a straight horizontal line.",
+        "severity": "minor",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|home-tour|object-persistence-state|0",
+      "cls": "TP:HOME-1",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Framed picture (Blue Flower)",
+        "invariant_violated": "location & orientation",
+        "description": "When the subject first walks down the hallway, the blue flower picture is on the wall to her right. When she turns around and walks back, the picture is still on her right, meaning it has inexplicably moved to the opposite wall.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|home-tour|object-persistence-state|1",
+      "cls": "TP:HOME-1",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "Red kettle",
+        "invariant_violated": "identity & persistence",
+        "description": "A red kettle appears on the stove as the subject returns to the kitchen. It was not present on the stove when she initially walked past it at the beginning of the video.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|home-tour|object-persistence-state|2",
+      "cls": "TP:HOME-1",
+      "finding": {
+        "timestamp": "00:09",
+        "entity": "Microwave",
+        "invariant_violated": "location & orientation",
+        "description": "The microwave was originally resting on the right-hand kitchen counter. When the subject returns to the kitchen, the microwave is now mounted on the wall above the stove on the left side.",
+        "severity": "severe",
+        "confidence": 0.98
+      }
+    },
+    {
+      "key": "pro|home-tour|spatial-topology-occlusion|0",
+      "cls": "TP:HOME-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Scene layout and connectivity",
+        "invariant_violated": "Scene layout consistency",
+        "description": "When the woman turns around to exit the bedroom, the hallway she originally walked through has disappeared. The bedroom doorway now opens directly into the kitchen, which has also been repositioned. The spatial relationship between the rooms is completely altered.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|home-tour|spatial-topology-occlusion|1",
+      "cls": "TP:HOME-1",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Wall artwork",
+        "invariant_violated": "Fixed object positioning",
+        "description": "The framed picture of the blue flower, initially seen on the wall between the kitchen and the hallway, is now located on the wall to the left of the bedroom doorway as she exits.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "REJECT",
+      "reason": "The image within the frame does not morph or change shape; it simply darkens as the woman's shadow passes over it.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "REJECT",
+      "reason": "The picture in the background doorway does not morph significantly; it is just out of focus due to depth of field and motion blur.",
+      "innocent_explanation": "motion blur or compression smear (not morphing, duplication, or vanishing)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, the woman's left ear is visible and she has no earring. At 00:02, when she turns her head, a large blue dangle earring has inexplicably appeared on her left ear.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "At 00:03, as the woman enters the bedroom, the shoulders of her dress suddenly acquire gathered, puffed seams, and her hair becomes noticeably shorter and curlier compared to the previous shots.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "At 00:04, the dress has gathered seams on the shoulders. By 00:06, when the camera cuts to show her back, the shoulders have reverted to being completely smooth.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "At 00:06, as the woman turns around, a distinct V-shaped seam is visible on the upper back of her dress. This seam was not present in the opening shot.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "At 00:08, as she walks back toward the kitchen, the previously V-shaped seam on her upper back has changed into a straight horizontal line.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F8",
+      "verdict": "REJECT",
+      "reason": "The candidate mischaracterizes the scene. When she turns around at 00:07, the blue flower picture is on the left side of the screen (her left), not her right.",
+      "innocent_explanation": "the description mischaracterizes what actually happens",
+      "confidence": 0.95
+    },
+    {
+      "id": "F9",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, the stove on the left is clearly visible and empty. At 00:09, when the woman walks back into the kitchen, a red kettle has appeared on the stove.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F10",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, a microwave is sitting on the right-hand counter. At 00:09, when she re-enters the kitchen, a microwave is mounted on the wall above the stove on the left.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F11",
+      "verdict": "CONFIRM",
+      "reason": "At 00:01, the hallway continues past the kitchen. At 00:07, when she exits the bedroom, the hallway is gone, and the bedroom door opens directly into an entirely different kitchen layout.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F12",
+      "verdict": "CONFIRM",
+      "reason": "The blue flower picture, which was originally midway down the hallway (00:01), has teleported to the wall immediately to the left of the bedroom doorway at 00:07.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The image within the frame does not morph or change shape; it simply darkens as the woman's shadow passes over it.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The picture in the background doorway does not morph significantly; it is just out of focus due to depth of field and motion blur.\",\n      \"innocent_explanation\": \"motion blur or compression smear (not morphing, duplication, or vanishing)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, the woman's left ear is visible and she has no earring. At 00:02, when she turns her head, a large blue dangle earring has inexplicably appeared on her left ear.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:03, as the woman enters the bedroom, the shoulders of her dress suddenly acquire gathered, puffed seams, and her hair becomes noticeably shorter and curlier compared to the previous shots.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:04, the dress has gathered seams on the shoulders. By 00:06, when the camera cuts to show her back, the shoulders have reverted to being completely smooth.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:06, as the woman turns around, a distinct V-shaped seam is visible on the upper back of her dress. This seam was not present in the opening shot.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:08, as she walks back toward the kitchen, the previously V-shaped seam on her upper back has changed into a straight horizontal line.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The candidate mischaracterizes the scene. When she turns around at 00:07, the blue flower picture is on the left side of the screen (her left), not her right.\",\n      \"innocent_explanation\": \"the description mischaracterizes what actually happens\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, the stove on the left is clearly visible and empty. At 00:09, when the woman walks back into the kitchen, a red kettle has appeared on the stove.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F10\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, a microwave is sitting on the right-hand counter. At 00:09, when she re-enters the kitchen, a microwave is mounted on the wall above the stove on the left.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F11\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:01, the hallway continues past the kitchen. At 00:07, when she exits the bedroom, the hallway is gone, and the bedroom door opens directly into an entirely different kitchen layout.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F12\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The blue flower picture, which was originally midway down the hallway (00:01), has teleported to the wall immediately to the left of the bedroom doorway at 00:07.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:19:08.563Z",
+  "latencyMs": 150421,
+  "usage": {
+    "prompt_tokens": 5854,
+    "completion_tokens": 1615,
+    "total_tokens": 7469,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:02 — Phone screen large center text: blurry, appears as 'A7-42' (or '2742' pre-focus), too out-of-focus for confident reading",
+    "0:04-0:08 — Phone screen large center text: 'A7-42', sharpens progressively as phone is brought into focus",
+    "0:06-0:08 — Phone screen smaller text below main: 'A7-12', legible in sharpest frames",
+    "0:06-0:08 — Phone screen top-left status bar: 'A7-42', small text, legible in sharpest frames",
+    "0:06-0:08 — Phone screen top-center: two 'A' characters with small triangle symbol between them, consistent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:02 — Phone screen large center text: blurry, appears as 'A7-42' (or '2742' pre-focus), too out-of-focus for confident reading\",\n    \"0:04-0:08 — Phone screen large center text: 'A7-42', sharpens progressively as phone is brought into focus\",\n    \"0:06-0:08 — Phone screen smaller text below main: 'A7-12', legible in sharpest frames\",\n    \"0:06-0:08 — Phone screen top-left status bar: 'A7-42', small text, legible in sharpest frames\",\n    \"0:06-0:08 — Phone screen top-center: two 'A' characters with small triangle symbol between them, consistent\"\n  ],\n  \"findings\": []\n}"
+}

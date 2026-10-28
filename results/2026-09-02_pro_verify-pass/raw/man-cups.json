@@ -1,0 +1,207 @@
+{
+  "video": "man-cups",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:34.643Z",
+  "latencyMs": 26871,
+  "usage": {
+    "prompt_tokens": 1831,
+    "completion_tokens": 2865,
+    "total_tokens": 4696,
+    "cost": 0.038042,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038042,
+      "upstream_inference_prompt_cost": 0.003662,
+      "upstream_inference_completions_cost": 0.03438
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2025,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|man-cups|baseline-generalist|0",
+      "cls": "TP:CUPS-5",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "person's hand",
+        "invariant_violated": "Anatomy consistency",
+        "description": "The hand holding the coin on the left side of the screen clearly has at least six fingers, with multiple thumb-like digits visible.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|man-cups|causal-temporal-sequence|0",
+      "cls": "TP:CUPS-1",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "Coin on table",
+        "invariant_violated": "effect-without-cause",
+        "description": "A coin materializes on the table surface next to the leftmost cup and slides outwards. The person's hand is hovering above but does not perform any pushing or dropping action to cause this movement.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|man-cups|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Left arm/hands",
+        "invariant_violated": "limb mechanics",
+        "description": "As the camera pulls back, two distinct hands are seen emerging from the single left sleeve of the man's blue suit. One hand is holding a coin above the cup, while a second hand is resting near the rim. By 00:03, the upper hand holding the coin disappears completely, leaving only the lower hand.",
+        "severity": "severe",
+        "confidence": 0.98
+      }
+    },
+    {
+      "key": "pro|man-cups|object-persistence-state|0",
+      "cls": "TP:CUPS-3",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Coin (Middle Cup Top)",
+        "invariant_violated": "Identity & Persistence",
+        "description": "A coin is clearly resting horizontally across the opening of the middle cup. As the right hand drops a new coin into the cup, the resting coin completely vanishes without falling or being moved.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|man-cups|object-persistence-state|1",
+      "cls": "TP:CUPS-3",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "All Cups",
+        "invariant_violated": "Location & Orientation",
+        "description": "The three cups are initially spaced apart in a loose triangle formation. After a sudden change in camera perspective, the cups are instantly clustered tightly together in a row.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|man-cups|object-persistence-state|2",
+      "cls": "TP:CUPS-3",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Cups",
+        "invariant_violated": "Identity & Persistence",
+        "description": "Throughout the beginning of the video, there are exactly three cups. As the camera pans around the table at 00:06, a fourth cup appears in the row. By 00:08, the extra cup has vanished, leaving only three again.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|man-cups|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Tablecloth",
+        "invariant_violated": "scene layout",
+        "description": "The center of the tablecloth changes from a light green circular pattern to a solid red surface as the camera pulls back.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|man-cups|spatial-topology-occlusion|1",
+      "cls": "TP:CUPS-3",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Three red cups",
+        "invariant_violated": "scene layout",
+        "description": "The spatial arrangement of the three cups morphs from a triangular formation into a straight horizontal line as the viewpoint changes, without any physical manipulation.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|man-cups|spatial-topology-occlusion|2",
+      "cls": "TP:CUPS-3",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Coin on cup",
+        "invariant_violated": "scene layout",
+        "description": "The coin resting on top of the back-right cup vanishes entirely as the camera pans, without being moved or falling.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "REJECT",
+      "reason": "The hand on the left is distorted, but it does not clearly have six fingers or multiple thumbs. The description mischaracterizes the actual visual anomaly.",
+      "innocent_explanation": "mischaracterization",
+      "confidence": 0.9
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "At 00:04, a coin spontaneously appears on the red table surface to the left of the leftmost cup and slides outwards, without being placed or dropped by a hand.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "At 00:01, as the camera pulls back, the man's left sleeve is shown to have two completely separate hands emerging from it simultaneously: one holding a coin and one resting on the cup. The upper hand then melts away.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, a coin rests flat on top of the middle cup. At 00:01, as another hand drops a coin into that cup, the resting coin completely disappears in plain sight without falling or being moved.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "The cups start in a triangular layout at 00:00, but as the camera pulls back between 00:01 and 00:03, they morph into a straight horizontal row without anyone touching them.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "The number of cups remains at three throughout the camera pan from 00:06 to 00:09; a fourth cup never appears.",
+      "innocent_explanation": "mischaracterization",
+      "confidence": 0.99
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, the cups are sitting on a light green patterned circular area of the tablecloth. As the camera pulls back, this green area morphs and vanishes, leaving the cups resting on the solid red portion of the cloth.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F8",
+      "verdict": "CONFIRM",
+      "reason": "This describes the same anomaly as F5. The spatial arrangement of the cups clearly morphs from a triangle to a straight line as the camera moves.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F9",
+      "verdict": "REJECT",
+      "reason": "There is no coin resting on top of the back-right cup at the beginning of the video, so none vanishes from there.",
+      "innocent_explanation": "mischaracterization",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The hand on the left is distorted, but it does not clearly have six fingers or multiple thumbs. The description mischaracterizes the actual visual anomaly.\",\n      \"innocent_explanation\": \"mischaracterization\",\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:04, a coin spontaneously appears on the red table surface to the left of the leftmost cup and slides outwards, without being placed or dropped by a hand.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:01, as the camera pulls back, the man's left sleeve is shown to have two completely separate hands emerging from it simultaneously: one holding a coin and one resting on the cup. The upper hand then melts away.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, a coin rests flat on top of the middle cup. At 00:01, as another hand drops a coin into that cup, the resting coin completely disappears in plain sight without falling or being moved.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The cups start in a triangular layout at 00:00, but as the camera pulls back between 00:01 and 00:03, they morph into a straight horizontal row without anyone touching them.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The number of cups remains at three throughout the camera pan from 00:06 to 00:09; a fourth cup never appears.\",\n      \"innocent_explanation\": \"mischaracterization\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, the cups are sitting on a light green patterned circular area of the tablecloth. As the camera pulls back, this green area morphs and vanishes, leaving the cups resting on the solid red portion of the cloth.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"This describes the same anomaly as F5. The spatial arrangement of the cups clearly morphs from a triangle to a straight line as the camera moves.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"There is no coin resting on top of the back-right cup at the beginning of the video, so none vanishes from there.\",\n      \"innocent_explanation\": \"mischaracterization\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

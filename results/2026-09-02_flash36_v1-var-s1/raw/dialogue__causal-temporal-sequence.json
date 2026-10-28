@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:09.298Z",
+  "latencyMs": 7436,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 516,
+    "total_tokens": 1941,
+    "cost": 0.00300375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00300375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.001935
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 432,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man speaking | standing facing camera | turns left and walks toward wooden door | speech and lip sync aligned; continuous turn at 00:06",
+    "man knocking on door | hand raised near door | hand strikes door three times | physical contact precedes knocking sound at 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man speaking | standing facing camera | turns left and walks toward wooden door | speech and lip sync aligned; continuous turn at 00:06\",\n    \"man knocking on door | hand raised near door | hand strikes door three times | physical contact precedes knocking sound at 00:09\"\n  ],\n  \"findings\": []\n}"
+}

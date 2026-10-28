@@ -1,0 +1,44 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:20:43.161Z",
+  "latencyMs": 362163,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 14595,
+    "total_tokens": 20822,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen (stove, range hood, window with red kettle, upper cabinets, microwave, tiled backsplash) | sits on west side of hallway, left of walking path | unchanged | seen from inside at 0:00, from hallway at 0:02",
+    "Hallway | runs away from kitchen; framed pictures on east (right) wall; white glazed front door at far north/west end | unchanged | consistent across 0:00-0:04",
+    "Botanical print picture | hangs on east wall of hallway, just south of bedroom doorway | unchanged | on right side walking north (0:02-0:04), correctly on left side when viewed facing back west at 0:08",
+    "Front door (white, glazed) | far end of hallway, west side | unchanged | seen head-on at 0:02, passed on left at 0:04, visible through bedroom doorway at 0:08",
+    "Bedroom doorway | east wall of hallway, north of front door | unchanged | approached at ~0:04, entered, then faced again at 0:08 with hallway and front door correctly visible through it",
+    "Bedroom interior (bed with white bedding and colorful art on far wall, curtained window on north wall, nightstand with lamp, wooden chair, chandelier) | on entry at 0:06 window is left, bed ahead | at 0:08 after ~180° turn window is right, print left, doorway ahead | consistent reversal, no layout shift",
+    "Woman (teal top, blonde updo) | walking kitchen -> hallway -> bedroom | turns and faces doorway at 0:08 | path and side-emergence geometry all compatible"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen (stove, range hood, window with red kettle, upper cabinets, microwave, tiled backsplash) | sits on west side of hallway, left of walking path | unchanged | seen from inside at 0:00, from hallway at 0:02\",\n    \"Hallway | runs away from kitchen; framed pictures on east (right) wall; white glazed front door at far north/west end | unchanged | consistent across 0:00-0:04\",\n    \"Botanical print picture | hangs on east wall of hallway, just south of bedroom doorway | unchanged | on right side walking north (0:02-0:04), correctly on left side when viewed facing back west at 0:08\",\n    \"Front door (white, glazed) | far end of hallway, west side | unchanged | seen head-on at 0:02, passed on left at 0:04, visible through bedroom doorway at 0:08\",\n    \"Bedroom doorway | east wall of hallway, north of front door | unchanged | approached at ~0:04, entered, then faced again at 0:08 with hallway and front door correctly visible through it\",\n    \"Bedroom interior (bed with white bedding and colorful art on far wall, curtained window on north wall, nightstand with lamp, wooden chair, chandelier) | on entry at 0:06 window is left, bed ahead | at 0:08 after ~180° turn window is right, print left, doorway ahead | consistent reversal, no layout shift\",\n    \"Woman (teal top, blonde updo) | walking kitchen -> hallway -> bedroom | turns and faces doorway at 0:08 | path and side-emergence geometry all compatible\"\n  ],\n  \"findings\": []\n}"
+}

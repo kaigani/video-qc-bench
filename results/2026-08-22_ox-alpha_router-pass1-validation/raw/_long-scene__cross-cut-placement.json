@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:39:49.560Z",
+  "latencyMs": 630976,
+  "usage": {
+    "prompt_tokens": 34923,
+    "completion_tokens": 23097,
+    "total_tokens": 58020,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1 | 00:00-00:10 | EXT wide: diner facade at dusk, WHITE semi tractor parked left with engine steam | no persons discernible",
+    "shot 2 | 00:12-00:18 | INT, customer-side counter framing (stools fg, kitchen pass window bg, coffee unit right) | waitress alone, wiping counter right-to-center",
+    "shot 3 | 00:20-00:28 | INT wide from booth side; anchors: pass window, OPEN-sign front windows, stool row | waitress behind counter far end; man enters front-left door 00:22, sits near-end stool 00:26; waitress pours coffee; dark shape in pass glass at 00:20 assessed as reflection of arriving man (benign)",
+    "shot 4 | 00:28-00:33 | CU coffee pour into mug | man's hands counter-left, waitress's arm with carafe right",
+    "shot 5 | 00:34-00:36 | CU plate: cornbread + fried egg, steam | no persons",
+    "shot 6 | 00:38-00:44 | INT wide booth side | man alone at counter with mug + food plate; waitress off-frame (far end/kitchen plausible)",
+    "shot 7 | 00:46-00:52 | reverse angle from behind counter | waitress foreground wiping; man background seated near front door/EXIT sign",
+    "shot 8 | 00:54-00:58 | customer-side counter framing, counter empty | no persons; warm dawn light through left window = implied elapsed time",
+    "shot 9 | 01:00-01:10 | INT wide booth side | man seated with mug; waitress at far end, lifts plate 01:08, walks toward him",
+    "shot 10 | 01:11-01:19 | medium two-shot at counter | waitress places plate before man 01:15",
+    "shot 11 | 01:21-01:27 | INT wide | waitress behind counter, then rounds counter's south end to customer side, beside man by 01:25",
+    "shot 12 | 01:29-01:37 | close two-shot, both holding mugs facing front windows, sunrise behind | man screen-right, waitress screen-left (sides flipped by ~180-degree reversal, consistent with shot 11)",
+    "shot 13 | 01:37-01:41 | dissolve to CU | hand places folded $100 bill on counter beside mug",
+    "shot 14 | 01:43-01:47 | EXT through window | man walks to GREEN box truck, reaches door",
+    "shot 15 | 01:49-01:51 | INT behind waitress | she watches man at truck through glass; duplicate figures are window reflections (benign)",
+    "shot 16 | 01:53-01:59 | INT wide, golden hour | waitress clears counter, walks to kitchen at back; diner otherwise empty"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "man's truck (arrival vehicle vs departure vehicle)",
+      "invariant_violated": "vehicle/prop continuity across cuts",
+      "description": "The establishing exterior (00:00-00:10) shows a white/light conventional semi tractor with exhaust stack and engine steam parked at the diner as the man arrives; the departure exterior (01:43-01:47) shows the same man walking to a dark-green box truck with green cargo body and white stripe. Cab color and vehicle configuration differ with no elapsed-time or narrative justification for a vehicle swap between arrival and departure.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1 | 00:00-00:10 | EXT wide: diner facade at dusk, WHITE semi tractor parked left with engine steam | no persons discernible\",\n    \"shot 2 | 00:12-00:18 | INT, customer-side counter framing (stools fg, kitchen pass window bg, coffee unit right) | waitress alone, wiping counter right-to-center\",\n    \"shot 3 | 00:20-00:28 | INT wide from booth side; anchors: pass window, OPEN-sign front windows, stool row | waitress behind counter far end; man enters front-left door 00:22, sits near-end stool 00:26; waitress pours coffee; dark shape in pass glass at 00:20 assessed as reflection of arriving man (benign)\",\n    \"shot 4 | 00:28-00:33 | CU coffee pour into mug | man's hands counter-left, waitress's arm with carafe right\",\n    \"shot 5 | 00:34-00:36 | CU plate: cornbread + fried egg, steam | no persons\",\n    \"shot 6 | 00:38-00:44 | INT wide booth side | man alone at counter with mug + food plate; waitress off-frame (far end/kitchen plausible)\",\n    \"shot 7 | 00:46-00:52 | reverse angle from behind counter | waitress foreground wiping; man background seated near front door/EXIT sign\",\n    \"shot 8 | 00:54-00:58 | customer-side counter framing, counter empty | no persons; warm dawn light through left window = implied elapsed time\",\n    \"shot 9 | 01:00-01:10 | INT wide booth side | man seated with mug; waitress at far end, lifts plate 01:08, walks toward him\",\n    \"shot 10 | 01:11-01:19 | medium two-shot at counter | waitress places plate before man 01:15\",\n    \"shot 11 | 01:21-01:27 | INT wide | waitress behind counter, then rounds counter's south end to customer side, beside man by 01:25\",\n    \"shot 12 | 01:29-01:37 | close two-shot, both holding mugs facing front windows, sunrise behind | man screen-right, waitress screen-left (sides flipped by ~180-degree reversal, consistent with shot 11)\",\n    \"shot 13 | 01:37-01:41 | dissolve to CU | hand places folded $100 bill on counter beside mug\",\n    \"shot 14 | 01:43-01:47 | EXT through window | man walks to GREEN box truck, reaches door\",\n    \"shot 15 | 01:49-01:51 | INT behind waitress | she watches man at truck through glass; duplicate figures are window reflections (benign)\",\n    \"shot 16 | 01:53-01:59 | INT wide, golden hour | waitress clears counter, walks to kitchen at back; diner otherwise empty\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"man's truck (arrival vehicle vs departure vehicle)\",\n      \"invariant_violated\": \"vehicle/prop continuity across cuts\",\n      \"description\": \"The establishing exterior (00:00-00:10) shows a white/light conventional semi tractor with exhaust stack and engine steam parked at the diner as the man arrives; the departure exterior (01:43-01:47) shows the same man walking to a dark-green box truck with green cargo body and white stripe. Cab color and vehicle configuration differ with no elapsed-time or narrative justification for a vehicle swap between arrival and departure.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

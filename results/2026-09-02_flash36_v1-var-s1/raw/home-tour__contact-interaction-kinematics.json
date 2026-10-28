@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__contact-interaction-kinematics",
+  "video": "home-tour.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:32.382Z",
+  "latencyMs": 9624,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 777,
+    "total_tokens": 2229,
+    "cost": 0.00400275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00400275,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00291375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 694,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | standing and walking near kitchen area, feet contacting floor | walking back through hallway doorway, feet contacting floor | walked through hallway into bedroom, turned in room, walked back without touching surrounding objects or clipping walls",
+    "floor | supporting woman | supporting woman | maintained continuous ground support across all steps"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | standing and walking near kitchen area, feet contacting floor | walking back through hallway doorway, feet contacting floor | walked through hallway into bedroom, turned in room, walked back without touching surrounding objects or clipping walls\",\n    \"floor | supporting woman | supporting woman | maintained continuous ground support across all steps\"\n  ],\n  \"findings\": []\n}"
+}

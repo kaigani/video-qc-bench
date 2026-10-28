@@ -1,0 +1,48 @@
+{
+  "key": "dialogue__audio-visual-claims",
+  "video": "dialogue.mp4",
+  "role": "audio-visual-claims",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:17:17.420Z",
+  "latencyMs": 9190,
+  "usage": {
+    "prompt_tokens": 1296,
+    "completion_tokens": 783,
+    "total_tokens": 2079,
+    "cost": 0.011988,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011988,
+      "upstream_inference_prompt_cost": 0.002592,
+      "upstream_inference_completions_cost": 0.009396
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 581,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Speaker claims 'The red door is locked'. Visuals show brown wooden doors.",
+    "00:02-00:06: Speaker claims 'The blue door is open'. Visuals show brown wooden doors, and the doors are closed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Doors in the scene",
+      "invariant_violated": "Audio-Visual Contradiction",
+      "description": "The speaker explicitly describes a 'red door' and a 'blue door', but the visible doors in the scene are brown wood. Additionally, he states the blue door is 'open', but the visible doors are closed.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Speaker claims 'The red door is locked'. Visuals show brown wooden doors.\",\n    \"00:02-00:06: Speaker claims 'The blue door is open'. Visuals show brown wooden doors, and the doors are closed.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Doors in the scene\",\n      \"invariant_violated\": \"Audio-Visual Contradiction\",\n      \"description\": \"The speaker explicitly describes a 'red door' and a 'blue door', but the visible doors in the scene are brown wood. Additionally, he states the blue door is 'open', but the visible doors are closed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

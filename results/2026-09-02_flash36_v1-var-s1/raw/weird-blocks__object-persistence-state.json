@@ -1,0 +1,95 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:02.473Z",
+  "latencyMs": 25531,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 4864,
+    "total_tokens": 6308,
+    "cost": 0.019323,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019323,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.01824
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3782,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "block_1 | green block with '2' on table at left | blue block with '2' at pos 1 | changed color from green to blue at 00:01 without visible manipulation",
+    "block_2 | blue block with '3' placed at pos 2 at 00:01 | blue block with '3' at pos 2 | remains stable at pos 2",
+    "block_3 | green block with '2' at pos 3 | green block with '2' at pos 3 | changed face number to '3' at 00:02, then reverted back to '2' at 00:03",
+    "block_4 | green block with '3' placed at pos 4 at 00:02 | yellow block with '2' at pos 4 | changed color and number from green '3' to yellow '2' at 00:03",
+    "block_5 | green block with '3' placed at pos 5 at 00:03 | yellow block with '2' at pos 5 | changed color and number from green '3' to yellow '2' at 00:04",
+    "block_6 | blue block with '3' placed at pos 6 at 00:04 | blue block with '3' at pos 6 | remains stable",
+    "block_7 | green block with '3' placed at pos 7 at 00:05 | green block with '5' at pos 7 | number on block spontaneously changed from '3' to '5' at 00:06",
+    "block_8 | green block with '3' placed at pos 8 at 00:06 | green block with '2' at pos 8 | number on block spontaneously changed from '3' to '2' at 00:07",
+    "block_9 | green block with '3' placed at pos 9 at 00:07 | green block with '6' at pos 9 | number on block spontaneously changed from '3' to '6' at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "block_1 (far left block)",
+      "invariant_violated": "unexplained physical state change",
+      "description": "The leftmost block spontaneously changes color from green to blue between 00:00 and 00:01 while the hand is inserting another block.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "block_3 (3rd block from left)",
+      "invariant_violated": "unexplained physical state change",
+      "description": "The 3rd block spontaneously changes its face number from '2' to '3' without being rotated or replaced by hand.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "block_3 and block_4",
+      "invariant_violated": "unexplained state change / reversal",
+      "description": "Block 3 reverts from number '3' back to '2', and block 4 changes color and number from green '3' to yellow '2' without visual manipulation.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "block_7 (7th block)",
+      "invariant_violated": "unexplained physical state change",
+      "description": "The 7th block spontaneously changes its displayed digit from '3' to '5'.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "block_8 (8th block)",
+      "invariant_violated": "unexplained physical state change",
+      "description": "The 8th block spontaneously changes its displayed digit from '3' to '2'.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "block_9 (9th block)",
+      "invariant_violated": "unexplained physical state change",
+      "description": "The 9th block spontaneously changes its displayed digit from '3' to '6'.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"block_1 | green block with '2' on table at left | blue block with '2' at pos 1 | changed color from green to blue at 00:01 without visible manipulation\",\n    \"block_2 | blue block with '3' placed at pos 2 at 00:01 | blue block with '3' at pos 2 | remains stable at pos 2\",\n    \"block_3 | green block with '2' at pos 3 | green block with '2' at pos 3 | changed face number to '3' at 00:02, then reverted back to '2' at 00:03\",\n    \"block_4 | green block with '3' placed at pos 4 at 00:02 | yellow block with '2' at pos 4 | changed color and number from green '3' to yellow '2' at 00:03\",\n    \"block_5 | green block with '3' placed at pos 5 at 00:03 | yellow block with '2' at pos 5 | changed color and number from green '3' to yellow '2' at 00:04\",\n    \"block_6 | blue block with '3' placed at pos 6 at 00:04 | blue block with '3' at pos 6 | remains stable\",\n    \"block_7 | green block with '3' placed at pos 7 at 00:05 | green block with '5' at pos 7 | number on block spontaneously changed from '3' to '5' at 00:06\",\n    \"block_8 | green block with '3' placed at pos 8 at 00:06 | green block with '2' at pos 8 | number on block spontaneously changed from '3' to '2' at 00:07\",\n    \"block_9 | green block with '3' placed at pos 9 at 00:07 | green block with '6' at pos 9 | number on block spontaneously changed from '3' to '6' at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"block_1 (far left block)\",\n      \"invariant_violated\": \"unexplained physical state change\",\n      \"description\": \"The leftmost block spontaneously changes color from green to blue between 00:00 and 00:01 while the hand is inserting another block.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"block_3 (3rd block from left)\",\n      \"invariant_violated\": \"unexplained physical state change\",\n      \"description\": \"The 3rd block spontaneously changes its face number from '2' to '3' without being rotated or replaced by hand.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"block_3 and block_4\",\n      \"invariant_violated\": \"unexplained state change / reversal\",\n      \"description\": \"Block 3 reverts from number '3' back to '2', and block 4 changes color and number from green '3' to yellow '2' without visual manipulation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"block_7 (7th block)\",\n      \"invariant_violated\": \"unexplained physical state change\",\n      \"description\": \"The 7th block spontaneously changes its displayed digit from '3' to '5'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"block_8 (8th block)\",\n      \"invariant_violated\": \"unexplained physical state change\",\n      \"description\": \"The 8th block spontaneously changes its displayed digit from '3' to '2'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"block_9 (9th block)\",\n      \"invariant_violated\": \"unexplained physical state change\",\n      \"description\": \"The 9th block spontaneously changes its displayed digit from '3' to '6'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

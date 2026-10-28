@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:13:28.108Z",
+  "latencyMs": 184501,
+  "usage": {
+    "prompt_tokens": 5854,
+    "completion_tokens": 7887,
+    "total_tokens": 13741,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — left green cube, digit '2', large and legible; hand is gripping this cube (consistent with a swap/removal action)",
+    "00:00 — right green cube, digit '2', legible; partial dark glyph on its right edge is cut off by the cube edge/angle, not fully legible",
+    "00:02 — leftmost cube now blue, digit '2' legible (same table position as the green '2' at 00:00; hand was manipulating that cube, consistent with it being exchanged)",
+    "00:02-00:08 — second cube (blue), digit '3', legible and identical at 00:02, 00:04, 00:06, 00:08",
+    "00:02-00:08 — third cube (green), digit '2', legible and identical across all frames where sharp",
+    "00:04-00:08 — fourth cube (orange), digit '2', motion-blurred at 00:04 during placement, sharp and identical at 00:06 and 00:08",
+    "00:06-00:08 — fifth cube (light blue), digit '3', legible and identical at 00:06 and 00:08",
+    "00:06 — sixth cube (green) mid-placement, heavily motion-blurred; only a partial '5'-like shape discernible, not judged for legibility",
+    "00:08 — sixth cube (green) now settled, digit '5', sharp and legible",
+    "00:08 — seventh cube (green), digit '2', sharp and legible",
+    "00:08 — eighth cube (blue) mid-placement, motion-blurred with only a partial glyph visible; not legible, not judged"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — left green cube, digit '2', large and legible; hand is gripping this cube (consistent with a swap/removal action)\",\n    \"00:00 — right green cube, digit '2', legible; partial dark glyph on its right edge is cut off by the cube edge/angle, not fully legible\",\n    \"00:02 — leftmost cube now blue, digit '2' legible (same table position as the green '2' at 00:00; hand was manipulating that cube, consistent with it being exchanged)\",\n    \"00:02-00:08 — second cube (blue), digit '3', legible and identical at 00:02, 00:04, 00:06, 00:08\",\n    \"00:02-00:08 — third cube (green), digit '2', legible and identical across all frames where sharp\",\n    \"00:04-00:08 — fourth cube (orange), digit '2', motion-blurred at 00:04 during placement, sharp and identical at 00:06 and 00:08\",\n    \"00:06-00:08 — fifth cube (light blue), digit '3', legible and identical at 00:06 and 00:08\",\n    \"00:06 — sixth cube (green) mid-placement, heavily motion-blurred; only a partial '5'-like shape discernible, not judged for legibility\",\n    \"00:08 — sixth cube (green) now settled, digit '5', sharp and legible\",\n    \"00:08 — seventh cube (green), digit '2', sharp and legible\",\n    \"00:08 — eighth cube (blue) mid-placement, motion-blurred with only a partial glyph visible; not legible, not judged\"\n  ],\n  \"findings\": []\n}"
+}

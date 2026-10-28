@@ -1,0 +1,59 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:15.740Z",
+  "latencyMs": 15486,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1484,
+    "total_tokens": 2902,
+    "cost": 0.0066285,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0066285,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.005565
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1156,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Small glass container holds green olives; large jar is empty.",
+    "00:01 - Green olives are poured from small container into large jar; dark purple olives magically appear during the pour.",
+    "00:03 - Large jar contains 14 visible olives (mix of green and dark purple).",
+    "00:06 - Small container is filled with green olives.",
+    "00:07 - Green olives poured from small container into large jar transform/mix into green and dark purple olives mid-fall."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "unexplained_kind_transformation",
+      "description": "Green olives poured from the small glass container transform into dark purple olives mid-air as they drop into the large jar without any visible mechanism.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives",
+      "invariant_violated": "unexplained_kind_transformation",
+      "description": "Small container filled exclusively with green olives dispenses both green and dark purple olives when poured into the jar.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Small glass container holds green olives; large jar is empty.\",\n    \"00:01 - Green olives are poured from small container into large jar; dark purple olives magically appear during the pour.\",\n    \"00:03 - Large jar contains 14 visible olives (mix of green and dark purple).\",\n    \"00:06 - Small container is filled with green olives.\",\n    \"00:07 - Green olives poured from small container into large jar transform/mix into green and dark purple olives mid-fall.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"unexplained_kind_transformation\",\n      \"description\": \"Green olives poured from the small glass container transform into dark purple olives mid-air as they drop into the large jar without any visible mechanism.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"unexplained_kind_transformation\",\n      \"description\": \"Small container filled exclusively with green olives dispenses both green and dark purple olives when poured into the jar.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

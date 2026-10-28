@@ -1,0 +1,131 @@
+{
+  "video": "dialogue",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:07.749Z",
+  "latencyMs": 19970,
+  "usage": {
+    "prompt_tokens": 1668,
+    "completion_tokens": 2002,
+    "total_tokens": 3670,
+    "cost": 0.02736,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02736,
+      "upstream_inference_prompt_cost": 0.003336,
+      "upstream_inference_completions_cost": 0.024024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1533,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|dialogue|baseline-generalist|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "blue shirt",
+        "invariant_violated": "Spatial Continuity",
+        "description": "In the initial shot, the blue shirt is hanging on the left side of the room, while the framed picture is on the right side. When the camera angle changes as the man turns, the blue shirt is suddenly hanging on the right side of the screen, directly next to the framed picture.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|dialogue|baseline-generalist|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "intercom panel",
+        "invariant_violated": "Object Appearance",
+        "description": "A brass intercom panel suddenly appears on the wall to the left of the door when the camera angle changes, which was not visible in the initial establishing shot of that area.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|dialogue|object-persistence-state|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Blue jacket",
+        "invariant_violated": "location & orientation",
+        "description": "In the first shot, the blue jacket is hanging on a hook to the left of the wooden doors. After the camera cut, the jacket is suddenly hanging on a different hook on the right side of the room, immediately next to the framed picture.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|dialogue|object-persistence-state|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Brass plate",
+        "invariant_violated": "identity & persistence",
+        "description": "The small brass plate that was on the wall to the left of the framed picture in the first shot vanishes completely after the cut, with its approximate location now occupied by the blue jacket.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|dialogue|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Scene layout and background objects",
+        "invariant_violated": "Scene layout consistency",
+        "description": "Upon the camera cut when the man turns, the entire geometry of the room changes. The blue garment (previously on the viewer's left) and the framed picture and brass fixture (previously on the viewer's right) are now all located on the wall behind the man. The doors he faces were not geometrically possible given the first shot's layout.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "After the camera cut at 00:07, the blue garment that was previously on the left side of the door is now hanging on the right side, directly next to the framed picture.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "In the initial shot, the area to the left of the door has a wooden panel with a jacket. After the cut, that same area to the left of the door has changed into a green wall with an intercom panel and light switch.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "The blue jacket moves from the left side of the doors in the first shot to the right side of the doors in the second shot, hanging next to the framed picture.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "The brass plate on the green wall to the left of the framed picture disappears after the cut, and that space is replaced by a wooden panel with the blue jacket.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "REJECT",
+      "reason": "The description claims the objects are now on the wall 'behind the man', but in the second shot, the camera is behind the man and the objects are on the wall he is facing.",
+      "innocent_explanation": "The description mischaracterizes what actually happens.",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"After the camera cut at 00:07, the blue garment that was previously on the left side of the door is now hanging on the right side, directly next to the framed picture.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"In the initial shot, the area to the left of the door has a wooden panel with a jacket. After the cut, that same area to the left of the door has changed into a green wall with an intercom panel and light switch.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The blue jacket moves from the left side of the doors in the first shot to the right side of the doors in the second shot, hanging next to the framed picture.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The brass plate on the green wall to the left of the framed picture disappears after the cut, and that space is replaced by a wooden panel with the blue jacket.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The description claims the objects are now on the wall 'behind the man', but in the second shot, the camera is behind the man and the objects are on the wall he is facing.\",\n      \"innocent_explanation\": \"The description mischaracterizes what actually happens.\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

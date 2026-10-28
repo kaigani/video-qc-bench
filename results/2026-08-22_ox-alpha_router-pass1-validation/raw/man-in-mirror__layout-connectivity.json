@@ -1,0 +1,43 @@
+{
+  "key": "man-in-mirror__layout-connectivity",
+  "video": "man-in-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:32:18.454Z",
+  "latencyMs": 353963,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 12257,
+    "total_tokens": 18125,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Bathroom interior: man in white shirt shaving at a wall-mounted framed mirror (0:00-0:08); camera holds a static over-the-shoulder position behind him",
+    "Mirror reflection (the only 'opening' showing another view) displays the space behind the camera: a closed dark-wood door with brass doorknob on the reflection's left, white door trim and a wall switch plate at center, and a wooden shelf cabinet holding toiletry bottles on the reflection's right",
+    "Door behind camera: remains fully closed in every frame (0:00, 0:02, 0:04, 0:06, 0:08); doorknob, trim, switch plate, and shelf/bottle arrangement are position-stable across all frames",
+    "Traversals: none — the subject never leaves the mirror station, and no person enters or exits through the reflected door at any point",
+    "Reflection-vs-direct consistency: razor position matches between the direct over-shoulder view and the mirror image at each sampled moment (upper lip/chin 0:00, hairline 0:02-0:04, chin 0:06, cheek 0:08); shirt and grooming state match",
+    "Functional arrangement: mirror over implied sink station, toiletry shelf within the room, light switch on wall by door frame — all plausible for a bathroom; no fixtures oriented to serve the wrong surface"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Bathroom interior: man in white shirt shaving at a wall-mounted framed mirror (0:00-0:08); camera holds a static over-the-shoulder position behind him\",\n    \"Mirror reflection (the only 'opening' showing another view) displays the space behind the camera: a closed dark-wood door with brass doorknob on the reflection's left, white door trim and a wall switch plate at center, and a wooden shelf cabinet holding toiletry bottles on the reflection's right\",\n    \"Door behind camera: remains fully closed in every frame (0:00, 0:02, 0:04, 0:06, 0:08); doorknob, trim, switch plate, and shelf/bottle arrangement are position-stable across all frames\",\n    \"Traversals: none — the subject never leaves the mirror station, and no person enters or exits through the reflected door at any point\",\n    \"Reflection-vs-direct consistency: razor position matches between the direct over-shoulder view and the mirror image at each sampled moment (upper lip/chin 0:00, hairline 0:02-0:04, chin 0:06, cheek 0:08); shirt and grooming state match\",\n    \"Functional arrangement: mirror over implied sink station, toiletry shelf within the room, light switch on wall by door frame — all plausible for a bathroom; no fixtures oriented to serve the wrong surface\"\n  ],\n  \"findings\": []\n}"
+}

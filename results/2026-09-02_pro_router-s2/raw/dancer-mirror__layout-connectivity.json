@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__layout-connectivity",
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:44:11.957Z",
+  "latencyMs": 28065,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 3102,
+    "total_tokens": 4496,
+    "cost": 0.040012,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.040012,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.037224
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2951,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dance studio interior space",
+    "large mirror fixture on wall",
+    "reflected interior space"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "mirror reflection",
+      "invariant_violated": "fixture physical consistency",
+      "description": "The mirror fails to accurately reflect the person in the room. The real person lowers her left hand and places it behind her back, while the reflection simultaneously lowers its left hand and places it in front of its thigh.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dance studio interior space\",\n    \"large mirror fixture on wall\",\n    \"reflected interior space\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"fixture physical consistency\",\n      \"description\": \"The mirror fails to accurately reflect the person in the room. The real person lowers her left hand and places it behind her back, while the reflection simultaneously lowers its left hand and places it in front of its thigh.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

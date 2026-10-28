@@ -1,0 +1,66 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:42:51.720Z",
+  "latencyMs": 743128,
+  "usage": {
+    "prompt_tokens": 34896,
+    "completion_tokens": 29136,
+    "total_tokens": 64032,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 exterior establishing shot: single-story roadside diner; front facade has dining windows (left/west), a central double glass door, and kitchen windows (right/east) with a lit OPEN neon sign; a white semi tractor with a tall trailer (reefer unit venting smoke) idles at the west end of the lot",
+    "00:12-00:19 interior: waitress wipes the lunch counter; warm-lit kitchen pass-through behind her; coffee station adjacent; red stools on the dining side",
+    "00:20-00:28 interior wide: booths line the window wall with the OPEN sign visible through the glass; counter with a row of stools opposite; kitchen pass-through at the back near the entrance; a man enters and walks to the counter",
+    "00:30-00:36 close-ups: coffee poured into a mug on the counter; breakfast plate served",
+    "00:38-00:44 man seated at the counter facing the kitchen, front windows with OPEN sign behind him",
+    "00:46-00:52 reverse angle from the service side: man at counter; a back door with a red EXIT sign and windows visible on the far dining wall (establishes a secondary exit)",
+    "00:54-01:00 waitress steps into the kitchen; pass-through view goes dim",
+    "01:02-01:10 dawn wide shot: road traffic and a house across the street visible through the booth windows along with the OPEN sign; man still at counter",
+    "01:11-01:28 waitress serves, then leans on the counter talking with the man",
+    "01:29-01:37 two-shot at the counter, sunrise visible through the front windows behind them",
+    "01:39-01:41 man lays folded cash on the counter beside his mug",
+    "01:43-01:51 man exits through the front door and walks to a dark-green single-unit box truck; waitress watches through the window; final wide shows the emptied diner"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "parked vehicle seen through the front window / lot exterior",
+      "invariant_violated": "view through an opening must match the established far side",
+      "description": "At 00:00-00:10 the vehicle parked outside is a white semi tractor pulling a tall trailer with a smoking reefer unit, positioned at the west edge of the lot. At 01:43-01:47, within the same continuous scene (no time skip: lighting progresses naturally from night to sunrise and the same two characters continue their actions), the man exits the front door and walks directly to a dark-green single-unit box truck with a chrome stack, parked closer to the door. The exterior visible through the front opening does not match the established exterior; the rig the driver walks to as his own is a different, unexplained vehicle.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:02",
+      "entity": "front window bearing the OPEN neon sign",
+      "invariant_violated": "far side of an opening must be consistent from both sides",
+      "description": "From outside (00:00-00:10) the OPEN-sign window sits right/east of the central entrance and shows the kitchen behind it (stainless line, ventilation hood, warm equipment light). From inside (00:20, 01:02, 01:53) the same neon OPEN sign hangs in the windows directly above the dining booths, while the kitchen pass-through instead sits beside the entrance door. The same opening therefore reveals a kitchen from outside but dining booths from inside, making the implied floor plan contradictory about what occupies the east frontage.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 exterior establishing shot: single-story roadside diner; front facade has dining windows (left/west), a central double glass door, and kitchen windows (right/east) with a lit OPEN neon sign; a white semi tractor with a tall trailer (reefer unit venting smoke) idles at the west end of the lot\",\n    \"00:12-00:19 interior: waitress wipes the lunch counter; warm-lit kitchen pass-through behind her; coffee station adjacent; red stools on the dining side\",\n    \"00:20-00:28 interior wide: booths line the window wall with the OPEN sign visible through the glass; counter with a row of stools opposite; kitchen pass-through at the back near the entrance; a man enters and walks to the counter\",\n    \"00:30-00:36 close-ups: coffee poured into a mug on the counter; breakfast plate served\",\n    \"00:38-00:44 man seated at the counter facing the kitchen, front windows with OPEN sign behind him\",\n    \"00:46-00:52 reverse angle from the service side: man at counter; a back door with a red EXIT sign and windows visible on the far dining wall (establishes a secondary exit)\",\n    \"00:54-01:00 waitress steps into the kitchen; pass-through view goes dim\",\n    \"01:02-01:10 dawn wide shot: road traffic and a house across the street visible through the booth windows along with the OPEN sign; man still at counter\",\n    \"01:11-01:28 waitress serves, then leans on the counter talking with the man\",\n    \"01:29-01:37 two-shot at the counter, sunrise visible through the front windows behind them\",\n    \"01:39-01:41 man lays folded cash on the counter beside his mug\",\n    \"01:43-01:51 man exits through the front door and walks to a dark-green single-unit box truck; waitress watches through the window; final wide shows the emptied diner\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"parked vehicle seen through the front window / lot exterior\",\n      \"invariant_violated\": \"view through an opening must match the established far side\",\n      \"description\": \"At 00:00-00:10 the vehicle parked outside is a white semi tractor pulling a tall trailer with a smoking reefer unit, positioned at the west edge of the lot. At 01:43-01:47, within the same continuous scene (no time skip: lighting progresses naturally from night to sunrise and the same two characters continue their actions), the man exits the front door and walks directly to a dark-green single-unit box truck with a chrome stack, parked closer to the door. The exterior visible through the front opening does not match the established exterior; the rig the driver walks to as his own is a different, unexplained vehicle.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"01:02\",\n      \"entity\": \"front window bearing the OPEN neon sign\",\n      \"invariant_violated\": \"far side of an opening must be consistent from both sides\",\n      \"description\": \"From outside (00:00-00:10) the OPEN-sign window sits right/east of the central entrance and shows the kitchen behind it (stainless line, ventilation hood, warm equipment light). From inside (00:20, 01:02, 01:53) the same neon OPEN sign hangs in the windows directly above the dining booths, while the kitchen pass-through instead sits beside the entrance door. The same opening therefore reveals a kitchen from outside but dining booths from inside, making the implied floor plan contradictory about what occupies the east frontage.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

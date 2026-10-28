@@ -1,0 +1,44 @@
+{
+  "key": "dancer-mirror__reflection-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "reflection-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:47:38.800Z",
+  "latencyMs": 53549,
+  "usage": {
+    "prompt_tokens": 6202,
+    "completion_tokens": 1968,
+    "total_tokens": 8170,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 832,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "True mirror present: large fixed studio wall mirror spanning the back wall, visible 00:00-00:08 together with the real dancer (back to camera) and her reflection (facing camera).",
+    "00:00 - Real dancer arms at sides; reflection shows arms at sides - poses match.",
+    "00:02 - Real dancer left arm raised overhead, right arm extended to side; reflection shows mirrored equivalent (raised arm on viewer's right, extended arm on viewer's left) - matches.",
+    "00:04 - Real dancer left arm bent with hand near head, right arm down; reflection shows bent arm up on viewer's right, other arm down - matches.",
+    "00:06 - Real dancer left arm bent at chest level, right arm down; reflection matches.",
+    "00:08 - Real dancer left arm straight up overhead, right arm slightly out; reflection shows arm straight up on viewer's right, other arm slightly out - matches.",
+    "Reflection updates in sync with real subject across all sampled instants; no lag or independent motion observed."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"True mirror present: large fixed studio wall mirror spanning the back wall, visible 00:00-00:08 together with the real dancer (back to camera) and her reflection (facing camera).\",\n    \"00:00 - Real dancer arms at sides; reflection shows arms at sides - poses match.\",\n    \"00:02 - Real dancer left arm raised overhead, right arm extended to side; reflection shows mirrored equivalent (raised arm on viewer's right, extended arm on viewer's left) - matches.\",\n    \"00:04 - Real dancer left arm bent with hand near head, right arm down; reflection shows bent arm up on viewer's right, other arm down - matches.\",\n    \"00:06 - Real dancer left arm bent at chest level, right arm down; reflection matches.\",\n    \"00:08 - Real dancer left arm straight up overhead, right arm slightly out; reflection shows arm straight up on viewer's right, other arm slightly out - matches.\",\n    \"Reflection updates in sync with real subject across all sampled instants; no lag or independent motion observed.\"\n  ],\n  \"findings\": []\n}"
+}

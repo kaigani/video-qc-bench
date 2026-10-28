@@ -1,0 +1,42 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:19:11.941Z",
+  "latencyMs": 326599,
+  "usage": {
+    "prompt_tokens": 516,
+    "completion_tokens": 2343,
+    "total_tokens": 2859,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2059,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - True wall mirror confirmed (framed, shows room behind camera: door, shelf, light switch). Subject and reflection both visible: subject holds razor to his chin/jaw, head slightly tilted; reflection shows identical razor-at-chin pose at the mirrored position, razor on viewer-left of reflected face, in sync.",
+    "0:02 - Subject and reflection both visible mid-stroke with heavy motion blur / cross-dissolve ghosting; razor traveling upward along the face in both subject and reflection; no sharp-frame pose discrepancy resolvable at this instant.",
+    "0:04 - Subject raises razor to his brow with head bowed; reflection mirrors exactly: razor at reflected brow on viewer-left, same bowed head and raised-arm pose, synchronized.",
+    "0:06 - Subject returns razor to chin/jaw; reflection shows razor at mirrored chin position, matching arm angle and head posture at the same instant.",
+    "0:08 - Subject holds razor at his right cheek near the sideburn; reflection shows razor at the mirrored cheek (viewer-left of reflected face), arm and head positions matching."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - True wall mirror confirmed (framed, shows room behind camera: door, shelf, light switch). Subject and reflection both visible: subject holds razor to his chin/jaw, head slightly tilted; reflection shows identical razor-at-chin pose at the mirrored position, razor on viewer-left of reflected face, in sync.\",\n    \"0:02 - Subject and reflection both visible mid-stroke with heavy motion blur / cross-dissolve ghosting; razor traveling upward along the face in both subject and reflection; no sharp-frame pose discrepancy resolvable at this instant.\",\n    \"0:04 - Subject raises razor to his brow with head bowed; reflection mirrors exactly: razor at reflected brow on viewer-left, same bowed head and raised-arm pose, synchronized.\",\n    \"0:06 - Subject returns razor to chin/jaw; reflection shows razor at mirrored chin position, matching arm angle and head posture at the same instant.\",\n    \"0:08 - Subject holds razor at his right cheek near the sideburn; reflection shows razor at the mirrored cheek (viewer-left of reflected face), arm and head positions matching.\"\n  ],\n  \"findings\": []\n}"
+}

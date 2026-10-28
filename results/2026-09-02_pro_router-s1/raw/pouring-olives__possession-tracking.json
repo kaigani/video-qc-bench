@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:34.856Z",
+  "latencyMs": 13279,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 909,
+    "total_tokens": 2293,
+    "cost": 0.013676,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013676,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.010908
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 600,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:03: Green olives poured from small jar (right hand) into large jar on counter.",
+    "00:03: Empty small jar placed on counter.",
+    "00:05 - 00:09: Second small jar of green olives picked up and poured into large jar."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00-00:03",
+      "entity": "Olives",
+      "invariant_violated": "transfer completeness",
+      "description": "The olives in the small jar being poured are uniformly green. However, as they fall into the large jar, many of them are dark purple/black. The objects change appearance during the transfer.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:05-00:09",
+      "entity": "Olives",
+      "invariant_violated": "transfer completeness",
+      "description": "Similar to the first pour, the olives in the second small jar are all green, but they land in the large jar as a mix of green and purple/black olives.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:03: Green olives poured from small jar (right hand) into large jar on counter.\",\n    \"00:03: Empty small jar placed on counter.\",\n    \"00:05 - 00:09: Second small jar of green olives picked up and poured into large jar.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00-00:03\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The olives in the small jar being poured are uniformly green. However, as they fall into the large jar, many of them are dark purple/black. The objects change appearance during the transfer.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:05-00:09\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"Similar to the first pour, the olives in the second small jar are all green, but they land in the large jar as a mix of green and purple/black olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

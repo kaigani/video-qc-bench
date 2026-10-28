@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__possession-tracking",
+  "video": "woman-apple.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:58:06.914Z",
+  "latencyMs": 79380,
+  "usage": {
+    "prompt_tokens": 5858,
+    "completion_tokens": 1303,
+    "total_tokens": 7161,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:02 red apple: held in both hands of woman (navy cardigan) at chest height while walking; umbrella shaft gripped alongside in left hand",
+    "0:02-0:04 red apple: transferred from two-hand grip to left hand (ringed hand) of woman, still sharing grip with umbrella shaft",
+    "0:04-0:06 red apple: held in woman's left hand; right hand open palm beside it, no contact with other persons or surfaces",
+    "0:06-0:08 red apple: tossed between woman's left and right hands; umbrella exits top of frame (camera crop, not object exit); apple remains continuously in her custody",
+    "0:00-0:08 blue umbrella: gripped in woman's left hand until ~0:06, then out of frame above; no visible transfer or release",
+    "background produce/crates at stalls: never touched by the tracked hands; no object enters or leaves any container in frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:02 red apple: held in both hands of woman (navy cardigan) at chest height while walking; umbrella shaft gripped alongside in left hand\",\n    \"0:02-0:04 red apple: transferred from two-hand grip to left hand (ringed hand) of woman, still sharing grip with umbrella shaft\",\n    \"0:04-0:06 red apple: held in woman's left hand; right hand open palm beside it, no contact with other persons or surfaces\",\n    \"0:06-0:08 red apple: tossed between woman's left and right hands; umbrella exits top of frame (camera crop, not object exit); apple remains continuously in her custody\",\n    \"0:00-0:08 blue umbrella: gripped in woman's left hand until ~0:06, then out of frame above; no visible transfer or release\",\n    \"background produce/crates at stalls: never touched by the tracked hands; no object enters or leaves any container in frame\"\n  ],\n  \"findings\": []\n}"
+}

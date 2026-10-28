@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:52.148Z",
+  "latencyMs": 21970,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1947,
+    "total_tokens": 3373,
+    "cost": 0.00837075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00837075,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00730125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1808,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "market aisle | central pedestrian path with fruit stalls on left and right | same aisle geometry | camera orbits left around central subject",
+    "main subject | standing in middle of aisle under blue umbrella holding fruit | profile view facing left as camera orbits | stays consistent in position relative to ground",
+    "left fruit stand | displays avocados, citrus, and colored trays | remains along left boundary of aisle | continuous occlusion and perspective shift during camera orbit",
+    "right fruit stand | displays apples and tomatoes | visible on right side of aisle | pans out of frame as camera rotates left"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"market aisle | central pedestrian path with fruit stalls on left and right | same aisle geometry | camera orbits left around central subject\",\n    \"main subject | standing in middle of aisle under blue umbrella holding fruit | profile view facing left as camera orbits | stays consistent in position relative to ground\",\n    \"left fruit stand | displays avocados, citrus, and colored trays | remains along left boundary of aisle | continuous occlusion and perspective shift during camera orbit\",\n    \"right fruit stand | displays apples and tomatoes | visible on right side of aisle | pans out of frame as camera rotates left\"\n  ],\n  \"findings\": []\n}"
+}

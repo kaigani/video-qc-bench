@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:29:39.018Z",
+  "latencyMs": 17836,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2226,
+    "total_tokens": 3464,
+    "cost": 0.009276,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009276,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0083475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2062,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer | standing facing studio mirror in black top and leggings | performing arm gestures | mirror reflection fails to follow true mirror symmetry"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection",
+      "invariant_violated": "reflection_symmetry_violation",
+      "description": "The mirror reflection does not accurately mirror the dancer's physical orientation and movements. When the dancer raises her right arm (the arm closest to the mirror), the reflection raises her right arm (the arm furthest from the mirror), breaking spatial symmetry.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer | standing facing studio mirror in black top and leggings | performing arm gestures | mirror reflection fails to follow true mirror symmetry\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"reflection_symmetry_violation\",\n      \"description\": \"The mirror reflection does not accurately mirror the dancer's physical orientation and movements. When the dancer raises her right arm (the arm closest to the mirror), the reflection raises her right arm (the arm furthest from the mirror), breaking spatial symmetry.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

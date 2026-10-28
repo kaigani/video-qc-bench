@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:41:30.245Z",
+  "latencyMs": 14697,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1092,
+    "total_tokens": 2518,
+    "cost": 0.0051645,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0051645,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.004095
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 953,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skatepark Concrete Layout | Fixed concrete ramps, hips, and bowls forming park surface | Retains consistent geometric layout and connectivity throughout tracking shot | Traversed by skateboarder across transitions",
+    "Light Poles & Background Architecture | Tall multi-fixture light poles and perimeter trees | Remain in fixed spatial positions relative to park ramps | Consistently occluded by foreground ramps and skater",
+    "Skateboarder & Board | Skateboarder moving across skatepark and jumping over hips | Maintains continuous spatial trajectory through the park layout | Depth-ordered correctly relative to concrete features and background elements"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skatepark Concrete Layout | Fixed concrete ramps, hips, and bowls forming park surface | Retains consistent geometric layout and connectivity throughout tracking shot | Traversed by skateboarder across transitions\",\n    \"Light Poles & Background Architecture | Tall multi-fixture light poles and perimeter trees | Remain in fixed spatial positions relative to park ramps | Consistently occluded by foreground ramps and skater\",\n    \"Skateboarder & Board | Skateboarder moving across skatepark and jumping over hips | Maintains continuous spatial trajectory through the park layout | Depth-ordered correctly relative to concrete features and background elements\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,60 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:06:24.710Z",
+  "latencyMs": 148843,
+  "usage": {
+    "prompt_tokens": 5360,
+    "completion_tokens": 4729,
+    "total_tokens": 10089,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Vehicle motion (implied cause of airflow): background road markings, desert scrub, and telephone poles sweep past in continuous parallax while car stays framed; car appears to be traveling at road speed for the full clip",
+    "Relative wind vs. woman's hair: streams dramatically backward/upward from ~0:05 onward, direction consistent with airflow from the car's front — effect present and correctly oriented",
+    "Relative wind vs. woman's clothing (jacket sleeves, collar, cuff draped over window sill): light loose fabric directly exposed to the same airflow — shows no flutter, drape, or deformation in any frame",
+    "Relative wind vs. whip antenna (front fender, visible 0:00-0:04): long flexible whip at road speed should vibrate/flex — remains perfectly straight and static",
+    "Ambient desert wind vs. background scrub brush: stiff desert brush, no independent wind cues (no dust, no flags); cannot be assessed and not used as evidence",
+    "Vehicle motion vs. rigid car elements (hood ornament, mirrors, wipers): no deformation expected — consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "woman's jacket sleeves and collar",
+      "invariant_violated": "physical influence must affect everything it should",
+      "description": "Her hair streams violently backward, implying strong relative wind from the car's forward motion, yet the light loose fabric of her sleeves and the cuff draped over the window sill — directly exposed to the same airflow — remains completely still with zero flutter across 0:05-0:08. Hair and fabric are comparable light materials; wind strong enough to stream hair horizontally should visibly move the draped sleeve fabric, so the selective response is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "0:02",
+      "entity": "whip antenna on front fender",
+      "invariant_violated": "effect must have consistent physical response",
+      "description": "The clip implies road-speed travel (background parallax, later dramatic hair streaming), but the long thin whip antenna remains perfectly straight and motionless in every frame it is visible (0:00-0:04). A flexible whip antenna at speed should show visible vibration or flex; its rigidity is inconsistent with the implied airflow.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Vehicle motion (implied cause of airflow): background road markings, desert scrub, and telephone poles sweep past in continuous parallax while car stays framed; car appears to be traveling at road speed for the full clip\",\n    \"Relative wind vs. woman's hair: streams dramatically backward/upward from ~0:05 onward, direction consistent with airflow from the car's front — effect present and correctly oriented\",\n    \"Relative wind vs. woman's clothing (jacket sleeves, collar, cuff draped over window sill): light loose fabric directly exposed to the same airflow — shows no flutter, drape, or deformation in any frame\",\n    \"Relative wind vs. whip antenna (front fender, visible 0:00-0:04): long flexible whip at road speed should vibrate/flex — remains perfectly straight and static\",\n    \"Ambient desert wind vs. background scrub brush: stiff desert brush, no independent wind cues (no dust, no flags); cannot be assessed and not used as evidence\",\n    \"Vehicle motion vs. rigid car elements (hood ornament, mirrors, wipers): no deformation expected — consistent\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"woman's jacket sleeves and collar\",\n      \"invariant_violated\": \"physical influence must affect everything it should\",\n      \"description\": \"Her hair streams violently backward, implying strong relative wind from the car's forward motion, yet the light loose fabric of her sleeves and the cuff draped over the window sill — directly exposed to the same airflow — remains completely still with zero flutter across 0:05-0:08. Hair and fabric are comparable light materials; wind strong enough to stream hair horizontally should visibly move the draped sleeve fabric, so the selective response is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    },\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"whip antenna on front fender\",\n      \"invariant_violated\": \"effect must have consistent physical response\",\n      \"description\": \"The clip implies road-speed travel (background parallax, later dramatic hair streaming), but the long thin whip antenna remains perfectly straight and motionless in every frame it is visible (0:00-0:04). A flexible whip antenna at speed should show visible vibration or flex; its rigidity is inconsistent with the implied airflow.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

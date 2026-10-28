@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:38:23.906Z",
+  "latencyMs": 8227,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 462,
+    "total_tokens": 1887,
+    "cost": 0.00280125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00280125,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.0017325
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 402,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "character | speaking facing camera | turns toward door | speaks words, turns, walks, knocks on door",
+    "door | stationary background | receives knock contact | remains closed as character knocks"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"character | speaking facing camera | turns toward door | speaks words, turns, walks, knocks on door\",\n    \"door | stationary background | receives knock contact | remains closed as character knocks\"\n  ],\n  \"findings\": []\n}"
+}

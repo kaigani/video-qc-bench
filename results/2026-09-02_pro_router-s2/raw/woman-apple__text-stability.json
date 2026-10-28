@@ -1,0 +1,47 @@
+{
+  "key": "woman-apple__text-stability",
+  "video": "woman-apple.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:45.205Z",
+  "latencyMs": 12566,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 794,
+    "total_tokens": 2170,
+    "cost": 0.01228,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01228,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.009528
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 651,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Black sign hanging on the left stall, reading something like 'Piralya' or 'Bialyo'"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Black sign hanging on the left stall",
+      "invariant_violated": "Legibility",
+      "description": "The text on the sign consists of malformed, garbled characters that do not form a coherent word or recognizable name.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Black sign hanging on the left stall, reading something like 'Piralya' or 'Bialyo'\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Black sign hanging on the left stall\",\n      \"invariant_violated\": \"Legibility\",\n      \"description\": \"The text on the sign consists of malformed, garbled characters that do not form a coherent word or recognizable name.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

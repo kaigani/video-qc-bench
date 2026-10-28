@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:31:51.397Z",
+  "latencyMs": 11945,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 872,
+    "total_tokens": 2298,
+    "cost": 0.0043395,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0043395,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00327
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 753,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror | mounted on wall facing subject | mounted on wall facing subject | frame and reflection boundary remain stationary throughout single static shot",
+    "Man (foreground object) | positioned left of center facing mirror | positioned left of center facing mirror | moves arm and comb with consistent depth relationship to mirror surface",
+    "Bathroom doorway & shelf (reflected background) | visible in mirror reflection behind subject | visible in mirror reflection behind subject | spatial alignment and occlusion by subject's reflection remain consistent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror | mounted on wall facing subject | mounted on wall facing subject | frame and reflection boundary remain stationary throughout single static shot\",\n    \"Man (foreground object) | positioned left of center facing mirror | positioned left of center facing mirror | moves arm and comb with consistent depth relationship to mirror surface\",\n    \"Bathroom doorway & shelf (reflected background) | visible in mirror reflection behind subject | visible in mirror reflection behind subject | spatial alignment and occlusion by subject's reflection remain consistent\"\n  ],\n  \"findings\": []\n}"
+}

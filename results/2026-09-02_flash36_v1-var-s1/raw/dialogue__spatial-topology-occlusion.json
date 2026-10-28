@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:11.498Z",
+  "latencyMs": 15787,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1406,
+    "total_tokens": 2832,
+    "cost": 0.006342,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006342,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0052725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1326,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | centered in front of door frame background | turns left and steps toward left door panel | moves to knock on left door panel",
+    "background architecture & door panels | coat hook left of center, wall fixture right of center | layout stays consistent as camera pans left | preserved continuously"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man | centered in front of door frame background | turns left and steps toward left door panel | moves to knock on left door panel\",\n    \"background architecture & door panels | coat hook left of center, wall fixture right of center | layout stays consistent as camera pans left | preserved continuously\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,53 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:30.064Z",
+  "latencyMs": 48344,
+  "usage": {
+    "prompt_tokens": 10599,
+    "completion_tokens": 3816,
+    "total_tokens": 14415,
+    "cost": 0.016302375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 8825,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016302375,
+      "upstream_inference_prompt_cost": 0.001992375,
+      "upstream_inference_completions_cost": 0.01431
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3542,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Exterior diner connects to interior dining space through front glass entrance door",
+    "Dining area contains booth seating along front glass windows and counter with stools facing service area",
+    "Service counter connects to kitchen via pass-through window on back wall",
+    "00:21 - Man enters through front door into dining area and walks to counter stool",
+    "00:45 - View from kitchen pass-through window looking out onto counter and front door",
+    "01:42 - Man exits dining room through front door into exterior parking lot towards truck",
+    "01:51 - Waitress gets up from counter stool and walks behind counter towards kitchen pass-through"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "character duplication",
+      "description": "As the waitress stands up from her seat at the counter and walks toward the kitchen, an identical duplicate copy of the waitress is simultaneously present standing behind the counter wiping the surface near the kitchen pass-through.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Exterior diner connects to interior dining space through front glass entrance door\",\n    \"Dining area contains booth seating along front glass windows and counter with stools facing service area\",\n    \"Service counter connects to kitchen via pass-through window on back wall\",\n    \"00:21 - Man enters through front door into dining area and walks to counter stool\",\n    \"00:45 - View from kitchen pass-through window looking out onto counter and front door\",\n    \"01:42 - Man exits dining room through front door into exterior parking lot towards truck\",\n    \"01:51 - Waitress gets up from counter stool and walks behind counter towards kitchen pass-through\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"character duplication\",\n      \"description\": \"As the waitress stands up from her seat at the counter and walks toward the kitchen, an identical duplicate copy of the waitress is simultaneously present standing behind the counter wiping the surface near the kitchen pass-through.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

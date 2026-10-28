@@ -1,0 +1,52 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:34:39.499Z",
+  "latencyMs": 10844,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 957,
+    "total_tokens": 2351,
+    "cost": 0.014272,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014272,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.011484
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 749,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen with stove on left, cabinets on right",
+    "Hallway visible from kitchen, leading to a front door with a window",
+    "Woman walks from kitchen, through hallway, turning right into a bedroom",
+    "Bedroom contains a bed, chandelier, and windows",
+    "Woman turns around in bedroom and walks back out",
+    "View from bedroom doorway back into hallway/kitchen matches the established layout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "chairs in bedroom",
+      "invariant_violated": "Functional Arrangement",
+      "description": "Two chairs are tucked closely against the wall under a window, arranged as if they are serving a table or desk, but no such piece of furniture is present.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen with stove on left, cabinets on right\",\n    \"Hallway visible from kitchen, leading to a front door with a window\",\n    \"Woman walks from kitchen, through hallway, turning right into a bedroom\",\n    \"Bedroom contains a bed, chandelier, and windows\",\n    \"Woman turns around in bedroom and walks back out\",\n    \"View from bedroom doorway back into hallway/kitchen matches the established layout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"chairs in bedroom\",\n      \"invariant_violated\": \"Functional Arrangement\",\n      \"description\": \"Two chairs are tucked closely against the wall under a window, arranged as if they are serving a table or desk, but no such piece of furniture is present.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

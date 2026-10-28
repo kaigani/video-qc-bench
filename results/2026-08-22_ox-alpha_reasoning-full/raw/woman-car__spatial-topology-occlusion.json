@@ -1,0 +1,53 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:37:38.456Z",
+  "latencyMs": 310825,
+  "usage": {
+    "prompt_tokens": 5421,
+    "completion_tokens": 13144,
+    "total_tokens": 18565,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wood-paneled station wagon | parked on desert shoulder, front end angled toward paved road, hood/grille facing roadway | same position all shots | camera orbits continuously from front three-quarter view to abeam the front side window",
+    "Paved two-lane road (yellow center dashes, white edge line) | passes beyond the car's hood, in front of the grille | same relationship in all shots | recedes diagonally into frame-left as camera moves rearward along the car's side",
+    "Woman leaning out front side window (window directly behind windshield, side mirror at its leading edge) | arms crossed on sill, torso outside | identical posture at end | stays in the same window opening; no wrong-side emergence",
+    "Hood ornament | single chrome ornament at hood leading edge | single ornament at end | transiently doubled at 00:02 during camera move",
+    "Front fascia: chrome grille, quad round headlamps, plate 'STE197' | four lamps, legible plate | unchanged | plate characters and lamp rings ghosted/double-exposed at 00:02",
+    "Desert floor, scrub bushes, distant mountain range | flat horizon behind the road | unchanged | background rotation consistent with the single continuous camera orbit",
+    "Utility poles along far side of road | not visible in early frames | visible beyond road from ~00:06 | enter frame as view rotates down-road; placement compatible with road line"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Hood ornament, grille/headlamps, license plate",
+      "invariant_violated": "fixed-element geometry stability (transient duplication / impossible geometry)",
+      "description": "Mid-orbit frame shows fixed front-end elements double-exposed: two chrome hood ornaments are simultaneously visible on the hood's leading edge (one ornament in the frames before and after), the round headlamp rings appear overlapped/duplicated beyond the quad-lamp count, and the license plate characters 'STE197' are smeared into doubled glyphs. This indicates the fixed geometry was blended between two camera positions rather than moving rigidly; it resolves by 00:04.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Wood-paneled station wagon | parked on desert shoulder, front end angled toward paved road, hood/grille facing roadway | same position all shots | camera orbits continuously from front three-quarter view to abeam the front side window\",\n    \"Paved two-lane road (yellow center dashes, white edge line) | passes beyond the car's hood, in front of the grille | same relationship in all shots | recedes diagonally into frame-left as camera moves rearward along the car's side\",\n    \"Woman leaning out front side window (window directly behind windshield, side mirror at its leading edge) | arms crossed on sill, torso outside | identical posture at end | stays in the same window opening; no wrong-side emergence\",\n    \"Hood ornament | single chrome ornament at hood leading edge | single ornament at end | transiently doubled at 00:02 during camera move\",\n    \"Front fascia: chrome grille, quad round headlamps, plate 'STE197' | four lamps, legible plate | unchanged | plate characters and lamp rings ghosted/double-exposed at 00:02\",\n    \"Desert floor, scrub bushes, distant mountain range | flat horizon behind the road | unchanged | background rotation consistent with the single continuous camera orbit\",\n    \"Utility poles along far side of road | not visible in early frames | visible beyond road from ~00:06 | enter frame as view rotates down-road; placement compatible with road line\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Hood ornament, grille/headlamps, license plate\",\n      \"invariant_violated\": \"fixed-element geometry stability (transient duplication / impossible geometry)\",\n      \"description\": \"Mid-orbit frame shows fixed front-end elements double-exposed: two chrome hood ornaments are simultaneously visible on the hood's leading edge (one ornament in the frames before and after), the round headlamp rings appear overlapped/duplicated beyond the quad-lamp count, and the license plate characters 'STE197' are smeared into doubled glyphs. This indicates the fixed geometry was blended between two camera positions rather than moving rigidly; it resolves by 00:04.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

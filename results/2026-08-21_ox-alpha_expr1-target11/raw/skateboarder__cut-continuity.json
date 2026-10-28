@@ -1,0 +1,48 @@
+{
+  "key": "skateboarder__cut-continuity",
+  "video": "skateboarder.mp4",
+  "role": "cut-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:43:57.274Z",
+  "latencyMs": 82941,
+  "usage": {
+    "prompt_tokens": 6283,
+    "completion_tokens": 2733,
+    "total_tokens": 9016,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:09, continuous low follow-cam with fisheye lens tracking the skater; camera tilts upward during aerial tricks at ~00:02 and ~00:08, otherwise holds low ground-level framing",
+    "fixed anchor A: concrete picnic-style table/bench, right of skater at 00:00",
+    "fixed anchor B: concrete pyramid/funbox ramp, left of frame at 00:00",
+    "fixed anchor C: tree line and tall light poles ringing the skatepark, visible in every frame",
+    "skater (black graphic tee, black pants, green socks, red/maroon shoes): present YES in all frames 00:00-00:09, no exit/entry",
+    "skater at 00:00-00:01: crouched on board riding toward camera, both hands near knees, facing camera",
+    "skater at 00:02-00:03: mid-air flip trick, board rotating beneath feet, camera tilted up to sky background",
+    "skater at 00:04-00:05: landed, board under both feet, riding on, camera low and trailing",
+    "skater at 00:06-00:07: riding across flat concrete toward/past camera, filmer's shadow visible bottom-left confirming continuous follow-cam",
+    "skater at 00:08-00:09: second flip trick mid-air, board flipping under feet, camera low tracking",
+    "continuity of attire: identical outfit in every frame, no wardrobe discontinuity across any framing change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:09, continuous low follow-cam with fisheye lens tracking the skater; camera tilts upward during aerial tricks at ~00:02 and ~00:08, otherwise holds low ground-level framing\",\n    \"fixed anchor A: concrete picnic-style table/bench, right of skater at 00:00\",\n    \"fixed anchor B: concrete pyramid/funbox ramp, left of frame at 00:00\",\n    \"fixed anchor C: tree line and tall light poles ringing the skatepark, visible in every frame\",\n    \"skater (black graphic tee, black pants, green socks, red/maroon shoes): present YES in all frames 00:00-00:09, no exit/entry\",\n    \"skater at 00:00-00:01: crouched on board riding toward camera, both hands near knees, facing camera\",\n    \"skater at 00:02-00:03: mid-air flip trick, board rotating beneath feet, camera tilted up to sky background\",\n    \"skater at 00:04-00:05: landed, board under both feet, riding on, camera low and trailing\",\n    \"skater at 00:06-00:07: riding across flat concrete toward/past camera, filmer's shadow visible bottom-left confirming continuous follow-cam\",\n    \"skater at 00:08-00:09: second flip trick mid-air, board flipping under feet, camera low tracking\",\n    \"continuity of attire: identical outfit in every frame, no wardrobe discontinuity across any framing change\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:30.158Z",
+  "latencyMs": 15674,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1565,
+    "total_tokens": 3009,
+    "cost": 0.00695175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00695175,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00586875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1348,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | opened, held in woman's hand | opened, held in woman's hand | maintained continuous position and state throughout",
+    "red fruit | held in woman's hands in front of chest | absent from hands | vanished between 00:06 and 00:07 without being dropped, stowed, or placed down"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red fruit",
+      "invariant_violated": "identity & persistence",
+      "description": "The red fruit held continuously in the woman's hands from 00:00 to 00:06 disappears from her hands between 00:06 and 00:07 without any visible action of dropping or putting it away.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | opened, held in woman's hand | opened, held in woman's hand | maintained continuous position and state throughout\",\n    \"red fruit | held in woman's hands in front of chest | absent from hands | vanished between 00:06 and 00:07 without being dropped, stowed, or placed down\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"red fruit\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red fruit held continuously in the woman's hands from 00:00 to 00:06 disappears from her hands between 00:06 and 00:07 without any visible action of dropping or putting it away.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

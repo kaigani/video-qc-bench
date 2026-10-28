@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:38:01.285Z",
+  "latencyMs": 11178,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 738,
+    "total_tokens": 2164,
+    "cost": 0.003837,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003837,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0027675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 620,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "mirror wall | large mirrored wall facing camera | unchanged throughout | reflects dancer and studio interior consistently",
+    "back studio wall | wall behind dancer featuring double exit doors on left | unchanged throughout | remains stationary in background",
+    "side studio wall | perpendicular wall with ballet barres visible in mirror reflection | unchanged throughout | stays consistent in reflection",
+    "dancer | positioned between back wall and mirror wall | remains in same floor area | moves arms in continuous motion facing mirror"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"mirror wall | large mirrored wall facing camera | unchanged throughout | reflects dancer and studio interior consistently\",\n    \"back studio wall | wall behind dancer featuring double exit doors on left | unchanged throughout | remains stationary in background\",\n    \"side studio wall | perpendicular wall with ballet barres visible in mirror reflection | unchanged throughout | stays consistent in reflection\",\n    \"dancer | positioned between back wall and mirror wall | remains in same floor area | moves arms in continuous motion facing mirror\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "man-in-mirror__count-stability",
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:47.786Z",
+  "latencyMs": 13756,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 2182,
+    "total_tokens": 3600,
+    "cost": 0.009246,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009246,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.0081825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1920,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:09: Glass bottles/jars on shelf (background mirror reflection) - count constant at 8",
+    "00:00 - 00:01: Handheld grooming tool - 1 toothbrush",
+    "00:02 - 00:03: Handheld grooming tool - 1 comb (transformed without visible swap)",
+    "00:04 - 00:09: Handheld grooming tool - 1 toothbrush (transformed back without visible swap)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "grooming tool (toothbrush / comb)",
+      "invariant_violated": "unexplained_kind_transformation",
+      "description": "The toothbrush in the subject's hand spontaneously turns into a comb at 00:02 as he raises it to his hair, and then reverts to a toothbrush at 00:04 without any visible cause or swapping action.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:09: Glass bottles/jars on shelf (background mirror reflection) - count constant at 8\",\n    \"00:00 - 00:01: Handheld grooming tool - 1 toothbrush\",\n    \"00:02 - 00:03: Handheld grooming tool - 1 comb (transformed without visible swap)\",\n    \"00:04 - 00:09: Handheld grooming tool - 1 toothbrush (transformed back without visible swap)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"grooming tool (toothbrush / comb)\",\n      \"invariant_violated\": \"unexplained_kind_transformation\",\n      \"description\": \"The toothbrush in the subject's hand spontaneously turns into a comb at 00:02 as he raises it to his hair, and then reverts to a toothbrush at 00:04 without any visible cause or swapping action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

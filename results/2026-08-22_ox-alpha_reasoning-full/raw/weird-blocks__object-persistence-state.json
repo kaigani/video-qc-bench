@@ -1,0 +1,54 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:25:37.406Z",
+  "latencyMs": 138551,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 5726,
+    "total_tokens": 11638,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "cube-1 ('2') | green cube, front '2', side '0', on table leftmost, touched by hand | blue cube, front '2', leftmost in final row | 0:00-0:02 color changes green→blue in place while hand moves away; no swap or replacement visible",
+    "cube-2 ('2') | green cube, front '2', side '0', on table, right of cube-1 with a gap between them | green '2', third position in final row | persists in place the whole video; new cubes inserted into the gap to its left; no unexplained change",
+    "cube-3 ('3') | absent | blue '3', second position in final row | placed by hand ~0:02",
+    "cube-4 ('2') | absent | orange '2', fourth position | placed by hand ~0:04",
+    "cube-5 ('3') | absent | light-blue '3', fifth position | placed by hand ~0:06",
+    "cube-6 ('5') | absent | green '5', sixth position | placed by hand ~0:06-0:08",
+    "cube-7 ('2') | absent | green '2', seventh position | placed by hand ~0:08",
+    "cube-8 ('6') | absent | blue '6', eighth position | being placed by hand at 0:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "leftmost cube (position 1)",
+      "invariant_violated": "identity & persistence — object transformed into a different object",
+      "description": "At 0:00 the leftmost cube is green showing '2' (side '0'). At 0:02 the cube occupying the same spot is blue showing '2'. The hand is seen touching this cube at 0:00 and then moving on to place the next cube; no lifting, removal, or replacement of the green cube is visible, so the green→blue color/identity change happens in place with no visible cause. (Related count anomaly: total cubes jump from 2 to 3 across this interval with only one placement action shown.)",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"cube-1 ('2') | green cube, front '2', side '0', on table leftmost, touched by hand | blue cube, front '2', leftmost in final row | 0:00-0:02 color changes green→blue in place while hand moves away; no swap or replacement visible\",\n    \"cube-2 ('2') | green cube, front '2', side '0', on table, right of cube-1 with a gap between them | green '2', third position in final row | persists in place the whole video; new cubes inserted into the gap to its left; no unexplained change\",\n    \"cube-3 ('3') | absent | blue '3', second position in final row | placed by hand ~0:02\",\n    \"cube-4 ('2') | absent | orange '2', fourth position | placed by hand ~0:04\",\n    \"cube-5 ('3') | absent | light-blue '3', fifth position | placed by hand ~0:06\",\n    \"cube-6 ('5') | absent | green '5', sixth position | placed by hand ~0:06-0:08\",\n    \"cube-7 ('2') | absent | green '2', seventh position | placed by hand ~0:08\",\n    \"cube-8 ('6') | absent | blue '6', eighth position | being placed by hand at 0:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"leftmost cube (position 1)\",\n      \"invariant_violated\": \"identity & persistence — object transformed into a different object\",\n      \"description\": \"At 0:00 the leftmost cube is green showing '2' (side '0'). At 0:02 the cube occupying the same spot is blue showing '2'. The hand is seen touching this cube at 0:00 and then moving on to place the next cube; no lifting, removal, or replacement of the green cube is visible, so the green→blue color/identity change happens in place with no visible cause. (Related count anomaly: total cubes jump from 2 to 3 across this interval with only one placement action shown.)\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

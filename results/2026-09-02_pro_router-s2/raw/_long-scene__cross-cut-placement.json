@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:40:03.081Z",
+  "latencyMs": 25002,
+  "usage": {
+    "prompt_tokens": 10641,
+    "completion_tokens": 1908,
+    "total_tokens": 12549,
+    "cost": 0.044178,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.044178,
+      "upstream_inference_prompt_cost": 0.021282,
+      "upstream_inference_completions_cost": 0.022896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1267,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:10, exterior wide, truck parked outside diner at night",
+    "shot 2: 00:10-00:18, medium interior, waitress behind counter wiping",
+    "shot 3: 00:18-00:26, wide interior, man enters, walks to counter, sits, waitress behind counter",
+    "shot 4: 00:26-00:31, close-up, coffee poured into mug",
+    "shot 5: 00:31-00:36, close-up, plate of food placed on counter",
+    "shot 6: 00:36-00:44, wide interior, man sitting at counter eating, waitress not visible",
+    "shot 7: 00:44-00:51, medium interior, waitress behind counter wiping, man in background",
+    "shot 8: 00:51-01:00, medium-wide interior, counter is empty, sunlight changing",
+    "shot 9: 01:00-01:09, wide interior, man at counter, waitress by coffee machine",
+    "shot 10: 01:09-01:17, medium interior, waitress serves man food across counter",
+    "shot 11: 01:17-01:26, wide interior, waitress walks around and sits next to man at counter",
+    "shot 12: 01:26-01:34, close-up, waitress and man sitting together",
+    "shot 13: 01:35-01:37, medium interior, empty counter bathed in sunlight",
+    "shot 14: 01:37-01:40, close-up, hand leaves money on counter",
+    "shot 15: 01:40-01:49, medium interior looking out window, man walks to truck, waitress watches from inside",
+    "shot 16: 01:49-01:58, wide interior, waitress sitting at counter foreground, another waitress in background"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:49",
+      "entity": "Waitress",
+      "invariant_violated": "Duplicate person",
+      "description": "The same waitress character appears in two places at once within the same shot. One instance is sitting on a stool at the counter in the foreground, while a second, identical instance is simultaneously visible in the background wiping a booth.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:10, exterior wide, truck parked outside diner at night\",\n    \"shot 2: 00:10-00:18, medium interior, waitress behind counter wiping\",\n    \"shot 3: 00:18-00:26, wide interior, man enters, walks to counter, sits, waitress behind counter\",\n    \"shot 4: 00:26-00:31, close-up, coffee poured into mug\",\n    \"shot 5: 00:31-00:36, close-up, plate of food placed on counter\",\n    \"shot 6: 00:36-00:44, wide interior, man sitting at counter eating, waitress not visible\",\n    \"shot 7: 00:44-00:51, medium interior, waitress behind counter wiping, man in background\",\n    \"shot 8: 00:51-01:00, medium-wide interior, counter is empty, sunlight changing\",\n    \"shot 9: 01:00-01:09, wide interior, man at counter, waitress by coffee machine\",\n    \"shot 10: 01:09-01:17, medium interior, waitress serves man food across counter\",\n    \"shot 11: 01:17-01:26, wide interior, waitress walks around and sits next to man at counter\",\n    \"shot 12: 01:26-01:34, close-up, waitress and man sitting together\",\n    \"shot 13: 01:35-01:37, medium interior, empty counter bathed in sunlight\",\n    \"shot 14: 01:37-01:40, close-up, hand leaves money on counter\",\n    \"shot 15: 01:40-01:49, medium interior looking out window, man walks to truck, waitress watches from inside\",\n    \"shot 16: 01:49-01:58, wide interior, waitress sitting at counter foreground, another waitress in background\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:49\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"Duplicate person\",\n      \"description\": \"The same waitress character appears in two places at once within the same shot. One instance is sitting on a stool at the counter in the foreground, while a second, identical instance is simultaneously visible in the background wiping a booth.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

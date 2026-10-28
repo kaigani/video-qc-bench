@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:13:11.280Z",
+  "latencyMs": 336713,
+  "usage": {
+    "prompt_tokens": 34886,
+    "completion_tokens": 13772,
+    "total_tokens": 48658,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:12-00:19 cleaning cloth: in waitress's hands wiping front counter; set down afterward; same cloth reused 00:46-00:52 (kitchen pass-through) and 01:49-01:52 (front counter)",
+    "00:26-00:33 coffee carafe: lifted from brewer by waitress, held while pouring into white mug on counter; exits close-up after pour with no later contradictory reappearance",
+    "00:29-01:41 white mug (customer): filled on counter 00:29-00:33 -> customer's hands 00:38-00:45 -> counter 01:01-01:10 -> customer's hands 01:11-01:27 -> customer's hands 01:28-01:37 -> off-frame during 01:38-01:40 transition -> on counter beside cash at 01:41",
+    "00:34-01:19 breakfast plate (cornbread + fried egg): on counter before customer 00:34-00:52 -> counter shown cleared during 00:53-01:00 time-skip transition -> plate under waitress's hands on counter 01:11-01:15 (clearing) -> carried off-frame in waitress's hands 01:16-01:19",
+    "01:41 cash (folded $100 bills): placed on counter by customer's hand, taken by waitress's reaching hand within the same shot; exits with scene cut",
+    "01:21-01:27 napkin: stationary on counter in front of customer, no hand movement observed",
+    "01:28-01:37 waitress's mug: held in waitress's hands while seated beside customer; acquired off-frame during prior shot gap with no contradictory reappearance"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:12-00:19 cleaning cloth: in waitress's hands wiping front counter; set down afterward; same cloth reused 00:46-00:52 (kitchen pass-through) and 01:49-01:52 (front counter)\",\n    \"00:26-00:33 coffee carafe: lifted from brewer by waitress, held while pouring into white mug on counter; exits close-up after pour with no later contradictory reappearance\",\n    \"00:29-01:41 white mug (customer): filled on counter 00:29-00:33 -> customer's hands 00:38-00:45 -> counter 01:01-01:10 -> customer's hands 01:11-01:27 -> customer's hands 01:28-01:37 -> off-frame during 01:38-01:40 transition -> on counter beside cash at 01:41\",\n    \"00:34-01:19 breakfast plate (cornbread + fried egg): on counter before customer 00:34-00:52 -> counter shown cleared during 00:53-01:00 time-skip transition -> plate under waitress's hands on counter 01:11-01:15 (clearing) -> carried off-frame in waitress's hands 01:16-01:19\",\n    \"01:41 cash (folded $100 bills): placed on counter by customer's hand, taken by waitress's reaching hand within the same shot; exits with scene cut\",\n    \"01:21-01:27 napkin: stationary on counter in front of customer, no hand movement observed\",\n    \"01:28-01:37 waitress's mug: held in waitress's hands while seated beside customer; acquired off-frame during prior shot gap with no contradictory reappearance\"\n  ],\n  \"findings\": []\n}"
+}

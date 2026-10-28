@@ -1,0 +1,42 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:49:50.976Z",
+  "latencyMs": 87034,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 2849,
+    "total_tokens": 8745,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - Numbered cube blocks: 2 visible (green face '2' left, green face '2' middle); hand gripping left block, no count change yet",
+    "0:02 - Blocks: 3 visible (blue '2', blue '3' mid-rotation under fingers, green '2'); count +1 explained by hand placing a new block; left/middle faces changed green->blue and '2'->'3' via visible hand rotation (multi-face cubes)",
+    "0:04 - Blocks: 4 visible (blue '2', blue '3', green '2', orange block being set down by hand, blurred); count +1 via visible hand placement",
+    "0:06 - Blocks: 6 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5' being set down by hand); count +2 between samples via continuous visible hand placement of light-blue '3' then green '5'",
+    "0:08 - Blocks: 8 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5', green '2', blue '6' being set down by hand, blurred); count +2 via visible hand placement of green '2' then blue '6'"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - Numbered cube blocks: 2 visible (green face '2' left, green face '2' middle); hand gripping left block, no count change yet\",\n    \"0:02 - Blocks: 3 visible (blue '2', blue '3' mid-rotation under fingers, green '2'); count +1 explained by hand placing a new block; left/middle faces changed green->blue and '2'->'3' via visible hand rotation (multi-face cubes)\",\n    \"0:04 - Blocks: 4 visible (blue '2', blue '3', green '2', orange block being set down by hand, blurred); count +1 via visible hand placement\",\n    \"0:06 - Blocks: 6 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5' being set down by hand); count +2 between samples via continuous visible hand placement of light-blue '3' then green '5'\",\n    \"0:08 - Blocks: 8 visible (blue '2', blue '3', green '2', orange '2', light-blue '3', green '5', green '2', blue '6' being set down by hand, blurred); count +2 via visible hand placement of green '2' then blue '6'\"\n  ],\n  \"findings\": []\n}"
+}

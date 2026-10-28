@@ -1,0 +1,42 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:36:50.558Z",
+  "latencyMs": 11116,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 721,
+    "total_tokens": 2105,
+    "cost": 0.01142,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01142,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.008652
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 582,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:09: Ring/jewelry piece is held in the left hand.",
+    "00:00 - 00:04: Tweezers are held in the right hand.",
+    "00:04: Right hand moves out of frame with the tweezers.",
+    "00:05: Right hand returns into frame holding a small screwdriver/pin tool.",
+    "00:05 - 00:09: Small screwdriver/pin tool is held in the right hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:09: Ring/jewelry piece is held in the left hand.\",\n    \"00:00 - 00:04: Tweezers are held in the right hand.\",\n    \"00:04: Right hand moves out of frame with the tweezers.\",\n    \"00:05: Right hand returns into frame holding a small screwdriver/pin tool.\",\n    \"00:05 - 00:09: Small screwdriver/pin tool is held in the right hand.\"\n  ],\n  \"findings\": []\n}"
+}

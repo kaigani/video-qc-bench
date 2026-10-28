@@ -1,0 +1,169 @@
+{
+  "video": "phone",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:47.794Z",
+  "latencyMs": 19156,
+  "usage": {
+    "prompt_tokens": 1685,
+    "completion_tokens": 1815,
+    "total_tokens": 3500,
+    "cost": 0.02515,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02515,
+      "upstream_inference_prompt_cost": 0.00337,
+      "upstream_inference_completions_cost": 0.02178
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1180,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|phone|baseline-generalist|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Hands holding phone",
+        "invariant_violated": "Anatomical Consistency",
+        "description": "An extra, disconnected thumb suddenly appears on the lower left side of the phone screen and then slides down out of frame.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|phone|causal-temporal-sequence|0",
+      "cls": "TP:PHON-1",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "phone screen text",
+        "invariant_violated": "effect-without-cause",
+        "description": "The text and numbers on the phone screen continuously morph, change layout, and update without any corresponding swiping or typing actions from the user.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|phone|causal-temporal-sequence|1",
+      "cls": "TP:PHON-1",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "phone screen",
+        "invariant_violated": "cause-without-effect",
+        "description": "The user's thumb makes tapping motions on the screen, but the interface does not react to these specific inputs; instead, the text continues its independent morphing.",
+        "severity": "moderate",
+        "confidence": 0.85
+      }
+    },
+    {
+      "key": "pro|phone|character-continuity|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Background person",
+        "invariant_violated": "Identity (accessories)",
+        "description": "The person walking away in the background is initially carrying a large red accessory in their left hand. As they move onto the flat path, the accessory vanishes entirely from their hands without being dropped.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|phone|character-continuity|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Background person",
+        "invariant_violated": "Movement continuity",
+        "description": "The background person transitions from being midway down the stairs to several feet away on the flat pavement in a fraction of a second, resulting in a sudden, impossible jump in position.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|phone|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Right thumb and smartphone",
+        "invariant_violated": "Solidity",
+        "description": "As the right thumb moves to tap the bottom right portion of the screen, the thumb appears to clip through the solid black edge/bezel of the smartphone.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|phone|object-persistence-state|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Red bag",
+        "invariant_violated": "Identity & Persistence",
+        "description": "The red bag being carried by the person in the background suddenly vanishes from their hand. There is no visible action of dropping it or handing it off; the object simply ceases to exist.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "At 00:06, a disconnected, thumb-like shape suddenly appears floating over the bottom left of the phone screen and then slides downward out of view.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "Throughout the focus on the phone screen, the text 'A742' and other interface elements continually morph, jitter, and change layout without any corresponding user input.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "Between 00:06 and 00:08, the user's right thumb makes tapping and swiping motions on the screen, but the interface does not respond to these inputs, continuing to morph independently.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "The person walking down the stairs at the beginning is holding a red bag. By 00:01, as they reach the flat path, the bag completely vanishes from their hand without falling.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "Between 00:00 and 00:01, the background person's walking animation glitches, causing them to unnaturally jump from the stairs to further down the flat path in an instant.",
+      "innocent_explanation": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "At 00:07, as the right thumb moves across the screen to tap, the tip of the thumb becomes distorted and appears to melt or clip into the screen and bezel.",
+      "innocent_explanation": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "This describes the same anomaly as F4. The red bag held by the background person suddenly disappears around 00:01 without being dropped.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:06, a disconnected, thumb-like shape suddenly appears floating over the bottom left of the phone screen and then slides downward out of view.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"Throughout the focus on the phone screen, the text 'A742' and other interface elements continually morph, jitter, and change layout without any corresponding user input.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"Between 00:06 and 00:08, the user's right thumb makes tapping and swiping motions on the screen, but the interface does not respond to these inputs, continuing to morph independently.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The person walking down the stairs at the beginning is holding a red bag. By 00:01, as they reach the flat path, the bag completely vanishes from their hand without falling.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"Between 00:00 and 00:01, the background person's walking animation glitches, causing them to unnaturally jump from the stairs to further down the flat path in an instant.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.90\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:07, as the right thumb moves across the screen to tap, the tip of the thumb becomes distorted and appears to melt or clip into the screen and bezel.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.90\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"This describes the same anomaly as F4. The red bag held by the background person suddenly disappears around 00:01 without being dropped.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

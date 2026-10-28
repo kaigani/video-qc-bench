@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__text-stability",
+  "video": "woman-car.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:38:01.580Z",
+  "latencyMs": 11109,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 620,
+    "total_tokens": 1996,
+    "cost": 0.010192,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010192,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.00744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 467,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "License plate at 00:00 reads 'STE 87'",
+    "License plate at 00:01 reads 'CTE 8'"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "License plate",
+      "invariant_violated": "Text Stability",
+      "description": "The text on the license plate changes from 'STE 87' at the beginning of the video to 'CTE 8' before it moves out of frame.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"License plate at 00:00 reads 'STE 87'\",\n    \"License plate at 00:01 reads 'CTE 8'\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"License plate\",\n      \"invariant_violated\": \"Text Stability\",\n      \"description\": \"The text on the license plate changes from 'STE 87' at the beginning of the video to 'CTE 8' before it moves out of frame.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

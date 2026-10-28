@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__vehicle-identity",
+  "video": "woman-car.mp4",
+  "role": "vehicle-identity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:38:08.379Z",
+  "latencyMs": 14769,
+  "usage": {
+    "prompt_tokens": 1342,
+    "completion_tokens": 1161,
+    "total_tokens": 2503,
+    "cost": 0.016616,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016616,
+      "upstream_inference_prompt_cost": 0.002684,
+      "upstream_inference_completions_cost": 0.013932
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 996,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Station wagon with wood paneling, STE 87 plate, figure-style hood ornament",
+    "00:04 - Station wagon, zoomed in, hood ornament has changed shape"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Hood ornament",
+      "invariant_violated": "attached hardware",
+      "description": "The hood ornament morphs from a distinct figure on a stalk at the beginning of the clip into a blocky, indistinct chrome shape as the camera moves forward.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Station wagon with wood paneling, STE 87 plate, figure-style hood ornament\",\n    \"00:04 - Station wagon, zoomed in, hood ornament has changed shape\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Hood ornament\",\n      \"invariant_violated\": \"attached hardware\",\n      \"description\": \"The hood ornament morphs from a distinct figure on a stalk at the beginning of the clip into a blocky, indistinct chrome shape as the camera moves forward.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,74 @@
+{
+  "video": "watchmaker",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:10.779Z",
+  "latencyMs": 12042,
+  "usage": {
+    "prompt_tokens": 1438,
+    "completion_tokens": 985,
+    "total_tokens": 2423,
+    "cost": 0.014696,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014696,
+      "upstream_inference_prompt_cost": 0.002876,
+      "upstream_inference_completions_cost": 0.01182
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 772,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|watchmaker|baseline-generalist|0",
+      "cls": "TP:WATC-1",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "ring in left hand",
+        "invariant_violated": "object permanence",
+        "description": "A new, simple ring with a stone suddenly materializes in the woman's left hand, resting on top of the original studded ring she was holding.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|watchmaker|object-persistence-state|0",
+      "cls": "TP:WATC-1",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "Tweezers / Pin tool",
+        "invariant_violated": "Identity & Persistence",
+        "description": "The right hand moves downwards holding tweezers, and a moment later returns holding a completely different thin metal pin tool. There is no visible action or sufficient time to explain the dropping of the tweezers and picking up of the new tool.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "At 00:04, as the left hand rotates slightly, a new ring with a prominent stone spontaneously materializes on top of the studded ring she is already holding. It does not enter the frame from elsewhere but simply appears in her hand.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "The right hand, which was holding tweezers, lowers briefly and immediately returns holding a completely different pin-like tool. The continuous motion and lack of a scene cut indicate this is an AI generation continuity error rather than a realistic tool swap.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:04, as the left hand rotates slightly, a new ring with a prominent stone spontaneously materializes on top of the studded ring she is already holding. It does not enter the frame from elsewhere but simply appears in her hand.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The right hand, which was holding tweezers, lowers briefly and immediately returns holding a completely different pin-like tool. The continuous motion and lack of a scene cut indicate this is an AI generation continuity error rather than a realistic tool swap.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

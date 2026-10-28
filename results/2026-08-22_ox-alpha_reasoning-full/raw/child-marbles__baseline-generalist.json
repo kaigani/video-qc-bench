@@ -1,0 +1,66 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:55:46.778Z",
+  "latencyMs": 142247,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 5171,
+    "total_tokens": 10884,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child in navy zip-up jacket | hands raised above bowl, stirring ball contents | hands in bowl stirring balls | picks up red ball (~0:02), drops it in, then stirs vigorously",
+    "glass bowl with ~8 balls (3 green, 3 yellow, 2 red) | sitting on wooden table, balls settled | similar set, stirred/blurred at end | red ball added ~0:03; apparent loss of one green ball across cut at ~0:05",
+    "metal egg cup with decorated egg | on right side of table, in frame | no longer in frame | exits view at hard framing change ~0:05",
+    "loose balls on table bottom-right corner | red and green visible | green, red, yellow visible | static, only framing changed"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "child (head, torso, hands)",
+      "invariant_violated": "ghosting / frame-blend artifact",
+      "description": "The child's figure appears as two offset semi-transparent copies with the background bleeding through the subject, and the hands/red ball are doubled. This is characteristic of a cross-dissolve or accidental frame blend between two takes occurring mid-action, not normal motion blur (other frames show clean directional blur).",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "scene framing / egg cup / background",
+      "invariant_violated": "jump cut / continuity break",
+      "description": "Between 0:04 and 0:06 the shot abruptly jumps closer with no transition: the metal egg cup that sat on the right of the table and the patio/terracotta-pot background vanish entirely, and the child's head leaves frame. The continuous action (stirring the bowl) reads as an unintended jump cut rather than a deliberate edit.",
+      "severity": "minor",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "balls in glass bowl (green count)",
+      "invariant_violated": "object-count continuity",
+      "description": "At 0:04 (before the cut) three green balls are countable in the bowl alongside 3 yellow and 2 red (~8 total). At 0:06 (after the cut) only 2 green balls are visible with the same 3 yellow and 2 red (~7 total). One green ball is unaccounted for across the cut; occlusion by the child's hands makes this uncertain, but the visible count drops by one.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child in navy zip-up jacket | hands raised above bowl, stirring ball contents | hands in bowl stirring balls | picks up red ball (~0:02), drops it in, then stirs vigorously\",\n    \"glass bowl with ~8 balls (3 green, 3 yellow, 2 red) | sitting on wooden table, balls settled | similar set, stirred/blurred at end | red ball added ~0:03; apparent loss of one green ball across cut at ~0:05\",\n    \"metal egg cup with decorated egg | on right side of table, in frame | no longer in frame | exits view at hard framing change ~0:05\",\n    \"loose balls on table bottom-right corner | red and green visible | green, red, yellow visible | static, only framing changed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"child (head, torso, hands)\",\n      \"invariant_violated\": \"ghosting / frame-blend artifact\",\n      \"description\": \"The child's figure appears as two offset semi-transparent copies with the background bleeding through the subject, and the hands/red ball are doubled. This is characteristic of a cross-dissolve or accidental frame blend between two takes occurring mid-action, not normal motion blur (other frames show clean directional blur).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"scene framing / egg cup / background\",\n      \"invariant_violated\": \"jump cut / continuity break\",\n      \"description\": \"Between 0:04 and 0:06 the shot abruptly jumps closer with no transition: the metal egg cup that sat on the right of the table and the patio/terracotta-pot background vanish entirely, and the child's head leaves frame. The continuous action (stirring the bowl) reads as an unintended jump cut rather than a deliberate edit.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"balls in glass bowl (green count)\",\n      \"invariant_violated\": \"object-count continuity\",\n      \"description\": \"At 0:04 (before the cut) three green balls are countable in the bowl alongside 3 yellow and 2 red (~8 total). At 0:06 (after the cut) only 2 green balls are visible with the same 3 yellow and 2 red (~7 total). One green ball is unaccounted for across the cut; occlusion by the child's hands makes this uncertain, but the visible count drops by one.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.3\n    }\n  ]\n}"
+}

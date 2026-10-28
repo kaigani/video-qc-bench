@@ -1,0 +1,57 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:42:50.355Z",
+  "latencyMs": 16776,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 1242,
+    "total_tokens": 2618,
+    "cost": 0.017656,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017656,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.014904
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 932,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone screen, top center: '4:41' at 0:03, 'A:41' at 0:04",
+    "Smartphone screen, center: 'A742' at 0:03, 'A7.42' at 0:04, 'A742' at 0:06",
+    "Smartphone screen, bottom: 'AZ - 12' at 0:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen, top center",
+      "invariant_violated": "Stability",
+      "description": "The time text at the top center changes from '4:41' to 'A:41' without explanation.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen, center",
+      "invariant_violated": "Stability",
+      "description": "The large text 'A742' spontaneously gains a decimal point, becoming 'A7.42', and later morphs its font and shape.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone screen, top center: '4:41' at 0:03, 'A:41' at 0:04\",\n    \"Smartphone screen, center: 'A742' at 0:03, 'A7.42' at 0:04, 'A742' at 0:06\",\n    \"Smartphone screen, bottom: 'AZ - 12' at 0:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen, top center\",\n      \"invariant_violated\": \"Stability\",\n      \"description\": \"The time text at the top center changes from '4:41' to 'A:41' without explanation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen, center\",\n      \"invariant_violated\": \"Stability\",\n      \"description\": \"The large text 'A742' spontaneously gains a decimal point, becoming 'A7.42', and later morphs its font and shape.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

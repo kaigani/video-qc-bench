@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:37.095Z",
+  "latencyMs": 14392,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1296,
+    "total_tokens": 2748,
+    "cost": 0.005949,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005949,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00486
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1160,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman | walking through market aisle, gripping umbrella shaft with left hand and cupping red fruit in right hand | standing/walking under umbrella | continuous physical contact with held items and ground throughout",
+    "Umbrella | shaft gripped by woman's left hand | supported overhead | grip contact maintained consistently without floating",
+    "Red fruit | supported in woman's right palm and fingers | held near chest | continuous contact with right hand",
+    "Pedestrians | walking through market pathway | moving past woman | proper ground contact and body clearance maintained without clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman | walking through market aisle, gripping umbrella shaft with left hand and cupping red fruit in right hand | standing/walking under umbrella | continuous physical contact with held items and ground throughout\",\n    \"Umbrella | shaft gripped by woman's left hand | supported overhead | grip contact maintained consistently without floating\",\n    \"Red fruit | supported in woman's right palm and fingers | held near chest | continuous contact with right hand\",\n    \"Pedestrians | walking through market pathway | moving past woman | proper ground contact and body clearance maintained without clipping\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,52 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:48:03.676Z",
+  "latencyMs": 214065,
+  "usage": {
+    "prompt_tokens": 5360,
+    "completion_tokens": 6664,
+    "total_tokens": 12024,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:04 weak ambient airflow: slight lift in subject's hair; whip antenna rigid-vertical (consistent with low wind); desert scrub static (stiff xerophytic material - confound)",
+    "00:06-00:08 strong airflow onset: hair streams horizontally backward in sustained fashion across multiple seconds; implied cause is vehicle forward motion or sustained headwind, neither corroborated by object deformation (no dust kick-up, no wheel/suspension cues, background displacement explainable by camera dolly-in)",
+    "00:06-00:08 subject's teal jacket: sleeves crossed and pressed on sill, shoulder and cuff fabric exposed to same airflow as hair; fabric shows no flutter or deformation",
+    "00:06-00:08 subject's collar/collar tips near neck: exposed to streaming airflow; remain inert",
+    "00:00-00:08 camera dolly toward subject: produces apparent background displacement; no independent deformation evidence of vehicle travel",
+    "00:00-00:08 desert scrub bushes: rigid woody desert material, expected low response even in real wind (material confound, not counted)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "woman's jacket sleeves and collar vs. her hair",
+      "invariant_violated": "wind must affect all comparably exposed light materials",
+      "description": "From 00:06 to 00:08 the subject's hair streams forcefully and continuously backward, indicating sustained strong airflow over the window area. The loose teal jacket fabric at her shoulders, sleeve cuffs, and collar tips is exposed to the same airflow yet shows zero flutter, lift, or deformation across all three seconds. Hair and loose cotton-weight fabric respond at overlapping wind thresholds; fabric pressed under her crossed arms partially excuses the forearm sleeves, but the shoulder and collar fabric is unobstructed and should show at least minor motion.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:04 weak ambient airflow: slight lift in subject's hair; whip antenna rigid-vertical (consistent with low wind); desert scrub static (stiff xerophytic material - confound)\",\n    \"00:06-00:08 strong airflow onset: hair streams horizontally backward in sustained fashion across multiple seconds; implied cause is vehicle forward motion or sustained headwind, neither corroborated by object deformation (no dust kick-up, no wheel/suspension cues, background displacement explainable by camera dolly-in)\",\n    \"00:06-00:08 subject's teal jacket: sleeves crossed and pressed on sill, shoulder and cuff fabric exposed to same airflow as hair; fabric shows no flutter or deformation\",\n    \"00:06-00:08 subject's collar/collar tips near neck: exposed to streaming airflow; remain inert\",\n    \"00:00-00:08 camera dolly toward subject: produces apparent background displacement; no independent deformation evidence of vehicle travel\",\n    \"00:00-00:08 desert scrub bushes: rigid woody desert material, expected low response even in real wind (material confound, not counted)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"woman's jacket sleeves and collar vs. her hair\",\n      \"invariant_violated\": \"wind must affect all comparably exposed light materials\",\n      \"description\": \"From 00:06 to 00:08 the subject's hair streams forcefully and continuously backward, indicating sustained strong airflow over the window area. The loose teal jacket fabric at her shoulders, sleeve cuffs, and collar tips is exposed to the same airflow yet shows zero flutter, lift, or deformation across all three seconds. Hair and loose cotton-weight fabric respond at overlapping wind thresholds; fabric pressed under her crossed arms partially excuses the forearm sleeves, but the shoulder and collar fabric is unobstructed and should show at least minor motion.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

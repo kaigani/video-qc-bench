@@ -1,0 +1,52 @@
+{
+  "key": "_long-scene__object-category-continuity",
+  "video": "_long-scene.mp4",
+  "role": "object-category-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:51:42.083Z",
+  "latencyMs": 216548,
+  "usage": {
+    "prompt_tokens": 35234,
+    "completion_tokens": 7443,
+    "total_tokens": 42677,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 | Semi-truck rig outside diner: white conventional tractor WITH sleeper cab, attached long dry-van trailer, idling (exhaust/steam visible) — established as the parked rig at the location",
+    "00:26-00:32 | Coffee pot: waitress retrieves it from behind the counter near the established coffee machine and pours into a white diner mug on the counter — origin traceable",
+    "00:30-01:38 | White diner mug: filled at 00:30 close-up, held by the man from 00:38 onward; a second mug appears in the waitress's hands by 01:28, plausibly self-poured from the same established pot — no category change, origin plausible",
+    "00:34-01:16 | Plate with fried egg and bread wedge: close-up at 00:34, in front of the man 00:38-01:10, handled by the waitress ~01:12-01:16 (consistent with clearing/settling) — category stable (plate), origin traceable to kitchen service",
+    "01:38-01:41 | $100 bill: placed on counter by the man's hand as payment, then reached for — origin is the paying character; folded-to-flat state change is physical-state only (out of scope), category stable",
+    "01:43-01:49 | Truck the man exits to: dark-green day-cab conventional tractor (no sleeper) with dark box trailer ('DURABILT' on door) — the vehicle he walks to and opens the door of"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "The trucker's rig outside the diner",
+      "invariant_violated": "unexplained provenance gap",
+      "description": "The rig the driver walks to and opens at 01:43-01:49 (dark-green day-cab tractor with box trailer) does not match the rig established in the opening shot 00:00-00:10 (white sleeper-cab tractor with long dry-van trailer, idling/steaming, clearly coded as his). No shot shows the original rig leaving or a different rig arriving, so the vehicle he uses at the end has no consistent origin across shots; the established prop was silently replaced with a different vehicle of the same general category.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 | Semi-truck rig outside diner: white conventional tractor WITH sleeper cab, attached long dry-van trailer, idling (exhaust/steam visible) — established as the parked rig at the location\",\n    \"00:26-00:32 | Coffee pot: waitress retrieves it from behind the counter near the established coffee machine and pours into a white diner mug on the counter — origin traceable\",\n    \"00:30-01:38 | White diner mug: filled at 00:30 close-up, held by the man from 00:38 onward; a second mug appears in the waitress's hands by 01:28, plausibly self-poured from the same established pot — no category change, origin plausible\",\n    \"00:34-01:16 | Plate with fried egg and bread wedge: close-up at 00:34, in front of the man 00:38-01:10, handled by the waitress ~01:12-01:16 (consistent with clearing/settling) — category stable (plate), origin traceable to kitchen service\",\n    \"01:38-01:41 | $100 bill: placed on counter by the man's hand as payment, then reached for — origin is the paying character; folded-to-flat state change is physical-state only (out of scope), category stable\",\n    \"01:43-01:49 | Truck the man exits to: dark-green day-cab conventional tractor (no sleeper) with dark box trailer ('DURABILT' on door) — the vehicle he walks to and opens the door of\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"The trucker's rig outside the diner\",\n      \"invariant_violated\": \"unexplained provenance gap\",\n      \"description\": \"The rig the driver walks to and opens at 01:43-01:49 (dark-green day-cab tractor with box trailer) does not match the rig established in the opening shot 00:00-00:10 (white sleeper-cab tractor with long dry-van trailer, idling/steaming, clearly coded as his). No shot shows the original rig leaving or a different rig arriving, so the vehicle he uses at the end has no consistent origin across shots; the established prop was silently replaced with a different vehicle of the same general category.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

@@ -1,0 +1,44 @@
+{
+  "key": "woman-car__object-persistence-state",
+  "video": "woman-car.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:26:09.306Z",
+  "latencyMs": 101249,
+  "usage": {
+    "prompt_tokens": 5758,
+    "completion_tokens": 4287,
+    "total_tokens": 10045,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (cream body, wood side paneling) | parked on desert roadside, front three-quarter view, license plate STE197, hood ornament, antenna, two wipers, roof rack, driver-side mirror | identical parked position throughout; camera only zooms toward the window | no state transitions; ghosted double image of grille/ornament at 0:02-0:04 is a crossfade dissolve between shots, not object duplication",
+    "hood ornament (small chrome) | single unit mounted front-center of hood at 0:00 | single unit still present near hood front edge at 0:06-0:08 | appears doubled at 0:02 during the dissolve overlap; resolves back to one sharp ornament once the transition completes, so no persistent count change",
+    "license plate STE197 | mounted on front bumper, fully legible at 0:00 | out of frame by ~0:02 as camera zooms in | leaves frame via camera zoom, plausibly still mounted off-screen; not a disappearance",
+    "radio antenna (thin mast) | rises from cowl area near driver side, visible 0:00-0:06 | no longer resolvable at 0:08 close-up | top of mast exceeds frame and base falls outside tight framing; no visible state change",
+    "windshield wipers (two blades) | resting at base of windshield at 0:00 | still present at windshield base in 0:06 frame | none",
+    "roof rack (chrome rails) | on roof, visible top-right at 0:00 | remains visible in every frame including 0:08 | none",
+    "driver-side exterior mirror | mounted at A-pillar beside the window at 0:00-0:02 | out of frame/occluded once camera zooms tightly on the occupant at 0:06-0:08 | leaves frame due to zoom and occlusion, not vanishing"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (cream body, wood side paneling) | parked on desert roadside, front three-quarter view, license plate STE197, hood ornament, antenna, two wipers, roof rack, driver-side mirror | identical parked position throughout; camera only zooms toward the window | no state transitions; ghosted double image of grille/ornament at 0:02-0:04 is a crossfade dissolve between shots, not object duplication\",\n    \"hood ornament (small chrome) | single unit mounted front-center of hood at 0:00 | single unit still present near hood front edge at 0:06-0:08 | appears doubled at 0:02 during the dissolve overlap; resolves back to one sharp ornament once the transition completes, so no persistent count change\",\n    \"license plate STE197 | mounted on front bumper, fully legible at 0:00 | out of frame by ~0:02 as camera zooms in | leaves frame via camera zoom, plausibly still mounted off-screen; not a disappearance\",\n    \"radio antenna (thin mast) | rises from cowl area near driver side, visible 0:00-0:06 | no longer resolvable at 0:08 close-up | top of mast exceeds frame and base falls outside tight framing; no visible state change\",\n    \"windshield wipers (two blades) | resting at base of windshield at 0:00 | still present at windshield base in 0:06 frame | none\",\n    \"roof rack (chrome rails) | on roof, visible top-right at 0:00 | remains visible in every frame including 0:08 | none\",\n    \"driver-side exterior mirror | mounted at A-pillar beside the window at 0:00-0:02 | out of frame/occluded once camera zooms tightly on the occupant at 0:06-0:08 | leaves frame due to zoom and occlusion, not vanishing\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "dialogue__layout-connectivity",
+  "video": "dialogue.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:27:40.841Z",
+  "latencyMs": 211391,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 8339,
+    "total_tokens": 14207,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:06: Static shot of man speaking in a wood-paneled room; established background left-to-right: dark open doorway at far left edge, paneled door with brass coat hook holding a navy coat and a dartboard mounted above it, framed print partially visible behind the man's shoulder, brass light-switch plate on the wall, framed horse print, second paneled door at far right edge",
+    "Openings tracked: (A) dark doorway at far left of frame — never used, far side never shown; (B) paneled door at far right of frame, closed/edge-cropped at 00:00; no window or through-view openings revealed at any point",
+    "00:07: Man finishes speaking and turns away from camera toward the right side of the room (his left)",
+    "00:08: Camera pans right following the man; the far-right paneled door (B) now appears at frame-left, open to dark space; man walks toward and into it; wall behind him consistently shows the horse print and light-switch plate, preserving their established relative order (switch left of print)",
+    "Traversal logged: man: main room -> through door B (far side dark/unseen); route is consistent with the established layout since door B was present on that wall from the first frame",
+    "Fixture check: coat hook on door, dartboard above hook area, wall light switch near door B — all functionally plausible for the space; no furniture oriented to serve a wrong object observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:06: Static shot of man speaking in a wood-paneled room; established background left-to-right: dark open doorway at far left edge, paneled door with brass coat hook holding a navy coat and a dartboard mounted above it, framed print partially visible behind the man's shoulder, brass light-switch plate on the wall, framed horse print, second paneled door at far right edge\",\n    \"Openings tracked: (A) dark doorway at far left of frame — never used, far side never shown; (B) paneled door at far right of frame, closed/edge-cropped at 00:00; no window or through-view openings revealed at any point\",\n    \"00:07: Man finishes speaking and turns away from camera toward the right side of the room (his left)\",\n    \"00:08: Camera pans right following the man; the far-right paneled door (B) now appears at frame-left, open to dark space; man walks toward and into it; wall behind him consistently shows the horse print and light-switch plate, preserving their established relative order (switch left of print)\",\n    \"Traversal logged: man: main room -> through door B (far side dark/unseen); route is consistent with the established layout since door B was present on that wall from the first frame\",\n    \"Fixture check: coat hook on door, dartboard above hook area, wall light switch near door B — all functionally plausible for the space; no furniture oriented to serve a wrong object observed\"\n  ],\n  \"findings\": []\n}"
+}

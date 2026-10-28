@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__environment-response",
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:32:07.875Z",
+  "latencyMs": 443611,
+  "usage": {
+    "prompt_tokens": 34868,
+    "completion_tokens": 16361,
+    "total_tokens": 51229,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 parked semi's exhaust/steam plume: continuous emission implied by idling engine or reefer unit; plume billows at cab's left and drifts left on a light breeze; gradually fades out by 00:08-00:10, consistent with a unit cycling off; no other exposed light objects (flags, foliage, loose fabric) in frame to cross-check the breeze",
+    "00:28-00:33 coffee pour close-up: stream falls with normal gravity from carafe into mug; no visible steam on the stream or the mug surface",
+    "00:34-00:37 breakfast plate close-up: dense, continuous steam column rises from the egg area of the plate, drifting slightly; source plausibly anchored to the hot food",
+    "00:38-00:45 wide counter shot: same plate keeps steaming steadily across the whole shot while the freshly poured coffee mug in the man's hands shows no steam in the same air",
+    "01:02-01:10 road traffic beyond the front windows: cars traverse at consistent road speed, no interaction with the lot or building; interior objects remain static",
+    "01:29-01:37 two-shot at sunrise: neither mug shows steam (mutually consistent; strong warm backlight is a plausible visibility confound)",
+    "01:41 cash placed on counter: bill flexes and settles flat under gravity, no anomaly",
+    "01:43-01:47 man walks to the green box truck: truck holds a fixed position relative to the stationary window frame; apparent rightward shift at 01:47 coincides with a dissolve/shot change (ghosted figure visible), indicating reframe rather than vehicle motion",
+    "01:47-01:52 waitress viewed at the window: semi-transparent reflection in the glass is consistent with glass optics; truck exterior remains static",
+    "01:53-01:58 sunrise interior: light beam angle through the left windows is consistent with a low sun; counter objects and stools show no anomalous motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:38",
+      "entity": "coffee mug (freshly poured hot coffee) held by the man",
+      "invariant_violated": "comparable elements must respond equally to the same influence",
+      "description": "Within a single shot and the same air, the breakfast plate emits a thick, continuous steam column while the coffee poured only seconds earlier (00:28-00:33) shows no steam at all — neither in the pour close-up nor in the wide shot where the plate beside it steams heavily. Two comparable hot, wet surfaces behave differently under identical conditions, and no material difference (mug ceramic vs. plate food) accounts for the total absence of the effect on the coffee.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 parked semi's exhaust/steam plume: continuous emission implied by idling engine or reefer unit; plume billows at cab's left and drifts left on a light breeze; gradually fades out by 00:08-00:10, consistent with a unit cycling off; no other exposed light objects (flags, foliage, loose fabric) in frame to cross-check the breeze\",\n    \"00:28-00:33 coffee pour close-up: stream falls with normal gravity from carafe into mug; no visible steam on the stream or the mug surface\",\n    \"00:34-00:37 breakfast plate close-up: dense, continuous steam column rises from the egg area of the plate, drifting slightly; source plausibly anchored to the hot food\",\n    \"00:38-00:45 wide counter shot: same plate keeps steaming steadily across the whole shot while the freshly poured coffee mug in the man's hands shows no steam in the same air\",\n    \"01:02-01:10 road traffic beyond the front windows: cars traverse at consistent road speed, no interaction with the lot or building; interior objects remain static\",\n    \"01:29-01:37 two-shot at sunrise: neither mug shows steam (mutually consistent; strong warm backlight is a plausible visibility confound)\",\n    \"01:41 cash placed on counter: bill flexes and settles flat under gravity, no anomaly\",\n    \"01:43-01:47 man walks to the green box truck: truck holds a fixed position relative to the stationary window frame; apparent rightward shift at 01:47 coincides with a dissolve/shot change (ghosted figure visible), indicating reframe rather than vehicle motion\",\n    \"01:47-01:52 waitress viewed at the window: semi-transparent reflection in the glass is consistent with glass optics; truck exterior remains static\",\n    \"01:53-01:58 sunrise interior: light beam angle through the left windows is consistent with a low sun; counter objects and stools show no anomalous motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:38\",\n      \"entity\": \"coffee mug (freshly poured hot coffee) held by the man\",\n      \"invariant_violated\": \"comparable elements must respond equally to the same influence\",\n      \"description\": \"Within a single shot and the same air, the breakfast plate emits a thick, continuous steam column while the coffee poured only seconds earlier (00:28-00:33) shows no steam at all — neither in the pour close-up nor in the wide shot where the plate beside it steams heavily. Two comparable hot, wet surfaces behave differently under identical conditions, and no material difference (mug ceramic vs. plate food) accounts for the total absence of the effect on the coffee.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

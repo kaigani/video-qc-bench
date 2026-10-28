@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:12.426Z",
+  "latencyMs": 53730,
+  "usage": {
+    "prompt_tokens": 10630,
+    "completion_tokens": 1936,
+    "total_tokens": 12566,
+    "cost": 0.0152325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0152325,
+      "upstream_inference_prompt_cost": 0.0079725,
+      "upstream_inference_completions_cost": 0.00726
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1683,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck_exhaust | emitting steam at 00:00 | steam dispersing into air at 00:09 | continuous exhaust flow",
+    "waitress | wiping counter at 00:10 | resting at 00:18 | rhythmic wiping motion across counter surface",
+    "patron | entering diner door at 00:19 | sitting on counter stool at 00:26 | walks across room and sits down",
+    "coffee_pot | pouring coffee at 00:27 | mug filled at 00:31 | liquid flows downward into mug continuously",
+    "breakfast_plate | steaming at 00:32 | delivered to patron at 01:09 | hot food steams continuously",
+    "cash | placed on counter at 01:38 | resting by mug at 01:40 | hand deposits bills on surface",
+    "patron | exiting diner at 01:41 | approaching truck at 01:45 | walks across lot toward driver side door"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"truck_exhaust | emitting steam at 00:00 | steam dispersing into air at 00:09 | continuous exhaust flow\",\n    \"waitress | wiping counter at 00:10 | resting at 00:18 | rhythmic wiping motion across counter surface\",\n    \"patron | entering diner door at 00:19 | sitting on counter stool at 00:26 | walks across room and sits down\",\n    \"coffee_pot | pouring coffee at 00:27 | mug filled at 00:31 | liquid flows downward into mug continuously\",\n    \"breakfast_plate | steaming at 00:32 | delivered to patron at 01:09 | hot food steams continuously\",\n    \"cash | placed on counter at 01:38 | resting by mug at 01:40 | hand deposits bills on surface\",\n    \"patron | exiting diner at 01:41 | approaching truck at 01:45 | walks across lot toward driver side door\"\n  ],\n  \"findings\": []\n}"
+}

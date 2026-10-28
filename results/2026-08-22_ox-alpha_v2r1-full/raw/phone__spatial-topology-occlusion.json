@@ -1,0 +1,43 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:58:17.166Z",
+  "latencyMs": 47193,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 1609,
+    "total_tokens": 7836,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone showing code A742 | held in both hands, foreground, slightly out of focus, screen reads A742 | same phone, now in sharp focus filling frame | camera tilts down toward it; no layout change",
+    "person with red shopping bag | walking away on paved walkway beyond railing, upper background | exits top of frame by ~0:04 | natural walk-away exit, plausibly continues off-screen",
+    "black metal stair railing | diagonal top rail with vertical balusters, right side of frame, person visible behind it | shifts upward in frame and becomes blurred as camera descends stairs | consistent rigid motion relative to camera descent",
+    "building wall (white/brick) | left edge of frame beside descending steps | exits left of frame as camera moves down | consistent with camera translation",
+    "paved walkway | open plaza beyond railing, top of frame | remains background, blurred | consistent",
+    "shrubs/plants | planted bed below railing near stair base | visible at 0:00-0:02, then out of frame | consistent with camera descent"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone showing code A742 | held in both hands, foreground, slightly out of focus, screen reads A742 | same phone, now in sharp focus filling frame | camera tilts down toward it; no layout change\",\n    \"person with red shopping bag | walking away on paved walkway beyond railing, upper background | exits top of frame by ~0:04 | natural walk-away exit, plausibly continues off-screen\",\n    \"black metal stair railing | diagonal top rail with vertical balusters, right side of frame, person visible behind it | shifts upward in frame and becomes blurred as camera descends stairs | consistent rigid motion relative to camera descent\",\n    \"building wall (white/brick) | left edge of frame beside descending steps | exits left of frame as camera moves down | consistent with camera translation\",\n    \"paved walkway | open plaza beyond railing, top of frame | remains background, blurred | consistent\",\n    \"shrubs/plants | planted bed below railing near stair base | visible at 0:00-0:02, then out of frame | consistent with camera descent\"\n  ],\n  \"findings\": []\n}"
+}

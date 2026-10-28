@@ -1,0 +1,47 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:57.452Z",
+  "latencyMs": 17607,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 2175,
+    "total_tokens": 3413,
+    "cost": 0.00908475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00908475,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00815625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2013,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing denim jacket, leaning out driver side window with arms on hood | head turned left with hair blowing in wind | torso clips through car A-pillar"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and car frame",
+      "invariant_violated": "spatial_inconsistency",
+      "description": "The woman is positioned leaning out of the side door window while her arms rest forward on top of the hood, placing her body unnaturally around and through the car's A-pillar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | wearing denim jacket, leaning out driver side window with arms on hood | head turned left with hair blowing in wind | torso clips through car A-pillar\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and car frame\",\n      \"invariant_violated\": \"spatial_inconsistency\",\n      \"description\": \"The woman is positioned leaning out of the side door window while her arms rest forward on top of the hood, placing her body unnaturally around and through the car's A-pillar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

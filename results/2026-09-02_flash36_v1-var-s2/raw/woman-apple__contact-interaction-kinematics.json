@@ -1,0 +1,39 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:42:43.513Z",
+  "latencyMs": 22033,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 1385,
+    "total_tokens": 2837,
+    "cost": 0.00628275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00628275,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00519375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1269,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (center) | holding umbrella stem in left hand, red fruit in right hand | maintaining grip on umbrella stem in left hand, red fruit in right hand | walks forward while camera orbits, left hand grips umbrella shaft, right hand supports fruit without clipping or floating",
+    "pedestrians (background/foreground) | walking on paved street in outdoor market | walking past woman and fruit stalls | feet maintain solid ground contact, walking kinematics continuous without sliding or clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (center) | holding umbrella stem in left hand, red fruit in right hand | maintaining grip on umbrella stem in left hand, red fruit in right hand | walks forward while camera orbits, left hand grips umbrella shaft, right hand supports fruit without clipping or floating\",\n    \"pedestrians (background/foreground) | walking on paved street in outdoor market | walking past woman and fruit stalls | feet maintain solid ground contact, walking kinematics continuous without sliding or clipping\"\n  ],\n  \"findings\": []\n}"
+}

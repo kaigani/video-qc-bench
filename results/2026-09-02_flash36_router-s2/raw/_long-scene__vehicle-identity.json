@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:36:43.581Z",
+  "latencyMs": 37829,
+  "usage": {
+    "prompt_tokens": 10547,
+    "completion_tokens": 1046,
+    "total_tokens": 11593,
+    "cost": 0.01183275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01183275,
+      "upstream_inference_prompt_cost": 0.00791025,
+      "upstream_inference_completions_cost": 0.0039225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 896,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - White aerodynamic sleeper semi-truck cab parked outside the diner",
+    "01:41 - Dark green classic conventional box truck parked outside the diner"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Semi-truck parked outside diner",
+      "invariant_violated": "identity",
+      "description": "The vehicle parked outside the diner changes from a modern white aerodynamic semi-truck (seen at 00:00-00:09) to a dark green vintage classic box truck with chrome stacks and white side stripes (01:41-01:49), despite representing the same vehicle parked outside during the protagonist's visit.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\"ledger\":[\"00:00 - White aerodynamic sleeper semi-truck cab parked outside the diner\",\"01:41 - Dark green classic conventional box truck parked outside the diner\"],\"findings\":[{\"timestamp\":\"01:41\",\"entity\":\"Semi-truck parked outside diner\",\"invariant_violated\":\"identity\",\"description\":\"The vehicle parked outside the diner changes from a modern white aerodynamic semi-truck (seen at 00:00-00:09) to a dark green vintage classic box truck with chrome stacks and white side stripes (01:41-01:49), despite representing the same vehicle parked outside during the protagonist's visit.\",\"severity\":\"severe\",\"confidence\":1.0}]}"
+}

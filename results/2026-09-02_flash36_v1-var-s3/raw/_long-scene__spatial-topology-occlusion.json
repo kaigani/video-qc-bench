@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:13:06.213Z",
+  "latencyMs": 29187,
+  "usage": {
+    "prompt_tokens": 10631,
+    "completion_tokens": 2669,
+    "total_tokens": 13300,
+    "cost": 0.017982,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017982,
+      "upstream_inference_prompt_cost": 0.00797325,
+      "upstream_inference_completions_cost": 0.01000875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2399,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner interior | main counter with stools, kitchen pass-through wall, booths along windows | structural layout stays fixed throughout | captured across various interior angles",
+    "waitress | positioned behind counter, then sitting at counter stool | duplicated in foreground and background simultaneously | appears in two places at once at 01:50",
+    "man | enters from doorway, sits at counter stool, exits to truck | walking outside towards semi-truck | transitions from interior counter to exterior lot",
+    "exterior parking area | truck parked outside diner windows | white truck at dusk, green truck at sunrise | seen through front glass windows"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "waitress",
+      "invariant_violated": "impossible geometry",
+      "description": "In the wide shot between 01:50 and 01:58, the waitress is shown sitting on a counter stool in the foreground while an identical duplicate of her is simultaneously standing behind the counter cleaning in the background of the same unbroken shot.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner interior | main counter with stools, kitchen pass-through wall, booths along windows | structural layout stays fixed throughout | captured across various interior angles\",\n    \"waitress | positioned behind counter, then sitting at counter stool | duplicated in foreground and background simultaneously | appears in two places at once at 01:50\",\n    \"man | enters from doorway, sits at counter stool, exits to truck | walking outside towards semi-truck | transitions from interior counter to exterior lot\",\n    \"exterior parking area | truck parked outside diner windows | white truck at dusk, green truck at sunrise | seen through front glass windows\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"impossible geometry\",\n      \"description\": \"In the wide shot between 01:50 and 01:58, the waitress is shown sitting on a counter stool in the foreground while an identical duplicate of her is simultaneously standing behind the counter cleaning in the background of the same unbroken shot.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

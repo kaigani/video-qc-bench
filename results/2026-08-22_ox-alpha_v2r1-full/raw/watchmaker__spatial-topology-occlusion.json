@@ -1,0 +1,44 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:17:33.547Z",
+  "latencyMs": 113075,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 2423,
+    "total_tokens": 8650,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman (torso/hands) | centered, navy shirt with white vertical stripes, facing camera, looking down at hands | same posture throughout | only minor camera reframing, no layout change",
+    "tweezers | silver, held in right hand (viewer left), applied to object at 0:00-0:04 | absent from frame from ~0:06 onward | plausibly set down on table below frame; not a vanishing",
+    "crystal brooch (small round object) | held in left hand (viewer right) at chest height, in front of torso | same object, same hand | briefly manipulated by both hands at 0:06, returns to left hand at 0:08",
+    "watch | black strap, white face, on left wrist (viewer right) | same wrist, same position in every frame | no transfer or disappearance",
+    "rings | silver band on right-hand ring finger; silver band on left-hand ring finger | both persist | visibility varies only with grip/hand angle, consistent with innocent explanation",
+    "background | plain white wall, subtle vertical corner/shadow near right frame edge | same wall throughout | no doorway/window/connectivity elements to contradict",
+    "table edge | dark surface at bottom of frame at 0:00 and 0:08 | same position | absent mid-video only due to tighter framing"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman (torso/hands) | centered, navy shirt with white vertical stripes, facing camera, looking down at hands | same posture throughout | only minor camera reframing, no layout change\",\n    \"tweezers | silver, held in right hand (viewer left), applied to object at 0:00-0:04 | absent from frame from ~0:06 onward | plausibly set down on table below frame; not a vanishing\",\n    \"crystal brooch (small round object) | held in left hand (viewer right) at chest height, in front of torso | same object, same hand | briefly manipulated by both hands at 0:06, returns to left hand at 0:08\",\n    \"watch | black strap, white face, on left wrist (viewer right) | same wrist, same position in every frame | no transfer or disappearance\",\n    \"rings | silver band on right-hand ring finger; silver band on left-hand ring finger | both persist | visibility varies only with grip/hand angle, consistent with innocent explanation\",\n    \"background | plain white wall, subtle vertical corner/shadow near right frame edge | same wall throughout | no doorway/window/connectivity elements to contradict\",\n    \"table edge | dark surface at bottom of frame at 0:00 and 0:08 | same position | absent mid-video only due to tighter framing\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,70 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T21:13:46.711Z",
+  "latencyMs": 181193,
+  "usage": {
+    "prompt_tokens": 5853,
+    "completion_tokens": 6787,
+    "total_tokens": 12640,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Large glass jar (clear, pour spout, on cutting board): empty, 0% fill",
+    "00:00 - Small glass bowl (held over jar, transparent): green olives only, ~8-10 visible, ~half full",
+    "00:00 - Stainless steel bowl (counter, right): green olives, ~2/3 full",
+    "00:00 - White patterned bowl (far right): green olives, ~full",
+    "00:02 - Large glass jar: mixed green AND dark purple/black olives at bottom, ~8-10 olives, fill rising",
+    "00:02 - Small glass bowl: still ~5-6 green olives visible, mid-pour",
+    "00:04 - Large glass jar: ~18-22 mixed green/dark olives in bottom layer, fill higher",
+    "00:04 - Small glass bowl: tilted, appears nearly empty after pour",
+    "00:04 - Stainless steel bowl: green olives, ~2/3 full, untouched on counter",
+    "00:06 - Large glass jar (post camera cut): ~25-30 mixed olives, ~1/4 full, level risen from 00:04",
+    "00:06 - Small glass bowl: green olives again (~6-8) after appearing empty at 00:04",
+    "00:06 - Stainless steel bowl: green olives, count slightly reduced vs 00:04",
+    "00:08 - Large glass jar: ~30-35 mixed olives, ~1/4-1/3 full, being filled from small bowl",
+    "00:08 - Small glass bowl: green olives remaining, mid-pour",
+    "00:08 - Stainless steel bowl: green olives (possibly one dark), further reduced",
+    "00:08 - White patterned bowl: green olives, unchanged throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "small glass bowl -> large jar transfer",
+      "invariant_violated": "source contents match",
+      "description": "Dark purple/black olives are seen falling into and resting in the large jar, but the source small glass bowl showed exclusively green olives at 00:00. The bowl is transparent glass, so dark olives should have been visible if present; they arrive with no visible source containing dark olives. Partially mitigated by possible occlusion under the green olives in the pile and by the hand gripping the bowl.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "small glass bowl",
+      "invariant_violated": "refill without cause",
+      "description": "The small glass bowl appears nearly empty at 00:04 after pouring, but at 00:06 (immediately after a camera cut) it again holds ~6-8 green olives. No refill action is shown; a legitimate off-screen refill (e.g., scooping from the stainless steel bowl, whose olive count slightly drops across the cut) could explain it, so this is noted at lower confidence rather than certainty.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Large glass jar (clear, pour spout, on cutting board): empty, 0% fill\",\n    \"00:00 - Small glass bowl (held over jar, transparent): green olives only, ~8-10 visible, ~half full\",\n    \"00:00 - Stainless steel bowl (counter, right): green olives, ~2/3 full\",\n    \"00:00 - White patterned bowl (far right): green olives, ~full\",\n    \"00:02 - Large glass jar: mixed green AND dark purple/black olives at bottom, ~8-10 olives, fill rising\",\n    \"00:02 - Small glass bowl: still ~5-6 green olives visible, mid-pour\",\n    \"00:04 - Large glass jar: ~18-22 mixed green/dark olives in bottom layer, fill higher\",\n    \"00:04 - Small glass bowl: tilted, appears nearly empty after pour\",\n    \"00:04 - Stainless steel bowl: green olives, ~2/3 full, untouched on counter\",\n    \"00:06 - Large glass jar (post camera cut): ~25-30 mixed olives, ~1/4 full, level risen from 00:04\",\n    \"00:06 - Small glass bowl: green olives again (~6-8) after appearing empty at 00:04\",\n    \"00:06 - Stainless steel bowl: green olives, count slightly reduced vs 00:04\",\n    \"00:08 - Large glass jar: ~30-35 mixed olives, ~1/4-1/3 full, being filled from small bowl\",\n    \"00:08 - Small glass bowl: green olives remaining, mid-pour\",\n    \"00:08 - Stainless steel bowl: green olives (possibly one dark), further reduced\",\n    \"00:08 - White patterned bowl: green olives, unchanged throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"small glass bowl -> large jar transfer\",\n      \"invariant_violated\": \"source contents match\",\n      \"description\": \"Dark purple/black olives are seen falling into and resting in the large jar, but the source small glass bowl showed exclusively green olives at 00:00. The bowl is transparent glass, so dark olives should have been visible if present; they arrive with no visible source containing dark olives. Partially mitigated by possible occlusion under the green olives in the pile and by the hand gripping the bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"small glass bowl\",\n      \"invariant_violated\": \"refill without cause\",\n      \"description\": \"The small glass bowl appears nearly empty at 00:04 after pouring, but at 00:06 (immediately after a camera cut) it again holds ~6-8 green olives. No refill action is shown; a legitimate off-screen refill (e.g., scooping from the stainless steel bowl, whose olive count slightly drops across the cut) could explain it, so this is noted at lower confidence rather than certainty.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T02:24:03.448Z",
+  "latencyMs": 196863,
+  "usage": {
+    "prompt_tokens": 34881,
+    "completion_tokens": 4218,
+    "total_tokens": 39099,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 exterior dusk: no containers in play; parked semi truck venting steam (not a container transfer)",
+    "00:12-00:24 diner counter: glass coffee carafes sit on warmer behind counter, black coffee visible; waitress wiping counter",
+    "00:26 glass coffee carafe (black lid/handle): black coffee, roughly 60-70% full, waitress lifts it from warmer",
+    "00:28 white ceramic diner mug on counter in front of seated man: empty, carafe tilted over it, pour beginning",
+    "00:28-00:33 glass carafe during pour: black coffee, level remains high (carafe capacity >> one mug), no color/kind change in stream",
+    "00:30-00:33 white mug: fill rises monotonically as stream enters; full by ~00:33 when carafe tilts back",
+    "00:34-00:36 ceramic plate: slice of cornbread + fried egg, steaming; not a liquid container",
+    "00:38-00:44 man at counter holding the same white mug (coffee inside, level obscured by hands), plate of cornbread/egg beside him",
+    "00:46-01:00 counter cleared of plate/mug in background shots; carafes remain on warmer, fill not discernible at distance",
+    "01:12-01:16 man still holds white mug; waitress removes plate with food intact (cornbread + egg unchanged)",
+    "01:20-01:36 waitress sits with her own white mug containing coffee (fill event occurred off-camera; no contradiction, machine is adjacent); man's mug consistent",
+    "01:38-01:41 folded $100 bill(s) placed on counter and taken by a second hand; count ambiguity (one folded vs two fanned) explainable by fold opening",
+    "01:43-01:58 man exits to box truck; waitress clears counter; no further container transfers observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 exterior dusk: no containers in play; parked semi truck venting steam (not a container transfer)\",\n    \"00:12-00:24 diner counter: glass coffee carafes sit on warmer behind counter, black coffee visible; waitress wiping counter\",\n    \"00:26 glass coffee carafe (black lid/handle): black coffee, roughly 60-70% full, waitress lifts it from warmer\",\n    \"00:28 white ceramic diner mug on counter in front of seated man: empty, carafe tilted over it, pour beginning\",\n    \"00:28-00:33 glass carafe during pour: black coffee, level remains high (carafe capacity >> one mug), no color/kind change in stream\",\n    \"00:30-00:33 white mug: fill rises monotonically as stream enters; full by ~00:33 when carafe tilts back\",\n    \"00:34-00:36 ceramic plate: slice of cornbread + fried egg, steaming; not a liquid container\",\n    \"00:38-00:44 man at counter holding the same white mug (coffee inside, level obscured by hands), plate of cornbread/egg beside him\",\n    \"00:46-01:00 counter cleared of plate/mug in background shots; carafes remain on warmer, fill not discernible at distance\",\n    \"01:12-01:16 man still holds white mug; waitress removes plate with food intact (cornbread + egg unchanged)\",\n    \"01:20-01:36 waitress sits with her own white mug containing coffee (fill event occurred off-camera; no contradiction, machine is adjacent); man's mug consistent\",\n    \"01:38-01:41 folded $100 bill(s) placed on counter and taken by a second hand; count ambiguity (one folded vs two fanned) explainable by fold opening\",\n    \"01:43-01:58 man exits to box truck; waitress clears counter; no further container transfers observed\"\n  ],\n  \"findings\": []\n}"
+}

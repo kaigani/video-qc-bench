@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:28:22.356Z",
+  "latencyMs": 34973,
+  "usage": {
+    "prompt_tokens": 10443,
+    "completion_tokens": 1829,
+    "total_tokens": 12272,
+    "cost": 0.014691,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014691,
+      "upstream_inference_prompt_cost": 0.00783225,
+      "upstream_inference_completions_cost": 0.00685875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1557,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi truck | white semi cab parked outside at night | green box truck parked outside at day | shape and color change",
+    "waitress | woman in blue shirt and white apron | duplicate clone appears behind counter | duplicated at 01:52"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "parked truck",
+      "invariant_violated": "appearance_inconsistency",
+      "description": "The semi-truck parked outside changes appearance and color from a white semi cab (seen at 00:00) to a green box truck.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "character_duplication",
+      "description": "When the waitress stands up from the counter stool to walk behind the counter, an identical clone of the waitress is already standing and working behind the counter in the background.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi truck | white semi cab parked outside at night | green box truck parked outside at day | shape and color change\",\n    \"waitress | woman in blue shirt and white apron | duplicate clone appears behind counter | duplicated at 01:52\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"parked truck\",\n      \"invariant_violated\": \"appearance_inconsistency\",\n      \"description\": \"The semi-truck parked outside changes appearance and color from a white semi cab (seen at 00:00) to a green box truck.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"character_duplication\",\n      \"description\": \"When the waitress stands up from the counter stool to walk behind the counter, an identical clone of the waitress is already standing and working behind the counter in the background.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

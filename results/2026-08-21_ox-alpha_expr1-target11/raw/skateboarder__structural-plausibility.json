@@ -1,0 +1,46 @@
+{
+  "key": "skateboarder__structural-plausibility",
+  "video": "skateboarder.mp4",
+  "role": "structural-plausibility",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T06:16:01.425Z",
+  "latencyMs": 72257,
+  "usage": {
+    "prompt_tokens": 6234,
+    "completion_tokens": 2296,
+    "total_tokens": 8530,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - Skateboard under standing skater: expect 4 wheels, 2 trucks, 1 rigid deck; two near-side wheels and board outline clearly visible, far side consistent -> checks out",
+    "0:00-0:02 - Skater anatomy: two arms, two legs, one head, hands near knees; no extra/missing limbs visible -> checks out",
+    "0:02-0:03 - Skateboard mid-trick in air: board tilted with trucks/wheels visible; motion blur present, flip rotation consistent with kickflip mechanics -> checks out (blur, not morphing)",
+    "0:04-0:05 - Skateboard landing/rolling: 4 wheels and both trucks visible on ground, deck rigid -> checks out",
+    "0:06-0:07 - Skateboard rolling away: wheel count and deck structure consistent -> checks out",
+    "0:08 - Skateboard during pop: board angled nose-up; tail area motion-blurred, apparent flex attributable to blur/fisheye, no sharp frame shows deformed deck -> not reportable",
+    "0:09 - Skateboard mid-flip: board rotating under feet, motion blur; no sharp frame showing impossible structure -> not reportable",
+    "0:10 - Skater rolling away: anatomy and board structure normal -> checks out",
+    "Shirt logo text (0:00-0:07): small chest print present; too small/angled to read at all times -> not a defect"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - Skateboard under standing skater: expect 4 wheels, 2 trucks, 1 rigid deck; two near-side wheels and board outline clearly visible, far side consistent -> checks out\",\n    \"0:00-0:02 - Skater anatomy: two arms, two legs, one head, hands near knees; no extra/missing limbs visible -> checks out\",\n    \"0:02-0:03 - Skateboard mid-trick in air: board tilted with trucks/wheels visible; motion blur present, flip rotation consistent with kickflip mechanics -> checks out (blur, not morphing)\",\n    \"0:04-0:05 - Skateboard landing/rolling: 4 wheels and both trucks visible on ground, deck rigid -> checks out\",\n    \"0:06-0:07 - Skateboard rolling away: wheel count and deck structure consistent -> checks out\",\n    \"0:08 - Skateboard during pop: board angled nose-up; tail area motion-blurred, apparent flex attributable to blur/fisheye, no sharp frame shows deformed deck -> not reportable\",\n    \"0:09 - Skateboard mid-flip: board rotating under feet, motion blur; no sharp frame showing impossible structure -> not reportable\",\n    \"0:10 - Skater rolling away: anatomy and board structure normal -> checks out\",\n    \"Shirt logo text (0:00-0:07): small chest print present; too small/angled to read at all times -> not a defect\"\n  ],\n  \"findings\": []\n}"
+}

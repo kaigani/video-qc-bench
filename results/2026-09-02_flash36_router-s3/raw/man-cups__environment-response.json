@@ -1,0 +1,39 @@
+{
+  "key": "man-cups__environment-response",
+  "video": "man-cups.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:44:20.289Z",
+  "latencyMs": 13488,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 576,
+    "total_tokens": 1935,
+    "cost": 0.00317925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00317925,
+      "upstream_inference_prompt_cost": 0.00101925,
+      "upstream_inference_completions_cost": 0.00216
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 477,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09 | Indoor ambient air | Static environment | Should keep clothing, hair, and tablecloth stationary | Suit, tie, hair, and table covering remain motionless as expected",
+    "00:00-00:09 | Gravity and object manipulation | Coins dropped and placed into cups | Should cause coins to fall downward into cups and stay resting on surfaces | Coins drop consistently under gravity into cups"
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"00:00-00:09 | Indoor ambient air | Static environment | Should keep clothing, hair, and tablecloth stationary | Suit, tie, hair, and table covering remain motionless as expected\", \"00:00-00:09 | Gravity and object manipulation | Coins dropped and placed into cups | Should cause coins to fall downward into cups and stay resting on surfaces | Coins drop consistently under gravity into cups\"], \"findings\": []}"
+}

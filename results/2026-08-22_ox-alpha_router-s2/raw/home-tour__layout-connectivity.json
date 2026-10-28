@@ -1,0 +1,52 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:03:20.202Z",
+  "latencyMs": 766650,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 30442,
+    "total_tokens": 36310,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 — Kitchen (wood cabinets, microwave, sink/stove under window) connects via wide cased opening to entry hallway; white glass-paneled front door at hallway's far end; botanical print on hallway wall; bright window/room on hallway's left near front door",
+    "0:01-0:02 — Traversal: woman walks from kitchen through the cased opening down the straight entry hallway toward the front door; framed prints on right wall, closed white paneled door on left wall",
+    "0:03 — Traversal: she turns right through a doorway (door A) off the entry hallway a short distance before the front door",
+    "0:04-0:05 — Bedroom entered via door A: bed with white bedding and dark headboard, curtained windows, nightstand with lamp, dresser, chair at foot; botanical print at the doorway corner; far doorway (door B) at back of room shows a ceiling fan",
+    "0:05-0:07 — Bedroom windows on its outer walls show established exterior (green trees/lawn); chandelier; furniture arrangement functional for a bedroom",
+    "0:07-0:09 — Traversal: she crosses the bedroom to far doorway (door B); through it: a corridor with a bright window on its left wall, a framed picture on its right wall, a ceiling fan, and a white glass-paneled front door straight ahead at its far end"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:08",
+      "entity": "Far doorway (door B) of the bedroom and the corridor visible through it",
+      "invariant_violated": "View through an opening must match the established far side / floor-plan connectivity",
+      "description": "Through the bedroom's far doorway the camera sees a corridor running straight to a white glass-paneled front entry door, with a bright window on the left wall and framed art on the right — matching the entry hallway established at 0:00-0:03. However, the bedroom was entered at 0:03 through a door on that same entry hallway just short of the front door, and the bedroom's other walls are exterior (its windows show outdoors at 0:05-0:07). A doorway on the bedroom's far side cannot have a straight axial sightline down the entry hallway to the front door: the only corridor aligned with the front door is the entry hallway itself, whose opposite end is the kitchen opening. The far doorway therefore reveals an impossible duplicate of the entry hallway on the side of the house where it cannot exist; no off-screen connection can produce an axial view of the front door from behind the bedroom.",
+      "severity": "severe",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 — Kitchen (wood cabinets, microwave, sink/stove under window) connects via wide cased opening to entry hallway; white glass-paneled front door at hallway's far end; botanical print on hallway wall; bright window/room on hallway's left near front door\",\n    \"0:01-0:02 — Traversal: woman walks from kitchen through the cased opening down the straight entry hallway toward the front door; framed prints on right wall, closed white paneled door on left wall\",\n    \"0:03 — Traversal: she turns right through a doorway (door A) off the entry hallway a short distance before the front door\",\n    \"0:04-0:05 — Bedroom entered via door A: bed with white bedding and dark headboard, curtained windows, nightstand with lamp, dresser, chair at foot; botanical print at the doorway corner; far doorway (door B) at back of room shows a ceiling fan\",\n    \"0:05-0:07 — Bedroom windows on its outer walls show established exterior (green trees/lawn); chandelier; furniture arrangement functional for a bedroom\",\n    \"0:07-0:09 — Traversal: she crosses the bedroom to far doorway (door B); through it: a corridor with a bright window on its left wall, a framed picture on its right wall, a ceiling fan, and a white glass-paneled front door straight ahead at its far end\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"Far doorway (door B) of the bedroom and the corridor visible through it\",\n      \"invariant_violated\": \"View through an opening must match the established far side / floor-plan connectivity\",\n      \"description\": \"Through the bedroom's far doorway the camera sees a corridor running straight to a white glass-paneled front entry door, with a bright window on the left wall and framed art on the right — matching the entry hallway established at 0:00-0:03. However, the bedroom was entered at 0:03 through a door on that same entry hallway just short of the front door, and the bedroom's other walls are exterior (its windows show outdoors at 0:05-0:07). A doorway on the bedroom's far side cannot have a straight axial sightline down the entry hallway to the front door: the only corridor aligned with the front door is the entry hallway itself, whose opposite end is the kitchen opening. The far doorway therefore reveals an impossible duplicate of the entry hallway on the side of the house where it cannot exist; no off-screen connection can produce an axial view of the front door from behind the bedroom.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

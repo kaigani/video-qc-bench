@@ -1,0 +1,61 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:06:35.719Z",
+  "latencyMs": 201260,
+  "usage": {
+    "prompt_tokens": 35249,
+    "completion_tokens": 9564,
+    "total_tokens": 44813,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck | parked outside diner at pre-dawn, engine running | not seen again after exterior shot | steam continuously venting from engine area 0:00-0:10, consistent with idling in cold air",
+    "waitress | alone wiping counter in empty diner | cleaning counter after customer departs | continuous wiping 0:12-0:18, pours coffee 0:28, serves plate 1:12, watches departure through window 1:49, resumes cleaning 1:53",
+    "man (customer) | enters through door at 0:20 | walks out to box truck at 1:43-1:47 | enters, sits at counter, receives coffee and food, sits with sunrise behind him, places money on counter, exits to truck",
+    "coffee pot and mug | pot lifted by waitress, empty mug on counter | mug filled with coffee | visible pour stream 0:30-0:32, mug fills progressively, physically plausible",
+    "plate of food | close-up of plated cornbread and fried egg at 0:34 | plate placed before man by waitress at 1:12 | food already visible in front of man at 0:38-0:44 before the serving action occurs at 1:12",
+    "money (bills) | absent from counter | placed on counter at 1:41 | hand enters frame and sets bills down, then man exits — payment precedes departure, order plausible",
+    "counter occupancy | empty at 0:12 | man seated from 0:22 onward | counter shown empty again at 0:54-1:00 with dawn lighting, then man reappears at 1:02 with pre-dawn lighting"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:54",
+      "entity": "counter / man",
+      "invariant_violated": "effect-without-cause / temporal flow reversal",
+      "description": "At 0:52 the man is visible seated at the counter in the background. At 0:54 the same camera angle shows the counter completely empty and the window lighting has shifted to warm dawn/sunrise tones. At 1:02 the man is back at the counter and the ambient light has reverted to dark pre-dawn. The man disappears and reappears with no intervening action, and the ambient lighting runs forward to dawn then backward to pre-dawn, violating continuous forward time flow.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "1:12",
+      "entity": "plate of food",
+      "invariant_violated": "effect-before-cause",
+      "description": "The man is shown with a plate of food already in front of him at 0:38-0:44. At 1:12-1:18 the waitress is shown placing a plate of food in front of him, with no prior shot of the first plate being cleared or consumed. In the presented linear order, the effect (man possessing food) precedes its cause (waitress serving the food).",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck | parked outside diner at pre-dawn, engine running | not seen again after exterior shot | steam continuously venting from engine area 0:00-0:10, consistent with idling in cold air\",\n    \"waitress | alone wiping counter in empty diner | cleaning counter after customer departs | continuous wiping 0:12-0:18, pours coffee 0:28, serves plate 1:12, watches departure through window 1:49, resumes cleaning 1:53\",\n    \"man (customer) | enters through door at 0:20 | walks out to box truck at 1:43-1:47 | enters, sits at counter, receives coffee and food, sits with sunrise behind him, places money on counter, exits to truck\",\n    \"coffee pot and mug | pot lifted by waitress, empty mug on counter | mug filled with coffee | visible pour stream 0:30-0:32, mug fills progressively, physically plausible\",\n    \"plate of food | close-up of plated cornbread and fried egg at 0:34 | plate placed before man by waitress at 1:12 | food already visible in front of man at 0:38-0:44 before the serving action occurs at 1:12\",\n    \"money (bills) | absent from counter | placed on counter at 1:41 | hand enters frame and sets bills down, then man exits — payment precedes departure, order plausible\",\n    \"counter occupancy | empty at 0:12 | man seated from 0:22 onward | counter shown empty again at 0:54-1:00 with dawn lighting, then man reappears at 1:02 with pre-dawn lighting\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:54\",\n      \"entity\": \"counter / man\",\n      \"invariant_violated\": \"effect-without-cause / temporal flow reversal\",\n      \"description\": \"At 0:52 the man is visible seated at the counter in the background. At 0:54 the same camera angle shows the counter completely empty and the window lighting has shifted to warm dawn/sunrise tones. At 1:02 the man is back at the counter and the ambient light has reverted to dark pre-dawn. The man disappears and reappears with no intervening action, and the ambient lighting runs forward to dawn then backward to pre-dawn, violating continuous forward time flow.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"1:12\",\n      \"entity\": \"plate of food\",\n      \"invariant_violated\": \"effect-before-cause\",\n      \"description\": \"The man is shown with a plate of food already in front of him at 0:38-0:44. At 1:12-1:18 the waitress is shown placing a plate of food in front of him, with no prior shot of the first plate being cleared or consumed. In the presented linear order, the effect (man possessing food) precedes its cause (waitress serving the food).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

@@ -1,0 +1,51 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:35:20.819Z",
+  "latencyMs": 16814,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 1125,
+    "total_tokens": 2484,
+    "cost": 0.005238,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005238,
+      "upstream_inference_prompt_cost": 0.00101925,
+      "upstream_inference_completions_cost": 0.00421875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 881,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09 Stationary station wagon parked on desert roadside",
+    "00:00-00:04 Woman resting arms on car hood/door with calm hair",
+    "00:05-00:09 Woman's hair streams backward intensely under heavy airflow",
+    "00:05-00:09 Desert shrubs and surroundings remain motionless",
+    "00:05-00:09 Denim jacket and car elements show no wind reaction"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "unexplained physical force",
+      "description": "The subject's hair begins blowing backward intensely as if experiencing strong headwind or rapid forward vehicle motion, but the car remains stationary and surrounding desert plants and clothing show no corresponding wind response.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09 Stationary station wagon parked on desert roadside\",\n    \"00:00-00:04 Woman resting arms on car hood/door with calm hair\",\n    \"00:05-00:09 Woman's hair streams backward intensely under heavy airflow\",\n    \"00:05-00:09 Desert shrubs and surroundings remain motionless\",\n    \"00:05-00:09 Denim jacket and car elements show no wind reaction\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"woman's hair\",\n      \"invariant_violated\": \"unexplained physical force\",\n      \"description\": \"The subject's hair begins blowing backward intensely as if experiencing strong headwind or rapid forward vehicle motion, but the car remains stationary and surrounding desert plants and clothing show no corresponding wind response.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

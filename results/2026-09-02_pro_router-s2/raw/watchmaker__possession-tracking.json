@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:05.364Z",
+  "latencyMs": 9428,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 754,
+    "total_tokens": 2138,
+    "cost": 0.011816,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011816,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.009048
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 640,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:04: Tweezers held in left hand.",
+    "00:00 - 00:10: Watch part held in right hand.",
+    "00:04: Tweezers placed out of frame by left hand.",
+    "00:06 - 00:10: Small pin/tool held in left hand and used on the watch part."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:04: Tweezers held in left hand.\",\n    \"00:00 - 00:10: Watch part held in right hand.\",\n    \"00:04: Tweezers placed out of frame by left hand.\",\n    \"00:06 - 00:10: Small pin/tool held in left hand and used on the watch part.\"\n  ],\n  \"findings\": []\n}"
+}

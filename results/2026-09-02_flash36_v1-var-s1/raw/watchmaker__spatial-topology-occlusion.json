@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:31.816Z",
+  "latencyMs": 10918,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 794,
+    "total_tokens": 2220,
+    "cost": 0.004047,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004047,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0029775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 695,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person | seated in foreground wearing striped shirt | seated in foreground wearing striped shirt | stationary spatial anchor relative to frame",
+    "background | plain white background behind subject | plain white background behind subject | fixed depth layer behind subject",
+    "hands and small tools | operating in foreground in front of torso | operating in foreground in front of torso | natural occlusion layers over shirt and hands"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person | seated in foreground wearing striped shirt | seated in foreground wearing striped shirt | stationary spatial anchor relative to frame\",\n    \"background | plain white background behind subject | plain white background behind subject | fixed depth layer behind subject\",\n    \"hands and small tools | operating in foreground in front of torso | operating in foreground in front of torso | natural occlusion layers over shirt and hands\"\n  ],\n  \"findings\": []\n}"
+}

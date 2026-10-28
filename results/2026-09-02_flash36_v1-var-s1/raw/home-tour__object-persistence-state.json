@@ -1,0 +1,49 @@
+{
+  "key": "home-tour__object-persistence-state",
+  "video": "home-tour.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:37.341Z",
+  "latencyMs": 25832,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2615,
+    "total_tokens": 4059,
+    "cost": 0.01088925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01088925,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00980625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2379,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red tea kettle | on kitchen counter near stove at 00:01 | absent from counter at 00:09 | vanished without visible interaction",
+    "countertop microwave | on right kitchen counter at 00:00 | replaced by wall-mounted microwave at 00:09 | changed model/location off-screen",
+    "blue flower picture frame | mounted on hallway wall at 00:02 | mounted on hallway wall at 00:07 | position maintained"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "red tea kettle",
+      "invariant_violated": "persistence",
+      "description": "The red tea kettle resting on the kitchen counter at 00:01 disappears entirely when returning to the kitchen at 00:09 without any person picking it up or moving it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"red tea kettle | on kitchen counter near stove at 00:01 | absent from counter at 00:09 | vanished without visible interaction\",\n    \"countertop microwave | on right kitchen counter at 00:00 | replaced by wall-mounted microwave at 00:09 | changed model/location off-screen\",\n    \"blue flower picture frame | mounted on hallway wall at 00:02 | mounted on hallway wall at 00:07 | position maintained\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"red tea kettle\",\n      \"invariant_violated\": \"persistence\",\n      \"description\": \"The red tea kettle resting on the kitchen counter at 00:01 disappears entirely when returning to the kitchen at 00:09 without any person picking it up or moving it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

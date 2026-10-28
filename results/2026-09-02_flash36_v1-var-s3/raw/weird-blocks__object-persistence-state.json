@@ -1,0 +1,95 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:13.167Z",
+  "latencyMs": 28176,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 5634,
+    "total_tokens": 7078,
+    "cost": 0.0222105,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0222105,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0211275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4509,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (pos 1) | Green '2' cube at left | Blue '2' cube at left | Spontaneously changed from green '2' to blue '2' at 00:01 without interaction",
+    "Block 2 (pos 2) | Blue '3' cube | Blue '3' cube | Placed at 00:01 between position 1 and 3",
+    "Block 3 (pos 3) | Green '2' cube at right | Green '2' cube | Changed from Green '2' to Green '3' at 00:02, then reverted back to Green '2' at 00:03",
+    "Block 4 (pos 4) | Placed as Green '3' at 00:02 | Orange '2' cube | Changed to Green '2' at 00:03, then changed to Orange '2' at 00:04",
+    "Block 5 (pos 5) | Placed as Light Green '3' at 00:03 | Blue '3' cube | Changed to Blue '2' at 00:04, then to Blue '3' at 00:05",
+    "Block 6 (pos 6) | Placed as Blue '3' at 00:04 | Green '5' cube | Changed from Blue '3' to Green '5' at 00:05",
+    "Block 7 (pos 7) | Placed as Blue '3' at 00:05 | Green '2' cube | Changed from Blue '3' to Green '2' at 00:06",
+    "Block 8 (pos 8) | Placed as Light Blue '3' at 00:06 | Blue '6' cube | Changed from Light Blue '3' to Blue '6' at 00:07",
+    "Block 9 (pos 9) | Placed as Green '3' at 00:07 | Green '3' cube at far right | Placed at 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Block 1 (leftmost block)",
+      "invariant_violated": "unexplained_state_change",
+      "description": "The leftmost block spontaneously changes color from green ('2') to blue ('2') between 00:00 and 00:01 while the hand is placing another object.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Block 3 (3rd block from left)",
+      "invariant_violated": "unexplained_state_change",
+      "description": "The 3rd block changes its face value from Green '2' to Green '3' without visible rotation or manipulation.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Block 3 & Block 4",
+      "invariant_violated": "unexplained_state_change",
+      "description": "Block 3 spontaneously reverts from Green '3' back to Green '2', while Block 4 (placed as Green '3' at 00:02) changes to Green '2'.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Block 4 & Block 5",
+      "invariant_violated": "unexplained_state_change",
+      "description": "Block 4 changes color from Green '2' to Orange '2', and Block 5 changes from Green '3' to Blue '2' without any visible action altering their faces.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Block 5 & Block 6",
+      "invariant_violated": "unexplained_state_change",
+      "description": "Block 5 changes from Blue '2' to Blue '3', while Block 6 changes face value and color from Blue '3' to Green '5'.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Block 8",
+      "invariant_violated": "unexplained_state_change",
+      "description": "Block 8 changes from Light Blue '3' to Blue '6' spontaneously after being placed.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (pos 1) | Green '2' cube at left | Blue '2' cube at left | Spontaneously changed from green '2' to blue '2' at 00:01 without interaction\",\n    \"Block 2 (pos 2) | Blue '3' cube | Blue '3' cube | Placed at 00:01 between position 1 and 3\",\n    \"Block 3 (pos 3) | Green '2' cube at right | Green '2' cube | Changed from Green '2' to Green '3' at 00:02, then reverted back to Green '2' at 00:03\",\n    \"Block 4 (pos 4) | Placed as Green '3' at 00:02 | Orange '2' cube | Changed to Green '2' at 00:03, then changed to Orange '2' at 00:04\",\n    \"Block 5 (pos 5) | Placed as Light Green '3' at 00:03 | Blue '3' cube | Changed to Blue '2' at 00:04, then to Blue '3' at 00:05\",\n    \"Block 6 (pos 6) | Placed as Blue '3' at 00:04 | Green '5' cube | Changed from Blue '3' to Green '5' at 00:05\",\n    \"Block 7 (pos 7) | Placed as Blue '3' at 00:05 | Green '2' cube | Changed from Blue '3' to Green '2' at 00:06\",\n    \"Block 8 (pos 8) | Placed as Light Blue '3' at 00:06 | Blue '6' cube | Changed from Light Blue '3' to Blue '6' at 00:07\",\n    \"Block 9 (pos 9) | Placed as Green '3' at 00:07 | Green '3' cube at far right | Placed at 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Block 1 (leftmost block)\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"The leftmost block spontaneously changes color from green ('2') to blue ('2') between 00:00 and 00:01 while the hand is placing another object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Block 3 (3rd block from left)\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"The 3rd block changes its face value from Green '2' to Green '3' without visible rotation or manipulation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Block 3 & Block 4\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"Block 3 spontaneously reverts from Green '3' back to Green '2', while Block 4 (placed as Green '3' at 00:02) changes to Green '2'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Block 4 & Block 5\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"Block 4 changes color from Green '2' to Orange '2', and Block 5 changes from Green '3' to Blue '2' without any visible action altering their faces.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Block 5 & Block 6\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"Block 5 changes from Blue '2' to Blue '3', while Block 6 changes face value and color from Blue '3' to Green '5'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Block 8\",\n      \"invariant_violated\": \"unexplained_state_change\",\n      \"description\": \"Block 8 changes from Light Blue '3' to Blue '6' spontaneously after being placed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

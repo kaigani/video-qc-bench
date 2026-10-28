@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:55:07.849Z",
+  "latencyMs": 123155,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 5949,
+    "total_tokens": 11988,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "block position 1 | green cube, digit 2, metal knob on top | blue cube, digit 2 | color changed green to blue between 0:00 and 0:02 with no visible swap",
+    "block position 2 | blue cube, digit 3, placed at 0:02 | blue cube, digit 3 | stable",
+    "block position 3 | green cube, digit 2 (rightmost block at 0:00) | green cube, digit 2 | stable throughout",
+    "block position 4 | orange cube, digit 2, placed at 0:04 | orange cube, digit 2 | stable",
+    "block position 5 | pale blue/white cube, digit 3, present by 0:06 | unchanged | stable",
+    "block position 6 | green cube, digit 5, placed at 0:06 | green cube, digit 5 | stable",
+    "block position 7 | green cube, digit 2, present by 0:08 | green cube, digit 2 | stable",
+    "block position 8 | blue cube, digit 6, placed at 0:08 | blue cube, digit 6 | stable",
+    "hand | enters from top, places blocks sequentially left to right | consistent behavior"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "leftmost digit block (position 1)",
+      "invariant_violated": "object identity/color continuity",
+      "description": "At 0:00 the leftmost block is a green cube displaying '2', with the hand gripping its top knob. At 0:02 the block occupying the exact same position is a blue cube also displaying '2'. The digit is unchanged but the block's color has changed. No swap is ever shown: the green block is never seen being lifted away or carried off-frame, and by 0:02 the hand has already moved on to placing the next block (the blue '3'). A same-position, same-digit color change with no visible replacement action is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"block position 1 | green cube, digit 2, metal knob on top | blue cube, digit 2 | color changed green to blue between 0:00 and 0:02 with no visible swap\",\n    \"block position 2 | blue cube, digit 3, placed at 0:02 | blue cube, digit 3 | stable\",\n    \"block position 3 | green cube, digit 2 (rightmost block at 0:00) | green cube, digit 2 | stable throughout\",\n    \"block position 4 | orange cube, digit 2, placed at 0:04 | orange cube, digit 2 | stable\",\n    \"block position 5 | pale blue/white cube, digit 3, present by 0:06 | unchanged | stable\",\n    \"block position 6 | green cube, digit 5, placed at 0:06 | green cube, digit 5 | stable\",\n    \"block position 7 | green cube, digit 2, present by 0:08 | green cube, digit 2 | stable\",\n    \"block position 8 | blue cube, digit 6, placed at 0:08 | blue cube, digit 6 | stable\",\n    \"hand | enters from top, places blocks sequentially left to right | consistent behavior\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"leftmost digit block (position 1)\",\n      \"invariant_violated\": \"object identity/color continuity\",\n      \"description\": \"At 0:00 the leftmost block is a green cube displaying '2', with the hand gripping its top knob. At 0:02 the block occupying the exact same position is a blue cube also displaying '2'. The digit is unchanged but the block's color has changed. No swap is ever shown: the green block is never seen being lifted away or carried off-frame, and by 0:02 the hand has already moved on to placing the next block (the blue '3'). A same-position, same-digit color change with no visible replacement action is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

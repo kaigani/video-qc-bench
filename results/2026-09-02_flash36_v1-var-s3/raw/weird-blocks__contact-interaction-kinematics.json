@@ -1,0 +1,48 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:10.897Z",
+  "latencyMs": 23797,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 2935,
+    "total_tokens": 4387,
+    "cost": 0.01209525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01209525,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.01100625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2722,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | Holding block above desk at 00:00 | Tapping block peg at 00:09 | Grips, slides, and taps various numbered blocks across table surface",
+    "Numbered blocks | Two blocks present at 00:00 | Eight blocks aligned in a row at 00:09 | Left block deforms unnaturally at 00:00; additional blocks materialize as rightmost block is pulled"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Green block '2'",
+      "invariant_violated": "solidity",
+      "description": "The bottom-left corner of the rigid green block deforms and squishes unnaturally like soft rubber when touched and shifted by the hand.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | Holding block above desk at 00:00 | Tapping block peg at 00:09 | Grips, slides, and taps various numbered blocks across table surface\",\n    \"Numbered blocks | Two blocks present at 00:00 | Eight blocks aligned in a row at 00:09 | Left block deforms unnaturally at 00:00; additional blocks materialize as rightmost block is pulled\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Green block '2'\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The bottom-left corner of the rigid green block deforms and squishes unnaturally like soft rubber when touched and shifted by the hand.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

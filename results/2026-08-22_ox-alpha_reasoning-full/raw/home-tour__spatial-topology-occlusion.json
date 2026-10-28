@@ -1,0 +1,51 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:17:27.911Z",
+  "latencyMs": 625216,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 31152,
+    "total_tokens": 37053,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 5888,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hallway (N-S run) | connects kitchen at south end to glazed white front door at north end | same at end | consistent spine for all shots",
+    "Front door (white, glazed) | far end of hallway, window in upper panel | unchanged | visible 0:00-0:04, consistent each appearance",
+    "Hallway east picture wall | botanical print near north end, small dark picture just before front door, bare wall to south | same arrangement seen again at 0:08 exit view | order (botanical then dark toward door) matches between kitchen view 0:00 and walk-through 0:02-0:04",
+    "Kitchen east counter | upper cabinets, microwave, tile backsplash behind woman at 0:00 | out of frame after 0:01 | compatible with hallway-side counter position",
+    "Kitchen west counter | sink under window, stove with range hood | revealed at 0:02 on left of walking direction | consistent with kitchen lying west of hallway entrance",
+    "Hallway west-wall opening (mid-hall) | doorway to side room with framed picture visible beyond at 0:03 | reappears on right of through-door view at 0:08 | same position relative to hallway axis",
+    "Bedroom entrance | on east side of hallway near north end, just past botanical print | same door used for exit at 0:08 | turn-right entry at 0:04-0:05 matches left-facing exit view",
+    "Bed | headboard against far (east) bedroom wall, red artwork above, white bedding | unchanged 0:05-0:07 | consistent orientation across three angles",
+    "South bedroom windows (two, curtained) | right wall when entering at 0:05 | one still visible at right edge at 0:06 | no contradiction",
+    "North bedroom window + nightstand with lamp | left of bed near headboard (NE) | consistent at 0:05, 0:06, 0:07 | lamp/nightstay never relocated",
+    "Chair at foot of bed | west end of bed | bottom-left at 0:05-0:06, bottom-right at 0:07 as camera shifts northwest | movement of chair across frame explained by camera move, not object move",
+    "Chandelier | bedroom ceiling center | present 0:05-0:06 | consistent",
+    "North-wall window with small table and framed photo near bedroom exit | not visible in earlier bedroom angles | appears near-right at 0:08 | previously occluded/out-of-frame region, uncontradicted",
+    "Woman (moving observer) | kitchen facing camera, then walks north up hallway, turns right into bedroom, reaches NE corner, returns to west door | every cut places her on the geometrically correct side of bed, doorways, and hallway | no wrong-side emergence"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Hallway (N-S run) | connects kitchen at south end to glazed white front door at north end | same at end | consistent spine for all shots\",\n    \"Front door (white, glazed) | far end of hallway, window in upper panel | unchanged | visible 0:00-0:04, consistent each appearance\",\n    \"Hallway east picture wall | botanical print near north end, small dark picture just before front door, bare wall to south | same arrangement seen again at 0:08 exit view | order (botanical then dark toward door) matches between kitchen view 0:00 and walk-through 0:02-0:04\",\n    \"Kitchen east counter | upper cabinets, microwave, tile backsplash behind woman at 0:00 | out of frame after 0:01 | compatible with hallway-side counter position\",\n    \"Kitchen west counter | sink under window, stove with range hood | revealed at 0:02 on left of walking direction | consistent with kitchen lying west of hallway entrance\",\n    \"Hallway west-wall opening (mid-hall) | doorway to side room with framed picture visible beyond at 0:03 | reappears on right of through-door view at 0:08 | same position relative to hallway axis\",\n    \"Bedroom entrance | on east side of hallway near north end, just past botanical print | same door used for exit at 0:08 | turn-right entry at 0:04-0:05 matches left-facing exit view\",\n    \"Bed | headboard against far (east) bedroom wall, red artwork above, white bedding | unchanged 0:05-0:07 | consistent orientation across three angles\",\n    \"South bedroom windows (two, curtained) | right wall when entering at 0:05 | one still visible at right edge at 0:06 | no contradiction\",\n    \"North bedroom window + nightstand with lamp | left of bed near headboard (NE) | consistent at 0:05, 0:06, 0:07 | lamp/nightstay never relocated\",\n    \"Chair at foot of bed | west end of bed | bottom-left at 0:05-0:06, bottom-right at 0:07 as camera shifts northwest | movement of chair across frame explained by camera move, not object move\",\n    \"Chandelier | bedroom ceiling center | present 0:05-0:06 | consistent\",\n    \"North-wall window with small table and framed photo near bedroom exit | not visible in earlier bedroom angles | appears near-right at 0:08 | previously occluded/out-of-frame region, uncontradicted\",\n    \"Woman (moving observer) | kitchen facing camera, then walks north up hallway, turns right into bedroom, reaches NE corner, returns to west door | every cut places her on the geometrically correct side of bed, doorways, and hallway | no wrong-side emergence\"\n  ],\n  \"findings\": []\n}"
+}

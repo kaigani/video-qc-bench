@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:44.984Z",
+  "latencyMs": 11536,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1052,
+    "total_tokens": 2477,
+    "cost": 0.00501375,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00501375,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.003945
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 874,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's right hand | holding tweezers working on jewelry | holding pusher tool applying force to jewelry | sets down tweezers at 00:04 and picks up pusher tool at 00:05",
+    "woman's left hand | holding jewelry piece steadily | holding jewelry piece steadily | maintains grip while right hand switches tools",
+    "tweezers | engaged with jewelry component | set down off-camera to the left | retracted from jewelry at 00:03 and lowered at 00:04",
+    "pusher tool | off-screen | applied directly to jewelry component | grabbed by right hand at 00:05 and pressed into jewelry from 00:06 to 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's right hand | holding tweezers working on jewelry | holding pusher tool applying force to jewelry | sets down tweezers at 00:04 and picks up pusher tool at 00:05\",\n    \"woman's left hand | holding jewelry piece steadily | holding jewelry piece steadily | maintains grip while right hand switches tools\",\n    \"tweezers | engaged with jewelry component | set down off-camera to the left | retracted from jewelry at 00:03 and lowered at 00:04\",\n    \"pusher tool | off-screen | applied directly to jewelry component | grabbed by right hand at 00:05 and pressed into jewelry from 00:06 to 00:09\"\n  ],\n  \"findings\": []\n}"
+}

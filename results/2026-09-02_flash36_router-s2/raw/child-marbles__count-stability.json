@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:32.601Z",
+  "latencyMs": 14158,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 725,
+    "total_tokens": 2143,
+    "cost": 0.00378225,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00378225,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.00271875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 558,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Glass bowl on table contains red, yellow, and green plastic balls (approx. 7 total visible inside bowl); child's hands are inside bowl.",
+    "00:01 - Child lifts 1 red plastic ball out of the bowl into hands; 6 balls remain visible in bowl (2 red, 2 yellow, 2 green).",
+    "00:02 - Child drops/places the red plastic ball back into the glass bowl.",
+    "00:03-00:09 - Child stirs and rotates the collection of red, yellow, and green balls inside the glass bowl continuously; all balls remain accounted for inside bowl."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Glass bowl on table contains red, yellow, and green plastic balls (approx. 7 total visible inside bowl); child's hands are inside bowl.\",\n    \"00:01 - Child lifts 1 red plastic ball out of the bowl into hands; 6 balls remain visible in bowl (2 red, 2 yellow, 2 green).\",\n    \"00:02 - Child drops/places the red plastic ball back into the glass bowl.\",\n    \"00:03-00:09 - Child stirs and rotates the collection of red, yellow, and green balls inside the glass bowl continuously; all balls remain accounted for inside bowl.\"\n  ],\n  \"findings\": []\n}"
+}

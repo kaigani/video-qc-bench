@@ -1,0 +1,57 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:33:20.947Z",
+  "latencyMs": 199335,
+  "usage": {
+    "prompt_tokens": 5233,
+    "completion_tokens": 8229,
+    "total_tokens": 13462,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning out front passenger window, arms crossed on sill, teal jacket, neutral expression, hair still | close-up, smiling, hair blowing backward | smile and strong wind onset around 0:06",
+    "wood-paneled station wagon | cream body, chrome trim, parked on desert shoulder, hood ornament near front of hood, plate 'STE197' | same car, close-up framing | hood ornament appears relocated to windshield base by 0:06",
+    "desert highway background | empty two-lane road, mountains, no utility poles | road with yellow centerline and telephone poles | new elements revealed by camera dolly-in"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "hood ornament",
+      "invariant_violated": "object permanence / continuity",
+      "description": "From 0:00-0:04 the chrome bullet-shaped hood ornament sits well forward on the hood near its front edge. At 0:06 an identical bullet ornament suddenly appears mounted at the base of the windshield (cowl area), where no ornament existed in earlier frames, and the original front-hood position no longer shows it — the object effectively teleports/duplicates as the camera moves in.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "0:00",
+      "entity": "front license plate",
+      "invariant_violated": "text rendering integrity",
+      "description": "The plate reads approximately 'STE197', but the numeric characters are unevenly spaced and partially merged/smudged, inconsistent with real stamped plate lettering — a typical artifact of generated text.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning out front passenger window, arms crossed on sill, teal jacket, neutral expression, hair still | close-up, smiling, hair blowing backward | smile and strong wind onset around 0:06\",\n    \"wood-paneled station wagon | cream body, chrome trim, parked on desert shoulder, hood ornament near front of hood, plate 'STE197' | same car, close-up framing | hood ornament appears relocated to windshield base by 0:06\",\n    \"desert highway background | empty two-lane road, mountains, no utility poles | road with yellow centerline and telephone poles | new elements revealed by camera dolly-in\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"hood ornament\",\n      \"invariant_violated\": \"object permanence / continuity\",\n      \"description\": \"From 0:00-0:04 the chrome bullet-shaped hood ornament sits well forward on the hood near its front edge. At 0:06 an identical bullet ornament suddenly appears mounted at the base of the windshield (cowl area), where no ornament existed in earlier frames, and the original front-hood position no longer shows it — the object effectively teleports/duplicates as the camera moves in.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"0:00\",\n      \"entity\": \"front license plate\",\n      \"invariant_violated\": \"text rendering integrity\",\n      \"description\": \"The plate reads approximately 'STE197', but the numeric characters are unevenly spaced and partially merged/smudged, inconsistent with real stamped plate lettering — a typical artifact of generated text.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

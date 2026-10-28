@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:45:22.912Z",
+  "latencyMs": 656920,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 26200,
+    "total_tokens": 31913,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (woman) | back to camera, black sports bra and leggings, hair in bun, dark tattoo on right upper arm, barefoot | same outfit and stance at end, completing arm raise | performs alternating port de bras: arm raised overhead (0:02), bent-arm pose with open palm (0:04), arms sweep down with head bowed (0:06), arm raised again (0:08); tattoo migrates to the left arm during 0:02-0:04",
+    "Mirror reflection | duplicates dancer's pose on the same image side at every frame | still synchronized at end | no desync, no missing or extra limbs detected",
+    "Studio environment (door with window, green exit sign, ballet barre, blue bin, wall poster, ceiling lights, paper dispenser) | static, evenly lit | unchanged | no objects appear, disappear, or shift"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "Dancer's arm tattoo",
+      "invariant_violated": "continuity of static body attribute",
+      "description": "At 0:00 the dark tattoo is clearly on her right upper arm (image-right side of her back) and the left arm is clean. From 0:02 through 0:04, while the right arm performs the raised/bent gesture, the tattoo is instead visible on the hanging left arm (image-left of her spine), with the gesturing right arm clean. By 0:06 the tattoo is back on the right arm and stays there through 0:08. The tattoo switches arms twice; her torso stays essentially frontal (back to camera) throughout, so no body rotation or occlusion explains the change.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (woman) | back to camera, black sports bra and leggings, hair in bun, dark tattoo on right upper arm, barefoot | same outfit and stance at end, completing arm raise | performs alternating port de bras: arm raised overhead (0:02), bent-arm pose with open palm (0:04), arms sweep down with head bowed (0:06), arm raised again (0:08); tattoo migrates to the left arm during 0:02-0:04\",\n    \"Mirror reflection | duplicates dancer's pose on the same image side at every frame | still synchronized at end | no desync, no missing or extra limbs detected\",\n    \"Studio environment (door with window, green exit sign, ballet barre, blue bin, wall poster, ceiling lights, paper dispenser) | static, evenly lit | unchanged | no objects appear, disappear, or shift\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"Dancer's arm tattoo\",\n      \"invariant_violated\": \"continuity of static body attribute\",\n      \"description\": \"At 0:00 the dark tattoo is clearly on her right upper arm (image-right side of her back) and the left arm is clean. From 0:02 through 0:04, while the right arm performs the raised/bent gesture, the tattoo is instead visible on the hanging left arm (image-left of her spine), with the gesturing right arm clean. By 0:06 the tattoo is back on the right arm and stays there through 0:08. The tattoo switches arms twice; her torso stays essentially frontal (back to camera) throughout, so no body rotation or occlusion explains the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

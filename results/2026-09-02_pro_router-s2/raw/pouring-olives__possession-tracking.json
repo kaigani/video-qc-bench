@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:43:02.352Z",
+  "latencyMs": 11987,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 770,
+    "total_tokens": 2154,
+    "cost": 0.012008,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012008,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.00924
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 475,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:03: Green olives poured from a small jar into the large jar.",
+    "00:04 - 00:05: Person puts down the empty small jar and picks up another small jar filled with green olives.",
+    "00:06 - 00:09: Green olives poured from the second small jar into the large jar."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives",
+      "invariant_violated": "object identity",
+      "description": "Green olives are poured from the small jar, but as they fall and land in the large jar, many of them spontaneously change color to dark purple/black.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Olives",
+      "invariant_violated": "object identity",
+      "description": "During the second pour, green olives from the small jar again spontaneously change to dark purple/black as they fall into the large jar.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:03: Green olives poured from a small jar into the large jar.\",\n    \"00:04 - 00:05: Person puts down the empty small jar and picks up another small jar filled with green olives.\",\n    \"00:06 - 00:09: Green olives poured from the second small jar into the large jar.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"object identity\",\n      \"description\": \"Green olives are poured from the small jar, but as they fall and land in the large jar, many of them spontaneously change color to dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"object identity\",\n      \"description\": \"During the second pour, green olives from the small jar again spontaneously change to dark purple/black as they fall into the large jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

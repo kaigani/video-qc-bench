@@ -1,0 +1,169 @@
+{
+  "video": "skateboarder",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:08.725Z",
+  "latencyMs": 20904,
+  "usage": {
+    "prompt_tokens": 1750,
+    "completion_tokens": 1584,
+    "total_tokens": 3334,
+    "cost": 0.022508,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022508,
+      "upstream_inference_prompt_cost": 0.0035,
+      "upstream_inference_completions_cost": 0.019008
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 914,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|skateboarder|baseline-generalist|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:01",
+        "entity": "Skateboarder's left shoe",
+        "invariant_violated": "Color Consistency",
+        "description": "The skateboarder's left shoe changes from red to black/dark grey while he is mid-air doing the first trick, and then reverts to red as he lands.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|skateboarder|causal-temporal-sequence|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "Skater landing action",
+        "invariant_violated": "proportionality & completion",
+        "description": "The skater initiates a landing motion to land back on the skateboard, but the skateboard completely dissolves from under his right foot. The landing action fails to complete as a physical interaction with the board, instead dissolving into the skater landing directly on the concrete while maintaining a posture as if the board were still present.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|skateboarder|character-continuity|0",
+      "cls": "TP:SKAT-2",
+      "finding": {
+        "timestamp": "00:08",
+        "entity": "Skateboarder",
+        "invariant_violated": "character identity (build)",
+        "description": "During the mid-air portion and landing of the second trick, the character's right leg undergoes severe anatomical distortion, with the lower leg bending backward at an impossible angle before reforming upon landing.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|skateboarder|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Skateboard and Skater's Right Foot",
+        "invariant_violated": "solidity",
+        "description": "As the skateboard completes its rotation during the flip trick, the nose of the board passes directly through the heel area of the skater's right red shoe and green sock. The solid objects intersect without any collision or deflection.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|skateboarder|object-persistence-state|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:09",
+        "entity": "Skateboard",
+        "invariant_violated": "Identity & Persistence",
+        "description": "The skateboard is visible in mid-air during a trick, but as the skater lands, the skateboard completely vanishes from the scene, resulting in the skater landing directly on the concrete.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|skateboarder|spatial-topology-occlusion|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Background trees and light poles",
+        "invariant_violated": "scene layout",
+        "description": "As the camera tilts up during the first trick, the background trees morph in shape and the light poles on the right disappear, completely altering the established scene layout.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|skateboarder|spatial-topology-occlusion|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:07",
+        "entity": "Background trees and light poles",
+        "invariant_violated": "scene layout",
+        "description": "During the second trick, the pair of light poles visible on the left earlier disappears, and the tree line warps, changing the relative positions of the background elements again.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "REJECT",
+      "reason": "The left shoe does not change color to black or dark grey; it simply becomes temporarily shadowed by the skateboard and the skater's body as he is mid-air.",
+      "innocent_explanation": "occlusion or shadow",
+      "confidence": 0.95
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "At 00:08-00:09, the skater initiates a landing, but the skateboard completely dissolves and vanishes from under his feet. He lands directly on the concrete in a riding posture without the board.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "REJECT",
+      "reason": "The right leg does not bend backward at an impossible angle. The skater is simply bending his knees to prepare for landing, and baggy pants combined with motion blur create a slightly awkward silhouette, but not severe anatomical distortion.",
+      "innocent_explanation": "motion blur or baggy clothing",
+      "confidence": 0.9
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "At 00:02, during the rotation of the skateboard, the nose of the board clearly clips and passes directly through the solid heel of the skater's right shoe and foot without any collision.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "As seen at 00:09, the skateboard completely disappears into thin air before the skater lands, leaving him to land in a riding stance on empty space.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "The background elements change shape and position due to the camera panning and the extreme distortion of the fisheye/wide-angle lens used, which bends the image at the edges.",
+      "innocent_explanation": "wide-angle / fisheye lens distortion warping geometry",
+      "confidence": 0.95
+    },
+    {
+      "id": "F7",
+      "verdict": "REJECT",
+      "reason": "Similar to F6, the movement and warping of the light poles and tree line are caused by the dynamic camera movement and perspective shifts combined with a fisheye lens effect.",
+      "innocent_explanation": "wide-angle / fisheye lens distortion warping geometry",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The left shoe does not change color to black or dark grey; it simply becomes temporarily shadowed by the skateboard and the skater's body as he is mid-air.\",\n      \"innocent_explanation\": \"occlusion or shadow\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:08-00:09, the skater initiates a landing, but the skateboard completely dissolves and vanishes from under his feet. He lands directly on the concrete in a riding posture without the board.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The right leg does not bend backward at an impossible angle. The skater is simply bending his knees to prepare for landing, and baggy pants combined with motion blur create a slightly awkward silhouette, but not severe anatomical distortion.\",\n      \"innocent_explanation\": \"motion blur or baggy clothing\",\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:02, during the rotation of the skateboard, the nose of the board clearly clips and passes directly through the solid heel of the skater's right shoe and foot without any collision.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"As seen at 00:09, the skateboard completely disappears into thin air before the skater lands, leaving him to land in a riding stance on empty space.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The background elements change shape and position due to the camera panning and the extreme distortion of the fisheye/wide-angle lens used, which bends the image at the edges.\",\n      \"innocent_explanation\": \"wide-angle / fisheye lens distortion warping geometry\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"Similar to F6, the movement and warping of the light poles and tree line are caused by the dynamic camera movement and perspective shifts combined with a fisheye lens effect.\",\n      \"innocent_explanation\": \"wide-angle / fisheye lens distortion warping geometry\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

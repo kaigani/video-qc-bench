@@ -1,0 +1,47 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:31:31.776Z",
+  "latencyMs": 20783,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1535,
+    "total_tokens": 2773,
+    "cost": 0.00668475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00668475,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00575625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1362,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | male in white shirt standing in front of mirror | same male in front of mirror | hand position and motion in reflection do not match actual body movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection",
+      "invariant_violated": "reflection_mismatch",
+      "description": "The movement and position of the comb in the mirror reflection do not synchronize with the man's physical hand in the foreground; for example, the man's hand is near his lower jaw/cheek while his reflection shows him combing his mustache/upper lip.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man | male in white shirt standing in front of mirror | same male in front of mirror | hand position and motion in reflection do not match actual body movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"reflection_mismatch\",\n      \"description\": \"The movement and position of the comb in the mirror reflection do not synchronize with the man's physical hand in the foreground; for example, the man's hand is near his lower jaw/cheek while his reflection shows him combing his mustache/upper lip.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

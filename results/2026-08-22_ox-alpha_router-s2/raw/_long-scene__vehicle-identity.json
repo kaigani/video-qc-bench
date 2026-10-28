@@ -1,0 +1,49 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:17:50.663Z",
+  "latencyMs": 215120,
+  "usage": {
+    "prompt_tokens": 34848,
+    "completion_tokens": 4271,
+    "total_tokens": 39119,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 truck outside diner: white/light conventional semi tractor with sleeper + separate box trailer (visible cab-to-trailer gap), parked tight against the diner's left side, idling with visible exhaust/steam plume, facing right; no legible markings in the darkness",
+    "00:20-01:09 background through diner windows: white sedan and distant vehicles on the far side of the road, static background traffic, no discontinuity observed",
+    "01:44-01:51 truck outside diner: dark green Kenworth-style conventional STRAIGHT truck with integral green box body, white belt stripe, chrome grille/exhaust stacks/mirrors, amber cab roof marker lights, door lettering present but illegible; parked in the open gravel lot in front of the diner at sunrise; the man walks out to it"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:44",
+      "entity": "recurring truck parked at the diner (compared across 00:00 vs 01:44)",
+      "invariant_violated": "identity (body configuration and color)",
+      "description": "The vehicle presented as the same truck changes identity between sightings. At 00:00-00:10 it is a white/light semi tractor-trailer (separate trailer with visible gap behind the sleeper cab) parked flush against the diner's left side. At 01:44 the man exits the diner and walks to a dark green single-unit straight box truck (integral body mounted on the chassis, white stripe, chrome stacks and grille). Both color (white vs dark green) and configuration (tractor-trailer vs straight box truck) differ; no swap is shown on screen and no other vehicle implies a swap - the narrative treats it as the same truck. Overnight elapsed time alone does not explain a make/color/configuration change.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 truck outside diner: white/light conventional semi tractor with sleeper + separate box trailer (visible cab-to-trailer gap), parked tight against the diner's left side, idling with visible exhaust/steam plume, facing right; no legible markings in the darkness\",\n    \"00:20-01:09 background through diner windows: white sedan and distant vehicles on the far side of the road, static background traffic, no discontinuity observed\",\n    \"01:44-01:51 truck outside diner: dark green Kenworth-style conventional STRAIGHT truck with integral green box body, white belt stripe, chrome grille/exhaust stacks/mirrors, amber cab roof marker lights, door lettering present but illegible; parked in the open gravel lot in front of the diner at sunrise; the man walks out to it\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:44\",\n      \"entity\": \"recurring truck parked at the diner (compared across 00:00 vs 01:44)\",\n      \"invariant_violated\": \"identity (body configuration and color)\",\n      \"description\": \"The vehicle presented as the same truck changes identity between sightings. At 00:00-00:10 it is a white/light semi tractor-trailer (separate trailer with visible gap behind the sleeper cab) parked flush against the diner's left side. At 01:44 the man exits the diner and walks to a dark green single-unit straight box truck (integral body mounted on the chassis, white stripe, chrome stacks and grille). Both color (white vs dark green) and configuration (tractor-trailer vs straight box truck) differ; no swap is shown on screen and no other vehicle implies a swap - the narrative treats it as the same truck. Overnight elapsed time alone does not explain a make/color/configuration change.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

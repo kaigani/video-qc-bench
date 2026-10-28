@@ -1,0 +1,50 @@
+{
+  "key": "dialogue__cross-cut-placement",
+  "video": "dialogue.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:57:02.196Z",
+  "latencyMs": 149957,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 5603,
+    "total_tokens": 11498,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 00:00-00:07 — frontal medium close-up; man in green/white striped shirt, center frame, facing camera and speaking; anchors: wood door with mounted dartboard and blue coat on wall hook (screen-left), framed print and light-switch plate (screen-right)",
+    "transition: ~00:07-00:08 — cross-dissolve; outgoing frontal shot superimposed over incoming rear-view shot of the same man mid-turn",
+    "shot 2: 00:08-00:09 — rear medium view; same man (identical green/white striped shirt, chest pocket matches) walking away from camera toward a wood door with a wreath; dartboard/coat-hook wall no longer in frame",
+    "person A (man, striped shirt): sole person, present in every shot; placement relative to room consistent with a continuous turn-and-exit across the dissolve; no second person, no duplicate, no geometry overlap observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "person A — eyewear",
+      "invariant_violated": "prop continuity across action-matched transition",
+      "description": "Frontal close-up from 00:00-00:07 clearly shows the man wearing no glasses (eyes and temples unobstructed). At the dissolve (~00:08), the incoming rear-profile view shows a thin glasses temple arm at his ear as he walks away, and it remains in the 00:09 frame. No shot shows him putting glasses on. Because the dissolve reads as a continuous turn-and-exit (same shirt, same room, no implied relocation or significant elapsed time), the sudden appearance of eyewear is unexplained.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 00:00-00:07 — frontal medium close-up; man in green/white striped shirt, center frame, facing camera and speaking; anchors: wood door with mounted dartboard and blue coat on wall hook (screen-left), framed print and light-switch plate (screen-right)\",\n    \"transition: ~00:07-00:08 — cross-dissolve; outgoing frontal shot superimposed over incoming rear-view shot of the same man mid-turn\",\n    \"shot 2: 00:08-00:09 — rear medium view; same man (identical green/white striped shirt, chest pocket matches) walking away from camera toward a wood door with a wreath; dartboard/coat-hook wall no longer in frame\",\n    \"person A (man, striped shirt): sole person, present in every shot; placement relative to room consistent with a continuous turn-and-exit across the dissolve; no second person, no duplicate, no geometry overlap observed\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"person A — eyewear\",\n      \"invariant_violated\": \"prop continuity across action-matched transition\",\n      \"description\": \"Frontal close-up from 00:00-00:07 clearly shows the man wearing no glasses (eyes and temples unobstructed). At the dissolve (~00:08), the incoming rear-profile view shows a thin glasses temple arm at his ear as he walks away, and it remains in the 00:09 frame. No shot shows him putting glasses on. Because the dissolve reads as a continuous turn-and-exit (same shirt, same room, no implied relocation or significant elapsed time), the sudden appearance of eyewear is unexplained.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

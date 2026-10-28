@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:12:58.283Z",
+  "latencyMs": 27200,
+  "usage": {
+    "prompt_tokens": 10657,
+    "completion_tokens": 2060,
+    "total_tokens": 12717,
+    "cost": 0.01571775,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01571775,
+      "upstream_inference_prompt_cost": 0.00799275,
+      "upstream_inference_completions_cost": 0.007725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1854,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | enters diner walking on floor | sitting on counter stool, walking outside to truck | foot contact on ground during gait, weight transfer onto stool, hands resting on counter, sliding cash on counter surface",
+    "Waitress | standing behind counter wiping surface | sitting on adjacent stool, standing up and moving to back area | hand gripping wiping cloth, holding coffee pot during pour, placing plate on counter, sitting with support on stool, grabbing mug from counter",
+    "Coffee pot & mug | coffee pot held by waitress hand, mug resting on counter | mug filled with coffee | continuous contact during lift and pour, stable support from counter",
+    "Plate with food | held by waitress | resting on counter | placed onto counter surface without clipping or pre-contact movement",
+    "Cash bills | sliding on counter | resting near coffee mug | direct contact from man's fingers pushing bills across counter surface"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | enters diner walking on floor | sitting on counter stool, walking outside to truck | foot contact on ground during gait, weight transfer onto stool, hands resting on counter, sliding cash on counter surface\",\n    \"Waitress | standing behind counter wiping surface | sitting on adjacent stool, standing up and moving to back area | hand gripping wiping cloth, holding coffee pot during pour, placing plate on counter, sitting with support on stool, grabbing mug from counter\",\n    \"Coffee pot & mug | coffee pot held by waitress hand, mug resting on counter | mug filled with coffee | continuous contact during lift and pour, stable support from counter\",\n    \"Plate with food | held by waitress | resting on counter | placed onto counter surface without clipping or pre-contact movement\",\n    \"Cash bills | sliding on counter | resting near coffee mug | direct contact from man's fingers pushing bills across counter surface\"\n  ],\n  \"findings\": []\n}"
+}

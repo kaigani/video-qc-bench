@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:47:27.868Z",
+  "latencyMs": 73710,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 3116,
+    "total_tokens": 9343,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | crouched riding on flat concrete, park and tree line behind, shadow below | rolling and performing flip tricks under follow-cam | continuous tracking shot with camera tilting up during tricks",
+    "skateboard | under feet, rolling on flat ground | mid-flip beneath feet at 0:02, landed by 0:04, second trick ~0:08 | flip rotation consistent with kickflip motion, no impossible states",
+    "skatepark terrain | flat concrete with pyramid/funbox on left, round concrete stool at right at 0:00, banks and ledges beyond | same park seen from shifting angles as camera moves | all features remain geometrically compatible with a single open plaza ringed by trees",
+    "trees and light poles | dense tree line on left, multiple tall light poles (left, center-left, right) | same elements reappear at frame edges as camera pans | positions consistent with fixed perimeter layout",
+    "round concrete stool | visible right of skater at 0:00 | not visible after 0:00 | plausibly exits frame due to camera pan/tilt, no disappearance on screen"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | crouched riding on flat concrete, park and tree line behind, shadow below | rolling and performing flip tricks under follow-cam | continuous tracking shot with camera tilting up during tricks\",\n    \"skateboard | under feet, rolling on flat ground | mid-flip beneath feet at 0:02, landed by 0:04, second trick ~0:08 | flip rotation consistent with kickflip motion, no impossible states\",\n    \"skatepark terrain | flat concrete with pyramid/funbox on left, round concrete stool at right at 0:00, banks and ledges beyond | same park seen from shifting angles as camera moves | all features remain geometrically compatible with a single open plaza ringed by trees\",\n    \"trees and light poles | dense tree line on left, multiple tall light poles (left, center-left, right) | same elements reappear at frame edges as camera pans | positions consistent with fixed perimeter layout\",\n    \"round concrete stool | visible right of skater at 0:00 | not visible after 0:00 | plausibly exits frame due to camera pan/tilt, no disappearance on screen\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,59 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:15:46.330Z",
+  "latencyMs": 151350,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 6241,
+    "total_tokens": 11954,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, on wooden cutting board | about half full of mixed green and dark olives | filled progressively as olives are poured in",
+    "small glass bowl | held above jar, filled with green olives | partially emptied, tilted over jar | poured into jar at start and again at end",
+    "stainless steel bowl | heaping full of green olives on counter | nearly empty | contents depleted between 00:06 and 00:08 without visible transfer into jar",
+    "ceramic bowl | full of green olives, right side of counter | still full of green olives | none",
+    "person in navy shirt | pouring olives into jar | still pouring | reaches toward counter bowls mid-video"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "olives inside the large jar",
+      "invariant_violated": "prop continuity / unexplained object origin",
+      "description": "The jar suddenly contains numerous dark purple/black olives, but the small bowl being poured and every bowl visible on the counter hold only green olives; no source for the dark olives is ever shown on screen.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "stainless steel bowl of olives / jar fill level",
+      "invariant_violated": "quantity conservation",
+      "description": "The stainless steel bowl goes from heaping full at 00:00 to nearly empty at 00:08, yet the jar's olive level is essentially unchanged between 00:06 and 00:08, so the olives removed from the bowl are not accounted for in the jar.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, on wooden cutting board | about half full of mixed green and dark olives | filled progressively as olives are poured in\",\n    \"small glass bowl | held above jar, filled with green olives | partially emptied, tilted over jar | poured into jar at start and again at end\",\n    \"stainless steel bowl | heaping full of green olives on counter | nearly empty | contents depleted between 00:06 and 00:08 without visible transfer into jar\",\n    \"ceramic bowl | full of green olives, right side of counter | still full of green olives | none\",\n    \"person in navy shirt | pouring olives into jar | still pouring | reaches toward counter bowls mid-video\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"olives inside the large jar\",\n      \"invariant_violated\": \"prop continuity / unexplained object origin\",\n      \"description\": \"The jar suddenly contains numerous dark purple/black olives, but the small bowl being poured and every bowl visible on the counter hold only green olives; no source for the dark olives is ever shown on screen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"stainless steel bowl of olives / jar fill level\",\n      \"invariant_violated\": \"quantity conservation\",\n      \"description\": \"The stainless steel bowl goes from heaping full at 00:00 to nearly empty at 00:08, yet the jar's olive level is essentially unchanged between 00:06 and 00:08, so the olives removed from the bowl are not accounted for in the jar.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:36:05.715Z",
+  "latencyMs": 44588,
+  "usage": {
+    "prompt_tokens": 10586,
+    "completion_tokens": 1244,
+    "total_tokens": 11830,
+    "cost": 0.0126045,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0126045,
+      "upstream_inference_prompt_cost": 0.0079395,
+      "upstream_inference_completions_cost": 0.004665
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1075,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:27 - Glass coffee carafe: ~80% full with black coffee",
+    "00:27 - White ceramic mug: empty",
+    "00:28-00:30 - Black coffee poured from glass carafe into white ceramic mug",
+    "00:31 - Glass coffee carafe: fill level decreased proportionally",
+    "00:31 - White ceramic mug: ~80% full with black coffee",
+    "01:12 - Second white ceramic mug introduced on counter for waitress",
+    "01:27-01:34 - Both white ceramic mugs filled with coffee at consistent levels"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:27 - Glass coffee carafe: ~80% full with black coffee\",\n    \"00:27 - White ceramic mug: empty\",\n    \"00:28-00:30 - Black coffee poured from glass carafe into white ceramic mug\",\n    \"00:31 - Glass coffee carafe: fill level decreased proportionally\",\n    \"00:31 - White ceramic mug: ~80% full with black coffee\",\n    \"01:12 - Second white ceramic mug introduced on counter for waitress\",\n    \"01:27-01:34 - Both white ceramic mugs filled with coffee at consistent levels\"\n  ],\n  \"findings\": []\n}"
+}

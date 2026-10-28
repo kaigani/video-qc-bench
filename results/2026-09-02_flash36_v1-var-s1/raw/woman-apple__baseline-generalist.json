@@ -1,0 +1,56 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:23.355Z",
+  "latencyMs": 20919,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1522,
+    "total_tokens": 2760,
+    "cost": 0.006636,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006636,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.0057075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1252,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | wearing navy shirt and grey skirt, holding blue umbrella and red fruit | holding blue umbrella stem with no fruit | red fruit vanishes around 00:07",
+    "left fruit stall display | holding natural oranges and green fruit | displaying bright electric cyan fruit | fruit color morphs to unnatural blue at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "market fruit stall display",
+      "invariant_violated": "color_consistency",
+      "description": "The fruit on the market stall display on the lower-left morphs into an unnatural bright electric blue color.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "red fruit held by woman",
+      "invariant_violated": "object_permanence",
+      "description": "The red fruit held in the woman's hands vanishes without explanation as the camera pans around her.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | wearing navy shirt and grey skirt, holding blue umbrella and red fruit | holding blue umbrella stem with no fruit | red fruit vanishes around 00:07\",\n    \"left fruit stall display | holding natural oranges and green fruit | displaying bright electric cyan fruit | fruit color morphs to unnatural blue at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"market fruit stall display\",\n      \"invariant_violated\": \"color_consistency\",\n      \"description\": \"The fruit on the market stall display on the lower-left morphs into an unnatural bright electric blue color.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"red fruit held by woman\",\n      \"invariant_violated\": \"object_permanence\",\n      \"description\": \"The red fruit held in the woman's hands vanishes without explanation as the camera pans around her.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

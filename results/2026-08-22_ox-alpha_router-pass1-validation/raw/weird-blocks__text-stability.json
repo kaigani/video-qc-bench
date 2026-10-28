@@ -1,0 +1,42 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:52:17.952Z",
+  "latencyMs": 140466,
+  "usage": {
+    "prompt_tokens": 5854,
+    "completion_tokens": 5546,
+    "total_tokens": 11400,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — Left green cube: front face reads '2' (hand gripping it); its right side face shows a partial dark digit with white outline, compressed by viewing angle, consistent with '6'. Right green cube: front face reads '2', side face likewise shows partial '6'-like glyph.",
+    "00:02 — Row now: blue cube '2', blue cube '3', green cube '2'. The right green cube from 00:00 is unchanged ('2'). The leftmost cube position now holds a blue cube also reading '2' (green-to-blue swap between shots is an edit cut; the digit itself is identical). Side faces between cubes show the same partial '6' glyphs.",
+    "00:04 — Row reads 2-3-2; a fourth green cube reading '2' is being set down with slight motion blur, digit still clearly legible. All earlier digits unchanged.",
+    "00:06 — Row reads 2-3-2-2-3 (orange cube '2', white cube '3' newly placed); a green cube reading '5' is being set down. All previously legible digits identical to prior frames.",
+    "00:08 — Full row of eight cubes: blue '2', blue '3', green '2', orange '2', white '3', green '5', green '2', and a final blue cube being set down, motion-blurred but reading '6'. Every digit matches its earlier legible readings; all visible side faces consistently show the same partial '6' glyph."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — Left green cube: front face reads '2' (hand gripping it); its right side face shows a partial dark digit with white outline, compressed by viewing angle, consistent with '6'. Right green cube: front face reads '2', side face likewise shows partial '6'-like glyph.\",\n    \"00:02 — Row now: blue cube '2', blue cube '3', green cube '2'. The right green cube from 00:00 is unchanged ('2'). The leftmost cube position now holds a blue cube also reading '2' (green-to-blue swap between shots is an edit cut; the digit itself is identical). Side faces between cubes show the same partial '6' glyphs.\",\n    \"00:04 — Row reads 2-3-2; a fourth green cube reading '2' is being set down with slight motion blur, digit still clearly legible. All earlier digits unchanged.\",\n    \"00:06 — Row reads 2-3-2-2-3 (orange cube '2', white cube '3' newly placed); a green cube reading '5' is being set down. All previously legible digits identical to prior frames.\",\n    \"00:08 — Full row of eight cubes: blue '2', blue '3', green '2', orange '2', white '3', green '5', green '2', and a final blue cube being set down, motion-blurred but reading '6'. Every digit matches its earlier legible readings; all visible side faces consistently show the same partial '6' glyph.\"\n  ],\n  \"findings\": []\n}"
+}

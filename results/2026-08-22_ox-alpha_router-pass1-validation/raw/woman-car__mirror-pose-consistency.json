@@ -1,0 +1,42 @@
+{
+  "key": "woman-car__mirror-pose-consistency",
+  "video": "woman-car.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:41:13.726Z",
+  "latencyMs": 72542,
+  "usage": {
+    "prompt_tokens": 5364,
+    "completion_tokens": 1204,
+    "total_tokens": 6568,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - Subject: woman leaning on hood, arms crossed, facing camera; only reflective surface in frame is the car's side mirror (true mirror), which reflects only sky/desert behind camera - subject not visible in it; windshield/windows excluded per scope",
+    "0:02 - Subject: arms crossed on hood, head upright, gaze toward camera; side mirror visible at right edge, still showing rearward scene only, no subject reflection",
+    "0:04 - Subject: arms crossed on hood, gaze toward camera; side mirror no longer in frame, no mirror-subject co-visibility",
+    "0:06 - Subject: arms crossed, head turned to her right (frame left), smiling, hair windblown; no true mirror in frame",
+    "0:08 - Subject: arms crossed, head turned frame-left, smiling, hair windblown; no true mirror in frame"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - Subject: woman leaning on hood, arms crossed, facing camera; only reflective surface in frame is the car's side mirror (true mirror), which reflects only sky/desert behind camera - subject not visible in it; windshield/windows excluded per scope\",\n    \"0:02 - Subject: arms crossed on hood, head upright, gaze toward camera; side mirror visible at right edge, still showing rearward scene only, no subject reflection\",\n    \"0:04 - Subject: arms crossed on hood, gaze toward camera; side mirror no longer in frame, no mirror-subject co-visibility\",\n    \"0:06 - Subject: arms crossed, head turned to her right (frame left), smiling, hair windblown; no true mirror in frame\",\n    \"0:08 - Subject: arms crossed, head turned frame-left, smiling, hair windblown; no true mirror in frame\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__contact-interaction-kinematics",
+  "video": "watchmaker.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:28.944Z",
+  "latencyMs": 13200,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 716,
+    "total_tokens": 2168,
+    "cost": 0.003774,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003774,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.002685
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 575,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Left hand | Holding watch component | Holding watch component | Maintains continuous multi-point grip on object throughout",
+    "Right hand | Holding tweezers | Holding precision tool | Releases tweezers down at 00:04, grips precision tool at 00:05",
+    "Tweezers | Contacted by right hand pinch grip | Released to surface | Placed down at 00:04",
+    "Precision tool | Rested off-camera | Contacted by right hand pinch grip | Lifted and applied to watch component at 00:06"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Left hand | Holding watch component | Holding watch component | Maintains continuous multi-point grip on object throughout\",\n    \"Right hand | Holding tweezers | Holding precision tool | Releases tweezers down at 00:04, grips precision tool at 00:05\",\n    \"Tweezers | Contacted by right hand pinch grip | Released to surface | Placed down at 00:04\",\n    \"Precision tool | Rested off-camera | Contacted by right hand pinch grip | Lifted and applied to watch component at 00:06\"\n  ],\n  \"findings\": []\n}"
+}

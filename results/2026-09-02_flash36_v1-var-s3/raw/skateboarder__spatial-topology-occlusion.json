@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:16:21.952Z",
+  "latencyMs": 9341,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 863,
+    "total_tokens": 2289,
+    "cost": 0.00430575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00430575,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00323625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 741,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skatepark concrete ramps | Concrete spine and bowl transitions | Maintained position relative to background throughout continuous camera tracking | Continuous camera pan and orbit",
+    "Background light poles and trees | Dual-lamp light poles and perimeter tree line behind ramps | Maintained spatial position relative to ramps and sun position | Consistent depth and parallax",
+    "Skateboarder and skateboard | Moving foreground subject relative to skatepark ramps | Occludes background elements consistent with low-angle perspective | Smooth depth ordering throughout tricks"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skatepark concrete ramps | Concrete spine and bowl transitions | Maintained position relative to background throughout continuous camera tracking | Continuous camera pan and orbit\",\n    \"Background light poles and trees | Dual-lamp light poles and perimeter tree line behind ramps | Maintained spatial position relative to ramps and sun position | Consistent depth and parallax\",\n    \"Skateboarder and skateboard | Moving foreground subject relative to skatepark ramps | Occludes background elements consistent with low-angle perspective | Smooth depth ordering throughout tricks\"\n  ],\n  \"findings\": []\n}"
+}

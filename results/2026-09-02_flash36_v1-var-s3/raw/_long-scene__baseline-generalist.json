@@ -1,0 +1,47 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:12:36.983Z",
+  "latencyMs": 36124,
+  "usage": {
+    "prompt_tokens": 10443,
+    "completion_tokens": 2397,
+    "total_tokens": 12840,
+    "cost": 0.016821,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016821,
+      "upstream_inference_prompt_cost": 0.00783225,
+      "upstream_inference_completions_cost": 0.00898875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2232,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | blue polo shirt, white apron, hair bun | duplicated into two identical instances | 01:51 duplicate appears behind counter while original sits on stool"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:51",
+      "entity": "waitress character",
+      "invariant_violated": "character duplication",
+      "description": "A second identical waitress wearing the same blue shirt and white apron appears behind the counter while the primary waitress is still sitting on a stool in the foreground, creating two identical copies of the character in the same frame.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | blue polo shirt, white apron, hair bun | duplicated into two identical instances | 01:51 duplicate appears behind counter while original sits on stool\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress character\",\n      \"invariant_violated\": \"character duplication\",\n      \"description\": \"A second identical waitress wearing the same blue shirt and white apron appears behind the counter while the primary waitress is still sitting on a stool in the foreground, creating two identical copies of the character in the same frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

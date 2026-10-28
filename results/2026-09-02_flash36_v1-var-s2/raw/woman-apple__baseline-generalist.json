@@ -1,0 +1,47 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:42:23.234Z",
+  "latencyMs": 17658,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1005,
+    "total_tokens": 2243,
+    "cost": 0.00469725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00469725,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00376875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 894,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | navy button-up shirt, grey skirt, holding blue umbrella and red fruit | holding blue umbrella shaft | moves through market as camera pans around her"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "produce stall on the left",
+      "invariant_violated": "color_consistency",
+      "description": "Unnatural bright blue/cyan fruit suddenly appears displayed in the produce crates on the left side of the market stall.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\"ledger\": [\"woman | navy button-up shirt, grey skirt, holding blue umbrella and red fruit | holding blue umbrella shaft | moves through market as camera pans around her\"],\"findings\": [{\"timestamp\": \"00:04\", \"entity\": \"produce stall on the left\", \"invariant_violated\": \"color_consistency\", \"description\": \"Unnatural bright blue/cyan fruit suddenly appears displayed in the produce crates on the left side of the market stall.\", \"severity\": \"moderate\", \"confidence\": 0.95}]}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:56:50.287Z",
+  "latencyMs": 36983,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 799,
+    "total_tokens": 6694,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands | one hand in blurred motion near bowl, then holding red ball at 2s | stirring balls inside bowl | reach → grasp red ball → release into bowl → stir contents (order and delay plausible)",
+    "red ball | held with both hands above bowl at 2s | inside bowl among others by 4s | released by child, falls into bowl (cause precedes effect, delay plausible)",
+    "colored balls in bowl | resting at bottom of glass bowl | swirling with motion blur at 6-8s | displaced by child's hand stirring; motion magnitude matches hand movement (proportional)",
+    "glass bowl | stationary on wooden table, holding balls | stationary, slightly repositioned as child grips rim at 4-6s | rim gripped by left hand then shifted (cause precedes effect)",
+    "decorated egg in silver cup | at right table edge | unchanged at frame edge | no interaction, no transitions (consistent)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands | one hand in blurred motion near bowl, then holding red ball at 2s | stirring balls inside bowl | reach → grasp red ball → release into bowl → stir contents (order and delay plausible)\",\n    \"red ball | held with both hands above bowl at 2s | inside bowl among others by 4s | released by child, falls into bowl (cause precedes effect, delay plausible)\",\n    \"colored balls in bowl | resting at bottom of glass bowl | swirling with motion blur at 6-8s | displaced by child's hand stirring; motion magnitude matches hand movement (proportional)\",\n    \"glass bowl | stationary on wooden table, holding balls | stationary, slightly repositioned as child grips rim at 4-6s | rim gripped by left hand then shifted (cause precedes effect)\",\n    \"decorated egg in silver cup | at right table edge | unchanged at frame edge | no interaction, no transitions (consistent)\"\n  ],\n  \"findings\": []\n}"
+}

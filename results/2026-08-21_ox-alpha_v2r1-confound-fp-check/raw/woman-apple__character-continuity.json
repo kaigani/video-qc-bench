@@ -1,0 +1,50 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:53:00.629Z",
+  "latencyMs": 295192,
+  "usage": {
+    "prompt_tokens": 6218,
+    "completion_tokens": 12174,
+    "total_tokens": 18392,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman | brown hair in ponytail, navy button-up top, gray shorts, watch on left wrist, ring on left hand, blue umbrella held in right hand, red fruit held in left hand | same face/hair/wardrobe throughout; by 00:04 she has swapped the fruit to her right hand and umbrella to her left hand; by 00:08 swapped back (fruit in watch hand again) | ring is on the same hand as the watch at 00:00-00:02 but on the opposite hand from the watch at 00:04-00:06",
+    "Woman in red shirt with blue shoulder bag | walking toward camera on right side of aisle | progressively closer/exit right across shots | continuous plausible walking, no discontinuity",
+    "Man in green t-shirt with sunglasses | behind main woman, center-right | moves toward camera then out of frame | plausible motion, no teleport detected",
+    "Miscellaneous market crowd (teal-top woman, bald man in blue shirt, vendors) | scattered shoppers in aisle | positions change between sampled frames | all changes consistent with normal walking over elapsed time"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Main woman's ring",
+      "invariant_violated": "identity/accessory continuity (accessory changed location without on-screen action)",
+      "description": "At 00:00-00:02 the ring is clearly visible on the ring finger of her left hand — the same hand bearing the watch, which holds the red fruit. After she swaps the fruit and umbrella between hands (visible by 00:04 and clearly at 00:06), the ring is on the ring finger of her RIGHT hand while the watch remains on her left wrist. The ring is sharply visible on bare, unobstructed fingers in both states. A ring cannot transfer between hands on its own during a natural object swap, and no on-screen motion shows her removing or moving it; the ring appears to follow whichever hand holds the fruit.",
+      "severity": "minor",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman | brown hair in ponytail, navy button-up top, gray shorts, watch on left wrist, ring on left hand, blue umbrella held in right hand, red fruit held in left hand | same face/hair/wardrobe throughout; by 00:04 she has swapped the fruit to her right hand and umbrella to her left hand; by 00:08 swapped back (fruit in watch hand again) | ring is on the same hand as the watch at 00:00-00:02 but on the opposite hand from the watch at 00:04-00:06\",\n    \"Woman in red shirt with blue shoulder bag | walking toward camera on right side of aisle | progressively closer/exit right across shots | continuous plausible walking, no discontinuity\",\n    \"Man in green t-shirt with sunglasses | behind main woman, center-right | moves toward camera then out of frame | plausible motion, no teleport detected\",\n    \"Miscellaneous market crowd (teal-top woman, bald man in blue shirt, vendors) | scattered shoppers in aisle | positions change between sampled frames | all changes consistent with normal walking over elapsed time\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Main woman's ring\",\n      \"invariant_violated\": \"identity/accessory continuity (accessory changed location without on-screen action)\",\n      \"description\": \"At 00:00-00:02 the ring is clearly visible on the ring finger of her left hand — the same hand bearing the watch, which holds the red fruit. After she swaps the fruit and umbrella between hands (visible by 00:04 and clearly at 00:06), the ring is on the ring finger of her RIGHT hand while the watch remains on her left wrist. The ring is sharply visible on bare, unobstructed fingers in both states. A ring cannot transfer between hands on its own during a natural object swap, and no on-screen motion shows her removing or moving it; the ring appears to follow whichever hand holds the fruit.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

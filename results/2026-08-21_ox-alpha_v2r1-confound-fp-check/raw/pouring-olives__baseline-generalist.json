@@ -1,0 +1,51 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:50:53.792Z",
+  "latencyMs": 182500,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 7584,
+    "total_tokens": 13623,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, clear glass with pour spout on right | ~half filled with mixed green and dark purple olives | progressively filled by pours",
+    "small glass bowl (held) | contains green olives visible on top | contains mostly dark olives at end | poured into jar twice, apparently refilled off-screen",
+    "metal bowl of olives | all green olives, full | fewer olives, possible dark ones mixed in | partially depleted between 0:06 and 0:08 consistent with refilling the small bowl",
+    "white ceramic bowl of olives | full of green olives | unchanged, full of green olives | no transitions",
+    "person (hands/wardrobe) | navy shirt, sleeves down, no jewelry visible | right sleeve rolled up, bracelet visible on bare left wrist | sleeve position change only"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "metal bowl of olives (background)",
+      "invariant_violated": "unexplained content change",
+      "description": "At 0:00 the metal bowl contains only green olives. At 0:06 several dark/purple olive-shaped objects appear mixed into the bowl, but no on-screen action ever adds anything to this bowl (the person only pours from the small bowl into the jar during 0:00-0:04). The dark shapes could plausibly be shadows cast by the person's hands held directly over the bowl, so this may be a lighting artifact rather than a real change.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, clear glass with pour spout on right | ~half filled with mixed green and dark purple olives | progressively filled by pours\",\n    \"small glass bowl (held) | contains green olives visible on top | contains mostly dark olives at end | poured into jar twice, apparently refilled off-screen\",\n    \"metal bowl of olives | all green olives, full | fewer olives, possible dark ones mixed in | partially depleted between 0:06 and 0:08 consistent with refilling the small bowl\",\n    \"white ceramic bowl of olives | full of green olives | unchanged, full of green olives | no transitions\",\n    \"person (hands/wardrobe) | navy shirt, sleeves down, no jewelry visible | right sleeve rolled up, bracelet visible on bare left wrist | sleeve position change only\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"metal bowl of olives (background)\",\n      \"invariant_violated\": \"unexplained content change\",\n      \"description\": \"At 0:00 the metal bowl contains only green olives. At 0:06 several dark/purple olive-shaped objects appear mixed into the bowl, but no on-screen action ever adds anything to this bowl (the person only pours from the small bowl into the jar during 0:00-0:04). The dark shapes could plausibly be shadows cast by the person's hands held directly over the bowl, so this may be a lighting artifact rather than a real change.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

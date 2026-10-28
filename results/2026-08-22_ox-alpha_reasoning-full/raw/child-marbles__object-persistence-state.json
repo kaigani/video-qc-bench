@@ -1,0 +1,51 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:56:47.640Z",
+  "latencyMs": 96916,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 3926,
+    "total_tokens": 9838,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | clear, center of wooden table, upright, holding ~8 balls | same position, slightly repositioned closer to child | child grips rim and pulls it ~0:06; no state change",
+    "balls in bowl (red/green/yellow mix) | ~8 balls resting in bowl at 0:00 (3 green, 3 yellow, 2 red) | ~9 balls in bowl, positions shuffled | child drops an additional red ball in ~0:02; child stirs/mixes balls 0:04-0:10; one ball reads as distinctly ORANGE at 0:04 only",
+    "red ball in child's hands | held above bowl at 0:02 | inside bowl | released/dropped into bowl by child ~0:02 (explained)",
+    "metal egg cup with decorated egg/ornament | right side of table, intact | out of frame after ~0:04 due to camera pan | no state change while visible",
+    "loose balls on table bottom-right | red + green visible at 0:00; red + green + yellow by 0:02 | unchanged | third ball revealed by camera pan, not an appearance (explained)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "one ball in glass bowl (center, adjacent to a red ball)",
+      "invariant_violated": "identity/color persistence (no uncaused transformation)",
+      "description": "At 00:04 a ball with a distinctly orange hue is visible in the bowl, clearly different in color from the red ball directly beside it under identical lighting. In all earlier frames (00:00-00:02) and later frames (00:06-00:10) every ball is red, green, or yellow; no orange ball is ever added or removed by a visible action. This is an unexplained color transformation (or momentary appearance/disappearance) of a ball.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | clear, center of wooden table, upright, holding ~8 balls | same position, slightly repositioned closer to child | child grips rim and pulls it ~0:06; no state change\",\n    \"balls in bowl (red/green/yellow mix) | ~8 balls resting in bowl at 0:00 (3 green, 3 yellow, 2 red) | ~9 balls in bowl, positions shuffled | child drops an additional red ball in ~0:02; child stirs/mixes balls 0:04-0:10; one ball reads as distinctly ORANGE at 0:04 only\",\n    \"red ball in child's hands | held above bowl at 0:02 | inside bowl | released/dropped into bowl by child ~0:02 (explained)\",\n    \"metal egg cup with decorated egg/ornament | right side of table, intact | out of frame after ~0:04 due to camera pan | no state change while visible\",\n    \"loose balls on table bottom-right | red + green visible at 0:00; red + green + yellow by 0:02 | unchanged | third ball revealed by camera pan, not an appearance (explained)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"one ball in glass bowl (center, adjacent to a red ball)\",\n      \"invariant_violated\": \"identity/color persistence (no uncaused transformation)\",\n      \"description\": \"At 00:04 a ball with a distinctly orange hue is visible in the bowl, clearly different in color from the red ball directly beside it under identical lighting. In all earlier frames (00:00-00:02) and later frames (00:06-00:10) every ball is red, green, or yellow; no orange ball is ever added or removed by a visible action. This is an unexplained color transformation (or momentary appearance/disappearance) of a ball.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

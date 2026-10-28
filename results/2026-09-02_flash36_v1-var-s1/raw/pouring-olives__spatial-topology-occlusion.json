@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:39.168Z",
+  "latencyMs": 15155,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 981,
+    "total_tokens": 2407,
+    "cost": 0.00474825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00474825,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00367875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 848,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass jar | center foreground on wooden cutting board | center foreground on wooden cutting board | remains stationary throughout",
+    "wooden cutting board | beneath glass jar on countertop | beneath glass jar on countertop | remains stationary throughout",
+    "stainless steel bowl | right background relative to glass jar | right background relative to glass jar | remains stationary throughout",
+    "white bowl | lower right foreground on countertop | lower right foreground on countertop | remains stationary throughout",
+    "stove and oven | fixed background behind countertop | fixed background behind countertop | remains stationary throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"glass jar | center foreground on wooden cutting board | center foreground on wooden cutting board | remains stationary throughout\",\n    \"wooden cutting board | beneath glass jar on countertop | beneath glass jar on countertop | remains stationary throughout\",\n    \"stainless steel bowl | right background relative to glass jar | right background relative to glass jar | remains stationary throughout\",\n    \"white bowl | lower right foreground on countertop | lower right foreground on countertop | remains stationary throughout\",\n    \"stove and oven | fixed background behind countertop | fixed background behind countertop | remains stationary throughout\"\n  ],\n  \"findings\": []\n}"
+}

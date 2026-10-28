@@ -1,0 +1,51 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T20:44:30.267Z",
+  "latencyMs": 80685,
+  "usage": {
+    "prompt_tokens": 34848,
+    "completion_tokens": 2350,
+    "total_tokens": 37198,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 exterior dusk: white semi tractor-trailer (light cab + white trailer) parked in dirt lot left of diner, exhaust smoke visible, stationary",
+    "00:20-00:24 interior: white car visible through left window, parked outside diner",
+    "01:43-01:47 exterior sunrise: dark green Kenworth-style conventional-cab box truck (single-unit, white stripe on box, chrome stacks/wheels) in lot; man walks to driver's door",
+    "01:47-01:52 through diner window: same green box truck, man at driver's door, parked left of diner",
+    "01:02-01:10 interior: white car still visible through left window, unchanged"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "truck parked outside the diner (man's vehicle)",
+      "invariant_violated": "identity continuity (body type / configuration / color mismatch)",
+      "description": "At 00:00-00:10 the vehicle parked in the lot is a white semi tractor-trailer (light-colored cab with a long white trailer). When the man exits the diner at 01:43 he walks to a dark green conventional-cab box truck (single-unit with integrated cargo box, chrome exhaust stacks) — a different body type, color, and overall configuration. The overnight elapsed time alone does not explain it: no swap is shown on screen and no second vehicle appears to account for the change, yet the man treats the green box truck as his own.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 exterior dusk: white semi tractor-trailer (light cab + white trailer) parked in dirt lot left of diner, exhaust smoke visible, stationary\",\n    \"00:20-00:24 interior: white car visible through left window, parked outside diner\",\n    \"01:43-01:47 exterior sunrise: dark green Kenworth-style conventional-cab box truck (single-unit, white stripe on box, chrome stacks/wheels) in lot; man walks to driver's door\",\n    \"01:47-01:52 through diner window: same green box truck, man at driver's door, parked left of diner\",\n    \"01:02-01:10 interior: white car still visible through left window, unchanged\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"truck parked outside the diner (man's vehicle)\",\n      \"invariant_violated\": \"identity continuity (body type / configuration / color mismatch)\",\n      \"description\": \"At 00:00-00:10 the vehicle parked in the lot is a white semi tractor-trailer (light-colored cab with a long white trailer). When the man exits the diner at 01:43 he walks to a dark green conventional-cab box truck (single-unit with integrated cargo box, chrome exhaust stacks) — a different body type, color, and overall configuration. The overnight elapsed time alone does not explain it: no swap is shown on screen and no second vehicle appears to account for the change, yet the man treats the green box truck as his own.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

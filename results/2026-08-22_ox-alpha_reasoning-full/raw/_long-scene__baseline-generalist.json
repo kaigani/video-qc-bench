@@ -1,0 +1,102 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:55:00.610Z",
+  "latencyMs": 356258,
+  "usage": {
+    "prompt_tokens": 34741,
+    "completion_tokens": 13045,
+    "total_tokens": 47786,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner | pre-dawn twilight, interior lit, OPEN neon lit, empty | sunrise, sun-flooded, man gone | day breaks over the scene; staff clears up",
+    "Truck | white/cream semi tractor with sleeper parked outside in the dark | dark green straight truck with box body at sunrise | vehicle is silently replaced between opening and closing shots",
+    "Waitress | alone wiping counter, blue polo, white apron, glasses on lanyard | cleaning up alone again after customer leaves | serves coffee, clears plate, shares coffee, takes payment, watches departure",
+    "Trucker | absent from diner at 00:20 | walks out to truck at ~01:43 | appears inside, sits at counter, drinks coffee, is served breakfast, pays with a $100 bill",
+    "Breakfast plate (fried egg + wedge) | served steaming at 00:34 | cleared away at ~01:11 largely uneaten | placed in front of trucker, later removed",
+    "Coffee (glass carafe + white mug) | poured fresh at 00:26-00:32 | mug left on counter at departure | pour, drinking, second mug for waitress",
+    "Cash payment | single folded $100 bill placed on counter at 01:39 | taken by waitress at 01:41 | appears to become a multi-bill stack as it is collected",
+    "OPEN neon sign | red letters inside a blue neon border (00:20-00:44) | orange/red letters with no blue border (01:01 onward) | sign design changes between shots"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "Truck",
+      "invariant_violated": "vehicle continuity",
+      "description": "The opening exterior (00:00-00:10) shows a white/cream semi tractor with a large sleeper cab parked outside the diner. When the man walks out at sunrise (01:43-01:47), the vehicle is a dark green straight truck with a box body and a completely different cab shape and color. No explanation is given for the swap; the character departs in a different vehicle than the one established.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:22",
+      "entity": "Trucker",
+      "invariant_violated": "character entry continuity",
+      "description": "At 00:20 the diner is empty except for the waitress; at 00:22 the man is already mid-diner walking from the booth/window-wall side toward the counter. No door is visible on that side of the room (the left wall is floor-to-ceiling windows with booths), and the only visible door (rear door with EXIT sign, seen at 00:46) is in a different direction, so he appears to materialize inside the set.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "01:01",
+      "entity": "OPEN neon sign",
+      "invariant_violated": "prop continuity",
+      "description": "In early interior shots (00:20-00:44) the window sign reads OPEN as red neon letters inside a rectangular blue neon border. In later shots (01:01, 01:11, 01:21) the same sign shows orange/red letters with no blue border, as if it is a different sign. A neon sign cannot change its tube color and layout between shots.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:16",
+      "entity": "Waitress's cleaning cloth",
+      "invariant_violated": "prop continuity",
+      "description": "At 00:12 the waitress is actively wiping the counter with a cloth; at 00:16 the cloth has vanished and her bare hand is flat on the counter, and it is still absent at 00:18. The cloth disappears mid-action with no cut or explanation, then reappears in later wiping shots (e.g., 00:46).",
+      "severity": "minor",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "Cash payment",
+      "invariant_violated": "object state continuity",
+      "description": "At 01:39 the man places a single folded $100 bill on the counter. At 01:41, as the waitress's hand reaches for it, the payment has become a fanned stack of multiple bills. Additionally, the bill artwork (portrait placement, corner numerals) appears warped and inconsistent between the two close-ups, consistent with generated-currency artifacts.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:01",
+      "entity": "Ceiling fluorescent lights",
+      "invariant_violated": "lighting continuity",
+      "description": "The dropped-ceiling fluorescent panels are clearly glowing in early interior shots (00:20, 00:38) but appear dark/unlit in later interior shots (01:01, 01:21) even though the scene is continuous and no one is shown switching them off; the room lighting state changes between cuts without cause.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "01:29",
+      "entity": "Trucker",
+      "invariant_violated": "gaze/scene geography",
+      "description": "During the two-shot at the counter (01:29-01:31) the man stares directly into the camera lens for several seconds before turning to look out the window. There is nothing at that position in the scene for him to look at, so the eyeline breaks the fourth wall in an otherwise observational scene.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner | pre-dawn twilight, interior lit, OPEN neon lit, empty | sunrise, sun-flooded, man gone | day breaks over the scene; staff clears up\",\n    \"Truck | white/cream semi tractor with sleeper parked outside in the dark | dark green straight truck with box body at sunrise | vehicle is silently replaced between opening and closing shots\",\n    \"Waitress | alone wiping counter, blue polo, white apron, glasses on lanyard | cleaning up alone again after customer leaves | serves coffee, clears plate, shares coffee, takes payment, watches departure\",\n    \"Trucker | absent from diner at 00:20 | walks out to truck at ~01:43 | appears inside, sits at counter, drinks coffee, is served breakfast, pays with a $100 bill\",\n    \"Breakfast plate (fried egg + wedge) | served steaming at 00:34 | cleared away at ~01:11 largely uneaten | placed in front of trucker, later removed\",\n    \"Coffee (glass carafe + white mug) | poured fresh at 00:26-00:32 | mug left on counter at departure | pour, drinking, second mug for waitress\",\n    \"Cash payment | single folded $100 bill placed on counter at 01:39 | taken by waitress at 01:41 | appears to become a multi-bill stack as it is collected\",\n    \"OPEN neon sign | red letters inside a blue neon border (00:20-00:44) | orange/red letters with no blue border (01:01 onward) | sign design changes between shots\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"Truck\",\n      \"invariant_violated\": \"vehicle continuity\",\n      \"description\": \"The opening exterior (00:00-00:10) shows a white/cream semi tractor with a large sleeper cab parked outside the diner. When the man walks out at sunrise (01:43-01:47), the vehicle is a dark green straight truck with a box body and a completely different cab shape and color. No explanation is given for the swap; the character departs in a different vehicle than the one established.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:22\",\n      \"entity\": \"Trucker\",\n      \"invariant_violated\": \"character entry continuity\",\n      \"description\": \"At 00:20 the diner is empty except for the waitress; at 00:22 the man is already mid-diner walking from the booth/window-wall side toward the counter. No door is visible on that side of the room (the left wall is floor-to-ceiling windows with booths), and the only visible door (rear door with EXIT sign, seen at 00:46) is in a different direction, so he appears to materialize inside the set.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    },\n    {\n      \"timestamp\": \"01:01\",\n      \"entity\": \"OPEN neon sign\",\n      \"invariant_violated\": \"prop continuity\",\n      \"description\": \"In early interior shots (00:20-00:44) the window sign reads OPEN as red neon letters inside a rectangular blue neon border. In later shots (01:01, 01:11, 01:21) the same sign shows orange/red letters with no blue border, as if it is a different sign. A neon sign cannot change its tube color and layout between shots.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:16\",\n      \"entity\": \"Waitress's cleaning cloth\",\n      \"invariant_violated\": \"prop continuity\",\n      \"description\": \"At 00:12 the waitress is actively wiping the counter with a cloth; at 00:16 the cloth has vanished and her bare hand is flat on the counter, and it is still absent at 00:18. The cloth disappears mid-action with no cut or explanation, then reappears in later wiping shots (e.g., 00:46).\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Cash payment\",\n      \"invariant_violated\": \"object state continuity\",\n      \"description\": \"At 01:39 the man places a single folded $100 bill on the counter. At 01:41, as the waitress's hand reaches for it, the payment has become a fanned stack of multiple bills. Additionally, the bill artwork (portrait placement, corner numerals) appears warped and inconsistent between the two close-ups, consistent with generated-currency artifacts.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"01:01\",\n      \"entity\": \"Ceiling fluorescent lights\",\n      \"invariant_violated\": \"lighting continuity\",\n      \"description\": \"The dropped-ceiling fluorescent panels are clearly glowing in early interior shots (00:20, 00:38) but appear dark/unlit in later interior shots (01:01, 01:21) even though the scene is continuous and no one is shown switching them off; the room lighting state changes between cuts without cause.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    },\n    {\n      \"timestamp\": \"01:29\",\n      \"entity\": \"Trucker\",\n      \"invariant_violated\": \"gaze/scene geography\",\n      \"description\": \"During the two-shot at the counter (01:29-01:31) the man stares directly into the camera lens for several seconds before turning to look out the window. There is nothing at that position in the scene for him to look at, so the eyeline breaks the fourth wall in an otherwise observational scene.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

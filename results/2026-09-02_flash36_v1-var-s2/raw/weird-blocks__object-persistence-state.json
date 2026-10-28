@@ -1,0 +1,62 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:44:17.486Z",
+  "latencyMs": 29937,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 4506,
+    "total_tokens": 5950,
+    "cost": 0.0179805,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0179805,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0168975
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3916,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (leftmost block) | green cube '2' on table | blue cube '2' on table | spontaneously changes from green '2' to blue '2' between 00:00 and 00:01",
+    "Block 2 | not present at start | blue cube '3' on table | inserted between Block 1 and Block 3 at 00:01",
+    "Block 3 | green cube '2' on table | green cube '2' on table | shifted right as blocks are inserted",
+    "Block 4 | not present at start | tan cube '2' on table | inserted between Block 3 and Block 5 at 00:03",
+    "Block 5 | not present at start | blue cube '2' on table | inserted between Block 4 and Block 6 at 00:04",
+    "Block 6 | not present at start | dark green cube '5' on table | inserted between Block 5 and Block 7 at 00:06",
+    "Block 7 | not present at start | light green cube '2' on table | inserted between Block 6 and Block 8 at 00:07",
+    "Block 8 (rightmost block) | green cube '3' placed at 00:02 | blue cube '6' on table at end | spontaneously transforms from green cube '3' to blue cube '6' between 00:07 and 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Block 1 (leftmost block)",
+      "invariant_violated": "identity & persistence",
+      "description": "The leftmost block changes color and identity from a green cube with number '2' at 00:00 to a blue cube with number '2' at 00:01 without any visible replacement or swap action.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Block 8 (rightmost block)",
+      "invariant_violated": "identity & persistence",
+      "description": "The rightmost block was a green cube with number '3' at 00:07, but at 00:08 it transforms into a blue cube with number '6' with no visible interaction or replacement.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (leftmost block) | green cube '2' on table | blue cube '2' on table | spontaneously changes from green '2' to blue '2' between 00:00 and 00:01\",\n    \"Block 2 | not present at start | blue cube '3' on table | inserted between Block 1 and Block 3 at 00:01\",\n    \"Block 3 | green cube '2' on table | green cube '2' on table | shifted right as blocks are inserted\",\n    \"Block 4 | not present at start | tan cube '2' on table | inserted between Block 3 and Block 5 at 00:03\",\n    \"Block 5 | not present at start | blue cube '2' on table | inserted between Block 4 and Block 6 at 00:04\",\n    \"Block 6 | not present at start | dark green cube '5' on table | inserted between Block 5 and Block 7 at 00:06\",\n    \"Block 7 | not present at start | light green cube '2' on table | inserted between Block 6 and Block 8 at 00:07\",\n    \"Block 8 (rightmost block) | green cube '3' placed at 00:02 | blue cube '6' on table at end | spontaneously transforms from green cube '3' to blue cube '6' between 00:07 and 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Block 1 (leftmost block)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The leftmost block changes color and identity from a green cube with number '2' at 00:00 to a blue cube with number '2' at 00:01 without any visible replacement or swap action.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Block 8 (rightmost block)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The rightmost block was a green cube with number '3' at 00:07, but at 00:08 it transforms into a blue cube with number '6' with no visible interaction or replacement.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

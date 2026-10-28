@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:21:10.049Z",
+  "latencyMs": 22935,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 2273,
+    "total_tokens": 3632,
+    "cost": 0.009543,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009543,
+      "upstream_inference_prompt_cost": 0.00101925,
+      "upstream_inference_completions_cost": 0.00852375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2019,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Tracked subject's hair: still during 00:00-00:03, streams intensely backward under strong wind/motion from 00:04-00:09",
+    "Tracked car radio antenna: positioned on front hood, remains entirely stationary and rigid throughout the scene",
+    "Tracked background environment: stationary road shoulder at 00:00-00:03, scrolling yellow road markings indicating high-speed motion at 00:04-00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "car radio antenna",
+      "invariant_violated": "unresponsive element under wind",
+      "description": "From 00:05 to 00:09, strong airflow streams the subject's hair horizontally backward, yet the thin radio antenna on the hood directly exposed to the same airflow shows no deflection, sway, or vibration.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Tracked subject's hair: still during 00:00-00:03, streams intensely backward under strong wind/motion from 00:04-00:09\",\n    \"Tracked car radio antenna: positioned on front hood, remains entirely stationary and rigid throughout the scene\",\n    \"Tracked background environment: stationary road shoulder at 00:00-00:03, scrolling yellow road markings indicating high-speed motion at 00:04-00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"car radio antenna\",\n      \"invariant_violated\": \"unresponsive element under wind\",\n      \"description\": \"From 00:05 to 00:09, strong airflow streams the subject's hair horizontally backward, yet the thin radio antenna on the hood directly exposed to the same airflow shows no deflection, sway, or vibration.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

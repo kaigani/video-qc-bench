@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:36.935Z",
+  "latencyMs": 7982,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 709,
+    "total_tokens": 2134,
+    "cost": 0.0037275,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0037275,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00265875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 563,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "tweezers | held in left hand touching ring at 00:00 | lowered and set down at 00:03 | left hand releases tweezers and pulls back",
+    "pin tool | held in left hand off-screen at 00:04 | inserted into ring setting at 00:06 | left hand moves pin tool upward to work on ring bezel",
+    "jewelry ring | held stationary in right hand at 00:00 | remains held in right hand at 00:09 | right hand adjusts grip slightly as left hand switches tools"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"tweezers | held in left hand touching ring at 00:00 | lowered and set down at 00:03 | left hand releases tweezers and pulls back\",\n    \"pin tool | held in left hand off-screen at 00:04 | inserted into ring setting at 00:06 | left hand moves pin tool upward to work on ring bezel\",\n    \"jewelry ring | held stationary in right hand at 00:00 | remains held in right hand at 00:09 | right hand adjusts grip slightly as left hand switches tools\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__contact-interaction-kinematics",
+  "video": "dialogue.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:38:17.493Z",
+  "latencyMs": 10340,
+  "usage": {
+    "prompt_tokens": 1452,
+    "completion_tokens": 799,
+    "total_tokens": 2251,
+    "cost": 0.00408525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00408525,
+      "upstream_inference_prompt_cost": 0.001089,
+      "upstream_inference_completions_cost": 0.00299625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 693,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man | Standing facing camera | Standing facing door knocking | Turned left and stepped towards door around 00:07, brought hands into contact with door panel to knock at 00:08",
+    "Wooden door | Stationary closed panel | Contacted by man's hands | Contacted by man's knuckles during knocking action from 00:08 to 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man | Standing facing camera | Standing facing door knocking | Turned left and stepped towards door around 00:07, brought hands into contact with door panel to knock at 00:08\",\n    \"Wooden door | Stationary closed panel | Contacted by man's hands | Contacted by man's knuckles during knocking action from 00:08 to 00:09\"\n  ],\n  \"findings\": []\n}"
+}

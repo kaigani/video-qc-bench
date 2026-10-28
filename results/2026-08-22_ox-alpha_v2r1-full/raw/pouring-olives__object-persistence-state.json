@@ -1,0 +1,44 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T14:57:58.624Z",
+  "latencyMs": 72098,
+  "usage": {
+    "prompt_tokens": 6238,
+    "completion_tokens": 3289,
+    "total_tokens": 9527,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty, upright on wooden cutting board, center frame | ~1/3 filled with mixed green and dark olives | filled progressively 0-8s by pouring from small glass bowl; no unattended changes",
+    "small glass bowl (pour vessel) | full of green olives, held in hands above jar | partially filled with mixed green/dark olives, mid-pour into jar | emptied into jar 0-4s; between 4s and 6s a visible camera cut occurs and it reappears refilled (refill action plausibly off-screen during the cut); poured again at 8s",
+    "stainless steel bowl | on counter right of jar, filled with green olives | same position, now green olives with some dark olives visible | contents change occurs across the 4-6s camera cut; consistent with off-screen time-skip restocking, not an on-screen mutation",
+    "white ceramic bowl | on counter far right, filled with green olives | unchanged, same position and contents throughout",
+    "green olives | contained in small bowl, steel bowl, ceramic bowl | distributed into jar and remaining bowls | transferred only via visible pours; counts decrease in source bowls consistent with transfers",
+    "dark purple/black olives | visible in small glass bowl and jar interior | in jar, small bowl, and steel bowl after cut | transferred via visible pours; appearance in steel bowl coincides with camera cut, plausibly pre-existing under green olives or added off-screen",
+    "glass bottle (right edge) | absent from frame at 0-4s | visible at right edge near ceramic bowl from 6s onward | enters frame across the 4-6s camera cut; plausible it was placed or revealed off-screen during the time skip"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty, upright on wooden cutting board, center frame | ~1/3 filled with mixed green and dark olives | filled progressively 0-8s by pouring from small glass bowl; no unattended changes\",\n    \"small glass bowl (pour vessel) | full of green olives, held in hands above jar | partially filled with mixed green/dark olives, mid-pour into jar | emptied into jar 0-4s; between 4s and 6s a visible camera cut occurs and it reappears refilled (refill action plausibly off-screen during the cut); poured again at 8s\",\n    \"stainless steel bowl | on counter right of jar, filled with green olives | same position, now green olives with some dark olives visible | contents change occurs across the 4-6s camera cut; consistent with off-screen time-skip restocking, not an on-screen mutation\",\n    \"white ceramic bowl | on counter far right, filled with green olives | unchanged, same position and contents throughout\",\n    \"green olives | contained in small bowl, steel bowl, ceramic bowl | distributed into jar and remaining bowls | transferred only via visible pours; counts decrease in source bowls consistent with transfers\",\n    \"dark purple/black olives | visible in small glass bowl and jar interior | in jar, small bowl, and steel bowl after cut | transferred via visible pours; appearance in steel bowl coincides with camera cut, plausibly pre-existing under green olives or added off-screen\",\n    \"glass bottle (right edge) | absent from frame at 0-4s | visible at right edge near ceramic bowl from 6s onward | enters frame across the 4-6s camera cut; plausible it was placed or revealed off-screen during the time skip\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,54 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:56:06.532Z",
+  "latencyMs": 178929,
+  "usage": {
+    "prompt_tokens": 6238,
+    "completion_tokens": 8237,
+    "total_tokens": 14475,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cube #1 (leftmost) | green cube, front face '2', right face '6', resting on table at left end of row, hand pinching its top | blue cube, front face '2', same table position | UNEXPLAINED color/identity transition green→blue between 0:00 and 0:02; no visible action removes the green cube or places the blue one; framing, lighting and camera position identical across the change",
+    "Cube #2 (blue '3') | not present | on table at position 2, front face '3' | placed by hand at ~0:02 (motion-blurred during placement), remains static afterward",
+    "Cube #3 (green '2') | green cube, front face '2', at position 2 at 0:00 | green cube, front face '2', at position 3 | displaced one slot to the right when blue '3' was inserted beside it (~0:02); consistent with hand repositioning, stable thereafter",
+    "Cube #4 (orange '2') | not present | orange cube, front face '2', at position 4 | placed by hand ~0:04–0:06 (only seen motion-blurred mid-placement); sharp and unchanged at 0:06 and 0:08",
+    "Cube #5 (light blue '3') | not present | light blue cube, front face '3', at position 5 | placed by hand ~0:04–0:06; sharp and unchanged at 0:06 and 0:08",
+    "Cube #6 (green '5') | not present | green cube, front face '5', at position 6 | placed by hand at ~0:06 (motion-blurred during placement); sharp and unchanged at 0:08",
+    "Cube #7 (green '2') | not present | green cube, front face '2', at position 7 | placed by hand between 0:06 and 0:08; sharp at 0:08",
+    "Cube #8 (final blue cube) | not present | blue cube at position 8, digit partially motion-blurred (reads as '6'/'2') | being placed by hand at 0:08; placement still in progress at video end"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "leftmost number cube (position 1)",
+      "invariant_violated": "object identity/persistence — transformation into a different object with no visible cause",
+      "description": "At 0:00 the leftmost cube is green (front face '2', right face '6') with the hand pinching its top; at 0:02 the same table position, in an otherwise identical shot (same framing, lighting, background, no cut), is occupied by a blue cube showing '2'. No frame shows the green cube being lifted away or the blue cube being set down — the hand is in contact with the cube at 0:00 and has simply moved on to place the next cube at 0:02. A green→blue color/identity change of the cube in place is the most consistent reading; an off-screen swap by the hand within the 2-second gap cannot be entirely ruled out, which limits confidence.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cube #1 (leftmost) | green cube, front face '2', right face '6', resting on table at left end of row, hand pinching its top | blue cube, front face '2', same table position | UNEXPLAINED color/identity transition green→blue between 0:00 and 0:02; no visible action removes the green cube or places the blue one; framing, lighting and camera position identical across the change\",\n    \"Cube #2 (blue '3') | not present | on table at position 2, front face '3' | placed by hand at ~0:02 (motion-blurred during placement), remains static afterward\",\n    \"Cube #3 (green '2') | green cube, front face '2', at position 2 at 0:00 | green cube, front face '2', at position 3 | displaced one slot to the right when blue '3' was inserted beside it (~0:02); consistent with hand repositioning, stable thereafter\",\n    \"Cube #4 (orange '2') | not present | orange cube, front face '2', at position 4 | placed by hand ~0:04–0:06 (only seen motion-blurred mid-placement); sharp and unchanged at 0:06 and 0:08\",\n    \"Cube #5 (light blue '3') | not present | light blue cube, front face '3', at position 5 | placed by hand ~0:04–0:06; sharp and unchanged at 0:06 and 0:08\",\n    \"Cube #6 (green '5') | not present | green cube, front face '5', at position 6 | placed by hand at ~0:06 (motion-blurred during placement); sharp and unchanged at 0:08\",\n    \"Cube #7 (green '2') | not present | green cube, front face '2', at position 7 | placed by hand between 0:06 and 0:08; sharp at 0:08\",\n    \"Cube #8 (final blue cube) | not present | blue cube at position 8, digit partially motion-blurred (reads as '6'/'2') | being placed by hand at 0:08; placement still in progress at video end\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"leftmost number cube (position 1)\",\n      \"invariant_violated\": \"object identity/persistence — transformation into a different object with no visible cause\",\n      \"description\": \"At 0:00 the leftmost cube is green (front face '2', right face '6') with the hand pinching its top; at 0:02 the same table position, in an otherwise identical shot (same framing, lighting, background, no cut), is occupied by a blue cube showing '2'. No frame shows the green cube being lifted away or the blue cube being set down — the hand is in contact with the cube at 0:00 and has simply moved on to place the next cube at 0:02. A green→blue color/identity change of the cube in place is the most consistent reading; an off-screen swap by the hand within the 2-second gap cannot be entirely ruled out, which limits confidence.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T14:55:34.067Z",
+  "latencyMs": 679992,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 29921,
+    "total_tokens": 35960,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman (short blonde bob, teal cardigan, white camisole, dark bottoms) | standing in kitchen facing hallway | walking away down corridor toward a doorway | kitchen (0:00) -> corridor (0:02) -> pauses and glances back (0:04) -> bedroom (0:06) -> corridor exit (0:08); outfit, hair, and earrings consistent throughout",
+    "Flower artwork (blue flower with female face, dark frame, white mat) | on pier wall at kitchen/corridor entrance at 0:00 | on corridor wall near doorway at 0:08 | recurs at 0:02/0:04/0:08; placement readable as matching prints on adjacent walls, no state change detected",
+    "Kitchen set | wood cabinets, microwave with basket, mosaic tile backsplash, stove with hood, sink window with red flowers | not revisited after 0:02 | consistent between 0:00 and 0:02 views",
+    "Bedroom set | bed with white bedding, chandelier, tan-curtain windows, red artwork above bed, dresser, lamp | entered at 0:06, exited by 0:08 | no internal anomalies"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman (short blonde bob, teal cardigan, white camisole, dark bottoms) | standing in kitchen facing hallway | walking away down corridor toward a doorway | kitchen (0:00) -> corridor (0:02) -> pauses and glances back (0:04) -> bedroom (0:06) -> corridor exit (0:08); outfit, hair, and earrings consistent throughout\",\n    \"Flower artwork (blue flower with female face, dark frame, white mat) | on pier wall at kitchen/corridor entrance at 0:00 | on corridor wall near doorway at 0:08 | recurs at 0:02/0:04/0:08; placement readable as matching prints on adjacent walls, no state change detected\",\n    \"Kitchen set | wood cabinets, microwave with basket, mosaic tile backsplash, stove with hood, sink window with red flowers | not revisited after 0:02 | consistent between 0:00 and 0:02 views\",\n    \"Bedroom set | bed with white bedding, chandelier, tan-curtain windows, red artwork above bed, dresser, lamp | entered at 0:06, exited by 0:08 | no internal anomalies\"\n  ],\n  \"findings\": []\n}"
+}

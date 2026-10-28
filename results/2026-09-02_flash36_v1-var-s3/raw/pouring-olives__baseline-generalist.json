@@ -1,0 +1,56 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:15:44.494Z",
+  "latencyMs": 9413,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1325,
+    "total_tokens": 2563,
+    "cost": 0.00589725,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00589725,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00496875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1115,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "small glass container | filled with green olives | filled with mixed green and dark purple olives | dark purple olives spontaneously spawn during pouring",
+    "large glass jar | empty | filled with green and dark purple olives | receives poured olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives in glass container",
+      "invariant_violated": "spontaneous_object_generation",
+      "description": "Dark purple/black olives spontaneously appear in the stream pouring from the small container into the jar, even though the container initially contained only green olives.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives in glass container",
+      "invariant_violated": "spontaneous_object_generation",
+      "description": "Dark purple olives spontaneously materialize inside the small glass container while pouring, despite the container holding only green olives right before tipping.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\"ledger\": [\"small glass container | filled with green olives | filled with mixed green and dark purple olives | dark purple olives spontaneously spawn during pouring\", \"large glass jar | empty | filled with green and dark purple olives | receives poured olives\"], \"findings\": [{\"timestamp\": \"00:01\", \"entity\": \"olives in glass container\", \"invariant_violated\": \"spontaneous_object_generation\", \"description\": \"Dark purple/black olives spontaneously appear in the stream pouring from the small container into the jar, even though the container initially contained only green olives.\", \"severity\": \"severe\", \"confidence\": 0.95}, {\"timestamp\": \"00:07\", \"entity\": \"olives in glass container\", \"invariant_violated\": \"spontaneous_object_generation\", \"description\": \"Dark purple olives spontaneously materialize inside the small glass container while pouring, despite the container holding only green olives right before tipping.\", \"severity\": \"moderate\", \"confidence\": 0.9}]}"
+}

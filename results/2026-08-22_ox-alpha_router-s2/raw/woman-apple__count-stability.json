@@ -1,0 +1,42 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:34:41.532Z",
+  "latencyMs": 98741,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1924,
+    "total_tokens": 7820,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:08 Red apple held by the main woman: count = 1 at every clearly visible moment (00:00 chest-height, 00:02 raised, 00:04-00:06 in right hand, 00:08 mid-toss with motion blur); no visible addition, removal, or kind change",
+    "00:00-00:06 Blue umbrella held by the main woman: count = 1; at 00:08 only the pole remains in frame due to camera framing/cropping, not disappearance",
+    "00:00-00:08 Left-side produce displays (avocados, oranges, tomatoes, hanging produce): static market stock; apparent changes in visible quantity track camera movement and frame-edge cropping, not object changes",
+    "00:00-00:08 Right-side produce displays (apples, avocados, tomatoes): static counts; only occlusion/cropping from camera motion and passing pedestrians",
+    "00:00-00:08 Pedestrians in aisle: enter and exit frame by walking, consistent with normal motion; no count anomaly in fixed background elements"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:08 Red apple held by the main woman: count = 1 at every clearly visible moment (00:00 chest-height, 00:02 raised, 00:04-00:06 in right hand, 00:08 mid-toss with motion blur); no visible addition, removal, or kind change\",\n    \"00:00-00:06 Blue umbrella held by the main woman: count = 1; at 00:08 only the pole remains in frame due to camera framing/cropping, not disappearance\",\n    \"00:00-00:08 Left-side produce displays (avocados, oranges, tomatoes, hanging produce): static market stock; apparent changes in visible quantity track camera movement and frame-edge cropping, not object changes\",\n    \"00:00-00:08 Right-side produce displays (apples, avocados, tomatoes): static counts; only occlusion/cropping from camera motion and passing pedestrians\",\n    \"00:00-00:08 Pedestrians in aisle: enter and exit frame by walking, consistent with normal motion; no count anomaly in fixed background elements\"\n  ],\n  \"findings\": []\n}"
+}

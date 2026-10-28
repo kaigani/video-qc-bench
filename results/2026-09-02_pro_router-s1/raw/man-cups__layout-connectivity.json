@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__layout-connectivity",
+  "video": "man-cups.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:35:29.908Z",
+  "latencyMs": 23353,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 2442,
+    "total_tokens": 3836,
+    "cost": 0.032092,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.032092,
+      "upstream_inference_prompt_cost": 0.002788,
+      "upstream_inference_completions_cost": 0.029304
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2270,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "interior room, likely a restaurant or hall",
+    "round red table in foreground",
+    "windows in background showing daytime exterior",
+    "scattered dining chairs in background"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "background dining chairs",
+      "invariant_violated": "Functional arrangement",
+      "description": "Several dining chairs in the background (visible on the right side of the screen as the camera pans) are clustered together and oriented in various directions as if surrounding a table, but no table is present, rendering their arrangement functionally nonsensical.",
+      "severity": "minor",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"interior room, likely a restaurant or hall\",\n    \"round red table in foreground\",\n    \"windows in background showing daytime exterior\",\n    \"scattered dining chairs in background\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"background dining chairs\",\n      \"invariant_violated\": \"Functional arrangement\",\n      \"description\": \"Several dining chairs in the background (visible on the right side of the screen as the camera pans) are clustered together and oriented in various directions as if surrounding a table, but no table is present, rendering their arrangement functionally nonsensical.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

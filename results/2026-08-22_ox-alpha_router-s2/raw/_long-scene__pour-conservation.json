@@ -1,0 +1,60 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:42:17.887Z",
+  "latencyMs": 280581,
+  "usage": {
+    "prompt_tokens": 34881,
+    "completion_tokens": 9758,
+    "total_tokens": 44639,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:10 | White conventional semi tractor (sleeper cab, chrome stacks) parked left of diner; stationary, idling with exhaust/steam at rear; no cargo visible",
+    "0:26 | Glass coffee carafe (black lid) on counter beside waitress, roughly 2/3-3/4 full of black coffee",
+    "0:28 | White ceramic diner mug on counter in front of seated man: empty",
+    "0:28-0:31 | Carafe tilted, steady stream of black coffee pouring into mug; carafe level drops slightly, consistent with one mug volume",
+    "0:32 | Pour ends; mug filled to near brim; carafe lifted away still partially full (conservation plausible)",
+    "0:34-0:37 | Plate with cornbread/toast slice + fried egg, full portion, steaming (close-up)",
+    "0:38-0:45 | Same plate and full white mug on counter in front of man",
+    "1:05-1:10 | Mug on counter before man in wide shot; plate/napkin at his place setting",
+    "1:11-1:15 | Plate still before man with food on it; waitress standing beside him",
+    "1:17 | Waitress lifts plate with food remaining and clears it (removal, not consumption, explains disappearance)",
+    "1:29-1:37 | Man holds the same white diner mug; interior fill level not assessable from angle",
+    "1:39 | Man's hand lays a stack of ~$100 bills on counter beside the white mug",
+    "1:41 | Second hand (waitress) removes the bill stack from counter; stack size consistent with what was placed",
+    "1:43-1:52 | Dark green single-unit box truck parked in front of diner; man walks out to it"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "Exterior parked truck (vessel in the scene)",
+      "invariant_violated": "container identity",
+      "description": "Night exteriors (0:00-0:10) show a white conventional semi tractor with sleeper cab parked beside the diner, the vehicle the patron appears to have arrived with; at 1:43 the patron exits the diner and walks to a dark green single-unit box truck in the same lot. The vehicle changed color, cab style, and body configuration (tractor-trailer vs. rigid box truck) between shots with no on-screen swap. Mitigating factor: the night-to-dawn time skip across cuts could hide a legitimate departure and arrival of a different truck, so this is flagged at reduced confidence rather than as a certain error.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:10 | White conventional semi tractor (sleeper cab, chrome stacks) parked left of diner; stationary, idling with exhaust/steam at rear; no cargo visible\",\n    \"0:26 | Glass coffee carafe (black lid) on counter beside waitress, roughly 2/3-3/4 full of black coffee\",\n    \"0:28 | White ceramic diner mug on counter in front of seated man: empty\",\n    \"0:28-0:31 | Carafe tilted, steady stream of black coffee pouring into mug; carafe level drops slightly, consistent with one mug volume\",\n    \"0:32 | Pour ends; mug filled to near brim; carafe lifted away still partially full (conservation plausible)\",\n    \"0:34-0:37 | Plate with cornbread/toast slice + fried egg, full portion, steaming (close-up)\",\n    \"0:38-0:45 | Same plate and full white mug on counter in front of man\",\n    \"1:05-1:10 | Mug on counter before man in wide shot; plate/napkin at his place setting\",\n    \"1:11-1:15 | Plate still before man with food on it; waitress standing beside him\",\n    \"1:17 | Waitress lifts plate with food remaining and clears it (removal, not consumption, explains disappearance)\",\n    \"1:29-1:37 | Man holds the same white diner mug; interior fill level not assessable from angle\",\n    \"1:39 | Man's hand lays a stack of ~$100 bills on counter beside the white mug\",\n    \"1:41 | Second hand (waitress) removes the bill stack from counter; stack size consistent with what was placed\",\n    \"1:43-1:52 | Dark green single-unit box truck parked in front of diner; man walks out to it\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"Exterior parked truck (vessel in the scene)\",\n      \"invariant_violated\": \"container identity\",\n      \"description\": \"Night exteriors (0:00-0:10) show a white conventional semi tractor with sleeper cab parked beside the diner, the vehicle the patron appears to have arrived with; at 1:43 the patron exits the diner and walks to a dark green single-unit box truck in the same lot. The vehicle changed color, cab style, and body configuration (tractor-trailer vs. rigid box truck) between shots with no on-screen swap. Mitigating factor: the night-to-dawn time skip across cuts could hide a legitimate departure and arrival of a different truck, so this is flagged at reduced confidence rather than as a certain error.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

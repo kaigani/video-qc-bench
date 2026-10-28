@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:39.825Z",
+  "latencyMs": 16451,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 2077,
+    "total_tokens": 3503,
+    "cost": 0.00885825,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00885825,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00778875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1934,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman | standing in middle of market aisle holding umbrella and fruit | maintaining position while camera orbits around her | visible from front then right side profile",
+    "market stalls (left) | lined along left side of aisle with produce displays | fixed scene layout | correctly occluded/revealed during camera orbit",
+    "market stalls (right) | lined along right side of aisle with produce displays | fixed scene layout | recedes into background relative to camera view",
+    "market aisle / walkway | straight pedestrian path extending through market | continuous background space | maintains consistent spatial orientation as camera moves"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"central woman | standing in middle of market aisle holding umbrella and fruit | maintaining position while camera orbits around her | visible from front then right side profile\",\n    \"market stalls (left) | lined along left side of aisle with produce displays | fixed scene layout | correctly occluded/revealed during camera orbit\",\n    \"market stalls (right) | lined along right side of aisle with produce displays | fixed scene layout | recedes into background relative to camera view\",\n    \"market aisle / walkway | straight pedestrian path extending through market | continuous background space | maintains consistent spatial orientation as camera moves\"\n  ],\n  \"findings\": []\n}"
+}

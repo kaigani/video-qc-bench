@@ -1,0 +1,61 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:44:31.962Z",
+  "latencyMs": 15494,
+  "usage": {
+    "prompt_tokens": 1381,
+    "completion_tokens": 1262,
+    "total_tokens": 2643,
+    "cost": 0.017906,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017906,
+      "upstream_inference_prompt_cost": 0.002762,
+      "upstream_inference_completions_cost": 0.015144
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 868,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Large destination jar is empty.",
+    "00:00: First small source jar contains green olives.",
+    "00:00-00:03: Olives are poured from the first small jar into the large jar.",
+    "00:03: First small jar is empty. Large jar is partially filled with a mix of green and purple olives.",
+    "00:05: A second small source jar is held, containing green olives.",
+    "00:06-00:09: Olives are poured from the second small jar into the large jar.",
+    "00:09: Second small jar is empty. Large jar is filled higher with a mix of green and purple olives."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "destination contents",
+      "invariant_violated": "source contents",
+      "description": "The source jar visibly contains only green olives, but as they are poured into the destination jar, a mix of green and purple/black olives appears in the destination. The color of the material changes during the transfer.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "destination contents",
+      "invariant_violated": "source contents",
+      "description": "During the second pour, the source jar again visibly contains only green olives, but pouring them results in more purple/black olives appearing in the destination jar alongside the green ones.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Large destination jar is empty.\",\n    \"00:00: First small source jar contains green olives.\",\n    \"00:00-00:03: Olives are poured from the first small jar into the large jar.\",\n    \"00:03: First small jar is empty. Large jar is partially filled with a mix of green and purple olives.\",\n    \"00:05: A second small source jar is held, containing green olives.\",\n    \"00:06-00:09: Olives are poured from the second small jar into the large jar.\",\n    \"00:09: Second small jar is empty. Large jar is filled higher with a mix of green and purple olives.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"destination contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"The source jar visibly contains only green olives, but as they are poured into the destination jar, a mix of green and purple/black olives appears in the destination. The color of the material changes during the transfer.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"destination contents\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"During the second pour, the source jar again visibly contains only green olives, but pouring them results in more purple/black olives appearing in the destination jar alongside the green ones.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

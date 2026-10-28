@@ -1,0 +1,56 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T20:53:24.497Z",
+  "latencyMs": 238950,
+  "usage": {
+    "prompt_tokens": 34940,
+    "completion_tokens": 8291,
+    "total_tokens": 43231,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white semi tractor (no trailer) | parked left of diner, nose facing right, stationary with exhaust steam | last seen 0:00-0:10, never shown again | no transitions while visible",
+    "green box truck | appears at 1:43 in dawn lot, nose facing right, parked | man walks to it and opens driver door (1:47-1:52) | no on-screen arrival or exchange shown",
+    "coffee carafe (glass, full) | on coffee-machine burner, right of counter | returned to burner after pour | lifted and tilted by waitress to pour (0:26-0:33), coffee level drops only via visible pour",
+    "white ceramic mug | empty, on counter in front of patron | filled mug later held by patron at counter | filled by visible pour from carafe (0:28-0:33); held by patron 0:38-0:44 and 1:11-1:17; present beside cash at 1:38-1:42",
+    "plate with cornbread slice and fried egg (+ fork/knife beside) | on counter before patron (close-up 0:34-0:37) | carried away by waitress (1:13-1:17) | only transition is pickup by waitress; contents unchanged while visible",
+    "yellow juice glass | not present in front of patron at 0:38-0:44 | on counter beside mug from ~1:01 onward | appearance not shown on screen (plausible off-screen service during 0:53-1:01 gap)",
+    "folded cash bills | in patron's hand | on countertop, then covered/taken by waitress hand | placed on counter 1:38-1:40, waitress hand takes/presses them 1:41-1:42",
+    "counter condiment racks, shakers, napkin dispenser | fixed positions on counter | same positions throughout | static; no unexplained moves",
+    "neon OPEN sign (window fixture) | lit red/blue in front window, readable from outside (0:00) | lit in all interior shots | state (lit) constant; interior shots show both a readable and a mirrored instance, treated as fixture/reflection ambiguity, not tracked as violation",
+    "ketchup and mustard squeeze bottles | on window-side table, visible 1:49-1:52 | unchanged | static in a previously unframed area"
+  ],
+  "findings": [
+    {
+      "timestamp": "1:43",
+      "entity": "patron's truck parked outside the diner",
+      "invariant_violated": "identity & persistence (object transformed into a different object)",
+      "description": "The vehicle shown parked outside at 0:00-0:10 is a white conventional semi tractor with no trailer. When the patron exits at dawn (1:43-1:52), he walks to and opens the door of a green medium-duty box truck with an integrated cargo body — a different vehicle in color, size, and type. No shot shows the first truck leaving or the second arriving, and the narrative framing (trucker who stopped overnight) implies it is the same vehicle, making this an unexplained identity swap.",
+      "severity": "severe",
+      "confidence": 0.75
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"white semi tractor (no trailer) | parked left of diner, nose facing right, stationary with exhaust steam | last seen 0:00-0:10, never shown again | no transitions while visible\",\n    \"green box truck | appears at 1:43 in dawn lot, nose facing right, parked | man walks to it and opens driver door (1:47-1:52) | no on-screen arrival or exchange shown\",\n    \"coffee carafe (glass, full) | on coffee-machine burner, right of counter | returned to burner after pour | lifted and tilted by waitress to pour (0:26-0:33), coffee level drops only via visible pour\",\n    \"white ceramic mug | empty, on counter in front of patron | filled mug later held by patron at counter | filled by visible pour from carafe (0:28-0:33); held by patron 0:38-0:44 and 1:11-1:17; present beside cash at 1:38-1:42\",\n    \"plate with cornbread slice and fried egg (+ fork/knife beside) | on counter before patron (close-up 0:34-0:37) | carried away by waitress (1:13-1:17) | only transition is pickup by waitress; contents unchanged while visible\",\n    \"yellow juice glass | not present in front of patron at 0:38-0:44 | on counter beside mug from ~1:01 onward | appearance not shown on screen (plausible off-screen service during 0:53-1:01 gap)\",\n    \"folded cash bills | in patron's hand | on countertop, then covered/taken by waitress hand | placed on counter 1:38-1:40, waitress hand takes/presses them 1:41-1:42\",\n    \"counter condiment racks, shakers, napkin dispenser | fixed positions on counter | same positions throughout | static; no unexplained moves\",\n    \"neon OPEN sign (window fixture) | lit red/blue in front window, readable from outside (0:00) | lit in all interior shots | state (lit) constant; interior shots show both a readable and a mirrored instance, treated as fixture/reflection ambiguity, not tracked as violation\",\n    \"ketchup and mustard squeeze bottles | on window-side table, visible 1:49-1:52 | unchanged | static in a previously unframed area\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"1:43\",\n      \"entity\": \"patron's truck parked outside the diner\",\n      \"invariant_violated\": \"identity & persistence (object transformed into a different object)\",\n      \"description\": \"The vehicle shown parked outside at 0:00-0:10 is a white conventional semi tractor with no trailer. When the patron exits at dawn (1:43-1:52), he walks to and opens the door of a green medium-duty box truck with an integrated cargo body — a different vehicle in color, size, and type. No shot shows the first truck leaving or the second arriving, and the narrative framing (trucker who stopped overnight) implies it is the same vehicle, making this an unexplained identity swap.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.75\n    }\n  ]\n}"
+}

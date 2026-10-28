@@ -1,0 +1,54 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:05:06.476Z",
+  "latencyMs": 404992,
+  "usage": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 19742,
+    "total_tokens": 25643,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "studio room | door wall on left with two dark glazed doors (windows, green exit signs), mirror wall on right, barre/poster/blue bin on wall opposite mirror | same layout throughout | single continuous handheld shot, only small camera drift, no cuts",
+    "mirror wall | multi-panel mirror, panel seams ~mid-frame and right, left edge meets door-wall corner | unchanged | seams and edge drift ~20px with camera, internally consistent",
+    "real doors + exit signs | near door fully visible, second door beyond mirror edge | unchanged | stable position/size all frames",
+    "reflected door wall | two doors + two exit signs inside mirror's left portion, reversed order vs real wall | unchanged | consistent with real door wall across all frames",
+    "reflected barre + poster | far wall of reflected room, right side of reflection | unchanged | stable relative to mirror seams",
+    "reflected blue bin | back corner of reflected room near door-wall junction | unchanged | stable",
+    "dancer | back to camera facing mirror, center-left of frame, feet together | stance widens by 00:06, right arm raised overhead at 00:08 | continuous motion, stays on correct side of mirror, correctly occludes mirror surface",
+    "dancer's reflection | mirrors pose with limbs on same image-side as real limbs (verified at 00:00, 00:04, 00:06, 00:08) | consistent at those frames | anomalous limb side at 00:02"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer's mirror reflection (raised arm)",
+      "invariant_violated": "mirror-image lateral side consistency",
+      "description": "At 00:02 the dancer's real raised arm passes at/just image-left of her head (hand centered ~at head line, drifting slightly image-left) while her other arm extends to image-right. A plane mirror preserves lateral image position, so the reflected raised arm must appear at/image-left of the reflected head. Instead, the reflection shows the raised arm clearly on the image-RIGHT of the reflected head (~+70px offset vs the real ~-20px offset), placing both reflected arms on the same image-right side of the reflected body. By 00:04 the same left arm is again correctly on the image-left of the reflection, confirming the 00:02 reflection pose is geometrically incompatible with the real pose.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"studio room | door wall on left with two dark glazed doors (windows, green exit signs), mirror wall on right, barre/poster/blue bin on wall opposite mirror | same layout throughout | single continuous handheld shot, only small camera drift, no cuts\",\n    \"mirror wall | multi-panel mirror, panel seams ~mid-frame and right, left edge meets door-wall corner | unchanged | seams and edge drift ~20px with camera, internally consistent\",\n    \"real doors + exit signs | near door fully visible, second door beyond mirror edge | unchanged | stable position/size all frames\",\n    \"reflected door wall | two doors + two exit signs inside mirror's left portion, reversed order vs real wall | unchanged | consistent with real door wall across all frames\",\n    \"reflected barre + poster | far wall of reflected room, right side of reflection | unchanged | stable relative to mirror seams\",\n    \"reflected blue bin | back corner of reflected room near door-wall junction | unchanged | stable\",\n    \"dancer | back to camera facing mirror, center-left of frame, feet together | stance widens by 00:06, right arm raised overhead at 00:08 | continuous motion, stays on correct side of mirror, correctly occludes mirror surface\",\n    \"dancer's reflection | mirrors pose with limbs on same image-side as real limbs (verified at 00:00, 00:04, 00:06, 00:08) | consistent at those frames | anomalous limb side at 00:02\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer's mirror reflection (raised arm)\",\n      \"invariant_violated\": \"mirror-image lateral side consistency\",\n      \"description\": \"At 00:02 the dancer's real raised arm passes at/just image-left of her head (hand centered ~at head line, drifting slightly image-left) while her other arm extends to image-right. A plane mirror preserves lateral image position, so the reflected raised arm must appear at/image-left of the reflected head. Instead, the reflection shows the raised arm clearly on the image-RIGHT of the reflected head (~+70px offset vs the real ~-20px offset), placing both reflected arms on the same image-right side of the reflected body. By 00:04 the same left arm is again correctly on the image-left of the reflection, confirming the 00:02 reflection pose is geometrically incompatible with the real pose.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

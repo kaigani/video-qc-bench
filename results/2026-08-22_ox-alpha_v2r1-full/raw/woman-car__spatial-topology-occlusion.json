@@ -1,0 +1,43 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:01:44.112Z",
+  "latencyMs": 117473,
+  "usage": {
+    "prompt_tokens": 5747,
+    "completion_tokens": 4879,
+    "total_tokens": 10626,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "station wagon (wood-paneled) | parked on dirt shoulder of desert highway, front facing lower-left of frame, driver's side toward camera, quad headlights, roof rack, hood ornament, fender antenna | same position/orientation throughout | camera orbits smoothly from front-3/4 to driver-side close-up; car rigid and unchanged",
+    "woman | leaning out of front driver's window, arms crossed on door top, gazing toward road (frame-left), window rolled down | same pose, leaning slightly farther out by end | gradual natural lean, hair blowing in wind; position relative to A-pillar, door sill, and B-pillar stays consistent",
+    "desert highway | paved road with yellow center dashes running parallel to car on driver's side, dirt shoulder between road and car | same layout, more of road revealed as camera orbits | road geometry consistent with car orientation across all frames",
+    "desert environment | scrub brush flats, mountain range on horizon, clear sky | unchanged | static backdrop, consistent horizon line",
+    "utility poles | along far side of road in background | visible in later frames as camera pans left | appearance explained by camera orbit, not spontaneous appearance",
+    "car fixtures (hood ornament, antenna, wipers, roof rack, chrome trim) | fixed to car body | move rigidly with car | antenna/ornament exit frame naturally as camera closes in, no morphing observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"station wagon (wood-paneled) | parked on dirt shoulder of desert highway, front facing lower-left of frame, driver's side toward camera, quad headlights, roof rack, hood ornament, fender antenna | same position/orientation throughout | camera orbits smoothly from front-3/4 to driver-side close-up; car rigid and unchanged\",\n    \"woman | leaning out of front driver's window, arms crossed on door top, gazing toward road (frame-left), window rolled down | same pose, leaning slightly farther out by end | gradual natural lean, hair blowing in wind; position relative to A-pillar, door sill, and B-pillar stays consistent\",\n    \"desert highway | paved road with yellow center dashes running parallel to car on driver's side, dirt shoulder between road and car | same layout, more of road revealed as camera orbits | road geometry consistent with car orientation across all frames\",\n    \"desert environment | scrub brush flats, mountain range on horizon, clear sky | unchanged | static backdrop, consistent horizon line\",\n    \"utility poles | along far side of road in background | visible in later frames as camera pans left | appearance explained by camera orbit, not spontaneous appearance\",\n    \"car fixtures (hood ornament, antenna, wipers, roof rack, chrome trim) | fixed to car body | move rigidly with car | antenna/ornament exit frame naturally as camera closes in, no morphing observed\"\n  ],\n  \"findings\": []\n}"
+}

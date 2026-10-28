@@ -1,0 +1,48 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:12:00.485Z",
+  "latencyMs": 21472,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1585,
+    "total_tokens": 3029,
+    "cost": 0.00702675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00702675,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00594375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1360,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Blue umbrella | Open, held by woman in central frame | Open, held by woman | Maintained throughout video without state change",
+    "Red fruit (apple/tomato) | Held in woman's left hand at chest height | Vanished | Held from 00:00 to 00:07, disappears from her hand by 00:08 as her grip shifts to the umbrella shaft"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Red fruit",
+      "invariant_violated": "object persistence",
+      "description": "The red fruit held in the woman's left hand vanishes between 00:07 and 00:08 when her left hand shifts to grip the umbrella handle, with no visible motion of dropping, storing, or passing the object.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Blue umbrella | Open, held by woman in central frame | Open, held by woman | Maintained throughout video without state change\",\n    \"Red fruit (apple/tomato) | Held in woman's left hand at chest height | Vanished | Held from 00:00 to 00:07, disappears from her hand by 00:08 as her grip shifts to the umbrella shaft\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Red fruit\",\n      \"invariant_violated\": \"object persistence\",\n      \"description\": \"The red fruit held in the woman's left hand vanishes between 00:07 and 00:08 when her left hand shifts to grip the umbrella handle, with no visible motion of dropping, storing, or passing the object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

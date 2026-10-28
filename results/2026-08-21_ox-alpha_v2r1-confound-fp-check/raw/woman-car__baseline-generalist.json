@@ -1,0 +1,41 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:47:40.305Z",
+  "latencyMs": 185112,
+  "usage": {
+    "prompt_tokens": 5559,
+    "completion_tokens": 7324,
+    "total_tokens": 12883,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 5504,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on hood near windshield, arms crossed, teal shirt, hair still | leaning on driver's door/window sill, arms crossed, hair blowing in wind | pose/position change occurs across a visible crossfade at ~0:02, i.e. a time skip, not a same-moment contradiction",
+    "station wagon | cream woodgrain wagon, plate STE197, hood ornament, chrome roof rack, quad headlights | identical features where visible | stationary throughout; apparent doubling at 0:02 is the crossfade between two shots, not morphing",
+    "license plate | reads STE197 at 0:00 | out of frame after ~0:02 | partially ghosted during dissolve but no legible contradiction",
+    "background | desert, mountains, dirt road at left | paved road with yellow centerline and utility pole | changes consistent with camera repositioning between shots"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on hood near windshield, arms crossed, teal shirt, hair still | leaning on driver's door/window sill, arms crossed, hair blowing in wind | pose/position change occurs across a visible crossfade at ~0:02, i.e. a time skip, not a same-moment contradiction\",\n    \"station wagon | cream woodgrain wagon, plate STE197, hood ornament, chrome roof rack, quad headlights | identical features where visible | stationary throughout; apparent doubling at 0:02 is the crossfade between two shots, not morphing\",\n    \"license plate | reads STE197 at 0:00 | out of frame after ~0:02 | partially ghosted during dissolve but no legible contradiction\",\n    \"background | desert, mountains, dirt road at left | paved road with yellow centerline and utility pole | changes consistent with camera repositioning between shots\"\n  ],\n  \"findings\": []\n}"
+}

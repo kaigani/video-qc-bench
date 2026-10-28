@@ -1,0 +1,49 @@
+{
+  "key": "man-cups__text-stability",
+  "video": "man-cups.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:35:09.783Z",
+  "latencyMs": 17111,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 1425,
+    "total_tokens": 2801,
+    "cost": 0.019852,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019852,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.0171
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1241,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Token resting on middle cup shows pseudo-script",
+    "00:00 - Gold token on table, bottom right shows pseudo-script",
+    "00:04 - Token designs printed on the red tablecloth contain garbled letters"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Tokens on table and designs on tablecloth",
+      "invariant_violated": "Legibility",
+      "description": "The text present on the physical tokens as well as the token designs printed on the tablecloth consists of garbled, pseudo-alphabetic characters that do not form actual words.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Token resting on middle cup shows pseudo-script\",\n    \"00:00 - Gold token on table, bottom right shows pseudo-script\",\n    \"00:04 - Token designs printed on the red tablecloth contain garbled letters\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Tokens on table and designs on tablecloth\",\n      \"invariant_violated\": \"Legibility\",\n      \"description\": \"The text present on the physical tokens as well as the token designs printed on the tablecloth consists of garbled, pseudo-alphabetic characters that do not form actual words.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

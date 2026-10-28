@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:39.550Z",
+  "latencyMs": 37529,
+  "usage": {
+    "prompt_tokens": 10623,
+    "completion_tokens": 1314,
+    "total_tokens": 11937,
+    "cost": 0.037014,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037014,
+      "upstream_inference_prompt_cost": 0.021246,
+      "upstream_inference_completions_cost": 0.015768
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1162,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "01:38, bills, 2, placed on counter by man",
+    "01:39, bills, 1, two folded bills abruptly turn into one flat bill"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:39",
+      "entity": "bills",
+      "invariant_violated": "Conservation of Objects",
+      "description": "Two folded bills placed on the counter instantly transform into a single flat bill as the hand pulls away, with no visible cause.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"01:38, bills, 2, placed on counter by man\",\n    \"01:39, bills, 1, two folded bills abruptly turn into one flat bill\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"bills\",\n      \"invariant_violated\": \"Conservation of Objects\",\n      \"description\": \"Two folded bills placed on the counter instantly transform into a single flat bill as the hand pulls away, with no visible cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

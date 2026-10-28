@@ -1,0 +1,51 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:39:12.313Z",
+  "latencyMs": 25788,
+  "usage": {
+    "prompt_tokens": 10589,
+    "completion_tokens": 1421,
+    "total_tokens": 12010,
+    "cost": 0.03823,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03823,
+      "upstream_inference_prompt_cost": 0.021178,
+      "upstream_inference_completions_cost": 0.017052
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1114,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "coffee pot: waitress hand (00:24) -> off-screen",
+    "man's mug: counter -> waitress hand (01:11) -> counter (01:12) -> waitress hand (01:49) -> off-screen",
+    "plate of food: waitress hand (01:09) -> counter (01:10) -> waitress hand (01:50) -> off-screen",
+    "waitress's mug: waitress hands (01:26) -> counter (01:49)",
+    "$100 bill: man's hand (01:38) -> counter (01:39) -> missing (01:49)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:39-01:49",
+      "entity": "$100 bill",
+      "invariant_violated": "placement persistence",
+      "description": "The man places a folded $100 bill on the counter next to his coffee mug. In the later wide shot when the waitress clears his dishes, the money is no longer on the counter, with no visible event explaining its removal.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"coffee pot: waitress hand (00:24) -> off-screen\",\n    \"man's mug: counter -> waitress hand (01:11) -> counter (01:12) -> waitress hand (01:49) -> off-screen\",\n    \"plate of food: waitress hand (01:09) -> counter (01:10) -> waitress hand (01:50) -> off-screen\",\n    \"waitress's mug: waitress hands (01:26) -> counter (01:49)\",\n    \"$100 bill: man's hand (01:38) -> counter (01:39) -> missing (01:49)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:39-01:49\",\n      \"entity\": \"$100 bill\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"The man places a folded $100 bill on the counter next to his coffee mug. In the later wide shot when the waitress clears his dishes, the money is no longer on the counter, with no visible event explaining its removal.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

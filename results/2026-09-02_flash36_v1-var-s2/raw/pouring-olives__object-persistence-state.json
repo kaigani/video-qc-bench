@@ -1,0 +1,60 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:40:52.418Z",
+  "latencyMs": 25002,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2856,
+    "total_tokens": 4300,
+    "cost": 0.011793,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011793,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.01071
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2450,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "large glass jar | empty on cutting board at 00:00 | filled with green and purple olives at 00:09 | receives olives poured from small glass container",
+    "small glass cup | filled with green olives in hand at 00:00 | empty at 00:03 | pours olives into jar",
+    "second small glass cup | filled with green olives at 00:05 | empty at 00:09 | pours olives into jar",
+    "stainless steel bowl | filled with green olives on counter at 00:00 | contains olive pits and fewer olives at 00:04 | state changed during cut at 00:04",
+    "white bowl | filled with green olives on counter | filled with green olives | static on counter",
+    "dropper bottle | absent at 00:00 | present on counter near white bowl at 00:04 | appears between frame cut"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives",
+      "invariant_violated": "spontaneous_appearance",
+      "description": "Dark purple/black olives fall into the glass jar from a transparent container that visibly contains only green olives.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives",
+      "invariant_violated": "spontaneous_appearance",
+      "description": "Dark purple/black olives pour out into the jar from a transparent container that holds only green olives.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"large glass jar | empty on cutting board at 00:00 | filled with green and purple olives at 00:09 | receives olives poured from small glass container\",\n    \"small glass cup | filled with green olives in hand at 00:00 | empty at 00:03 | pours olives into jar\",\n    \"second small glass cup | filled with green olives at 00:05 | empty at 00:09 | pours olives into jar\",\n    \"stainless steel bowl | filled with green olives on counter at 00:00 | contains olive pits and fewer olives at 00:04 | state changed during cut at 00:04\",\n    \"white bowl | filled with green olives on counter | filled with green olives | static on counter\",\n    \"dropper bottle | absent at 00:00 | present on counter near white bowl at 00:04 | appears between frame cut\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"spontaneous_appearance\",\n      \"description\": \"Dark purple/black olives fall into the glass jar from a transparent container that visibly contains only green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives\",\n      \"invariant_violated\": \"spontaneous_appearance\",\n      \"description\": \"Dark purple/black olives pour out into the jar from a transparent container that holds only green olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

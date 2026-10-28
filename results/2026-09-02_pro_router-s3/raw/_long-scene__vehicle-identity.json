@@ -1,0 +1,48 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:15:01.060Z",
+  "latencyMs": 14967,
+  "usage": {
+    "prompt_tokens": 10547,
+    "completion_tokens": 442,
+    "total_tokens": 10989,
+    "cost": 0.026398,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026398,
+      "upstream_inference_prompt_cost": 0.021094,
+      "upstream_inference_completions_cost": 0.005304
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 285,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "white semi-truck cab parked outside (00:00)",
+    "green Kenworth box truck parked outside (01:41)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "truck parked outside",
+      "invariant_violated": "identity",
+      "description": "The truck parked outside the diner completely changes identity, starting as a white semi-truck cab without a trailer and becoming a dark green Kenworth box truck when the man leaves.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"white semi-truck cab parked outside (00:00)\",\n    \"green Kenworth box truck parked outside (01:41)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"truck parked outside\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"The truck parked outside the diner completely changes identity, starting as a white semi-truck cab without a trailer and becoming a dark green Kenworth box truck when the man leaves.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```"
+}

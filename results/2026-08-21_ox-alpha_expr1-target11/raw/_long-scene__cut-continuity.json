@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__cut-continuity",
+  "video": "_long-scene.mp4",
+  "role": "cut-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T06:14:34.081Z",
+  "latencyMs": 424941,
+  "usage": {
+    "prompt_tokens": 35311,
+    "completion_tokens": 18052,
+    "total_tokens": 53363,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 35264,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "ANCHORS: counter (runs front-to-back, stools on dining side), kitchen pass-through window (warm lit), front window with OPEN neon sign, back door with EXIT sign",
+    "shot 1: 00:00-00:10, exterior wide static; diner at dusk, white semi tractor+trailer parked left with steam at rear, OPEN sign lit",
+    "shot 2: 00:12-00:18, interior from dining side; waitress (blue shirt, white apron, glasses on collar) behind counter wiping with cloth, exits frame right; pass-through and clock in background",
+    "shot 3: 00:20-00:28, interior wide from dining room; man (brown jacket, plaid shirt) enters from rear, walks to counter stool and sits; waitress pours coffee across counter",
+    "shot 4: 00:30-00:32, close-up counter; coffee pot (held from upper right) pours into white mug; man's hands resting at frame left",
+    "shot 5: 00:34-00:36, close-up plate; cornbread slice + fried egg, steam rising; fork/knife at right",
+    "shot 6: 00:38-00:44, interior wide; man alone at counter with mug and plate, facing camera; no waitress visible",
+    "shot 7: 00:46-00:52, reverse angle from kitchen side; waitress wiping in foreground, man seated at counter in background through pass",
+    "shot 8: 00:54-01:00, same angle as shot 2; diner completely empty, light now dawn-bright (time-jump dissolve)",
+    "shot 9: 01:02-01:08, wide from dining room; man back at counter, head down, mug in front; waitress enters from right and moves toward him",
+    "shot 10: 01:10-01:18, medium two-shot; waitress sets plate before man, then picks it back up and walks off toward rear carrying it (70.8 is dissolve transition)",
+    "shot 11: 01:21-01:27, wide; waitress returns from rear without plate, comes around counter end and sits on stool beside man, both with mugs",
+    "shot 12: 01:29-01:35, close two-shot from kitchen side; man and waitress side by side at counter facing camera, sunrise through windows behind; waitress on man's right (camera-left), consistent with shot 11 seating",
+    "shot 13: 01:37, counter empty, same angle as shots 2/8 (time-jump dissolve)",
+    "shot 14: 01:39-01:41, close-up counter; hand from left places folded $100 bill beside white mug, second hand from right slides/takes it",
+    "shot 15: 01:43-01:51, through front window; man walks out to a dark green box truck (different vehicle from shot 1's white semi) and reaches cab door; waitress watches from inside, her reflection in glass (out of scope)",
+    "shot 16: 01:53-01:57, interior wide in bright sunlight; waitress alone walks along counter toward rear, bends near pass; man absent (left off-screen)",
+    "waitress state: present shots 2,3,7,9,10,11,12,15,16; kitchen side of counter in 2,3,7,9,10; crosses to dining side between 10 and 11 (elided by cut, counter end passable); absent in 1,4,5,6,8,13,14",
+    "man state: present shots 3,4(hands only),6,7(background),9,10,11,12,14(hand only),15; dining side of counter at near-end stool in all interior appearances; absent shots 2,8,13 during dissolves marked by lighting change; exits off-screen before 16",
+    "mug: white mug with man shots 6-12, on counter in shot 14 close-up; plate: appears shot 5-6, removed by waitress shot 10, re-served and removed again within shot 10",
+    "coffee pot: in waitress's right hand shots 3-4, pour continuous into shot 4 close-up, same person same hand",
+    "vehicle: white semi+trailer shot 1 (exterior, leaves frame); green box truck shot 15 arrives from off-screen across overnight time jump - off-screen swap, not an on-screen mutation of the same object"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"ANCHORS: counter (runs front-to-back, stools on dining side), kitchen pass-through window (warm lit), front window with OPEN neon sign, back door with EXIT sign\",\n    \"shot 1: 00:00-00:10, exterior wide static; diner at dusk, white semi tractor+trailer parked left with steam at rear, OPEN sign lit\",\n    \"shot 2: 00:12-00:18, interior from dining side; waitress (blue shirt, white apron, glasses on collar) behind counter wiping with cloth, exits frame right; pass-through and clock in background\",\n    \"shot 3: 00:20-00:28, interior wide from dining room; man (brown jacket, plaid shirt) enters from rear, walks to counter stool and sits; waitress pours coffee across counter\",\n    \"shot 4: 00:30-00:32, close-up counter; coffee pot (held from upper right) pours into white mug; man's hands resting at frame left\",\n    \"shot 5: 00:34-00:36, close-up plate; cornbread slice + fried egg, steam rising; fork/knife at right\",\n    \"shot 6: 00:38-00:44, interior wide; man alone at counter with mug and plate, facing camera; no waitress visible\",\n    \"shot 7: 00:46-00:52, reverse angle from kitchen side; waitress wiping in foreground, man seated at counter in background through pass\",\n    \"shot 8: 00:54-01:00, same angle as shot 2; diner completely empty, light now dawn-bright (time-jump dissolve)\",\n    \"shot 9: 01:02-01:08, wide from dining room; man back at counter, head down, mug in front; waitress enters from right and moves toward him\",\n    \"shot 10: 01:10-01:18, medium two-shot; waitress sets plate before man, then picks it back up and walks off toward rear carrying it (70.8 is dissolve transition)\",\n    \"shot 11: 01:21-01:27, wide; waitress returns from rear without plate, comes around counter end and sits on stool beside man, both with mugs\",\n    \"shot 12: 01:29-01:35, close two-shot from kitchen side; man and waitress side by side at counter facing camera, sunrise through windows behind; waitress on man's right (camera-left), consistent with shot 11 seating\",\n    \"shot 13: 01:37, counter empty, same angle as shots 2/8 (time-jump dissolve)\",\n    \"shot 14: 01:39-01:41, close-up counter; hand from left places folded $100 bill beside white mug, second hand from right slides/takes it\",\n    \"shot 15: 01:43-01:51, through front window; man walks out to a dark green box truck (different vehicle from shot 1's white semi) and reaches cab door; waitress watches from inside, her reflection in glass (out of scope)\",\n    \"shot 16: 01:53-01:57, interior wide in bright sunlight; waitress alone walks along counter toward rear, bends near pass; man absent (left off-screen)\",\n    \"waitress state: present shots 2,3,7,9,10,11,12,15,16; kitchen side of counter in 2,3,7,9,10; crosses to dining side between 10 and 11 (elided by cut, counter end passable); absent in 1,4,5,6,8,13,14\",\n    \"man state: present shots 3,4(hands only),6,7(background),9,10,11,12,14(hand only),15; dining side of counter at near-end stool in all interior appearances; absent shots 2,8,13 during dissolves marked by lighting change; exits off-screen before 16\",\n    \"mug: white mug with man shots 6-12, on counter in shot 14 close-up; plate: appears shot 5-6, removed by waitress shot 10, re-served and removed again within shot 10\",\n    \"coffee pot: in waitress's right hand shots 3-4, pour continuous into shot 4 close-up, same person same hand\",\n    \"vehicle: white semi+trailer shot 1 (exterior, leaves frame); green box truck shot 15 arrives from off-screen across overnight time jump - off-screen swap, not an on-screen mutation of the same object\"\n  ],\n  \"findings\": []\n}"
+}

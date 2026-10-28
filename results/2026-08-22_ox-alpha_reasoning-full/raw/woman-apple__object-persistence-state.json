@@ -1,0 +1,60 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:30:48.829Z",
+  "latencyMs": 232228,
+  "usage": {
+    "prompt_tokens": 5912,
+    "completion_tokens": 8451,
+    "total_tokens": 14363,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue umbrella | open, blue radial canopy, silver shaft, held overhead by woman's left hand, tracks with her | still overhead at 00:08 but canopy reads red | no movement anomalies; unexplained canopy color change blue→red between 00:07 and 00:08",
+    "red fruit (apple) | uniform glossy bright-red round fruit, held at chest in woman's right hand | still in right hand at 00:08, skin now shows yellow-green shoulder | supported by open right palm at 00:06 (support ambiguity only); surface appearance shifts to bicolor apple by 00:08 with no visible swap or bite",
+    "left-stall produce (avocados, tomatoes, oranges, hanging tomato bunches) | stacked in crates/trays on fixed tables | unchanged | apparent drift is explained by camera advancing along the stalls; no independent changes",
+    "right-stall produce (tomatoes, green fruit in blue crate, apples, purple produce) | in crates on tables/floor | unchanged | consistent with camera advance; no independent changes",
+    "blue water bottle | carried in hand by oncoming woman in dark clothing, right side of alley | exits frame ~00:06 | no anomalies",
+    "blue shoulder bag | carried by oncoming woman in red shirt, right side of alley | exits frame ~00:08 | no anomalies"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "umbrella canopy",
+      "invariant_violated": "identity & state persistence (no uncaused transformation)",
+      "description": "From 00:00 to 00:07 the umbrella the woman holds overhead is unambiguously blue with a silver shaft. At 00:08 the canopy attached to the pole above her is red, matching the market awnings rather than her umbrella. No visible action (lowering, swapping, replacing the umbrella) occurs between the frames; the camera merely follows her turn, so the color change is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red fruit held by woman",
+      "invariant_violated": "identity persistence (no uncaused transformation)",
+      "description": "The fruit is a uniformly bright, glossy red round fruit from 00:00 to 00:07. At 00:08, still in the same hand with no visible exchange or bite, it displays a distinct yellow-green shoulder characteristic of a bicolor apple. A viewing-angle change could partially account for this, but the abrupt morph of the focal object is suspicious.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"blue umbrella | open, blue radial canopy, silver shaft, held overhead by woman's left hand, tracks with her | still overhead at 00:08 but canopy reads red | no movement anomalies; unexplained canopy color change blue→red between 00:07 and 00:08\",\n    \"red fruit (apple) | uniform glossy bright-red round fruit, held at chest in woman's right hand | still in right hand at 00:08, skin now shows yellow-green shoulder | supported by open right palm at 00:06 (support ambiguity only); surface appearance shifts to bicolor apple by 00:08 with no visible swap or bite\",\n    \"left-stall produce (avocados, tomatoes, oranges, hanging tomato bunches) | stacked in crates/trays on fixed tables | unchanged | apparent drift is explained by camera advancing along the stalls; no independent changes\",\n    \"right-stall produce (tomatoes, green fruit in blue crate, apples, purple produce) | in crates on tables/floor | unchanged | consistent with camera advance; no independent changes\",\n    \"blue water bottle | carried in hand by oncoming woman in dark clothing, right side of alley | exits frame ~00:06 | no anomalies\",\n    \"blue shoulder bag | carried by oncoming woman in red shirt, right side of alley | exits frame ~00:08 | no anomalies\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"umbrella canopy\",\n      \"invariant_violated\": \"identity & state persistence (no uncaused transformation)\",\n      \"description\": \"From 00:00 to 00:07 the umbrella the woman holds overhead is unambiguously blue with a silver shaft. At 00:08 the canopy attached to the pole above her is red, matching the market awnings rather than her umbrella. No visible action (lowering, swapping, replacing the umbrella) occurs between the frames; the camera merely follows her turn, so the color change is unexplained.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red fruit held by woman\",\n      \"invariant_violated\": \"identity persistence (no uncaused transformation)\",\n      \"description\": \"The fruit is a uniformly bright, glossy red round fruit from 00:00 to 00:07. At 00:08, still in the same hand with no visible exchange or bite, it displays a distinct yellow-green shoulder characteristic of a bicolor apple. A viewing-angle change could partially account for this, but the abrupt morph of the focal object is suspicious.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.4\n    }\n  ]\n}"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:40:04.650Z",
+  "latencyMs": 14839,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1178,
+    "total_tokens": 2604,
+    "cost": 0.005487,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005487,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0044175
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1017,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror frame | fixed wall-mounted wooden frame in center-right | fixed wall-mounted wooden frame in center-right | frames mirror reflection throughout continuous shot",
+    "Man (foreground) | positioned lower-left of frame facing mirror | positioned lower-left of frame facing mirror | moves right hand between chin and hair",
+    "Reflection of Man | visible inside mirror pane facing camera | visible inside mirror pane facing camera | stays aligned with foreground subject",
+    "Background door and shelving (in reflection) | behind subject, featuring panel door, light switch, and recessed shelving | behind subject, featuring panel door, light switch, and recessed shelving | spatial position remains consistent in reflection"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror frame | fixed wall-mounted wooden frame in center-right | fixed wall-mounted wooden frame in center-right | frames mirror reflection throughout continuous shot\",\n    \"Man (foreground) | positioned lower-left of frame facing mirror | positioned lower-left of frame facing mirror | moves right hand between chin and hair\",\n    \"Reflection of Man | visible inside mirror pane facing camera | visible inside mirror pane facing camera | stays aligned with foreground subject\",\n    \"Background door and shelving (in reflection) | behind subject, featuring panel door, light switch, and recessed shelving | behind subject, featuring panel door, light switch, and recessed shelving | spatial position remains consistent in reflection\"\n  ],\n  \"findings\": []\n}"
+}

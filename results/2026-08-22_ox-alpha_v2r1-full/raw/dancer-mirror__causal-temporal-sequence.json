@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:19:17.648Z",
+  "latencyMs": 42612,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 1643,
+    "total_tokens": 7864,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer's right arm | extended down-and-out at her side at 0:00 | lowered to waist by 6:00 | raises overhead (~1-2s), bends hand toward face (~4s), lowers smoothly (~5-6s); motion continuous, each pose reached via visible travel",
+    "Dancer's left arm | resting at her side at 0:00 | raised overhead at 8:00 | remains low through ~6:00, then lifts smoothly overhead by 8:00; continuous upward motion, no teleporting",
+    "Mirror reflection (real studio mirror wall) | mirrors dancer's pose at 0:00 | mirrors dancer's pose at 8:00 | reflection's arm positions match the dancer's corresponding arm at every sampled frame (0:00 extended, 2:00 raised, 4:00 bent at face, 6:00 lowered, 8:00 opposite arm raised) with correct left-right mirror inversion and no visible lag or desync",
+    "Studio environment (doors, barre, bin, ceiling lights) | static and closed at 0:00 | static and closed at 8:00 | no doors open, no lights change, no objects move; no uncaused changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer's right arm | extended down-and-out at her side at 0:00 | lowered to waist by 6:00 | raises overhead (~1-2s), bends hand toward face (~4s), lowers smoothly (~5-6s); motion continuous, each pose reached via visible travel\",\n    \"Dancer's left arm | resting at her side at 0:00 | raised overhead at 8:00 | remains low through ~6:00, then lifts smoothly overhead by 8:00; continuous upward motion, no teleporting\",\n    \"Mirror reflection (real studio mirror wall) | mirrors dancer's pose at 0:00 | mirrors dancer's pose at 8:00 | reflection's arm positions match the dancer's corresponding arm at every sampled frame (0:00 extended, 2:00 raised, 4:00 bent at face, 6:00 lowered, 8:00 opposite arm raised) with correct left-right mirror inversion and no visible lag or desync\",\n    \"Studio environment (doors, barre, bin, ceiling lights) | static and closed at 0:00 | static and closed at 8:00 | no doors open, no lights change, no objects move; no uncaused changes\"\n  ],\n  \"findings\": []\n}"
+}

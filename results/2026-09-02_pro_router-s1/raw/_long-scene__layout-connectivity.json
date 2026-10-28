@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:33:29.902Z",
+  "latencyMs": 53551,
+  "usage": {
+    "prompt_tokens": 10599,
+    "completion_tokens": 4648,
+    "total_tokens": 15247,
+    "cost": 0.076974,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.076974,
+      "upstream_inference_prompt_cost": 0.021198,
+      "upstream_inference_completions_cost": 0.055776
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4336,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner exterior (00:00): Shows the front facade with a glass door on the left and large windows. Through the windows, the counter and stools are visible running parallel to the front wall.",
+    "Diner interior (00:10, 00:19): Shows the counter running perpendicular to the front wall (where the main entrance is located in the background).",
+    "Pass-through window (00:45): Connects kitchen to the main dining area, consistent with the interior layout established at 00:19.",
+    "Traversals: Man enters through front door (00:19), walks to truck outside (01:41) - consistent with the interior floor plan."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "Counter and seating arrangement",
+      "invariant_violated": "Exterior/Interior Layout Consistency",
+      "description": "The exterior establishing shot at 00:00 clearly shows the diner's counter and stools arranged parallel to the front windowed wall. However, the interior shots starting at 00:19 depict the counter running perpendicular to the front wall containing the main entrance door.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Diner exterior (00:00): Shows the front facade with a glass door on the left and large windows. Through the windows, the counter and stools are visible running parallel to the front wall.\",\n    \"Diner interior (00:10, 00:19): Shows the counter running perpendicular to the front wall (where the main entrance is located in the background).\",\n    \"Pass-through window (00:45): Connects kitchen to the main dining area, consistent with the interior layout established at 00:19.\",\n    \"Traversals: Man enters through front door (00:19), walks to truck outside (01:41) - consistent with the interior floor plan.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"Counter and seating arrangement\",\n      \"invariant_violated\": \"Exterior/Interior Layout Consistency\",\n      \"description\": \"The exterior establishing shot at 00:00 clearly shows the diner's counter and stools arranged parallel to the front windowed wall. However, the interior shots starting at 00:19 depict the counter running perpendicular to the front wall containing the main entrance door.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}\n```"
+}

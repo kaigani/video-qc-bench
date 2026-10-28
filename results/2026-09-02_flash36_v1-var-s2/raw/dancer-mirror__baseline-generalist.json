@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:50.551Z",
+  "latencyMs": 12917,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1819,
+    "total_tokens": 3057,
+    "cost": 0.00774975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00774975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00682125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1644,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer | wearing black sports bra and leggings, back facing camera | standing in front of dance studio mirror | left arm raised in foreground while reflection raises right arm"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "dancer's mirror reflection",
+      "invariant_violated": "reflection_mismatch",
+      "description": "The dancer in the foreground raises and moves her left arm while keeping her right arm at her side, but her reflection in the mirror raises its right arm while leaving its left arm at its side. The reflection does not accurately reflect the real person's motion.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer | wearing black sports bra and leggings, back facing camera | standing in front of dance studio mirror | left arm raised in foreground while reflection raises right arm\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"dancer's mirror reflection\",\n      \"invariant_violated\": \"reflection_mismatch\",\n      \"description\": \"The dancer in the foreground raises and moves her left arm while keeping her right arm at her side, but her reflection in the mirror raises its right arm while leaving its left arm at its side. The reflection does not accurately reflect the real person's motion.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

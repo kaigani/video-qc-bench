@@ -1,0 +1,45 @@
+{
+  "key": "dancer-mirror__layout-connectivity",
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:09:35.168Z",
+  "latencyMs": 489470,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 18780,
+    "total_tokens": 24648,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main space: dance studio interior with light wood floor, off-white walls, one mirrored wall (multi-panel, coplanar seam visible) and one wall holding two glazed exit doors",
+    "Door A (left, green EXIT sign above): glazed exit door, bright daylight exterior visible through window, unchanged 0:00-0:08",
+    "Door B (right of Door A, green EXIT sign above): glazed exit door, bright daylight exterior visible through window, unchanged 0:00-0:08",
+    "Mirror wall: reflects door wall with both EXIT signs at its left portion, dancer center, and opposite wall with portable ballet barre, blue bin, framed poster at its right portion; reflection content stable across all frames",
+    "Dancer: stays in open floor area facing mirror for entire clip, no traversal through any door or opening occurs",
+    "Reflected laterality check: raised/extended arm appears on same visual-field side in reflection as on real body at 0:00, 0:02, 0:04, 0:08 - correct plane-mirror behavior",
+    "Scale consistency: reflected doors (~0.7x real width) and reflected dancer (~0.67x real height) show matching distance-scaling for a single mirror depth",
+    "Fixtures: portable ballet barre on stands and blue bin positioned against reflected studio wall; functionally appropriate for a dance studio, no misplaced furniture"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Main space: dance studio interior with light wood floor, off-white walls, one mirrored wall (multi-panel, coplanar seam visible) and one wall holding two glazed exit doors\",\n    \"Door A (left, green EXIT sign above): glazed exit door, bright daylight exterior visible through window, unchanged 0:00-0:08\",\n    \"Door B (right of Door A, green EXIT sign above): glazed exit door, bright daylight exterior visible through window, unchanged 0:00-0:08\",\n    \"Mirror wall: reflects door wall with both EXIT signs at its left portion, dancer center, and opposite wall with portable ballet barre, blue bin, framed poster at its right portion; reflection content stable across all frames\",\n    \"Dancer: stays in open floor area facing mirror for entire clip, no traversal through any door or opening occurs\",\n    \"Reflected laterality check: raised/extended arm appears on same visual-field side in reflection as on real body at 0:00, 0:02, 0:04, 0:08 - correct plane-mirror behavior\",\n    \"Scale consistency: reflected doors (~0.7x real width) and reflected dancer (~0.67x real height) show matching distance-scaling for a single mirror depth\",\n    \"Fixtures: portable ballet barre on stands and blue bin positioned against reflected studio wall; functionally appropriate for a dance studio, no misplaced furniture\"\n  ],\n  \"findings\": []\n}"
+}

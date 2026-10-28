@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__possession-tracking",
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:16:46.798Z",
+  "latencyMs": 9175,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 518,
+    "total_tokens": 1902,
+    "cost": 0.008984,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008984,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.006216
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 397,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Right hand picks up a red ball from the glass bowl.",
+    "00:01: Red ball is transferred from the right hand to the left hand.",
+    "00:02: Left hand drops the red ball back into the glass bowl.",
+    "00:03: Both hands stir the balls within the glass bowl.",
+    "00:05: Right hand vigorously mixes the balls within the glass bowl."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Right hand picks up a red ball from the glass bowl.\",\n    \"00:01: Red ball is transferred from the right hand to the left hand.\",\n    \"00:02: Left hand drops the red ball back into the glass bowl.\",\n    \"00:03: Both hands stir the balls within the glass bowl.\",\n    \"00:05: Right hand vigorously mixes the balls within the glass bowl.\"\n  ],\n  \"findings\": []\n}"
+}

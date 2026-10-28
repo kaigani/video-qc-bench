@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:01.854Z",
+  "latencyMs": 8772,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 640,
+    "total_tokens": 2084,
+    "cost": 0.003483,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003483,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 559,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "blue coat | hanging on wall hook behind man | hanging on wall hook | no state changes",
+    "wooden door | closed | closed | knocked on by man at 00:09",
+    "framed wall art | mounted on wall | mounted on wall | no state changes"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"blue coat | hanging on wall hook behind man | hanging on wall hook | no state changes\",\n    \"wooden door | closed | closed | knocked on by man at 00:09\",\n    \"framed wall art | mounted on wall | mounted on wall | no state changes\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:37:02.775Z",
+  "latencyMs": 33969,
+  "usage": {
+    "prompt_tokens": 10657,
+    "completion_tokens": 2418,
+    "total_tokens": 13075,
+    "cost": 0.011099325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 8831,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011099325,
+      "upstream_inference_prompt_cost": 0.002031825,
+      "upstream_inference_completions_cost": 0.0090675
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2164,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | wiping counter | standing behind counter | wiped counter, poured coffee, served plate, sat on counter stool, stood up and walked behind counter",
+    "customer | entering diner | walking to truck outside | walked in, sat on stool, held coffee mug, placed cash on counter, walked out to truck",
+    "coffee pot & mug | pot held by waitress, mug on counter | mug on counter | coffee poured into mug at 00:28; mug held and adjusted across scenes",
+    "cash stack | held in hand | resting on counter | placed onto counter by customer at 01:38"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:54",
+      "entity": "waitress",
+      "invariant_violated": "solidity",
+      "description": "As the waitress stands up from the stool and walks behind the counter, she clips directly through an identical waitress figure already standing behind the counter, merging into a single character body.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | wiping counter | standing behind counter | wiped counter, poured coffee, served plate, sat on counter stool, stood up and walked behind counter\",\n    \"customer | entering diner | walking to truck outside | walked in, sat on stool, held coffee mug, placed cash on counter, walked out to truck\",\n    \"coffee pot & mug | pot held by waitress, mug on counter | mug on counter | coffee poured into mug at 00:28; mug held and adjusted across scenes\",\n    \"cash stack | held in hand | resting on counter | placed onto counter by customer at 01:38\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:54\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the waitress stands up from the stool and walks behind the counter, she clips directly through an identical waitress figure already standing behind the counter, merging into a single character body.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

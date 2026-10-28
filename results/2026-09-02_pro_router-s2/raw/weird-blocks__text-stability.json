@@ -1,0 +1,57 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:26.537Z",
+  "latencyMs": 21165,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2420,
+    "total_tokens": 3796,
+    "cost": 0.031792,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.031792,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.02904
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2108,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Leftmost block: Blue '2'",
+    "Second block from left: Blue '3' (00:01), then garbled character (00:02 onwards)",
+    "Rightmost block (9th): Green '3' (00:07), then Green '6' (00:08 onwards)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Second block from the left",
+      "invariant_violated": "Text Legibility",
+      "description": "The number on the front of the blue block morphs from a clear '3' into a garbled, illegible character that resembles a mutated '8' or '6'.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Rightmost block (9th block)",
+      "invariant_violated": "Text Stability",
+      "description": "The number on the front of the green block changes from a '3' at 00:07 to a '6' at 00:08 without being swapped or modified by the hand.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Leftmost block: Blue '2'\",\n    \"Second block from left: Blue '3' (00:01), then garbled character (00:02 onwards)\",\n    \"Rightmost block (9th): Green '3' (00:07), then Green '6' (00:08 onwards)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Second block from the left\",\n      \"invariant_violated\": \"Text Legibility\",\n      \"description\": \"The number on the front of the blue block morphs from a clear '3' into a garbled, illegible character that resembles a mutated '8' or '6'.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Rightmost block (9th block)\",\n      \"invariant_violated\": \"Text Stability\",\n      \"description\": \"The number on the front of the green block changes from a '3' at 00:07 to a '6' at 00:08 without being swapped or modified by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

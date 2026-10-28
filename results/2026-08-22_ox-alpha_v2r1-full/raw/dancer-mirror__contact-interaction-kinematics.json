@@ -1,0 +1,42 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T15:29:38.444Z",
+  "latencyMs": 673552,
+  "usage": {
+    "prompt_tokens": 6237,
+    "completion_tokens": 29067,
+    "total_tokens": 35304,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (barefoot, black sports bra/leggings, tattoo on right upper arm) | standing centered facing mirror wall, both feet flat on floor in turned-out stance, ~1-2m from glass | same stance and location at end | performs continuous port de bras: right arm sweeps up overhead (00:02), descends in front (00:04), settles bent at right hip while left arm extends to second position during demi-plie (00:06), right arm re-raises overhead (00:08); torso stays square to mirror, no steps, no jumps",
+    "Dancer's feet <-> studio floor | full contact, both feet flat, weight on both legs | full contact maintained | demi-plie at 00:06 with heels staying down and knees tracking over toes; feet remain planted at identical positions across all frames (no sliding during turns of the arms or plie)",
+    "Dancer's right (tattooed) arm | extended low to the side | raised overhead with curved ballet wrist | continuous trajectory: side -> overhead (00:00-00:02) -> descending bent in front of face (00:04) -> bent at right hip (00:06) -> overhead again (00:08); elbow and wrist bends all anatomically valid, no pose snapping",
+    "Dancer's left arm | hanging at side | hanging at side | lifts to horizontal second position at 00:06 and returns to side by 00:08; smooth transitions, shoulder-height extension anatomically valid",
+    "Mirror reflection of dancer | front-view virtual image behind glass, laterally displaced by camera perspective | tracks dancer identically | verified true-mirror correspondence (each arm's image on same image side as real arm) at 00:00, 00:02, 00:04, and 00:08 with matching positions; reflection updates in real time with no lag or independent movement; reflection layering over barre/bin reflections is normal depth overlap, not clipping"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (barefoot, black sports bra/leggings, tattoo on right upper arm) | standing centered facing mirror wall, both feet flat on floor in turned-out stance, ~1-2m from glass | same stance and location at end | performs continuous port de bras: right arm sweeps up overhead (00:02), descends in front (00:04), settles bent at right hip while left arm extends to second position during demi-plie (00:06), right arm re-raises overhead (00:08); torso stays square to mirror, no steps, no jumps\",\n    \"Dancer's feet <-> studio floor | full contact, both feet flat, weight on both legs | full contact maintained | demi-plie at 00:06 with heels staying down and knees tracking over toes; feet remain planted at identical positions across all frames (no sliding during turns of the arms or plie)\",\n    \"Dancer's right (tattooed) arm | extended low to the side | raised overhead with curved ballet wrist | continuous trajectory: side -> overhead (00:00-00:02) -> descending bent in front of face (00:04) -> bent at right hip (00:06) -> overhead again (00:08); elbow and wrist bends all anatomically valid, no pose snapping\",\n    \"Dancer's left arm | hanging at side | hanging at side | lifts to horizontal second position at 00:06 and returns to side by 00:08; smooth transitions, shoulder-height extension anatomically valid\",\n    \"Mirror reflection of dancer | front-view virtual image behind glass, laterally displaced by camera perspective | tracks dancer identically | verified true-mirror correspondence (each arm's image on same image side as real arm) at 00:00, 00:02, 00:04, and 00:08 with matching positions; reflection updates in real time with no lag or independent movement; reflection layering over barre/bin reflections is normal depth overlap, not clipping\"\n  ],\n  \"findings\": []\n}"
+}

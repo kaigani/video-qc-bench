@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:11:44.727Z",
+  "latencyMs": 26528,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 1139,
+    "total_tokens": 7034,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's hand + applicator stick | applying white cream to chin/lower lip, head tilted back | applying cream to cheek/jaw area | chin (0:00-0:02) -> eyebrow/forehead (0:04) -> chin again (0:06) -> cheek (0:08); each contact deposits cream at the touched spot",
+    "white cream on face | small deposit on chin at start | visible on chin, eyebrow, and cheek by end | cream appears only where applicator has made contact, matching contact scale and location each time",
+    "mirror reflection | shows man applying cream to chin | shows man applying cream to cheek | reflection tracks the man's hand and face actions in real time at every observed moment, with no lag or desynchronization"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man's hand + applicator stick | applying white cream to chin/lower lip, head tilted back | applying cream to cheek/jaw area | chin (0:00-0:02) -> eyebrow/forehead (0:04) -> chin again (0:06) -> cheek (0:08); each contact deposits cream at the touched spot\",\n    \"white cream on face | small deposit on chin at start | visible on chin, eyebrow, and cheek by end | cream appears only where applicator has made contact, matching contact scale and location each time\",\n    \"mirror reflection | shows man applying cream to chin | shows man applying cream to cheek | reflection tracks the man's hand and face actions in real time at every observed moment, with no lag or desynchronization\"\n  ],\n  \"findings\": []\n}"
+}

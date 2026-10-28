@@ -1,0 +1,53 @@
+{
+  "key": "dancer-mirror__layout-connectivity",
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T19:52:39.625Z",
+  "latencyMs": 555514,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 19892,
+    "total_tokens": 25760,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio: light wood floor; left wall holds two closed dark exterior doors with vision-panel windows; far/right wall is a full-height mirror in two panels; camera positioned behind the dancer",
+    "Door 1 (left) window: exterior view of parking lot with cars and treeline; identical view maintained 0:00-0:08",
+    "Door 2 (right of Door 1) window: same parking-lot exterior; consistent across all frames, plausible for adjacent doors on one wall",
+    "Green EXIT signs above both doors; a text-reversed (mirrored) EXIT sign is visible at the top-left edge of the mirror, confirming the surface is a specular mirror, not a pass-through",
+    "Mirror reflects the studio behind the camera: portable ballet barre on legs (image right), blue storage bin (center), framed picture on wall (right) - all static and positionally stable across frames",
+    "Dancer: stationary, ~1-1.5 m from mirror, back to camera; performs port de bras - right arm raises overhead at 0:02, bent-elbow variant at 0:04, extended reach at 0:08; arms low at 0:00 and 0:06",
+    "Dancer's reflection: shows her front, correct scale (slightly smaller/farther, as expected for virtual image behind mirror) and correct timing, but raises the contralateral (mirror-opposite) arm in every asymmetric pose"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer's mirror reflection (arm laterality)",
+      "invariant_violated": "reflection through an opening must match the established near side (specular mirror image)",
+      "description": "When the dancer raises her right arm (appearing on the image-right/mirror side of her body), her reflection raises the arm on the inner/image-left side of the reflected figure - i.e., the opposite arm. A true mirror must place the reflected raised arm on the same image side (outer side of the reflected figure). The two raised hands converge toward each other above the gap, the signature of a horizontally flipped image or a face-to-face mimicker, not a specular reflection. The same inversion recurs at 0:04 (reflected elbow juts inward while her real elbow juts outward) and at 0:08 (reflected hand near head on the inner side while her extended hand is on the outer side), so the reflection is consistently laterally inverted throughout the clip.",
+      "severity": "severe",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio: light wood floor; left wall holds two closed dark exterior doors with vision-panel windows; far/right wall is a full-height mirror in two panels; camera positioned behind the dancer\",\n    \"Door 1 (left) window: exterior view of parking lot with cars and treeline; identical view maintained 0:00-0:08\",\n    \"Door 2 (right of Door 1) window: same parking-lot exterior; consistent across all frames, plausible for adjacent doors on one wall\",\n    \"Green EXIT signs above both doors; a text-reversed (mirrored) EXIT sign is visible at the top-left edge of the mirror, confirming the surface is a specular mirror, not a pass-through\",\n    \"Mirror reflects the studio behind the camera: portable ballet barre on legs (image right), blue storage bin (center), framed picture on wall (right) - all static and positionally stable across frames\",\n    \"Dancer: stationary, ~1-1.5 m from mirror, back to camera; performs port de bras - right arm raises overhead at 0:02, bent-elbow variant at 0:04, extended reach at 0:08; arms low at 0:00 and 0:06\",\n    \"Dancer's reflection: shows her front, correct scale (slightly smaller/farther, as expected for virtual image behind mirror) and correct timing, but raises the contralateral (mirror-opposite) arm in every asymmetric pose\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer's mirror reflection (arm laterality)\",\n      \"invariant_violated\": \"reflection through an opening must match the established near side (specular mirror image)\",\n      \"description\": \"When the dancer raises her right arm (appearing on the image-right/mirror side of her body), her reflection raises the arm on the inner/image-left side of the reflected figure - i.e., the opposite arm. A true mirror must place the reflected raised arm on the same image side (outer side of the reflected figure). The two raised hands converge toward each other above the gap, the signature of a horizontally flipped image or a face-to-face mimicker, not a specular reflection. The same inversion recurs at 0:04 (reflected elbow juts inward while her real elbow juts outward) and at 0:08 (reflected hand near head on the inner side while her extended hand is on the outer side), so the reflection is consistently laterally inverted throughout the clip.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

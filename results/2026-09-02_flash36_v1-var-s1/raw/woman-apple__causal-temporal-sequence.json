@@ -1,0 +1,40 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:43.998Z",
+  "latencyMs": 8220,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 671,
+    "total_tokens": 2096,
+    "cost": 0.003585,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003585,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00251625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 564,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman holding umbrella | holding red fruit with both hands, walking forward | continues holding fruit and umbrella while walking | steady walking pace synchronized with camera motion",
+    "background pedestrians | walking in various directions along market aisle | continuing past camera view | continuous motion without abrupt speed changes or sudden stops",
+    "camera | tracking backward ahead of subject | orbiting around subject to side/rear profile | continuous smooth camera movement throughout shot"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman holding umbrella | holding red fruit with both hands, walking forward | continues holding fruit and umbrella while walking | steady walking pace synchronized with camera motion\",\n    \"background pedestrians | walking in various directions along market aisle | continuing past camera view | continuous motion without abrupt speed changes or sudden stops\",\n    \"camera | tracking backward ahead of subject | orbiting around subject to side/rear profile | continuous smooth camera movement throughout shot\"\n  ],\n  \"findings\": []\n}"
+}

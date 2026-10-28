@@ -1,0 +1,40 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:53.992Z",
+  "latencyMs": 14814,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1632,
+    "total_tokens": 3057,
+    "cost": 0.00718875,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00718875,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00612
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1462,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "person's hands | holding and tilting small olive container | pouring olives into glass jar | tilted container over jar mouth at 00:00, set empty container aside at 00:04, grabbed next container at 00:05, poured second batch into jar at 00:07",
+    "olives | resting inside small container | falling and settling inside large glass jar | tumbled continuously down into jar upon container tilting at 00:01-00:03 and 00:07-00:09 under gravity",
+    "large glass jar | empty at baseline | partially filled with accumulated olives | received poured olives continuously from mouth to base"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"person's hands | holding and tilting small olive container | pouring olives into glass jar | tilted container over jar mouth at 00:00, set empty container aside at 00:04, grabbed next container at 00:05, poured second batch into jar at 00:07\",\n    \"olives | resting inside small container | falling and settling inside large glass jar | tumbled continuously down into jar upon container tilting at 00:01-00:03 and 00:07-00:09 under gravity\",\n    \"large glass jar | empty at baseline | partially filled with accumulated olives | received poured olives continuously from mouth to base\"\n  ],\n  \"findings\": []\n}"
+}

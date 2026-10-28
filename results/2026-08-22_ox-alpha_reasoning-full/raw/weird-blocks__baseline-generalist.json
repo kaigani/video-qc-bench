@@ -1,0 +1,63 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:25:21.412Z",
+  "latencyMs": 156662,
+  "usage": {
+    "prompt_tokens": 5713,
+    "completion_tokens": 7988,
+    "total_tokens": 13701,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cube 1 (leftmost) | green, digit 2, held by hand | blue, digit 2, standing | color changes green to blue between 00:00 and 00:02 with no visible swap",
+    "Cube 2 | green, digit 2 | blue, digit 3 | color and digit change between 00:02 and 00:04 with no visible swap",
+    "Cube 3 | not present | green, digit 2 | appears by 00:04, then stable",
+    "Cube 4 | being placed at 00:04 (motion-blurred) | orange, digit 2 | stable afterward",
+    "Cube 5 | not present | light blue, digit 3 | appears by 00:06, then stable",
+    "Cube 6 | being placed at 00:06, green, digit 5 | green, digit 5 | stable",
+    "Cube 7 | not present | green, digit 2 | appears by 00:08",
+    "Cube 8 | being placed at 00:08, blue, digit partially obscured | n/a | mid-placement",
+    "Hand | placing cubes one by one left to right | exits frame top-right at 00:08 | continuous placement action, anatomy normal"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "leftmost cube (position 1)",
+      "invariant_violated": "object color/identity continuity",
+      "description": "At 00:00 the first cube is green with digit '2' (the cube beside it is an identical green '2'). By 00:02 the same leftmost position holds a blue '2' cube. No swap or replacement is shown on screen; the object changes color while keeping its position and digit, and the duplicate green '2' cube disappears.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "second cube (position 2)",
+      "invariant_violated": "object identity continuity",
+      "description": "At 00:02 the second cube from the left is a green '2'. By 00:04 it is a blue '3'. The hand is never shown performing this replacement; the cube's color and digit change between consecutive shots without visible cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cube 1 (leftmost) | green, digit 2, held by hand | blue, digit 2, standing | color changes green to blue between 00:00 and 00:02 with no visible swap\",\n    \"Cube 2 | green, digit 2 | blue, digit 3 | color and digit change between 00:02 and 00:04 with no visible swap\",\n    \"Cube 3 | not present | green, digit 2 | appears by 00:04, then stable\",\n    \"Cube 4 | being placed at 00:04 (motion-blurred) | orange, digit 2 | stable afterward\",\n    \"Cube 5 | not present | light blue, digit 3 | appears by 00:06, then stable\",\n    \"Cube 6 | being placed at 00:06, green, digit 5 | green, digit 5 | stable\",\n    \"Cube 7 | not present | green, digit 2 | appears by 00:08\",\n    \"Cube 8 | being placed at 00:08, blue, digit partially obscured | n/a | mid-placement\",\n    \"Hand | placing cubes one by one left to right | exits frame top-right at 00:08 | continuous placement action, anatomy normal\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"leftmost cube (position 1)\",\n      \"invariant_violated\": \"object color/identity continuity\",\n      \"description\": \"At 00:00 the first cube is green with digit '2' (the cube beside it is an identical green '2'). By 00:02 the same leftmost position holds a blue '2' cube. No swap or replacement is shown on screen; the object changes color while keeping its position and digit, and the duplicate green '2' cube disappears.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"second cube (position 2)\",\n      \"invariant_violated\": \"object identity continuity\",\n      \"description\": \"At 00:02 the second cube from the left is a green '2'. By 00:04 it is a blue '3'. The hand is never shown performing this replacement; the cube's color and digit change between consecutive shots without visible cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

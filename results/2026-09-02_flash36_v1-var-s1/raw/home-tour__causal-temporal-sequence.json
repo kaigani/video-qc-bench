@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:30:42.785Z",
+  "latencyMs": 10388,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 1009,
+    "total_tokens": 2434,
+    "cost": 0.0048525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0048525,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00378375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 903,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | walking through kitchen area | returns towards hallway | walks past doorway into bedroom at 00:03, looks around at 00:05, turns and exits bedroom at 00:07",
+    "ambient lighting | illuminated indoor scene | constant lighting level | remains unchanged throughout motion",
+    "doors and doorways | stationary open frame doorways | remain static | no spontaneous movement observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | walking through kitchen area | returns towards hallway | walks past doorway into bedroom at 00:03, looks around at 00:05, turns and exits bedroom at 00:07\",\n    \"ambient lighting | illuminated indoor scene | constant lighting level | remains unchanged throughout motion\",\n    \"doors and doorways | stationary open frame doorways | remain static | no spontaneous movement observed\"\n  ],\n  \"findings\": []\n}"
+}

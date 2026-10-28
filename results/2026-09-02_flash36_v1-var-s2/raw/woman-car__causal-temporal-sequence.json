@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:33.770Z",
+  "latencyMs": 22288,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2077,
+    "total_tokens": 3502,
+    "cost": 0.0088575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0088575,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00778875
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1912,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "car motion | stationary at roadside at 00:00 | moving down highway at 00:09 | accelerates forward between 00:03 and 00:05 as road lines begin scrolling",
+    "woman's hair | calm/still at 00:00 | blowing backwards at 00:09 | begins reacting to wind drag at 00:05 following vehicle acceleration",
+    "sun glare / flare | moderate ambient sunlight at 00:00 | bright lens flare on hood/windshield at 00:06 | flare intensity increases at 00:06 as camera pans toward sun angle"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"car motion | stationary at roadside at 00:00 | moving down highway at 00:09 | accelerates forward between 00:03 and 00:05 as road lines begin scrolling\",\n    \"woman's hair | calm/still at 00:00 | blowing backwards at 00:09 | begins reacting to wind drag at 00:05 following vehicle acceleration\",\n    \"sun glare / flare | moderate ambient sunlight at 00:00 | bright lens flare on hood/windshield at 00:06 | flare intensity increases at 00:06 as camera pans toward sun angle\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:04.570Z",
+  "latencyMs": 16623,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1984,
+    "total_tokens": 3410,
+    "cost": 0.0085095,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0085095,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00744
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1879,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "table surface | fixed horizontal wooden surface | fixed horizontal wooden surface | constant position throughout frame",
+    "numbered blocks | initial pair of blocks (blue 2, green 2) | row of nine numbered blocks | hand inserts blocks sequentially from left to right",
+    "hand | enters from top to place and adjust blocks | adjusts blocks along the row | consistently occludes blocks from above without depth ordering errors"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"table surface | fixed horizontal wooden surface | fixed horizontal wooden surface | constant position throughout frame\",\n    \"numbered blocks | initial pair of blocks (blue 2, green 2) | row of nine numbered blocks | hand inserts blocks sequentially from left to right\",\n    \"hand | enters from top to place and adjust blocks | adjusts blocks along the row | consistently occludes blocks from above without depth ordering errors\"\n  ],\n  \"findings\": []\n}"
+}

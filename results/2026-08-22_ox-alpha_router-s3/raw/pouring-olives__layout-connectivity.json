@@ -1,0 +1,43 @@
+{
+  "key": "pouring-olives__layout-connectivity",
+  "video": "pouring-olives.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:03:48.145Z",
+  "latencyMs": 79417,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 1008,
+    "total_tokens": 6876,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:09 single established space: kitchen — white counter with wooden cutting board, stainless range with black knobs and oven behind subject, wooden cabinetry to the right of range and at left edge of frame; no doorways or windows visible at any point",
+    "0:00-0:09 fixtures: range with cooktop grates and oven door consistent across all frames; countertop continuous; no second copy of any room implied",
+    "0:00-0:09 objects on counter: large empty glass jar centered on cutting board, two bowls of green olives (one stainless, one ceramic) to the right of the board, small glass bottle appears at right edge ~0:06-0:08",
+    "0:00-0:09 action: subject in blue shirt stands behind counter, pours olives from small glass jars into the large jar; olives accumulate in large jar monotonically (empty -> partial -> fuller); no traversal between spaces occurs",
+    "0:00-0:09 functional check: bowls and jar placed on prep counter adjacent to range; cutting board under jar; all arrangements serve the counter as a food-prep surface — consistent with kitchen function",
+    "camera: slight reframing between shots (tighter/wider, small pan) but background geometry (range, cabinets, counter edge) stays mutually consistent; wide-angle distortion not implicated"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:09 single established space: kitchen — white counter with wooden cutting board, stainless range with black knobs and oven behind subject, wooden cabinetry to the right of range and at left edge of frame; no doorways or windows visible at any point\",\n    \"0:00-0:09 fixtures: range with cooktop grates and oven door consistent across all frames; countertop continuous; no second copy of any room implied\",\n    \"0:00-0:09 objects on counter: large empty glass jar centered on cutting board, two bowls of green olives (one stainless, one ceramic) to the right of the board, small glass bottle appears at right edge ~0:06-0:08\",\n    \"0:00-0:09 action: subject in blue shirt stands behind counter, pours olives from small glass jars into the large jar; olives accumulate in large jar monotonically (empty -> partial -> fuller); no traversal between spaces occurs\",\n    \"0:00-0:09 functional check: bowls and jar placed on prep counter adjacent to range; cutting board under jar; all arrangements serve the counter as a food-prep surface — consistent with kitchen function\",\n    \"camera: slight reframing between shots (tighter/wider, small pan) but background geometry (range, cabinets, counter edge) stays mutually consistent; wide-angle distortion not implicated\"\n  ],\n  \"findings\": []\n}"
+}

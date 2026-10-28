@@ -1,0 +1,54 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:02:10.687Z",
+  "latencyMs": 236896,
+  "usage": {
+    "prompt_tokens": 5858,
+    "completion_tokens": 10114,
+    "total_tokens": 15972,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "pos1 cube: 00:00 green '2' on table, gripped by hand -> 00:02 blue '2' on table at same spot; green version never visibly removed",
+    "pos2 cube (blue '3'): enters frame in hand ~00:01, set on table by 00:02, stationary through 00:08",
+    "pos3 cube (green '2'): on table from 00:00 (right cube of the opening pair), untouched, stationary through 00:08",
+    "pos4 cube (orange '2'): carried in by hand ~00:03-00:04, placed on table, stationary through 00:08",
+    "pos5 cube (light-blue '3'): placed by hand between 00:04 and 00:06, stationary through 00:08",
+    "pos6 cube (green '5'): in hand at 00:06, set on table by 00:08, stationary thereafter",
+    "pos7 cube (green '2'): placed by hand between 00:06 and 00:08, on table at 00:08",
+    "pos8 cube (blue '6'): in hand, being set down at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "leftmost number cube (position 1)",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "At 00:00 position 1 is occupied by a green '2' cube with the hand gripping it; at 00:02 the same position holds a blue '2' cube. No frame shows the green cube being lifted away or the blue cube being set down, so the tracked object changes color/identity in place. A concealed swap is physically possible (hand was in continuous contact and 2 s elapse between frames), but as recorded the exchange is invisible and the green cube's exit from the scene is unobserved.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"pos1 cube: 00:00 green '2' on table, gripped by hand -> 00:02 blue '2' on table at same spot; green version never visibly removed\",\n    \"pos2 cube (blue '3'): enters frame in hand ~00:01, set on table by 00:02, stationary through 00:08\",\n    \"pos3 cube (green '2'): on table from 00:00 (right cube of the opening pair), untouched, stationary through 00:08\",\n    \"pos4 cube (orange '2'): carried in by hand ~00:03-00:04, placed on table, stationary through 00:08\",\n    \"pos5 cube (light-blue '3'): placed by hand between 00:04 and 00:06, stationary through 00:08\",\n    \"pos6 cube (green '5'): in hand at 00:06, set on table by 00:08, stationary thereafter\",\n    \"pos7 cube (green '2'): placed by hand between 00:06 and 00:08, on table at 00:08\",\n    \"pos8 cube (blue '6'): in hand, being set down at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"leftmost number cube (position 1)\",\n      \"invariant_violated\": \"transfer completeness / object identity\",\n      \"description\": \"At 00:00 position 1 is occupied by a green '2' cube with the hand gripping it; at 00:02 the same position holds a blue '2' cube. No frame shows the green cube being lifted away or the blue cube being set down, so the tracked object changes color/identity in place. A concealed swap is physically possible (hand was in continuous contact and 2 s elapse between frames), but as recorded the exchange is invisible and the green cube's exit from the scene is unobserved.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

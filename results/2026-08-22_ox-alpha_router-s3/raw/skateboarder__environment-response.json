@@ -1,0 +1,42 @@
+{
+  "key": "skateboarder__environment-response",
+  "video": "skateboarder.mp4",
+  "role": "environment-response",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T00:38:10.521Z",
+  "latencyMs": 134779,
+  "usage": {
+    "prompt_tokens": 5840,
+    "completion_tokens": 2133,
+    "total_tokens": 7973,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:09 self-generated airflow from forward rolling: evidence is passing ground/background and motion blur; should mildly press loose shirt hem and pant cuffs backward; observed slight hem flare at speed (0:04) and neutral drape when crouched/slow (0:00, 0:07-0:08) — consistent with speed-dependent airflow",
+    "0:01-0:04 gravity during ollie: evidence is skater and board airborne (0:02), then descent and landing (0:03-0:04); should accelerate body and board equally; observed board and body rise and fall together and land in contact — consistent",
+    "ambient wind: no positive evidence (foliage and light poles static across all shots, no flags or loose debris); expected effect is none on clothing when subject is slow; observed shirt and pants hang naturally at 0:00 and 0:07-0:08 — no cause-less fabric streaming detected",
+    "solar illumination/shadow: evidence is hard shadows on concrete (0:00 skater shadow lower-right; 0:05-0:09 shadow to skater's left); should stay directionally coherent within each shot; observed shadow direction stable per shot and consistent with lit side of subject — consistent; apparent direction change across shots attributable to camera repositioning",
+    "camera motion confound: background smear at 0:04-0:05 is screen displacement from panning/fisheye, not foliage deformation; trees show no bending or flutter in any frame — ruled out as wind evidence"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:09 self-generated airflow from forward rolling: evidence is passing ground/background and motion blur; should mildly press loose shirt hem and pant cuffs backward; observed slight hem flare at speed (0:04) and neutral drape when crouched/slow (0:00, 0:07-0:08) — consistent with speed-dependent airflow\",\n    \"0:01-0:04 gravity during ollie: evidence is skater and board airborne (0:02), then descent and landing (0:03-0:04); should accelerate body and board equally; observed board and body rise and fall together and land in contact — consistent\",\n    \"ambient wind: no positive evidence (foliage and light poles static across all shots, no flags or loose debris); expected effect is none on clothing when subject is slow; observed shirt and pants hang naturally at 0:00 and 0:07-0:08 — no cause-less fabric streaming detected\",\n    \"solar illumination/shadow: evidence is hard shadows on concrete (0:00 skater shadow lower-right; 0:05-0:09 shadow to skater's left); should stay directionally coherent within each shot; observed shadow direction stable per shot and consistent with lit side of subject — consistent; apparent direction change across shots attributable to camera repositioning\",\n    \"camera motion confound: background smear at 0:04-0:05 is screen displacement from panning/fisheye, not foliage deformation; trees show no bending or flutter in any frame — ruled out as wind evidence\"\n  ],\n  \"findings\": []\n}"
+}

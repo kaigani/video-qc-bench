@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__possession-tracking",
+  "video": "woman-apple.mp4",
+  "role": "possession-tracking",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:14:02.886Z",
+  "latencyMs": 79318,
+  "usage": {
+    "prompt_tokens": 5858,
+    "completion_tokens": 2078,
+    "total_tokens": 7936,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09 | blue umbrella: gripped by its shaft in the woman's left hand continuously; canopy moves out of top of frame ~00:08 as she turns, shaft remains in her possession",
+    "00:00-00:06 | red apple: held in the woman's right hand continuously, raised near her chest; no transfers, no placement, never leaves her grip",
+    "00:07-00:09 | apple (same custody chain, right hand): object remains in her right hand as she turns left, but its appearance changes from solid red to green-yellow with red blush by 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple held in woman's right hand",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "The apple is held continuously in the woman's right hand from 00:00 with no transfer, placement, or occlusion longer than normal handling. At 00:08 the object in the same grip appears as a green-yellow apple with red blush, with a ghosted red round shape at its upper edge, instead of the uniformly red apple seen at 00:06. No visible manipulation or exchange explains the change in kind/appearance of the object while custody never changed hands.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09 | blue umbrella: gripped by its shaft in the woman's left hand continuously; canopy moves out of top of frame ~00:08 as she turns, shaft remains in her possession\",\n    \"00:00-00:06 | red apple: held in the woman's right hand continuously, raised near her chest; no transfers, no placement, never leaves her grip\",\n    \"00:07-00:09 | apple (same custody chain, right hand): object remains in her right hand as she turns left, but its appearance changes from solid red to green-yellow with red blush by 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple held in woman's right hand\",\n      \"invariant_violated\": \"transfer completeness / object identity\",\n      \"description\": \"The apple is held continuously in the woman's right hand from 00:00 with no transfer, placement, or occlusion longer than normal handling. At 00:08 the object in the same grip appears as a green-yellow apple with red blush, with a ghosted red round shape at its upper edge, instead of the uniformly red apple seen at 00:06. No visible manipulation or exchange explains the change in kind/appearance of the object while custody never changed hands.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

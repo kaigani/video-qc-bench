@@ -1,0 +1,51 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:34:52.658Z",
+  "latencyMs": 13138,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 977,
+    "total_tokens": 2395,
+    "cost": 0.01456,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01456,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.011724
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 789,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - 4 shiny metal cups on the table",
+    "0:01 - 4 shiny metal cups on the table",
+    "0:02 - 4 shiny metal cups on the table",
+    "0:03 - 4 dull brown cups on the table",
+    "0:08 - 4 dull brown cups on the table"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:03",
+      "entity": "cups",
+      "invariant_violated": "Unexplained Transformation",
+      "description": "The four shiny metal cups on the table suddenly transform into dull brown cups as the camera angle changes.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - 4 shiny metal cups on the table\",\n    \"0:01 - 4 shiny metal cups on the table\",\n    \"0:02 - 4 shiny metal cups on the table\",\n    \"0:03 - 4 dull brown cups on the table\",\n    \"0:08 - 4 dull brown cups on the table\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:03\",\n      \"entity\": \"cups\",\n      \"invariant_violated\": \"Unexplained Transformation\",\n      \"description\": \"The four shiny metal cups on the table suddenly transform into dull brown cups as the camera angle changes.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

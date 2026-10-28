@@ -1,0 +1,44 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:31:09.161Z",
+  "latencyMs": 41428,
+  "usage": {
+    "prompt_tokens": 10586,
+    "completion_tokens": 1540,
+    "total_tokens": 12126,
+    "cost": 0.0137145,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0137145,
+      "upstream_inference_prompt_cost": 0.0079395,
+      "upstream_inference_completions_cost": 0.005775
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1354,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:24 - Glass coffee pot: full of dark coffee (~100% fill level)",
+    "00:27 - White ceramic mug 1: empty on counter (0% fill level)",
+    "00:28 - Transfer: dark coffee pouring from glass pot into white ceramic mug 1",
+    "00:30 - Glass coffee pot: level decreases proportionally (~80% full)",
+    "00:30 - White ceramic mug 1: level increases proportionally (~80% full)",
+    "00:36 - White ceramic mug 1: held by man on counter, filled with dark coffee",
+    "01:12 - White ceramic mug 2: served to counter, filled with coffee"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:24 - Glass coffee pot: full of dark coffee (~100% fill level)\",\n    \"00:27 - White ceramic mug 1: empty on counter (0% fill level)\",\n    \"00:28 - Transfer: dark coffee pouring from glass pot into white ceramic mug 1\",\n    \"00:30 - Glass coffee pot: level decreases proportionally (~80% full)\",\n    \"00:30 - White ceramic mug 1: level increases proportionally (~80% full)\",\n    \"00:36 - White ceramic mug 1: held by man on counter, filled with dark coffee\",\n    \"01:12 - White ceramic mug 2: served to counter, filled with coffee\"\n  ],\n  \"findings\": []\n}"
+}

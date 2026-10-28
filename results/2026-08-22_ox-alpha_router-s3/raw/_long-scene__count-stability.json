@@ -1,0 +1,76 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T02:28:45.013Z",
+  "latencyMs": 478308,
+  "usage": {
+    "prompt_tokens": 34924,
+    "completion_tokens": 17630,
+    "total_tokens": 52554,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:10 | truck outside diner | 1 white semi tractor (no trailer) parked left of entrance, idling (steam), stationary",
+    "00:30-00:32 | coffee mugs | 1 white mug on counter being filled from carafe",
+    "00:34-00:37 | plates | close-up: 1 plate with bread + fried egg, steaming, on counter",
+    "00:38-00:45 | plates+mugs | 1 plate of food + 1 mug in front of seated man",
+    "00:46-00:53 | plates | waitress at pass-through, man at counter in background, plate not visible",
+    "00:54-01:00 | plates+mugs | counter empty: 0 plates, 0 mugs, no people in frame",
+    "01:00-01:10 | plates+mugs | wide shot: 1 mug in front of man, 0 plates on counter",
+    "01:11-01:17 | plates | +1 plate of food delivered to man by waitress (visible cause: carried in and set down)",
+    "01:19-01:28 | plates+mugs | 1 plate + 1 mug at man's seat; waitress moves behind counter",
+    "01:29-01:37 | mugs | 2 mugs total (man + waitress seated with coffee); 1 plate",
+    "01:38 | money | 1 folded US bill placed on counter next to mug by man's hand",
+    "01:40-01:42 | money | 2 US bills flat on counter ($100 on top), pushed by both hands",
+    "01:43-01:52 | truck outside | man exits diner and walks to 1 green box truck parked in same lot position",
+    "01:53-01:58 | plates+mugs | waitress clears counter items by hand (visible removal cause)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:11",
+      "entity": "plate of food (man's meal)",
+      "invariant_violated": "unexplained count change / duplicate delivery",
+      "description": "The identical plate (bread + fried egg) is already in front of the man at 0:38-0:45, is gone with no visible removal by the 1:00-1:10 wide shots, and the waitress then delivers the same meal again at 1:11-1:17. The first instance vanishes without cause and the meal is effectively served twice.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:40",
+      "entity": "US dollar bills on counter",
+      "invariant_violated": "unexplained count change",
+      "description": "At 1:38 the man places a single folded bill next to his mug; by 1:40-1:42 two bills lie on the counter ($100 on top of a second bill). No second bill is ever visibly added or taken from a wallet on screen.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:43",
+      "entity": "truck parked outside the diner",
+      "invariant_violated": "unexplained kind/identity transformation",
+      "description": "The establishing shot (0:00-0:10) shows a white semi tractor with no trailer parked beside the diner; when the man exits at 1:43-1:52 he walks to a green box truck in the same parking area. No visible departure of the white tractor or arrival of the green truck explains the substitution.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:10 | truck outside diner | 1 white semi tractor (no trailer) parked left of entrance, idling (steam), stationary\",\n    \"00:30-00:32 | coffee mugs | 1 white mug on counter being filled from carafe\",\n    \"00:34-00:37 | plates | close-up: 1 plate with bread + fried egg, steaming, on counter\",\n    \"00:38-00:45 | plates+mugs | 1 plate of food + 1 mug in front of seated man\",\n    \"00:46-00:53 | plates | waitress at pass-through, man at counter in background, plate not visible\",\n    \"00:54-01:00 | plates+mugs | counter empty: 0 plates, 0 mugs, no people in frame\",\n    \"01:00-01:10 | plates+mugs | wide shot: 1 mug in front of man, 0 plates on counter\",\n    \"01:11-01:17 | plates | +1 plate of food delivered to man by waitress (visible cause: carried in and set down)\",\n    \"01:19-01:28 | plates+mugs | 1 plate + 1 mug at man's seat; waitress moves behind counter\",\n    \"01:29-01:37 | mugs | 2 mugs total (man + waitress seated with coffee); 1 plate\",\n    \"01:38 | money | 1 folded US bill placed on counter next to mug by man's hand\",\n    \"01:40-01:42 | money | 2 US bills flat on counter ($100 on top), pushed by both hands\",\n    \"01:43-01:52 | truck outside | man exits diner and walks to 1 green box truck parked in same lot position\",\n    \"01:53-01:58 | plates+mugs | waitress clears counter items by hand (visible removal cause)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:11\",\n      \"entity\": \"plate of food (man's meal)\",\n      \"invariant_violated\": \"unexplained count change / duplicate delivery\",\n      \"description\": \"The identical plate (bread + fried egg) is already in front of the man at 0:38-0:45, is gone with no visible removal by the 1:00-1:10 wide shots, and the waitress then delivers the same meal again at 1:11-1:17. The first instance vanishes without cause and the meal is effectively served twice.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"01:40\",\n      \"entity\": \"US dollar bills on counter\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"At 1:38 the man places a single folded bill next to his mug; by 1:40-1:42 two bills lie on the counter ($100 on top of a second bill). No second bill is ever visibly added or taken from a wallet on screen.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"truck parked outside the diner\",\n      \"invariant_violated\": \"unexplained kind/identity transformation\",\n      \"description\": \"The establishing shot (0:00-0:10) shows a white semi tractor with no trailer parked beside the diner; when the man exits at 1:43-1:52 he walks to a green box truck in the same parking area. No visible departure of the white tractor or arrival of the green truck explains the substitution.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:43:29.978Z",
+  "latencyMs": 20918,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 942,
+    "total_tokens": 2368,
+    "cost": 0.004602,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004602,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.0035325
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 842,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon | parked on desert roadside with wood paneling | remains stationary | camera orbits around front-left fender",
+    "Woman | leaning against vehicle hood with arms crossed | maintains position on hood | stays consistently positioned relative to vehicle",
+    "Desert road and background | two-lane highway with distant mountains behind vehicle | remains in consistent spatial layout | parallax changes smoothly with camera orbit"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Station wagon | parked on desert roadside with wood paneling | remains stationary | camera orbits around front-left fender\",\n    \"Woman | leaning against vehicle hood with arms crossed | maintains position on hood | stays consistently positioned relative to vehicle\",\n    \"Desert road and background | two-lane highway with distant mountains behind vehicle | remains in consistent spatial layout | parallax changes smoothly with camera orbit\"\n  ],\n  \"findings\": []\n}"
+}

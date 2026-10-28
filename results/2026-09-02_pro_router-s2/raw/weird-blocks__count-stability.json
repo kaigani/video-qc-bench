@@ -1,0 +1,49 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:13:32.624Z",
+  "latencyMs": 27380,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 3202,
+    "total_tokens": 4620,
+    "cost": 0.04126,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04126,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.038424
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3006,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 2 blocks visible (one held by hand, one stationary on the right)",
+    "00:01 - Stationary block vanishes as the hand and trail move over it",
+    "00:01-00:08 - Held block leaves a trail of new blocks, increasing count to 10"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00-00:01",
+      "entity": "Stationary green '2' block",
+      "invariant_violated": "Unexplained disappearance",
+      "description": "The stationary green block on the right vanishes without a visible cause as the hand drags the other block into its space.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 2 blocks visible (one held by hand, one stationary on the right)\",\n    \"00:01 - Stationary block vanishes as the hand and trail move over it\",\n    \"00:01-00:08 - Held block leaves a trail of new blocks, increasing count to 10\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00-00:01\",\n      \"entity\": \"Stationary green '2' block\",\n      \"invariant_violated\": \"Unexplained disappearance\",\n      \"description\": \"The stationary green block on the right vanishes without a visible cause as the hand drags the other block into its space.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

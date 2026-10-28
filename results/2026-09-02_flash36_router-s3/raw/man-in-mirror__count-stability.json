@@ -1,0 +1,58 @@
+{
+  "key": "man-in-mirror__count-stability",
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:19:31.971Z",
+  "latencyMs": 10603,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1763,
+    "total_tokens": 3181,
+    "cost": 0.00767475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00767475,
+      "upstream_inference_prompt_cost": 0.0010635,
+      "upstream_inference_completions_cost": 0.00661125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1447,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: held hygiene tool count=1 (toothbrush)",
+    "00:02-00:03: held hygiene tool count=1 (black comb, unexplained transformation from toothbrush)",
+    "00:04-00:09: held hygiene tool count=1 (toothbrush, unexplained transformation back from comb)",
+    "00:00-00:09: cabinet shelf bottles/jars count=6 (constant)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "held toothbrush",
+      "invariant_violated": "unexplained_kind_transformation",
+      "description": "The toothbrush in the performer's hand spontaneously transforms into a black hair comb as he moves it up towards his hair, without any visible swap or mechanism.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "held comb",
+      "invariant_violated": "unexplained_kind_transformation",
+      "description": "The black comb spontaneously transforms back into a toothbrush as he lowers his hand to resume brushing his teeth.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: held hygiene tool count=1 (toothbrush)\",\n    \"00:02-00:03: held hygiene tool count=1 (black comb, unexplained transformation from toothbrush)\",\n    \"00:04-00:09: held hygiene tool count=1 (toothbrush, unexplained transformation back from comb)\",\n    \"00:00-00:09: cabinet shelf bottles/jars count=6 (constant)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"held toothbrush\",\n      \"invariant_violated\": \"unexplained_kind_transformation\",\n      \"description\": \"The toothbrush in the performer's hand spontaneously transforms into a black hair comb as he moves it up towards his hair, without any visible swap or mechanism.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"held comb\",\n      \"invariant_violated\": \"unexplained_kind_transformation\",\n      \"description\": \"The black comb spontaneously transforms back into a toothbrush as he lowers his hand to resume brushing his teeth.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

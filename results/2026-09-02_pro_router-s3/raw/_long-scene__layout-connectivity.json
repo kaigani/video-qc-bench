@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:15:40.994Z",
+  "latencyMs": 23138,
+  "usage": {
+    "prompt_tokens": 10599,
+    "completion_tokens": 1800,
+    "total_tokens": 12399,
+    "cost": 0.042798,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.042798,
+      "upstream_inference_prompt_cost": 0.021198,
+      "upstream_inference_completions_cost": 0.0216
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1539,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner exterior (parking lot)",
+    "Diner interior",
+    "Kitchen",
+    "Front double doors connect exterior to interior",
+    "Pass-through window connects interior to kitchen",
+    "Large windows show view from interior to exterior",
+    "00:19: Man traverses from exterior to interior via front doors",
+    "01:41: Man is outside in exterior, having exited interior off-screen"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:50",
+      "entity": "View through diner side windows",
+      "invariant_violated": "Opening view consistency",
+      "description": "At 01:41, a large green semi-truck is established as parked immediately outside the side windows of the diner. In the next wide interior shot at 01:50, the truck is completely missing from the view through those same windows, despite it being a continuous scene with no time for the truck to have departed.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"Diner exterior (parking lot)\",\n    \"Diner interior\",\n    \"Kitchen\",\n    \"Front double doors connect exterior to interior\",\n    \"Pass-through window connects interior to kitchen\",\n    \"Large windows show view from interior to exterior\",\n    \"00:19: Man traverses from exterior to interior via front doors\",\n    \"01:41: Man is outside in exterior, having exited interior off-screen\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"View through diner side windows\",\n      \"invariant_violated\": \"Opening view consistency\",\n      \"description\": \"At 01:41, a large green semi-truck is established as parked immediately outside the side windows of the diner. In the next wide interior shot at 01:50, the truck is completely missing from the view through those same windows, despite it being a continuous scene with no time for the truck to have departed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

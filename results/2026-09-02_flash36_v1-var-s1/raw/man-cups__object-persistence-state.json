@@ -1,0 +1,44 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:31:07.426Z",
+  "latencyMs": 24624,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 2214,
+    "total_tokens": 3658,
+    "cost": 0.0093855,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0093855,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0083025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1964,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "front-left metal cup | empty, on circular felt table | contains coin, on table | coin placed into cup by right hand at 00:02",
+    "center metal cup | upright on table, coin resting on top rim | upright on table, coin resting on top rim | no state changes",
+    "top-left metal cup | empty, on table | contains coin, on table | coin dropped into cup by left hand at 00:03",
+    "top-right metal cup | empty, on table | empty, on table | no state changes",
+    "coin 1 | held in performer's right hand | inside front-left metal cup | transferred from right hand into front-left cup at 00:02",
+    "coin 2 | resting on top of center cup rim | resting on top of center cup rim | remains stationary throughout clip",
+    "coin 3 | held in performer's left hand | inside top-left metal cup | dropped into top-left cup by left hand at 00:03"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"front-left metal cup | empty, on circular felt table | contains coin, on table | coin placed into cup by right hand at 00:02\",\n    \"center metal cup | upright on table, coin resting on top rim | upright on table, coin resting on top rim | no state changes\",\n    \"top-left metal cup | empty, on table | contains coin, on table | coin dropped into cup by left hand at 00:03\",\n    \"top-right metal cup | empty, on table | empty, on table | no state changes\",\n    \"coin 1 | held in performer's right hand | inside front-left metal cup | transferred from right hand into front-left cup at 00:02\",\n    \"coin 2 | resting on top of center cup rim | resting on top of center cup rim | remains stationary throughout clip\",\n    \"coin 3 | held in performer's left hand | inside top-left metal cup | dropped into top-left cup by left hand at 00:03\"\n  ],\n  \"findings\": []\n}"
+}

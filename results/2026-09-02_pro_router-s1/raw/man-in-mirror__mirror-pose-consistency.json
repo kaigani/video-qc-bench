@@ -1,0 +1,65 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:35:42.910Z",
+  "latencyMs": 23220,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2149,
+    "total_tokens": 3525,
+    "cost": 0.02854,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02854,
+      "upstream_inference_prompt_cost": 0.002752,
+      "upstream_inference_completions_cost": 0.025788
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1749,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Subject shaving right cheek with grey razor in right hand; Reflection shaving left cheek with white razor in left hand.",
+    "00:02-00:04: Subject holds grey razor near right sideburn; Reflection combs hair with a black comb in right hand.",
+    "00:04-00:09: Subject holds grey razor near right cheek; Reflection shaves chin/left cheek with white razor in left hand."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Subject's arms/hands",
+      "invariant_violated": "mirrored pose",
+      "description": "The foreground subject is using his right hand to hold the razor, but the reflection shows the action being performed with the left hand.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Razor prop",
+      "invariant_violated": "prop matching",
+      "description": "The real subject holds a dark grey razor, while the reflection holds a white razor.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Subject's action and prop",
+      "invariant_violated": "mirrored pose",
+      "description": "The real subject continues to hold the razor near his face, but the reflection independently lowers the razor, raises a black comb, and begins combing his hair.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Subject shaving right cheek with grey razor in right hand; Reflection shaving left cheek with white razor in left hand.\",\n    \"00:02-00:04: Subject holds grey razor near right sideburn; Reflection combs hair with a black comb in right hand.\",\n    \"00:04-00:09: Subject holds grey razor near right cheek; Reflection shaves chin/left cheek with white razor in left hand.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Subject's arms/hands\",\n      \"invariant_violated\": \"mirrored pose\",\n      \"description\": \"The foreground subject is using his right hand to hold the razor, but the reflection shows the action being performed with the left hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Razor prop\",\n      \"invariant_violated\": \"prop matching\",\n      \"description\": \"The real subject holds a dark grey razor, while the reflection holds a white razor.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Subject's action and prop\",\n      \"invariant_violated\": \"mirrored pose\",\n      \"description\": \"The real subject continues to hold the razor near his face, but the reflection independently lowers the razor, raises a black comb, and begins combing his hair.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

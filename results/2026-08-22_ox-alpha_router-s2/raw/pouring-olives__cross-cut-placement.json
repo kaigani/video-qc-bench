@@ -1,0 +1,53 @@
+{
+  "key": "pouring-olives__cross-cut-placement",
+  "video": "pouring-olives.mp4",
+  "role": "cross-cut-placement",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:57:44.842Z",
+  "latencyMs": 300623,
+  "usage": {
+    "prompt_tokens": 5895,
+    "completion_tokens": 11610,
+    "total_tokens": 17505,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "shot 1: 0:00-0:05, static close-up at counter height from front; person's torso screen-left behind cutting board, large jar center-frame, stainless range in background right",
+    "shot 2: 0:05-0:09, cut to wider/slightly higher angle; same counter arrangement, full range + yellow wall now visible, small glass bottle in frame at right edge",
+    "fixed anchors: large glass jar on wooden cutting board (center); stainless-steel olive bowl and ceramic bowl right of jar (person's left side); stainless range/oven in background",
+    "person shot 1 (0:00-0:05): present, standing behind counter facing camera; LEFT hand grips small glass bowl of olives above jar mouth, RIGHT hand transfers/drops olives into jar; NO watch visible on left wrist in any frame; jar empty at 0:00 to ~15% full at 0:04",
+    "person shot 2 (0:05-0:09): present, same position and facing; LEFT hand holds/tips small bowl over jar, RIGHT hand picks olives from bowl then guides pour at jar mouth; silver watch NOW visible on left wrist; jar ~27% full at 0:06 to ~35% at 0:08 (fill jump covered by implied elapsed time at the cut)",
+    "props shot 1: stainless bowl and patterned ceramic bowl filled with green olives right of jar; small glass bottle out of frame (right crop)",
+    "props shot 2: same two bowls unchanged in same spots; small glass bottle visible far right (consistent with wider framing, not an appearance); small bowl refilled with green olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:06",
+      "entity": "person's left wrist (watch)",
+      "invariant_violated": "wardrobe/prop continuity across cut",
+      "description": "After the cut at ~0:05, a silver watch is clearly present on the person's left wrist while that hand holds and pours the small glass bowl (visible at 0:06 and 0:08). In all pre-cut frames (0:00, 0:02, 0:04) the same left hand and wrist are visible gripping the same bowl with no watch present, and no on-screen action shows a watch being put on or taken off.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"shot 1: 0:00-0:05, static close-up at counter height from front; person's torso screen-left behind cutting board, large jar center-frame, stainless range in background right\",\n    \"shot 2: 0:05-0:09, cut to wider/slightly higher angle; same counter arrangement, full range + yellow wall now visible, small glass bottle in frame at right edge\",\n    \"fixed anchors: large glass jar on wooden cutting board (center); stainless-steel olive bowl and ceramic bowl right of jar (person's left side); stainless range/oven in background\",\n    \"person shot 1 (0:00-0:05): present, standing behind counter facing camera; LEFT hand grips small glass bowl of olives above jar mouth, RIGHT hand transfers/drops olives into jar; NO watch visible on left wrist in any frame; jar empty at 0:00 to ~15% full at 0:04\",\n    \"person shot 2 (0:05-0:09): present, same position and facing; LEFT hand holds/tips small bowl over jar, RIGHT hand picks olives from bowl then guides pour at jar mouth; silver watch NOW visible on left wrist; jar ~27% full at 0:06 to ~35% at 0:08 (fill jump covered by implied elapsed time at the cut)\",\n    \"props shot 1: stainless bowl and patterned ceramic bowl filled with green olives right of jar; small glass bottle out of frame (right crop)\",\n    \"props shot 2: same two bowls unchanged in same spots; small glass bottle visible far right (consistent with wider framing, not an appearance); small bowl refilled with green olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"person's left wrist (watch)\",\n      \"invariant_violated\": \"wardrobe/prop continuity across cut\",\n      \"description\": \"After the cut at ~0:05, a silver watch is clearly present on the person's left wrist while that hand holds and pours the small glass bowl (visible at 0:06 and 0:08). In all pre-cut frames (0:00, 0:02, 0:04) the same left hand and wrist are visible gripping the same bowl with no watch present, and no on-screen action shows a watch being put on or taken off.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

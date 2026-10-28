@@ -1,0 +1,41 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:31:05.477Z",
+  "latencyMs": 37652,
+  "usage": {
+    "prompt_tokens": 10589,
+    "completion_tokens": 647,
+    "total_tokens": 11236,
+    "cost": 0.010368,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010368,
+      "upstream_inference_prompt_cost": 0.00794175,
+      "upstream_inference_completions_cost": 0.00242625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 544,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:27 - Coffee pot held by waitress, coffee poured into white coffee mug held/resting on counter in front of customer.",
+    "01:09 - Food plate served by waitress onto diner counter in front of customer.",
+    "01:12 - Second coffee mug served by waitress onto diner counter.",
+    "01:38 - Folded cash bills held in man's right hand, placed onto diner counter surface next to white mug."
+  ],
+  "findings": [],
+  "rawText": "{\"ledger\": [\"00:27 - Coffee pot held by waitress, coffee poured into white coffee mug held/resting on counter in front of customer.\", \"01:09 - Food plate served by waitress onto diner counter in front of customer.\", \"01:12 - Second coffee mug served by waitress onto diner counter.\", \"01:38 - Folded cash bills held in man's right hand, placed onto diner counter surface next to white mug.\"], \"findings\": []}"
+}

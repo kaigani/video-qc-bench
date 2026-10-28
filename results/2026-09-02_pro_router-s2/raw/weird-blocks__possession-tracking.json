@@ -1,0 +1,50 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:43:24.088Z",
+  "latencyMs": 12075,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 872,
+    "total_tokens": 2256,
+    "cost": 0.013232,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013232,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.010464
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 607,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Green block '2' (left) is grabbed by the hand.",
+    "00:00 - 00:08 - Hand drags the block to the right, leaving a trail of new blocks behind it.",
+    "00:08 - The dragged block ends as a blue block '6' on the far right.",
+    "00:08 - 00:09 - Hand adjusts a blue block '3' and a green block '2' within the newly created trail."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00-00:08",
+      "entity": "Dragged block",
+      "invariant_violated": "Conservation of Mass / Physical Impossibility",
+      "description": "As the hand drags a single green block across the table, it continuously spawns a trail of new, distinct solid blocks of various colors and numbers. The dragged block itself also changes color and number during the motion. This is physically impossible for a solid object.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Green block '2' (left) is grabbed by the hand.\",\n    \"00:00 - 00:08 - Hand drags the block to the right, leaving a trail of new blocks behind it.\",\n    \"00:08 - The dragged block ends as a blue block '6' on the far right.\",\n    \"00:08 - 00:09 - Hand adjusts a blue block '3' and a green block '2' within the newly created trail.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00-00:08\",\n      \"entity\": \"Dragged block\",\n      \"invariant_violated\": \"Conservation of Mass / Physical Impossibility\",\n      \"description\": \"As the hand drags a single green block across the table, it continuously spawns a trail of new, distinct solid blocks of various colors and numbers. The dragged block itself also changes color and number during the motion. This is physically impossible for a solid object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,43 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:00:28.552Z",
+  "latencyMs": 53627,
+  "usage": {
+    "prompt_tokens": 6227,
+    "completion_tokens": 2060,
+    "total_tokens": 8287,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 896,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in green/white striped shirt | standing center-frame, facing camera, speaking | turning to his left, back partially to camera, moving toward left side | turns and walks toward left doorway after speaking",
+    "Dark wood paneled wall with door behind man | door closed/center, brass coat hook with dark blue coat at left, decorative wheel (dartboard) above hook | unchanged | static throughout",
+    "Framed picture behind man's head | only sliver visible at right of his head, cream mat with dark border | fully visible at 0:08 showing circular wreath design | revealed as man turns away; content was previously occluded, not changed",
+    "Light switch/thermostat plate | mounted on wall right of picture | unchanged | static",
+    "Far-right wooden door with framed bird artwork | at right edge of frame | unchanged | static",
+    "Left doorway | dark wood edge visible at far left in early frames | open dark doorway at 0:08 | man appears to exit through it; opening consistent with door being ajar or opened during turn"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in green/white striped shirt | standing center-frame, facing camera, speaking | turning to his left, back partially to camera, moving toward left side | turns and walks toward left doorway after speaking\",\n    \"Dark wood paneled wall with door behind man | door closed/center, brass coat hook with dark blue coat at left, decorative wheel (dartboard) above hook | unchanged | static throughout\",\n    \"Framed picture behind man's head | only sliver visible at right of his head, cream mat with dark border | fully visible at 0:08 showing circular wreath design | revealed as man turns away; content was previously occluded, not changed\",\n    \"Light switch/thermostat plate | mounted on wall right of picture | unchanged | static\",\n    \"Far-right wooden door with framed bird artwork | at right edge of frame | unchanged | static\",\n    \"Left doorway | dark wood edge visible at far left in early frames | open dark doorway at 0:08 | man appears to exit through it; opening consistent with door being ajar or opened during turn\"\n  ],\n  \"findings\": []\n}"
+}

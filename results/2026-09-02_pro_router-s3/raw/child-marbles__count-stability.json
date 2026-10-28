@@ -1,0 +1,49 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:16:37.604Z",
+  "latencyMs": 16294,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 1624,
+    "total_tokens": 3042,
+    "cost": 0.022324,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022324,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.019488
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1410,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 8 spherical balls visible in the bowl (3 red, 3 yellow, 2 green).",
+    "00:04 - 8 spherical balls remain in the bowl.",
+    "00:05-00:09 - The objects in the bowl are mixed rapidly and appear as oval, egg-shaped objects rather than spheres."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Objects in the bowl",
+      "invariant_violated": "Object Kind Consistency",
+      "description": "As the child begins to rapidly mix the contents of the bowl, the spherical balls transform into oval, egg-shaped objects (resembling plastic Easter eggs). There is no visible cause for this transformation of object type.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 8 spherical balls visible in the bowl (3 red, 3 yellow, 2 green).\",\n    \"00:04 - 8 spherical balls remain in the bowl.\",\n    \"00:05-00:09 - The objects in the bowl are mixed rapidly and appear as oval, egg-shaped objects rather than spheres.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Objects in the bowl\",\n      \"invariant_violated\": \"Object Kind Consistency\",\n      \"description\": \"As the child begins to rapidly mix the contents of the bowl, the spherical balls transform into oval, egg-shaped objects (resembling plastic Easter eggs). There is no visible cause for this transformation of object type.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:42:05.543Z",
+  "latencyMs": 17117,
+  "usage": {
+    "prompt_tokens": 1426,
+    "completion_tokens": 1327,
+    "total_tokens": 2753,
+    "cost": 0.00604575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00604575,
+      "upstream_inference_prompt_cost": 0.0010695,
+      "upstream_inference_completions_cost": 0.00497625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1224,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden_table | static plane in lower frame | static plane in lower frame | fixed surface plane throughout clip",
+    "number_blocks | green blocks placed on table surface | line of nine numbered blocks from left to right | added sequentially side-by-side horizontally",
+    "hand | enters from above to place/move blocks | adjusts blocks along the row | maintains proper occlusion foreground over blocks"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden_table | static plane in lower frame | static plane in lower frame | fixed surface plane throughout clip\",\n    \"number_blocks | green blocks placed on table surface | line of nine numbered blocks from left to right | added sequentially side-by-side horizontally\",\n    \"hand | enters from above to place/move blocks | adjusts blocks along the row | maintains proper occlusion foreground over blocks\"\n  ],\n  \"findings\": []\n}"
+}

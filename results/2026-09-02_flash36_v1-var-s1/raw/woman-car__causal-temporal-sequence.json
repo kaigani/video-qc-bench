@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:35:17.765Z",
+  "latencyMs": 19883,
+  "usage": {
+    "prompt_tokens": 1425,
+    "completion_tokens": 2107,
+    "total_tokens": 3532,
+    "cost": 0.00897,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00897,
+      "upstream_inference_prompt_cost": 0.00106875,
+      "upstream_inference_completions_cost": 0.00790125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1968,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | leaning on vehicle door with arms crossed, hair rested | leaning out window, hair blowing backward | hair begins blowing in wind around 00:05 as motion/airflow builds",
+    "station wagon | front-three-quarter view facing down road | side profile view on highway | camera pans around vehicle while road moves smoothly beneath",
+    "sunlight / lens flare | muted ambient light on hood | bright lens flare reflecting off hood | lens glare intensifies around 00:05-00:07 as camera pans into alignment with sun"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | leaning on vehicle door with arms crossed, hair rested | leaning out window, hair blowing backward | hair begins blowing in wind around 00:05 as motion/airflow builds\",\n    \"station wagon | front-three-quarter view facing down road | side profile view on highway | camera pans around vehicle while road moves smoothly beneath\",\n    \"sunlight / lens flare | muted ambient light on hood | bright lens flare reflecting off hood | lens glare intensifies around 00:05-00:07 as camera pans into alignment with sun\"\n  ],\n  \"findings\": []\n}"
+}

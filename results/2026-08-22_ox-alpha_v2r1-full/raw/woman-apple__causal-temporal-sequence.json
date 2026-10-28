@@ -1,0 +1,43 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T17:36:03.755Z",
+  "latencyMs": 366246,
+  "usage": {
+    "prompt_tokens": 6221,
+    "completion_tokens": 14601,
+    "total_tokens": 20822,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with umbrella | walking toward camera, open blue umbrella gripped in left hand (watch on left wrist), whole red apple held in right hand at chest height, smiling | left-facing profile at end, apple resting on open palm of watch-hand, umbrella canopy still overhead | continuous forward walk; turns to her side at ~7-8s while camera pans, background motion-blurred",
+    "Red apple | whole, unblemished, gripped in her right hand | whole, unblemished, resting on open palm at shoulder height | carried steadily; appears to sit in the opposite (watch-bearing) hand after the ~7-8s turn, consistent with a hand transfer occluded by her body during the turn",
+    "Blue umbrella | open, shaft gripped in her left hand at chest level | open, canopy overhead, shaft descending behind head/shoulder with grip occluded at end | no state change (never closes, never changes color); lower shaft hidden behind her head/shoulder in final profile view",
+    "Market pedestrians (man in green shirt, man in white shirt with backpack, woman in red shirt, others) | walking through aisle in both directions | exit frame plausibly | continuous, directionally consistent motion, no teleporting or duplicated walkers",
+    "Market stalls and produce (tomatoes, avocados, citrus, apples) | static displays lining both sides | consistent displays as camera advances then pans | no unexplained appearance/disappearance of stalls or goods",
+    "Lighting | diffuse daylight plus warm hanging market bulbs | identical at end | no light change without a source change"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with umbrella | walking toward camera, open blue umbrella gripped in left hand (watch on left wrist), whole red apple held in right hand at chest height, smiling | left-facing profile at end, apple resting on open palm of watch-hand, umbrella canopy still overhead | continuous forward walk; turns to her side at ~7-8s while camera pans, background motion-blurred\",\n    \"Red apple | whole, unblemished, gripped in her right hand | whole, unblemished, resting on open palm at shoulder height | carried steadily; appears to sit in the opposite (watch-bearing) hand after the ~7-8s turn, consistent with a hand transfer occluded by her body during the turn\",\n    \"Blue umbrella | open, shaft gripped in her left hand at chest level | open, canopy overhead, shaft descending behind head/shoulder with grip occluded at end | no state change (never closes, never changes color); lower shaft hidden behind her head/shoulder in final profile view\",\n    \"Market pedestrians (man in green shirt, man in white shirt with backpack, woman in red shirt, others) | walking through aisle in both directions | exit frame plausibly | continuous, directionally consistent motion, no teleporting or duplicated walkers\",\n    \"Market stalls and produce (tomatoes, avocados, citrus, apples) | static displays lining both sides | consistent displays as camera advances then pans | no unexplained appearance/disappearance of stalls or goods\",\n    \"Lighting | diffuse daylight plus warm hanging market bulbs | identical at end | no light change without a source change\"\n  ],\n  \"findings\": []\n}"
+}

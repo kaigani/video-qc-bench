@@ -1,0 +1,45 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T23:35:14.312Z",
+  "latencyMs": 73097,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1697,
+    "total_tokens": 7593,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0.0s: 4 red metal cups on table center (back, middle with coin stack inside, right, front-left); performer's hand holds 1 gold coin above table",
+    "2.0s: gold coin dropped into front-left cup — visible cause: performer's fingers release coin; 4 cups unchanged; coin stack still visible in middle cup",
+    "4.0s: performer lifts front-left cup and begins rearranging cups; coin inside occluded by cup/hand — occlusion, not disappearance; 4 cups still present",
+    "6.0s: performer (blue suit, red tie) continues rearranging cups; 4 cups still visible; loose coins on table moved by performer's hands",
+    "8.0s: 4 cups aligned in a row, all clearly visible; performer's hands at rightmost cups; loose gold coins visible on table near cups",
+    "Cup group: count constant at 4 across all clearly visible moments (0s, 2s, 4s, 6s, 8s); no count change",
+    "Coin group: all count changes attributable to visible performer manipulation (drop into cup, cover with cup, slide across table); coins under moving cups are occluded, not vanished",
+    "Decorative medallions on red tablecloth border are printed fabric patterns, not countable physical objects — excluded from ledger"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0.0s: 4 red metal cups on table center (back, middle with coin stack inside, right, front-left); performer's hand holds 1 gold coin above table\",\n    \"2.0s: gold coin dropped into front-left cup — visible cause: performer's fingers release coin; 4 cups unchanged; coin stack still visible in middle cup\",\n    \"4.0s: performer lifts front-left cup and begins rearranging cups; coin inside occluded by cup/hand — occlusion, not disappearance; 4 cups still present\",\n    \"6.0s: performer (blue suit, red tie) continues rearranging cups; 4 cups still visible; loose coins on table moved by performer's hands\",\n    \"8.0s: 4 cups aligned in a row, all clearly visible; performer's hands at rightmost cups; loose gold coins visible on table near cups\",\n    \"Cup group: count constant at 4 across all clearly visible moments (0s, 2s, 4s, 6s, 8s); no count change\",\n    \"Coin group: all count changes attributable to visible performer manipulation (drop into cup, cover with cup, slide across table); coins under moving cups are occluded, not vanished\",\n    \"Decorative medallions on red tablecloth border are printed fabric patterns, not countable physical objects — excluded from ledger\"\n  ],\n  \"findings\": []\n}"
+}

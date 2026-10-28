@@ -1,0 +1,47 @@
+{
+  "key": "dialogue__character-continuity",
+  "video": "dialogue.mp4",
+  "role": "character-continuity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:02:52.491Z",
+  "latencyMs": 154599,
+  "usage": {
+    "prompt_tokens": 5892,
+    "completion_tokens": 5392,
+    "total_tokens": 11284,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (sole character) | short neat brown hair, clean-shaven, slim build, green-and-white vertical striped button-up shirt over white crew-neck tee, NO eyeglasses at first sight | same man at end seen in left-facing profile, now WEARING eyeglasses, outer clothing obscured by transition | static, centered, chest-up, facing camera/slightly screen-right while speaking from 0:00-0:07; crossfade ~0:07-0:08; after transition he is turned away, facing screen-left near a door at frame left; no other characters present, so no relative-position constraints"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:08",
+      "entity": "man in green/white striped shirt",
+      "invariant_violated": "accessory continuity (eyewear)",
+      "description": "From 0:00-0:07 the man's face is clearly bare - no eyeglasses worn, held, or visible on his person. At the crossfade (~0:07-0:08) he reappears in profile wearing eyeglasses. No on-screen action shows him obtaining or putting on glasses, and the change occurs entirely within the dissolve; the position/facing change is explainable as elapsed time, but the glasses appear from no established source, reading as either an unexplained accessory change or an intentional time-skip/aging dissolve.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (sole character) | short neat brown hair, clean-shaven, slim build, green-and-white vertical striped button-up shirt over white crew-neck tee, NO eyeglasses at first sight | same man at end seen in left-facing profile, now WEARING eyeglasses, outer clothing obscured by transition | static, centered, chest-up, facing camera/slightly screen-right while speaking from 0:00-0:07; crossfade ~0:07-0:08; after transition he is turned away, facing screen-left near a door at frame left; no other characters present, so no relative-position constraints\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"man in green/white striped shirt\",\n      \"invariant_violated\": \"accessory continuity (eyewear)\",\n      \"description\": \"From 0:00-0:07 the man's face is clearly bare - no eyeglasses worn, held, or visible on his person. At the crossfade (~0:07-0:08) he reappears in profile wearing eyeglasses. No on-screen action shows him obtaining or putting on glasses, and the change occurs entirely within the dissolve; the position/facing change is explainable as elapsed time, but the glasses appear from no established source, reading as either an unexplained accessory change or an intentional time-skip/aging dissolve.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

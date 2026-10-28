@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:34:31.121Z",
+  "latencyMs": 12462,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 790,
+    "total_tokens": 2174,
+    "cost": 0.0040005,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0040005,
+      "upstream_inference_prompt_cost": 0.001038,
+      "upstream_inference_completions_cost": 0.0029625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 644,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:04: Tweezers held in person's right hand (viewer left) manipulating a small round metal object held in person's left hand (viewer right)",
+    "00:04: Person's right hand places tweezers down onto table surface",
+    "00:05: Person's right hand picks up a fine metal pin/tool from table surface",
+    "00:06-00:09: Fine metal pin/tool in right hand is used on the round metal object continuously held in left hand"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:04: Tweezers held in person's right hand (viewer left) manipulating a small round metal object held in person's left hand (viewer right)\",\n    \"00:04: Person's right hand places tweezers down onto table surface\",\n    \"00:05: Person's right hand picks up a fine metal pin/tool from table surface\",\n    \"00:06-00:09: Fine metal pin/tool in right hand is used on the round metal object continuously held in left hand\"\n  ],\n  \"findings\": []\n}"
+}

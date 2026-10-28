@@ -1,0 +1,47 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:32:56.789Z",
+  "latencyMs": 22277,
+  "usage": {
+    "prompt_tokens": 1376,
+    "completion_tokens": 2800,
+    "total_tokens": 4176,
+    "cost": 0.011532,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011532,
+      "upstream_inference_prompt_cost": 0.001032,
+      "upstream_inference_completions_cost": 0.0105
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2537,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Subject has right arm extended horizontally to the right side; mirror reflection shows corresponding arm extended in identical pose.",
+    "00:01 - Subject sweeps right arm upward in an arc above head; reflection moves in exact synchronization.",
+    "00:02 - Subject extends right arm straight overhead; reflection matches position and extension perfectly.",
+    "00:03 - Subject bends right arm at elbow bringing hand down toward head; reflection mirrors movement with zero lag.",
+    "00:04 - Subject lowers right arm toward chest level; reflection matches pose and position.",
+    "00:05 - Subject brings right hand behind back/waist; reflection mirrors hand placement.",
+    "00:06 - Subject extends right arm out to the side again; reflection moves synchronously.",
+    "00:07 - Subject sweeps right arm upward over head into graceful arc; reflection mimics movement in real time.",
+    "00:08 - Subject holds overhead arm pose; reflection holds identical pose.",
+    "00:09 - Subject maintains extended overhead arm position; reflection remains perfectly aligned."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Subject has right arm extended horizontally to the right side; mirror reflection shows corresponding arm extended in identical pose.\",\n    \"00:01 - Subject sweeps right arm upward in an arc above head; reflection moves in exact synchronization.\",\n    \"00:02 - Subject extends right arm straight overhead; reflection matches position and extension perfectly.\",\n    \"00:03 - Subject bends right arm at elbow bringing hand down toward head; reflection mirrors movement with zero lag.\",\n    \"00:04 - Subject lowers right arm toward chest level; reflection matches pose and position.\",\n    \"00:05 - Subject brings right hand behind back/waist; reflection mirrors hand placement.\",\n    \"00:06 - Subject extends right arm out to the side again; reflection moves synchronously.\",\n    \"00:07 - Subject sweeps right arm upward over head into graceful arc; reflection mimics movement in real time.\",\n    \"00:08 - Subject holds overhead arm pose; reflection holds identical pose.\",\n    \"00:09 - Subject maintains extended overhead arm position; reflection remains perfectly aligned.\"\n  ],\n  \"findings\": []\n}"
+}

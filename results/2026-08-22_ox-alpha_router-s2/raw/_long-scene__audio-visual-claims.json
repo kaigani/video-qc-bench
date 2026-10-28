@@ -1,0 +1,39 @@
+{
+  "key": "_long-scene__audio-visual-claims",
+  "video": "_long-scene.mp4",
+  "role": "audio-visual-claims",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T22:16:09.740Z",
+  "latencyMs": 116606,
+  "usage": {
+    "prompt_tokens": 34799,
+    "completion_tokens": 792,
+    "total_tokens": 35591,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-01:58 audio track: absent/unintelligible to this checker — no spoken dialogue or narration could be transcribed, so zero checkable speech claims were extracted (per instruction, reporting zero findings)",
+    "Visual-only pass (no speech to cross-check): 00:00-00:11 truck idling outside diner with illuminated OPEN sign at dusk; 00:12-00:19 waitress wiping counter; 00:20-00:33 man enters, sits at counter, coffee poured; 00:34-00:45 plate with fried egg and bread served; 00:46-00:59 waitress continues wiping counter; 01:00-01:38 man and waitress sit at counter with coffee as sun rises; 01:39-01:42 cash placed on counter; 01:43-01:58 man exits toward green box truck, waitress watches"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-01:58 audio track: absent/unintelligible to this checker — no spoken dialogue or narration could be transcribed, so zero checkable speech claims were extracted (per instruction, reporting zero findings)\",\n    \"Visual-only pass (no speech to cross-check): 00:00-00:11 truck idling outside diner with illuminated OPEN sign at dusk; 00:12-00:19 waitress wiping counter; 00:20-00:33 man enters, sits at counter, coffee poured; 00:34-00:45 plate with fried egg and bread served; 00:46-00:59 waitress continues wiping counter; 01:00-01:38 man and waitress sit at counter with coffee as sun rises; 01:39-01:42 cash placed on counter; 01:43-01:58 man exits toward green box truck, waitress watches\"\n  ],\n  \"findings\": []\n}"
+}

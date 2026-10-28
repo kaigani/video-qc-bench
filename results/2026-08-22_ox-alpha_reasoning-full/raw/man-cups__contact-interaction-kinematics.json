@@ -1,0 +1,53 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:08:51.159Z",
+  "latencyMs": 150204,
+  "usage": {
+    "prompt_tokens": 5911,
+    "completion_tokens": 6385,
+    "total_tokens": 12296,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand <-> coin #1 | coin held in visible thumb-finger pinch grip above table at 0:00 | hand open over front-left cup at 0:02, coin no longer visible | grip release occurs over cup mouth but the release moment itself is not directly observable",
+    "front-left metal cup | table region where it later sits is visible and empty at 0:00; both hands hold only a coin | cup present, gripped at the rim by right hand at 0:04 | cup appears between 0:00 and 0:02 with no observed placement or carry-in; touched at 0:02, gripped at 0:04, no longer separately visible by 0:06 (possibly nested into another cup)",
+    "right hand <-> front-left cup rim | fingers over cup mouth at 0:02, contact established | firm rim grip with cup slightly tilted/lifted at 0:04 | contact released by 0:06 when hand is seen holding a coin instead",
+    "left hand <-> back-left cup | hand approaches cup from upper left at 0:02 | fingers grip cup rim at 0:04, contact established | released by 0:06; cup not independently visible afterward",
+    "right hand <-> gold coin (back-right) | coin pinched at fingertips beside back-right cup at 0:06, contact visible | hand sweeps rapidly toward cups with motion blur at 0:08, coin release unobserved | single pinch grip confirmed",
+    "left hand <-> coin | coin held between fingers at 0:06, contact visible | hand over middle cup at 0:08, coin no longer visible | release moment unobserved during fast movement",
+    "both hands <-> cup rims | rapid repositioning of cups at 0:08 under motion blur | fingers resting on rims of left and middle cups | contact maintained during the move; no floating grip visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "front-left metal cup",
+      "invariant_violated": "object appears without placement contact",
+      "description": "At 0:00 the table area where this cup later stands is fully visible and empty, and the only hand in frame holds a single coin. By 0:02 a fourth cup is present at that spot with the right hand already touching its rim. No placement, carry-in, or set-down of this cup is observed in any frame, indicating the cup was introduced by an edit/teleport rather than established through physical contact.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand <-> coin #1 | coin held in visible thumb-finger pinch grip above table at 0:00 | hand open over front-left cup at 0:02, coin no longer visible | grip release occurs over cup mouth but the release moment itself is not directly observable\",\n    \"front-left metal cup | table region where it later sits is visible and empty at 0:00; both hands hold only a coin | cup present, gripped at the rim by right hand at 0:04 | cup appears between 0:00 and 0:02 with no observed placement or carry-in; touched at 0:02, gripped at 0:04, no longer separately visible by 0:06 (possibly nested into another cup)\",\n    \"right hand <-> front-left cup rim | fingers over cup mouth at 0:02, contact established | firm rim grip with cup slightly tilted/lifted at 0:04 | contact released by 0:06 when hand is seen holding a coin instead\",\n    \"left hand <-> back-left cup | hand approaches cup from upper left at 0:02 | fingers grip cup rim at 0:04, contact established | released by 0:06; cup not independently visible afterward\",\n    \"right hand <-> gold coin (back-right) | coin pinched at fingertips beside back-right cup at 0:06, contact visible | hand sweeps rapidly toward cups with motion blur at 0:08, coin release unobserved | single pinch grip confirmed\",\n    \"left hand <-> coin | coin held between fingers at 0:06, contact visible | hand over middle cup at 0:08, coin no longer visible | release moment unobserved during fast movement\",\n    \"both hands <-> cup rims | rapid repositioning of cups at 0:08 under motion blur | fingers resting on rims of left and middle cups | contact maintained during the move; no floating grip visible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"front-left metal cup\",\n      \"invariant_violated\": \"object appears without placement contact\",\n      \"description\": \"At 0:00 the table area where this cup later stands is fully visible and empty, and the only hand in frame holds a single coin. By 0:02 a fourth cup is present at that spot with the right hand already touching its rim. No placement, carry-in, or set-down of this cup is observed in any frame, indicating the cup was introduced by an edit/teleport rather than established through physical contact.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    }\n  ]\n}"
+}

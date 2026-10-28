@@ -1,0 +1,54 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:33:16.061Z",
+  "latencyMs": 20975,
+  "usage": {
+    "prompt_tokens": 1394,
+    "completion_tokens": 3208,
+    "total_tokens": 4602,
+    "cost": 0.0130755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0130755,
+      "upstream_inference_prompt_cost": 0.0010455,
+      "upstream_inference_completions_cost": 0.01203
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2855,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - View looking down kitchen with counter, stove, and sink on left toward a hallway with a white exterior door.",
+    "00:01 - Woman walks past kitchen counter toward doorway on right wall.",
+    "00:03 - Woman turns right through doorway into bedroom.",
+    "00:04 - Bedroom interior with bed, chandelier, and side windows.",
+    "00:06 - Woman turns around inside bedroom to face exit doorway.",
+    "00:07 - View through bedroom doorway shows a hallway with grey wall and framed blue flower artwork on the left.",
+    "00:08 - Woman steps through bedroom doorway.",
+    "00:09 - Space outside bedroom doorway transitions directly into kitchen aisle with wood upper cabinets and stove on left where hallway wall was visible."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Bedroom doorway / Kitchen layout",
+      "invariant_violated": "doorway_view_mismatch",
+      "description": "At 00:07, looking through the bedroom doorway shows a hallway with a painted grey wall and framed artwork on the left side. Upon stepping through the doorway at 00:08-00:09, the adjacent space instantly becomes the kitchen corridor with wood upper cabinets, stove, and microwave on the left, inconsistent with the view previously visible through the opening.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - View looking down kitchen with counter, stove, and sink on left toward a hallway with a white exterior door.\",\n    \"00:01 - Woman walks past kitchen counter toward doorway on right wall.\",\n    \"00:03 - Woman turns right through doorway into bedroom.\",\n    \"00:04 - Bedroom interior with bed, chandelier, and side windows.\",\n    \"00:06 - Woman turns around inside bedroom to face exit doorway.\",\n    \"00:07 - View through bedroom doorway shows a hallway with grey wall and framed blue flower artwork on the left.\",\n    \"00:08 - Woman steps through bedroom doorway.\",\n    \"00:09 - Space outside bedroom doorway transitions directly into kitchen aisle with wood upper cabinets and stove on left where hallway wall was visible.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Bedroom doorway / Kitchen layout\",\n      \"invariant_violated\": \"doorway_view_mismatch\",\n      \"description\": \"At 00:07, looking through the bedroom doorway shows a hallway with a painted grey wall and framed artwork on the left side. Upon stepping through the doorway at 00:08-00:09, the adjacent space instantly becomes the kitchen corridor with wood upper cabinets, stove, and microwave on the left, inconsistent with the view previously visible through the opening.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

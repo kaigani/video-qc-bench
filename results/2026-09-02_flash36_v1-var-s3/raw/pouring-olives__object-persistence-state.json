@@ -1,0 +1,51 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:15:58.130Z",
+  "latencyMs": 15708,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1690,
+    "total_tokens": 3134,
+    "cost": 0.0074205,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0074205,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.0063375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1434,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | empty, standing on wooden cutting board | partially filled with green and dark olives | receives olives poured from small glass containers",
+    "Small glass container #1 | held above large jar, filled with green olives | empty | poured into large jar",
+    "Small glass container #2 | on counter behind metal bowl | empty | picked up at 00:04 and poured into large jar",
+    "Metal bowl | on counter with green olives | on counter | static support",
+    "White bowl | on counter with green olives | on counter | static support"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives in small glass container",
+      "invariant_violated": "spontaneous object transformation",
+      "description": "The small glass container held above the jar at 00:00 contains exclusively green olives, but as it is poured, dark purple/black olives emerge from it and fall into the large jar.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | empty, standing on wooden cutting board | partially filled with green and dark olives | receives olives poured from small glass containers\",\n    \"Small glass container #1 | held above large jar, filled with green olives | empty | poured into large jar\",\n    \"Small glass container #2 | on counter behind metal bowl | empty | picked up at 00:04 and poured into large jar\",\n    \"Metal bowl | on counter with green olives | on counter | static support\",\n    \"White bowl | on counter with green olives | on counter | static support\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives in small glass container\",\n      \"invariant_violated\": \"spontaneous object transformation\",\n      \"description\": \"The small glass container held above the jar at 00:00 contains exclusively green olives, but as it is poured, dark purple/black olives emerge from it and fall into the large jar.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

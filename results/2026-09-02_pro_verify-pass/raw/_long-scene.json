@@ -1,0 +1,226 @@
+{
+  "video": "_long-scene",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:29:47.768Z",
+  "latencyMs": 32600,
+  "usage": {
+    "prompt_tokens": 11196,
+    "completion_tokens": 2267,
+    "total_tokens": 13463,
+    "cost": 0.049596,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.049596,
+      "upstream_inference_prompt_cost": 0.022392,
+      "upstream_inference_completions_cost": 0.027204
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1315,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|_long-scene|baseline-generalist|0",
+      "cls": "TP:LONG-12",
+      "finding": {
+        "timestamp": "00:27",
+        "entity": "coffee pot",
+        "invariant_violated": "Physics/Liquid Dynamics",
+        "description": "Coffee pours out of the glass carafe, but the top half of the carafe is completely transparent and empty, while a solid black mass of liquid appears at the bottom.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|baseline-generalist|1",
+      "cls": "TP:LONG-13",
+      "finding": {
+        "timestamp": "01:41",
+        "entity": "truck",
+        "invariant_violated": "Continuity",
+        "description": "The truck parked outside the diner has changed from white (as seen in the opening shot at 00:00) to dark green.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|baseline-generalist|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "01:41",
+        "entity": "truck trailer reflection",
+        "invariant_violated": "Physics/Optics",
+        "description": "An oversized, perfectly clear image of the waitress's face appears on the side of the truck trailer. It does not behave like a natural reflection in terms of scale, distortion, or the woman's actual position.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|_long-scene|character-continuity|0",
+      "cls": "TP:LONG-11",
+      "finding": {
+        "timestamp": "01:51",
+        "entity": "Waitress",
+        "invariant_violated": "character duplication",
+        "description": "As the main waitress stands up and walks to the right to clear the counter, a second woman wearing the exact same uniform (blue polo, white apron) and hairstyle walks from right to left in the background kitchen area.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|contact-interaction-kinematics|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "01:50",
+        "entity": "woman's right hand and mug",
+        "invariant_violated": "contact points (floating grip)",
+        "description": "The woman reaches for the white mug on the counter, but her fingers form a loose shape next to it rather than wrapping around the handle or the body of the cup. The mug lifts into the air, moving in tandem with her hand, despite no physical gripping contact being established.",
+        "severity": "severe",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|_long-scene|object-persistence-state|0",
+      "cls": "TP:LONG-14",
+      "finding": {
+        "timestamp": "01:50",
+        "entity": "Man's coffee mug",
+        "invariant_violated": "identity & persistence",
+        "description": "The mug was left on the counter next to the money. In the wide shot at 01:50, the counter in front of the man's seat is bare and the mug has disappeared.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|object-persistence-state|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "01:50",
+        "entity": "Man's plate",
+        "invariant_violated": "identity & persistence",
+        "description": "The man's plate of food was on the counter in front of him. At 01:50, the plate is no longer on the counter, having vanished without a visible action.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|object-persistence-state|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "01:50",
+        "entity": "Money (two bills)",
+        "invariant_violated": "identity & persistence",
+        "description": "The man placed the money on the counter at 01:38. In the shot at 01:50, the money is gone from the counter without anyone picking it up.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|spatial-topology-occlusion|0",
+      "cls": "TP:LONG-4",
+      "finding": {
+        "timestamp": "00:45",
+        "entity": "pass-through opposite wall",
+        "invariant_violated": "scene layout",
+        "description": "The view looking out from the kitchen pass-through shows a solid wall with an EXIT door behind the booths. Based on the wide shots establishing the room's layout (e.g., 00:19), the wall opposite the counter should be a continuous large window wall.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|_long-scene|spatial-topology-occlusion|1",
+      "cls": "TP:LONG-4",
+      "finding": {
+        "timestamp": "01:50",
+        "entity": "front door",
+        "invariant_violated": "scene layout",
+        "description": "The front door of the diner is missing. In all previous wide shots looking down the counter (e.g., 00:19, 01:00, 01:18), a glass door is clearly visible to the right of the window with the 'OPEN' sign. In this shot, that space is filled by a solid wall panel.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "At 00:27, as coffee is poured into the cup, the top half of the carafe is clearly transparent and empty, while a solid dark mass represents the liquid at the bottom, which breaks physics.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "At 00:00, the semi-truck outside the diner is white. At 01:41, when the man walks out to it, the truck has completely changed color to dark green.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "CONFIRM",
+      "reason": "At 01:41, a massive, unwarped, and highly clear image of the waitress's face appears perfectly mapped onto the side of the truck trailer, which is physically impossible for a natural reflection.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "CONFIRM",
+      "reason": "At 01:51, as the main waitress walks to the right, a second identical waitress with the exact same hair and uniform appears in the background kitchen walking to the left.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "At 01:50, the waitress's hand moves over the mug without her fingers actually wrapping around it, yet the mug levitates and follows the movement of her hand.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "At 01:38, the man's mug is on the counter. In the wide shot at 01:50, the section of the counter where he was sitting is completely bare, and the mug is missing.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "The plate of food that was in front of the man earlier has completely disappeared from the counter in the wide shot at 01:50.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F8",
+      "verdict": "CONFIRM",
+      "reason": "The man leaves a tip of two bills on the counter at 01:38. At 01:50, the money has vanished from the otherwise bare counter.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F9",
+      "verdict": "CONFIRM",
+      "reason": "At 00:45, the background shows a solid wall with an exit door. However, the establishing shots (like 00:19) show that this side of the diner should be a large continuous window.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F10",
+      "verdict": "CONFIRM",
+      "reason": "In the wide shot at 01:50, the glass front door visible in earlier shots (like 01:18) to the right of the 'OPEN' sign has disappeared, replaced by a continuous wall and booth seating.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "```json\n{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:27, as coffee is poured into the cup, the top half of the carafe is clearly transparent and empty, while a solid dark mass represents the liquid at the bottom, which breaks physics.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:00, the semi-truck outside the diner is white. At 01:41, when the man walks out to it, the truck has completely changed color to dark green.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 01:41, a massive, unwarped, and highly clear image of the waitress's face appears perfectly mapped onto the side of the truck trailer, which is physically impossible for a natural reflection.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 01:51, as the main waitress walks to the right, a second identical waitress with the exact same hair and uniform appears in the background kitchen walking to the left.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 01:50, the waitress's hand moves over the mug without her fingers actually wrapping around it, yet the mug levitates and follows the movement of her hand.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 01:38, the man's mug is on the counter. In the wide shot at 01:50, the section of the counter where he was sitting is completely bare, and the mug is missing.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The plate of food that was in front of the man earlier has completely disappeared from the counter in the wide shot at 01:50.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F8\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The man leaves a tip of two bills on the counter at 01:38. At 01:50, the money has vanished from the otherwise bare counter.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F9\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 00:45, the background shows a solid wall with an exit door. However, the establishing shots (like 00:19) show that this side of the diner should be a large continuous window.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F10\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"In the wide shot at 01:50, the glass front door visible in earlier shots (like 01:18) to the right of the 'OPEN' sign has disappeared, replaced by a continuous wall and booth seating.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    }\n  ]\n}\n```"
+}

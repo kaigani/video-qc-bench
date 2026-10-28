@@ -1,0 +1,64 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T21:49:39.613Z",
+  "latencyMs": 657117,
+  "usage": {
+    "prompt_tokens": 34929,
+    "completion_tokens": 25591,
+    "total_tokens": 60520,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner building | single-story, glazed corner: front face has central double entrance door flanked by windows, side face is a window wall with neon OPEN sign | same at dawn | consistent across 0:00 and 1:43-1:51 exteriors",
+    "Parked truck | white sleeper-cab semi tractor parked left of diner, exhaust running | green/teal straight box truck, cab facing right, same parking area | vehicle identity changes between night and dawn exteriors",
+    "Counter + stool line | runs parallel to window wall, curves at entrance end | unchanged | man occupies entrance-end stool in every interior angle",
+    "Kitchen pass-through | back wall, warm-lit, beyond counter's far end | same | consistent in 0:12, 0:20, 0:46, 0:97 shots",
+    "Booth row | along window wall under the windows | same | left side in entrance-end wides, right side in reverse angle at 0:46",
+    "Coffee station + wooden service door | kitchen-side wall right of the pass | same | consistent across 0:12-0:18 and wides",
+    "Neon OPEN sign | mid window wall; readable from outside, mirrored copy plus reflection seen from inside | still present at dawn | placement consistent",
+    "Waitress | always on service side of counter | same | never crosses to customer side except at windows at 1:49",
+    "Male customer | enters at 0:22, sits at entrance-end counter seat | exits to truck at dawn | seat position consistent in 0:26, 0:38, 0:46, 1:03, 1:13 framings",
+    "Rear wall left of pass | menu board plus corner window, continuous wall, no door visible | same at 0:54 | region where the man appears at 0:22"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:43",
+      "entity": "Parked truck outside the diner",
+      "invariant_violated": "fixed-element layout consistency",
+      "description": "The establishing exterior (0:00-0:08) fixes a white sleeper-cab semi tractor parked left of the building with its engine running. The dawn exterior (1:43-1:51) shows a green/teal straight box truck of completely different cab style, color, and silhouette in the same parking area, and the man walks to it as his own vehicle. No departure, arrival, or swap is ever shown, so the fixed exterior element is replaced without explanation.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:22",
+      "entity": "Male customer / rear wall of dining room",
+      "invariant_violated": "wrong-side emergence (entry-point consistency)",
+      "description": "The man walks into the dining room from the rear-left corner between the last booth and the kitchen pass. Clean shots of that wall region (0:12-0:18 and 0:54-0:60) show only continuous wall with a menu board and the corner window - no door. The established entrances are the front double door (behind the 0:20 camera, seen with EXIT sign at 0:46) and a wooden service door on the opposite kitchen-side wall at frame right. His emergence from an apparently doorless wall is incompatible with the mapped layout.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner building | single-story, glazed corner: front face has central double entrance door flanked by windows, side face is a window wall with neon OPEN sign | same at dawn | consistent across 0:00 and 1:43-1:51 exteriors\",\n    \"Parked truck | white sleeper-cab semi tractor parked left of diner, exhaust running | green/teal straight box truck, cab facing right, same parking area | vehicle identity changes between night and dawn exteriors\",\n    \"Counter + stool line | runs parallel to window wall, curves at entrance end | unchanged | man occupies entrance-end stool in every interior angle\",\n    \"Kitchen pass-through | back wall, warm-lit, beyond counter's far end | same | consistent in 0:12, 0:20, 0:46, 0:97 shots\",\n    \"Booth row | along window wall under the windows | same | left side in entrance-end wides, right side in reverse angle at 0:46\",\n    \"Coffee station + wooden service door | kitchen-side wall right of the pass | same | consistent across 0:12-0:18 and wides\",\n    \"Neon OPEN sign | mid window wall; readable from outside, mirrored copy plus reflection seen from inside | still present at dawn | placement consistent\",\n    \"Waitress | always on service side of counter | same | never crosses to customer side except at windows at 1:49\",\n    \"Male customer | enters at 0:22, sits at entrance-end counter seat | exits to truck at dawn | seat position consistent in 0:26, 0:38, 0:46, 1:03, 1:13 framings\",\n    \"Rear wall left of pass | menu board plus corner window, continuous wall, no door visible | same at 0:54 | region where the man appears at 0:22\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:43\",\n      \"entity\": \"Parked truck outside the diner\",\n      \"invariant_violated\": \"fixed-element layout consistency\",\n      \"description\": \"The establishing exterior (0:00-0:08) fixes a white sleeper-cab semi tractor parked left of the building with its engine running. The dawn exterior (1:43-1:51) shows a green/teal straight box truck of completely different cab style, color, and silhouette in the same parking area, and the man walks to it as his own vehicle. No departure, arrival, or swap is ever shown, so the fixed exterior element is replaced without explanation.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:22\",\n      \"entity\": \"Male customer / rear wall of dining room\",\n      \"invariant_violated\": \"wrong-side emergence (entry-point consistency)\",\n      \"description\": \"The man walks into the dining room from the rear-left corner between the last booth and the kitchen pass. Clean shots of that wall region (0:12-0:18 and 0:54-0:60) show only continuous wall with a menu board and the corner window - no door. The established entrances are the front double door (behind the 0:20 camera, seen with EXIT sign at 0:46) and a wooden service door on the opposite kitchen-side wall at frame right. His emergence from an apparently doorless wall is incompatible with the mapped layout.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.5\n    }\n  ]\n}"
+}

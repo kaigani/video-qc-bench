@@ -1,0 +1,50 @@
+{
+  "key": "man-cups__possession-tracking",
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:12:29.469Z",
+  "latencyMs": 31597,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 3626,
+    "total_tokens": 5010,
+    "cost": 0.04628,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04628,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.043512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3388,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:03: Coin resting on top of the middle cup.",
+    "00:00-00:03: Coin resting inside the front-left cup.",
+    "00:00-00:03: Coin held in left hand, moved towards front-left cup.",
+    "00:03-00:09: Multiple coins produced and placed into cups by both hands."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Coins in/on cups",
+      "invariant_violated": "placement persistence",
+      "description": "When the camera angle cuts to a wider shot, the coin that was resting on top of the middle cup and the coin that was visible inside the front cup have completely vanished from the scene without any object or hand removing them.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "```json\n{\n  \"ledger\": [\n    \"00:00-00:03: Coin resting on top of the middle cup.\",\n    \"00:00-00:03: Coin resting inside the front-left cup.\",\n    \"00:00-00:03: Coin held in left hand, moved towards front-left cup.\",\n    \"00:03-00:09: Multiple coins produced and placed into cups by both hands.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Coins in/on cups\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"When the camera angle cuts to a wider shot, the coin that was resting on top of the middle cup and the coin that was visible inside the front cup have completely vanished from the scene without any object or hand removing them.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}\n```"
+}

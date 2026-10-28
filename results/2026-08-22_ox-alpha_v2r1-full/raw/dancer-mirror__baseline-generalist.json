@@ -1,0 +1,65 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T16:34:40.988Z",
+  "latencyMs": 374780,
+  "usage": {
+    "prompt_tokens": 6039,
+    "completion_tokens": 16023,
+    "total_tokens": 22062,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer (live) | black racerback sports bra, black leggings, barefoot, ponytail, tattoos on both forearms | unchanged | performs ballet port de bras arm sequences facing the mirror",
+    "mirror reflection of dancer | expected to exactly mirror the dancer's pose in every frame | same outfit and position | pose desynchronizes from the dancer around 0:02, 0:06, and 0:08",
+    "studio set | mirrored wall, doors with exit signs, wall barre, blue bin, wall poster, portable barre stands | unchanged | consistent throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:08",
+      "entity": "mirror reflection — dancer's raised left arm",
+      "invariant_violated": "mirror pose consistency",
+      "description": "In the same sharp frame, the dancer's left arm is raised fully straight and vertical, but her reflection shows that same arm bent at the elbow with a relaxed, flopped wrist and drooping hand. A mirror must show the identical pose at every instant; the reflection is displaying a different arm position, as if from a different moment of the choreography.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "0:06",
+      "entity": "mirror reflection — dancer's arms",
+      "invariant_violated": "mirror pose consistency",
+      "description": "The dancer's hands are down at waist/hip level with both arms lowered, while her reflection simultaneously shows one hand raised near her chin/face with the elbow out. The reflection is out of sync with the dancer's actual pose at the same instant.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "0:02",
+      "entity": "mirror reflection — raised arm side",
+      "invariant_violated": "mirror left-right consistency",
+      "description": "The dancer raises her right arm overhead while extending her left arm out to her left side. In the reflection, the extended arm appears on the correct side, but the raised arm also appears on the same side of the reflected body (both arms on the viewer-right of the reflection figure), meaning the reflection's left arm appears both raised overhead and extended sideways — anatomically impossible and inconsistent with the mirrored right-arm raise.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer (live) | black racerback sports bra, black leggings, barefoot, ponytail, tattoos on both forearms | unchanged | performs ballet port de bras arm sequences facing the mirror\",\n    \"mirror reflection of dancer | expected to exactly mirror the dancer's pose in every frame | same outfit and position | pose desynchronizes from the dancer around 0:02, 0:06, and 0:08\",\n    \"studio set | mirrored wall, doors with exit signs, wall barre, blue bin, wall poster, portable barre stands | unchanged | consistent throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:08\",\n      \"entity\": \"mirror reflection — dancer's raised left arm\",\n      \"invariant_violated\": \"mirror pose consistency\",\n      \"description\": \"In the same sharp frame, the dancer's left arm is raised fully straight and vertical, but her reflection shows that same arm bent at the elbow with a relaxed, flopped wrist and drooping hand. A mirror must show the identical pose at every instant; the reflection is displaying a different arm position, as if from a different moment of the choreography.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"0:06\",\n      \"entity\": \"mirror reflection — dancer's arms\",\n      \"invariant_violated\": \"mirror pose consistency\",\n      \"description\": \"The dancer's hands are down at waist/hip level with both arms lowered, while her reflection simultaneously shows one hand raised near her chin/face with the elbow out. The reflection is out of sync with the dancer's actual pose at the same instant.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.6\n    },\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"mirror reflection — raised arm side\",\n      \"invariant_violated\": \"mirror left-right consistency\",\n      \"description\": \"The dancer raises her right arm overhead while extending her left arm out to her left side. In the reflection, the extended arm appears on the correct side, but the raised arm also appears on the same side of the reflected body (both arms on the viewer-right of the reflection figure), meaning the reflection's left arm appears both raised overhead and extended sideways — anatomically impossible and inconsistent with the mirrored right-arm raise.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.55\n    }\n  ]\n}"
+}

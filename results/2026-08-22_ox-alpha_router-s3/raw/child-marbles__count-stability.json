@@ -1,0 +1,43 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T15:39:31.087Z",
+  "latencyMs": 40164,
+  "usage": {
+    "prompt_tokens": 5896,
+    "completion_tokens": 1608,
+    "total_tokens": 7504,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00-0:01 — Colored plastic balls (green/yellow/red) in glass bowl: 8 clearly visible, stationary; no change",
+    "0:00-0:03 — Loose balls at right frame edge (red + green, partially cropped): 2-3 visible; cropped by frame edge, not absent (confound ruled out)",
+    "0:00-0:09 — Decorated egg in silver egg cup, right side of table: 1 constant, never manipulated",
+    "0:02-0:03 — Child holds 1 red ball above bowl with both hands, then releases it into the bowl: bowl count 8 → 9, visible cause (ball placed in by child)",
+    "0:04-0:09 — Child's hands stir/mix balls inside bowl: individual balls occluded by hands and motion-blurred, but no ball seen leaving or entering; no confirmed count change",
+    "0:04-0:09 — Right-frame-edge loose balls no longer in frame due to camera reframe: occlusion/cropping, not disappearance (confound ruled out)"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00-0:01 — Colored plastic balls (green/yellow/red) in glass bowl: 8 clearly visible, stationary; no change\",\n    \"0:00-0:03 — Loose balls at right frame edge (red + green, partially cropped): 2-3 visible; cropped by frame edge, not absent (confound ruled out)\",\n    \"0:00-0:09 — Decorated egg in silver egg cup, right side of table: 1 constant, never manipulated\",\n    \"0:02-0:03 — Child holds 1 red ball above bowl with both hands, then releases it into the bowl: bowl count 8 → 9, visible cause (ball placed in by child)\",\n    \"0:04-0:09 — Child's hands stir/mix balls inside bowl: individual balls occluded by hands and motion-blurred, but no ball seen leaving or entering; no confirmed count change\",\n    \"0:04-0:09 — Right-frame-edge loose balls no longer in frame due to camera reframe: occlusion/cropping, not disappearance (confound ruled out)\"\n  ],\n  \"findings\": []\n}"
+}

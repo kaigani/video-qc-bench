@@ -1,0 +1,169 @@
+{
+  "video": "woman-car",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:31:50.718Z",
+  "latencyMs": 23635,
+  "usage": {
+    "prompt_tokens": 1756,
+    "completion_tokens": 1840,
+    "total_tokens": 3596,
+    "cost": 0.025592,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025592,
+      "upstream_inference_prompt_cost": 0.003512,
+      "upstream_inference_completions_cost": 0.02208
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1233,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|woman-car|baseline-generalist|0",
+      "cls": "TP:CAR-1",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Woman and Car",
+        "invariant_violated": "Solid Object Intersection",
+        "description": "The woman's torso visibly intersects and merges with the solid metal of the car's hood and fender, rather than resting on top of it, creating a physical impossibility.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|woman-car|baseline-generalist|1",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:03",
+        "entity": "Woman's Hand",
+        "invariant_violated": "Anatomical Integrity",
+        "description": "The fingers on the woman's visible hand, resting on her arm, are deformed and merged together into an unnatural, blob-like shape.",
+        "severity": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "key": "pro|woman-car|baseline-generalist|2",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Car details (Antenna, Hood Ornament)",
+        "invariant_violated": "Temporal Consistency",
+        "description": "The car's antenna vanishes, and the hood ornament morphs in shape and shifts position on the hood as the camera pans.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|woman-car|causal-temporal-sequence|0",
+      "cls": "TP:CAR-4",
+      "finding": {
+        "timestamp": "00:04",
+        "entity": "car antenna",
+        "invariant_violated": "cause-without-effect",
+        "description": "A strong wind begins blowing the woman's hair violently backward, indicating significant air resistance from the car's motion. However, the thin metal antenna mounted on the hood right next to her remains completely rigid and is unaffected by the airflow.",
+        "severity": "moderate",
+        "confidence": 0.9
+      }
+    },
+    {
+      "key": "pro|woman-car|contact-interaction-kinematics|0",
+      "cls": "TP:CAR-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Woman's torso",
+        "invariant_violated": "solidity",
+        "description": "The woman's torso appears to emerge directly from and clip through the solid metal hood of the car. There is no opening; her body impossibly intersects the solid geometry of the vehicle.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|woman-car|object-persistence-state|0",
+      "cls": "TP:CAR-5",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "driver's side windshield wiper",
+        "invariant_violated": "location & orientation",
+        "description": "The windshield wiper on the right side of the car spontaneously relocates its base and flips its direction. Initially, the base is near the center of the windshield cowl and the blade points to the right, towards the woman. As the camera zooms in, the base appears on the flat hood surface near her elbow, and the blade points to the left, in the opposite direction.",
+        "severity": "severe",
+        "confidence": 0.98
+      }
+    },
+    {
+      "key": "pro|woman-car|spatial-topology-occlusion|0",
+      "cls": "TP:CAR-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Woman and Car",
+        "invariant_violated": "depth ordering & occlusion",
+        "description": "The woman's torso is physically fused with the solid geometry of the car's hood and windshield, emerging from the solid surface rather than through an open window or door.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "The woman's body is clearly clipping through the solid metal of the car's hood, which is a physical impossibility and a clear AI generation artifact.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F2",
+      "verdict": "CONFIRM",
+      "reason": "The visible hand resting on her arm has poorly defined, morphed fingers that blend together into a blob-like shape, characteristic of AI rendering errors.",
+      "innocent_explanation": null,
+      "confidence": 0.9
+    },
+    {
+      "id": "F3",
+      "verdict": "REJECT",
+      "reason": "While the hood ornament does morph, the tall metal antenna on the left side of the hood does not vanish; it remains visible until it simply moves out of the frame as the camera zooms in.",
+      "innocent_explanation": "the subject moving out of frame or being cropped by the frame edge (not disappearing)",
+      "confidence": 0.95
+    },
+    {
+      "id": "F4",
+      "verdict": "REJECT",
+      "reason": "Car antennas are typically made of stiff metal and would not necessarily bend visibly in the wind, making this an unreliable claim of a defect.",
+      "innocent_explanation": "not a visual defect; standard physical behavior for stiff metal objects",
+      "confidence": 0.8
+    },
+    {
+      "id": "F5",
+      "verdict": "CONFIRM",
+      "reason": "The woman is positioned impossibly inside the solid structure of the car, with her torso emerging directly through the closed metal hood and windshield.",
+      "innocent_explanation": null,
+      "confidence": 1
+    },
+    {
+      "id": "F6",
+      "verdict": "CONFIRM",
+      "reason": "The windshield wiper on the right side drastically changes its orientation and structural base location as the camera moves, flipping direction and moving onto the hood.",
+      "innocent_explanation": null,
+      "confidence": 0.95
+    },
+    {
+      "id": "F7",
+      "verdict": "CONFIRM",
+      "reason": "As noted in F1 and F5, the depth ordering is completely flawed, as the woman's torso is fused seamlessly into the solid metal hood and glass.",
+      "innocent_explanation": null,
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The woman's body is clearly clipping through the solid metal of the car's hood, which is a physical impossibility and a clear AI generation artifact.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The visible hand resting on her arm has poorly defined, morphed fingers that blend together into a blob-like shape, characteristic of AI rendering errors.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"While the hood ornament does morph, the tall metal antenna on the left side of the hood does not vanish; it remains visible until it simply moves out of the frame as the camera zooms in.\",\n      \"innocent_explanation\": \"the subject moving out of frame or being cropped by the frame edge (not disappearing)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"Car antennas are typically made of stiff metal and would not necessarily bend visibly in the wind, making this an unreliable claim of a defect.\",\n      \"innocent_explanation\": \"not a visual defect; standard physical behavior for stiff metal objects\",\n      \"confidence\": 0.8\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The woman is positioned impossibly inside the solid structure of the car, with her torso emerging directly through the closed metal hood and windshield.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"The windshield wiper on the right side drastically changes its orientation and structural base location as the camera moves, flipping direction and moving onto the hood.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"F7\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"As noted in F1 and F5, the depth ordering is completely flawed, as the woman's torso is fused seamlessly into the solid metal hood and glass.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

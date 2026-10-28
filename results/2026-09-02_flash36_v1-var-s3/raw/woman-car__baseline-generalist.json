@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:17:55.355Z",
+  "latencyMs": 18235,
+  "usage": {
+    "prompt_tokens": 1238,
+    "completion_tokens": 1715,
+    "total_tokens": 2953,
+    "cost": 0.00735975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00735975,
+      "upstream_inference_prompt_cost": 0.0009285,
+      "upstream_inference_completions_cost": 0.00643125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | blonde hair, blue denim jacket | leaning on car door/hood | hair blows in wind",
+    "station wagon | white vintage wood-paneled station wagon | parked along desert road"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "road surface",
+      "invariant_violated": "appearance_consistency",
+      "description": "Yellow center lane markings suddenly appear painted on the asphalt behind the car where the road was previously unmarked.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | blonde hair, blue denim jacket | leaning on car door/hood | hair blows in wind\",\n    \"station wagon | white vintage wood-paneled station wagon | parked along desert road\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"road surface\",\n      \"invariant_violated\": \"appearance_consistency\",\n      \"description\": \"Yellow center lane markings suddenly appear painted on the asphalt behind the car where the road was previously unmarked.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

@@ -1,0 +1,54 @@
+{
+  "key": "dancer-mirror__structural-plausibility",
+  "video": "dancer-mirror.mp4",
+  "role": "structural-plausibility",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T05:59:32.296Z",
+  "latencyMs": 441826,
+  "usage": {
+    "prompt_tokens": 6234,
+    "completion_tokens": 19716,
+    "total_tokens": 25950,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 dancer, back view: two arms, two legs, plausible posture and spine — checks out",
+    "00:00 wall exit sign above door: green letters legible as 'EXIT' — checks out",
+    "00:00 mirror reflection: front view of dancer, arms down, stance matches; barres, bin, door reflection structurally plausible — checks out",
+    "00:02 dancer raises right arm (screen right): reflection shows raised arm on matching screen-right side — mirror consistent — checks out",
+    "00:04 both arms raised bent, hands at head height: real figure and reflection match, two arms each — checks out",
+    "00:06 arms lowering with slight motion blur, both limbs present, no morphing — checks out",
+    "00:08 dancer raises LEFT arm (screen left, extended overhead), right arm down; reflection shows the OPPOSITE arm raised bent with hand at head level — mirror inconsistent — VIOLATION",
+    "00:00-00:08 ballet barres, door hardware, framed poster, ceiling lights: all structurally plausible — checks out"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "mirror reflection of the dancer",
+      "invariant_violated": "mirror reflection must reproduce the subject's pose with arm positions on the same screen side",
+      "description": "The dancer's left arm (screen-left side of the image) is raised fully extended overhead while her right arm hangs at her side. In the same frame, her mirror reflection shows the incompatible opposite state: the screen-right arm of the reflection is the one raised, bent at the elbow with the hand at head level, while the reflection's screen-left arm hangs down. A true mirror must show the raised left arm on the same side of the reflection; the reflection also differs in elbow bend (straight/extended vs. bent). The mirror behaves correctly elsewhere (e.g., at 00:02 the raised right arm appears on the matching screen-right side in the reflection), so this frame depicts a physically impossible reflection rather than a lens or angle artifact.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 dancer, back view: two arms, two legs, plausible posture and spine — checks out\",\n    \"00:00 wall exit sign above door: green letters legible as 'EXIT' — checks out\",\n    \"00:00 mirror reflection: front view of dancer, arms down, stance matches; barres, bin, door reflection structurally plausible — checks out\",\n    \"00:02 dancer raises right arm (screen right): reflection shows raised arm on matching screen-right side — mirror consistent — checks out\",\n    \"00:04 both arms raised bent, hands at head height: real figure and reflection match, two arms each — checks out\",\n    \"00:06 arms lowering with slight motion blur, both limbs present, no morphing — checks out\",\n    \"00:08 dancer raises LEFT arm (screen left, extended overhead), right arm down; reflection shows the OPPOSITE arm raised bent with hand at head level — mirror inconsistent — VIOLATION\",\n    \"00:00-00:08 ballet barres, door hardware, framed poster, ceiling lights: all structurally plausible — checks out\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"mirror reflection of the dancer\",\n      \"invariant_violated\": \"mirror reflection must reproduce the subject's pose with arm positions on the same screen side\",\n      \"description\": \"The dancer's left arm (screen-left side of the image) is raised fully extended overhead while her right arm hangs at her side. In the same frame, her mirror reflection shows the incompatible opposite state: the screen-right arm of the reflection is the one raised, bent at the elbow with the hand at head level, while the reflection's screen-left arm hangs down. A true mirror must show the raised left arm on the same side of the reflection; the reflection also differs in elbow bend (straight/extended vs. bent). The mirror behaves correctly elsewhere (e.g., at 00:02 the raised right arm appears on the matching screen-right side in the reflection), so this frame depicts a physically impossible reflection rather than a lens or angle artifact.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

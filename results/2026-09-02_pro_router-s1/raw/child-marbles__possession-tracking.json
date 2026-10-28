@@ -1,0 +1,50 @@
+{
+  "key": "child-marbles__possession-tracking",
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:33:56.177Z",
+  "latencyMs": 11905,
+  "usage": {
+    "prompt_tokens": 1384,
+    "completion_tokens": 904,
+    "total_tokens": 2288,
+    "cost": 0.013616,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013616,
+      "upstream_inference_prompt_cost": 0.002768,
+      "upstream_inference_completions_cost": 0.010848
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 663,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Multiple colored balls (red, green, yellow) are inside a clear glass bowl.",
+    "00:00 - 00:02: Child's hands lift and drop the balls within the bowl.",
+    "00:04: Cut occurs. Balls are present in the bowl.",
+    "00:05 - 00:09: Child's right hand stirs the balls in the bowl rapidly."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Colored balls",
+      "invariant_violated": "object rigidity/shape persistence",
+      "description": "As the child's hand stirs the balls rapidly, the balls lose their rigid, spherical shape and severely morph/distort into elongated, blurry shapes, resembling a liquid or gelatinous substance rather than solid objects. This is a clear AI generation artifact.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Multiple colored balls (red, green, yellow) are inside a clear glass bowl.\",\n    \"00:00 - 00:02: Child's hands lift and drop the balls within the bowl.\",\n    \"00:04: Cut occurs. Balls are present in the bowl.\",\n    \"00:05 - 00:09: Child's right hand stirs the balls in the bowl rapidly.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Colored balls\",\n      \"invariant_violated\": \"object rigidity/shape persistence\",\n      \"description\": \"As the child's hand stirs the balls rapidly, the balls lose their rigid, spherical shape and severely morph/distort into elongated, blurry shapes, resembling a liquid or gelatinous substance rather than solid objects. This is a clear AI generation artifact.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

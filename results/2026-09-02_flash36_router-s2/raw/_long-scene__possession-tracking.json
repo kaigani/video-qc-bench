@@ -1,0 +1,42 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:36:03.692Z",
+  "latencyMs": 42372,
+  "usage": {
+    "prompt_tokens": 10589,
+    "completion_tokens": 1531,
+    "total_tokens": 12120,
+    "cost": 0.013683,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013683,
+      "upstream_inference_prompt_cost": 0.00794175,
+      "upstream_inference_completions_cost": 0.00574125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1374,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:27-00:31: Coffee pot held by waitress, pouring coffee into white mug on counter surface",
+    "00:36-00:44: White mug held by man at diner counter surface",
+    "01:09-01:13: Plate with toast and eggs placed on counter surface by waitress",
+    "01:27-01:34: White mugs held by man and waitress on counter surface",
+    "01:38-01:40: Banknotes placed by man's hand onto counter surface next to coffee mug"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:27-00:31: Coffee pot held by waitress, pouring coffee into white mug on counter surface\",\n    \"00:36-00:44: White mug held by man at diner counter surface\",\n    \"01:09-01:13: Plate with toast and eggs placed on counter surface by waitress\",\n    \"01:27-01:34: White mugs held by man and waitress on counter surface\",\n    \"01:38-01:40: Banknotes placed by man's hand onto counter surface next to coffee mug\"\n  ],\n  \"findings\": []\n}"
+}

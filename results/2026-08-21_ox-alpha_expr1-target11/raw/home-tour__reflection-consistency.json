@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__reflection-consistency",
+  "video": "home-tour.mp4",
+  "role": "reflection-consistency",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-22T06:01:29.165Z",
+  "latencyMs": 24270,
+  "usage": {
+    "prompt_tokens": 6202,
+    "completion_tokens": 554,
+    "total_tokens": 6756,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "No true mirror present: video shows a woman walking from kitchen through hallway into bedroom and back; visible reflective surfaces are limited to windows (over kitchen sink, bedroom windows), a microwave door (appliance glass), and framed artwork on walls — none qualify as a framed/fixed mirror presented as a mirror",
+    "Framed picture on hallway wall (visible ~0:00-0:04) is artwork depicting a figure with a flower, not a reflective mirror surface",
+    "No moment in the video shows both a true mirror and a real subject simultaneously, so no mirror-consistency comparison is possible"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"No true mirror present: video shows a woman walking from kitchen through hallway into bedroom and back; visible reflective surfaces are limited to windows (over kitchen sink, bedroom windows), a microwave door (appliance glass), and framed artwork on walls — none qualify as a framed/fixed mirror presented as a mirror\",\n    \"Framed picture on hallway wall (visible ~0:00-0:04) is artwork depicting a figure with a flower, not a reflective mirror surface\",\n    \"No moment in the video shows both a true mirror and a real subject simultaneously, so no mirror-consistency comparison is possible\"\n  ],\n  \"findings\": []\n}"
+}

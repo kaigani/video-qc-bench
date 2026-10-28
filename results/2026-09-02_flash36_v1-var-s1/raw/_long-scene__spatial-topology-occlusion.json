@@ -1,0 +1,66 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-03T04:28:57.169Z",
+  "latencyMs": 34489,
+  "usage": {
+    "prompt_tokens": 10631,
+    "completion_tokens": 4134,
+    "total_tokens": 14765,
+    "cost": 0.02347575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 2975,
+      "video_tokens": 7140
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02347575,
+      "upstream_inference_prompt_cost": 0.00797325,
+      "upstream_inference_completions_cost": 0.0155025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3631,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "diner main room & counter | curved counter with swivel stools on right, glass window wall on left, kitchen pass-through on back wall | consistent spatial layout throughout all wide shots | counter and booth positions remain fixed across interior angles",
+    "kitchen pass-through window | opening in rear wall behind counter | visible from both dining side and kitchen interior view | connects dining area to kitchen consistently",
+    "waitress | working behind counter | walking towards kitchen area | phantom duplicate layer renders over exterior glass/truck at 01:41-01:49; duplicate clone appears at kitchen counter at 01:52",
+    "truck | green semi-truck parked outside diner windows | visible through glass windows | occluded partially by window frames"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "waitress and exterior truck container",
+      "invariant_violated": "depth_ordering_and_occlusion",
+      "description": "A semi-transparent layer of the waitress wiping the counter inside the diner is rendered directly over the exterior wall of the truck parked outside the window, breaking depth ordering and occlusion.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:46",
+      "entity": "waitress and window pane",
+      "invariant_violated": "depth_ordering_and_occlusion",
+      "description": "While the waitress sits in a booth on the left looking out the window, a duplicate semi-transparent layer of her standing and wiping a counter is rendered on top of the window glass and truck frame on the right.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "viewpoint_consistency",
+      "description": "As the waitress gets up from the counter stool and walks right toward the kitchen, an identical clone of her is simultaneously visible standing at the kitchen window wiping the counter.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"diner main room & counter | curved counter with swivel stools on right, glass window wall on left, kitchen pass-through on back wall | consistent spatial layout throughout all wide shots | counter and booth positions remain fixed across interior angles\",\n    \"kitchen pass-through window | opening in rear wall behind counter | visible from both dining side and kitchen interior view | connects dining area to kitchen consistently\",\n    \"waitress | working behind counter | walking towards kitchen area | phantom duplicate layer renders over exterior glass/truck at 01:41-01:49; duplicate clone appears at kitchen counter at 01:52\",\n    \"truck | green semi-truck parked outside diner windows | visible through glass windows | occluded partially by window frames\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"waitress and exterior truck container\",\n      \"invariant_violated\": \"depth_ordering_and_occlusion\",\n      \"description\": \"A semi-transparent layer of the waitress wiping the counter inside the diner is rendered directly over the exterior wall of the truck parked outside the window, breaking depth ordering and occlusion.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:46\",\n      \"entity\": \"waitress and window pane\",\n      \"invariant_violated\": \"depth_ordering_and_occlusion\",\n      \"description\": \"While the waitress sits in a booth on the left looking out the window, a duplicate semi-transparent layer of her standing and wiping a counter is rendered on top of the window glass and truck frame on the right.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.90\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"viewpoint_consistency\",\n      \"description\": \"As the waitress gets up from the counter stool and walks right toward the kitchen, an identical clone of her is simultaneously visible standing at the kitchen window wiping the counter.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

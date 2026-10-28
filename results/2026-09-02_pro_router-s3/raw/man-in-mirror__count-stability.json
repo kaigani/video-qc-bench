@@ -1,0 +1,59 @@
+{
+  "key": "man-in-mirror__count-stability",
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-05T04:19:06.345Z",
+  "latencyMs": 18675,
+  "usage": {
+    "prompt_tokens": 1418,
+    "completion_tokens": 2130,
+    "total_tokens": 3548,
+    "cost": 0.028396,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.028396,
+      "upstream_inference_prompt_cost": 0.002836,
+      "upstream_inference_completions_cost": 0.02556
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1797,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - 00:01: 1 handheld object in reflection (razor)",
+    "00:01 - 00:04: 1 handheld object in reflection (comb)",
+    "00:04 - 00:09: 1 handheld object in reflection (razor)",
+    "00:00 - 00:09: 3 jars on top shelf in reflection",
+    "00:00 - 00:09: 1 jar on bottom shelf in reflection"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "handheld object in reflection",
+      "invariant_violated": "No Unexplained Transformation",
+      "description": "The razor held by the man in the mirror reflection spontaneously transforms into a comb as he moves his hand to his forehead.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "handheld object in reflection",
+      "invariant_violated": "No Unexplained Transformation",
+      "description": "The comb held by the man in the mirror reflection spontaneously transforms back into a razor as he moves his hand to his chin.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - 00:01: 1 handheld object in reflection (razor)\",\n    \"00:01 - 00:04: 1 handheld object in reflection (comb)\",\n    \"00:04 - 00:09: 1 handheld object in reflection (razor)\",\n    \"00:00 - 00:09: 3 jars on top shelf in reflection\",\n    \"00:00 - 00:09: 1 jar on bottom shelf in reflection\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"handheld object in reflection\",\n      \"invariant_violated\": \"No Unexplained Transformation\",\n      \"description\": \"The razor held by the man in the mirror reflection spontaneously transforms into a comb as he moves his hand to his forehead.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"handheld object in reflection\",\n      \"invariant_violated\": \"No Unexplained Transformation\",\n      \"description\": \"The comb held by the man in the mirror reflection spontaneously transforms back into a razor as he moves his hand to his chin.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

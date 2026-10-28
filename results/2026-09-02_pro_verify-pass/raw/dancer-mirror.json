@@ -1,0 +1,150 @@
+{
+  "video": "dancer-mirror",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:30:03.269Z",
+  "latencyMs": 21409,
+  "usage": {
+    "prompt_tokens": 1720,
+    "completion_tokens": 2533,
+    "total_tokens": 4253,
+    "cost": 0.033836,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.033836,
+      "upstream_inference_prompt_cost": 0.00344,
+      "upstream_inference_completions_cost": 0.030396
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1876,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "candidates": [
+    {
+      "key": "pro|dancer-mirror|baseline-generalist|0",
+      "cls": "FP",
+      "finding": {
+        "timestamp": "00:06",
+        "entity": "Reflection woman",
+        "invariant_violated": "Anatomical Integrity",
+        "description": "As the woman in the reflection raises her left arm for the second time, her hand is completely missing, leaving her arm to end in a stump. The foreground woman's corresponding hand remains fully intact and visible.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|dancer-mirror|causal-temporal-sequence|0",
+      "cls": "TP:DANC-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Reflection",
+        "invariant_violated": "Proportionality & direction",
+        "description": "The dancer raises her right arm (on the right side of the screen), which should cause the reflection's arm on the right side of the screen to raise. Instead, the reflection raises its left arm (on the left side of the screen). The effect's direction physically mismatches the cause.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|dancer-mirror|causal-temporal-sequence|1",
+      "cls": "TP:DANC-1",
+      "finding": {
+        "timestamp": "00:02",
+        "entity": "Reflection",
+        "invariant_violated": "Proportionality & direction",
+        "description": "The dancer turns her head to the right. The reflection reacts by turning its head to its left (the left side of the screen), failing to accurately reflect the direction of the causal movement.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|dancer-mirror|character-continuity|0",
+      "cls": "TP:DANC-2",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Reflection",
+        "invariant_violated": "Identity",
+        "description": "The woman in the foreground has tattoos on her left arm and a bare right arm. Her reflection in the mirror incorrectly shows tattoos on her right arm and a bare left arm. When she raises her bare right arm, the reflection raises a tattooed right arm.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    },
+    {
+      "key": "pro|dancer-mirror|contact-interaction-kinematics|0",
+      "cls": "TP:DANC-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Reflection Woman",
+        "invariant_violated": "limb mechanics",
+        "description": "The foreground woman raises her right arm, but her reflection raises its left arm. A true mirror reflection would show the right arm (the one directly opposite the physical arm) moving.",
+        "severity": "severe",
+        "confidence": 0.99
+      }
+    },
+    {
+      "key": "pro|dancer-mirror|spatial-topology-occlusion|0",
+      "cls": "TP:DANC-1",
+      "finding": {
+        "timestamp": "00:00",
+        "entity": "Mirror reflection",
+        "invariant_violated": "impossible geometry",
+        "description": "The woman raises her right arm (which has a visible tattoo), but her reflection in the mirror raises its left arm (the arm on the right side of the screen, which has no tattoo). This violates the spatial mapping of a planar mirror, which must reflect the physical movements on the corresponding side.",
+        "severity": "severe",
+        "confidence": 1
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "F1",
+      "verdict": "CONFIRM",
+      "reason": "At 0:06, when the woman raises her arm for the second time, the reflection's arm clearly ends in a stump with no hand, while the physical woman's hand is fully visible.",
+      "innocent_explanation": null,
+      "confidence": 0.99
+    },
+    {
+      "id": "F2",
+      "verdict": "REJECT",
+      "reason": "The candidate claims the reflection raises the arm on the left side of the screen. In reality, both the physical woman and the reflection raise the arm on the right side of the screen, which is correct mirror behavior.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.99
+    },
+    {
+      "id": "F3",
+      "verdict": "REJECT",
+      "reason": "The physical woman turns her head towards the right side of the screen. The reflection also turns its head towards the right side of the screen. This is how mirrors physically work.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.99
+    },
+    {
+      "id": "F4",
+      "verdict": "REJECT",
+      "reason": "The candidate incorrectly describes the event. The physical woman's left arm (screen-left) has a tattoo, and the reflection's screen-left arm has a tattoo. When she raises her bare right arm (screen-right), the reflection correctly raises its bare arm (screen-right).",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.99
+    },
+    {
+      "id": "F5",
+      "verdict": "REJECT",
+      "reason": "The candidate's premise is flawed. If a person raises their physical right arm in front of a mirror, the reflection will raise its left arm (which is directly opposite). The video shows correct mirror behavior.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.99
+    },
+    {
+      "id": "F6",
+      "verdict": "REJECT",
+      "reason": "The candidate incorrectly states that the physical woman's right arm has a visible tattoo. Her right arm is bare, and the reflection correctly raises a bare arm on the corresponding side of the screen.",
+      "innocent_explanation": "a reflection on glass, a window, or a screen behaving like reflections do",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"verdicts\": [\n    {\n      \"id\": \"F1\",\n      \"verdict\": \"CONFIRM\",\n      \"reason\": \"At 0:06, when the woman raises her arm for the second time, the reflection's arm clearly ends in a stump with no hand, while the physical woman's hand is fully visible.\",\n      \"innocent_explanation\": null,\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F2\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The candidate claims the reflection raises the arm on the left side of the screen. In reality, both the physical woman and the reflection raise the arm on the right side of the screen, which is correct mirror behavior.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F3\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The physical woman turns her head towards the right side of the screen. The reflection also turns its head towards the right side of the screen. This is how mirrors physically work.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F4\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The candidate incorrectly describes the event. The physical woman's left arm (screen-left) has a tattoo, and the reflection's screen-left arm has a tattoo. When she raises her bare right arm (screen-right), the reflection correctly raises its bare arm (screen-right).\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F5\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The candidate's premise is flawed. If a person raises their physical right arm in front of a mirror, the reflection will raise its left arm (which is directly opposite). The video shows correct mirror behavior.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.99\n    },\n    {\n      \"id\": \"F6\",\n      \"verdict\": \"REJECT\",\n      \"reason\": \"The candidate incorrectly states that the physical woman's right arm has a visible tattoo. Her right arm is bare, and the reflection correctly raises a bare arm on the corresponding side of the screen.\",\n      \"innocent_explanation\": \"a reflection on glass, a window, or a screen behaving like reflections do\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

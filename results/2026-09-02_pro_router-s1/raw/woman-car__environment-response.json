@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "~google/gemini-pro-latest",
+  "timestamp": "2026-09-03T04:38:14.144Z",
+  "latencyMs": 12547,
+  "usage": {
+    "prompt_tokens": 1359,
+    "completion_tokens": 923,
+    "total_tokens": 2282,
+    "cost": 0.013794,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013794,
+      "upstream_inference_prompt_cost": 0.002718,
+      "upstream_inference_completions_cost": 0.011076
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 704,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's hair: stationary at start, blows violently backward from 00:04 onwards",
+    "Car: appears stationary, road markings do not pass by",
+    "Car antenna: completely stationary throughout",
+    "Background foliage: completely stationary throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Woman's hair / Car antenna",
+      "invariant_violated": "Causeless effect / Inconsistent response",
+      "description": "The woman's hair begins to blow violently backward, implying either strong forward motion of the vehicle or a very strong headwind. However, the car is stationary (road lines do not move past) and the thin car antenna right next to her remains perfectly rigid and unmoving, contradicting the presence of such a strong wind.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's hair: stationary at start, blows violently backward from 00:04 onwards\",\n    \"Car: appears stationary, road markings do not pass by\",\n    \"Car antenna: completely stationary throughout\",\n    \"Background foliage: completely stationary throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Woman's hair / Car antenna\",\n      \"invariant_violated\": \"Causeless effect / Inconsistent response\",\n      \"description\": \"The woman's hair begins to blow violently backward, implying either strong forward motion of the vehicle or a very strong headwind. However, the car is stationary (road lines do not move past) and the thin car antenna right next to her remains perfectly rigid and unmoving, contradicting the presence of such a strong wind.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

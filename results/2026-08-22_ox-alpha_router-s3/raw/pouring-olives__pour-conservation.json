@@ -1,0 +1,54 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:14:01.855Z",
+  "latencyMs": 171839,
+  "usage": {
+    "prompt_tokens": 5853,
+    "completion_tokens": 4575,
+    "total_tokens": 10428,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "0:00 - Large clear glass jar (spouted rim, wooden cutting board): EMPTY, no contents",
+    "0:00 - Small glass bowl held over jar (source #1): ~10 green olives visible, appears full",
+    "0:00 - Stainless steel bowl (background left): ~15 green olives",
+    "0:00 - White ceramic bowl (background right): ~12 green olives, full",
+    "0:02 - Pour in progress from small bowl: green AND dark purple olives falling; large jar now ~10 olives at bottom",
+    "0:04 - Large jar: ~25-30 olives, mixed green and dark purple; first source bowl being emptied",
+    "0:06 - Second pour from small glass bowl of green olives; large jar ~35-40% full (monotonic rise); stainless bowl visibly depleted to ~8 olives; small glass bottle now on counter",
+    "0:08 - Third pour from small cylindrical glass jar of green olives; large jar ~50% full (monotonic rise); stainless bowl nearly empty (~3 olives); white ceramic bowl unchanged and still full"
+  ],
+  "findings": [
+    {
+      "timestamp": "0:02",
+      "entity": "First source bowl / large glass jar",
+      "invariant_violated": "source contents match",
+      "description": "During the first pour, dark purple/black olives fall into the jar and accumulate there, but the source bowl at 0:00 showed only green olives in its visible layer. The dark olives may have been hidden beneath the green ones or occluded by the gripping hand (glass bowl viewed at an angle), so this is not certain, but no dark olive was ever visible leaving a matching source.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"0:00 - Large clear glass jar (spouted rim, wooden cutting board): EMPTY, no contents\",\n    \"0:00 - Small glass bowl held over jar (source #1): ~10 green olives visible, appears full\",\n    \"0:00 - Stainless steel bowl (background left): ~15 green olives\",\n    \"0:00 - White ceramic bowl (background right): ~12 green olives, full\",\n    \"0:02 - Pour in progress from small bowl: green AND dark purple olives falling; large jar now ~10 olives at bottom\",\n    \"0:04 - Large jar: ~25-30 olives, mixed green and dark purple; first source bowl being emptied\",\n    \"0:06 - Second pour from small glass bowl of green olives; large jar ~35-40% full (monotonic rise); stainless bowl visibly depleted to ~8 olives; small glass bottle now on counter\",\n    \"0:08 - Third pour from small cylindrical glass jar of green olives; large jar ~50% full (monotonic rise); stainless bowl nearly empty (~3 olives); white ceramic bowl unchanged and still full\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"0:02\",\n      \"entity\": \"First source bowl / large glass jar\",\n      \"invariant_violated\": \"source contents match\",\n      \"description\": \"During the first pour, dark purple/black olives fall into the jar and accumulate there, but the source bowl at 0:00 showed only green olives in its visible layer. The dark olives may have been hidden beneath the green ones or occluded by the gripping hand (glass bowl viewed at an angle), so this is not certain, but no dark olive was ever visible leaving a matching source.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.45\n    }\n  ]\n}"
+}

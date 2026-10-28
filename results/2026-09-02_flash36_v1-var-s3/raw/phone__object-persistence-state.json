@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-3.6-flash",
+  "timestamp": "2026-09-05T04:15:35.699Z",
+  "latencyMs": 13143,
+  "usage": {
+    "prompt_tokens": 1444,
+    "completion_tokens": 1795,
+    "total_tokens": 3239,
+    "cost": 0.00781425,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 250,
+      "video_tokens": 660
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00781425,
+      "upstream_inference_prompt_cost": 0.001083,
+      "upstream_inference_completions_cost": 0.00673125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held by user in foreground, screen on displaying app | held by user in foreground, screen off | screen came into focus (00:03), user tapped screen (00:07-00:08), screen turned off (00:09)",
+    "red container | carried in right hand by pedestrian walking in background | vanished | abruptly disappeared from pedestrian's hand between 00:01 and 00:02"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red container",
+      "invariant_violated": "unexpected_disappearance",
+      "description": "The red container carried by the walking pedestrian in the background abruptly disappears from their right hand between 00:01 and 00:02 without being set down, dropped, or obscured.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held by user in foreground, screen on displaying app | held by user in foreground, screen off | screen came into focus (00:03), user tapped screen (00:07-00:08), screen turned off (00:09)\",\n    \"red container | carried in right hand by pedestrian walking in background | vanished | abruptly disappeared from pedestrian's hand between 00:01 and 00:02\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red container\",\n      \"invariant_violated\": \"unexpected_disappearance\",\n      \"description\": \"The red container carried by the walking pedestrian in the background abruptly disappears from their right hand between 00:01 and 00:02 without being set down, dropped, or obscured.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

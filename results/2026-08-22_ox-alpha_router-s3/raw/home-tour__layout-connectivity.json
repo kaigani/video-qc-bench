@@ -1,0 +1,45 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "stealth/ox-alpha",
+  "timestamp": "2026-08-23T01:00:07.201Z",
+  "latencyMs": 182132,
+  "usage": {
+    "prompt_tokens": 5868,
+    "completion_tokens": 6218,
+    "total_tokens": 12086,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen: light-wood cabinets, granite counters, microwave, stove with range hood, sink under a bare window; a wide cased opening in one wall leads out",
+    "Hallway: runs from the kitchen opening toward a white glass-paneled front door with sheer curtain at its far end; framed flower picture plus a second lighter framed picture on one wall; flush-mount ceiling light",
+    "Opening kitchen-to-hallway: from kitchen side it shows the hallway with flower picture and front door beyond; from hallway side it shows the kitchen stove, hood, and sink window",
+    "Bedroom: entered by a right turn off the hallway; dark-wood bed with white bedding, chandelier, nightstand with lamp and framed photo, art above bed, dresser, wooden chair, windows with beige curtains on two walls",
+    "Traversal 1 (~0:00-0:02): woman walks from kitchen through cased opening into hallway; view through opening matches established far side",
+    "Traversal 2 (~0:02-0:06): woman walks down hallway (front door passing on her left) and turns right through a doorway into the bedroom; consistent with hallway geometry",
+    "Traversal 3 (~0:06-0:09): woman crosses the bedroom toward a second doorway; through it is a corridor with a framed picture on the left wall, a flush ceiling light, and a bright multi-pane window at the far end, matching the view back along the hallway toward the kitchen's bright sink window",
+    "Furniture check: bed with adjacent nightstand/lamp, dresser, and chair all serve bedroom functions; kitchen fixtures (stove, sink, microwave) are correctly arranged along the counter run; no misoriented fixtures observed"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen: light-wood cabinets, granite counters, microwave, stove with range hood, sink under a bare window; a wide cased opening in one wall leads out\",\n    \"Hallway: runs from the kitchen opening toward a white glass-paneled front door with sheer curtain at its far end; framed flower picture plus a second lighter framed picture on one wall; flush-mount ceiling light\",\n    \"Opening kitchen-to-hallway: from kitchen side it shows the hallway with flower picture and front door beyond; from hallway side it shows the kitchen stove, hood, and sink window\",\n    \"Bedroom: entered by a right turn off the hallway; dark-wood bed with white bedding, chandelier, nightstand with lamp and framed photo, art above bed, dresser, wooden chair, windows with beige curtains on two walls\",\n    \"Traversal 1 (~0:00-0:02): woman walks from kitchen through cased opening into hallway; view through opening matches established far side\",\n    \"Traversal 2 (~0:02-0:06): woman walks down hallway (front door passing on her left) and turns right through a doorway into the bedroom; consistent with hallway geometry\",\n    \"Traversal 3 (~0:06-0:09): woman crosses the bedroom toward a second doorway; through it is a corridor with a framed picture on the left wall, a flush ceiling light, and a bright multi-pane window at the far end, matching the view back along the hallway toward the kitchen's bright sink window\",\n    \"Furniture check: bed with adjacent nightstand/lamp, dresser, and chair all serve bedroom functions; kitchen fixtures (stove, sink, microwave) are correctly arranged along the counter run; no misoriented fixtures observed\"\n  ],\n  \"findings\": []\n}"
+}
