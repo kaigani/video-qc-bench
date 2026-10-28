@@ -40,6 +40,44 @@ const LABELS = {
   nemotron35: 'Nemotron 3.5 Super VL',
 };
 
+// 2.0 protocol (v1 harness × N samples + feature router × N samples). Each run needs a
+// results/<run>/classifications.json (keys "<video>|<role>|<i>"). Headline = union recall.
+const PROTOCOL_2_0 = {
+  nemotron35: {
+    v1: ['2026-10-27_nemotron-3.5-super-vl', '2026-10-27_nemotron-3.5-super-vl_v1-s2', '2026-10-27_nemotron-3.5-super-vl_v1-s3'],
+    router: ['2026-10-27_nemotron-3.5-super-vl_router-s1', '2026-10-27_nemotron-3.5-super-vl_router-s2', '2026-10-27_nemotron-3.5-super-vl_router-s3'],
+  },
+};
+
+function loadClassified(runId) {
+  const dir = join(PROJECT_ROOT, 'results', runId);
+  const cls = JSON.parse(readFileSync(join(dir, 'classifications.json'), 'utf8'));
+  const out = [];
+  for (const f of readdirSync(join(dir, 'raw')).filter((x) => x.endsWith('.json'))) {
+    const d = JSON.parse(readFileSync(join(dir, 'raw', f), 'utf8'));
+    (d.findings ?? []).forEach((_, i) => {
+      const k = `${d.video.replace('.mp4', '')}|${d.role}|${i}`;
+      if (!(k in cls)) throw new Error(`${runId}: unclassified finding ${k}`);
+      out.push(cls[k]);
+    });
+  }
+  return out;
+}
+
+function poolStats(runIds) {
+  const perRun = runIds.map(loadClassified);
+  const ids = new Set(perRun.flat().filter((c) => c.startsWith('TP:')).map((c) => c.slice(3)));
+  const fps = perRun.map((r) => r.filter((c) => c === 'FP').length);
+  return {
+    samples: runIds.length,
+    defectsFound: ids.size,
+    detection: [...ids].reduce((a, id) => a + WEIGHTS[defectById.get(id).priority], 0),
+    fpTotal: fps.reduce((a, b) => a + b, 0),
+    fpPerSample: Number((fps.reduce((a, b) => a + b, 0) / runIds.length).toFixed(1)),
+    defects: [...ids].sort(),
+  };
+}
+
 const models = [];
 const roleMatrix = {};
 const coverage = GT.defects.map((d) => ({ id: d.id, video: d.video, priority: d.priority, weight: WEIGHTS[d.priority], description: d.description, found: {} }));
@@ -97,22 +135,32 @@ for (const [key, runId] of Object.entries(MATCHES._runs)) {
   }
 }
 
+const protocol20 = Object.entries(PROTOCOL_2_0).map(([key, g]) => ({
+  key,
+  label: LABELS[key] ?? key,
+  v1: poolStats(g.v1),
+  router: poolStats(g.router),
+  all: poolStats([...g.v1, ...g.router]),
+  leaderboardDefects: models.find((m) => m.key === key)?.defectsFound ?? null,
+}));
+
 const missedByAll = coverage.filter((c) => !Object.values(c.found).some(Boolean)).map((c) => c.id);
 const extras = Object.entries(MATCHES._extras).map(([slug, desc]) => ({ slug, desc }));
 
 const data = {
-  generated: '2026-09-02',
+  generated: new Date().toISOString().slice(0, 10),
   maxScore,
   weights: WEIGHTS,
   defectsTotal: GT.defects.length,
   cleanVideos: GT.clean_videos.map((c) => c.video),
-  videos: [...new Set(GT.defects.map((d) => d.video))].concat(GT.clean_videos.map((c) => c.video)).sort(),
+  videos: [...new Set([...GT.defects.map((d) => d.video), ...GT.clean_videos.map((c) => c.video)])].sort(),
   roles: ROLES.map((r) => ({ id: r.id, name: r.name })),
   models,
   coverage,
   roleMatrix,
   missedByAll,
   extras,
+  protocol20,
 };
 
 mkdirSync(join(PROJECT_ROOT, 'docs'), { recursive: true });

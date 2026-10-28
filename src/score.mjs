@@ -1,9 +1,10 @@
 // Score each benchmark run against the human-baseline ground truth.
 //
-// Scoring model:
+// Scoring model (recall-first; FPs are reported separately, not netted into the ranking):
 //   detection = sum of priority weights over UNIQUE baseline defects the model found (any role)
-//   penalty   = FP_PENALTY per false-positive finding
-//   score     = detection - penalty
+//               — the headline ranking metric, tie-broken by defects found
+//   FP        = false-positive findings, reported as review burden alongside precision
+//   legacy    = detection - FP_PENALTY * FP (the original single scalar, kept for continuity)
 // EXTRA findings (plausible defects not in the human baseline) are neutral:
 // no credit, no penalty; they are listed for human adjudication.
 //
@@ -44,11 +45,11 @@ for (const [label, runId] of Object.entries(RUNS)) {
 const lines = [];
 lines.push('# Benchmark scores vs human baseline');
 lines.push('');
-lines.push(`Ground truth: ${GT.defects.length} defects from \`review-human-baseline.md\` (weights P0=${WEIGHTS.P0}, P1=${WEIGHTS.P1}, P2=${WEIGHTS.P2}, P3=${WEIGHTS.P3}, P4=${WEIGHTS.P4}; max detection = ${maxScore}). FP penalty = ${FP_PENALTY} per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.`);
+lines.push(`Ground truth: ${GT.defects.length} defects from \`review-human-baseline.md\` (weights P0=${WEIGHTS.P0}, P1=${WEIGHTS.P1}, P2=${WEIGHTS.P2}, P3=${WEIGHTS.P3}, P4=${WEIGHTS.P4}; max detection = ${maxScore}). Ranked recall-first by severity-weighted detection: a missed defect ships, a false positive only costs a second look, so FPs are reported separately as review burden. Legacy score = detection − ${FP_PENALTY} × FP, kept for continuity. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.`);
 lines.push('');
 lines.push('## Leaderboard');
 lines.push('');
-lines.push('| Model | Score | Detection | Defects found | FP findings | TP findings | EXTRA | Precision* |');
+lines.push('| Model | Detection | Defects found | FP findings (review burden) | Precision* | TP findings | EXTRA | Legacy score |');
 lines.push('|---|---|---|---|---|---|---|---|');
 
 const summary = {};
@@ -60,8 +61,11 @@ for (const [label, m] of Object.entries(models)) {
   const extra = m.findings.filter((f) => f.cls.startsWith('EXTRA:')).length;
   const score = detection - FP_PENALTY * fp;
   const precision = m.findings.length ? ((tp + extra) / m.findings.length) : 1;
-  summary[label] = { tpDefects, detection, fp, tp, extra, score, total: m.findings.length };
-  lines.push(`| ${label} | **${score}** | ${detection}/${maxScore} | ${tpDefects.size}/${GT.defects.length} | ${fp} | ${tp} | ${extra} | ${(precision * 100).toFixed(0)}% |`);
+  summary[label] = { tpDefects, detection, fp, tp, extra, score, precision, total: m.findings.length };
+}
+const ranked = Object.entries(summary).sort(([, a], [, b]) => b.detection - a.detection || b.tpDefects.size - a.tpDefects.size || a.fp - b.fp);
+for (const [label, s] of ranked) {
+  lines.push(`| ${label} | **${s.detection}/${maxScore}** | **${s.tpDefects.size}/${GT.defects.length}** | ${s.fp} | ${(s.precision * 100).toFixed(0)}% | ${s.tp} | ${s.extra} | ${s.score} |`);
 }
 lines.push('');
 lines.push('*Precision counts TP+EXTRA findings as non-noise.');

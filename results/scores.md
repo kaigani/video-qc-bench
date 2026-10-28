@@ -1,26 +1,26 @@
 # Benchmark scores vs human baseline
 
-Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 141). FP penalty = 1 per false-positive finding. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
+Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 141). Ranked recall-first by severity-weighted detection: a missed defect ships, a false positive only costs a second look, so FPs are reported separately as review burden. Legacy score = detection − 1 × FP, kept for continuity. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
 
 ## Leaderboard
 
-| Model | Score | Detection | Defects found | FP findings | TP findings | EXTRA | Precision* |
+| Model | Detection | Defects found | FP findings (review burden) | Precision* | TP findings | EXTRA | Legacy score |
 |---|---|---|---|---|---|---|---|
-| flash | **31** | 34/141 | 9/48 | 3 | 18 | 0 | 86% |
-| qwen | **41** | 52/141 | 15/48 | 11 | 34 | 0 | 76% |
-| pro | **22** | 70/141 | 24/48 | 48 | 66 | 0 | 58% |
-| gemma | **27** | 33/141 | 11/48 | 6 | 28 | 0 | 82% |
-| pegasus | **6** | 6/141 | 2/48 | 0 | 2 | 0 | 100% |
-| muse | **30** | 42/141 | 12/48 | 12 | 19 | 0 | 61% |
-| muse13 | **30** | 30/141 | 8/48 | 0 | 9 | 0 | 100% |
-| flash37 | **22** | 25/141 | 7/48 | 3 | 13 | 0 | 81% |
-| nemotron | **11** | 14/141 | 5/48 | 3 | 9 | 0 | 75% |
-| seed | **39** | 40/141 | 11/48 | 1 | 21 | 0 | 95% |
-| kimi | **37** | 55/141 | 21/48 | 18 | 44 | 0 | 71% |
-| qwen27b | **28** | 32/141 | 10/48 | 4 | 18 | 0 | 82% |
-| oxalpha | **28** | 39/141 | 15/48 | 11 | 26 | 0 | 70% |
-| flash38 | **43** | 46/141 | 12/48 | 3 | 22 | 0 | 88% |
-| nemotron35 | **9** | 25/141 | 8/48 | 16 | 14 | 0 | 47% |
+| pro | **70/141** | **24/48** | 48 | 58% | 66 | 0 | 22 |
+| kimi | **55/141** | **21/48** | 18 | 71% | 44 | 0 | 37 |
+| qwen | **52/141** | **15/48** | 11 | 76% | 34 | 0 | 41 |
+| flash38 | **46/141** | **12/48** | 3 | 88% | 22 | 0 | 43 |
+| muse | **42/141** | **12/48** | 12 | 61% | 19 | 0 | 30 |
+| seed | **40/141** | **11/48** | 1 | 95% | 21 | 0 | 39 |
+| oxalpha | **39/141** | **15/48** | 11 | 70% | 26 | 0 | 28 |
+| flash | **34/141** | **9/48** | 3 | 86% | 18 | 0 | 31 |
+| gemma | **33/141** | **11/48** | 6 | 82% | 28 | 0 | 27 |
+| qwen27b | **32/141** | **10/48** | 4 | 82% | 18 | 0 | 28 |
+| muse13 | **30/141** | **8/48** | 0 | 100% | 9 | 0 | 30 |
+| nemotron35 | **25/141** | **8/48** | 16 | 47% | 14 | 0 | 9 |
+| flash37 | **25/141** | **7/48** | 3 | 81% | 13 | 0 | 22 |
+| nemotron | **14/141** | **5/48** | 3 | 75% | 9 | 0 | 11 |
+| pegasus | **6/141** | **2/48** | 0 | 100% | 2 | 0 | 6 |
 
 *Precision counts TP+EXTRA findings as non-noise.
 

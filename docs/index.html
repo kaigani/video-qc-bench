@@ -73,7 +73,7 @@
   <header>
     <h1>Video QC Bench</h1>
     <p class="sub">Can video language models find continuity and physics defects in AI-generated video?
-      Five systems, each run as <b>five specialist forensic observers plus a generalist baseline</b> over 14 test clips,
+      Each system runs as <b>five specialist forensic observers plus a generalist baseline</b> over 14 test clips,
       scored against a human reviewer's defect baseline. Specialists track narrow invariants (object persistence,
       character continuity, contact mechanics, spatial topology, causal order) instead of answering a broad
       &ldquo;find any issues&rdquo; prompt.</p>
@@ -83,15 +83,26 @@
   <div class="kpis" id="kpis"></div>
 
   <section>
-    <h2>Leaderboard: detection credit vs false-positive penalty</h2>
-    <p class="lede">Detection credit sums priority weights (P0=8 … P4=1) over unique human-baseline defects a model found;
-      each false-positive finding costs 1 point. Findings that are plausible but absent from the human baseline
-      (&ldquo;extras&rdquo;) are neutral.</p>
+    <h2>Leaderboard: defects found</h2>
+    <p class="lede">Ranked recall-first. In real QC a missed defect ships, while a false positive only costs a reviewer
+      a second look, so the two are reported side by side rather than netted together.
+      <b>Detection</b> sums priority weights (P0=8 &hellip; P4=1) over the unique human-baseline defects a system found;
+      <b>false positives</b> are shown separately as review burden. Plausible findings absent from the baseline
+      (&ldquo;extras&rdquo;) are neutral. The original single score (detection &minus; FPs) is kept in the table for continuity.</p>
     <div class="card">
       <div class="legend" id="lb-legend"></div>
       <div id="lb-chart"></div>
       <div class="scroll" id="lb-table"></div>
     </div>
+  </section>
+
+  <section id="p20-section">
+    <h2>2.0 protocol: pooled samples</h2>
+    <p class="lede">Single runs are noisy (identical runs of the same model vary by &plusmn;7&ndash;10 detection points), so new
+      models also run the 2.0 protocol: the v1 harness &times; 3 samples plus the feature router &times; 3 samples, with
+      every finding adjudicated. The headline is the <b>union</b>: every defect found by any sample. False positives
+      are shown per sample, since a reviewer works through one run's output at a time.</p>
+    <div class="card scroll" id="p20"></div>
   </section>
 
   <section>
@@ -113,7 +124,7 @@
 
   <section>
     <h2>Defect coverage matrix</h2>
-    <p class="lede">All 36 human-baseline defects. Filled cells are detections; darker means higher priority.
+    <p class="lede"><span id="matrix-n"></span> human-baseline defects. Filled cells are detections; darker means higher priority.
       Hover any cell for the defect description.</p>
     <div class="card scroll"><div id="matrix"></div></div>
   </section>
@@ -149,7 +160,7 @@
   </section>
 
   <p class="foot">Generated <span id="gen"></span> · scores &amp; raw model output in the repo ·
-    weights P0=8, P1=5, P2=3, P3=2, P4=1, FP penalty −1 · built with hand-rolled SVG, no dependencies.</p>
+    weights P0=8, P1=5, P2=3, P3=2, P4=1 · legacy score = detection − FPs · built with hand-rolled SVG, no dependencies.</p>
 </div>
 <div id="tooltip"></div>
 <script src="data.js"></script>
@@ -196,46 +207,64 @@ const kpis = [
 ];
 $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="note">${n}</div></div>`).join('');
 
-// ---- leaderboard: diverging bars ----
+// ---- leaderboard: recall-first, FPs on their own axis ----
+const ranked = [...M].sort((a, b) => b.detection - a.detection || b.defectsFound - a.defectsFound || a.fp - b.fp);
 (function () {
   const blue = css('--blue'), red = css('--red');
-  legend('lb-legend', [[blue, 'Detection credit'], [red, 'False-positive penalty']]);
-  const sorted = [...M].sort((a, b) => (b.detection - b.fp) - (a.detection - a.fp));
-  const W = 940, rowH = 44, mL = 150, mR = 60, H = sorted.length * rowH + 30;
-  const maxV = Math.max(...M.map((m) => m.detection));
-  const maxP = Math.max(...M.map((m) => m.fp), 8);
-  const zero = mL + (W - mL - mR) * (maxP / (maxP + maxV));
-  const sx = (v) => (W - mL - mR - (zero - mL)) * (v / maxV);
-  const sp = (v) => (zero - mL) * (v / maxP);
+  legend('lb-legend', [[blue, 'Detection credit (severity-weighted defects found)'], [red, 'False positives (review burden, separate scale)']]);
+  const W = 940, rowH = 34, mL = 190, top = 30, H = ranked.length * rowH + top + 6;
+  const aEnd = 690, bStart = 730, bEnd = W - 40;
+  const maxD = Math.max(...M.map((m) => m.detection)), maxF = Math.max(...M.map((m) => m.fp), 1);
+  const sa = (v) => (aEnd - 70 - mL) * (v / maxD);
+  const sb = (v) => (bEnd - 28 - bStart) * (v / maxF);
   const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%' }, null);
-  el('line', { x1: zero, y1: 6, x2: zero, y2: H - 24, class: 'axis' }, svg);
-  sorted.forEach((m, i) => {
-    const y = 10 + i * rowH, bh = 22;
+  const hA = el('text', { x: mL, y: 14, class: 'val' }, svg); hA.textContent = 'Detection · defects found';
+  const hB = el('text', { x: bStart, y: 14, class: 'val' }, svg); hB.textContent = 'False positives';
+  el('line', { x1: mL, y1: top - 6, x2: mL, y2: H - 4, class: 'axis' }, svg);
+  el('line', { x1: bStart, y1: top - 6, x2: bStart, y2: H - 4, class: 'axis' }, svg);
+  const bar = (x, y, w, h, fill) => el('path', { d: `M ${x} ${y} h ${Math.max(w - 4, 0)} a4 4 0 0 1 4 4 v ${h - 8} a4 4 0 0 1 -4 4 h ${-Math.max(w - 4, 0)} z`, fill }, svg);
+  ranked.forEach((m, i) => {
+    const y = top + i * rowH, bh = 20;
     const name = el('text', { x: mL - 10, y: y + bh / 2 + 4, 'text-anchor': 'end' }, svg);
-    name.textContent = m.label;
+    name.textContent = `${i + 1}. ${m.label}`;
     if (m.detection > 0) {
-      const w = sx(m.detection);
-      const bar = el('path', { d: `M ${zero} ${y} h ${Math.max(w - 4, 0)} a4 4 0 0 1 4 4 v ${bh - 8} a4 4 0 0 1 -4 4 h ${-Math.max(w - 4, 0)} z`, fill: css('--blue') }, svg);
-      hover(bar, `<div class="t">${m.label}</div><div class="d">Detection credit ${m.detection}/${DATA.maxScore} · ${m.defectsFound}/${DATA.defectsTotal} defects found</div>`);
+      hover(bar(mL, y, sa(m.detection), bh, blue), `<div class="t">${m.label}</div><div class="d">Detection ${m.detection}/${DATA.maxScore} · ${m.defectsFound}/${DATA.defectsTotal} defects found</div>`);
     }
+    const lv = el('text', { x: mL + sa(m.detection) + 8, y: y + bh / 2 + 4, class: 'val' }, svg);
+    lv.textContent = `${m.detection} · ${m.defectsFound}/${DATA.defectsTotal}`;
     if (m.fp > 0) {
-      const w = sp(m.fp);
-      const bar = el('path', { d: `M ${zero} ${y} h ${-Math.max(w - 4, 0)} a4 4 0 0 0 -4 4 v ${bh - 8} a4 4 0 0 0 4 4 h ${Math.max(w - 4, 0)} z`, fill: css('--red') }, svg);
-      hover(bar, `<div class="t">${m.label}</div><div class="d">${m.fp} false-positive findings (−${m.fp} points)</div>`);
+      hover(bar(bStart, y, sb(m.fp), bh, red), `<div class="t">${m.label}</div><div class="d">${m.fp} false-positive findings of ${m.findings} (${Math.round(100 * m.fp / m.findings)}% of output)</div>`);
     }
-    const net = el('text', { x: zero + sx(m.detection) + 8, y: y + bh / 2 + 4, class: 'val' }, svg);
-    net.textContent = (m.detection - m.fp);
+    const lf = el('text', { x: bStart + sb(m.fp) + 6, y: y + bh / 2 + 4 }, svg);
+    lf.textContent = m.fp;
   });
-  const cap = el('text', { x: zero, y: H - 8, 'text-anchor': 'middle' }, svg);
-  cap.textContent = '← penalty · net score labeled at bar end · credit →';
   $('lb-chart').appendChild(svg);
 
   $('lb-table').innerHTML = `<table>
-    <tr><th>System</th><th>Model id</th><th class="num">Score</th><th class="num">Detection</th><th class="num">Defects</th><th class="num">TP</th><th class="num">Extra</th><th class="num">FP</th><th class="num">Run cost</th></tr>
-    ${sorted.map((m) => `<tr><td>${m.label}${m.reasoning ? ' <span class="chip">reasoning</span>' : ''}</td><td><code>${m.model}</code></td>
-      <td class="num"><b>${m.detection - m.fp}</b></td><td class="num">${m.detection}/${DATA.maxScore}</td><td class="num">${m.defectsFound}/${DATA.defectsTotal}</td>
-      <td class="num">${m.tp}</td><td class="num">${m.extra}</td><td class="num">${m.fp}</td><td class="num">${fmt$(m.cost)}${m.costEstimated ? '*' : ''}</td></tr>`).join('')}
-  </table><p style="color:var(--muted);font-size:12px;margin-top:6px">*estimated from TwelveLabs per-minute pricing; not metered per call.</p>`;
+    <tr><th>#</th><th>System</th><th>Model id</th><th class="num">Defects found</th><th class="num">Detection</th><th class="num">False positives</th><th class="num">Precision</th><th class="num">Run cost</th><th class="num" style="color:var(--muted)">Legacy score</th></tr>
+    ${ranked.map((m, i) => `<tr><td>${i + 1}</td><td>${m.label}${m.reasoning ? ' <span class="chip">reasoning</span>' : ''}</td><td><code>${m.model}</code></td>
+      <td class="num"><b>${m.defectsFound}/${DATA.defectsTotal}</b></td><td class="num"><b>${m.detection}/${DATA.maxScore}</b></td>
+      <td class="num">${m.fp}</td><td class="num">${m.findings ? Math.round(100 * (m.tp + m.extra) / m.findings) : 100}%</td>
+      <td class="num">${fmt$(m.cost)}${m.costEstimated ? '*' : ''}</td><td class="num" style="color:var(--muted)">${m.detection - m.fp}</td></tr>`).join('')}
+  </table><p style="color:var(--muted);font-size:12px;margin-top:6px">Ranked by detection, then defects found, then fewest false positives. Precision = share of findings that were real (true positives + extras).
+    Legacy score = detection − false positives (the original single metric). *Estimated cost, not metered per call.</p>`;
+})();
+
+// ---- 2.0 protocol pooled samples ----
+(function () {
+  const P = DATA.protocol20 ?? [];
+  if (!P.length) { $('p20-section').style.display = 'none'; return; }
+  const row = (label, s, extra) => `<tr><td>${label}</td><td class="num">${s.samples}</td><td class="num"><b>${s.defectsFound}/${DATA.defectsTotal}</b></td>
+    <td class="num"><b>${s.detection}/${DATA.maxScore}</b></td><td class="num">${s.fpPerSample}</td><td class="num">${s.fpTotal}</td><td>${extra ?? ''}</td></tr>`;
+  $('p20').innerHTML = P.map((p) => {
+    const routerOnly = p.router.defects.filter((d) => !p.v1.defects.includes(d));
+    return `<table>
+      <tr><th>${p.label}</th><th class="num">Samples</th><th class="num">Defects found (union)</th><th class="num">Detection (union)</th><th class="num">FP per sample</th><th class="num">FP total</th><th>Notes</th></tr>
+      ${row('v1 harness', p.v1, `single leaderboard run found ${p.leaderboardDefects}/${DATA.defectsTotal}`)}
+      ${row('Feature router', p.router, routerOnly.length ? `adds ${routerOnly.join(', ')} (missed by every v1 sample)` : '')}
+      ${row('<b>All samples</b>', p.all, `<span style="color:var(--ink-2)">${p.all.defects.map((d) => `<span style="white-space:nowrap">${d}</span>`).join(', ')}</span>`)}
+    </table>`;
+  }).join('<div style="height:14px"></div>');
 })();
 
 // ---- cost vs detection scatter ----
@@ -307,10 +336,11 @@ $('kpis').innerHTML = kpis.map(([l, v, n]) => `<div class="kpi"><div class="labe
     html += `<tr data-desc="${c.description.replace(/"/g, '&quot;')}"><td><b>${c.id}</b></td><td>${c.video}</td>
       <td><span class="chip">${c.priority}</span></td>
       ${M.map((m) => `<td class="cell-found">${c.found[m.key] ? `<span class="dot" style="background:${stepByW[c.weight]}"></span>` : '<span class="miss">·</span>'}</td>`).join('')}
-      <td class="num">${foundN}/5</td></tr>`;
+      <td class="num">${foundN}/${M.length}</td></tr>`;
   }
   html += '</table>';
   $('matrix').innerHTML = html;
+  $('matrix-n').textContent = `All ${DATA.defectsTotal}`;
   $('matrix').querySelectorAll('tr[data-desc]').forEach((tr) => {
     hover(tr, `<div class="t">${tr.querySelector('b').textContent}</div><div class="d">${tr.dataset.desc}</div>`);
   });

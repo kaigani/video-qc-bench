@@ -17,24 +17,28 @@ ontology of what is *allowed to change over time* — and requiring an invariant
 findings — produces measurably different (and per-model, diagnostic) results. See the
 [report](https://kaigani.github.io/video-qc-bench/) for the specialist-vs-baseline breakdown.
 
-## Results snapshot (September 2026, after full adjudication)
+## Results snapshot (October 2026, after full adjudication)
 
-| System | Score | Detection | Defects found | FPs | Run cost |
-|---|---|---|---|---|---|
-| Gemini 3.8 Flash | **43** | 46/141 | 12/48 | 3 | $0.53 |
-| Qwen 3.8 Max (reasoning) | **41** | 52/141 | 15/48 | 11 | $4.42 |
-| Seed 2.1 Turbo | **39** | 40/141 | 11/48 | 1 | $1.96 |
-| Kimi K3 (reasoning) | **37** | 55/141 | 21/48 | 18 | $10.83 |
-| Gemini 3.6 Flash | **31** | 34/141 | 9/48 | 3 | $0.53 |
-| Muse Spark 1.2 (reasoning) | **30** | 42/141 | 12/48 | 12 | $1.11 |
-| Qwen 3.8 27B (reasoning) | **28** | 32/141 | 10/48 | 4 | $1.58 |
-| GLM 5.3 Flash (was Ox Alpha stealth) | **28** | 39/141 | 15/48 | 11 | ~$0.33* |
-| Gemma 4 31B (reasoning) | **27** | 33/141 | 11/48 | 6 | $0.11 |
-| Gemini 3.7 Flash | **22** | 25/141 | 7/48 | 3 | $0.15 |
-| Gemini Pro Latest (reasoning) | **22** | 70/141 | 24/48 | 48 | $2.15 |
-| Nemotron 3 Nano (free, reasoning) | **11** | 14/141 | 5/48 | 3 | $0.00 |
-| Nemotron 3.5 Super VL (free, reasoning)† | **9** | 25/141 | 8/48 | 16 | $0.00 |
-| TwelveLabs Pegasus 1.5 | **6** | 6/141 | 2/48 | 0 | ~$0.58 |
+Ranked **recall-first**: a missed defect ships, a false positive only costs a reviewer a second look,
+so false positives are reported as a separate review-burden column rather than subtracted from the ranking.
+
+| # | System | Defects found | Detection | False positives | Run cost | Legacy score |
+|---|---|---|---|---|---|---|
+| 1 | Gemini Pro Latest (reasoning) | **24/48** | **70/141** | 48 | $2.15 | 22 |
+| 2 | Kimi K3 (reasoning) | **21/48** | **55/141** | 18 | $10.83 | 37 |
+| 3 | Qwen 3.8 Max (reasoning) | **15/48** | **52/141** | 11 | $4.42 | 41 |
+| 4 | Gemini 3.8 Flash | **12/48** | **46/141** | 3 | $0.53 | 43 |
+| 5 | Muse Spark 1.2 (reasoning) | **12/48** | **42/141** | 12 | $1.11 | 30 |
+| 6 | Seed 2.1 Turbo | **11/48** | **40/141** | 1 | $1.96 | 39 |
+| 7 | GLM 5.3 Flash (was Ox Alpha stealth) | **15/48** | **39/141** | 11 | ~$0.33* | 28 |
+| 8 | Gemini 3.6 Flash | **9/48** | **34/141** | 3 | $0.53 | 31 |
+| 9 | Gemma 4 31B (reasoning) | **11/48** | **33/141** | 6 | $0.11 | 27 |
+| 10 | Qwen 3.8 27B (reasoning) | **10/48** | **32/141** | 4 | $1.58 | 28 |
+| 11 | Muse Spark 1.3 (reasoning) | **8/48** | **30/141** | 0 | $0.08 | 30 |
+| 12 | Nemotron 3.5 Super VL (free, reasoning)† | **8/48** | **25/141** | 16 | $0.00 | 9 |
+| 13 | Gemini 3.7 Flash | **7/48** | **25/141** | 3 | $0.15 | 22 |
+| 14 | Nemotron 3 Nano (free, reasoning) | **5/48** | **14/141** | 3 | $0.00 | 11 |
+| 15 | TwelveLabs Pegasus 1.5 | **2/48** | **6/141** | 0 | ~$0.58 | 6 |
 
 \* Ox Alpha was OpenRouter's anonymized stealth slug for GLM 5.3 Flash (revealed 2026-08-26).
 Pricing is $0.15/1M input tokens, $0.50/1M output tokens (cached input reads discounted, often
@@ -48,13 +52,15 @@ sample, for comparability; the three identical v1 runs scored 9 / 17 / 13. Union
 samples: 14/48 defects, 39/141 detection. The provider samples a fixed handful of frames per clip
 (same prompt-token count for 10 s and 2 min videos), which drives most of its FPs.
 
-Score = severity-weighted credit for human-baseline defects found (P0=8 … P4=1) − 1 per
-false-positive finding. The ground truth includes 12 defects first surfaced or prompted by model findings and then
-human-confirmed (latest: DANC-4, 2026-09-04). Gemini 3.8 Flash leads the current Flash family at 46/141 detection with 3 FPs
-for $0.53. Headline patterns: Gemini Pro finds the most real defects (24/48) but its 48
-false positives sink it; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call; Kimi K3
-pairs the second-best recall with honest confidence calibration; and Gemini 3.7 Flash *regresses*
-against its 3.6 predecessor on this task. Full matrices and charts in the report.
+Detection = severity-weighted credit for unique human-baseline defects found (P0=8 … P4=1, max 141);
+ties broken by defects found, then fewest false positives. Legacy score = detection − 1 per false-positive
+finding (the original single metric, kept for continuity). The ground truth includes 12 defects first surfaced
+or prompted by model findings and then human-confirmed (latest: DANC-4, 2026-09-04). Headline patterns: Gemini
+Pro finds the most real defects (24/48, 70/141) at the cost of 48 false positives to review; Kimi K3 is second
+on recall with honest confidence calibration; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call;
+Gemini 3.8 Flash is the best value (46/141 for $0.53, 3 FPs); and Gemini 3.7 Flash *regresses* against its 3.6
+predecessor on this task. Single runs vary by ±7–10 detection points, so adjacent placements are within noise.
+Full matrices and charts in the report.
 
 ## Repo layout
 
