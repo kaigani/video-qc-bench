@@ -1,0 +1,50 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:39:38.330Z",
+  "latencyMs": 55726,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 3766,
+    "total_tokens": 5355,
+    "cost": 0.020419,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020419,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01883
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3382,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red apple in the woman's hands (00:00-00:07): count = 1, clearly visible held in front of the umbrella shaft.",
+    "Red apple in the woman's hands (00:08-00:09): count = 0, vanishes between 00:07 and 00:08 with no visible cause, revealing both hands wrapped directly around the umbrella shaft.",
+    "Fruit crates in left market stalls (00:00-00:09): multiple crates of green, orange, blue, and purple fruit enter and exit the frame due to camera rotation; no unexplained count changes within visible crates.",
+    "Fruit crates in right market stalls (00:00-00:03, 00:08-00:09): crates of red and green apples exit the right frame edge as the camera pans and re-enter at 00:08-00:09 due to camera movement."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple in the woman's hands",
+      "invariant_violated": "unexplained object disappearance",
+      "description": "The single red apple held between the woman's hands in front of the umbrella shaft from 00:00 to 00:07 abruptly disappears at 00:08 without being dropped, removed, or occluded, leaving her hands closed directly around the narrow umbrella shaft where the apple was previously positioned.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Red apple in the woman's hands (00:00-00:07): count = 1, clearly visible held in front of the umbrella shaft.\",\n    \"Red apple in the woman's hands (00:08-00:09): count = 0, vanishes between 00:07 and 00:08 with no visible cause, revealing both hands wrapped directly around the umbrella shaft.\",\n    \"Fruit crates in left market stalls (00:00-00:09): multiple crates of green, orange, blue, and purple fruit enter and exit the frame due to camera rotation; no unexplained count changes within visible crates.\",\n    \"Fruit crates in right market stalls (00:00-00:03, 00:08-00:09): crates of red and green apples exit the right frame edge as the camera pans and re-enter at 00:08-00:09 due to camera movement.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple in the woman's hands\",\n      \"invariant_violated\": \"unexplained object disappearance\",\n      \"description\": \"The single red apple held between the woman's hands in front of the umbrella shaft from 00:00 to 00:07 abruptly disappears at 00:08 without being dropped, removed, or occluded, leaving her hands closed directly around the narrow umbrella shaft where the apple was previously positioned.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

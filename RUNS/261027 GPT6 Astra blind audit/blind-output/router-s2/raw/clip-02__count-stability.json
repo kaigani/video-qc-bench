@@ -1,0 +1,48 @@
+{
+  "ledger": [
+    "00:00.000\u201300:00.125: Bowl contains 8 balls: 2 red, 3 green, 3 yellow; hands are above the bowl.",
+    "00:00.250\u201300:00.625: Hands enter the bowl and obscure part of the group; no removal or addition from outside is visible.",
+    "00:00.750: A red ball is lifted while 2 other red balls remain in the bowl; the green and yellow balls remain present.",
+    "00:01.000, 00:01.250, 00:01.500, 00:01.750, 00:02.000: 9 balls accounted for: 8 in the bowl (2 red, 3 green, 3 yellow) plus 1 red ball in the hands. Lifting explains its position, but not the increase from 8 to 9.",
+    "00:02.250: The held red ball is visibly lowered back into the bowl.",
+    "00:02.500\u201300:05.000: The hand obscures the return area; the complete count cannot be established, so no disappearance is assigned during this occlusion.",
+    "00:05.125\u201300:05.250: As the hand moves across and exposes the return area, only 8 balls are accounted for again: 2 red, 3 green, 3 yellow. No ball is visibly carried away or taken out of the bowl.",
+    "00:05.500\u201300:09.750: Continuous stirring causes hand occlusion, overlapping balls and substantial motion blur. No reliable complete sharp-frame count or confirmed transformation into another kind of object is available.",
+    "00:00.000\u201300:01.250: Separate tabletop balls at the right edge are cropped; initially 1 red and 1 green are visible, with another red entering the framing as the camera widens.",
+    "00:01.500\u201300:01.750: Tabletop group shows 2 red and 1 green ball, with a yellow ball partly revealed at the edge.",
+    "00:02.000\u201300:03.000: Tabletop group shows 4 balls: 2 red, 1 green, 1 yellow. Increased visibility is explained by camera framing; no physical addition is observed.",
+    "00:03.250\u201300:04.000: The tabletop group is progressively cropped by the closer framing; subsequent absence from view is not disappearance."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Red balls in the bowl and the child's hands",
+      "invariant_violated": "Count conservation",
+      "description": "The unobstructed opening bowl contains 8 balls, including 2 red. After the child reaches into it and lifts a red ball, sharp frames from 1.00 to 2.00 seconds show the same 8 balls still in the bowl plus the held red ball: 9 total, including 3 red. No extra ball is visibly introduced. The child is handling and subsequently stirring the balls; no deliberate multiplication performance is visually established.",
+      "severity": "moderate",
+      "confidence": 0.94
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Returned red ball",
+      "invariant_violated": "Count conservation",
+      "description": "The additional red ball is lowered into the bowl at 2.25 seconds. After the hand exposes the return area around 5.125\u20135.25 seconds, the bowl again shows only 2 red, 3 green and 3 yellow balls, rather than the 9 previously accounted for. No ball visibly leaves the bowl or is carried away; the decrease is assessed after the return-area occlusion clears.",
+      "severity": "moderate",
+      "confidence": 0.86
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "count-stability",
+  "sample": 2,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__count-stability__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

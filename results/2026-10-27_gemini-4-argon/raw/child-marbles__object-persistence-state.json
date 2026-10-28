@@ -1,0 +1,57 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:27:11.104Z",
+  "latencyMs": 44853,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 3119,
+    "total_tokens": 4732,
+    "cost": 0.017208,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017208,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.015595
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2577,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | clear glass bowl resting on wooden table | remains on wooden table | stays stationary throughout while camera slowly zooms in",
+    "colored balls in bowl | 8 visible balls in bowl at 00:00 (2 red, 3 yellow, 3 green) | 6 visible balls in bowl at 00:09 (3 red, 1 yellow, 2 green) | a 3rd red ball appears in child's hands at 00:01 and vanishes at 00:02; balls change colors and counts spontaneously while being stirred from 00:06 to 00:09",
+    "small metal cup and loose balls on table | resting on right side of wooden table at 00:00 | out of frame by 00:04 | leaves frame naturally as camera zooms in on the bowl"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red ball",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:01, the child holds a third red ball above the bowl while two red balls remain stationary inside the bowl (making 9 balls total). At 00:02, as the child lowers his hands, this third red ball vanishes into the center red ball, leaving only 2 red balls (8 balls total) in the bowl.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "colored balls in bowl",
+      "invariant_violated": "identity & persistence",
+      "description": "As the child stirs the balls from 00:06 to 00:09, the balls spontaneously change color and count: from 2 red, 3 green, and 3 yellow balls at 00:05, they shift to 3 red, 1 green, and 2 yellow balls at 00:07, then to only 1 yellow ball and a half-green/half-red ball at 00:08, and by 00:09 the yellow ball on the far right transforms into a red ball.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | clear glass bowl resting on wooden table | remains on wooden table | stays stationary throughout while camera slowly zooms in\",\n    \"colored balls in bowl | 8 visible balls in bowl at 00:00 (2 red, 3 yellow, 3 green) | 6 visible balls in bowl at 00:09 (3 red, 1 yellow, 2 green) | a 3rd red ball appears in child's hands at 00:01 and vanishes at 00:02; balls change colors and counts spontaneously while being stirred from 00:06 to 00:09\",\n    \"small metal cup and loose balls on table | resting on right side of wooden table at 00:00 | out of frame by 00:04 | leaves frame naturally as camera zooms in on the bowl\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"red ball\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:01, the child holds a third red ball above the bowl while two red balls remain stationary inside the bowl (making 9 balls total). At 00:02, as the child lowers his hands, this third red ball vanishes into the center red ball, leaving only 2 red balls (8 balls total) in the bowl.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"colored balls in bowl\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the child stirs the balls from 00:06 to 00:09, the balls spontaneously change color and count: from 2 red, 3 green, and 3 yellow balls at 00:05, they shift to 3 red, 1 green, and 2 yellow balls at 00:07, then to only 1 yellow ball and a half-green/half-red ball at 00:08, and by 00:09 the yellow ball on the far right transforms into a red ball.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

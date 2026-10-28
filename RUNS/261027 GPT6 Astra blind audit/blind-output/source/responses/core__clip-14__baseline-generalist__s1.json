@@ -1,0 +1,25 @@
+{
+  "ledger": [
+    "Woman | blonde hair, green denim jacket, crossed arms resting on hood in front of windshield | same clothing and pose in closer view, hair blowing backward | three visible hands accompany two arms; torso remains positioned through windshield area",
+    "Station wagon | pale body, wood side panels, roof rack, windshield and hood | same features increasingly cropped by camera approach | woman remains in front windshield area with arms on hood",
+    "Audio | unassessed | unassessed | no audio perception available"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's arms and hands",
+      "invariant_violated": "Anatomical consistency",
+      "description": "The crossed-arm pose contains three hands: fingers on the upper arm at screen left, a hand at the central sleeve cuff, and another set of fingers beneath the elbow at screen right. The closer views make the extra hand clearly visible despite there being only two arms.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and station wagon windshield",
+      "invariant_violated": "Solid-object intersection",
+      "description": "The woman's torso projects through the front windshield area, with her crossed forearms resting outside on the hood ahead of the windshield base. The side window is behind the adjacent pillar, and no opening or broken glass explains how her body passes through the windshield.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ]
+}

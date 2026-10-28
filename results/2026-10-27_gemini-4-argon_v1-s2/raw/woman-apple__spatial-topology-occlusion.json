@@ -1,0 +1,57 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:07:17.824Z",
+  "latencyMs": 101429,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 7130,
+    "total_tokens": 8725,
+    "cost": 0.037245,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.037245,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.03565
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6445,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Market street aisle (background) | straight open walkway extending into the background with sky visible above, buildings and red-shirted pedestrian on the right | disappears behind the subject and is replaced by continuous market stalls wrapping across the background | vanishes between 00:05 and 00:06 without a compatible camera rotation",
+    "Left-side produce stall (north section) | green plastic bin of limes followed by plums, white garlic, and red tomatoes on the left side of the aisle at 00:00-00:02 | reappears on the right side of the frame behind the woman at 00:06 | duplicates/teleports across the background where the open street was at 00:05",
+    "Left-side produce stall (south section) | at 00:07 consists of a purple crate, one white two-tier stand (green apples over avocados with black sign), and a low dark-green plastic bin next to an open space | at 00:09 consists of two adjacent columns of the white two-tier stand with green apples on top and bright red apples on bottom | transforms while occluded by the woman's torso between 00:07 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Market street aisle and background stalls",
+      "invariant_violated": "viewpoint consistency and scene layout",
+      "description": "From 00:00 to 00:05, an open market street extends into the background behind the woman on the right side of the frame, with open sky above, buildings on the far right, and a man in a white polo shirt walking away down the aisle. At 00:06, with only a slight camera pan, the entire open street corridor and right-side buildings disappear and are replaced by a fruit stall counter (matching the green bin, plums, garlic, and tomatoes the woman already walked past on the left at 00:00-00:02).",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "White two-tier fruit display stand",
+      "invariant_violated": "scene layout",
+      "description": "At 00:07, to the left of the purple crate is a single column of a white two-tier wooden stand (green apples on top, avocados with a black sign on bottom), bordered immediately on its left by a low dark-green plastic bin of green fruit. After the woman walks across and occludes this area at 00:08, it emerges behind her back on the right at 00:09 with a different layout: the low green plastic bin has been replaced by a second white two-tier wooden stand holding green apples on top and bright red apples on the bottom.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Market street aisle (background) | straight open walkway extending into the background with sky visible above, buildings and red-shirted pedestrian on the right | disappears behind the subject and is replaced by continuous market stalls wrapping across the background | vanishes between 00:05 and 00:06 without a compatible camera rotation\",\n    \"Left-side produce stall (north section) | green plastic bin of limes followed by plums, white garlic, and red tomatoes on the left side of the aisle at 00:00-00:02 | reappears on the right side of the frame behind the woman at 00:06 | duplicates/teleports across the background where the open street was at 00:05\",\n    \"Left-side produce stall (south section) | at 00:07 consists of a purple crate, one white two-tier stand (green apples over avocados with black sign), and a low dark-green plastic bin next to an open space | at 00:09 consists of two adjacent columns of the white two-tier stand with green apples on top and bright red apples on bottom | transforms while occluded by the woman's torso between 00:07 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Market street aisle and background stalls\",\n      \"invariant_violated\": \"viewpoint consistency and scene layout\",\n      \"description\": \"From 00:00 to 00:05, an open market street extends into the background behind the woman on the right side of the frame, with open sky above, buildings on the far right, and a man in a white polo shirt walking away down the aisle. At 00:06, with only a slight camera pan, the entire open street corridor and right-side buildings disappear and are replaced by a fruit stall counter (matching the green bin, plums, garlic, and tomatoes the woman already walked past on the left at 00:00-00:02).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"White two-tier fruit display stand\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"At 00:07, to the left of the purple crate is a single column of a white two-tier wooden stand (green apples on top, avocados with a black sign on bottom), bordered immediately on its left by a low dark-green plastic bin of green fruit. After the woman walks across and occludes this area at 00:08, it emerges behind her back on the right at 00:09 with a different layout: the low green plastic bin has been replaced by a second white two-tier wooden stand holding green apples on top and bright red apples on the bottom.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

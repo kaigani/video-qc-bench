@@ -1,0 +1,72 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:25:05.557Z",
+  "latencyMs": 30850,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2018,
+    "total_tokens": 3426,
+    "cost": 0.011498,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011498,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01009
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1392,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboarder | male in black t-shirt with chest logo, black pants, green socks, red shoes | crouched landing on deformed skateboard | torso/logo morphs in mid-air at 00:02, hovers/drifts unnaturally on ramp 00:04-00:07",
+    "skateboard | intact standard skateboard deck with four wheels and two trucks | split into two disconnected, warped pieces at 00:09 | blurs and phases through foot at 00:03, loses truck structure at 00:08, splits in two at 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "skateboarder",
+      "invariant_violated": "anatomical and garment consistency",
+      "description": "While the skateboarder is in mid-air, the graphic on the front of his black t-shirt vanishes and his torso/head orientation warps unnaturally before snapping back to facing forward at 00:04.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "skateboard and skateboarder's feet",
+      "invariant_violated": "object permanence and physical continuity",
+      "description": "As the skateboarder lands from the first jump, the skateboard blurs and shrinks under his left foot while his right foot steps completely off the board onto the concrete, yet at 00:04 both feet are suddenly standing squarely on an intact board.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "skateboarder and skateboard",
+      "invariant_violated": "physical motion and momentum",
+      "description": "Between 00:04 and 00:07, after landing with almost no forward momentum, the skateboarder drifts sideways and backward up the incline while pivoting the board in place, defying gravity and normal rolling physics.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "skateboard",
+      "invariant_violated": "structural integrity and object permanence",
+      "description": "During the second jump at 00:08, the left truck and wheels deform/disappear, and upon landing at 00:09 the skateboard deck splits and morphs into two separate, warped fragments beneath each of the skater's feet.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboarder | male in black t-shirt with chest logo, black pants, green socks, red shoes | crouched landing on deformed skateboard | torso/logo morphs in mid-air at 00:02, hovers/drifts unnaturally on ramp 00:04-00:07\",\n    \"skateboard | intact standard skateboard deck with four wheels and two trucks | split into two disconnected, warped pieces at 00:09 | blurs and phases through foot at 00:03, loses truck structure at 00:08, splits in two at 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"skateboarder\",\n      \"invariant_violated\": \"anatomical and garment consistency\",\n      \"description\": \"While the skateboarder is in mid-air, the graphic on the front of his black t-shirt vanishes and his torso/head orientation warps unnaturally before snapping back to facing forward at 00:04.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"skateboard and skateboarder's feet\",\n      \"invariant_violated\": \"object permanence and physical continuity\",\n      \"description\": \"As the skateboarder lands from the first jump, the skateboard blurs and shrinks under his left foot while his right foot steps completely off the board onto the concrete, yet at 00:04 both feet are suddenly standing squarely on an intact board.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"skateboarder and skateboard\",\n      \"invariant_violated\": \"physical motion and momentum\",\n      \"description\": \"Between 00:04 and 00:07, after landing with almost no forward momentum, the skateboarder drifts sideways and backward up the incline while pivoting the board in place, defying gravity and normal rolling physics.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"structural integrity and object permanence\",\n      \"description\": \"During the second jump at 00:08, the left truck and wheels deform/disappear, and upon landing at 00:09 the skateboard deck splits and morphs into two separate, warped fragments beneath each of the skater's feet.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

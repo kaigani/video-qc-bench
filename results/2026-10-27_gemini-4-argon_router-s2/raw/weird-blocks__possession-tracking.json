@@ -1,0 +1,103 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:52:33.435Z",
+  "latencyMs": 38041,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 3236,
+    "total_tokens": 4791,
+    "cost": 0.017735,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017735,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.01618
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2010,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Position 1 block: green '2' block held in hand -> placed on table at 00:01, turning into a blue '2' block",
+    "00:00 - Initial table block: green '2' block sitting on table -> shifts to position 3 at 00:01 as blue '3' block materializes at position 2",
+    "00:01 - Position 2 block: blue '3' block materializes in hand -> placed on table between position 1 and position 3",
+    "00:02 - Position 3 block: green block touched by hand shows '3' -> reverts to green '2' on table at 00:03",
+    "00:03 - Position 4 block: green '3' block materializes in hand -> placed on table -> transforms into tan '2' block at 00:04",
+    "00:04 - Position 5 block: light-blue '3' block materializes in hand -> placed on table at 00:05",
+    "00:05 - Position 6 block: blue '3' block materializes in hand -> placed on table -> transforms into green '5' block at 00:06",
+    "00:06 - Position 7 block: teal/green '3' block materializes in hand -> placed on table -> transforms into green '2' block at 00:07",
+    "00:07 - Position 8 block: blue '3' block materializes in hand -> placed on table -> transforms into blue '6' block at 00:08 while hand moves left to touch position 4 and position 2"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Blocks at positions 1 and 2",
+      "invariant_violated": "transfer completeness and continuous chain of custody",
+      "description": "The green '2' block held at position 1 at 00:00 turns into a blue '2' block upon placement, and a new blue '3' block spontaneously materializes in the hand at position 2 without the hand picking up any object.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Blocks at positions 3 and 4",
+      "invariant_violated": "continuous chain of custody",
+      "description": "After touching the green block at position 3 at 00:02, the hand slides right and a new green '3' block materializes in the fingers at position 4 while the green '2' block remains at position 3.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Blocks at positions 4 and 5",
+      "invariant_violated": "transfer completeness and continuous chain of custody",
+      "description": "The green '3' block being placed at position 4 at 00:03 transforms into a tan '2' block on the table, while a new light-blue '3' block materializes in the hand at position 5.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Block at position 6",
+      "invariant_violated": "continuous chain of custody",
+      "description": "As the light-blue '3' block is left at position 5, another blue '3' block materializes in the hand at position 6 with no source.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Blocks at positions 6 and 7",
+      "invariant_violated": "transfer completeness and continuous chain of custody",
+      "description": "The blue '3' block placed at position 6 transforms into a green '5' block, and a new green/teal '3' block materializes in the hand at position 7.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Blocks at positions 7 and 8",
+      "invariant_violated": "transfer completeness and continuous chain of custody",
+      "description": "The '3' block placed at position 7 changes into a green '2' block on the table, while a new blue '3' block materializes in the hand at position 8.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Block at position 8",
+      "invariant_violated": "placement persistence",
+      "description": "As the hand releases the blue '3' block at position 8 and moves left, the block's front face spontaneously changes from '3' to '6' on the table.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Position 1 block: green '2' block held in hand -> placed on table at 00:01, turning into a blue '2' block\",\n    \"00:00 - Initial table block: green '2' block sitting on table -> shifts to position 3 at 00:01 as blue '3' block materializes at position 2\",\n    \"00:01 - Position 2 block: blue '3' block materializes in hand -> placed on table between position 1 and position 3\",\n    \"00:02 - Position 3 block: green block touched by hand shows '3' -> reverts to green '2' on table at 00:03\",\n    \"00:03 - Position 4 block: green '3' block materializes in hand -> placed on table -> transforms into tan '2' block at 00:04\",\n    \"00:04 - Position 5 block: light-blue '3' block materializes in hand -> placed on table at 00:05\",\n    \"00:05 - Position 6 block: blue '3' block materializes in hand -> placed on table -> transforms into green '5' block at 00:06\",\n    \"00:06 - Position 7 block: teal/green '3' block materializes in hand -> placed on table -> transforms into green '2' block at 00:07\",\n    \"00:07 - Position 8 block: blue '3' block materializes in hand -> placed on table -> transforms into blue '6' block at 00:08 while hand moves left to touch position 4 and position 2\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Blocks at positions 1 and 2\",\n      \"invariant_violated\": \"transfer completeness and continuous chain of custody\",\n      \"description\": \"The green '2' block held at position 1 at 00:00 turns into a blue '2' block upon placement, and a new blue '3' block spontaneously materializes in the hand at position 2 without the hand picking up any object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Blocks at positions 3 and 4\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"After touching the green block at position 3 at 00:02, the hand slides right and a new green '3' block materializes in the fingers at position 4 while the green '2' block remains at position 3.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Blocks at positions 4 and 5\",\n      \"invariant_violated\": \"transfer completeness and continuous chain of custody\",\n      \"description\": \"The green '3' block being placed at position 4 at 00:03 transforms into a tan '2' block on the table, while a new light-blue '3' block materializes in the hand at position 5.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Block at position 6\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"As the light-blue '3' block is left at position 5, another blue '3' block materializes in the hand at position 6 with no source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Blocks at positions 6 and 7\",\n      \"invariant_violated\": \"transfer completeness and continuous chain of custody\",\n      \"description\": \"The blue '3' block placed at position 6 transforms into a green '5' block, and a new green/teal '3' block materializes in the hand at position 7.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Blocks at positions 7 and 8\",\n      \"invariant_violated\": \"transfer completeness and continuous chain of custody\",\n      \"description\": \"The '3' block placed at position 7 changes into a green '2' block on the table, while a new blue '3' block materializes in the hand at position 8.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Block at position 8\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"As the hand releases the blue '3' block at position 8 and moves left, the block's front face spontaneously changes from '3' to '6' on the table.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

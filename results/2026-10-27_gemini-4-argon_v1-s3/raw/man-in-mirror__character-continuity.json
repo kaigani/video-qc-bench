@@ -1,0 +1,55 @@
+{
+  "key": "man-in-mirror__character-continuity",
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:21:32.173Z",
+  "latencyMs": 31514,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 2308,
+    "total_tokens": 3901,
+    "cost": 0.013133,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013133,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.01154
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1880,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in bathroom (foreground and mirror reflection) | Dark combed-back hair, clean-shaven/light stubble, wearing an unbuttoned white collared dress shirt, standing in front of a wooden-framed bathroom mirror facing his reflection | Same wardrobe and standing position at end | At 00:02-00:03 his facial features in the mirror reflection morph noticeably as he tilts his head down; at 00:07-00:09 his right hand and arm position in the foreground diverge from his pose in the mirror reflection"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man in bathroom (mirror reflection)",
+      "invariant_violated": "Character identity and facial consistency",
+      "description": "As the man tilts his head downward between 00:02 and 00:03, his facial structure in the mirror reflection—specifically the shape of his eyes, brow, and nose bridge—morphs into a noticeably different face before reverting to his original facial features by 00:04-00:05.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Man in bathroom (foreground vs. mirror reflection)",
+      "invariant_violated": "Character pose and movement consistency",
+      "description": "From 00:07 to 00:09, the man's arm and hand placement in the foreground do not match his reflection in the mirror: in the foreground his right hand moves outward to hover in mid-air to the side of his cheek, while in the mirror reflection his hand remains held directly in front of his mouth and chin.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in bathroom (foreground and mirror reflection) | Dark combed-back hair, clean-shaven/light stubble, wearing an unbuttoned white collared dress shirt, standing in front of a wooden-framed bathroom mirror facing his reflection | Same wardrobe and standing position at end | At 00:02-00:03 his facial features in the mirror reflection morph noticeably as he tilts his head down; at 00:07-00:09 his right hand and arm position in the foreground diverge from his pose in the mirror reflection\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Man in bathroom (mirror reflection)\",\n      \"invariant_violated\": \"Character identity and facial consistency\",\n      \"description\": \"As the man tilts his head downward between 00:02 and 00:03, his facial structure in the mirror reflection—specifically the shape of his eyes, brow, and nose bridge—morphs into a noticeably different face before reverting to his original facial features by 00:04-00:05.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Man in bathroom (foreground vs. mirror reflection)\",\n      \"invariant_violated\": \"Character pose and movement consistency\",\n      \"description\": \"From 00:07 to 00:09, the man's arm and hand placement in the foreground do not match his reflection in the mirror: in the foreground his right hand moves outward to hover in mid-air to the side of his cheek, while in the mirror reflection his hand remains held directly in front of his mouth and chin.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "Numbered blocks | two green blocks showing 2 | eight blocks showing 2, 3, 2, 2, 3, 5, 2, 6 | handled blocks change color and numerals and repeatedly split into additional blocks",
+    "Hand | pinches left green block | holds first two blue blocks | moves along row manipulating blocks, then returns left",
+    "Table and background | wooden tabletop and dark background | same setting | remain visually consistent",
+    "Audio | unassessed | unassessed | visual frames provide no basis for audio judgments"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Handled numbered blocks",
+      "invariant_violated": "Material color continuity",
+      "description": "The initially green left block changes to blue during handling: it is partly blue at 00:00.500 and blue across its front and top by 00:00.750, without a replacement. The effect recurs when the green block at the growing row's right edge becomes yellow at 00:03.750 and when a blue block becomes green around 00:05.500\u201300:05.750.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Numbered block count and geometry",
+      "invariant_violated": "Unexplained object duplication",
+      "description": "The single handled left block develops into two separate blue blocks marked 2 and 3 between 00:01.000 and 00:01.250. The hand moves the new 3 rightward while the 2 remains on the table. Similar splitting repeatedly leaves an extra block behind as the hand advances right, increasing the original two blocks to eight without new blocks being brought into view.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Numerals on handled block faces",
+      "invariant_violated": "Printed marking continuity",
+      "description": "The right green block's forward-facing 2 becomes 3 at 00:02.500 while the block remains substantially front-facing; its front becomes 2 again around 00:03.000. Later, the final blue block's forward-facing 3 becomes 6 between 00:07.500 and 00:07.750 without a turn sufficient to expose a different face. These markings change on the visible surfaces during handling.",
+      "severity": "moderate",
+      "confidence": 0.97
+    }
+  ]
+}

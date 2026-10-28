@@ -1,0 +1,69 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:43:33.153Z",
+  "latencyMs": 95113,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 7294,
+    "total_tokens": 8887,
+    "cost": 0.038063,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038063,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.03647
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6260,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main woman in center | dark blue 3/4-sleeve top, light grey pleated bottoms, ponytail, holding blue umbrella and red apple/tomato, facing camera | same attire and pose, viewed from her left side as camera orbits | remains consistent throughout",
+    "Vendor in dark blue shirt | standing behind left produce stall leaning over tomatoes at 00:00 | absent from scene | vanishes inexplicably between 00:00 and 00:01 before being occluded",
+    "Woman in light blue t-shirt and jeans | enters bottom-left foreground at 00:01 walking away down the aisle | walks away on right side of main woman at 00:04-00:05 | disappears behind split-screen mask at 00:03 before popping into view at 00:04",
+    "Man in white short-sleeve shirt and glasses | enters bottom-left foreground at 00:01-00:02 walking away down the aisle | walks away on right side of main woman at 00:05 | completely vanishes from the frame at 00:04 between the left and right split-screen wipes before reappearing at 00:05",
+    "Right-side background pedestrians (man in light green t-shirt, woman in purple top, woman in red polo) | frozen mid-stride in aisle on right at 00:00 | erased or panned out by 00:06 | completely frozen in a static plate from 00:00 to 00:05; the man in green and woman in purple vanish in place at 00:04 and 00:05 as moving foreground masks wipe over them",
+    "Man in blue-grey t-shirt | walks left-to-right behind main woman at 00:06 | exits right behind main woman at 00:07 | normal movement across background",
+    "Man in light blue button-down shirt and glasses | appears behind main woman on left at 00:08 facing right | occluded by main woman by 00:09 | normal transition as camera orbits"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Vendor in dark blue shirt",
+      "invariant_violated": "movement continuity / unexplained disappearance",
+      "description": "At 00:00, a vendor in a dark blue t-shirt is standing behind the left produce stall leaning over the tomatoes. By 00:01, before the pedestrian in the light blue shirt even reaches his position to occlude him, he completely vanishes from behind the stall as a static background plate takes over.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Woman in light blue t-shirt and Right-side background pedestrians",
+      "invariant_violated": "movement continuity and multi-character consistency",
+      "description": "The pedestrians on the right side of the aisle (man in light green t-shirt, woman in purple top, woman in red polo) are frozen in a static split-screen plate from 00:00 to 00:05. When the woman in the light blue t-shirt walks behind the main woman at 00:02, she fails to emerge on the right at 00:03 because the frozen plate masks her out. At 00:04, the mask shifts right, causing the woman in the light blue t-shirt to suddenly appear while the frozen man in the light green t-shirt vanishes in place (followed by the woman in purple vanishing at 00:05).",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Man in white short-sleeve shirt and glasses",
+      "invariant_violated": "movement continuity / temporary disappearance",
+      "description": "At 00:03, the man in the white shirt is walking away directly to the left of the main woman. At 00:04, a static background plate wipes over the left stall and completely erases him before he has passed behind the main woman, leaving him entirely absent from the frame at 00:04 until he suddenly reappears on the right side of the main woman at 00:05.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Main woman in center | dark blue 3/4-sleeve top, light grey pleated bottoms, ponytail, holding blue umbrella and red apple/tomato, facing camera | same attire and pose, viewed from her left side as camera orbits | remains consistent throughout\",\n    \"Vendor in dark blue shirt | standing behind left produce stall leaning over tomatoes at 00:00 | absent from scene | vanishes inexplicably between 00:00 and 00:01 before being occluded\",\n    \"Woman in light blue t-shirt and jeans | enters bottom-left foreground at 00:01 walking away down the aisle | walks away on right side of main woman at 00:04-00:05 | disappears behind split-screen mask at 00:03 before popping into view at 00:04\",\n    \"Man in white short-sleeve shirt and glasses | enters bottom-left foreground at 00:01-00:02 walking away down the aisle | walks away on right side of main woman at 00:05 | completely vanishes from the frame at 00:04 between the left and right split-screen wipes before reappearing at 00:05\",\n    \"Right-side background pedestrians (man in light green t-shirt, woman in purple top, woman in red polo) | frozen mid-stride in aisle on right at 00:00 | erased or panned out by 00:06 | completely frozen in a static plate from 00:00 to 00:05; the man in green and woman in purple vanish in place at 00:04 and 00:05 as moving foreground masks wipe over them\",\n    \"Man in blue-grey t-shirt | walks left-to-right behind main woman at 00:06 | exits right behind main woman at 00:07 | normal movement across background\",\n    \"Man in light blue button-down shirt and glasses | appears behind main woman on left at 00:08 facing right | occluded by main woman by 00:09 | normal transition as camera orbits\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Vendor in dark blue shirt\",\n      \"invariant_violated\": \"movement continuity / unexplained disappearance\",\n      \"description\": \"At 00:00, a vendor in a dark blue t-shirt is standing behind the left produce stall leaning over the tomatoes. By 00:01, before the pedestrian in the light blue shirt even reaches his position to occlude him, he completely vanishes from behind the stall as a static background plate takes over.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Woman in light blue t-shirt and Right-side background pedestrians\",\n      \"invariant_violated\": \"movement continuity and multi-character consistency\",\n      \"description\": \"The pedestrians on the right side of the aisle (man in light green t-shirt, woman in purple top, woman in red polo) are frozen in a static split-screen plate from 00:00 to 00:05. When the woman in the light blue t-shirt walks behind the main woman at 00:02, she fails to emerge on the right at 00:03 because the frozen plate masks her out. At 00:04, the mask shifts right, causing the woman in the light blue t-shirt to suddenly appear while the frozen man in the light green t-shirt vanishes in place (followed by the woman in purple vanishing at 00:05).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Man in white short-sleeve shirt and glasses\",\n      \"invariant_violated\": \"movement continuity / temporary disappearance\",\n      \"description\": \"At 00:03, the man in the white shirt is walking away directly to the left of the main woman. At 00:04, a static background plate wipes over the left stall and completely erases him before he has passed behind the main woman, leaving him entirely absent from the frame at 00:04 until he suddenly reappears on the right side of the main woman at 00:05.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

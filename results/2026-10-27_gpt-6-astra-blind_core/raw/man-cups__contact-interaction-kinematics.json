@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "Right hand and foreground coin | At 00:00 the coin rests inside the nearest cup; the hand approaches from the left | At 00:09.750 the coin is held above the cups | Fingers enter the cup opening by 00:01.250; initial coin contact is occluded. A pinching grip is visible at 00:02.250 and the coin clears the cup by 00:02.500. The hand lowers it into the opening at 00:03.500\u201300:04.000, but it emerges against the exterior wall by 00:04.250 without clearing the rim. Finger contact persists during subsequent lowering and lifting; no release is visible.",
+    "Left hand and initially raised coin | Thumb and fingertip already pinch the coin at 00:00; establishment precedes the clip | Hand remains around the coin near the tabletop at 00:09.750 | Grip stays visibly connected while the coin approaches the rear cup at 00:03.750\u201300:04.250. Cup contact is partly occluded. The coin is lowered beside the cups, with its lower edge apparently meeting the tabletop by 00:05.750; exact first table contact is unresolved. No definite grip release is visible.",
+    "Cups and tabletop | Four cup bases are supported on the tabletop at 00:00 | Visible cup bases remain supported through 00:09.750 | Support precedes the clip and no definite lift or release from the table is visible. The nearest cup receives the right-hand reach at 00:01.250\u201300:02.250 and the subsequent coin descent at 00:03.500\u201300:04.250.",
+    "Coin resting near the central cup rim | Already inclined within the cup at 00:00, with its edge against the interior/rim | Later obscured as the viewing angle lowers | Support is visible through the early close views; no hand contact, lift, or release can be established."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Right-hand coin and nearest cup wall",
+      "invariant_violated": "Solid objects must not pass through each other",
+      "description": "At 00:03.750 the pinched coin is partly inside the nearest cup, behind its front rim. The hand continues downward at rim height; by 00:04.250 the coin's lower portion is visible against the outside of the cup. It crosses from the interior to the exterior without being lifted clear of the rim, passing through the solid cup boundary.",
+      "severity": "moderate",
+      "confidence": 0.94
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-06__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/core/raw/clip-06__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "30b5d1a5a24ae9503d958e35260dd6a9a6b6c2f468f91172c832e1882d58e9eb",
+  "key": "man-cups__contact-interaction-kinematics",
+  "parseOk": true
+}

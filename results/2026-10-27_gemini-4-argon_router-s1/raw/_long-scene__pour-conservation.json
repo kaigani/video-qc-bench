@@ -1,0 +1,64 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:27:19.136Z",
+  "latencyMs": 51538,
+  "usage": {
+    "prompt_tokens": 12284,
+    "completion_tokens": 3049,
+    "total_tokens": 15333,
+    "cost": 0.027529,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027529,
+      "upstream_inference_prompt_cost": 0.012284,
+      "upstream_inference_completions_cost": 0.015245
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2353,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:24-00:26: Glass coffee carafe with black handle/lid held by waitress, approximately half full of dark brown coffee.",
+    "00:27-00:31: Glass coffee carafe held upright above a white ceramic mug on the counter; brown coffee streams out through the bottom center of the carafe into the opaque white mug while the carafe's internal fill level remains static at roughly half full.",
+    "00:36-00:44: Opaque white ceramic mug held by the man on the counter next to his breakfast plate (fill level hidden by opaque walls).",
+    "00:45-00:50: Opaque white ceramic mug visible on the pass-through counter in the left foreground; man's mug partially visible in the background.",
+    "01:00-01:08: Opaque white ceramic mug on the counter in front of the man.",
+    "01:09-01:17: Man holds a white ceramic mug on the counter while the waitress approaches carrying a plate and a second white ceramic mug; at 01:12-01:13 she brings her mug onto the man's mug and the two vessels merge into a single white mug.",
+    "01:18-01:26: Man holds his white ceramic mug on the counter while the waitress stands across from him holding another white ceramic mug.",
+    "01:27-01:34: Both the waitress and the man hold opaque white ceramic mugs on the counter.",
+    "01:37-01:40: Man's opaque white ceramic mug sits on the counter as he places cash beside it.",
+    "01:50-01:55: Waitress sits at the counter, picks up the white ceramic mug left by the man, and carries it behind the counter."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "glass coffee carafe",
+      "invariant_violated": "fill-level monotonicity and conservation",
+      "description": "Coffee streams continuously from the bottom of the upright, un-tilted glass carafe into the mug below from 00:28 to 00:31, but the visible coffee level inside the transparent carafe remains completely static at roughly half full instead of decreasing.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:12",
+      "entity": "white ceramic coffee mugs",
+      "invariant_violated": "container identity",
+      "description": "The waitress approaches the counter holding a white ceramic mug in her right hand while the man is already holding a white ceramic mug on the counter; when she places her mug down at 01:12-01:13, the two mugs morph and merge into a single mug in the man's hands.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:24-00:26: Glass coffee carafe with black handle/lid held by waitress, approximately half full of dark brown coffee.\",\n    \"00:27-00:31: Glass coffee carafe held upright above a white ceramic mug on the counter; brown coffee streams out through the bottom center of the carafe into the opaque white mug while the carafe's internal fill level remains static at roughly half full.\",\n    \"00:36-00:44: Opaque white ceramic mug held by the man on the counter next to his breakfast plate (fill level hidden by opaque walls).\",\n    \"00:45-00:50: Opaque white ceramic mug visible on the pass-through counter in the left foreground; man's mug partially visible in the background.\",\n    \"01:00-01:08: Opaque white ceramic mug on the counter in front of the man.\",\n    \"01:09-01:17: Man holds a white ceramic mug on the counter while the waitress approaches carrying a plate and a second white ceramic mug; at 01:12-01:13 she brings her mug onto the man's mug and the two vessels merge into a single white mug.\",\n    \"01:18-01:26: Man holds his white ceramic mug on the counter while the waitress stands across from him holding another white ceramic mug.\",\n    \"01:27-01:34: Both the waitress and the man hold opaque white ceramic mugs on the counter.\",\n    \"01:37-01:40: Man's opaque white ceramic mug sits on the counter as he places cash beside it.\",\n    \"01:50-01:55: Waitress sits at the counter, picks up the white ceramic mug left by the man, and carries it behind the counter.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"glass coffee carafe\",\n      \"invariant_violated\": \"fill-level monotonicity and conservation\",\n      \"description\": \"Coffee streams continuously from the bottom of the upright, un-tilted glass carafe into the mug below from 00:28 to 00:31, but the visible coffee level inside the transparent carafe remains completely static at roughly half full instead of decreasing.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"white ceramic coffee mugs\",\n      \"invariant_violated\": \"container identity\",\n      \"description\": \"The waitress approaches the counter holding a white ceramic mug in her right hand while the man is already holding a white ceramic mug on the counter; when she places her mug down at 01:12-01:13, the two mugs morph and merge into a single mug in the man's hands.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

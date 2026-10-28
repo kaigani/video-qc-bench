@@ -1,0 +1,50 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:50:39.122Z",
+  "latencyMs": 28807,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1766,
+    "total_tokens": 3379,
+    "cost": 0.010443,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010443,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00883
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1369,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Clear glass bowl | resting on wooden table | resting on wooden table | none",
+    "Colored plastic balls in bowl | 8 intact spherical balls (3 red, 3 yellow, 2 green) inside bowl | deformed and color-shifted balls inside bowl | one red ball is lifted at 00:01 and placed back at 00:02; during stirring from 00:06 to 00:09, balls morph in color, count, and shape",
+    "Small metal cup with green-and-white item | resting on table to the right of the bowl | off-screen after camera zoom at 00:04 | none",
+    "Loose colored balls on table | resting on bottom-right corner of table | off-screen after camera zoom at 00:04 | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Colored plastic balls in bowl",
+      "invariant_violated": "identity & persistence",
+      "description": "From 00:00 to 00:05, the bowl consistently holds 8 spherical balls: 3 red, 3 yellow, and 2 green. While the child's hand moves over them from 00:06 to 00:09, the balls change color, count, and shape without explanation: by 00:08, three green balls and only one yellow ball are simultaneously visible, and between 00:08 and 00:09 the red ball on the far left transforms into a misshapen green object.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Clear glass bowl | resting on wooden table | resting on wooden table | none\",\n    \"Colored plastic balls in bowl | 8 intact spherical balls (3 red, 3 yellow, 2 green) inside bowl | deformed and color-shifted balls inside bowl | one red ball is lifted at 00:01 and placed back at 00:02; during stirring from 00:06 to 00:09, balls morph in color, count, and shape\",\n    \"Small metal cup with green-and-white item | resting on table to the right of the bowl | off-screen after camera zoom at 00:04 | none\",\n    \"Loose colored balls on table | resting on bottom-right corner of table | off-screen after camera zoom at 00:04 | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Colored plastic balls in bowl\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"From 00:00 to 00:05, the bowl consistently holds 8 spherical balls: 3 red, 3 yellow, and 2 green. While the child's hand moves over them from 00:06 to 00:09, the balls change color, count, and shape without explanation: by 00:08, three green balls and only one yellow ball are simultaneously visible, and between 00:08 and 00:09 the red ball on the far left transforms into a misshapen green object.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

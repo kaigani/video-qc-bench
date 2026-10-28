@@ -1,0 +1,57 @@
+{
+  "key": "dialogue__baseline-generalist",
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:53:26.595Z",
+  "latencyMs": 44130,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 3346,
+    "total_tokens": 4754,
+    "cost": 0.018138,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018138,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01673
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2831,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in striped shirt | Standing facing camera in green-and-white vertically striped shirt | Turns left and knocks on wooden door | Consistent appearance and movement",
+    "Blue hanging jacket | Solid dark navy jacket hanging beneath a circular wooden ornament at 00:00 | Flared navy jacket with white stripes hanging from a brass hook with no ornament above it at 00:08 | Morphs in design and hardware during camera pan at 00:08",
+    "Background wall and doors | From left to right: blue jacket, wide wooden door behind man, narrow wall strip with wooden box, door with framed bird illustration | Wide wooden door and wall strip vanish; a different framed circular diagram appears directly next to the blue jacket | Background layout and artwork change inconsistently at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Background wall and doors",
+      "invariant_violated": "Spatial and background continuity",
+      "description": "From 00:00 to 00:07, the space immediately to the right of the hanging blue jacket consists of a wide wooden door behind the man, a narrow green wall strip with a mounted wooden box, and a panel with a framed bird illustration. As the camera pans left at 00:08, the wide wooden door and the narrow wall strip with the wooden box vanish completely, and a framed picture with a circular diagram appears directly adjacent to the right side of the blue jacket.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Blue hanging jacket",
+      "invariant_violated": "Object appearance consistency",
+      "description": "From 00:00 to 00:07, the garment hanging in the background is solid dark blue with a circular decorative medallion mounted on the woodwork above it. At 00:08, as the camera pans left, the garment morphs to have prominent white stripes along its bottom and front edge, a bright brass hook appears, and the circular medallion above it disappears.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in striped shirt | Standing facing camera in green-and-white vertically striped shirt | Turns left and knocks on wooden door | Consistent appearance and movement\",\n    \"Blue hanging jacket | Solid dark navy jacket hanging beneath a circular wooden ornament at 00:00 | Flared navy jacket with white stripes hanging from a brass hook with no ornament above it at 00:08 | Morphs in design and hardware during camera pan at 00:08\",\n    \"Background wall and doors | From left to right: blue jacket, wide wooden door behind man, narrow wall strip with wooden box, door with framed bird illustration | Wide wooden door and wall strip vanish; a different framed circular diagram appears directly next to the blue jacket | Background layout and artwork change inconsistently at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Background wall and doors\",\n      \"invariant_violated\": \"Spatial and background continuity\",\n      \"description\": \"From 00:00 to 00:07, the space immediately to the right of the hanging blue jacket consists of a wide wooden door behind the man, a narrow green wall strip with a mounted wooden box, and a panel with a framed bird illustration. As the camera pans left at 00:08, the wide wooden door and the narrow wall strip with the wooden box vanish completely, and a framed picture with a circular diagram appears directly adjacent to the right side of the blue jacket.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Blue hanging jacket\",\n      \"invariant_violated\": \"Object appearance consistency\",\n      \"description\": \"From 00:00 to 00:07, the garment hanging in the background is solid dark blue with a circular decorative medallion mounted on the woodwork above it. At 00:08, as the camera pans left, the garment morphs to have prominent white stripes along its bottom and front edge, a bright brass hook appears, and the circular medallion above it disappears.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,66 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:29:10.843Z",
+  "latencyMs": 93714,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 6272,
+    "total_tokens": 7680,
+    "cost": 0.032768,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.032768,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.03136
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5671,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman in navy shirt | holding blue umbrella and red tomato, facing camera | turned away in 3/4 back view holding umbrella | slowly rotates clockwise across the clip",
+    "bottom-left produce crate | red crate rim with orange/red produce at 00:02 | purple crate rim with bright blue/cyan produce at 00:04-00:05 | rim shifts to purple at 00:03 and produce turns cyan at 00:04",
+    "adjacent left-side stacked crates | out of frame at start | bright purple crates filled with bright purple produce at 00:06-00:07 | unnatural uniform violet hue on both crates and fruit",
+    "right-side produce crate | out of frame / obscured | bright purple crate and purple fruit at 00:08 | unnatural violet hue visible at 00:08 before exiting frame"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "bottom-left produce crate and fruit",
+      "invariant_violated": "color consistency",
+      "description": "The crate at the bottom-left corner has a red rim and orange produce at 00:02, shifts to a purple rim at 00:03, and then at 00:04 the produce inside abruptly turns an unnatural bright blue/cyan (with a visible mask boundary on the far left of the crate where a sliver of fruit remains orange before turning fully blue at 00:05).",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "stacked produce crates on the bottom left",
+      "invariant_violated": "color plausibility",
+      "description": "The stacked crates entering on the bottom left at 00:06—along with all the fruit inside them and the adjacent bin behind the woman's arm at 00:07—are uniformly colored in an unnatural, oversaturated bright purple hue.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "produce crate on the right",
+      "invariant_violated": "color plausibility",
+      "description": "On the right edge of the frame behind the woman's back, a crate and the fruit inside it exhibit the same unnatural bright purple hue-shift defect.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman in navy shirt | holding blue umbrella and red tomato, facing camera | turned away in 3/4 back view holding umbrella | slowly rotates clockwise across the clip\",\n    \"bottom-left produce crate | red crate rim with orange/red produce at 00:02 | purple crate rim with bright blue/cyan produce at 00:04-00:05 | rim shifts to purple at 00:03 and produce turns cyan at 00:04\",\n    \"adjacent left-side stacked crates | out of frame at start | bright purple crates filled with bright purple produce at 00:06-00:07 | unnatural uniform violet hue on both crates and fruit\",\n    \"right-side produce crate | out of frame / obscured | bright purple crate and purple fruit at 00:08 | unnatural violet hue visible at 00:08 before exiting frame\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"bottom-left produce crate and fruit\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The crate at the bottom-left corner has a red rim and orange produce at 00:02, shifts to a purple rim at 00:03, and then at 00:04 the produce inside abruptly turns an unnatural bright blue/cyan (with a visible mask boundary on the far left of the crate where a sliver of fruit remains orange before turning fully blue at 00:05).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"stacked produce crates on the bottom left\",\n      \"invariant_violated\": \"color plausibility\",\n      \"description\": \"The stacked crates entering on the bottom left at 00:06—along with all the fruit inside them and the adjacent bin behind the woman's arm at 00:07—are uniformly colored in an unnatural, oversaturated bright purple hue.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"produce crate on the right\",\n      \"invariant_violated\": \"color plausibility\",\n      \"description\": \"On the right edge of the frame behind the woman's back, a crate and the fruit inside it exhibit the same unnatural bright purple hue-shift defect.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

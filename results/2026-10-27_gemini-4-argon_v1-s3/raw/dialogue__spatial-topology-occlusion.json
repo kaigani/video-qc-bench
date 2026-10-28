@@ -1,0 +1,58 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:17:09.574Z",
+  "latencyMs": 35540,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 2484,
+    "total_tokens": 4079,
+    "cost": 0.014015,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014015,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01242
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1818,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in striped shirt | stands facing camera in front of wood-paneled doorway | turns to his right (viewer's left) and knocks on the perpendicular wooden door | camera pans left with him from 00:07 to 00:09",
+    "Center background wooden door/wall | has two upper panels: left panel holds a hook with a blue coat and a brass medallion above it, right panel (behind man's head) is bare wood; bordered on the right by a narrow wall strip with a switch and on the left by a dark recess/gap | right panel next to the blue coat suddenly contains a framed picture, and the left side connects directly to the perpendicular door without the dark gap | layout morphs during camera pan between 00:07 and 00:08",
+    "Right-side wall strip and adjacent panel | narrow wallpaper strip with brass switch plate separating the center door from a far-right wood panel holding a framed picture | pans off-screen to the right after 00:07 | framed picture effectively shifts onto the center door's right panel at 00:08",
+    "Left perpendicular wooden door | visible at far left edge separated from the back door by a dark recess/opening | man walks up to it and knocks on it, revealing a wall strip with switches and bells to its left | corner geometry between it and the back wall changes during the pan at 00:07-00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Center background wooden panel (to the right of the hanging blue coat)",
+      "invariant_violated": "scene layout",
+      "description": "From 00:00 to 00:07, the recessed wooden panel immediately to the right of the hanging blue coat (directly behind the man's head) is bare wood, while a framed picture hangs on a separate wooden structure further to the right across a strip of wall with a switch. As the camera pans left between 00:07 and 00:08, a framed picture abruptly appears inside that previously bare panel right next to the blue coat.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Corner geometry to the left of the hanging blue coat",
+      "invariant_violated": "scene layout",
+      "description": "From 00:00 to 00:07, there is a dark vertical gap/recess between the door casing behind the blue coat and the perpendicular wooden door on the left. During the leftward camera pan at 00:08, this dark gap disappears and the wood paneling behind the coat joins directly into a solid wooden corner with the door the man knocks on.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in striped shirt | stands facing camera in front of wood-paneled doorway | turns to his right (viewer's left) and knocks on the perpendicular wooden door | camera pans left with him from 00:07 to 00:09\",\n    \"Center background wooden door/wall | has two upper panels: left panel holds a hook with a blue coat and a brass medallion above it, right panel (behind man's head) is bare wood; bordered on the right by a narrow wall strip with a switch and on the left by a dark recess/gap | right panel next to the blue coat suddenly contains a framed picture, and the left side connects directly to the perpendicular door without the dark gap | layout morphs during camera pan between 00:07 and 00:08\",\n    \"Right-side wall strip and adjacent panel | narrow wallpaper strip with brass switch plate separating the center door from a far-right wood panel holding a framed picture | pans off-screen to the right after 00:07 | framed picture effectively shifts onto the center door's right panel at 00:08\",\n    \"Left perpendicular wooden door | visible at far left edge separated from the back door by a dark recess/opening | man walks up to it and knocks on it, revealing a wall strip with switches and bells to its left | corner geometry between it and the back wall changes during the pan at 00:07-00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Center background wooden panel (to the right of the hanging blue coat)\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"From 00:00 to 00:07, the recessed wooden panel immediately to the right of the hanging blue coat (directly behind the man's head) is bare wood, while a framed picture hangs on a separate wooden structure further to the right across a strip of wall with a switch. As the camera pans left between 00:07 and 00:08, a framed picture abruptly appears inside that previously bare panel right next to the blue coat.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Corner geometry to the left of the hanging blue coat\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"From 00:00 to 00:07, there is a dark vertical gap/recess between the door casing behind the blue coat and the perpendicular wooden door on the left. During the leftward camera pan at 00:08, this dark gap disappears and the wood paneling behind the coat joins directly into a solid wooden corner with the door the man knocks on.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

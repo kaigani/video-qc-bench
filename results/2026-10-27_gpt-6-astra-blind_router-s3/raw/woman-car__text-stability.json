@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "00:00.000 \u2014 Front license plate, lower left: best reading 'STE197'; the narrow fourth character and adjacent 9 are closely spaced.",
+    "00:00.250 \u2014 Same front plate: 'STE197', with the same closely spaced character shapes; no legible substitution.",
+    "00:00.500 \u2014 Same front plate: 'STE197'; unchanged as the plate approaches the lower image edge.",
+    "00:00.750 \u2014 Same front plate: visible text remains consistent with 'STE197'; lower portions begin to be cropped.",
+    "00:01.000\u201300:01.750 \u2014 Front plate progressively exits below the image; incomplete characters do not provide another fully legible reading.",
+    "00:00.000\u201300:04.750 \u2014 Small hood markings and side badges have no reliably readable wording at the available resolution; excluded from character comparisons.",
+    "00:06.000\u201300:07.250 \u2014 Distant roadside sign near the horizon is too small and soft to read; no assessable text."
+  ],
+  "findings": [],
+  "video": "woman-car.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-14__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-14__text-stability.json",
+  "frozen_source_sha256": "a4a516775ea89d671b627952c8ab1f7b721fb0a98715f4141d3239e6cf2cef15",
+  "key": "woman-car__text-stability",
+  "parseOk": true
+}

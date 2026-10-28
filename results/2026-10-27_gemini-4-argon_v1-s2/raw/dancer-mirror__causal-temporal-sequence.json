@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:52:42.454Z",
+  "latencyMs": 27917,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1050,
+    "total_tokens": 2815,
+    "cost": 0.007015,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007015,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00525
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 762,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer arm raise (first) | 00:00 right arm lifts | 00:04 right arm lowers | interrupted at 00:02 by an instantaneous swap to the left arm before snapping back at 00:03",
+    "mirror reflection | 00:00 reflects dancer's right arm movement | 00:09 holds pose with right arm up | fails to reflect foreground arm change at 00:02",
+    "dancer arm raise (second) | 00:06 right arm lifts | 00:09 posed with right arm overhead | continuous and plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer's arms and mirror reflection",
+      "invariant_violated": "temporal flow and cause-effect synchronization",
+      "description": "The dancer's raised right arm instantaneously swaps to a raised left arm with no transitional motion, while the mirror reflection fails to react to this change and continues showing the right arm raised, before snapping back at 00:03.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer arm raise (first) | 00:00 right arm lifts | 00:04 right arm lowers | interrupted at 00:02 by an instantaneous swap to the left arm before snapping back at 00:03\",\n    \"mirror reflection | 00:00 reflects dancer's right arm movement | 00:09 holds pose with right arm up | fails to reflect foreground arm change at 00:02\",\n    \"dancer arm raise (second) | 00:06 right arm lifts | 00:09 posed with right arm overhead | continuous and plausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer's arms and mirror reflection\",\n      \"invariant_violated\": \"temporal flow and cause-effect synchronization\",\n      \"description\": \"The dancer's raised right arm instantaneously swaps to a raised left arm with no transitional motion, while the mirror reflection fails to react to this change and continues showing the right arm raised, before snapping back at 00:03.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

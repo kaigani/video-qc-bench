@@ -1,0 +1,71 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:52:16.387Z",
+  "latencyMs": 29424,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2564,
+    "total_tokens": 4153,
+    "cost": 0.014409,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014409,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01282
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1656,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Numbered blocks = 2 (one green '2' block held by hand on the left, one green '2' block sitting to the right).",
+    "00:01: Numbered blocks = 3 (unexplained increase: the left green '2' turns into a blue '2', and a new blue '3' block materializes under the hand in the gap without the hand bringing it from off-screen).",
+    "00:02: Numbered blocks = 3 (two blue blocks '2' and '3', hand now touching the third green block which reads '3').",
+    "00:03: Numbered blocks = 4 (unexplained increase: as the hand shifts right, the third green block splits into a stationary green '2' and a new 4th green '3' block held by the fingers).",
+    "00:04: Numbered blocks = 5 (unexplained increase and transformation: the 4th block changes from green '3' to orange '2', while a 5th blue '3' block materializes under the hand).",
+    "00:05: Numbered blocks = 6 (unexplained increase: a 6th blue '3' block splits off and materializes under the hand as it moves right).",
+    "00:06: Numbered blocks = 7 (unexplained increase and transformation: the 6th block changes from blue '3' to green '5', and a 7th green '3' block materializes under the hand).",
+    "00:07: Numbered blocks = 8 (unexplained increase: the 7th block becomes green '2', and an 8th blue '3' block materializes under the hand).",
+    "00:08-00:09: Numbered blocks = 8 (the 8th blue block changes its number from '3' to '6' as the hand moves back to tap the existing blocks)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase and transformation",
+      "description": "The count increases from 2 to 3 without the hand ever leaving the frame or holding an extra block: the leftmost green '2' block spontaneously turns into a blue '2' block while a new blue '3' block materializes beneath the fingers.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "numbered blocks",
+      "invariant_violated": "spontaneous object duplication",
+      "description": "As the hand slides continuously to the right from 00:03 through 00:07 without ever picking up new objects, the block count repeatedly increases one by one (from 3 to 4 at 00:03, 5 at 00:04, 6 at 00:05, 7 at 00:06, and 8 at 00:07) by splitting/spawning a new block out of the previous rightmost block.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained object transformation",
+      "description": "As the hand moves rightward across the row, blocks left behind spontaneously change color and number (the 4th block turns from green '3' into orange '2' at 00:04; the 6th block turns from blue '3' into green '5' at 00:06; the 8th block changes from '3' to '6' at 00:08).",
+      "severity": "moderate",
+      "confidence": 0.97
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Numbered blocks = 2 (one green '2' block held by hand on the left, one green '2' block sitting to the right).\",\n    \"00:01: Numbered blocks = 3 (unexplained increase: the left green '2' turns into a blue '2', and a new blue '3' block materializes under the hand in the gap without the hand bringing it from off-screen).\",\n    \"00:02: Numbered blocks = 3 (two blue blocks '2' and '3', hand now touching the third green block which reads '3').\",\n    \"00:03: Numbered blocks = 4 (unexplained increase: as the hand shifts right, the third green block splits into a stationary green '2' and a new 4th green '3' block held by the fingers).\",\n    \"00:04: Numbered blocks = 5 (unexplained increase and transformation: the 4th block changes from green '3' to orange '2', while a 5th blue '3' block materializes under the hand).\",\n    \"00:05: Numbered blocks = 6 (unexplained increase: a 6th blue '3' block splits off and materializes under the hand as it moves right).\",\n    \"00:06: Numbered blocks = 7 (unexplained increase and transformation: the 6th block changes from blue '3' to green '5', and a 7th green '3' block materializes under the hand).\",\n    \"00:07: Numbered blocks = 8 (unexplained increase: the 7th block becomes green '2', and an 8th blue '3' block materializes under the hand).\",\n    \"00:08-00:09: Numbered blocks = 8 (the 8th blue block changes its number from '3' to '6' as the hand moves back to tap the existing blocks).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase and transformation\",\n      \"description\": \"The count increases from 2 to 3 without the hand ever leaving the frame or holding an extra block: the leftmost green '2' block spontaneously turns into a blue '2' block while a new blue '3' block materializes beneath the fingers.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"spontaneous object duplication\",\n      \"description\": \"As the hand slides continuously to the right from 00:03 through 00:07 without ever picking up new objects, the block count repeatedly increases one by one (from 3 to 4 at 00:03, 5 at 00:04, 6 at 00:05, 7 at 00:06, and 8 at 00:07) by splitting/spawning a new block out of the previous rightmost block.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained object transformation\",\n      \"description\": \"As the hand moves rightward across the row, blocks left behind spontaneously change color and number (the 4th block turns from green '3' into orange '2' at 00:04; the 6th block turns from blue '3' into green '5' at 00:06; the 8th block changes from '3' to '6' at 00:08).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.97\n    }\n  ]\n}"
+}

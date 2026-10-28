@@ -1,0 +1,57 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:35:06.054Z",
+  "latencyMs": 23346,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1214,
+    "total_tokens": 2622,
+    "cost": 0.007478,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007478,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.00607
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 786,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing in front of bathroom mirror holding a small white grooming tool near mouth | holding a morphed comb/razor-like tool near his cheek | raises tool to comb eyebrow and hair at 00:02-00:04 before lowering it back to lower face",
+    "grooming tool | resembles a white toothbrush handle at 00:00 | resembles a small dark/metallic comb or razor blade holder by 00:08 | morphs shape and function across the clip",
+    "mirror reflection | shows tool at upper lip at 00:00 | shows tool hovering near cheek/mouth at 00:09 | hand and tool placement inconsistent with foreground posture"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection",
+      "invariant_violated": "reflection consistency",
+      "description": "In the foreground, the man's right hand holds the tool tucked low against his jawline and chin, whereas in the mirror reflection the tool is positioned high up directly over his upper lip and mustache.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "grooming tool and action",
+      "invariant_violated": "object permanence and action plausibility",
+      "description": "The implement in the man's hand morphs from a toothbrush-like stick at his mouth into a tiny comb/razor that he runs across his eyebrow and scalp hair (00:02-00:04), and then holds hovering against his cheek (00:06-00:09), all while continuous tooth-brushing sound effects play.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing in front of bathroom mirror holding a small white grooming tool near mouth | holding a morphed comb/razor-like tool near his cheek | raises tool to comb eyebrow and hair at 00:02-00:04 before lowering it back to lower face\",\n    \"grooming tool | resembles a white toothbrush handle at 00:00 | resembles a small dark/metallic comb or razor blade holder by 00:08 | morphs shape and function across the clip\",\n    \"mirror reflection | shows tool at upper lip at 00:00 | shows tool hovering near cheek/mouth at 00:09 | hand and tool placement inconsistent with foreground posture\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"reflection consistency\",\n      \"description\": \"In the foreground, the man's right hand holds the tool tucked low against his jawline and chin, whereas in the mirror reflection the tool is positioned high up directly over his upper lip and mustache.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"grooming tool and action\",\n      \"invariant_violated\": \"object permanence and action plausibility\",\n      \"description\": \"The implement in the man's hand morphs from a toothbrush-like stick at his mouth into a tiny comb/razor that he runs across his eyebrow and scalp hair (00:02-00:04), and then holds hovering against his cheek (00:06-00:09), all while continuous tooth-brushing sound effects play.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

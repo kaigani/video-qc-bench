@@ -1,0 +1,41 @@
+{
+  "key": "weird-blocks__spatial-topology-occlusion",
+  "video": "weird-blocks.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:27:37.093Z",
+  "latencyMs": 35283,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 2552,
+    "total_tokens": 4147,
+    "cost": 0.014355,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014355,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01276
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2394,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden tabletop | flat horizontal surface occupying foreground and midground | unchanged position and orientation | remains static throughout the shot",
+    "background furniture legs | dark blurred vertical and angled legs behind the table on the upper left and right | unchanged relative positions | remain completely stationary relative to the tabletop",
+    "camera viewpoint | static high-angle front view of the tabletop | unchanged angle and framing | no cuts or camera movements occur",
+    "hand and numbered blocks | hand manipulates blocks on the left side of the table | row of eight blocks aligned horizontally on the table | hand and nearer block faces consistently occlude farther fingers and the tabletop surface with clean occlusion boundaries"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden tabletop | flat horizontal surface occupying foreground and midground | unchanged position and orientation | remains static throughout the shot\",\n    \"background furniture legs | dark blurred vertical and angled legs behind the table on the upper left and right | unchanged relative positions | remain completely stationary relative to the tabletop\",\n    \"camera viewpoint | static high-angle front view of the tabletop | unchanged angle and framing | no cuts or camera movements occur\",\n    \"hand and numbered blocks | hand manipulates blocks on the left side of the table | row of eight blocks aligned horizontally on the table | hand and nearer block faces consistently occlude farther fingers and the tabletop surface with clean occlusion boundaries\"\n  ],\n  \"findings\": []\n}"
+}

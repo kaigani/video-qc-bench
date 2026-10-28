@@ -1,0 +1,40 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:02:36.073Z",
+  "latencyMs": 31003,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1951,
+    "total_tokens": 3546,
+    "cost": 0.01135,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01135,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.009755
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1755,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skatepark ramps and bowl | spine ramp on left, quarterpipe in back, raised ledge on right at start | geometric-patterned bowl in foreground left-center, spine ramp on right at end | smooth perspective shift as camera tracks backward and pans left",
+    "Background park structures (pavilion and light poles) | pavilion at far left, two light poles center-left and center-right behind skater at start | pavilion and left light pole shifted to right side of frame, far-left light pole visible over bowl at end | consistent parallax and rotational shift matching leftward camera pan",
+    "Skateboarder and skateboard | foreground center, occluding ramp surface and central tree line at start | foreground center-left jumping into bowl, occluding ramp coping and background trees at end | maintains proper foreground depth ordering over fixed skatepark geometry throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Skatepark ramps and bowl | spine ramp on left, quarterpipe in back, raised ledge on right at start | geometric-patterned bowl in foreground left-center, spine ramp on right at end | smooth perspective shift as camera tracks backward and pans left\",\n    \"Background park structures (pavilion and light poles) | pavilion at far left, two light poles center-left and center-right behind skater at start | pavilion and left light pole shifted to right side of frame, far-left light pole visible over bowl at end | consistent parallax and rotational shift matching leftward camera pan\",\n    \"Skateboarder and skateboard | foreground center, occluding ramp surface and central tree line at start | foreground center-left jumping into bowl, occluding ramp coping and background trees at end | maintains proper foreground depth ordering over fixed skatepark geometry throughout\"\n  ],\n  \"findings\": []\n}"
+}

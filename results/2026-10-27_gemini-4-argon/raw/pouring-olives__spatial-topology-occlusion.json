@@ -1,0 +1,41 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:08.083Z",
+  "latencyMs": 14368,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 815,
+    "total_tokens": 2410,
+    "cost": 0.00567,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00567,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.004075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 647,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen background (stove and cabinets) | stainless steel range flanked by wooden cabinets | remains in exact same relative layout after slight camera tilt at 00:05 | consistent across shot",
+    "Cutting board and large glass jar | centered in foreground on white countertop | remains centered in foreground | consistent depth ordering with hands and background",
+    "Two bowls of olives | positioned on right side of countertop (metal bowl behind ceramic bowl) | remain in same relative positions on right side | consistent occlusion and layout",
+    "Person's torso and arms | standing behind the counter/cutting board, in front of the stove | occludes stove and cabinets naturally while reaching over jar | smooth occlusion boundaries"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen background (stove and cabinets) | stainless steel range flanked by wooden cabinets | remains in exact same relative layout after slight camera tilt at 00:05 | consistent across shot\",\n    \"Cutting board and large glass jar | centered in foreground on white countertop | remains centered in foreground | consistent depth ordering with hands and background\",\n    \"Two bowls of olives | positioned on right side of countertop (metal bowl behind ceramic bowl) | remain in same relative positions on right side | consistent occlusion and layout\",\n    \"Person's torso and arms | standing behind the counter/cutting board, in front of the stove | occludes stove and cabinets naturally while reaching over jar | smooth occlusion boundaries\"\n  ],\n  \"findings\": []\n}"
+}

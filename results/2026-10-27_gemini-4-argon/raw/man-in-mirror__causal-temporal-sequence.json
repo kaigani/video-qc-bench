@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:15.191Z",
+  "latencyMs": 28793,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1281,
+    "total_tokens": 3046,
+    "cost": 0.00817,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00817,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.006405
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 954,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground hand motion | starts at chin (00:00) | hovers near cheek (00:09) | raises to hair at 00:02-00:03 and returns to starting pose at 00:05",
+    "Mirror reflection motion | starts at upper lip (00:00) | holds near cheek with mouth opening (00:09) | moves across eyebrow and forehead asynchronously from foreground source"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection",
+      "invariant_violated": "proportionality & synchronous cause-effect",
+      "description": "The reflection's hand position and head movements do not match the foreground man's actions in scale, position, or timing.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "foreground man and reflection",
+      "invariant_violated": "temporal flow and action completion",
+      "description": "Motion resets to the initial pose at 00:05 and then stalls with the brush hovering static in mid-air from 00:06 to 00:09.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground hand motion | starts at chin (00:00) | hovers near cheek (00:09) | raises to hair at 00:02-00:03 and returns to starting pose at 00:05\",\n    \"Mirror reflection motion | starts at upper lip (00:00) | holds near cheek with mouth opening (00:09) | moves across eyebrow and forehead asynchronously from foreground source\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"proportionality & synchronous cause-effect\",\n      \"description\": \"The reflection's hand position and head movements do not match the foreground man's actions in scale, position, or timing.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"foreground man and reflection\",\n      \"invariant_violated\": \"temporal flow and action completion\",\n      \"description\": \"Motion resets to the initial pose at 00:05 and then stalls with the brush hovering static in mid-air from 00:06 to 00:09.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

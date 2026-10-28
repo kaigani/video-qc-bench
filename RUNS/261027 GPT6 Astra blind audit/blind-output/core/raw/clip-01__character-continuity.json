@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Waitress | First clear sight at 00:10: older woman, gray-brown hair in a low bun, average build, light-blue short-sleeved collared shirt, white apron, dark trousers, reading glasses hanging at her chest | Same recognizable appearance through 01:58 | 00:10\u201300:18 stands behind the counter, wiping while moving left then right; 00:18\u201300:27 remains screen-right behind the counter, facing the approaching and then seated customer on screen-left; 00:27\u201300:32 only her arm and torso edge appear in the serving close-up; absent from the food insert and customer-only shot at 00:32\u201300:44; 00:45\u201300:51 stands at the serving opening facing the camera, turning toward the customer several feet behind her; not visible in the empty counter shot at 00:51\u201300:59; 00:59\u201301:09 works behind the counter on screen-right, initially facing the back worktop, then approaches the seated customer; 01:09\u201301:17 faces him across the counter, then turns away; 01:17\u201301:26 moves around to sit beside him, farther from the camera; 01:26\u201301:35 reverse angle places her screen-left of him, both facing the counter; absent from the empty counter and payment inserts at 01:35\u201301:41; 01:42\u201301:46 visible in the window reflection watching him outside; 01:46\u201301:50 stands inside at the window, facing screen-right toward him, then turns inward; 01:50\u201301:51 sits at the counter and rises; 01:52\u201301:56 appears simultaneously as a foreground figure moving behind the counter and a matching background figure near its far end; by 01:57\u201301:58 one figure remains clearly distinguishable near the rear.",
+    "Male customer | First clear sight at 00:19: older man, short gray hair, gray facial stubble, average-to-stocky build, tan-brown jacket over a dark checked shirt, blue jeans | Same recognizable appearance at his last visible appearance around 01:49 | 00:19\u201300:27 emerges at the rear, walks down the aisle toward the camera, turns screen-right and sits opposite the waitress, remaining screen-left of her; 00:27\u201300:32 his jacketed arms are visible at the counter; absent from the food insert at 00:32\u201300:36; 00:36\u201300:44 seated at the counter end facing the camera; 00:45\u201300:51 seated in the background beyond the waitress, leaning forward; not visible in the empty counter shot at 00:51\u201300:59; 00:59\u201301:09 seated on the customer side at screen-left, facing right toward the counter; 01:09\u201301:17 remains seated opposite the waitress and watches her turn away; 01:17\u201301:26 remains seated as she joins the neighboring seat farther from the camera; 01:26\u201301:35 reverse angle places him screen-right of her, turning his head toward her; absent from the empty counter insert, with hands visible in the payment close-up at 01:38\u201301:39; 01:41\u201301:46 walks outside away from the diner toward the truck; 01:46\u201301:49 stands at its cab, outside and beyond the waitress watching from the window."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "Single-character identity and placement",
+      "description": "After the waitress rises from her stool at 01:51, the 01:52 frame shows her moving through the foreground while a second matching woman with the same bun, blue shirt and white apron is already standing at the far end of the counter. Both figures remain separately visible through subsequent frames as the foreground figure moves behind the counter. No second waitress enters or is established; the tracked character is duplicated in two positions within the same continuous shot.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "character-continuity",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__character-continuity__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

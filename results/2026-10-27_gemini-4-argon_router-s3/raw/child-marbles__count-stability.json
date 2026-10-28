@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:59:15.028Z",
+  "latencyMs": 23855,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 1471,
+    "total_tokens": 3060,
+    "cost": 0.008944,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008944,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.007355
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1170,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Colored plastic balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); at 00:01 the child lifts 1 red ball above the bowl while 8 balls remain visible inside (2 red, 3 green, 3 yellow).",
+    "00:02-00:05: Colored plastic balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); child places the lifted red ball back into the bowl at 00:02, restoring all 9 balls inside the bowl (visible clearly at 00:04-00:05).",
+    "00:06-00:09: Colored plastic balls in glass bowl — up to 6-7 balls clearly visible at any instant while 2-3 are transiently occluded by the child's hand and motion blur during rapid stirring; colors remain strictly red, green, and yellow.",
+    "00:00-00:03: Colored balls on table at bottom-right edge — 1 to 4 balls (red, green, yellow) partially visible at frame edge before being cropped out by the camera zoom-in at 00:04."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Colored plastic balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); at 00:01 the child lifts 1 red ball above the bowl while 8 balls remain visible inside (2 red, 3 green, 3 yellow).\",\n    \"00:02-00:05: Colored plastic balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); child places the lifted red ball back into the bowl at 00:02, restoring all 9 balls inside the bowl (visible clearly at 00:04-00:05).\",\n    \"00:06-00:09: Colored plastic balls in glass bowl — up to 6-7 balls clearly visible at any instant while 2-3 are transiently occluded by the child's hand and motion blur during rapid stirring; colors remain strictly red, green, and yellow.\",\n    \"00:00-00:03: Colored balls on table at bottom-right edge — 1 to 4 balls (red, green, yellow) partially visible at frame edge before being cropped out by the camera zoom-in at 00:04.\"\n  ],\n  \"findings\": []\n}"
+}

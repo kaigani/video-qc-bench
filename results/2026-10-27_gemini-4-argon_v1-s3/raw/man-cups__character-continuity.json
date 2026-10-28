@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__character-continuity",
+  "video": "man-cups.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:19:29.439Z",
+  "latencyMs": 25629,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 1528,
+    "total_tokens": 3121,
+    "cost": 0.009233,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009233,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.00764
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1265,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in blue suit | hands and forearms visible on left at 00:00 wearing white shirt cuffs and blue suit sleeves | full upper body visible by 00:05-00:09 with glasses, beard, blue suit, yellow pocket square, red necktie with black bowtie | continuous single-shot camera orbit reveals full character; appearance, wardrobe, and seated/leaning posture at table remain consistent throughout",
+    "Background seated person in light shirt | blurred in background left-center near windows at 00:02 | exits frame right at 00:05 as camera orbits | remains stationary relative to room",
+    "Background standing person in dark shirt | blurred in background center at 00:00-00:04 | exits frame right at 00:05 as camera orbits | remains in consistent position relative to seated background person",
+    "Background person in dark clothing (rear) | enters view in dark background behind main man at 00:06 | obscured behind main man's head by 00:08-00:09 | stationary in background"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in blue suit | hands and forearms visible on left at 00:00 wearing white shirt cuffs and blue suit sleeves | full upper body visible by 00:05-00:09 with glasses, beard, blue suit, yellow pocket square, red necktie with black bowtie | continuous single-shot camera orbit reveals full character; appearance, wardrobe, and seated/leaning posture at table remain consistent throughout\",\n    \"Background seated person in light shirt | blurred in background left-center near windows at 00:02 | exits frame right at 00:05 as camera orbits | remains stationary relative to room\",\n    \"Background standing person in dark shirt | blurred in background center at 00:00-00:04 | exits frame right at 00:05 as camera orbits | remains in consistent position relative to seated background person\",\n    \"Background person in dark clothing (rear) | enters view in dark background behind main man at 00:06 | obscured behind main man's head by 00:08-00:09 | stationary in background\"\n  ],\n  \"findings\": []\n}"
+}

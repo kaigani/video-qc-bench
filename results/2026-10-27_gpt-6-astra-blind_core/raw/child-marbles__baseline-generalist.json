@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "Child | blue zip-up hoodie, hands above bowl | same clothing, one hand stirring and the other holding the rim | lifts a red ball, returns it, then stirs",
+    "Glass bowl | transparent round bowl on wooden table | same bowl and table | remains in place while the camera moves closer",
+    "Colored balls | smooth, glossy red, yellow and green spheres | several visibly irregular, lobed or flattened shapes | shape instability develops during stirring",
+    "Audio | unassessed | unassessed | no audio perception available"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Colored balls inside the glass bowl",
+      "invariant_violated": "Rigid object shape consistency",
+      "description": "During stirring, the initially smooth spherical balls develop irregular shapes. At 00:07.750 the red ball near the back rim appears blocky and flattened; by 00:09.750 the front green ball has a pronounced indentation and lobed outline, and the right red ball is similarly misshapen. These localized contour changes are inconsistent with the original rigid spheres and exceed simple directional motion blur.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-02__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/core/raw/clip-02__baseline-generalist.json",
+  "frozen_source_sha256": "ca11a877771c643e28c0d83f5f6fb7d2aab4890e8c22f3ce784003d14ad2941e",
+  "key": "child-marbles__baseline-generalist",
+  "parseOk": true
+}

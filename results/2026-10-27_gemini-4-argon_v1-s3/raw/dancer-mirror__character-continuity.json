@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:14:30.021Z",
+  "latencyMs": 27688,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 2291,
+    "total_tokens": 3884,
+    "cost": 0.013048,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013048,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.011455
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1784,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Female dancer | woman with hair in a high bun, black sports bra, black leggings, barefoot, tattoos on back of left forearm and right shoulder, standing in dance studio facing a wall mirror | same attire and general location | at 00:02 her upper body pose abruptly switches from right arm raised to left arm raised (mismatching her mirror reflection) before reverting at 00:03; at 00:07 her lower body stance abruptly switches which leg is extended (again mismatching her mirror reflection) before reverting at 00:08",
+    "Dancer's mirror reflection | reflection in the studio mirror matching the dancer's appearance and initial movement | facing the dancer with right arm raised and right leg extended | remains in a continuous right-arm/right-leg movement while the foreground dancer's limbs inconsistently switch sides at 00:02 and 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Female dancer",
+      "invariant_violated": "movement continuity",
+      "description": "After raising her right arm at 00:01, the foreground dancer abruptly appears at 00:02 with her left arm raised straight overhead and her right arm down by her side, while her mirror reflection simultaneously shows her right arm raised and left arm down; by 00:03 the foreground dancer reverts to having her right arm raised.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Female dancer",
+      "invariant_violated": "movement continuity",
+      "description": "At 00:06 the dancer stands with her weight on her left leg and her right leg extended to the right, but at 00:07 her lower body abruptly flips stance so her weight is on her right leg and her left leg is extended to the left (contradicting her mirror reflection, which keeps the right leg extended), before snapping back to the original stance at 00:08.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Female dancer | woman with hair in a high bun, black sports bra, black leggings, barefoot, tattoos on back of left forearm and right shoulder, standing in dance studio facing a wall mirror | same attire and general location | at 00:02 her upper body pose abruptly switches from right arm raised to left arm raised (mismatching her mirror reflection) before reverting at 00:03; at 00:07 her lower body stance abruptly switches which leg is extended (again mismatching her mirror reflection) before reverting at 00:08\",\n    \"Dancer's mirror reflection | reflection in the studio mirror matching the dancer's appearance and initial movement | facing the dancer with right arm raised and right leg extended | remains in a continuous right-arm/right-leg movement while the foreground dancer's limbs inconsistently switch sides at 00:02 and 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Female dancer\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"After raising her right arm at 00:01, the foreground dancer abruptly appears at 00:02 with her left arm raised straight overhead and her right arm down by her side, while her mirror reflection simultaneously shows her right arm raised and left arm down; by 00:03 the foreground dancer reverts to having her right arm raised.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Female dancer\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"At 00:06 the dancer stands with her weight on her left leg and her right leg extended to the right, but at 00:07 her lower body abruptly flips stance so her weight is on her right leg and her left leg is extended to the left (contradicting her mirror reflection, which keeps the right leg extended), before snapping back to the original stance at 00:08.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

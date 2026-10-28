@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__count-stability",
+  "video": "woman-apple.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:53:37.556Z",
+  "latencyMs": 53680,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 3808,
+    "total_tokens": 5397,
+    "cost": 0.020629,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020629,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01904
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3472,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Red fruit held by the woman under the umbrella: 1 clearly visible in her right hand just above her left hand on the umbrella shaft from 00:00 to 00:07.",
+    "Red fruit held by the woman under the umbrella: drops from 1 to 0 at 00:08–00:09 with no visible cause (the fruit and her right hand holding it above the handle vanish, leaving the bare umbrella shaft visible).",
+    "Fruit piles in market crates (left and right stalls): large groups of apples, citrus, and avocados remain constant in count as the camera moves past from 00:00 to 00:09 (though several crates undergo artificial color shifts to blue and purple)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red fruit in the woman's hand",
+      "invariant_violated": "unexplained count change (disappearance)",
+      "description": "The single red fruit held in the woman's right hand just above her left hand on the umbrella shaft is clearly visible from 00:00 through 00:07, then vanishes completely between 00:07 and 00:08 while she holds a static pose, leaving the umbrella shaft bare with no visible removal or occlusion.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Red fruit held by the woman under the umbrella: 1 clearly visible in her right hand just above her left hand on the umbrella shaft from 00:00 to 00:07.\",\n    \"Red fruit held by the woman under the umbrella: drops from 1 to 0 at 00:08–00:09 with no visible cause (the fruit and her right hand holding it above the handle vanish, leaving the bare umbrella shaft visible).\",\n    \"Fruit piles in market crates (left and right stalls): large groups of apples, citrus, and avocados remain constant in count as the camera moves past from 00:00 to 00:09 (though several crates undergo artificial color shifts to blue and purple).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red fruit in the woman's hand\",\n      \"invariant_violated\": \"unexplained count change (disappearance)\",\n      \"description\": \"The single red fruit held in the woman's right hand just above her left hand on the umbrella shaft is clearly visible from 00:00 through 00:07, then vanishes completely between 00:07 and 00:08 while she holds a static pose, leaving the umbrella shaft bare with no visible removal or occlusion.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

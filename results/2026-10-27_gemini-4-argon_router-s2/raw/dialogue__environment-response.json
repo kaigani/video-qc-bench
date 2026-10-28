@@ -1,0 +1,49 @@
+{
+  "key": "dialogue__environment-response",
+  "video": "dialogue.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:47:32.879Z",
+  "latencyMs": 60488,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 4017,
+    "total_tokens": 5547,
+    "cost": 0.021615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021615,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.020085
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3719,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Indoor gravity and still air (00:00-00:06): evidenced by the subject's settled hair, motionless striped shirt collar, and the limp vertical hang of the blue coat on the background hook; affects all garments consistently.",
+    "Subject turning and walking motion (00:07-00:09): evidenced by the man pivoting left and stepping toward the door to knock; should affect only his own clothing and body, leaving background hanging garments undisturbed.",
+    "Background hanging blue coat (00:07-00:09): despite no physical contact from the subject and no indoor airflow affecting the subject's hair or shirt, the hanging coat flares outward and shifts its hanging geometry."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "hanging blue coat",
+      "invariant_violated": "effect without plausible physical cause",
+      "description": "As the man turns and walks to the left without touching the background hook, the blue coat hanging behind him flares outward into a wide bell shape and shifts position along the door despite still indoor air and no corresponding movement in the subject's hair or shirt.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Indoor gravity and still air (00:00-00:06): evidenced by the subject's settled hair, motionless striped shirt collar, and the limp vertical hang of the blue coat on the background hook; affects all garments consistently.\",\n    \"Subject turning and walking motion (00:07-00:09): evidenced by the man pivoting left and stepping toward the door to knock; should affect only his own clothing and body, leaving background hanging garments undisturbed.\",\n    \"Background hanging blue coat (00:07-00:09): despite no physical contact from the subject and no indoor airflow affecting the subject's hair or shirt, the hanging coat flares outward and shifts its hanging geometry.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"hanging blue coat\",\n      \"invariant_violated\": \"effect without plausible physical cause\",\n      \"description\": \"As the man turns and walks to the left without touching the background hook, the blue coat hanging behind him flares outward into a wide bell shape and shifts position along the door despite still indoor air and no corresponding movement in the subject's hair or shirt.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

@@ -1,0 +1,88 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:30:38.115Z",
+  "latencyMs": 99657,
+  "usage": {
+    "prompt_tokens": 12337,
+    "completion_tokens": 6920,
+    "total_tokens": 19257,
+    "cost": 0.046937,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.046937,
+      "upstream_inference_prompt_cost": 0.012337,
+      "upstream_inference_completions_cost": 0.0346
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5012,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "ANCHORS: A1 = main diner counter (dividing customer aisle/stools on left from staff work area/appliances on right); A2 = kitchen pass-through window at back wall; A3 = exterior windows and booths along left wall.",
+    "shot 1: 00:00-00:09, exterior wide shot of diner and parked semi-truck cab at dawn; no people visible.",
+    "shot 2: 00:10-00:18, interior medium-wide shot facing A1 (counter) and A2 (pass-through); Waitress present on staff side of A1, facing customer side, wiping counter.",
+    "shot 3: 00:19-00:26, interior wide shot down main aisle between A3 (left) and A1 (right) toward A2 (back); Man enters near A2, walks down customer side of A1, sits on stool facing A1; Waitress on staff side of A1 picks up coffee pot.",
+    "shot 4: 00:27-00:31, close-up on A1 surface; Man's hands resting on customer side (left), Waitress pouring coffee from staff side (right).",
+    "shot 5: 00:32-00:35, close-up on A1 surface showing plate with egg and toast; no people visible.",
+    "shot 6: 00:36-00:44, interior wide shot down main aisle (same framing as shot 3); Man present but torso is on staff side of A1 while right leg extends onto customer stool, clipping through the curved counter geometry, facing camera; Waitress absent.",
+    "shot 7: 00:45-00:50, interior medium reverse shot from inside kitchen looking out through A2 toward dining area; Waitress present at A2 wiping sill; Man present in background seated on customer side of A1 facing counter.",
+    "shot 8: 00:51-00:59, interior medium-wide shot of A1 and A2 (same framing as shot 2); both Waitress and Man absent.",
+    "shot 9: 01:00-01:08, interior wide shot down main aisle (same framing as shot 3); Man seated on customer side of A1 facing counter with coffee mug; Waitress on staff side of A1 turns from appliances and walks to Man carrying plate of food.",
+    "shot 10: 01:09-01:17, interior medium two-shot along A1; Man seated on customer side (left) facing right; Waitress on staff side (right) sets plate down, touches Man's mug with a second mug, then picks the plate back up and turns toward back of staff area.",
+    "shot 11: 01:18-01:26, interior wide shot down main aisle (same framing as shot 9); Man seated on customer side of A1; Waitress (now empty-handed) walks from back end of A1 onto customer side and sits on stool beside Man.",
+    "shot 12: 01:27-01:34, interior medium two-shot along A1 (reverse angle); Man and Waitress both seated side-by-side on customer side of A1 holding coffee mugs, facing counter (screen left).",
+    "shot 13: 01:35-01:36, interior medium-wide shot of A1 and A2 (same framing as shots 2 and 8); both Man and Waitress absent.",
+    "shot 14: 01:37-01:40, close-up on A1 surface next to white mug; a male left hand enters from screen left placing cash, and a male right hand in a plaid cuff enters from screen right (opposite side of counter) to pat the cash.",
+    "shot 15: 01:41-01:45, view through A3 window of Man walking outside toward a green box truck, with large superimposed reflection of Waitress on truck.",
+    "shot 16: 01:46-01:49, interior medium shot at A3 window; Waitress standing inside by booths facing window as Man enters truck outside.",
+    "shot 17: 01:50-01:58, interior wide shot down main aisle (same framing as shot 3); Waitress #1 is seated on customer stool at A1, stands up at 01:51, rounds front curve of A1 to staff side, and walks toward back, while a duplicate Waitress #2 simultaneously appears in the background at the customer side of A1 wiping the counter (01:51-01:55) before also walking behind A1 (01:56-01:58)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Man (customer) and main counter (A1)",
+      "invariant_violated": "body overlapping/passing through fixed geometry and wrong side of anchor",
+      "description": "In shot 3 (00:19-00:26), the man sits on a stool on the customer side (left) of the counter facing right. In shot 6 (00:36-00:44), from the exact same camera angle, his torso is positioned inside the staff area behind the counter while his right leg extends out onto the customer-side stool, causing his body to intersect directly through the solid counter corner while facing the camera. The waitress who was standing right in front of him is also missing.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:51",
+      "entity": "Waitress and Man",
+      "invariant_violated": "person present before/after cut missing with no exit",
+      "description": "In shot 7 (00:45-00:50), the waitress is wiping the kitchen pass-through window (A2) and the man is seated at the counter (A1). Shot 8 (00:51-00:59) shows the pass-through window and counter completely empty, yet shot 9 (01:00-01:08) immediately shows both the man and waitress still in the diner at the counter. The same unexplained disappearance occurs in shot 13 (01:35-01:36) between shots 12 and 14.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "Man's hands placing money on counter",
+      "invariant_violated": "action started by one hand continuing as a different hand from opposite side",
+      "description": "In the close-up on the counter (01:37-01:40), a man's bare-wristed left hand reaches in from screen left to slide dollar bills onto the counter, and immediately a man's right hand wearing a plaid shirt cuff reaches in from the opposite side of the frame (screen right, the staff side of the counter) to pat and hold the bills.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "unexplained relocation across cut and duplicate instance of a person",
+      "description": "In shot 16 (01:46-01:49), the waitress is standing by the left exterior windows watching the man climb into his truck. At the cut to shot 17 (01:50), she is instantaneously seated on the customer stool at the counter. Then at 01:51, as she stands up and walks toward the foreground around the front end of the counter to the staff side, a second identical instance of the waitress is simultaneously visible behind her in the background wiping the counter (01:51-01:55) before both waitresses walk toward the back behind the counter at the same time (01:56-01:58).",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"ANCHORS: A1 = main diner counter (dividing customer aisle/stools on left from staff work area/appliances on right); A2 = kitchen pass-through window at back wall; A3 = exterior windows and booths along left wall.\",\n    \"shot 1: 00:00-00:09, exterior wide shot of diner and parked semi-truck cab at dawn; no people visible.\",\n    \"shot 2: 00:10-00:18, interior medium-wide shot facing A1 (counter) and A2 (pass-through); Waitress present on staff side of A1, facing customer side, wiping counter.\",\n    \"shot 3: 00:19-00:26, interior wide shot down main aisle between A3 (left) and A1 (right) toward A2 (back); Man enters near A2, walks down customer side of A1, sits on stool facing A1; Waitress on staff side of A1 picks up coffee pot.\",\n    \"shot 4: 00:27-00:31, close-up on A1 surface; Man's hands resting on customer side (left), Waitress pouring coffee from staff side (right).\",\n    \"shot 5: 00:32-00:35, close-up on A1 surface showing plate with egg and toast; no people visible.\",\n    \"shot 6: 00:36-00:44, interior wide shot down main aisle (same framing as shot 3); Man present but torso is on staff side of A1 while right leg extends onto customer stool, clipping through the curved counter geometry, facing camera; Waitress absent.\",\n    \"shot 7: 00:45-00:50, interior medium reverse shot from inside kitchen looking out through A2 toward dining area; Waitress present at A2 wiping sill; Man present in background seated on customer side of A1 facing counter.\",\n    \"shot 8: 00:51-00:59, interior medium-wide shot of A1 and A2 (same framing as shot 2); both Waitress and Man absent.\",\n    \"shot 9: 01:00-01:08, interior wide shot down main aisle (same framing as shot 3); Man seated on customer side of A1 facing counter with coffee mug; Waitress on staff side of A1 turns from appliances and walks to Man carrying plate of food.\",\n    \"shot 10: 01:09-01:17, interior medium two-shot along A1; Man seated on customer side (left) facing right; Waitress on staff side (right) sets plate down, touches Man's mug with a second mug, then picks the plate back up and turns toward back of staff area.\",\n    \"shot 11: 01:18-01:26, interior wide shot down main aisle (same framing as shot 9); Man seated on customer side of A1; Waitress (now empty-handed) walks from back end of A1 onto customer side and sits on stool beside Man.\",\n    \"shot 12: 01:27-01:34, interior medium two-shot along A1 (reverse angle); Man and Waitress both seated side-by-side on customer side of A1 holding coffee mugs, facing counter (screen left).\",\n    \"shot 13: 01:35-01:36, interior medium-wide shot of A1 and A2 (same framing as shots 2 and 8); both Man and Waitress absent.\",\n    \"shot 14: 01:37-01:40, close-up on A1 surface next to white mug; a male left hand enters from screen left placing cash, and a male right hand in a plaid cuff enters from screen right (opposite side of counter) to pat the cash.\",\n    \"shot 15: 01:41-01:45, view through A3 window of Man walking outside toward a green box truck, with large superimposed reflection of Waitress on truck.\",\n    \"shot 16: 01:46-01:49, interior medium shot at A3 window; Waitress standing inside by booths facing window as Man enters truck outside.\",\n    \"shot 17: 01:50-01:58, interior wide shot down main aisle (same framing as shot 3); Waitress #1 is seated on customer stool at A1, stands up at 01:51, rounds front curve of A1 to staff side, and walks toward back, while a duplicate Waitress #2 simultaneously appears in the background at the customer side of A1 wiping the counter (01:51-01:55) before also walking behind A1 (01:56-01:58).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Man (customer) and main counter (A1)\",\n      \"invariant_violated\": \"body overlapping/passing through fixed geometry and wrong side of anchor\",\n      \"description\": \"In shot 3 (00:19-00:26), the man sits on a stool on the customer side (left) of the counter facing right. In shot 6 (00:36-00:44), from the exact same camera angle, his torso is positioned inside the staff area behind the counter while his right leg extends out onto the customer-side stool, causing his body to intersect directly through the solid counter corner while facing the camera. The waitress who was standing right in front of him is also missing.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:51\",\n      \"entity\": \"Waitress and Man\",\n      \"invariant_violated\": \"person present before/after cut missing with no exit\",\n      \"description\": \"In shot 7 (00:45-00:50), the waitress is wiping the kitchen pass-through window (A2) and the man is seated at the counter (A1). Shot 8 (00:51-00:59) shows the pass-through window and counter completely empty, yet shot 9 (01:00-01:08) immediately shows both the man and waitress still in the diner at the counter. The same unexplained disappearance occurs in shot 13 (01:35-01:36) between shots 12 and 14.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"Man's hands placing money on counter\",\n      \"invariant_violated\": \"action started by one hand continuing as a different hand from opposite side\",\n      \"description\": \"In the close-up on the counter (01:37-01:40), a man's bare-wristed left hand reaches in from screen left to slide dollar bills onto the counter, and immediately a man's right hand wearing a plaid shirt cuff reaches in from the opposite side of the frame (screen right, the staff side of the counter) to pat and hold the bills.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"unexplained relocation across cut and duplicate instance of a person\",\n      \"description\": \"In shot 16 (01:46-01:49), the waitress is standing by the left exterior windows watching the man climb into his truck. At the cut to shot 17 (01:50), she is instantaneously seated on the customer stool at the counter. Then at 01:51, as she stands up and walks toward the foreground around the front end of the counter to the staff side, a second identical instance of the waitress is simultaneously visible behind her in the background wiping the counter (01:51-01:55) before both waitresses walk toward the back behind the counter at the same time (01:56-01:58).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

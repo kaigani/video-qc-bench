@@ -1,0 +1,49 @@
+{
+  "key": "man-in-mirror__possession-tracking",
+  "video": "man-in-mirror.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:02:52.719Z",
+  "latencyMs": 16593,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 923,
+    "total_tokens": 2478,
+    "cost": 0.00617,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00617,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.004615
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 583,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: White and blue toothbrush held in the man's right hand (in mouth at 00:00-00:01, raised to eyebrow at 00:02).",
+    "00:03: Object in the man's right hand (and its reflection in the mirror) transforms into a black comb as he strokes his hair, without his hand ever leaving the frame or releasing the object.",
+    "00:04-00:09: Object in the man's right hand transforms back into the white and blue toothbrush as he lowers his hand to his eyebrow (00:04), mouth (00:05), and holds it near his cheek/mouth (00:06-00:09)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "toothbrush in right hand",
+      "invariant_violated": "object identity / continuous chain of custody",
+      "description": "While continuously held in the man's right hand in plain view, the white and blue toothbrush morphs into a black comb as he moves his hand from his eyebrow to his hair at 00:03, then morphs back into the white and blue toothbrush at 00:04 as he lowers his hand.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: White and blue toothbrush held in the man's right hand (in mouth at 00:00-00:01, raised to eyebrow at 00:02).\",\n    \"00:03: Object in the man's right hand (and its reflection in the mirror) transforms into a black comb as he strokes his hair, without his hand ever leaving the frame or releasing the object.\",\n    \"00:04-00:09: Object in the man's right hand transforms back into the white and blue toothbrush as he lowers his hand to his eyebrow (00:04), mouth (00:05), and holds it near his cheek/mouth (00:06-00:09).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"toothbrush in right hand\",\n      \"invariant_violated\": \"object identity / continuous chain of custody\",\n      \"description\": \"While continuously held in the man's right hand in plain view, the white and blue toothbrush morphs into a black comb as he moves his hand from his eyebrow to his hair at 00:03, then morphs back into the white and blue toothbrush at 00:04 as he lowers his hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

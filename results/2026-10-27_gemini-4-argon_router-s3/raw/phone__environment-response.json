@@ -1,0 +1,40 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:03:25.530Z",
+  "latencyMs": 12217,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 556,
+    "total_tokens": 2086,
+    "cost": 0.00431,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00431,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.00278
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 404,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Ambient wind/airflow (00:00-00:03): No significant wind is implied; the bushes next to the railing remain still, and the background pedestrian's hair and clothing move only in response to their walking gait.",
+    "Gravity and walking motion (00:00-00:03): The pedestrian walks down the steps carrying a red bag; the bag and hair sway naturally with each step.",
+    "Foreground subject interaction (00:03-00:09): Hands hold and tap a smartphone in calm conditions with no external weather or airflow disturbances."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Ambient wind/airflow (00:00-00:03): No significant wind is implied; the bushes next to the railing remain still, and the background pedestrian's hair and clothing move only in response to their walking gait.\",\n    \"Gravity and walking motion (00:00-00:03): The pedestrian walks down the steps carrying a red bag; the bag and hair sway naturally with each step.\",\n    \"Foreground subject interaction (00:03-00:09): Hands hold and tap a smartphone in calm conditions with no external weather or airflow disturbances.\"\n  ],\n  \"findings\": []\n}"
+}

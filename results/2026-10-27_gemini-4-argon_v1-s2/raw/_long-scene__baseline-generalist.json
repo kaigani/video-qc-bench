@@ -1,0 +1,91 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:46:53.601Z",
+  "latencyMs": 62085,
+  "usage": {
+    "prompt_tokens": 12140,
+    "completion_tokens": 4140,
+    "total_tokens": 16280,
+    "cost": 0.03284,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03284,
+      "upstream_inference_prompt_cost": 0.01214,
+      "upstream_inference_completions_cost": 0.0207
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3090,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck | white semi-truck cab parked outside at dusk (00:00) | dark-green vintage box truck in morning light (01:41) | changes vehicle type and color between arrival and departure",
+    "waitress | single older woman in blue shirt and white apron wiping counter (00:10) | two identical copies of the waitress behind the counter (01:52-01:58) | reflection freezes in window (01:48), then she clips through the solid counter and duplicates into two people (01:51)",
+    "coffee carafe | held by waitress at counter (00:24) | held upright above mug (00:31) | liquid streams through the solid bottom/side of the glass bulb without tilting (00:28-00:30)",
+    "plate of food | served with toast and sunny-side-up egg (00:32) | picked up and carried away by waitress (01:09-01:17) | disappears from counter in wide shot (01:00-01:08) before reappearing in close-up (01:09)",
+    "dollar bills | single folded bill slid onto counter by left hand (01:38) | two bills resting on counter (01:40) | second bill materializes out of nowhere under the right hand's fingers (01:38-01:39)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "coffee carafe",
+      "invariant_violated": "physical plausibility",
+      "description": "The glass coffee pot is held completely upright with a level liquid surface inside, yet a stream of coffee pours straight through the solid glass bottom/side of the carafe into the mug instead of from the spout.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "01:00",
+      "entity": "plate of food",
+      "invariant_violated": "object continuity",
+      "description": "The plate of toast and egg sitting in front of the man at 00:36-00:44 is completely gone in the wide shot from 01:00-01:08 (only his mug is on the counter and the waitress approaches empty-handed), then suddenly reappears on the counter at 01:09 for the waitress to pick up.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "dollar bills",
+      "invariant_violated": "object permanence",
+      "description": "As the man's left hand slides a single folded bill onto the counter, his empty right hand reaches in from the opposite side and a second bill morphs into existence underneath his right fingers.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "truck",
+      "invariant_violated": "entity consistency",
+      "description": "In the opening shot (00:00-00:09), the vehicle idling outside the diner is a white sleeper-cab semi-truck, but when the man walks out to his vehicle at 01:41, it has changed into a dark-green box truck.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:46",
+      "entity": "waitress reflection",
+      "invariant_violated": "reflection consistency",
+      "description": "While the waitress stands inside looking out the window, her reflection on the glass is angled incorrectly and remains completely frozen staring forward even as the real waitress lowers her head and turns away at 01:48-01:49.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress",
+      "invariant_violated": "solid object non-penetration and entity uniqueness",
+      "description": "When the waitress stands up from the stool on the customer side of the counter, she walks directly through the solid counter to the employee side while a second, identical copy of the waitress simultaneously appears in the background wiping the counter.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"truck | white semi-truck cab parked outside at dusk (00:00) | dark-green vintage box truck in morning light (01:41) | changes vehicle type and color between arrival and departure\",\n    \"waitress | single older woman in blue shirt and white apron wiping counter (00:10) | two identical copies of the waitress behind the counter (01:52-01:58) | reflection freezes in window (01:48), then she clips through the solid counter and duplicates into two people (01:51)\",\n    \"coffee carafe | held by waitress at counter (00:24) | held upright above mug (00:31) | liquid streams through the solid bottom/side of the glass bulb without tilting (00:28-00:30)\",\n    \"plate of food | served with toast and sunny-side-up egg (00:32) | picked up and carried away by waitress (01:09-01:17) | disappears from counter in wide shot (01:00-01:08) before reappearing in close-up (01:09)\",\n    \"dollar bills | single folded bill slid onto counter by left hand (01:38) | two bills resting on counter (01:40) | second bill materializes out of nowhere under the right hand's fingers (01:38-01:39)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"coffee carafe\",\n      \"invariant_violated\": \"physical plausibility\",\n      \"description\": \"The glass coffee pot is held completely upright with a level liquid surface inside, yet a stream of coffee pours straight through the solid glass bottom/side of the carafe into the mug instead of from the spout.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"01:00\",\n      \"entity\": \"plate of food\",\n      \"invariant_violated\": \"object continuity\",\n      \"description\": \"The plate of toast and egg sitting in front of the man at 00:36-00:44 is completely gone in the wide shot from 01:00-01:08 (only his mug is on the counter and the waitress approaches empty-handed), then suddenly reappears on the counter at 01:09 for the waitress to pick up.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"dollar bills\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"As the man's left hand slides a single folded bill onto the counter, his empty right hand reaches in from the opposite side and a second bill morphs into existence underneath his right fingers.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"truck\",\n      \"invariant_violated\": \"entity consistency\",\n      \"description\": \"In the opening shot (00:00-00:09), the vehicle idling outside the diner is a white sleeper-cab semi-truck, but when the man walks out to his vehicle at 01:41, it has changed into a dark-green box truck.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:46\",\n      \"entity\": \"waitress reflection\",\n      \"invariant_violated\": \"reflection consistency\",\n      \"description\": \"While the waitress stands inside looking out the window, her reflection on the glass is angled incorrectly and remains completely frozen staring forward even as the real waitress lowers her head and turns away at 01:48-01:49.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"solid object non-penetration and entity uniqueness\",\n      \"description\": \"When the waitress stands up from the stool on the customer side of the counter, she walks directly through the solid counter to the employee side while a second, identical copy of the waitress simultaneously appears in the background wiping the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

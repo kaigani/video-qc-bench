@@ -1,0 +1,49 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:22:18.016Z",
+  "latencyMs": 45834,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3010,
+    "total_tokens": 4605,
+    "cost": 0.016645,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016645,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01505
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2547,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground man | positioned on the left side of the frame facing the mirror, with his right shoulder and raised right arm on the camera-right side of his head | remains in the same position on the left side of the frame | raises hand to eyebrow and hair (00:02-00:04), then holds brush in front of face (00:05-00:09)",
+    "Mirror frame and bathroom background | wooden mirror frame on center-left and bottom; reflection shows wooden door and light switch on the left, dark shelves on the right | unchanged throughout clip | none",
+    "Reflected view of man | visible inside the mirror facing forward, with his raised arm on the camera-left side of his torso (near the light switch and door) | remains in the same reflected position | hand moves to eyebrow/hair (00:02-00:04) and rests near upper lip/cheek (00:05-00:09)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Reflected view of man",
+      "invariant_violated": "viewpoint consistency",
+      "description": "The spatial geometry in the mirror view is laterally inverted relative to the 3D scene layout. From the camera's viewpoint behind the man, his raised right arm is on the right side of his body (toward the dark wooden shelves). In a planar mirror, the reflected arm must remain on the right side of the frame (near the shelves), but instead it appears on the left side of his reflected body (next to the light switch and wooden door), as if viewing an unmirrored second camera angle. Additionally, from 00:06 to 00:09, the spatial position of the brush relative to his face diverges between the foreground view (held inches away in mid-air) and the mirror view (pressed against his upper lip and cheek).",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground man | positioned on the left side of the frame facing the mirror, with his right shoulder and raised right arm on the camera-right side of his head | remains in the same position on the left side of the frame | raises hand to eyebrow and hair (00:02-00:04), then holds brush in front of face (00:05-00:09)\",\n    \"Mirror frame and bathroom background | wooden mirror frame on center-left and bottom; reflection shows wooden door and light switch on the left, dark shelves on the right | unchanged throughout clip | none\",\n    \"Reflected view of man | visible inside the mirror facing forward, with his raised arm on the camera-left side of his torso (near the light switch and door) | remains in the same reflected position | hand moves to eyebrow/hair (00:02-00:04) and rests near upper lip/cheek (00:05-00:09)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Reflected view of man\",\n      \"invariant_violated\": \"viewpoint consistency\",\n      \"description\": \"The spatial geometry in the mirror view is laterally inverted relative to the 3D scene layout. From the camera's viewpoint behind the man, his raised right arm is on the right side of his body (toward the dark wooden shelves). In a planar mirror, the reflected arm must remain on the right side of the frame (near the shelves), but instead it appears on the left side of his reflected body (next to the light switch and wooden door), as if viewing an unmirrored second camera angle. Additionally, from 00:06 to 00:09, the spatial position of the brush relative to his face diverges between the foreground view (held inches away in mid-air) and the mirror view (pressed against his upper lip and cheek).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:05:36.371Z",
+  "latencyMs": 26667,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1423,
+    "total_tokens": 3036,
+    "cost": 0.008728,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008728,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.007115
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1065,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red apple | held in the woman's right hand against her left hand at chest height, whole and intact | vanished by 00:08 as both hands clasp directly around the umbrella shaft | gradually shrinks at 00:07 and disappears completely by 00:08 with no action of dropping or storing it",
+    "blue umbrella | open, held upright by its shaft in the woman's left hand | open, held upright by both hands clasped on the shaft | remains open and held throughout the shot",
+    "fruit crates on left stall | red crate with orange fruit, purple tray with blue fruit, and orange tray with peach-colored fruit visible at 00:04-00:05 | trays shift into purple fruit and green/white boxes after pedestrian passes at 00:06-00:07 | background produce changes identity/color during occlusion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "identity & persistence",
+      "description": "The red apple held in the woman's right hand next to the umbrella shaft from 00:00 to 00:06 shrinks into her fingers at 00:07 and vanishes completely by 00:08, leaving her right hand clasped directly over her left hand on the umbrella handle without her ever dropping or putting the apple away.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"red apple | held in the woman's right hand against her left hand at chest height, whole and intact | vanished by 00:08 as both hands clasp directly around the umbrella shaft | gradually shrinks at 00:07 and disappears completely by 00:08 with no action of dropping or storing it\",\n    \"blue umbrella | open, held upright by its shaft in the woman's left hand | open, held upright by both hands clasped on the shaft | remains open and held throughout the shot\",\n    \"fruit crates on left stall | red crate with orange fruit, purple tray with blue fruit, and orange tray with peach-colored fruit visible at 00:04-00:05 | trays shift into purple fruit and green/white boxes after pedestrian passes at 00:06-00:07 | background produce changes identity/color during occlusion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red apple held in the woman's right hand next to the umbrella shaft from 00:00 to 00:06 shrinks into her fingers at 00:07 and vanishes completely by 00:08, leaving her right hand clasped directly over her left hand on the umbrella handle without her ever dropping or putting the apple away.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

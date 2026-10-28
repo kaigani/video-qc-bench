@@ -83,3 +83,21 @@ DEFECTS:
 - P0: The woman's torso is poking out of the hood of the car, and she is in front of the windshield (this is the primary defect to catch)
 - P4: License plate number is garbled
 - P3: Road topology doesn't make sense with electricity poles in the middle of the road and lane lines morph
+
+## Human-confirmed follow-up — 2026-10-27
+
+The structured `ground-truth/ground-truth.json` is the current scoring key (50 labels,
+147 severity points). KT confirmed the following after the blind Astra outputs were frozen:
+
+- **LONG-16, P2:** In the diner at 01:12.5–01:14, two separate mugs merge into one;
+  the waitress withdraws an empty hand. Distinct from LONG-14's mug-position change.
+- **LONG-17, P2:** The kitchen visible through the serving hatch changes from the established
+  extractor/cooking station to a blue-panel/worktop arrangement at 00:36–00:44. The poster
+  above also changes (additional detail supplied by KT). Treat the background changes as one
+  defect, distinct from LONG-4's exterior/interior mismatch.
+- **LONG-8, P2, extended:** Include the return through the uninterrupted counter at 01:52–01:53,
+  after the waitress rises. Either the original crossing or this return earns LONG-8 credit once;
+  no additional label or weight is created.
+
+The original human audit above is retained as historical evidence. Later structured additions,
+including audio defect DIAL-1 on the visually clean dialogue clip, also remain authoritative.

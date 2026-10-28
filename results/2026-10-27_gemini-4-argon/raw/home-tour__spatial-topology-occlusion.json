@@ -1,0 +1,66 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:32:41.583Z",
+  "latencyMs": 55059,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3805,
+    "total_tokens": 5400,
+    "cost": 0.02062,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02062,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.019025
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2863,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen right wall & counter | At 00:00, a grey wall with a vertical framed picture and two light switches sits immediately left of an inside corner with upper cabinets, tile backsplash, and a counter with a microwave | By 00:01-00:03, the cabinets and microwave vanish/shift away from the picture, replaced by an extended grey wall with a small horizontal picture, another switch, and a doorway into a bedroom | Impossible architectural morphing as camera advances",
+    "Vertical framed floral picture | At 00:00-00:03, hangs on the kitchen wall outside the bedroom entrance | At 00:07, hangs inside the bedroom to the left of the exit doorway | Teleports from the kitchen wall into the bedroom interior",
+    "Bedroom layout & doorways | Entered at 00:03-00:04 by turning 90 degrees right from the kitchen; bed headboard is on the far wall ahead, with windows on the left and right walls | At 00:06-00:07, turning 90 degrees left toward the left wall reveals a doorway exiting back into the kitchen along the original heading | Impossible room topology and connectivity",
+    "Kitchen stove wall & far hallway | At 00:00-00:02, left wall has wooden cabinets over a stove (no over-the-range microwave) and a wide doorway ahead leading to a white door covered with sheer curtains | At 00:08-00:09, exiting the bedroom reveals an over-the-range microwave above the stove on the left, a framed picture and curtain to the right of the hallway doorway, and an uncurtained glass-paned door at the far end | Mutated room layout upon re-entry"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "kitchen right wall and doorway",
+      "invariant_violated": "scene layout",
+      "description": "At 00:00, the grey wall with the vertical framed picture terminates immediately to its right at an inside corner with wooden upper cabinets, a tile backsplash, and a counter holding a microwave. As the camera moves forward between 00:01 and 00:03, that cabinet and counter corner disappears from beside the picture, replaced by an extension of the grey wall (with a small horizontal picture and light switch) and a doorway leading into a bedroom.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom doorway and wall layout",
+      "invariant_violated": "connectivity",
+      "description": "The woman turns 90 degrees right from the kitchen at 00:03 to enter the bedroom, facing the bed on the far wall. At 00:06-00:07, she turns 90 degrees left (rather than turning 180 degrees back toward the doorway she entered) and walks through a doorway on the perpendicular wall that impossibly connects straight back into the kitchen along her original direction of travel. Additionally, the vertical framed picture that was on the kitchen wall at 00:00-00:03 is now hanging inside the bedroom to the left of this doorway at 00:07.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen architecture and fixtures",
+      "invariant_violated": "scene layout",
+      "description": "When the woman exits the bedroom back into the kitchen at 00:08-00:09, the kitchen's fixed layout has changed compared to 00:00-00:02: a stainless steel microwave is now mounted under the cabinets above the stove on the left, the right side of the hallway opening now has a small framed picture and a window curtain, and the far white door now has exposed glass panes instead of sheer curtains.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen right wall & counter | At 00:00, a grey wall with a vertical framed picture and two light switches sits immediately left of an inside corner with upper cabinets, tile backsplash, and a counter with a microwave | By 00:01-00:03, the cabinets and microwave vanish/shift away from the picture, replaced by an extended grey wall with a small horizontal picture, another switch, and a doorway into a bedroom | Impossible architectural morphing as camera advances\",\n    \"Vertical framed floral picture | At 00:00-00:03, hangs on the kitchen wall outside the bedroom entrance | At 00:07, hangs inside the bedroom to the left of the exit doorway | Teleports from the kitchen wall into the bedroom interior\",\n    \"Bedroom layout & doorways | Entered at 00:03-00:04 by turning 90 degrees right from the kitchen; bed headboard is on the far wall ahead, with windows on the left and right walls | At 00:06-00:07, turning 90 degrees left toward the left wall reveals a doorway exiting back into the kitchen along the original heading | Impossible room topology and connectivity\",\n    \"Kitchen stove wall & far hallway | At 00:00-00:02, left wall has wooden cabinets over a stove (no over-the-range microwave) and a wide doorway ahead leading to a white door covered with sheer curtains | At 00:08-00:09, exiting the bedroom reveals an over-the-range microwave above the stove on the left, a framed picture and curtain to the right of the hallway doorway, and an uncurtained glass-paned door at the far end | Mutated room layout upon re-entry\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"kitchen right wall and doorway\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"At 00:00, the grey wall with the vertical framed picture terminates immediately to its right at an inside corner with wooden upper cabinets, a tile backsplash, and a counter holding a microwave. As the camera moves forward between 00:01 and 00:03, that cabinet and counter corner disappears from beside the picture, replaced by an extension of the grey wall (with a small horizontal picture and light switch) and a doorway leading into a bedroom.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"bedroom doorway and wall layout\",\n      \"invariant_violated\": \"connectivity\",\n      \"description\": \"The woman turns 90 degrees right from the kitchen at 00:03 to enter the bedroom, facing the bed on the far wall. At 00:06-00:07, she turns 90 degrees left (rather than turning 180 degrees back toward the doorway she entered) and walks through a doorway on the perpendicular wall that impossibly connects straight back into the kitchen along her original direction of travel. Additionally, the vertical framed picture that was on the kitchen wall at 00:00-00:03 is now hanging inside the bedroom to the left of this doorway at 00:07.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"kitchen architecture and fixtures\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"When the woman exits the bedroom back into the kitchen at 00:08-00:09, the kitchen's fixed layout has changed compared to 00:00-00:02: a stainless steel microwave is now mounted under the cabinets above the stove on the left, the right side of the hallway opening now has a small framed picture and a window curtain, and the far white door now has exposed glass panes instead of sheer curtains.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

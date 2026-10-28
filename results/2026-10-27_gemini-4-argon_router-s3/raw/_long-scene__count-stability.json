@@ -1,0 +1,83 @@
+{
+  "key": "_long-scene__count-stability",
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:55:54.717Z",
+  "latencyMs": 73385,
+  "usage": {
+    "prompt_tokens": 12321,
+    "completion_tokens": 4878,
+    "total_tokens": 17199,
+    "cost": 0.036711,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036711,
+      "upstream_inference_prompt_cost": 0.012321,
+      "upstream_inference_completions_cost": 0.02439
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3600,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:10-00:18: Counter stools = 3 visible in foreground; condiment stations = 2 (each with pitcher and shakers); stacked bowls on coffee machine = 3 stacks.",
+    "00:19-00:26: Counter stools = 7 total in row (4 empty stools in front of the man when he sits on the 5th stool); coffee mugs = 1 on counter in front of man.",
+    "00:27-00:31: Coffee mugs = 1 white mug being filled from coffee pot.",
+    "00:32-00:35: Plate items = 1 slice of toast, 1 fried egg; utensils = 1 knife, 1 fork.",
+    "00:36-00:44: Counter stools = 5 empty stools visible in front of the seated man (up from 4 without him moving); items in front of man = 1 white mug, 1 plate with toast and egg.",
+    "00:45-00:50: Pass-through shelf plates = 2 stacks; coffee mugs on left shelf = 1.",
+    "01:00-01:08: Counter stools = 4 empty stools in front of the seated man; coffee mugs = 1 in front of man, plus 1 picked up by the waitress behind the counter (2 total).",
+    "01:09-01:17: Coffee mugs = 3 visible (1 held by man, 1 brought by waitress, plus 1 unexplained mug already sitting behind the condiment dispenser); waitress removes the 1 plate of food and walks away carrying her mug.",
+    "01:18-01:26: Coffee mugs = 2 (extra mug by the condiment dispenser is gone; waitress walks around counter carrying 1 mug and sits next to man who holds 1 mug).",
+    "01:27-01:34: Coffee mugs = 2 (1 held by waitress, 1 held by man).",
+    "01:37-01:40: Coffee mugs = 1 visible; dollar bills = placed on counter at 01:38 as 2-3 flat bills with a $1 bill on top, which spontaneously morph and fan out at 01:39 into ~4 bills with a $100 bill on top.",
+    "01:41-01:49: Truck outside = 1 green box truck (changed from the 1 white semi-truck cab seen at 00:00-00:09).",
+    "01:50-01:58: Coffee mugs on counter = 1 (the second mug from 01:27-01:34 is gone without being cleared), picked up by waitress at 01:51; waitresses = increases from 1 to 2 at 01:51 when a duplicate waitress appears in the kitchen background as the original walks behind the counter."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "counter barstools",
+      "invariant_violated": "unexplained count change",
+      "description": "When the man sits down at 00:24-00:26, there are 4 empty barstools between him and the foreground end of the counter. At 00:36-00:44, there are 5 empty barstools in front of him without him changing seats, before reverting to 4 empty stools at 01:00.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:09",
+      "entity": "white coffee mugs",
+      "invariant_violated": "unexplained count change",
+      "description": "At 01:00-01:08, only 1 mug is on the counter in front of the man as the waitress brings a 2nd mug. On the cut to 01:09, a 3rd white mug has appeared behind the condiment station, which disappears again at 01:18. Later at 01:50, only 1 mug remains on the counter where 2 mugs were held by the man and waitress at 01:27-01:34.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "dollar bills on counter",
+      "invariant_violated": "unexplained kind transformation and count change",
+      "description": "As two hands place and tap a small flat stack of bills topped by a $1 bill on the counter (01:38), the bills spontaneously fold upward and transform into a thicker fanned stack of ~4 bills topped by a $100 bill facing the opposite direction (01:39).",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress",
+      "invariant_violated": "unexplained count change",
+      "description": "As the single waitress stands up from the counter stool and walks right to go behind the counter at 01:51, a second identical waitress in the same uniform materializes in the kitchen pass-through in the background, changing the count of waitresses from 1 to 2.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:10-00:18: Counter stools = 3 visible in foreground; condiment stations = 2 (each with pitcher and shakers); stacked bowls on coffee machine = 3 stacks.\",\n    \"00:19-00:26: Counter stools = 7 total in row (4 empty stools in front of the man when he sits on the 5th stool); coffee mugs = 1 on counter in front of man.\",\n    \"00:27-00:31: Coffee mugs = 1 white mug being filled from coffee pot.\",\n    \"00:32-00:35: Plate items = 1 slice of toast, 1 fried egg; utensils = 1 knife, 1 fork.\",\n    \"00:36-00:44: Counter stools = 5 empty stools visible in front of the seated man (up from 4 without him moving); items in front of man = 1 white mug, 1 plate with toast and egg.\",\n    \"00:45-00:50: Pass-through shelf plates = 2 stacks; coffee mugs on left shelf = 1.\",\n    \"01:00-01:08: Counter stools = 4 empty stools in front of the seated man; coffee mugs = 1 in front of man, plus 1 picked up by the waitress behind the counter (2 total).\",\n    \"01:09-01:17: Coffee mugs = 3 visible (1 held by man, 1 brought by waitress, plus 1 unexplained mug already sitting behind the condiment dispenser); waitress removes the 1 plate of food and walks away carrying her mug.\",\n    \"01:18-01:26: Coffee mugs = 2 (extra mug by the condiment dispenser is gone; waitress walks around counter carrying 1 mug and sits next to man who holds 1 mug).\",\n    \"01:27-01:34: Coffee mugs = 2 (1 held by waitress, 1 held by man).\",\n    \"01:37-01:40: Coffee mugs = 1 visible; dollar bills = placed on counter at 01:38 as 2-3 flat bills with a $1 bill on top, which spontaneously morph and fan out at 01:39 into ~4 bills with a $100 bill on top.\",\n    \"01:41-01:49: Truck outside = 1 green box truck (changed from the 1 white semi-truck cab seen at 00:00-00:09).\",\n    \"01:50-01:58: Coffee mugs on counter = 1 (the second mug from 01:27-01:34 is gone without being cleared), picked up by waitress at 01:51; waitresses = increases from 1 to 2 at 01:51 when a duplicate waitress appears in the kitchen background as the original walks behind the counter.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"counter barstools\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"When the man sits down at 00:24-00:26, there are 4 empty barstools between him and the foreground end of the counter. At 00:36-00:44, there are 5 empty barstools in front of him without him changing seats, before reverting to 4 empty stools at 01:00.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:09\",\n      \"entity\": \"white coffee mugs\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"At 01:00-01:08, only 1 mug is on the counter in front of the man as the waitress brings a 2nd mug. On the cut to 01:09, a 3rd white mug has appeared behind the condiment station, which disappears again at 01:18. Later at 01:50, only 1 mug remains on the counter where 2 mugs were held by the man and waitress at 01:27-01:34.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"dollar bills on counter\",\n      \"invariant_violated\": \"unexplained kind transformation and count change\",\n      \"description\": \"As two hands place and tap a small flat stack of bills topped by a $1 bill on the counter (01:38), the bills spontaneously fold upward and transform into a thicker fanned stack of ~4 bills topped by a $100 bill facing the opposite direction (01:39).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"As the single waitress stands up from the counter stool and walks right to go behind the counter at 01:51, a second identical waitress in the same uniform materializes in the kitchen pass-through in the background, changing the count of waitresses from 1 to 2.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

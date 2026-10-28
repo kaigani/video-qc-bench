@@ -1,0 +1,63 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:42:14.778Z",
+  "latencyMs": 56711,
+  "usage": {
+    "prompt_tokens": 12287,
+    "completion_tokens": 3015,
+    "total_tokens": 15302,
+    "cost": 0.027362,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027362,
+      "upstream_inference_prompt_cost": 0.012287,
+      "upstream_inference_completions_cost": 0.015075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2359,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:10-00:23: Cleaning cloth held in waitress's right hand while wiping counter, then left on counter at 00:23.",
+    "00:23-00:31: Coffee carafe picked up by waitress's right hand and used to pour coffee into white mug on counter.",
+    "00:27-00:31: White coffee mug held briefly by man's hand on counter, then remains on counter while filled.",
+    "00:32-00:44: Plate with toast and egg on counter; man holds white coffee mug with both hands on counter.",
+    "00:45-00:50: Cleaning cloth in waitress's right hand wiping pass-through counter.",
+    "01:09-01:16: Man holds his white coffee mug on counter; waitress holds plate with left hand and a second white coffee mug in right hand, sets the second mug against the man's mug (where it merges/vanishes), and carries the plate away with both hands.",
+    "01:18-01:34: Waitress carries a white coffee mug around the counter, sits beside the man, and both hold their respective white mugs on the counter.",
+    "01:38-01:40: Man's left hand places dollar bills on counter beside white mug; empty right hand taps the bills as left hand withdraws, and a $100 bill appears/morphs on top of the stack.",
+    "01:50-01:53: Waitress touches bills on counter with left hand, picks up white coffee mug with right hand, and walks behind counter."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "white coffee mug",
+      "invariant_violated": "placement persistence",
+      "description": "The waitress places a second white coffee mug onto the counter directly against the mug the man is already holding. As she withdraws her right hand and the man wraps both hands around his mug at 01:14-01:15, the second mug merges into the first mug and vanishes completely.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "dollar bills",
+      "invariant_violated": "transfer completeness",
+      "description": "The man's left hand places a small stack of bills on the counter with a $1 denomination visible on top. As his left hand slides away and his visibly empty right hand touches the stack at 01:39, the top bill morphs into a $100 bill with no physical source.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:10-00:23: Cleaning cloth held in waitress's right hand while wiping counter, then left on counter at 00:23.\",\n    \"00:23-00:31: Coffee carafe picked up by waitress's right hand and used to pour coffee into white mug on counter.\",\n    \"00:27-00:31: White coffee mug held briefly by man's hand on counter, then remains on counter while filled.\",\n    \"00:32-00:44: Plate with toast and egg on counter; man holds white coffee mug with both hands on counter.\",\n    \"00:45-00:50: Cleaning cloth in waitress's right hand wiping pass-through counter.\",\n    \"01:09-01:16: Man holds his white coffee mug on counter; waitress holds plate with left hand and a second white coffee mug in right hand, sets the second mug against the man's mug (where it merges/vanishes), and carries the plate away with both hands.\",\n    \"01:18-01:34: Waitress carries a white coffee mug around the counter, sits beside the man, and both hold their respective white mugs on the counter.\",\n    \"01:38-01:40: Man's left hand places dollar bills on counter beside white mug; empty right hand taps the bills as left hand withdraws, and a $100 bill appears/morphs on top of the stack.\",\n    \"01:50-01:53: Waitress touches bills on counter with left hand, picks up white coffee mug with right hand, and walks behind counter.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:13\",\n      \"entity\": \"white coffee mug\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"The waitress places a second white coffee mug onto the counter directly against the mug the man is already holding. As she withdraws her right hand and the man wraps both hands around his mug at 01:14-01:15, the second mug merges into the first mug and vanishes completely.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"dollar bills\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The man's left hand places a small stack of bills on the counter with a $1 denomination visible on top. As his left hand slides away and his visibly empty right hand touches the stack at 01:39, the top bill morphs into a $100 bill with no physical source.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

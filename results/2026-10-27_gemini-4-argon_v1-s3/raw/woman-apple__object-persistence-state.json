@@ -1,0 +1,65 @@
+{
+  "key": "woman-apple__object-persistence-state",
+  "video": "woman-apple.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:29:38.956Z",
+  "latencyMs": 28086,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1668,
+    "total_tokens": 3281,
+    "cost": 0.009953,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009953,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00834
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1097,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red apple | held in both of the woman's hands at chest height at 00:00 | vanished at 00:08 | remains between her hands until 00:07, then disappears completely as her hands close around the umbrella handle at 00:08",
+    "blue umbrella | open overhead with a long thin shaft extending down past the woman's hands to her waist at 00:00 | held by a black handle at chest height at 00:08 | lower portion of the shaft below her hands vanishes between 00:05 and 00:07 as a handle materializes in her grip",
+    "crate of fruit (bottom left) | purple crate containing orange/peach-colored round fruit at 00:05 | contains bright purple fruit at 00:06 | fruit inside the crate spontaneously changes color from orange to purple"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple",
+      "invariant_violated": "identity & persistence",
+      "description": "The red apple held between the woman's hands from 00:00 to 00:07 vanishes completely into thin air as she turns and her hands close around the umbrella handle.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "blue umbrella",
+      "invariant_violated": "identity & persistence",
+      "description": "From 00:00 to 00:05, the umbrella shaft extends well below the woman's hands down toward her waist while her hands hold the apple. Between 00:06 and 00:08, the lower section of the shaft disappears and a black handle materializes inside her hands.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "crate of fruit (bottom left)",
+      "invariant_violated": "physical state transitions",
+      "description": "The round fruits inside the purple crate at the bottom left of the frame are peach/orange at 00:05, then spontaneously turn bright purple at 00:06 with no interaction.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"red apple | held in both of the woman's hands at chest height at 00:00 | vanished at 00:08 | remains between her hands until 00:07, then disappears completely as her hands close around the umbrella handle at 00:08\",\n    \"blue umbrella | open overhead with a long thin shaft extending down past the woman's hands to her waist at 00:00 | held by a black handle at chest height at 00:08 | lower portion of the shaft below her hands vanishes between 00:05 and 00:07 as a handle materializes in her grip\",\n    \"crate of fruit (bottom left) | purple crate containing orange/peach-colored round fruit at 00:05 | contains bright purple fruit at 00:06 | fruit inside the crate spontaneously changes color from orange to purple\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red apple\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The red apple held between the woman's hands from 00:00 to 00:07 vanishes completely into thin air as she turns and her hands close around the umbrella handle.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"blue umbrella\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"From 00:00 to 00:05, the umbrella shaft extends well below the woman's hands down toward her waist while her hands hold the apple. Between 00:06 and 00:08, the lower section of the shaft disappears and a black handle materializes inside her hands.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"crate of fruit (bottom left)\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"The round fruits inside the purple crate at the bottom left of the frame are peach/orange at 00:05, then spontaneously turn bright purple at 00:06 with no interaction.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

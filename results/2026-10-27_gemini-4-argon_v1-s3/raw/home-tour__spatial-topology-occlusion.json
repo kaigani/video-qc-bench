@@ -1,0 +1,58 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:19:09.697Z",
+  "latencyMs": 62858,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 4459,
+    "total_tokens": 6054,
+    "cost": 0.02389,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02389,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.022295
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3732,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen left wall | at 00:00-00:02 has lower cabinets, stove with range hood above it, window, and upper wooden cabinets | at 00:09 has a microwave mounted directly above the stove where the range hood was | layout mutates upon re-entry",
+    "Kitchen right counter and divider wall | at 00:00-00:03 has a countertop microwave on the right and a grey wall facing the camera with a framed floral print and small horizontal print to the left of the bedroom doorway | at 00:07 the framed floral print appears inside the bedroom to the left of the exit doorway | wall and artwork relocate across room boundary",
+    "Far hallway door | at 00:00-00:03 sits beyond an interior archway with sheer curtains covering its glass panes | at 00:07-00:09 sits at the end of a continuous room with bare multi-pane glass and a new framed picture to its right | connectivity and background geometry change",
+    "Bedroom and doorway topology | entered at 00:03-00:04 by turning slightly right off the main hallway | exited at 00:07-00:09 after only a ~110-degree left pan inside the bedroom, yet emerging facing the exact same forward direction down the kitchen toward the far white door | non-Euclidean loop and impossible room connectivity"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Bedroom doorway and exterior hallway wall",
+      "invariant_violated": "viewpoint consistency and room connectivity",
+      "description": "After entering the bedroom at 00:03-00:04, the camera pans left by only ~110 degrees (from the right-side double windows, across the bed, to the left wall) rather than turning 180 degrees back toward the entry doorway. Despite this partial turn, an exit doorway appears on the left wall that looks straight down the hallway toward the far white door in the original walking direction, and the framed floral print from the exterior hallway wall (00:02) is now hanging inside the bedroom to the left of the doorway (00:07).",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Kitchen and hallway layout",
+      "invariant_violated": "scene layout consistency",
+      "description": "When emerging from the bedroom doorway back into the kitchen/hallway at 00:08-00:09, the architectural and appliance layout has mutated compared to 00:00-00:02: a microwave is now mounted above the stove on the left wall (replacing the range hood seen at 00:01, while the microwave was previously on the right-hand counter at 00:00), the dividing archway between the kitchen and hallway is gone, and the far door now has bare glass panes with a framed picture on the wall to its right.",
+      "severity": "severe",
+      "confidence": 0.97
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen left wall | at 00:00-00:02 has lower cabinets, stove with range hood above it, window, and upper wooden cabinets | at 00:09 has a microwave mounted directly above the stove where the range hood was | layout mutates upon re-entry\",\n    \"Kitchen right counter and divider wall | at 00:00-00:03 has a countertop microwave on the right and a grey wall facing the camera with a framed floral print and small horizontal print to the left of the bedroom doorway | at 00:07 the framed floral print appears inside the bedroom to the left of the exit doorway | wall and artwork relocate across room boundary\",\n    \"Far hallway door | at 00:00-00:03 sits beyond an interior archway with sheer curtains covering its glass panes | at 00:07-00:09 sits at the end of a continuous room with bare multi-pane glass and a new framed picture to its right | connectivity and background geometry change\",\n    \"Bedroom and doorway topology | entered at 00:03-00:04 by turning slightly right off the main hallway | exited at 00:07-00:09 after only a ~110-degree left pan inside the bedroom, yet emerging facing the exact same forward direction down the kitchen toward the far white door | non-Euclidean loop and impossible room connectivity\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Bedroom doorway and exterior hallway wall\",\n      \"invariant_violated\": \"viewpoint consistency and room connectivity\",\n      \"description\": \"After entering the bedroom at 00:03-00:04, the camera pans left by only ~110 degrees (from the right-side double windows, across the bed, to the left wall) rather than turning 180 degrees back toward the entry doorway. Despite this partial turn, an exit doorway appears on the left wall that looks straight down the hallway toward the far white door in the original walking direction, and the framed floral print from the exterior hallway wall (00:02) is now hanging inside the bedroom to the left of the doorway (00:07).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Kitchen and hallway layout\",\n      \"invariant_violated\": \"scene layout consistency\",\n      \"description\": \"When emerging from the bedroom doorway back into the kitchen/hallway at 00:08-00:09, the architectural and appliance layout has mutated compared to 00:00-00:02: a microwave is now mounted above the stove on the left wall (replacing the range hood seen at 00:01, while the microwave was previously on the right-hand counter at 00:00), the dividing archway between the kitchen and hallway is gone, and the far door now has bare glass panes with a framed picture on the wall to its right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.97\n    }\n  ]\n}"
+}

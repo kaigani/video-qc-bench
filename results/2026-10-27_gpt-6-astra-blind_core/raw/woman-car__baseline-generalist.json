@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    "Woman | blonde hair, green denim jacket, crossed arms resting on hood in front of windshield | same clothing and pose in closer view, hair blowing backward | three visible hands accompany two arms; torso remains positioned through windshield area",
+    "Station wagon | pale body, wood side panels, roof rack, windshield and hood | same features increasingly cropped by camera approach | woman remains in front windshield area with arms on hood",
+    "Audio | unassessed | unassessed | no audio perception available"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's arms and hands",
+      "invariant_violated": "Anatomical consistency",
+      "description": "The crossed-arm pose contains three hands: fingers on the upper arm at screen left, a hand at the central sleeve cuff, and another set of fingers beneath the elbow at screen right. The closer views make the extra hand clearly visible despite there being only two arms.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and station wagon windshield",
+      "invariant_violated": "Solid-object intersection",
+      "description": "The woman's torso projects through the front windshield area, with her crossed forearms resting outside on the hood ahead of the windshield base. The side window is behind the adjacent pillar, and no opening or broken glass explains how her body passes through the windshield.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-14__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/core/raw/clip-14__baseline-generalist.json",
+  "frozen_source_sha256": "02f079fcd4baab5240c71ae4d1d30d1c0b55fb6e72d385cd2794430a3b8cc5a1",
+  "key": "woman-car__baseline-generalist",
+  "parseOk": true
+}

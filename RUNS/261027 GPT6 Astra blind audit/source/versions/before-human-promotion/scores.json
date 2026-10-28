@@ -1,0 +1,746 @@
+{
+  "status": "complete; assistant-adjudicated, pending human review of EXTRA candidates and disputed matches",
+  "adjudicator": "parent GPT-6 Astra; knows frozen answer key; not an independent human judge",
+  "protocol": "v1 six-role core x1 + deterministic feature routing x3, independent fresh contexts",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "service_tier": "default",
+  "frozen_at": "2026-10-28T00:24:42.772815+00:00",
+  "adjudicated_at": "2026-10-28T00:29:41.034665+00:00",
+  "freeze_verification": {
+    "predictions": 311,
+    "original_responses": 311,
+    "invocation_prompts": 311,
+    "delegation_receipts": 311,
+    "frozen_routing": 14,
+    "run_metadata": 6
+  },
+  "scores": {
+    "core": {
+      "detection": 42,
+      "maximum_detection": 141,
+      "score": 41,
+      "defects_found": 9,
+      "total_defects": 48,
+      "tp_findings": 25,
+      "fp_findings": 1,
+      "extra_findings": 6,
+      "total_findings": 32,
+      "detected_ids": [
+        "APPL-3",
+        "BLOC-1",
+        "CAR-1",
+        "CUPS-1",
+        "LONG-11",
+        "LONG-6",
+        "MARB-1",
+        "MIRR-1",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 29.79,
+      "defect_recall_percent": 18.75,
+      "extra_classes": {
+        "mug-merge": 2,
+        "counter-return": 3,
+        "hatch-kitchen": 1
+      }
+    },
+    "router-s1": {
+      "detection": 57,
+      "maximum_detection": 141,
+      "score": 57,
+      "defects_found": 12,
+      "total_defects": 48,
+      "tp_findings": 25,
+      "fp_findings": 0,
+      "extra_findings": 3,
+      "total_findings": 28,
+      "detected_ids": [
+        "BLOC-1",
+        "CAR-1",
+        "CUPS-2",
+        "DANC-1",
+        "DANC-3",
+        "HOME-2",
+        "LONG-11",
+        "LONG-13",
+        "LONG-6",
+        "MARB-1",
+        "OLIV-2",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 40.43,
+      "defect_recall_percent": 25.0,
+      "extra_classes": {
+        "counter-return": 2,
+        "mug-merge": 1
+      }
+    },
+    "router-s2": {
+      "detection": 48,
+      "maximum_detection": 141,
+      "score": 47,
+      "defects_found": 9,
+      "total_defects": 48,
+      "tp_findings": 21,
+      "fp_findings": 1,
+      "extra_findings": 3,
+      "total_findings": 25,
+      "detected_ids": [
+        "BLOC-1",
+        "CAR-1",
+        "DANC-1",
+        "DANC-3",
+        "HOME-2",
+        "LONG-11",
+        "LONG-6",
+        "MARB-1",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 34.04,
+      "defect_recall_percent": 18.75,
+      "extra_classes": {
+        "counter-return": 2,
+        "hatch-kitchen": 1
+      }
+    },
+    "router-s3": {
+      "detection": 53,
+      "maximum_detection": 141,
+      "score": 53,
+      "defects_found": 10,
+      "total_defects": 48,
+      "tp_findings": 21,
+      "fp_findings": 0,
+      "extra_findings": 4,
+      "total_findings": 25,
+      "detected_ids": [
+        "BLOC-1",
+        "CAR-1",
+        "DANC-1",
+        "DANC-3",
+        "HOME-2",
+        "LONG-11",
+        "LONG-13",
+        "LONG-6",
+        "MARB-1",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 37.59,
+      "defect_recall_percent": 20.83,
+      "extra_classes": {
+        "counter-return": 2,
+        "hatch-kitchen": 1,
+        "mug-merge": 1
+      }
+    },
+    "router-union": {
+      "detection": 57,
+      "maximum_detection": 141,
+      "score": 56,
+      "defects_found": 12,
+      "total_defects": 48,
+      "tp_findings": 67,
+      "fp_findings": 1,
+      "extra_findings": 10,
+      "total_findings": 78,
+      "detected_ids": [
+        "BLOC-1",
+        "CAR-1",
+        "CUPS-2",
+        "DANC-1",
+        "DANC-3",
+        "HOME-2",
+        "LONG-11",
+        "LONG-13",
+        "LONG-6",
+        "MARB-1",
+        "OLIV-2",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 40.43,
+      "defect_recall_percent": 25.0,
+      "extra_classes": {
+        "counter-return": 6,
+        "mug-merge": 2,
+        "hatch-kitchen": 2
+      }
+    },
+    "combined": {
+      "detection": 62,
+      "maximum_detection": 141,
+      "score": 60,
+      "defects_found": 15,
+      "total_defects": 48,
+      "tp_findings": 92,
+      "fp_findings": 2,
+      "extra_findings": 16,
+      "total_findings": 110,
+      "detected_ids": [
+        "APPL-3",
+        "BLOC-1",
+        "CAR-1",
+        "CUPS-1",
+        "CUPS-2",
+        "DANC-1",
+        "DANC-3",
+        "HOME-2",
+        "LONG-11",
+        "LONG-13",
+        "LONG-6",
+        "MARB-1",
+        "MIRR-1",
+        "OLIV-2",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 43.97,
+      "defect_recall_percent": 31.25,
+      "extra_classes": {
+        "mug-merge": 4,
+        "counter-return": 9,
+        "hatch-kitchen": 3
+      }
+    },
+    "generalist-only": {
+      "detection": 40,
+      "maximum_detection": 141,
+      "score": 39,
+      "defects_found": 8,
+      "total_defects": 48,
+      "tp_findings": 10,
+      "fp_findings": 1,
+      "extra_findings": 2,
+      "total_findings": 13,
+      "detected_ids": [
+        "APPL-3",
+        "BLOC-1",
+        "CAR-1",
+        "LONG-11",
+        "LONG-6",
+        "MARB-1",
+        "MIRR-1",
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 28.37,
+      "defect_recall_percent": 16.67,
+      "extra_classes": {
+        "mug-merge": 1,
+        "counter-return": 1
+      }
+    }
+  },
+  "per_video": [
+    {
+      "detection": 21,
+      "maximum_detection": 141,
+      "score": 21,
+      "defects_found": 3,
+      "total_defects": 48,
+      "tp_findings": 11,
+      "fp_findings": 0,
+      "extra_findings": 16,
+      "total_findings": 27,
+      "detected_ids": [
+        "LONG-11",
+        "LONG-13",
+        "LONG-6"
+      ],
+      "weighted_recall_percent": 14.89,
+      "defect_recall_percent": 6.25,
+      "extra_classes": {
+        "mug-merge": 4,
+        "counter-return": 9,
+        "hatch-kitchen": 3
+      },
+      "video": "_long-scene",
+      "available_defects": 15,
+      "available_weight": 57
+    },
+    {
+      "detection": 3,
+      "maximum_detection": 141,
+      "score": 2,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 8,
+      "fp_findings": 1,
+      "extra_findings": 0,
+      "total_findings": 9,
+      "detected_ids": [
+        "MARB-1"
+      ],
+      "weighted_recall_percent": 2.13,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "child-marbles",
+      "available_defects": 1,
+      "available_weight": 3
+    },
+    {
+      "detection": 8,
+      "maximum_detection": 141,
+      "score": 8,
+      "defects_found": 2,
+      "total_defects": 48,
+      "tp_findings": 9,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 9,
+      "detected_ids": [
+        "DANC-1",
+        "DANC-3"
+      ],
+      "weighted_recall_percent": 5.67,
+      "defect_recall_percent": 4.17,
+      "extra_classes": {},
+      "video": "dancer-mirror",
+      "available_defects": 4,
+      "available_weight": 12
+    },
+    {
+      "detection": 0,
+      "maximum_detection": 141,
+      "score": 0,
+      "defects_found": 0,
+      "total_defects": 48,
+      "tp_findings": 0,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 0,
+      "detected_ids": [],
+      "weighted_recall_percent": 0.0,
+      "defect_recall_percent": 0.0,
+      "extra_classes": {},
+      "video": "dialogue",
+      "available_defects": 1,
+      "available_weight": 2
+    },
+    {
+      "detection": 3,
+      "maximum_detection": 141,
+      "score": 3,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 3,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 3,
+      "detected_ids": [
+        "HOME-2"
+      ],
+      "weighted_recall_percent": 2.13,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "home-tour",
+      "available_defects": 2,
+      "available_weight": 8
+    },
+    {
+      "detection": 5,
+      "maximum_detection": 141,
+      "score": 5,
+      "defects_found": 2,
+      "total_defects": 48,
+      "tp_findings": 2,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 2,
+      "detected_ids": [
+        "CUPS-1",
+        "CUPS-2"
+      ],
+      "weighted_recall_percent": 3.55,
+      "defect_recall_percent": 4.17,
+      "extra_classes": {},
+      "video": "man-cups",
+      "available_defects": 5,
+      "available_weight": 12
+    },
+    {
+      "detection": 1,
+      "maximum_detection": 141,
+      "score": 1,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 1,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 1,
+      "detected_ids": [
+        "MIRR-1"
+      ],
+      "weighted_recall_percent": 0.71,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "man-in-mirror",
+      "available_defects": 2,
+      "available_weight": 2
+    },
+    {
+      "detection": 2,
+      "maximum_detection": 141,
+      "score": 2,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 4,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 4,
+      "detected_ids": [
+        "PHON-1"
+      ],
+      "weighted_recall_percent": 1.42,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "phone",
+      "available_defects": 1,
+      "available_weight": 2
+    },
+    {
+      "detection": 1,
+      "maximum_detection": 141,
+      "score": 1,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 1,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 1,
+      "detected_ids": [
+        "OLIV-2"
+      ],
+      "weighted_recall_percent": 0.71,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "pouring-olives",
+      "available_defects": 4,
+      "available_weight": 6
+    },
+    {
+      "detection": 0,
+      "maximum_detection": 141,
+      "score": 0,
+      "defects_found": 0,
+      "total_defects": 48,
+      "tp_findings": 0,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 0,
+      "detected_ids": [],
+      "weighted_recall_percent": 0.0,
+      "defect_recall_percent": 0.0,
+      "extra_classes": {},
+      "video": "skateboarder",
+      "available_defects": 2,
+      "available_weight": 4
+    },
+    {
+      "detection": 0,
+      "maximum_detection": 141,
+      "score": 0,
+      "defects_found": 0,
+      "total_defects": 48,
+      "tp_findings": 0,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 0,
+      "detected_ids": [],
+      "weighted_recall_percent": 0.0,
+      "defect_recall_percent": 0.0,
+      "extra_classes": {},
+      "video": "watchmaker",
+      "available_defects": 1,
+      "available_weight": 1
+    },
+    {
+      "detection": 8,
+      "maximum_detection": 141,
+      "score": 8,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 46,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 46,
+      "detected_ids": [
+        "BLOC-1"
+      ],
+      "weighted_recall_percent": 5.67,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "weird-blocks",
+      "available_defects": 1,
+      "available_weight": 8
+    },
+    {
+      "detection": 2,
+      "maximum_detection": 141,
+      "score": 2,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 1,
+      "fp_findings": 0,
+      "extra_findings": 0,
+      "total_findings": 1,
+      "detected_ids": [
+        "APPL-3"
+      ],
+      "weighted_recall_percent": 1.42,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "woman-apple",
+      "available_defects": 4,
+      "available_weight": 10
+    },
+    {
+      "detection": 8,
+      "maximum_detection": 141,
+      "score": 7,
+      "defects_found": 1,
+      "total_defects": 48,
+      "tp_findings": 6,
+      "fp_findings": 1,
+      "extra_findings": 0,
+      "total_findings": 7,
+      "detected_ids": [
+        "CAR-1"
+      ],
+      "weighted_recall_percent": 5.67,
+      "defect_recall_percent": 2.08,
+      "extra_classes": {},
+      "video": "woman-car",
+      "available_defects": 5,
+      "available_weight": 14
+    }
+  ],
+  "router_added_ids": [
+    "CUPS-2",
+    "DANC-1",
+    "DANC-3",
+    "HOME-2",
+    "LONG-13",
+    "OLIV-2"
+  ],
+  "core_only_ids": [
+    "APPL-3",
+    "CUPS-1",
+    "MIRR-1"
+  ],
+  "missed_defects": [
+    {
+      "id": "LONG-1",
+      "video": "_long-scene",
+      "priority": "P2",
+      "description": "Time of day changes after the first cut from dark to light"
+    },
+    {
+      "id": "LONG-2",
+      "video": "_long-scene",
+      "priority": "P3",
+      "description": "Shifts back to earlier time of day as the man enters"
+    },
+    {
+      "id": "LONG-3",
+      "video": "_long-scene",
+      "priority": "P3",
+      "description": "Man enters from what seems like the kitchen of the diner"
+    },
+    {
+      "id": "LONG-4",
+      "video": "_long-scene",
+      "priority": "P4",
+      "description": "'Open' sign / interior layout doesn't match the exterior establishing shot"
+    },
+    {
+      "id": "LONG-5",
+      "video": "_long-scene",
+      "priority": "P4",
+      "description": "Man seems to bring his own cup for the coffee"
+    },
+    {
+      "id": "LONG-7",
+      "video": "_long-scene",
+      "priority": "P1",
+      "description": "Man shifts to opposite end of the counter"
+    },
+    {
+      "id": "LONG-8",
+      "video": "_long-scene",
+      "priority": "P2",
+      "description": "Woman crosses through the counter to sit next to him"
+    },
+    {
+      "id": "LONG-9",
+      "video": "_long-scene",
+      "priority": "P1",
+      "description": "Woman changes to the opposite side of him on the reverse shot"
+    },
+    {
+      "id": "LONG-10",
+      "video": "_long-scene",
+      "priority": "P0",
+      "description": "Man's hand leaves tip and another of his hands takes it"
+    },
+    {
+      "id": "LONG-12",
+      "video": "_long-scene",
+      "priority": "P3",
+      "description": "Coffee pours from a carafe whose top half is transparent/empty; solid black liquid mass at bottom (KT-confirmed from model finding, 2026-08-14)"
+    },
+    {
+      "id": "LONG-14",
+      "video": "_long-scene",
+      "priority": "P3",
+      "description": "Man's mug has moved position on the counter without visible cause (KT-confirmed from model finding, 2026-08-14)"
+    },
+    {
+      "id": "DANC-2",
+      "video": "dancer-mirror",
+      "priority": "P3",
+      "description": "Shoulder tattoo morphs as she raises her arm"
+    },
+    {
+      "id": "DANC-4",
+      "video": "dancer-mirror",
+      "priority": "P3",
+      "description": "Mirror reflection shows two exit doors where only one reflection of the single door should exist (KT-discovered 2026-09-04, prompted by a model exit-sign finding; P3 assigned by Claude, pending KT confirmation)"
+    },
+    {
+      "id": "HOME-1",
+      "video": "home-tour",
+      "priority": "P1",
+      "description": "Implausible interior layout: walking the length of the kitchen through a bedroom reveals another similar kitchen"
+    },
+    {
+      "id": "CUPS-3",
+      "video": "man-cups",
+      "priority": "P2",
+      "description": "Shot starts with 4 cups, implies 5, ends with 3 visible; gold coins in center of table disappear"
+    },
+    {
+      "id": "MIRR-2",
+      "video": "man-in-mirror",
+      "priority": "P4",
+      "description": "The brush object itself morphs and changes"
+    },
+    {
+      "id": "OLIV-1",
+      "video": "pouring-olives",
+      "priority": "P4",
+      "description": "Dark purple olives not visible at start (could feasibly be underneath the green)"
+    },
+    {
+      "id": "OLIV-3",
+      "video": "pouring-olives",
+      "priority": "P3",
+      "description": "First container (bowl) becomes a small bottle when set down"
+    },
+    {
+      "id": "OLIV-4",
+      "video": "pouring-olives",
+      "priority": "P3",
+      "description": "Second batch of olives gathers into his hand unnaturally and a container appears around them"
+    },
+    {
+      "id": "SKAT-1",
+      "video": "skateboarder",
+      "priority": "P2",
+      "description": "First jump reveals board underside with only two wheels, unnaturally placed"
+    },
+    {
+      "id": "SKAT-2",
+      "video": "skateboarder",
+      "priority": "P4",
+      "description": "Feet morph together and switch position on the turn"
+    },
+    {
+      "id": "WATC-1",
+      "video": "watchmaker",
+      "priority": "P4",
+      "description": "Small details on the watch morph slightly; winding/spinning action seems unusual"
+    },
+    {
+      "id": "APPL-1",
+      "video": "woman-apple",
+      "priority": "P1",
+      "description": "Apple held unnaturally: closed hand plus clapping hand, nothing holding it up"
+    },
+    {
+      "id": "APPL-2",
+      "video": "woman-apple",
+      "priority": "P3",
+      "description": "Apple disappears after she passes in front of the camera (seen from behind)"
+    },
+    {
+      "id": "CAR-2",
+      "video": "woman-car",
+      "priority": "P4",
+      "description": "License plate number is garbled"
+    },
+    {
+      "id": "CAR-3",
+      "video": "woman-car",
+      "priority": "P3",
+      "description": "Road topology nonsensical: poles in the middle of the road, lane lines morph"
+    },
+    {
+      "id": "LONG-15",
+      "video": "_long-scene",
+      "priority": "P3",
+      "description": "Man has the plated meal at night (00:33-00:44) before the waitress serves it at dawn (01:10) (KT-confirmed 2026-08-14; P3 assigned by Claude)"
+    },
+    {
+      "id": "CUPS-4",
+      "video": "man-cups",
+      "priority": "P3",
+      "description": "Magician wears a black bow tie and a red necktie simultaneously (KT-confirmed 2026-08-14; P3 assigned by Claude)"
+    },
+    {
+      "id": "CUPS-5",
+      "video": "man-cups",
+      "priority": "P3",
+      "description": "Right hand shows 6 fingers as the camera rotates around it - 5 fingers with no thumb in view until later (KT-identified 2026-08-14; P3 assigned by Claude)"
+    },
+    {
+      "id": "APPL-4",
+      "video": "woman-apple",
+      "priority": "P4",
+      "description": "Top-left market sign shows garbled glyphs; KT: very low priority, difficult to see (KT-confirmed 2026-08-14)"
+    },
+    {
+      "id": "CAR-4",
+      "video": "woman-car",
+      "priority": "P3",
+      "description": "Hair streams violently in wind while vegetation and antenna are unaffected (KT-confirmed 2026-08-14; P3 assigned by Claude)"
+    },
+    {
+      "id": "DIAL-1",
+      "video": "dialogue",
+      "priority": "P3",
+      "description": "Spoken dialogue references 'the red door is locked, the blue door is open' but all visible doors are brown and closed - audio/visual mismatch (KT-confirmed 2026-08-14 from muse finding; P3 assigned by Claude)"
+    },
+    {
+      "id": "CAR-5",
+      "video": "woman-car",
+      "priority": "P4",
+      "description": "Windshield wiper arms relocate/change configuration between frames (KT-confirmed 2026-08-15: valid but minor)"
+    }
+  ],
+  "sensitivity": {
+    "all_16_extra_findings_rejected_as_fp": 44,
+    "counter_return_accepted_as_LONG_8": 63,
+    "F067_accepted_as_MARB_1": 61,
+    "both_changes": 64,
+    "note": "Sensitivity scenarios are adjudication choices, not statistical confidence intervals. No new-label weights have been added."
+  },
+  "limits": [
+    "No native video input: timestamped extracted frames are the actual perceptual input, unlike native-video API benchmarking.",
+    "No available audio perception/transcription tool; audio unassessed for all clips; spoken_dialogue is fail-open true.",
+    "Contact sheets use 640x360 maximum thumbnails, with original-resolution individual frames and original video available for denser inspection.",
+    "Frame labels use nominal ffmpeg fps filter output times; source-frame selection is quantized within a sampling interval.",
+    "Sparse visual sampling may miss events between sampled frames, especially the long clip at 1 fps; contact-sheet input is not equivalent to native-video perception.",
+    "Fresh delegated prompts restricted source access, but the shared filesystem was not sandboxed per task and tool-read access was not independently audited."
+  ],
+  "public_leaderboard_modified": false,
+  "ground_truth_modified": false
+}

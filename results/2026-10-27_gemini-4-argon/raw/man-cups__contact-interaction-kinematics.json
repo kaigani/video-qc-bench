@@ -1,0 +1,56 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:34:10.515Z",
+  "latencyMs": 36516,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 2266,
+    "total_tokens": 3886,
+    "cost": 0.01295,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01295,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.01133
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1763,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man's right hand and coin | 00:00 reaching toward foreground cup, 00:02 pinching coin above cup rim | 00:09 hovering above cup holding coin | 00:04-00:06 fingers rest on top rim while coin clips onto and clings vertically to the outer wall of the cup without support, then reappears in lifted fingers at 00:08",
+    "Man's left hand and coin | 00:00 pinching coin above table | 00:09 resting fingers on table surface | 00:04 grips top rim of rear/rightmost cup, 00:05-00:06 coin clings vertically to the front outer wall of the cup without finger contact or support before vanishing at 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Man's right hand, gold coin, and leftmost cup",
+      "invariant_violated": "solidity and weight support",
+      "description": "As the man's right hand lowers the coin toward the cup opening at 00:03, the coin clips through the cup rim at 00:04 and becomes plastered vertically against the outside wall of the cup. From 00:05 to 00:06, his fingers only touch the top rim while the coin remains stuck to the smooth vertical side of the cup with no grip or physical support.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Man's left hand, gold coin, and rightmost cup",
+      "invariant_violated": "weight support and contact points",
+      "description": "While the man's left fingers rest on the upper back rim of the rightmost cup, a gold coin appears stuck vertically against the front exterior wall of the cup at 00:05-00:06 with no fingers touching or supporting it against gravity.",
+      "severity": "severe",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man's right hand and coin | 00:00 reaching toward foreground cup, 00:02 pinching coin above cup rim | 00:09 hovering above cup holding coin | 00:04-00:06 fingers rest on top rim while coin clips onto and clings vertically to the outer wall of the cup without support, then reappears in lifted fingers at 00:08\",\n    \"Man's left hand and coin | 00:00 pinching coin above table | 00:09 resting fingers on table surface | 00:04 grips top rim of rear/rightmost cup, 00:05-00:06 coin clings vertically to the front outer wall of the cup without finger contact or support before vanishing at 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Man's right hand, gold coin, and leftmost cup\",\n      \"invariant_violated\": \"solidity and weight support\",\n      \"description\": \"As the man's right hand lowers the coin toward the cup opening at 00:03, the coin clips through the cup rim at 00:04 and becomes plastered vertically against the outside wall of the cup. From 00:05 to 00:06, his fingers only touch the top rim while the coin remains stuck to the smooth vertical side of the cup with no grip or physical support.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Man's left hand, gold coin, and rightmost cup\",\n      \"invariant_violated\": \"weight support and contact points\",\n      \"description\": \"While the man's left fingers rest on the upper back rim of the rightmost cup, a gold coin appears stuck vertically against the front exterior wall of the cup at 00:05-00:06 with no fingers touching or supporting it against gravity.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

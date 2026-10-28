@@ -1,0 +1,49 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:21:30.792Z",
+  "latencyMs": 19080,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1161,
+    "total_tokens": 2774,
+    "cost": 0.007418,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007418,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.005805
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 837,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "toothbrush / grooming tool | held in man's right hand near mouth, white handle with blue/grey head | held in man's right hand near cheek/mouth, white handle with blue/grey head | moved up to eyebrow at 00:02, morphs into a dark comb-like object in the mirror at 00:03 while combing hair, then morphs back into the white toothbrush at 00:04-00:05",
+    "wooden door with brass knob (in mirror) | closed, background left of mirror | closed, background left of mirror | none",
+    "bottles on wooden shelves (in mirror) | stationary on shelves in background right | stationary on shelves in background right | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "toothbrush / grooming tool",
+      "invariant_violated": "identity & persistence",
+      "description": "As the man raises the white toothbrush from his mouth to his eyebrow and hair between 00:02 and 00:03, the object transforms into a dark comb-like tool in the mirror reflection, then transforms back into the white toothbrush as he lowers it back to his face at 00:04-00:05.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"toothbrush / grooming tool | held in man's right hand near mouth, white handle with blue/grey head | held in man's right hand near cheek/mouth, white handle with blue/grey head | moved up to eyebrow at 00:02, morphs into a dark comb-like object in the mirror at 00:03 while combing hair, then morphs back into the white toothbrush at 00:04-00:05\",\n    \"wooden door with brass knob (in mirror) | closed, background left of mirror | closed, background left of mirror | none\",\n    \"bottles on wooden shelves (in mirror) | stationary on shelves in background right | stationary on shelves in background right | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"toothbrush / grooming tool\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the man raises the white toothbrush from his mouth to his eyebrow and hair between 00:02 and 00:03, the object transforms into a dark comb-like tool in the mirror reflection, then transforms back into the white toothbrush as he lowers it back to his face at 00:04-00:05.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:45:49.421Z",
+  "latencyMs": 34364,
+  "usage": {
+    "prompt_tokens": 1547,
+    "completion_tokens": 2799,
+    "total_tokens": 4346,
+    "cost": 0.015542,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015542,
+      "upstream_inference_prompt_cost": 0.001547,
+      "upstream_inference_completions_cost": 0.013995
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2286,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Real subject stands facing the studio mirror with her right arm extended out to the right and left arm down; reflection shows the matching pose with the arm on the viewer's right extended and left arm down.",
+    "00:01 - Real subject raises her right arm high overhead and keeps her left arm down; reflection shows the matching pose in sync.",
+    "00:02 - Real subject shows her raised arm on the left side of her upper body with her right shoulder and arm lowered in front of her torso, while the reflection in the mirror shows her right arm (viewer's right) raised straight overhead and her left arm down by her side.",
+    "00:03 - Real subject has her right arm raised and descending on her right side with her left arm down; reflection matches the pose.",
+    "00:04 - Real subject lowers her right hand toward her waist with her left arm down; reflection matches in sync.",
+    "00:05 - Real subject shifts her weight onto her right leg with both arms lowered; reflection matches in sync.",
+    "00:06 - Real subject lifts her right arm out to the side again; reflection lifts the corresponding arm in sync.",
+    "00:07 - Real subject curves her right arm overhead while keeping her left arm down; reflection matches the pose.",
+    "00:08 - Real subject holds her right arm curved overhead and points her left foot; reflection matches the pose.",
+    "00:09 - Real subject maintains the overhead right-arm pose with her left foot pointed; reflection matches in sync."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Dancer and her mirror reflection",
+      "invariant_violated": "Mirror pose consistency",
+      "description": "At 00:02, the real dancer's upper body shows her raised arm positioned on the left side of her torso/head with her right shoulder and arm lowered forward, whereas her reflection in the mirror simultaneously shows her right arm (on the viewer's right) raised straight overhead and her left arm hanging down by her side.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Real subject stands facing the studio mirror with her right arm extended out to the right and left arm down; reflection shows the matching pose with the arm on the viewer's right extended and left arm down.\",\n    \"00:01 - Real subject raises her right arm high overhead and keeps her left arm down; reflection shows the matching pose in sync.\",\n    \"00:02 - Real subject shows her raised arm on the left side of her upper body with her right shoulder and arm lowered in front of her torso, while the reflection in the mirror shows her right arm (viewer's right) raised straight overhead and her left arm down by her side.\",\n    \"00:03 - Real subject has her right arm raised and descending on her right side with her left arm down; reflection matches the pose.\",\n    \"00:04 - Real subject lowers her right hand toward her waist with her left arm down; reflection matches in sync.\",\n    \"00:05 - Real subject shifts her weight onto her right leg with both arms lowered; reflection matches in sync.\",\n    \"00:06 - Real subject lifts her right arm out to the side again; reflection lifts the corresponding arm in sync.\",\n    \"00:07 - Real subject curves her right arm overhead while keeping her left arm down; reflection matches the pose.\",\n    \"00:08 - Real subject holds her right arm curved overhead and points her left foot; reflection matches the pose.\",\n    \"00:09 - Real subject maintains the overhead right-arm pose with her left foot pointed; reflection matches in sync.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Dancer and her mirror reflection\",\n      \"invariant_violated\": \"Mirror pose consistency\",\n      \"description\": \"At 00:02, the real dancer's upper body shows her raised arm positioned on the left side of her torso/head with her right shoulder and arm lowered forward, whereas her reflection in the mirror simultaneously shows her right arm (on the viewer's right) raised straight overhead and her left arm hanging down by her side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

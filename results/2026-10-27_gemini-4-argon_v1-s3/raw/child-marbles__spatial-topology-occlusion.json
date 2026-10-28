@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:13:38.082Z",
+  "latencyMs": 15230,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 686,
+    "total_tokens": 2281,
+    "cost": 0.005025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005025,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00343
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 470,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | positioned in foreground with distinct wood grain and seams | zoomed in view of the same wood grain around the bowl | consistent layout throughout camera movement",
+    "glass bowl | resting centrally on the wooden table | fills most of the frame as camera pushes in | proper refraction and depth ordering with hands and balls",
+    "small metal cup and loose balls | positioned on the table to the right of the glass bowl | exits frame to the right as camera zooms in after 00:04 | maintains consistent relative position on table",
+    "patio background | paved stone ground and brick wall behind the boy | partially out of frame as camera zooms in | consistent geometry during camera pullback at 00:02",
+    "boy's hands | right hand reaching into bowl, left hand on upper right rim | right hand stirring balls inside bowl, left hand holding upper rim | natural occlusion of balls inside the bowl"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | positioned in foreground with distinct wood grain and seams | zoomed in view of the same wood grain around the bowl | consistent layout throughout camera movement\",\n    \"glass bowl | resting centrally on the wooden table | fills most of the frame as camera pushes in | proper refraction and depth ordering with hands and balls\",\n    \"small metal cup and loose balls | positioned on the table to the right of the glass bowl | exits frame to the right as camera zooms in after 00:04 | maintains consistent relative position on table\",\n    \"patio background | paved stone ground and brick wall behind the boy | partially out of frame as camera zooms in | consistent geometry during camera pullback at 00:02\",\n    \"boy's hands | right hand reaching into bowl, left hand on upper right rim | right hand stirring balls inside bowl, left hand holding upper rim | natural occlusion of balls inside the bowl\"\n  ],\n  \"findings\": []\n}"
+}

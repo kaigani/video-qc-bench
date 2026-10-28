@@ -1,0 +1,42 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:00:58.975Z",
+  "latencyMs": 38140,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 2647,
+    "total_tokens": 4260,
+    "cost": 0.014848,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014848,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.013235
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2331,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | on wooden cutting board, empty | on wooden cutting board, filled with green and dark olives | filled with first batch of olives from 00:01 to 00:03 and second batch from 00:07 to 00:09",
+    "Small glass cup | held by person's hands above jar, full of olives | held by person's hands above jar, empty | emptied into large jar (00:01-00:03), refilled from metal bowl across jump cut (00:04-00:05), and emptied into large jar again (00:07-00:09)",
+    "Metal bowl | on countertop to the right of cutting board, filled with olives | on countertop, mostly empty with a few remaining olives | olives transferred out into the small glass cup during the jump cut between 00:04 and 00:05",
+    "Ceramic bowl of green olives | on countertop at bottom right, full of green olives | on countertop at bottom right, full of green olives | none, remains stationary and untouched",
+    "Small glass bottle | off-screen or not yet placed on counter at start | on countertop to the right of the metal bowl | appears on counter after the jump cut at 00:05 and remains stationary"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | on wooden cutting board, empty | on wooden cutting board, filled with green and dark olives | filled with first batch of olives from 00:01 to 00:03 and second batch from 00:07 to 00:09\",\n    \"Small glass cup | held by person's hands above jar, full of olives | held by person's hands above jar, empty | emptied into large jar (00:01-00:03), refilled from metal bowl across jump cut (00:04-00:05), and emptied into large jar again (00:07-00:09)\",\n    \"Metal bowl | on countertop to the right of cutting board, filled with olives | on countertop, mostly empty with a few remaining olives | olives transferred out into the small glass cup during the jump cut between 00:04 and 00:05\",\n    \"Ceramic bowl of green olives | on countertop at bottom right, full of green olives | on countertop at bottom right, full of green olives | none, remains stationary and untouched\",\n    \"Small glass bottle | off-screen or not yet placed on counter at start | on countertop to the right of the metal bowl | appears on counter after the jump cut at 00:05 and remains stationary\"\n  ],\n  \"findings\": []\n}"
+}

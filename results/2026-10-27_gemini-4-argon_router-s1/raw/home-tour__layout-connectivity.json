@@ -1,0 +1,59 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:34:10.433Z",
+  "latencyMs": 38551,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2518,
+    "total_tokens": 4083,
+    "cost": 0.014155,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014155,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.01259
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1982,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Kitchen 1 — microwave on counter to the right, stove and cabinets on the left, opening straight ahead into a hallway with a white door at the far end.",
+    "00:01-00:03: Grey wall segment between the hallway opening and the right-hand doorway holds a vertical floral portrait and a small horizontal print on the kitchen side.",
+    "00:03-00:05: Traversal 1 — woman turns right from Kitchen 1 and walks through the right-hand doorway into a bedroom.",
+    "00:04-00:06: Bedroom interior — bed positioned under a low dining chandelier with two wooden dining chairs tucked side-by-side against the foot of the bed; windows flank the headboard wall.",
+    "00:06-00:09: Traversal 2 — woman turns 90 degrees left past the left window and walks through a perpendicular doorway (flanked inside the bedroom by a duplicate of the vertical floral portrait) into a second kitchen with a stove/over-the-range microwave on the left and a white door ahead."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "bed and dining chairs in bedroom",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two wooden dining chairs are positioned side-by-side facing and tucked directly against the foot of the bed under a dining chandelier, arranged as though serving a dining table rather than a bed.",
+      "severity": "moderate",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "bedroom exit doorway and adjacent kitchen",
+      "invariant_violated": "spatial layout and traversal consistency",
+      "description": "After entering the bedroom by turning right from the first kitchen (leaving the vertical floral print on the kitchen wall outside), the woman turns left 90 degrees and exits through a perpendicular wall that has a duplicate of the same floral print inside the bedroom and opens into a second copy of the kitchen (now with a microwave mounted above the left stove) in the space that should lie to the right of the original hallway.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Kitchen 1 — microwave on counter to the right, stove and cabinets on the left, opening straight ahead into a hallway with a white door at the far end.\",\n    \"00:01-00:03: Grey wall segment between the hallway opening and the right-hand doorway holds a vertical floral portrait and a small horizontal print on the kitchen side.\",\n    \"00:03-00:05: Traversal 1 — woman turns right from Kitchen 1 and walks through the right-hand doorway into a bedroom.\",\n    \"00:04-00:06: Bedroom interior — bed positioned under a low dining chandelier with two wooden dining chairs tucked side-by-side against the foot of the bed; windows flank the headboard wall.\",\n    \"00:06-00:09: Traversal 2 — woman turns 90 degrees left past the left window and walks through a perpendicular doorway (flanked inside the bedroom by a duplicate of the vertical floral portrait) into a second kitchen with a stove/over-the-range microwave on the left and a white door ahead.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"bed and dining chairs in bedroom\",\n      \"invariant_violated\": \"functional furniture arrangement\",\n      \"description\": \"Two wooden dining chairs are positioned side-by-side facing and tucked directly against the foot of the bed under a dining chandelier, arranged as though serving a dining table rather than a bed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"bedroom exit doorway and adjacent kitchen\",\n      \"invariant_violated\": \"spatial layout and traversal consistency\",\n      \"description\": \"After entering the bedroom by turning right from the first kitchen (leaving the vertical floral print on the kitchen wall outside), the woman turns left 90 degrees and exits through a perpendicular wall that has a duplicate of the same floral print inside the bedroom and opens into a second copy of the kitchen (now with a microwave mounted above the left stove) in the space that should lie to the right of the original hallway.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

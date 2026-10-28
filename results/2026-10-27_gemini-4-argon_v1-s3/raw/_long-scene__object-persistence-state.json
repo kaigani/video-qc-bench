@@ -1,0 +1,62 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:11:15.552Z",
+  "latencyMs": 102691,
+  "usage": {
+    "prompt_tokens": 12345,
+    "completion_tokens": 6561,
+    "total_tokens": 18906,
+    "cost": 0.04515,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04515,
+      "upstream_inference_prompt_cost": 0.012345,
+      "upstream_inference_completions_cost": 0.032805
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5647,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "semi-truck / box truck | white sleeper-cab tractor idling outside diner at 00:00 | green box truck in parking lot as man exits at 01:41 | seen in exterior shots at start and end",
+    "wiping cloth | held by waitress wiping counter at 00:10 | resting on counter next to mug at 00:27, then used by waitress at pass-through at 00:45 | moved across counter by waitress while cleaning",
+    "glass coffee carafe | picked up by waitress at 00:24, full of black coffee | held by waitress after pouring into mug at 00:31 | tilted to pour coffee into white mug from 00:28 to 00:30",
+    "man's white coffee mug | appears on counter in front of man on match cut at 00:27 (empty) | picked up from counter by waitress at 01:51 and placed by coffee machine at 01:55 | filled with coffee at 00:28-00:30; held by man at 00:36 and 01:00; merges with second mug brought by waitress at 01:12-01:13",
+    "waitress's second white coffee mug | carried in waitress's right hand at 01:07-01:11 | held by waitress sitting next to man at 01:27-01:34 | slid against man's mug at 01:12 where the two mugs coalesce into a single mug; another mug is carried by waitress from back of counter at 01:18-01:26",
+    "plate of fried egg and toast | on counter in close-up at 00:32 (intact, steaming) | picked up and carried away untouched by waitress at 01:14-01:17 | sits untouched in front of man at 00:36 and 01:00 before waitress removes it at 01:14",
+    "folded dollar bills | placed on counter by man's left hand at 01:38 next to white mug | picked up from counter by waitress's left hand at 01:51 | patted by man's right hand at 01:39 and left on counter at 01:40",
+    "condiment dispensers (silver pitcher, shakers, sugar container) | two sets stationary on main counter at 00:10 | remain stationary on main counter through 01:58 | no state changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:27",
+      "entity": "man's white coffee mug",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:25-00:26, the man rests his hands on the bare counter surface as the waitress lifts the glass carafe to pour. On the match cut to the close-up at 00:27, a white coffee mug is already sitting on the counter under the carafe with no visible action placing it there.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:12",
+      "entity": "white coffee mugs",
+      "invariant_violated": "identity & persistence",
+      "description": "From 01:09 to 01:11, the man holds a white coffee mug on the counter with both hands while the waitress approaches holding a second white coffee mug in her right hand. At 01:12-01:13, as the waitress slides the second mug directly up against the man's hands, the two mugs merge into one and the original mug vanishes in plain sight, leaving only a single mug on the counter.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"semi-truck / box truck | white sleeper-cab tractor idling outside diner at 00:00 | green box truck in parking lot as man exits at 01:41 | seen in exterior shots at start and end\",\n    \"wiping cloth | held by waitress wiping counter at 00:10 | resting on counter next to mug at 00:27, then used by waitress at pass-through at 00:45 | moved across counter by waitress while cleaning\",\n    \"glass coffee carafe | picked up by waitress at 00:24, full of black coffee | held by waitress after pouring into mug at 00:31 | tilted to pour coffee into white mug from 00:28 to 00:30\",\n    \"man's white coffee mug | appears on counter in front of man on match cut at 00:27 (empty) | picked up from counter by waitress at 01:51 and placed by coffee machine at 01:55 | filled with coffee at 00:28-00:30; held by man at 00:36 and 01:00; merges with second mug brought by waitress at 01:12-01:13\",\n    \"waitress's second white coffee mug | carried in waitress's right hand at 01:07-01:11 | held by waitress sitting next to man at 01:27-01:34 | slid against man's mug at 01:12 where the two mugs coalesce into a single mug; another mug is carried by waitress from back of counter at 01:18-01:26\",\n    \"plate of fried egg and toast | on counter in close-up at 00:32 (intact, steaming) | picked up and carried away untouched by waitress at 01:14-01:17 | sits untouched in front of man at 00:36 and 01:00 before waitress removes it at 01:14\",\n    \"folded dollar bills | placed on counter by man's left hand at 01:38 next to white mug | picked up from counter by waitress's left hand at 01:51 | patted by man's right hand at 01:39 and left on counter at 01:40\",\n    \"condiment dispensers (silver pitcher, shakers, sugar container) | two sets stationary on main counter at 00:10 | remain stationary on main counter through 01:58 | no state changes\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:27\",\n      \"entity\": \"man's white coffee mug\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:25-00:26, the man rests his hands on the bare counter surface as the waitress lifts the glass carafe to pour. On the match cut to the close-up at 00:27, a white coffee mug is already sitting on the counter under the carafe with no visible action placing it there.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"white coffee mugs\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"From 01:09 to 01:11, the man holds a white coffee mug on the counter with both hands while the waitress approaches holding a second white coffee mug in her right hand. At 01:12-01:13, as the waitress slides the second mug directly up against the man's hands, the two mugs merge into one and the original mug vanishes in plain sight, leaving only a single mug on the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

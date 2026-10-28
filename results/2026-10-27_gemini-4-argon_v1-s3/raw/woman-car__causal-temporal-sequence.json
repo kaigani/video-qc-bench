@@ -1,0 +1,40 @@
+{
+  "key": "woman-car__causal-temporal-sequence",
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:32:42.187Z",
+  "latencyMs": 27147,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 850,
+    "total_tokens": 2615,
+    "cost": 0.006015,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006015,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00425
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 675,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's head and expression | facing forward with neutral expression at 00:00 | turned slightly right with a faint smile by 00:09 | gradual, continuous head turn starting around 00:02",
+    "woman's hair | resting on shoulders at 00:00 | blown backward to the right at 00:09 | wind lifts hair starting at 00:04 and sustains the lift through 00:09",
+    "sunlight flare | absent at 00:00 | bright flare behind woman's head at 00:07-00:09 | appears progressively as camera arcs around the vehicle"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's head and expression | facing forward with neutral expression at 00:00 | turned slightly right with a faint smile by 00:09 | gradual, continuous head turn starting around 00:02\",\n    \"woman's hair | resting on shoulders at 00:00 | blown backward to the right at 00:09 | wind lifts hair starting at 00:04 and sustains the lift through 00:09\",\n    \"sunlight flare | absent at 00:00 | bright flare behind woman's head at 00:07-00:09 | appears progressively as camera arcs around the vehicle\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:45:51.124Z",
+  "latencyMs": 48249,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1827,
+    "total_tokens": 3422,
+    "cost": 0.01073,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01073,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.009135
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1510,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon | parked on the right shoulder of a desert road facing foreground-left, with solid hood and wood-paneled front-left fender in foreground and windshield/cabin behind | close-up of hood and windshield area | camera dollies in and arcs slightly left from 00:00 to 00:09",
+    "Woman | leaning with crossed arms on the surface of the car hood in front of the driver-side windshield and A-pillar | remains in the same position embedded in the hood in front of the windshield | turns head slightly as hair blows in the wind",
+    "Desert road and background mountains | highway stretching into the distance on the left with desert scrub and mountains behind | background shifts smoothly with camera parallax | maintains consistent spatial layout throughout the shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and station wagon body",
+      "invariant_violated": "impossible geometry / depth ordering & occlusion",
+      "description": "The woman is spatially positioned in front of the windshield, wipers, and driver-side A-pillar, with her crossed arms resting on the hood and her lower torso disappearing directly into the solid metal of the hood and front-left fender rather than emerging from a window or cabin opening.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Station wagon | parked on the right shoulder of a desert road facing foreground-left, with solid hood and wood-paneled front-left fender in foreground and windshield/cabin behind | close-up of hood and windshield area | camera dollies in and arcs slightly left from 00:00 to 00:09\",\n    \"Woman | leaning with crossed arms on the surface of the car hood in front of the driver-side windshield and A-pillar | remains in the same position embedded in the hood in front of the windshield | turns head slightly as hair blows in the wind\",\n    \"Desert road and background mountains | highway stretching into the distance on the left with desert scrub and mountains behind | background shifts smoothly with camera parallax | maintains consistent spatial layout throughout the shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and station wagon body\",\n      \"invariant_violated\": \"impossible geometry / depth ordering & occlusion\",\n      \"description\": \"The woman is spatially positioned in front of the windshield, wipers, and driver-side A-pillar, with her crossed arms resting on the hood and her lower torso disappearing directly into the solid metal of the hood and front-left fender rather than emerging from a window or cabin opening.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:50:40.603Z",
+  "latencyMs": 29928,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1947,
+    "total_tokens": 3567,
+    "cost": 0.011355,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011355,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.009735
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1425,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Boy's left hand | reaches into bowl to assist holding a red ball at 00:00-00:01 | grasps the upper right rim of the glass bowl from 00:02 to 00:09 | maintains steady contact on the bowl rim after 00:02",
+    "Boy's right hand | reaches into bowl at 00:00, lifts red ball with left hand at 00:01, drops it at 00:02 | stirs balls rapidly inside the bowl from 00:05 to 00:09 | fingers clip through the balls and balls lose solid contact boundaries during rapid stirring at 00:06-00:09",
+    "Colored balls in glass bowl | solid spherical balls resting in bowl and moved by hand from 00:00 to 00:05 | deforming and interpenetrating blobs swirling around the bowl at 00:06-00:09 | lose solidity and clip through each other and the boy's fingers starting at 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Boy's right hand and colored balls",
+      "invariant_violated": "solidity",
+      "description": "As the boy's right hand stirs the bowl rapidly from 00:06 to 00:09, the balls lose physical solidity, clipping through each other to form a flat dark-red mass beneath his palm while his fingers pass directly through the red and green balls at 00:08-00:09 instead of displacing them as solid objects.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Colored balls in glass bowl",
+      "invariant_violated": "contact points",
+      "description": "Between 00:07 and 00:09, balls along the perimeter of the bowl slide and circulate around the hand without consistent directional pushing contact from the fingers.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Boy's left hand | reaches into bowl to assist holding a red ball at 00:00-00:01 | grasps the upper right rim of the glass bowl from 00:02 to 00:09 | maintains steady contact on the bowl rim after 00:02\",\n    \"Boy's right hand | reaches into bowl at 00:00, lifts red ball with left hand at 00:01, drops it at 00:02 | stirs balls rapidly inside the bowl from 00:05 to 00:09 | fingers clip through the balls and balls lose solid contact boundaries during rapid stirring at 00:06-00:09\",\n    \"Colored balls in glass bowl | solid spherical balls resting in bowl and moved by hand from 00:00 to 00:05 | deforming and interpenetrating blobs swirling around the bowl at 00:06-00:09 | lose solidity and clip through each other and the boy's fingers starting at 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Boy's right hand and colored balls\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"As the boy's right hand stirs the bowl rapidly from 00:06 to 00:09, the balls lose physical solidity, clipping through each other to form a flat dark-red mass beneath his palm while his fingers pass directly through the red and green balls at 00:08-00:09 instead of displacing them as solid objects.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Colored balls in glass bowl\",\n      \"invariant_violated\": \"contact points\",\n      \"description\": \"Between 00:07 and 00:09, balls along the perimeter of the bowl slide and circulate around the hand without consistent directional pushing contact from the fingers.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

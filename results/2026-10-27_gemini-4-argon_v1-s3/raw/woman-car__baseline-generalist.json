@@ -1,0 +1,56 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:31:17.684Z",
+  "latencyMs": 31579,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1173,
+    "total_tokens": 2581,
+    "cost": 0.007273,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007273,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.005865
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 802,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | emerging from solid car hood in front of the windshield with arms crossed | zoomed in, still clipping through the solid hood in front of the intact windshield | physically impossible placement throughout clip",
+    "fender emblem | single rectangular badge on the cream paint above the wood trim at 00:00 | single rectangular badge located lower on the wood trim at 00:04 | duplicates at 00:02-00:03 before top badge disappears at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and car hood",
+      "invariant_violated": "physical_impossibility_interpenetration",
+      "description": "The woman's torso is emerging directly out of the solid metal hood and cowl area of the station wagon, right in front of the intact windshield glass, with no opening or physical space for her lower body.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "front fender emblem",
+      "invariant_violated": "object_permanence_and_consistency",
+      "description": "Initially there is a single rectangular badge on the cream-colored paint above the wood paneling. At 00:02 a second identical badge materializes on the wood paneling directly below it, and by 00:04 the original upper badge vanishes completely.",
+      "severity": "moderate",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | emerging from solid car hood in front of the windshield with arms crossed | zoomed in, still clipping through the solid hood in front of the intact windshield | physically impossible placement throughout clip\",\n    \"fender emblem | single rectangular badge on the cream paint above the wood trim at 00:00 | single rectangular badge located lower on the wood trim at 00:04 | duplicates at 00:02-00:03 before top badge disappears at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and car hood\",\n      \"invariant_violated\": \"physical_impossibility_interpenetration\",\n      \"description\": \"The woman's torso is emerging directly out of the solid metal hood and cowl area of the station wagon, right in front of the intact windshield glass, with no opening or physical space for her lower body.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"front fender emblem\",\n      \"invariant_violated\": \"object_permanence_and_consistency\",\n      \"description\": \"Initially there is a single rectangular badge on the cream-colored paint above the wood paneling. At 00:02 a second identical badge materializes on the wood paneling directly below it, and by 00:04 the original upper badge vanishes completely.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

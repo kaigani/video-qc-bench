@@ -1,0 +1,67 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:50:10.295Z",
+  "latencyMs": 100453,
+  "usage": {
+    "prompt_tokens": 12327,
+    "completion_tokens": 7122,
+    "total_tokens": 19449,
+    "cost": 0.047937,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.047937,
+      "upstream_inference_prompt_cost": 0.012327,
+      "upstream_inference_completions_cost": 0.03561
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6300,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner counter and stools | Long continuous counter on the right side of the room (looking toward the back kitchen wall) with red stools along its left (customer) side and staff workspace on its right | Same position in wide shots, but inverted in the 01:27 medium shot | Waitress passes directly through the solid counter at 01:19 and 01:51",
+    "Exterior windows and booths | Located along the left wall when looking toward the back kitchen pass-through, with neon OPEN sign at the back-left window | Same in wide shots | Appear behind the characters on the right side of the frame alongside a back sunrise window in the 01:27 medium shot",
+    "Kitchen wall and pass-through window | Located at the back wall of the diner, perpendicular to the counter and left window wall | Same in wide shots | Replaced by exterior windows and a glass-door cooler behind the waitress in the 01:27 medium shot",
+    "Waitress | Starts behind the counter on the right (staff) side | Ends behind the counter on the right side alongside a duplicate figure at the back counter | Walks through the solid counter to the customer side at 01:19, swaps relative spatial orientation at 01:27, and walks back through the solid counter at 01:51",
+    "Male customer | Enters from the back of the counter at 00:19 and sits on a stool on the customer side facing right | Exits the diner and walks to the truck outside at 01:41 | Seated to the waitress's right in the 01:22 wide shot, but positioned in an incompatible layout in the 01:27 two-shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:19",
+      "entity": "Waitress and diner counter",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "While moving from the staff workspace behind the counter to sit next to the customer, the waitress walks directly through the solid continuous counter and the condiment dispensers on top of it instead of walking around the end of the counter.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "Diner interior layout and camera viewpoint",
+      "invariant_violated": "viewpoint consistency",
+      "description": "In the preceding wide shot (01:26), the man sits to the waitress's right (closer to the front of the diner) while both face the counter on the right with the exterior windows behind their backs on the left and the solid kitchen wall behind the waitress. In the 01:27 medium shot, the man is still in the foreground and the waitress is further back, but the counter is now on the left of the frame, the windows and booths are behind their backs on the right, and the back kitchen wall has been replaced by exterior sunrise windows and a glass-door cooler—an impossible geometry from any camera angle.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress and diner counter",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "After standing up from the stool on the customer side of the counter, the waitress turns right and walks straight through the stools and the solid counter structure to emerge on the staff workspace side behind the counter.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner counter and stools | Long continuous counter on the right side of the room (looking toward the back kitchen wall) with red stools along its left (customer) side and staff workspace on its right | Same position in wide shots, but inverted in the 01:27 medium shot | Waitress passes directly through the solid counter at 01:19 and 01:51\",\n    \"Exterior windows and booths | Located along the left wall when looking toward the back kitchen pass-through, with neon OPEN sign at the back-left window | Same in wide shots | Appear behind the characters on the right side of the frame alongside a back sunrise window in the 01:27 medium shot\",\n    \"Kitchen wall and pass-through window | Located at the back wall of the diner, perpendicular to the counter and left window wall | Same in wide shots | Replaced by exterior windows and a glass-door cooler behind the waitress in the 01:27 medium shot\",\n    \"Waitress | Starts behind the counter on the right (staff) side | Ends behind the counter on the right side alongside a duplicate figure at the back counter | Walks through the solid counter to the customer side at 01:19, swaps relative spatial orientation at 01:27, and walks back through the solid counter at 01:51\",\n    \"Male customer | Enters from the back of the counter at 00:19 and sits on a stool on the customer side facing right | Exits the diner and walks to the truck outside at 01:41 | Seated to the waitress's right in the 01:22 wide shot, but positioned in an incompatible layout in the 01:27 two-shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:19\",\n      \"entity\": \"Waitress and diner counter\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"While moving from the staff workspace behind the counter to sit next to the customer, the waitress walks directly through the solid continuous counter and the condiment dispensers on top of it instead of walking around the end of the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"Diner interior layout and camera viewpoint\",\n      \"invariant_violated\": \"viewpoint consistency\",\n      \"description\": \"In the preceding wide shot (01:26), the man sits to the waitress's right (closer to the front of the diner) while both face the counter on the right with the exterior windows behind their backs on the left and the solid kitchen wall behind the waitress. In the 01:27 medium shot, the man is still in the foreground and the waitress is further back, but the counter is now on the left of the frame, the windows and booths are behind their backs on the right, and the back kitchen wall has been replaced by exterior sunrise windows and a glass-door cooler—an impossible geometry from any camera angle.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress and diner counter\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"After standing up from the stool on the customer side of the counter, the waitress turns right and walks straight through the stools and the solid counter structure to emerge on the staff workspace side behind the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

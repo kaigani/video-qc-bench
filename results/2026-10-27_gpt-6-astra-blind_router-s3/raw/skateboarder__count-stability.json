@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "00:00.000\u201300:01.250, sampled every 0.250 s: 2 red shoes and 2 green socks; no additions, removals, or changes of kind.",
+    "00:01.500\u201300:02.750, sampled every 0.250 s: 2 red shoes and 2 green socks during the first jump; occasional overlap does not establish a count change.",
+    "00:03.000\u201300:04.750, sampled every 0.250 s: 2 red shoes and 2 green socks through landing and rolling away; counts unchanged.",
+    "00:05.000\u201300:06.500: the shoes and socks overlap in the camera's view; the obscured members of each pair are not counted as removed.",
+    "00:06.750\u201300:09.750, sampled every 0.250 s: 2 red shoes and 2 green socks remain identifiable through the second jump and landing; no change of kind.",
+    "00:00.000\u201300:01.000: 2 near-side skateboard wheels are distinguishable; the deck hides the opposite side, so the complete wheel count is not established.",
+    "00:01.250: the board tips upward under the skater's foot; wheel visibility is incomplete, with no confirmed wheel removal.",
+    "00:01.500\u201300:02.500: 2 skateboard truck assemblies and 2 individually distinguishable wheel faces; the oblique deck and assemblies obscure other wheel positions.",
+    "00:02.750\u201300:03.500: board rotation, motion blur, and lower-frame cropping prevent a reliable complete wheel count; no confirmed addition or removal.",
+    "00:03.750\u201300:04.750: 3 wheels are distinguishable in the oblique end view; the additional visible wheel is revealed as the board turns, not visibly created.",
+    "00:05.000\u201300:07.750: the nearest axle retains 2 visible wheels; the farther wheels are intermittently hidden by the deck and perspective. No complete-group count change is established.",
+    "00:08.000\u201300:08.250: the second takeoff rotates the deck and introduces blur; complete wheel count is unresolved.",
+    "00:08.500: 2 distinct near-side wheels remain attached beneath the airborne board; opposite-side wheel positions are obscured.",
+    "00:08.750\u201300:09.750: rotation reveals additional wheel surfaces before landing; overlap and motion blur prevent a reliable complete count. No wheel is confirmed to vanish, multiply, or become another kind of object.",
+    "00:00\u201300:09: background floodlight groups are partly cropped, overlapped, or too distant for a complete continuous count; changes in the visible subset follow camera movement, with no confirmed spontaneous change."
+  ],
+  "findings": [],
+  "video": "skateboarder.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-10__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-10__count-stability.json",
+  "frozen_source_sha256": "6465c5c12de0c8f0c52163b22d5e46e424c72209625b0379dcd6532076487d48",
+  "key": "skateboarder__count-stability",
+  "parseOk": true
+}

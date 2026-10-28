@@ -1,0 +1,66 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:48:27.203Z",
+  "latencyMs": 39213,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2815,
+    "total_tokens": 4404,
+    "cost": 0.015664,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015664,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.014075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2066,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Metal cups on center of table: 4 visible throughout 00:00-00:09 (no count change)",
+    "Coins inside the middle cup: filled to the brim with coins at 00:00-00:02 -> 0 visible at 00:03-00:09 (vanish without being touched)",
+    "Coins resting on the central white circle: 4 coins visible at 00:00 (1 small yellow coin on left, 3 gold coins on right/bottom) -> small yellow coin on left gone by 00:03; 2 gold coins visible in front of cups at 00:03 -> 3 gold coins lined up in front of cups at 00:04 (1 appears spontaneously in front of leftmost cup) -> 4 coins on white circle at 00:05 as another coin appears beneath the rightmost cup",
+    "Coins in performer's hands: 1 coin in right hand at 00:00-00:02 -> 2 coins (1 in right hand, 1 materializes in left hand) at 00:03 -> left-hand coin vanishes at 00:04 -> coin reappears under left hand on side of rightmost cup at 00:06 -> vanishes again at 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coins inside the middle cup",
+      "invariant_violated": "unexplained disappearance of untouched objects",
+      "description": "From 00:00 to 00:02 the central cup is filled to the brim with large gold coins. Between 00:02 and 00:03, without the performer touching or occluding the cup, all the coins inside it vanish completely, leaving the cup empty.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "coins resting on the central white table surface",
+      "invariant_violated": "spontaneous count change of untouched objects",
+      "description": "At 00:03 there are two coins resting untouched on the white surface in front of the cups. At 00:04 a third large gold coin spontaneously appears on the table directly in front of the leftmost cup without being placed or dropped there, and at 00:05 an additional small coin appears beneath the rightmost cup.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "coin on the rightmost cup",
+      "invariant_violated": "unexplained appearance and disappearance of coin",
+      "description": "A large gold coin materializes in the performer's left hand at 00:03, vanishes in mid-air at 00:04 as the hand grasps the rightmost cup, spontaneously reappears flat against the outside wall of the rightmost cup at 00:06, and vanishes again by 00:07.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Metal cups on center of table: 4 visible throughout 00:00-00:09 (no count change)\",\n    \"Coins inside the middle cup: filled to the brim with coins at 00:00-00:02 -> 0 visible at 00:03-00:09 (vanish without being touched)\",\n    \"Coins resting on the central white circle: 4 coins visible at 00:00 (1 small yellow coin on left, 3 gold coins on right/bottom) -> small yellow coin on left gone by 00:03; 2 gold coins visible in front of cups at 00:03 -> 3 gold coins lined up in front of cups at 00:04 (1 appears spontaneously in front of leftmost cup) -> 4 coins on white circle at 00:05 as another coin appears beneath the rightmost cup\",\n    \"Coins in performer's hands: 1 coin in right hand at 00:00-00:02 -> 2 coins (1 in right hand, 1 materializes in left hand) at 00:03 -> left-hand coin vanishes at 00:04 -> coin reappears under left hand on side of rightmost cup at 00:06 -> vanishes again at 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coins inside the middle cup\",\n      \"invariant_violated\": \"unexplained disappearance of untouched objects\",\n      \"description\": \"From 00:00 to 00:02 the central cup is filled to the brim with large gold coins. Between 00:02 and 00:03, without the performer touching or occluding the cup, all the coins inside it vanish completely, leaving the cup empty.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"coins resting on the central white table surface\",\n      \"invariant_violated\": \"spontaneous count change of untouched objects\",\n      \"description\": \"At 00:03 there are two coins resting untouched on the white surface in front of the cups. At 00:04 a third large gold coin spontaneously appears on the table directly in front of the leftmost cup without being placed or dropped there, and at 00:05 an additional small coin appears beneath the rightmost cup.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"coin on the rightmost cup\",\n      \"invariant_violated\": \"unexplained appearance and disappearance of coin\",\n      \"description\": \"A large gold coin materializes in the performer's left hand at 00:03, vanishes in mid-air at 00:04 as the hand grasps the rightmost cup, spontaneously reappears flat against the outside wall of the rightmost cup at 00:06, and vanishes again by 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

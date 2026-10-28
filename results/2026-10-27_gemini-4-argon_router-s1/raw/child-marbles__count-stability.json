@@ -1,0 +1,61 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:31:52.078Z",
+  "latencyMs": 67538,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 5277,
+    "total_tokens": 6866,
+    "cost": 0.027974,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027974,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.026385
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4564,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00: Colored balls in glass bowl — 8 balls (3 red, 3 yellow, 2 green) as child reaches into the bowl.",
+    "00:00-00:03: Objects on table at bottom-right — 3 colored balls partially visible at the frame edge and 1 patterned object in a small metal cup; cropped out when the view zooms in at 00:04.",
+    "00:01: Colored balls in glass bowl — 7 balls in the bowl (2 red, 3 yellow, 2 green) and 1 red ball visibly lifted in the child's hands above the bowl (total 8).",
+    "00:02-00:04: Colored balls in glass bowl — 8 balls in the bowl (3 red, 3 yellow, 2 green) after the child places the red ball back inside.",
+    "00:05-00:07: Colored balls in glass bowl — child stirs the balls with his right hand; at 00:07, 6 balls are clearly visible (3 red, 2 yellow, 1 green) with 1-2 balls occluded under the hand on the left.",
+    "00:08: Colored balls in glass bowl — 6 balls visible (2 red, 3 green, 1 yellow); the middle-right red ball turns green and the two yellow balls on the right merge into one.",
+    "00:09: Colored balls in glass bowl — 6 balls total (3 red, 2 green, 1 yellow); the far-left red ball turns green, the right-side yellow ball turns red, and 2 balls have vanished without being removed from the bowl."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "colored balls in the glass bowl",
+      "invariant_violated": "unexplained kind/color transformation",
+      "description": "As the child stirs the balls between 00:07 and 00:09, multiple balls spontaneously change color: at 00:08 the middle-right red ball turns green (temporarily making 3 green balls instead of 2), and at 00:09 the far-left red ball turns green while the bottom-right yellow ball turns red.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "colored balls in the glass bowl",
+      "invariant_violated": "unexplained count decrease",
+      "description": "The bowl contains 8 balls (3 red, 3 yellow, 2 green) through 00:05, with no balls ever removed from the bowl. At 00:08 two yellow balls on the right merge into a single yellow ball, and by 00:09 only 6 balls remain in the bowl (3 red, 2 green, 1 yellow).",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00: Colored balls in glass bowl — 8 balls (3 red, 3 yellow, 2 green) as child reaches into the bowl.\",\n    \"00:00-00:03: Objects on table at bottom-right — 3 colored balls partially visible at the frame edge and 1 patterned object in a small metal cup; cropped out when the view zooms in at 00:04.\",\n    \"00:01: Colored balls in glass bowl — 7 balls in the bowl (2 red, 3 yellow, 2 green) and 1 red ball visibly lifted in the child's hands above the bowl (total 8).\",\n    \"00:02-00:04: Colored balls in glass bowl — 8 balls in the bowl (3 red, 3 yellow, 2 green) after the child places the red ball back inside.\",\n    \"00:05-00:07: Colored balls in glass bowl — child stirs the balls with his right hand; at 00:07, 6 balls are clearly visible (3 red, 2 yellow, 1 green) with 1-2 balls occluded under the hand on the left.\",\n    \"00:08: Colored balls in glass bowl — 6 balls visible (2 red, 3 green, 1 yellow); the middle-right red ball turns green and the two yellow balls on the right merge into one.\",\n    \"00:09: Colored balls in glass bowl — 6 balls total (3 red, 2 green, 1 yellow); the far-left red ball turns green, the right-side yellow ball turns red, and 2 balls have vanished without being removed from the bowl.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"colored balls in the glass bowl\",\n      \"invariant_violated\": \"unexplained kind/color transformation\",\n      \"description\": \"As the child stirs the balls between 00:07 and 00:09, multiple balls spontaneously change color: at 00:08 the middle-right red ball turns green (temporarily making 3 green balls instead of 2), and at 00:09 the far-left red ball turns green while the bottom-right yellow ball turns red.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"colored balls in the glass bowl\",\n      \"invariant_violated\": \"unexplained count decrease\",\n      \"description\": \"The bowl contains 8 balls (3 red, 3 yellow, 2 green) through 00:05, with no balls ever removed from the bowl. At 00:08 two yellow balls on the right merge into a single yellow ball, and by 00:09 only 6 balls remain in the bowl (3 red, 2 green, 1 yellow).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

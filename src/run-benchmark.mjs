@@ -22,12 +22,13 @@ const DEFAULT_MODEL = 'google/gemini-3.6-flash';
 let CONCURRENCY = 3;
 
 function parseArgs(argv) {
-  const args = { model: DEFAULT_MODEL, videos: null, roles: null, runId: null, force: false, reasoning: false, reasoningEffort: null, rolesFile: null };
+  const args = { model: DEFAULT_MODEL, videos: null, roles: null, runId: null, force: false, reasoning: false, reasoningEffort: null, rolesFile: null, provider: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--model') args.model = argv[++i];
     else if (a === '--reasoning') args.reasoning = true;
     else if (a === '--reasoning-effort') args.reasoningEffort = argv[++i];
+    else if (a === '--provider') args.provider = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--videos-dir') VIDEOS_DIR = argv[++i];
     else if (a === '--concurrency') CONCURRENCY = Number(argv[++i]);
     else if (a === '--videos') args.videos = argv[++i].split(',').map((s) => s.trim());
@@ -66,7 +67,7 @@ async function main() {
   const manifestPath = join(runDir, 'manifest.json');
   const manifest = existsSync(manifestPath)
     ? JSON.parse(readFileSync(manifestPath, 'utf8'))
-    : { runId, model: args.model, reasoning: args.reasoning, reasoningEffort: args.reasoningEffort, started: new Date().toISOString(), calls: {} };
+    : { runId, model: args.model, reasoning: args.reasoning, reasoningEffort: args.reasoningEffort, provider: args.provider, started: new Date().toISOString(), calls: {} };
 
   // Build task list, skipping completed results unless --force.
   const tasks = [];
@@ -114,6 +115,7 @@ async function main() {
               videoDataUrl: dataUrl,
               reasoning: args.reasoning,
               reasoningEffort: args.reasoningEffort,
+              provider: args.provider,
             });
         const parsed = parseFindings(text);
         const result = {

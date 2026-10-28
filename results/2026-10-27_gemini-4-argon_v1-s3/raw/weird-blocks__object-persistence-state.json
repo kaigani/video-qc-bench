@@ -1,0 +1,63 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:27:01.802Z",
+  "latencyMs": 19403,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1496,
+    "total_tokens": 3109,
+    "cost": 0.009093,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009093,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00748
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1032,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Numbered blocks | Two green blocks showing '2' on the table at 00:00 | Eight multicolored blocks reading '2 3 2 2 3 5 2 6' in a row at 00:09 | Blocks repeatedly change color, change face numbers, and duplicate as the hand moves from left to right"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Left green '2' block and blue '3' block",
+      "invariant_violated": "identity & persistence",
+      "description": "The green '2' block on the far left transforms into a blue '2' block while a new blue '3' block materializes under the fingers without being brought into the scene.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Third block (green)",
+      "invariant_violated": "identity & persistence",
+      "description": "The existing green '2' block changes its front face digit to '3' when touched, and at 00:03 splits into a stationary green '2' block and a newly spawned green '3' block held by the hand.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Fourth through eighth blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "From 00:04 to 00:08, each rightmost block held by the hand spontaneously mutates in color and number while duplicating into an additional block to its right (forming tan '2', light-blue '3', green '5', green '2', and blue '6' out of thin air).",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Numbered blocks | Two green blocks showing '2' on the table at 00:00 | Eight multicolored blocks reading '2 3 2 2 3 5 2 6' in a row at 00:09 | Blocks repeatedly change color, change face numbers, and duplicate as the hand moves from left to right\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Left green '2' block and blue '3' block\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The green '2' block on the far left transforms into a blue '2' block while a new blue '3' block materializes under the fingers without being brought into the scene.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Third block (green)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The existing green '2' block changes its front face digit to '3' when touched, and at 00:03 splits into a stationary green '2' block and a newly spawned green '3' block held by the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Fourth through eighth blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"From 00:04 to 00:08, each rightmost block held by the hand spontaneously mutates in color and number while duplicating into an additional block to its right (forming tan '2', light-blue '3', green '5', green '2', and blue '6' out of thin air).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

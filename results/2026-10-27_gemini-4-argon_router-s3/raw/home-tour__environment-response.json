@@ -1,0 +1,40 @@
+{
+  "key": "home-tour__environment-response",
+  "video": "home-tour.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:01:20.272Z",
+  "latencyMs": 12471,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 609,
+    "total_tokens": 2139,
+    "cost": 0.004575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004575,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.003045
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 442,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Subject walking motion (00:00-00:09): Woman walks through indoor rooms and turns her head; should cause slight inertia-driven bounce in her hair and sway in her dangling earrings, which occurs naturally at 00:02 and 00:05.",
+    "Indoor still air (00:00-00:09): Interior home environment with closed windows; curtains, chandelier, and hanging wall frames should remain stationary, which they do throughout the clip.",
+    "Gravity on indoor textiles and fixtures (00:00-00:09): Window curtains, bedding, and chandelier hang vertically and undisturbed as expected."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Subject walking motion (00:00-00:09): Woman walks through indoor rooms and turns her head; should cause slight inertia-driven bounce in her hair and sway in her dangling earrings, which occurs naturally at 00:02 and 00:05.\",\n    \"Indoor still air (00:00-00:09): Interior home environment with closed windows; curtains, chandelier, and hanging wall frames should remain stationary, which they do throughout the clip.\",\n    \"Gravity on indoor textiles and fixtures (00:00-00:09): Window curtains, bedding, and chandelier hang vertically and undisturbed as expected.\"\n  ],\n  \"findings\": []\n}"
+}

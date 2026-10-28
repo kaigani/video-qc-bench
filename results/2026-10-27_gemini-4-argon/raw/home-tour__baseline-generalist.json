@@ -1,0 +1,57 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:31:17.874Z",
+  "latencyMs": 41779,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2807,
+    "total_tokens": 4215,
+    "cost": 0.015443,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015443,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.014035
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2278,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | walking through kitchen into bedroom in dark teal dress | walks through second bedroom doorway back into a mutated kitchen; distorted hand-like artifact appears at left hip at 00:08 | turns right into bedroom at 00:03, turns left into second doorway at 00:07",
+    "kitchen and hallway | microwave on right counter, wooden cabinets above left stove, blue-flower art on right wall outside hallway | microwave mounted above left stove, back hallway replaced by closer wall with door and small frame | reappears in altered form through bedroom doorway at 00:07-00:09",
+    "framed blue-flower artwork | hanging on kitchen wall to the right of the hallway opening at 00:00-00:02 | duplicated inside the bedroom to the left of the exit doorway at 00:07 | relocates across rooms"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "house architecture and kitchen layout",
+      "invariant_violated": "spatial and architectural consistency",
+      "description": "After the woman turns 90 degrees right from the kitchen into a bedroom at 00:03, she turns left inside the bedroom and walks toward another doorway that impossibly leads back into a mutated version of the same kitchen and hallway. The framed blue-flower artwork from the kitchen wall (00:02) reappears inside the bedroom to the left of this doorway (00:07), and by 00:09 the kitchen layout has changed—a microwave is now mounted above the stove on the left instead of sitting on the right counter as seen at 00:00, and the back hallway configuration is altered.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "woman's left hip / hand",
+      "invariant_violated": "anatomical consistency",
+      "description": "As the woman steps through the doorway at 00:08, a distorted, fleshy hand-like appendage or garbled object briefly materializes and morphs along her left hip.",
+      "severity": "moderate",
+      "confidence": 0.93
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | walking through kitchen into bedroom in dark teal dress | walks through second bedroom doorway back into a mutated kitchen; distorted hand-like artifact appears at left hip at 00:08 | turns right into bedroom at 00:03, turns left into second doorway at 00:07\",\n    \"kitchen and hallway | microwave on right counter, wooden cabinets above left stove, blue-flower art on right wall outside hallway | microwave mounted above left stove, back hallway replaced by closer wall with door and small frame | reappears in altered form through bedroom doorway at 00:07-00:09\",\n    \"framed blue-flower artwork | hanging on kitchen wall to the right of the hallway opening at 00:00-00:02 | duplicated inside the bedroom to the left of the exit doorway at 00:07 | relocates across rooms\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"house architecture and kitchen layout\",\n      \"invariant_violated\": \"spatial and architectural consistency\",\n      \"description\": \"After the woman turns 90 degrees right from the kitchen into a bedroom at 00:03, she turns left inside the bedroom and walks toward another doorway that impossibly leads back into a mutated version of the same kitchen and hallway. The framed blue-flower artwork from the kitchen wall (00:02) reappears inside the bedroom to the left of this doorway (00:07), and by 00:09 the kitchen layout has changed—a microwave is now mounted above the stove on the left instead of sitting on the right counter as seen at 00:00, and the back hallway configuration is altered.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"woman's left hip / hand\",\n      \"invariant_violated\": \"anatomical consistency\",\n      \"description\": \"As the woman steps through the doorway at 00:08, a distorted, fleshy hand-like appendage or garbled object briefly materializes and morphs along her left hip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.93\n    }\n  ]\n}"
+}

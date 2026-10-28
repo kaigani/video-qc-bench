@@ -1,0 +1,67 @@
+{
+  "ledger": [
+    "Leftmost block, front: 00:00.000 reads 2; after handling, 00:00.750\u201300:09.750 reads 2. Early motion-blurred views excluded.",
+    "Second block from left, blue front: 00:01.250\u201300:09.750 reads 3, including after the final hand contact.",
+    "Initially right-hand green block, later third from left: 00:00.000\u201300:02.400 reads 2; 00:02.450\u201300:02.950 reads 3 on the same forward-facing surface. By 00:03.250, a 2 occupies the third position and a separate handheld 3 is immediately to its right; the third-position 2 remains through 00:09.750.",
+    "Fourth-position handheld block: 00:03.250\u201300:03.600 reads 3; following visible turning, 00:03.750\u201300:09.750 reads 2 on its yellow front. The turn prevents a confident same-face violation.",
+    "Fifth block, pale blue front: 00:04.250\u201300:09.750 reads 3; sharp settled readings at 00:04.750 and 00:05.000.",
+    "Sixth block, handheld blue-to-green front: 00:05.250\u201300:05.900 reads 3; 00:05.950\u201300:09.750 reads 5. Another 3-bearing block becomes visible to its right during placement.",
+    "Seventh block, handheld green front: 00:06.250\u201300:06.650 reads 3; 00:06.700\u201300:09.750 reads 2. A separate blue 3-bearing block becomes visible to its right.",
+    "Eighth/rightmost blue block, front: 00:06.750\u201300:07.650 reads 3; 00:07.750\u201300:09.750 reads 6, sharply legible once placed.",
+    "Exposed narrow side faces: recognizable 6 numerals on the first two blue blocks around 00:01.500\u201300:02.500; remaining angled, occluded, or blurred side markings are insufficient for reliable character comparisons.",
+    "Final front-face sequence at 00:08.000\u201300:09.750: 2 3 2 2 3 5 2 6. All settled numerals are coherent; no independently supported garbled-text defect."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Front numeral of the initially right-hand green block, third from left",
+      "invariant_violated": "Text stability",
+      "description": "The clearly readable 2 at 00:02.400 becomes a clearly readable 3 by 00:02.450\u201300:02.500. The hand lifts and slightly tilts the block, but its broad front and narrow right side remain in view; no face exchange, rewriting, or label replacement explains the changed numeral.",
+      "severity": "moderate",
+      "confidence": 0.97
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Front numeral of the sixth block from left",
+      "invariant_violated": "Text stability",
+      "description": "The green front reads 3 at 00:05.850\u201300:05.900 and 5 at 00:05.950\u201300:06.000. Its forward-facing surface changes during placement without a turn exposing another face or any visible editing of the numeral. A separate 3-bearing block appears to its right, but that does not explain the original front changing to 5.",
+      "severity": "moderate",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Front numeral of the seventh block from left",
+      "invariant_violated": "Text stability",
+      "description": "The handheld green front clearly reads 3 at 00:06.500\u201300:06.600, then reads 2 by 00:06.700\u201300:06.750 as it is lowered. The broad front remains directed toward the camera, with no face-changing rotation or text replacement. A blue block bearing 3 emerges beside it during the unexplained change.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Front numeral of the eighth, rightmost blue block",
+      "invariant_violated": "Text stability",
+      "description": "The blue block reads 3 while held at 00:07.500\u201300:07.650, then reads 6 at 00:07.750 and remains 6 through the end. The same broad front stays visible while the hand lowers the block; a slight tilt does not expose a different numbered face, and no writing or replacement occurs.",
+      "severity": "moderate",
+      "confidence": 0.96
+    }
+  ],
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-12__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-12.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-12__text-stability.json",
+  "frozen_source_sha256": "1620100caa99b25964ffc2a8780ac8efd14aa4f4253f901cf069e82db478a911",
+  "key": "weird-blocks__text-stability",
+  "parseOk": true
+}

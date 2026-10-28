@@ -99,9 +99,11 @@
   <section id="p20-section">
     <h2>2.0 protocol: pooled samples</h2>
     <p class="lede">Single runs are noisy (identical runs of the same model vary by &plusmn;7&ndash;10 detection points), so new
-      models also run the 2.0 protocol: the v1 harness &times; 3 samples plus the feature router &times; 3 samples, with
+      models also run the 2.0 protocol: normally the v1 harness &times; 3 samples plus the feature router &times; 3 samples, with
       every finding adjudicated. The headline is the <b>union</b>: every defect found by any sample. False positives
-      are shown per sample, since a reviewer works through one run's output at a time.</p>
+      are shown per sample, since a reviewer works through one run's output at a time. Actual sample counts and
+      media differences are explicit below; Astra has one core sample, not three. Compare review burden by layer
+      when the numbers of core and router samples differ.</p>
     <div class="card scroll" id="p20"></div>
   </section>
 
@@ -258,9 +260,9 @@ const ranked = [...M].sort((a, b) => b.detection - a.detection || b.defectsFound
     <td class="num"><b>${s.detection}/${DATA.maxScore}</b></td><td class="num">${s.fpPerSample}</td><td class="num">${s.fpTotal}</td><td>${extra ?? ''}</td></tr>`;
   $('p20').innerHTML = P.map((p) => {
     const routerOnly = p.router.defects.filter((d) => !p.v1.defects.includes(d));
-    return `<table>
+    return `${p.note ? `<p class="lede">${p.note}</p>` : ''}<table>
       <tr><th>${p.label}</th><th class="num">Samples</th><th class="num">Defects found (union)</th><th class="num">Detection (union)</th><th class="num">FP per sample</th><th class="num">FP total</th><th>Notes</th></tr>
-      ${row('v1 harness', p.v1, `single leaderboard run found ${p.leaderboardDefects}/${DATA.defectsTotal}`)}
+      ${row('v1 harness', p.v1, p.leaderboardDefects == null ? 'Separate frame-agent evaluation; not entered in the native-video single-run ranking' : `single leaderboard run found ${p.leaderboardDefects}/${DATA.defectsTotal}`)}
       ${row('Feature router', p.router, routerOnly.length ? `adds ${routerOnly.join(', ')} (missed by every v1 sample)` : '')}
       ${row('<b>All samples</b>', p.all, `<span style="color:var(--ink-2)">${p.all.defects.map((d) => `<span style="white-space:nowrap">${d}</span>`).join(', ')}</span>`)}
     </table>`;

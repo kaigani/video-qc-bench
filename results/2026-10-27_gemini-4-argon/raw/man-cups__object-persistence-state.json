@@ -1,0 +1,66 @@
+{
+  "key": "man-cups__object-persistence-state",
+  "video": "man-cups.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:33:33.978Z",
+  "latencyMs": 30530,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1978,
+    "total_tokens": 3591,
+    "cost": 0.011503,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011503,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00989
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1244,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Center cup (Cup 2) contents | filled to the brim with large coins at 00:00-00:02 | empty inside the upper half from 00:03-00:09 | coins inside vanish between 00:02 and 00:03 with no contact",
+    "Coin in right hand / foreground cup (Cup 1) | held above Cup 1 at 00:02-00:03 | held above Cup 1 at 00:09 | merges flat against the outside wall of Cup 1 at 00:04-00:06, vanishes at 00:07, and reappears in fingers at 00:08",
+    "Tabletop coins on inner beige circle | two large gold coins to the right of the cups at 00:00-00:02 | multiple shifted/vanished coins by 00:07-00:09 | a third large gold coin spontaneously appears directly in front of Cup 1 at 00:04",
+    "Coin in left hand | held in left fingers at 00:00-00:03 | placed/merged against far cup at 00:06, then gone at 00:07 | appears stuck to the outside of the far cup at 00:06 and disappears as hand moves to table at 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Coins inside the center cup",
+      "invariant_violated": "identity & persistence",
+      "description": "From 00:00 to 00:02, the center cup is filled to the brim with large gold coins. At 00:03, the coins inside the cup vanish completely without anyone touching the cup, leaving the interior empty.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Gold coin in right hand and on foreground cup",
+      "invariant_violated": "location & orientation",
+      "description": "The gold coin held above the foreground cup at 00:03 phases onto the outer vertical wall of the cup at 00:04–00:06, disappears at 00:07, and reappears between the man's fingers at 00:08–00:09.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Gold coin on tabletop in front of foreground cup",
+      "invariant_violated": "identity & persistence",
+      "description": "A large gold coin spontaneously appears on the beige tabletop directly in front of the foreground cup at 00:04 in a spot that was visibly empty at 00:00–00:02, without anyone placing it there.",
+      "severity": "moderate",
+      "confidence": 0.94
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Center cup (Cup 2) contents | filled to the brim with large coins at 00:00-00:02 | empty inside the upper half from 00:03-00:09 | coins inside vanish between 00:02 and 00:03 with no contact\",\n    \"Coin in right hand / foreground cup (Cup 1) | held above Cup 1 at 00:02-00:03 | held above Cup 1 at 00:09 | merges flat against the outside wall of Cup 1 at 00:04-00:06, vanishes at 00:07, and reappears in fingers at 00:08\",\n    \"Tabletop coins on inner beige circle | two large gold coins to the right of the cups at 00:00-00:02 | multiple shifted/vanished coins by 00:07-00:09 | a third large gold coin spontaneously appears directly in front of Cup 1 at 00:04\",\n    \"Coin in left hand | held in left fingers at 00:00-00:03 | placed/merged against far cup at 00:06, then gone at 00:07 | appears stuck to the outside of the far cup at 00:06 and disappears as hand moves to table at 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Coins inside the center cup\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"From 00:00 to 00:02, the center cup is filled to the brim with large gold coins. At 00:03, the coins inside the cup vanish completely without anyone touching the cup, leaving the interior empty.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Gold coin in right hand and on foreground cup\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The gold coin held above the foreground cup at 00:03 phases onto the outer vertical wall of the cup at 00:04–00:06, disappears at 00:07, and reappears between the man's fingers at 00:08–00:09.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Gold coin on tabletop in front of foreground cup\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"A large gold coin spontaneously appears on the beige tabletop directly in front of the foreground cup at 00:04 in a spot that was visibly empty at 00:00–00:02, without anyone placing it there.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.94\n    }\n  ]\n}"
+}

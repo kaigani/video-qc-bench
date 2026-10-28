@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "00:00\u201300:10: Exterior establishes a single-story diner beside a parking area, with broad front windows, a central glazed entrance, and windows continuing around the visible corner; tables and service fixtures are visible inside.",
+    "00:10\u201300:18: Dining room and staff aisle are separated by a solid, wood-fronted counter. Stools face the customer edge; coffee equipment faces the staff aisle.",
+    "00:10\u201300:32: A rectangular pass-through in the end wall opens into a kitchen containing a broad metal extractor hood, metal backsplash, and cooking equipment. A separate door stands to its right; its destination is not established.",
+    "00:18\u201300:27: Wide view places booths and tables along the left windows, a walkable customer aisle in the middle, and the counter and staff aisle on the right. End-wall glazing beside the kitchen hatch shows the exterior.",
+    "00:19\u201300:26: Customer emerges beside the door to the right of the kitchen hatch, passes the far counter end, walks down the customer aisle, and sits at the near counter curve. His preceding route is unseen and does not establish an impossible entrance.",
+    "00:27\u201300:35: Coffee and breakfast are served on a usable counter surface; booth seats face actual tables.",
+    "00:36\u201300:44: The same kitchen pass-through now reveals a different arrangement, including a blue rectangular area at the back and pale overhead fittings in place of the previously dominant metal hood and backsplash.",
+    "00:45\u201300:51: Reverse view through the kitchen hatch shows the waitress on the dining-room side, the counter extending toward the seated customer, booths beside the right windows, and a glazed exit door at the opposite end. These are compatible reciprocal views of the dining room.",
+    "00:51\u201300:59: The original metal hood and cooking station reappear through the kitchen hatch. Exterior light increases toward daylight.",
+    "00:59\u201301:17: Daylight wide views preserve the booth\u2013aisle\u2013counter arrangement. Windows show a parked car, roadside poles, and a neighboring roof; the waitress walks within the staff aisle to serve the customer.",
+    "01:17\u201301:23: The waitress moves toward the far counter end and joins the customer on the stool side; the end provides a plausible connecting route, partly occluded by the customer.",
+    "01:26\u201301:35: Both people sit beside one another facing the counter; reverse-angle windows show the roadside and passing traffic.",
+    "01:41\u201301:49: Customer is already outside when first visible, walks across the parking area to the truck, and opens its cab door. His diner exit is off-screen. The waitress remains inside beside the booth windows, through which the truck and customer are visible.",
+    "01:50\u201301:53: Waitress rises from a customer-side stool and moves directly across the solid counter curve into the staff aisle; her body crosses the counter surface and paneled base without going around an end or opening a gate.",
+    "01:53\u201301:58: Waitress continues along the staff aisle toward the kitchen end; no further opening traversal is established.",
+    "Audio is unassessed; this ledger is based on the supplied timestamped images and targeted additional frames."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Kitchen visible through the end-wall pass-through",
+      "invariant_violated": "Stable far-side layout",
+      "description": "At 00:10\u201300:32 the hatch looks directly onto a broad metal extractor hood and metal-backed cooking station. At 00:36\u201300:44, from the same dining-room direction, it instead shows a blue rectangular area and a different arrangement of overhead fittings and work surfaces; the established hood and backsplash are missing. The original cooking station returns at 00:51. The surrounding diner remains recognizable, with no renovation or time transition explaining this replacement and restoration.",
+      "severity": "moderate",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress crossing from customer seating to the staff aisle",
+      "invariant_violated": "Traversal requires an opening",
+      "description": "After rising from the stool at 01:51, the waitress steps directly through the curved counter into the service aisle. Around 01:52 her upper body is behind the countertop while a leg remains in front of the continuous wooden base. The countertop and paneling remain closed and intact, and she never reaches an end or doorway. The visible continuous movement therefore crosses a solid barrier.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "layout-connectivity",
+  "sample": 2,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-01__layout-connectivity__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

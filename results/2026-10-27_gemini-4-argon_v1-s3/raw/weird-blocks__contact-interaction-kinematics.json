@@ -1,0 +1,64 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:27:21.942Z",
+  "latencyMs": 27015,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1861,
+    "total_tokens": 3481,
+    "cost": 0.010925,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010925,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.009305
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1308,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | pinches green '2' block on the left at 00:00 | rests fingers atop blue '2' and '3' blocks on the left at 00:09 | repeatedly pinches and tilts blocks along the row from left to right between 00:00 and 00:07, then moves back left at 00:08-00:09",
+    "Number blocks | two green '2' blocks on wooden table at 00:00 | row of eight colored blocks ('23223526') at 00:09 | blocks repeatedly split and clip out of one another under the hand's grip as the row expands rightward"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Blue '3' block and green '2' block",
+      "invariant_violated": "solidity and contact mechanics",
+      "description": "As the hand pinches the area beside the first block, a blue '3' block clips into existence directly through the space occupied by the adjacent green '2' block, pushing the green block rightward without proper physical transfer of contact.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Green number blocks under hand grip",
+      "invariant_violated": "solidity (object self-clipping)",
+      "description": "While the thumb and index finger pinch and tilt the third block (green), a fourth green block ('3') clips and extrudes directly out of the volume of the third block ('2'), violating solid-body mechanics.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Rightmost blocks along the row (positions 4 through 8)",
+      "invariant_violated": "solidity (object self-clipping)",
+      "description": "From 00:04 through 00:07, each time the hand pinches and tilts the rightmost block, the single block under the fingers splits into two intersecting solid blocks that clip apart from the same physical space to extend the row.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | pinches green '2' block on the left at 00:00 | rests fingers atop blue '2' and '3' blocks on the left at 00:09 | repeatedly pinches and tilts blocks along the row from left to right between 00:00 and 00:07, then moves back left at 00:08-00:09\",\n    \"Number blocks | two green '2' blocks on wooden table at 00:00 | row of eight colored blocks ('23223526') at 00:09 | blocks repeatedly split and clip out of one another under the hand's grip as the row expands rightward\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Blue '3' block and green '2' block\",\n      \"invariant_violated\": \"solidity and contact mechanics\",\n      \"description\": \"As the hand pinches the area beside the first block, a blue '3' block clips into existence directly through the space occupied by the adjacent green '2' block, pushing the green block rightward without proper physical transfer of contact.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Green number blocks under hand grip\",\n      \"invariant_violated\": \"solidity (object self-clipping)\",\n      \"description\": \"While the thumb and index finger pinch and tilt the third block (green), a fourth green block ('3') clips and extrudes directly out of the volume of the third block ('2'), violating solid-body mechanics.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Rightmost blocks along the row (positions 4 through 8)\",\n      \"invariant_violated\": \"solidity (object self-clipping)\",\n      \"description\": \"From 00:04 through 00:07, each time the hand pinches and tilts the rightmost block, the single block under the fingers splits into two intersecting solid blocks that clip apart from the same physical space to extend the row.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

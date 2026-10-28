@@ -1,0 +1,65 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:54:53.234Z",
+  "latencyMs": 53941,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 3906,
+    "total_tokens": 5314,
+    "cost": 0.020938,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020938,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01953
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3256,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | in dark blue dress walking through kitchen | walks through bedroom into a duplicate kitchen | brief duplicate arm artifact on left side at 00:08",
+    "house layout / rooms | kitchen leading into bedroom on the right | bedroom doorway leads into a morphed duplicate kitchen | architectural layout and background details morph between 00:06 and 00:09",
+    "far wall and white door | white door with curtains and framed picture in kitchen hall (00:00-00:02) | white door with six glass panes at 00:06-00:07 morphs into curtained door with small framed picture on the right at 00:09 | background geometry changes mid-shot"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "far wall and white door",
+      "invariant_violated": "background and architectural consistency",
+      "description": "Looking through the doorway from 00:06 to 00:07, the far white door has a six-pane glass window and a tall vertical opening/frame on the wall to its right. As the camera moves forward between 00:08 and 00:09, the door's glass grid morphs into a covered panel and the tall opening to the right turns into a solid wall with a small black-framed picture.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "room layout / bedroom and kitchen",
+      "invariant_violated": "spatial and architectural continuity",
+      "description": "After the woman turns right from the kitchen into the bedroom (00:03–00:05) and turns left inside the bedroom (00:06), the framed floral print and countertop from the kitchen inexplicably appear inside the bedroom to the left of the doorway at 00:07, and walking through the doorway (00:08–00:09) puts her back into a duplicate kitchen with cabinets, microwave, and stove that were not visible through the doorway at 00:06–00:07.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "woman's left arm",
+      "invariant_violated": "anatomical consistency",
+      "description": "As the woman walks toward the doorway at 00:08, a distorted flesh-colored duplicate forearm/hand briefly appears just to the left of her left arm before vanishing at 00:09.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | in dark blue dress walking through kitchen | walks through bedroom into a duplicate kitchen | brief duplicate arm artifact on left side at 00:08\",\n    \"house layout / rooms | kitchen leading into bedroom on the right | bedroom doorway leads into a morphed duplicate kitchen | architectural layout and background details morph between 00:06 and 00:09\",\n    \"far wall and white door | white door with curtains and framed picture in kitchen hall (00:00-00:02) | white door with six glass panes at 00:06-00:07 morphs into curtained door with small framed picture on the right at 00:09 | background geometry changes mid-shot\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"far wall and white door\",\n      \"invariant_violated\": \"background and architectural consistency\",\n      \"description\": \"Looking through the doorway from 00:06 to 00:07, the far white door has a six-pane glass window and a tall vertical opening/frame on the wall to its right. As the camera moves forward between 00:08 and 00:09, the door's glass grid morphs into a covered panel and the tall opening to the right turns into a solid wall with a small black-framed picture.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"room layout / bedroom and kitchen\",\n      \"invariant_violated\": \"spatial and architectural continuity\",\n      \"description\": \"After the woman turns right from the kitchen into the bedroom (00:03–00:05) and turns left inside the bedroom (00:06), the framed floral print and countertop from the kitchen inexplicably appear inside the bedroom to the left of the doorway at 00:07, and walking through the doorway (00:08–00:09) puts her back into a duplicate kitchen with cabinets, microwave, and stove that were not visible through the doorway at 00:06–00:07.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"woman's left arm\",\n      \"invariant_violated\": \"anatomical consistency\",\n      \"description\": \"As the woman walks toward the doorway at 00:08, a distorted flesh-colored duplicate forearm/hand briefly appears just to the left of her left arm before vanishing at 00:09.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "skateboarder__spatial-topology-occlusion",
+  "video": "skateboarder.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:25:54.763Z",
+  "latencyMs": 47078,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 2187,
+    "total_tokens": 3782,
+    "cost": 0.01253,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01253,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.010935
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1801,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Skatepark ramps and bowl | curved concrete transitions on left and right with a spine in center | open bowl with patterned tiles visible on the left as camera pans | consistent spatial layout throughout camera movement",
+    "Background park structures (light poles, pavilion, trees) | pavilion on left, three stadium light poles spaced across horizon | pavilion shifts to right of frame as camera rotates left toward the bowl | consistent viewpoint geometry",
+    "Skateboarder and skateboard | positioned in foreground above concrete ramp surface | lands near ramp coping on right side of bowl | depth-ordering/occlusion errors against the ramp surface during landings at 00:03 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Skateboard and concrete ramp",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "As the skater descends from the first jump, the concrete ramp surface beneath the skateboard renders over the front portion of the deck, improperly occluding the foreground skateboard before it re-emerges atop the surface at 00:04.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Skateboard and concrete ramp",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "Upon landing the second jump, the concrete ramp surface beneath the skater overlaps and occludes the middle section of the skateboard deck, causing the background ramp geometry to cut through the foreground board.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Skatepark ramps and bowl | curved concrete transitions on left and right with a spine in center | open bowl with patterned tiles visible on the left as camera pans | consistent spatial layout throughout camera movement\",\n    \"Background park structures (light poles, pavilion, trees) | pavilion on left, three stadium light poles spaced across horizon | pavilion shifts to right of frame as camera rotates left toward the bowl | consistent viewpoint geometry\",\n    \"Skateboarder and skateboard | positioned in foreground above concrete ramp surface | lands near ramp coping on right side of bowl | depth-ordering/occlusion errors against the ramp surface during landings at 00:03 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Skateboard and concrete ramp\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"As the skater descends from the first jump, the concrete ramp surface beneath the skateboard renders over the front portion of the deck, improperly occluding the foreground skateboard before it re-emerges atop the surface at 00:04.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Skateboard and concrete ramp\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"Upon landing the second jump, the concrete ramp surface beneath the skater overlaps and occludes the middle section of the skateboard deck, causing the background ramp geometry to cut through the foreground board.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,99 @@
+{
+  "key": "_long-scene__baseline-generalist",
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:23:35.561Z",
+  "latencyMs": 68896,
+  "usage": {
+    "prompt_tokens": 12140,
+    "completion_tokens": 3928,
+    "total_tokens": 16068,
+    "cost": 0.03178,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03178,
+      "upstream_inference_prompt_cost": 0.01214,
+      "upstream_inference_completions_cost": 0.01964
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2777,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | single older woman in blue shirt, white apron, hair in bun, glasses on lanyard wiping counter | duplicated into two identical copies of the same woman in the background at 01:51 | pours coffee from horizontal pot at 00:28, reflection freezes at 01:48, clones into two people at 01:51",
+    "customer | older man in brown jacket entering from back kitchen area at 00:19 | walks out to green box truck at 01:41 | sits at counter from dusk until dawn",
+    "coffee carafe | glass pot held by waitress at 00:27 | held horizontally above mug at 00:31 | coffee streams from the side/front of the pot without the pot being tilted to the spout",
+    "plate of egg and toast | placed on counter in front of customer at 00:32-00:44 (night) | carried away by waitress at 01:15 (morning) | disappears at 01:00 and is served again as if for the first time at 01:09",
+    "cash bills | placed on counter by left hand at 01:38 | left beside coffee mug at 01:40 | top bill morphs from a $1 bill into a $100 bill when touched by the second hand"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "customer",
+      "invariant_violated": "spatial layout consistency",
+      "description": "As the sound of an exterior door opening plays, the customer enters the diner by walking out from the doorway behind the counter next to the kitchen pass-through rather than from an entrance in the customer area.",
+      "severity": "minor",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:28",
+      "entity": "coffee carafe",
+      "invariant_violated": "fluid physics",
+      "description": "When the waitress pours coffee into the mug, the glass carafe remains nearly horizontal with the liquid level flat and well below the spout, yet a stream of coffee pours straight down through the front of the pot.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:00",
+      "entity": "plate of egg and toast",
+      "invariant_violated": "temporal and object continuity",
+      "description": "At 00:32–00:44 (while it is dark outside), the plate of toast and eggs is already sitting on the counter in front of the man. At 01:00 (after sunrise), the plate has vanished from the counter, and at 01:09 the waitress brings out the same plate to serve him again, which he then declines.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:31",
+      "entity": "background semi-truck",
+      "invariant_violated": "plausible vehicle motion",
+      "description": "Through the window behind the waitress (left of center), a semi-truck on the road moves smoothly from left to right trailer-first, travelling backwards at highway speed.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "cash bills",
+      "invariant_violated": "object identity consistency",
+      "description": "Two hands enter from opposite sides of the frame to place money on the counter, and as the right hand slides across the bills, the top note morphs from a '1' denomination into a '100' denomination with a distorted portrait.",
+      "severity": "moderate",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "01:46",
+      "entity": "waitress's window reflection",
+      "invariant_violated": "optical reflection consistency",
+      "description": "The waitress's reflection in the window shows her torso and hanging glasses facing toward the camera at an impossible angle relative to her body, and when she lowers her head and turns away at 01:48–01:49, her reflection remains frozen staring straight ahead.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress",
+      "invariant_violated": "character uniqueness",
+      "description": "As the waitress stands up from the stool and walks behind the counter on the right, an identical duplicate of the waitress (same blue shirt, white apron, hair bun, and glasses on a lanyard) materializes in the background near the kitchen window, leaving two copies of her in the scene simultaneously.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | single older woman in blue shirt, white apron, hair in bun, glasses on lanyard wiping counter | duplicated into two identical copies of the same woman in the background at 01:51 | pours coffee from horizontal pot at 00:28, reflection freezes at 01:48, clones into two people at 01:51\",\n    \"customer | older man in brown jacket entering from back kitchen area at 00:19 | walks out to green box truck at 01:41 | sits at counter from dusk until dawn\",\n    \"coffee carafe | glass pot held by waitress at 00:27 | held horizontally above mug at 00:31 | coffee streams from the side/front of the pot without the pot being tilted to the spout\",\n    \"plate of egg and toast | placed on counter in front of customer at 00:32-00:44 (night) | carried away by waitress at 01:15 (morning) | disappears at 01:00 and is served again as if for the first time at 01:09\",\n    \"cash bills | placed on counter by left hand at 01:38 | left beside coffee mug at 01:40 | top bill morphs from a $1 bill into a $100 bill when touched by the second hand\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"customer\",\n      \"invariant_violated\": \"spatial layout consistency\",\n      \"description\": \"As the sound of an exterior door opening plays, the customer enters the diner by walking out from the doorway behind the counter next to the kitchen pass-through rather than from an entrance in the customer area.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"coffee carafe\",\n      \"invariant_violated\": \"fluid physics\",\n      \"description\": \"When the waitress pours coffee into the mug, the glass carafe remains nearly horizontal with the liquid level flat and well below the spout, yet a stream of coffee pours straight down through the front of the pot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:00\",\n      \"entity\": \"plate of egg and toast\",\n      \"invariant_violated\": \"temporal and object continuity\",\n      \"description\": \"At 00:32–00:44 (while it is dark outside), the plate of toast and eggs is already sitting on the counter in front of the man. At 01:00 (after sunrise), the plate has vanished from the counter, and at 01:09 the waitress brings out the same plate to serve him again, which he then declines.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:31\",\n      \"entity\": \"background semi-truck\",\n      \"invariant_violated\": \"plausible vehicle motion\",\n      \"description\": \"Through the window behind the waitress (left of center), a semi-truck on the road moves smoothly from left to right trailer-first, travelling backwards at highway speed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"cash bills\",\n      \"invariant_violated\": \"object identity consistency\",\n      \"description\": \"Two hands enter from opposite sides of the frame to place money on the counter, and as the right hand slides across the bills, the top note morphs from a '1' denomination into a '100' denomination with a distorted portrait.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"01:46\",\n      \"entity\": \"waitress's window reflection\",\n      \"invariant_violated\": \"optical reflection consistency\",\n      \"description\": \"The waitress's reflection in the window shows her torso and hanging glasses facing toward the camera at an impossible angle relative to her body, and when she lowers her head and turns away at 01:48–01:49, her reflection remains frozen staring straight ahead.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress\",\n      \"invariant_violated\": \"character uniqueness\",\n      \"description\": \"As the waitress stands up from the stool and walks behind the counter on the right, an identical duplicate of the waitress (same blue shirt, white apron, hair bun, and glasses on a lanyard) materializes in the background near the kitchen window, leaving two copies of her in the scene simultaneously.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

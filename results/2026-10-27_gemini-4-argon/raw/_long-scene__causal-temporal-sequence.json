@@ -1,0 +1,45 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:25:59.244Z",
+  "latencyMs": 54440,
+  "usage": {
+    "prompt_tokens": 12497,
+    "completion_tokens": 1850,
+    "total_tokens": 14347,
+    "cost": 0.021747,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021747,
+      "upstream_inference_prompt_cost": 0.012497,
+      "upstream_inference_completions_cost": 0.00925
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1495,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck exhaust | billowing from parked cab at 00:00 | drifts and dissipates into air by 00:09 | continuous upward and rightward drift",
+    "waitress wiping counter | cloth moving across surface at 00:10 | stops wiping and walks right at 00:17 | continuous hand and body motion",
+    "customer and waitress | customer walks toward counter at 00:19 | customer sits on stool at 00:25 as waitress lifts coffee pot at 00:24 | waitress reacts to customer approaching and sitting",
+    "coffee pour | waitress tilts pot over mug at 00:27 | upright pot stops stream at 00:30 | liquid stream starts upon tilt and ceases upon uprighting",
+    "steaming plate | resting on counter at 00:32 | continuous steam rising through 00:35 | steady thermal plume",
+    "waitress comforting customer | waitress lifts plate at 01:10 and touches customer's hand at 01:12 | customer raises head to look at her at 01:13 | gaze reaction follows physical touch",
+    "cash on counter | left hand places bills on table at 01:38 | hands release bills onto surface by 01:39 | bills remain stationary after release",
+    "clearing counter | waitress grasps mug and stands at 01:50 | carries mug behind counter by 01:54 | mug moves continuously with hand"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"truck exhaust | billowing from parked cab at 00:00 | drifts and dissipates into air by 00:09 | continuous upward and rightward drift\",\n    \"waitress wiping counter | cloth moving across surface at 00:10 | stops wiping and walks right at 00:17 | continuous hand and body motion\",\n    \"customer and waitress | customer walks toward counter at 00:19 | customer sits on stool at 00:25 as waitress lifts coffee pot at 00:24 | waitress reacts to customer approaching and sitting\",\n    \"coffee pour | waitress tilts pot over mug at 00:27 | upright pot stops stream at 00:30 | liquid stream starts upon tilt and ceases upon uprighting\",\n    \"steaming plate | resting on counter at 00:32 | continuous steam rising through 00:35 | steady thermal plume\",\n    \"waitress comforting customer | waitress lifts plate at 01:10 and touches customer's hand at 01:12 | customer raises head to look at her at 01:13 | gaze reaction follows physical touch\",\n    \"cash on counter | left hand places bills on table at 01:38 | hands release bills onto surface by 01:39 | bills remain stationary after release\",\n    \"clearing counter | waitress grasps mug and stands at 01:50 | carries mug behind counter by 01:54 | mug moves continuously with hand\"\n  ],\n  \"findings\": []\n}"
+}

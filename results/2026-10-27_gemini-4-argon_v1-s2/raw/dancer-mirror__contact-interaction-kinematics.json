@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:52:14.530Z",
+  "latencyMs": 40332,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 3006,
+    "total_tokens": 4626,
+    "cost": 0.01665,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01665,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.01503
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2647,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer's arms | right arm extended outward and lifting, left arm hanging down at side at 00:00 | right arm curved overhead, left arm down at side at 00:09 | at 00:02 the arms instantaneously swap handedness (left arm snaps to raised overhead pose while right arm is down), then snap back to the right arm raised at 00:03",
+    "Dancer's feet and floor contact | both bare feet planted on the wood floor with right foot slightly forward and left foot back at 00:00 | weight supported on planted right foot with left foot pointed on the floor at 00:09 | at 00:02 the planted feet instantaneously swap forward/back stance without stepping, then snap back to original foot placement at 00:03"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer's arms and legs",
+      "invariant_violated": "limb mechanics and trajectory continuity",
+      "description": "At 00:02, the foreground dancer instantaneously snaps into a horizontally mirrored pose mid-action: her raised right arm switches to a raised left arm, her lowered left arm switches to the right side, and her planted feet swap forward/backward stance without any stepping motion, before snapping back to the original right-arm-raised pose and foot placement at 00:03.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer's arms | right arm extended outward and lifting, left arm hanging down at side at 00:00 | right arm curved overhead, left arm down at side at 00:09 | at 00:02 the arms instantaneously swap handedness (left arm snaps to raised overhead pose while right arm is down), then snap back to the right arm raised at 00:03\",\n    \"Dancer's feet and floor contact | both bare feet planted on the wood floor with right foot slightly forward and left foot back at 00:00 | weight supported on planted right foot with left foot pointed on the floor at 00:09 | at 00:02 the planted feet instantaneously swap forward/back stance without stepping, then snap back to original foot placement at 00:03\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer's arms and legs\",\n      \"invariant_violated\": \"limb mechanics and trajectory continuity\",\n      \"description\": \"At 00:02, the foreground dancer instantaneously snaps into a horizontally mirrored pose mid-action: her raised right arm switches to a raised left arm, her lowered left arm switches to the right side, and her planted feet swap forward/backward stance without any stepping motion, before snapping back to the original right-arm-raised pose and foot placement at 00:03.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

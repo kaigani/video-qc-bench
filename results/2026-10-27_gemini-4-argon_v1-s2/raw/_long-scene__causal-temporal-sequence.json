@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:49:31.563Z",
+  "latencyMs": 55580,
+  "usage": {
+    "prompt_tokens": 12497,
+    "completion_tokens": 2497,
+    "total_tokens": 14994,
+    "cost": 0.024982,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024982,
+      "upstream_inference_prompt_cost": 0.012497,
+      "upstream_inference_completions_cost": 0.012485
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2088,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "truck exhaust | idling with rising smoke at 00:00 | continuous dispersion at 00:09 | plausible continuous motion",
+    "waitress wiping counter | cloth moving across surface at 00:10 | stops and turns at 00:18 | plausible continuous motion",
+    "customer entrance | walks toward counter at 00:19 | sits on stool at 00:26 as waitress lifts carafe | plausible action-reaction timing",
+    "coffee carafe | held upright above mug at 00:27 | lifted away at 00:31 | coffee stream pours without carafe tilting",
+    "waitress clearing counter | sits at counter at 01:50 | walks behind counter at 01:58 | picks up mug and plate at 01:51 which dissolve mid-motion while passing through counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "coffee carafe and liquid stream",
+      "invariant_violated": "effect without cause",
+      "description": "A stream of coffee pours out of the top spout into the mug while the carafe remains held upright with the liquid level flat in the bottom half.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress and dishes",
+      "invariant_violated": "action completion and temporal flow",
+      "description": "The waitress initiates picking up the mug and plate and steps directly through the counter; the dishes dissolve from her hands mid-motion before being set down.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"truck exhaust | idling with rising smoke at 00:00 | continuous dispersion at 00:09 | plausible continuous motion\",\n    \"waitress wiping counter | cloth moving across surface at 00:10 | stops and turns at 00:18 | plausible continuous motion\",\n    \"customer entrance | walks toward counter at 00:19 | sits on stool at 00:26 as waitress lifts carafe | plausible action-reaction timing\",\n    \"coffee carafe | held upright above mug at 00:27 | lifted away at 00:31 | coffee stream pours without carafe tilting\",\n    \"waitress clearing counter | sits at counter at 01:50 | walks behind counter at 01:58 | picks up mug and plate at 01:51 which dissolve mid-motion while passing through counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"coffee carafe and liquid stream\",\n      \"invariant_violated\": \"effect without cause\",\n      \"description\": \"A stream of coffee pours out of the top spout into the mug while the carafe remains held upright with the liquid level flat in the bottom half.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress and dishes\",\n      \"invariant_violated\": \"action completion and temporal flow\",\n      \"description\": \"The waitress initiates picking up the mug and plate and steps directly through the counter; the dishes dissolve from her hands mid-motion before being set down.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

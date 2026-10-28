@@ -1,0 +1,30 @@
+{
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-06__contact-interaction-kinematics__s1",
+  "childThreadId": "thread:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-06__contact-interaction-kinematics__s1",
+  "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-06__contact-interaction-kinematics__s1:ordinal:1",
+  "childNodeId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-06__contact-interaction-kinematics__s1",
+  "status": "completed",
+  "workState": "result_available",
+  "hasPendingChildRuns": false,
+  "latestTerminalRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-06__contact-interaction-kinematics__s1:ordinal:1",
+  "latestTerminalStatus": "completed",
+  "latestTerminalSummary": null,
+  "latestTerminalResultContextTransferId": null,
+  "providerInstanceId": "codex",
+  "model": "gpt-6-astra",
+  "options": [
+    {
+      "id": "reasoningEffort",
+      "value": "high"
+    },
+    {
+      "id": "serviceTier",
+      "value": "default"
+    }
+  ],
+  "summary": "{\n  \"ledger\": [\n    \"Right hand and foreground coin | At 00:00 the coin rests inside the nearest cup; the hand approaches from the left | At 00:09.750 the coin is held above the cups | Fingers enter the cup opening by 00:01.250; initial coin contact is occluded. A pinching grip is visible at 00:02.250 and the coin clears the cup by 00:02.500. The hand lowers it into the opening at 00:03.500–00:04.000, but it emerges against the exterior wall by 00:04.250 without clearing the rim. Finger contact persists during subsequent lowering and lifting; no release is visible.\",\n    \"Left hand and initially raised coin | Thumb and fingertip already pinch the coin at 00:00; establishment precedes the clip | Hand remains around the coin near the tabletop at 00:09.750 | Grip stays visibly connected while the coin approaches the rear cup at 00:03.750–00:04.250. Cup contact is partly occluded. The coin is lowered beside the cups, with its lower edge apparently meeting the tabletop by 00:05.750; exact first table contact is unresolved. No definite grip release is visible.\",\n    \"Cups and tabletop | Four cup bases are supported on the tabletop at 00:00 | Visible cup bases remain supported through 00:09.750 | Support precedes the clip and no definite lift or release from the table is visible. The nearest cup receives the right-hand reach at 00:01.250–00:02.250 and the subsequent coin descent at 00:03.500–00:04.250.\",\n    \"Coin resting near the central cup rim | Already inclined within the cup at 00:00, with its edge against the interior/rim | Later obscured as the viewing angle lowers | Support is visible through the early close views; no hand contact, lift, or release can be established.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Right-hand coin and nearest cup wall\",\n      \"invariant_violated\": \"Solid objects must not pass through each other\",\n      \"description\": \"At 00:03.750 the pinched coin is partly inside the nearest cup, behind its front rim. The hand continues downward at rim height; by 00:04.250 the coin's lower portion is visible against the outside of the cup. It crosses from the interior to the exterior without being lifted clear of the rim, passing through the solid cup boundary.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.94\n    }\n  ]\n}",
+  "resultContextTransferId": "context-transfer:type:subagent_result:source-thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-06__contact-interaction-kinematics__s1:target-thread:thread%3Adelegated-task%3Acommand%253Amcp%253Acf73e3ea-a778-4e5b-b379-88410c4fba15%253Adelegate-task%253Aastra-blind-v2-261027-round1:1ab1b6d2-1f93-462e-a622-c8b9935ba233",
+  "hasPendingQuestion": false,
+  "pendingApproval": null,
+  "waitTimedOut": false
+}

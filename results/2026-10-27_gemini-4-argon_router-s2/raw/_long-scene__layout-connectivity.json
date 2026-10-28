@@ -1,0 +1,80 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:44:40.602Z",
+  "latencyMs": 100951,
+  "usage": {
+    "prompt_tokens": 12297,
+    "completion_tokens": 6939,
+    "total_tokens": 19236,
+    "cost": 0.046992,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.046992,
+      "upstream_inference_prompt_cost": 0.012297,
+      "upstream_inference_completions_cost": 0.034695
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5531,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09 (Exterior): Rectangular diner building with a central front glass entrance door flanked by two large window bays on the left (booths inside) and two on the right (counter and stools inside). A white semi-truck cab idles outside to the left.",
+    "00:10-00:18 (Interior medium, counter & pass-through): Service counter on the right with red stools in front; kitchen pass-through window on the back wall; brown wooden door behind the counter to the right of the pass-through; a glazed door/window frame on the back wall to the left of the pass-through.",
+    "00:19-00:26 (Interior wide, looking toward kitchen pass-through): Counter and stools run along the right wall; booths and large windows run along the left wall with a neon 'OPEN' sign in the far-left window. No door exists on the back wall to the left of the pass-through. Customer enters by walking out from behind the service counter near the kitchen pass-through.",
+    "00:36-00:44 (Interior wide): Customer sits on a stool near the curved foreground end of the counter, facing right toward the backbar.",
+    "00:45-00:50 (Reverse angle from inside kitchen through pass-through): Looking out the pass-through window toward the front wall, which has a glass entrance door with an 'EXIT' sign and a white cooler/refrigerator. The customer is now seen sitting at the far end of the counter facing toward the kitchen pass-through.",
+    "00:51-00:59 & 01:35-01:36 (Interior medium, counter & pass-through): The glazed door/window frame on the back wall to the left of the pass-through reappears, with sunrise light shining through it.",
+    "01:00-01:26 (Interior wide): Customer is now seated midway down the counter. At 01:19-01:25, the waitress walks around the back end of the counter (near the pass-through) and sits on the stool to the customer's left (closer to the kitchen).",
+    "01:27-01:34 (Interior medium, reverse angle along counter): Looking toward the front cooler/window end with counter on the left and booths/windows on the right. Customer and waitress face the counter on the left, but their positions are swapped (customer is closer to the kitchen/camera, waitress is closer to the cooler).",
+    "01:41-01:49 (Interior looking out side window): Customer walks outside to a green box truck parked outside the booth windows.",
+    "01:50-01:58 (Interior wide): Waitress stands up from the stool, walks around the foreground end of the counter into the employee area, and walks back toward the kitchen while a second copy of the waitress is simultaneously standing at the back end of the counter wiping it down."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "Customer traversal and back-wall layout",
+      "invariant_violated": "Impossible traversal route and inconsistent wall openings",
+      "description": "In the wide interior shot, the glazed door frame seen to the left of the kitchen pass-through in 00:10-00:18 disappears and is replaced by booth seating and a side window with a neon 'OPEN' sign. Simultaneously, rather than entering from the front entrance door (established at the opposite end of the room in 00:00 and 00:45), the customer enters the dining room by walking out from behind the employee service counter right next to the kitchen pass-through.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:45",
+      "entity": "View through kitchen pass-through opening (customer and counter arrangement)",
+      "invariant_violated": "Opening view and seating orientation mismatch",
+      "description": "In 00:36-00:44, the customer is seated on a stool along the straight side of the counter facing the backbar (right), with two stools between him and the curved front end of the counter. When viewing the dining room through the kitchen pass-through window from the opposite side at 00:45-00:50, the customer is instead seated at the far end of the counter facing directly toward the kitchen pass-through, with his back to the front exit door.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "Customer and waitress seating positions relative to room layout",
+      "invariant_violated": "Spatial layout and relative position reversal",
+      "description": "At 01:20-01:26, the waitress sits on the stool to the customer's left (between the customer and the kitchen pass-through). In the reverse angle at 01:27-01:34 looking toward the beverage cooler at the front end of the diner, both characters still face the counter on the left of the frame, which puts the kitchen behind the camera and the cooler ahead; however, their positions are reversed so the customer is now on the waitress's left (closer to the kitchen) and the waitress is on his right (closer to the cooler).",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress traversal behind counter",
+      "invariant_violated": "Self-contradictory traversal / duplicate occupant in space",
+      "description": "As the waitress stands up from the counter stool at 01:51 and walks around the front end of the counter to return to the employee side, she reveals a second copy of herself already standing at the far end of the counter in front of the kitchen pass-through wiping the surface. She then walks behind the counter toward her own duplicate.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09 (Exterior): Rectangular diner building with a central front glass entrance door flanked by two large window bays on the left (booths inside) and two on the right (counter and stools inside). A white semi-truck cab idles outside to the left.\",\n    \"00:10-00:18 (Interior medium, counter & pass-through): Service counter on the right with red stools in front; kitchen pass-through window on the back wall; brown wooden door behind the counter to the right of the pass-through; a glazed door/window frame on the back wall to the left of the pass-through.\",\n    \"00:19-00:26 (Interior wide, looking toward kitchen pass-through): Counter and stools run along the right wall; booths and large windows run along the left wall with a neon 'OPEN' sign in the far-left window. No door exists on the back wall to the left of the pass-through. Customer enters by walking out from behind the service counter near the kitchen pass-through.\",\n    \"00:36-00:44 (Interior wide): Customer sits on a stool near the curved foreground end of the counter, facing right toward the backbar.\",\n    \"00:45-00:50 (Reverse angle from inside kitchen through pass-through): Looking out the pass-through window toward the front wall, which has a glass entrance door with an 'EXIT' sign and a white cooler/refrigerator. The customer is now seen sitting at the far end of the counter facing toward the kitchen pass-through.\",\n    \"00:51-00:59 & 01:35-01:36 (Interior medium, counter & pass-through): The glazed door/window frame on the back wall to the left of the pass-through reappears, with sunrise light shining through it.\",\n    \"01:00-01:26 (Interior wide): Customer is now seated midway down the counter. At 01:19-01:25, the waitress walks around the back end of the counter (near the pass-through) and sits on the stool to the customer's left (closer to the kitchen).\",\n    \"01:27-01:34 (Interior medium, reverse angle along counter): Looking toward the front cooler/window end with counter on the left and booths/windows on the right. Customer and waitress face the counter on the left, but their positions are swapped (customer is closer to the kitchen/camera, waitress is closer to the cooler).\",\n    \"01:41-01:49 (Interior looking out side window): Customer walks outside to a green box truck parked outside the booth windows.\",\n    \"01:50-01:58 (Interior wide): Waitress stands up from the stool, walks around the foreground end of the counter into the employee area, and walks back toward the kitchen while a second copy of the waitress is simultaneously standing at the back end of the counter wiping it down.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"Customer traversal and back-wall layout\",\n      \"invariant_violated\": \"Impossible traversal route and inconsistent wall openings\",\n      \"description\": \"In the wide interior shot, the glazed door frame seen to the left of the kitchen pass-through in 00:10-00:18 disappears and is replaced by booth seating and a side window with a neon 'OPEN' sign. Simultaneously, rather than entering from the front entrance door (established at the opposite end of the room in 00:00 and 00:45), the customer enters the dining room by walking out from behind the employee service counter right next to the kitchen pass-through.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"View through kitchen pass-through opening (customer and counter arrangement)\",\n      \"invariant_violated\": \"Opening view and seating orientation mismatch\",\n      \"description\": \"In 00:36-00:44, the customer is seated on a stool along the straight side of the counter facing the backbar (right), with two stools between him and the curved front end of the counter. When viewing the dining room through the kitchen pass-through window from the opposite side at 00:45-00:50, the customer is instead seated at the far end of the counter facing directly toward the kitchen pass-through, with his back to the front exit door.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"Customer and waitress seating positions relative to room layout\",\n      \"invariant_violated\": \"Spatial layout and relative position reversal\",\n      \"description\": \"At 01:20-01:26, the waitress sits on the stool to the customer's left (between the customer and the kitchen pass-through). In the reverse angle at 01:27-01:34 looking toward the beverage cooler at the front end of the diner, both characters still face the counter on the left of the frame, which puts the kitchen behind the camera and the cooler ahead; however, their positions are reversed so the customer is now on the waitress's left (closer to the kitchen) and the waitress is on his right (closer to the cooler).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress traversal behind counter\",\n      \"invariant_violated\": \"Self-contradictory traversal / duplicate occupant in space\",\n      \"description\": \"As the waitress stands up from the counter stool at 01:51 and walks around the front end of the counter to return to the employee side, she reveals a second copy of herself already standing at the far end of the counter in front of the kitchen pass-through wiping the surface. She then walks behind the counter toward her own duplicate.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

@@ -1,0 +1,60 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:56:59.095Z",
+  "latencyMs": 32018,
+  "usage": {
+    "prompt_tokens": 12245,
+    "completion_tokens": 1875,
+    "total_tokens": 14120,
+    "cost": 0.02162,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02162,
+      "upstream_inference_prompt_cost": 0.012245,
+      "upstream_inference_completions_cost": 0.009375
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1240,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Truck outside diner — white aerodynamic high-roof sleeper-cab semi-tractor (bobtail, no trailer or cargo box attached) idling in the lot next to the diner.",
+    "00:19-00:26: Exterior view through far-left diner window — empty lot outside the window, no parked vehicle visible.",
+    "00:36-00:44: Exterior view through far-left diner window — front end of a light-colored pickup/SUV parked directly outside the far-left window pane facing right.",
+    "01:00-01:26: Exterior view through far-left diner window — light-colored pickup/SUV is no longer present outside the window.",
+    "01:41-01:49: Truck outside diner — dark green conventional-cab straight box truck with a horizontal white stripe, chrome vertical exhaust stacks, and an attached dark green cargo box, which the customer walks out to and boards.",
+    "01:50-01:58: Exterior view through far-left diner window — front end of the light-colored pickup/SUV reappears in the exact same parked position outside the far-left window."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Customer's truck parked outside the diner",
+      "invariant_violated": "identity",
+      "description": "In the opening establishing shot (00:00-00:09), the truck parked outside the diner is a white aerodynamic sleeper-cab semi-tractor (bobtail with no trailer). When the driver leaves the diner and walks to his truck at 01:41-01:49, the vehicle is instead a dark green conventional-cab straight box truck with a white stripe, chrome exhaust stacks, and an attached cargo box.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:00",
+      "entity": "Light-colored vehicle parked outside the far-left diner window",
+      "invariant_violated": "position",
+      "description": "From the identical interior camera angle, the front end of a light-colored vehicle appears parked directly outside the far-left window at 00:36-00:44 (after being absent at 00:19-00:26), vanishes completely in the shots at 01:00-01:26, and then reappears in the exact same parked spot at 01:50-01:58 with no movement shown.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Truck outside diner — white aerodynamic high-roof sleeper-cab semi-tractor (bobtail, no trailer or cargo box attached) idling in the lot next to the diner.\",\n    \"00:19-00:26: Exterior view through far-left diner window — empty lot outside the window, no parked vehicle visible.\",\n    \"00:36-00:44: Exterior view through far-left diner window — front end of a light-colored pickup/SUV parked directly outside the far-left window pane facing right.\",\n    \"01:00-01:26: Exterior view through far-left diner window — light-colored pickup/SUV is no longer present outside the window.\",\n    \"01:41-01:49: Truck outside diner — dark green conventional-cab straight box truck with a horizontal white stripe, chrome vertical exhaust stacks, and an attached dark green cargo box, which the customer walks out to and boards.\",\n    \"01:50-01:58: Exterior view through far-left diner window — front end of the light-colored pickup/SUV reappears in the exact same parked position outside the far-left window.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Customer's truck parked outside the diner\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"In the opening establishing shot (00:00-00:09), the truck parked outside the diner is a white aerodynamic sleeper-cab semi-tractor (bobtail with no trailer). When the driver leaves the diner and walks to his truck at 01:41-01:49, the vehicle is instead a dark green conventional-cab straight box truck with a white stripe, chrome exhaust stacks, and an attached cargo box.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:00\",\n      \"entity\": \"Light-colored vehicle parked outside the far-left diner window\",\n      \"invariant_violated\": \"position\",\n      \"description\": \"From the identical interior camera angle, the front end of a light-colored vehicle appears parked directly outside the far-left window at 00:36-00:44 (after being absent at 00:19-00:26), vanishes completely in the shots at 01:00-01:26, and then reappears in the exact same parked spot at 01:50-01:58 with no movement shown.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

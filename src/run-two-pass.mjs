@@ -3,7 +3,7 @@
 // ADDITIVE system — run alongside (not instead of) the classic run-benchmark.mjs core roles.
 //
 // Usage:
-//   node src/run-two-pass.mjs --model <id> --run-id <id> [--videos a,b] [--pass1-only] [--force-pass1] [--concurrency N]
+//   node src/run-two-pass.mjs --model <id> --run-id <id> [--videos a,b] [--pass1-only] [--force-pass1] [--concurrency N] [--reasoning] [--reasoning-effort high] [--provider slug,...]
 //
 // Results layout (per run-id under results/):
 //   pass1/<video>.json          raw checklist call: text, parsed features, parseOk
@@ -28,6 +28,8 @@ function parseArgs(argv) {
     const a = argv[i];
     if (a === '--model') args.model = argv[++i];
     else if (a === '--reasoning') args.reasoning = true;
+    else if (a === '--reasoning-effort') args.reasoningEffort = argv[++i];
+    else if (a === '--provider') args.provider = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--videos') args.videos = argv[++i].split(',').map((s) => s.trim());
     else if (a === '--videos-dir') VIDEOS_DIR = argv[++i];
     else if (a === '--run-id') args.runId = argv[++i];
@@ -65,7 +67,7 @@ async function main() {
   const manifestPath = join(runDir, 'manifest.json');
   const manifest = existsSync(manifestPath)
     ? JSON.parse(readFileSync(manifestPath, 'utf8'))
-    : { runId: args.runId, model: args.model, mode: 'two-pass', reasoning: args.reasoning, started: new Date().toISOString(), pass1: {}, calls: {} };
+    : { runId: args.runId, model: args.model, mode: 'two-pass', reasoning: args.reasoning, reasoningEffort: args.reasoningEffort ?? null, provider: args.provider ?? null, started: new Date().toISOString(), pass1: {}, calls: {} };
   const saveManifest = () => writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 
   const encoded = new Map();
@@ -90,7 +92,7 @@ async function main() {
     }
     try {
       const dataUrl = await videoDataUrl(video);
-      const { text, usage, latencyMs } = await callModel({ apiKey, model: args.model, prompt: FEATURE_PROMPT, videoDataUrl: dataUrl, reasoning: args.reasoning });
+      const { text, usage, latencyMs } = await callModel({ apiKey, model: args.model, prompt: FEATURE_PROMPT, videoDataUrl: dataUrl, reasoning: args.reasoning, reasoningEffort: args.reasoningEffort ?? null, provider: args.provider });
       const parsed = parseFeatures(text);
       const rec = {
         video: vid,
@@ -150,7 +152,7 @@ async function main() {
       try {
         const dataUrl = await videoDataUrl(video);
         const t0 = Date.now();
-        const { text, usage, latencyMs } = await callModel({ apiKey, model: args.model, prompt: role.prompt, videoDataUrl: dataUrl, reasoning: args.reasoning });
+        const { text, usage, latencyMs } = await callModel({ apiKey, model: args.model, prompt: role.prompt, videoDataUrl: dataUrl, reasoning: args.reasoning, reasoningEffort: args.reasoningEffort ?? null, provider: args.provider });
         const parsed = parseFindings(text);
         const result = {
           key,

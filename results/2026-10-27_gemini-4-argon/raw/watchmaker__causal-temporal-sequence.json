@@ -1,0 +1,39 @@
+{
+  "key": "watchmaker__causal-temporal-sequence",
+  "video": "watchmaker.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:40:37.188Z",
+  "latencyMs": 25351,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 830,
+    "total_tokens": 2595,
+    "cost": 0.005915,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005915,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00415
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 720,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "tweezers and jewelry | tweezers pressing on jewelry at 00:00 | tweezers lowered out of frame at 00:04 | pressing causes slight movement of jewelry, lowering removes tool from view",
+    "hands and screw | hands bring screw to jewelry at 00:05 | fingers twist screw into jewelry through 00:09 | twisting motion causes continuous rotation of the component"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"tweezers and jewelry | tweezers pressing on jewelry at 00:00 | tweezers lowered out of frame at 00:04 | pressing causes slight movement of jewelry, lowering removes tool from view\",\n    \"hands and screw | hands bring screw to jewelry at 00:05 | fingers twist screw into jewelry through 00:09 | twisting motion causes continuous rotation of the component\"\n  ],\n  \"findings\": []\n}"
+}

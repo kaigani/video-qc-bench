@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:57:53.629Z",
+  "latencyMs": 18059,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1051,
+    "total_tokens": 2664,
+    "cost": 0.006868,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006868,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.005255
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 680,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "toothbrush | held in man's right hand near chin/mouth, white handle with blue/white bristles | held in man's right hand near chin/mouth | vanishes in foreground hand at 00:01, reappears at 00:02, transforms into a dark comb/brush in his hair at 00:03, transforms back into a toothbrush at 00:04",
+    "mirror and background fixtures (door, doorknob, wall switch, shelves with bottles) | stationary in bathroom | stationary in bathroom | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "toothbrush",
+      "invariant_violated": "identity & persistence",
+      "description": "In the foreground view, the toothbrush vanishes from the man's right hand as his fingers curl near his chin (while remaining visible in the mirror reflection), before reappearing at 00:02 as he lifts his hand.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "toothbrush",
+      "invariant_violated": "identity & persistence",
+      "description": "As the man brings the toothbrush up to his head, it morphs into a dark comb/brush used to stroke his hair, then morphs back into the white-and-blue toothbrush at 00:04 as he lowers his hand back toward his face.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"toothbrush | held in man's right hand near chin/mouth, white handle with blue/white bristles | held in man's right hand near chin/mouth | vanishes in foreground hand at 00:01, reappears at 00:02, transforms into a dark comb/brush in his hair at 00:03, transforms back into a toothbrush at 00:04\",\n    \"mirror and background fixtures (door, doorknob, wall switch, shelves with bottles) | stationary in bathroom | stationary in bathroom | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"toothbrush\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"In the foreground view, the toothbrush vanishes from the man's right hand as his fingers curl near his chin (while remaining visible in the mirror reflection), before reappearing at 00:02 as he lifts his hand.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"toothbrush\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the man brings the toothbrush up to his head, it morphs into a dark comb/brush used to stroke his hair, then morphs back into the white-and-blue toothbrush at 00:04 as he lowers his hand back toward his face.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

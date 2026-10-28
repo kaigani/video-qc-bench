@@ -1,0 +1,86 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:04:04.603Z",
+  "latencyMs": 29388,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 2505,
+    "total_tokens": 4118,
+    "cost": 0.014138,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014138,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.012525
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1323,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (position 1, far left) | green block showing '2' held by hand at 00:00 | blue block showing '2' on table at 00:09 | placed on table and changes color from green to blue by 00:01",
+    "Block 2 (position 2) | not present at 00:00 | blue block showing '3' on table at 00:09 | spawns in hand at 00:01 next to Block 1",
+    "Block 3 (position 3) | green block showing '2' on table at 00:00 | green block showing '2' on table at 00:09 | face changes from '2' to '3' at 00:02 when touched, then reverts to '2' at 00:03",
+    "Block 4 (position 4) | not present at 00:00 | yellow/orange block showing '2' on table at 00:09 | spawns in hand at 00:03 as green '3', transforms into yellow/orange '2' at 00:04",
+    "Block 5 (position 5) | not present at 00:00 | light-blue block showing '3' on table at 00:09 | spawns in hand at 00:04 as light-blue '3'",
+    "Block 6 (position 6) | not present at 00:00 | green block showing '5' on table at 00:09 | spawns in hand at 00:05 as blue '3', transforms into green '5' at 00:06",
+    "Block 7 (position 7) | not present at 00:00 | green block showing '2' on table at 00:09 | spawns in hand at 00:06 as green '3', transforms into green '2' at 00:07",
+    "Block 8 (position 8, far right) | not present at 00:00 | blue block showing '6' on table at 00:09 | spawns in hand at 00:07 as blue '3', transforms into blue '6' at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Block 1 (far left block) and Block 2",
+      "invariant_violated": "identity & persistence",
+      "description": "The green '2' block at position 1 turns into a blue '2' block, while a new blue '3' block spontaneously materializes under the fingers at position 2 without the hand retrieving a block from anywhere.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Block 3 (third from left)",
+      "invariant_violated": "identity & persistence",
+      "description": "The stationary green block at position 3 changes its front numeral from '2' to '3' when the hand touches it, then reverts to '2' at 00:03 as another green '3' block spawns out of it to the right.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Block 4 and Block 5",
+      "invariant_violated": "identity & persistence",
+      "description": "Block 4, placed at 00:03 as a green '3', transforms into a yellow/orange '2' at 00:04 while a new light-blue '3' block (Block 5) spontaneously materializes in the hand.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block 6 and Block 7",
+      "invariant_violated": "identity & persistence",
+      "description": "Block 6, which materialized in the hand at 00:05 as a blue '3', transforms into a green '5' at 00:06 while another green '3' block (Block 7) spawns in the hand to its right.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Block 7 and Block 8",
+      "invariant_violated": "identity & persistence",
+      "description": "Block 7 changes its front numeral from '3' to '2' at 00:07 as a new blue '3' block (Block 8) spawns in the hand; by 00:08, Block 8's numeral spontaneously changes from '3' to '6'.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (position 1, far left) | green block showing '2' held by hand at 00:00 | blue block showing '2' on table at 00:09 | placed on table and changes color from green to blue by 00:01\",\n    \"Block 2 (position 2) | not present at 00:00 | blue block showing '3' on table at 00:09 | spawns in hand at 00:01 next to Block 1\",\n    \"Block 3 (position 3) | green block showing '2' on table at 00:00 | green block showing '2' on table at 00:09 | face changes from '2' to '3' at 00:02 when touched, then reverts to '2' at 00:03\",\n    \"Block 4 (position 4) | not present at 00:00 | yellow/orange block showing '2' on table at 00:09 | spawns in hand at 00:03 as green '3', transforms into yellow/orange '2' at 00:04\",\n    \"Block 5 (position 5) | not present at 00:00 | light-blue block showing '3' on table at 00:09 | spawns in hand at 00:04 as light-blue '3'\",\n    \"Block 6 (position 6) | not present at 00:00 | green block showing '5' on table at 00:09 | spawns in hand at 00:05 as blue '3', transforms into green '5' at 00:06\",\n    \"Block 7 (position 7) | not present at 00:00 | green block showing '2' on table at 00:09 | spawns in hand at 00:06 as green '3', transforms into green '2' at 00:07\",\n    \"Block 8 (position 8, far right) | not present at 00:00 | blue block showing '6' on table at 00:09 | spawns in hand at 00:07 as blue '3', transforms into blue '6' at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Block 1 (far left block) and Block 2\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The green '2' block at position 1 turns into a blue '2' block, while a new blue '3' block spontaneously materializes under the fingers at position 2 without the hand retrieving a block from anywhere.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Block 3 (third from left)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The stationary green block at position 3 changes its front numeral from '2' to '3' when the hand touches it, then reverts to '2' at 00:03 as another green '3' block spawns out of it to the right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Block 4 and Block 5\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Block 4, placed at 00:03 as a green '3', transforms into a yellow/orange '2' at 00:04 while a new light-blue '3' block (Block 5) spontaneously materializes in the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Block 6 and Block 7\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Block 6, which materialized in the hand at 00:05 as a blue '3', transforms into a green '5' at 00:06 while another green '3' block (Block 7) spawns in the hand to its right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Block 7 and Block 8\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Block 7 changes its front numeral from '3' to '2' at 00:07 as a new blue '3' block (Block 8) spawns in the hand; by 00:08, Block 8's numeral spontaneously changes from '3' to '6'.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

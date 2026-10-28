@@ -1,0 +1,40 @@
+{
+  "key": "child-marbles__causal-temporal-sequence",
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:27:36.149Z",
+  "latencyMs": 25026,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 807,
+    "total_tokens": 2572,
+    "cost": 0.0058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0058,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.004035
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 619,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "red ball | in bowl at 00:00 | returned to bowl at 00:02 | lifted by child's hands at 00:01 and placed back at 00:02, moving only when held",
+    "colored balls in bowl | resting at bottom at 00:00 | swirling in bowl at 00:09 | remain still until pushed by child's right hand starting at 00:05, rolling proportionally with stirring motion",
+    "glass bowl | resting on table at 00:00 | resting on table at 00:09 | held steady by child's left hand on rim during stirring from 00:02 to 00:09"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"red ball | in bowl at 00:00 | returned to bowl at 00:02 | lifted by child's hands at 00:01 and placed back at 00:02, moving only when held\",\n    \"colored balls in bowl | resting at bottom at 00:00 | swirling in bowl at 00:09 | remain still until pushed by child's right hand starting at 00:05, rolling proportionally with stirring motion\",\n    \"glass bowl | resting on table at 00:00 | resting on table at 00:09 | held steady by child's left hand on rim during stirring from 00:02 to 00:09\"\n  ],\n  \"findings\": []\n}"
+}

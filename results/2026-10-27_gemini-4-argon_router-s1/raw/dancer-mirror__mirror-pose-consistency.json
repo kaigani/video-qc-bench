@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__mirror-pose-consistency",
+  "video": "dancer-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:32:42.335Z",
+  "latencyMs": 42497,
+  "usage": {
+    "prompt_tokens": 1547,
+    "completion_tokens": 3058,
+    "total_tokens": 4605,
+    "cost": 0.016837,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016837,
+      "upstream_inference_prompt_cost": 0.001547,
+      "upstream_inference_completions_cost": 0.01529
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2506,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Real subject stands facing the studio mirror with right arm extended out to the right and left arm down; reflection shows matching pose with right arm extended and left arm down.",
+    "00:01 - Real subject raises right arm high to the right with left arm down; reflection shows matching raised right arm and lowered left arm.",
+    "00:02 - Real subject has left arm raised straight overhead, right arm down by her side, and hips shifted left; reflection shows the opposite arm (right arm) raised overhead, left arm down, and hips shifted right.",
+    "00:03 - Real subject lowers right arm into a curved position on the right with left arm down; reflection matches with right arm curved up and left arm down.",
+    "00:04 - Real subject brings right arm down in front of her waist with left arm at her side; reflection matches this arm placement.",
+    "00:05 - Real subject stands with both arms lowered near her thighs and weight on her left leg; reflection matches her stance and arm positions.",
+    "00:06 - Real subject sweeps her right arm out and up to the right with left arm down; reflection shows the same right arm sweep.",
+    "00:07 - Real subject holds her right arm curved overhead with left arm down and right leg extended; reflection matches the overhead right arm and leg stance.",
+    "00:08 - Real subject maintains her right arm curved overhead and steps her right foot out to the side; reflection matches the pose in sync.",
+    "00:09 - Real subject holds the pose with right arm curved overhead, left arm down, and right toe pointed; reflection matches all limb and tattoo positions."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Dancer and her mirror reflection",
+      "invariant_violated": "Pose and left-right mirror consistency",
+      "description": "At 00:02, the real subject's upper body is flipped compared to her reflection: the real subject has her left arm (viewer's left) raised straight overhead, her right arm down by her side, and her shoulder tattoo on her left deltoid, whereas the mirror reflection shows her right arm (viewer's right) raised overhead and her left arm down by her side.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Real subject stands facing the studio mirror with right arm extended out to the right and left arm down; reflection shows matching pose with right arm extended and left arm down.\",\n    \"00:01 - Real subject raises right arm high to the right with left arm down; reflection shows matching raised right arm and lowered left arm.\",\n    \"00:02 - Real subject has left arm raised straight overhead, right arm down by her side, and hips shifted left; reflection shows the opposite arm (right arm) raised overhead, left arm down, and hips shifted right.\",\n    \"00:03 - Real subject lowers right arm into a curved position on the right with left arm down; reflection matches with right arm curved up and left arm down.\",\n    \"00:04 - Real subject brings right arm down in front of her waist with left arm at her side; reflection matches this arm placement.\",\n    \"00:05 - Real subject stands with both arms lowered near her thighs and weight on her left leg; reflection matches her stance and arm positions.\",\n    \"00:06 - Real subject sweeps her right arm out and up to the right with left arm down; reflection shows the same right arm sweep.\",\n    \"00:07 - Real subject holds her right arm curved overhead with left arm down and right leg extended; reflection matches the overhead right arm and leg stance.\",\n    \"00:08 - Real subject maintains her right arm curved overhead and steps her right foot out to the side; reflection matches the pose in sync.\",\n    \"00:09 - Real subject holds the pose with right arm curved overhead, left arm down, and right toe pointed; reflection matches all limb and tattoo positions.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Dancer and her mirror reflection\",\n      \"invariant_violated\": \"Pose and left-right mirror consistency\",\n      \"description\": \"At 00:02, the real subject's upper body is flipped compared to her reflection: the real subject has her left arm (viewer's left) raised straight overhead, her right arm down by her side, and her shoulder tattoo on her left deltoid, whereas the mirror reflection shows her right arm (viewer's right) raised overhead and her left arm down by her side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

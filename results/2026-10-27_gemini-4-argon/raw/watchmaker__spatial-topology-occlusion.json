@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:40:29.804Z",
+  "latencyMs": 29471,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1773,
+    "total_tokens": 3368,
+    "cost": 0.01046,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01046,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.008865
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1561,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background wall | flat off-white wall positioned behind the subject across the full frame | remains consistent in position and depth behind all foreground elements | slight camera reframing across the edit at 00:04",
+    "chair back | dark curved surface positioned behind the subject's torso and right arm (viewer's left) | remains behind the subject's torso and arm throughout | becomes more visible between the right arm and torso after the 00:04 cut due to posture shift",
+    "table surface | dark horizontal edge at the bottom-left foreground | remains in the lower foreground in front of the subject's lower torso/arms | consistent depth ordering throughout",
+    "subject's torso and arms | positioned in front of the chair and wall, behind the hands and manipulated objects | maintains natural 3D volume and self-occlusion | smooth occlusion boundaries as arms and hands move"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"background wall | flat off-white wall positioned behind the subject across the full frame | remains consistent in position and depth behind all foreground elements | slight camera reframing across the edit at 00:04\",\n    \"chair back | dark curved surface positioned behind the subject's torso and right arm (viewer's left) | remains behind the subject's torso and arm throughout | becomes more visible between the right arm and torso after the 00:04 cut due to posture shift\",\n    \"table surface | dark horizontal edge at the bottom-left foreground | remains in the lower foreground in front of the subject's lower torso/arms | consistent depth ordering throughout\",\n    \"subject's torso and arms | positioned in front of the chair and wall, behind the hands and manipulated objects | maintains natural 3D volume and self-occlusion | smooth occlusion boundaries as arms and hands move\"\n  ],\n  \"findings\": []\n}"
+}

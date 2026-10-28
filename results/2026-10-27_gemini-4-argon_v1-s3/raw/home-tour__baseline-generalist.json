@@ -1,0 +1,56 @@
+{
+  "key": "home-tour__baseline-generalist",
+  "video": "home-tour.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:17:54.777Z",
+  "latencyMs": 45178,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2987,
+    "total_tokens": 4395,
+    "cost": 0.016343,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016343,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.014935
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2515,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman in dark teal dress | walks through kitchen into bedroom on the right | walks out of bedroom doorway into a second morphed kitchen | continuous tracking shot",
+    "kitchen and house layout | microwave on right counter, stove on left, framed floral art beside bedroom doorway | duplicated floral art inside bedroom, impossible exterior window on interior wall, second kitchen with microwave above stove on left | impossible geometry and morphing between 00:05 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "house layout and bedroom walls",
+      "invariant_violated": "spatial and architectural consistency",
+      "description": "After the woman turns right from the kitchen into the bedroom at 00:03–00:04, the wall to her left at 00:05 features an exterior window looking outdoors right where the adjacent interior kitchen/hallway should be located. As the camera continues panning left at 00:06–00:07, the framed floral artwork from the kitchen wall (00:01) appears duplicated inside the bedroom to the left of the doorway.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "hallway doorway and kitchen appliances",
+      "invariant_violated": "environment permanence and appliance consistency",
+      "description": "As the woman walks through the bedroom doorway between 00:07 and 00:09, the space ahead morphs into a second, altered version of the kitchen: the multi-pane glass window on the far door at 00:07 changes into a dark single panel by 00:09, and a stove with an over-the-range microwave appears on the left wall (contradicting the kitchen at 00:00 where the microwave was on the right countertop).",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman in dark teal dress | walks through kitchen into bedroom on the right | walks out of bedroom doorway into a second morphed kitchen | continuous tracking shot\",\n    \"kitchen and house layout | microwave on right counter, stove on left, framed floral art beside bedroom doorway | duplicated floral art inside bedroom, impossible exterior window on interior wall, second kitchen with microwave above stove on left | impossible geometry and morphing between 00:05 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"house layout and bedroom walls\",\n      \"invariant_violated\": \"spatial and architectural consistency\",\n      \"description\": \"After the woman turns right from the kitchen into the bedroom at 00:03–00:04, the wall to her left at 00:05 features an exterior window looking outdoors right where the adjacent interior kitchen/hallway should be located. As the camera continues panning left at 00:06–00:07, the framed floral artwork from the kitchen wall (00:01) appears duplicated inside the bedroom to the left of the doorway.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"hallway doorway and kitchen appliances\",\n      \"invariant_violated\": \"environment permanence and appliance consistency\",\n      \"description\": \"As the woman walks through the bedroom doorway between 00:07 and 00:09, the space ahead morphs into a second, altered version of the kitchen: the multi-pane glass window on the far door at 00:07 changes into a dark single panel by 00:09, and a stove with an over-the-range microwave appears on the left wall (contradicting the kitchen at 00:00 where the microwave was on the right countertop).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

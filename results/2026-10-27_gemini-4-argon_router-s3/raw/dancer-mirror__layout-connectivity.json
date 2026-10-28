@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__layout-connectivity",
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:59:59.808Z",
+  "latencyMs": 13940,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 764,
+    "total_tokens": 2329,
+    "cost": 0.005385,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005385,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.00382
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 619,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space: Dance studio interior with hardwood floor, mirrored wall on the right, and entrance wall on the left.",
+    "Opening (left wall): Exterior door with glass pane and overhead EXIT sign, showing an outdoor parking area and greenery through the window.",
+    "Mirror reflection (right wall): Accurately reflects the adjacent exit door on the left, the dancer in the center, and the opposite studio wall featuring a mounted ballet barre, wall plaque, and a blue storage bin in the corner.",
+    "Traversals: None; the dancer remains stationary in the studio throughout the clip."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Space: Dance studio interior with hardwood floor, mirrored wall on the right, and entrance wall on the left.\",\n    \"Opening (left wall): Exterior door with glass pane and overhead EXIT sign, showing an outdoor parking area and greenery through the window.\",\n    \"Mirror reflection (right wall): Accurately reflects the adjacent exit door on the left, the dancer in the center, and the opposite studio wall featuring a mounted ballet barre, wall plaque, and a blue storage bin in the corner.\",\n    \"Traversals: None; the dancer remains stationary in the studio throughout the clip.\"\n  ],\n  \"findings\": []\n}"
+}

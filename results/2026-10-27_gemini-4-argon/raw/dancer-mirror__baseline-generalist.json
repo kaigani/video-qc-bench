@@ -1,0 +1,56 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:28:46.254Z",
+  "latencyMs": 84454,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 6322,
+    "total_tokens": 7730,
+    "cost": 0.033018,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.033018,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.03161
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5839,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground dancer | back to camera, right arm raised/moving, left arm down with tattoo above elbow, weight on right leg with left leg extended toward doors | right arm curved overhead, left foot pointed toward doors | at 00:02 body/limbs abruptly flip and glitch with duplicate/severed left arm segment before reverting at 00:03",
+    "Mirror reflection | facing camera, viewer-right arm raised/moving, viewer-left arm down with forearm tattoo, weight on viewer-left leg with viewer-right leg extended toward barre | viewer-right arm curved overhead, viewer-right foot pointed on tiptoe toward barre | moves smoothly at 00:02 while foreground glitches; lower-body stance contradicts foreground dancer throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Foreground dancer",
+      "invariant_violated": "Anatomical continuity and mirror consistency",
+      "description": "The foreground dancer abruptly flips orientation for a brief moment: her raised right arm vanishes and an arm instead extends upward from her left shoulder, while a severed portion of her lowered left arm (with the elbow tattoo) remains visible against her left torso, and her leg stance reverses. Simultaneously, her reflection in the mirror remains unflipped with the viewer-right arm raised.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection (legs)",
+      "invariant_violated": "Reflection geometry consistency",
+      "description": "The dancer's lower-body stance in the mirror contradicts her actual stance in the foreground (most pronounced at 00:05–00:09). The foreground dancer supports her weight on her right leg (closer to the barre) and extends/points her left foot toward the doors on the left, whereas the reflection supports weight on the leg closer to the doors and extends/points the leg closer to the barre on the right.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground dancer | back to camera, right arm raised/moving, left arm down with tattoo above elbow, weight on right leg with left leg extended toward doors | right arm curved overhead, left foot pointed toward doors | at 00:02 body/limbs abruptly flip and glitch with duplicate/severed left arm segment before reverting at 00:03\",\n    \"Mirror reflection | facing camera, viewer-right arm raised/moving, viewer-left arm down with forearm tattoo, weight on viewer-left leg with viewer-right leg extended toward barre | viewer-right arm curved overhead, viewer-right foot pointed on tiptoe toward barre | moves smoothly at 00:02 while foreground glitches; lower-body stance contradicts foreground dancer throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Foreground dancer\",\n      \"invariant_violated\": \"Anatomical continuity and mirror consistency\",\n      \"description\": \"The foreground dancer abruptly flips orientation for a brief moment: her raised right arm vanishes and an arm instead extends upward from her left shoulder, while a severed portion of her lowered left arm (with the elbow tattoo) remains visible against her left torso, and her leg stance reverses. Simultaneously, her reflection in the mirror remains unflipped with the viewer-right arm raised.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection (legs)\",\n      \"invariant_violated\": \"Reflection geometry consistency\",\n      \"description\": \"The dancer's lower-body stance in the mirror contradicts her actual stance in the foreground (most pronounced at 00:05–00:09). The foreground dancer supports her weight on her right leg (closer to the barre) and extends/points her left foot toward the doors on the left, whereas the reflection supports weight on the leg closer to the doors and extends/points the leg closer to the barre on the right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

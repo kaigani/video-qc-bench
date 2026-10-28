@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__layout-connectivity",
+  "video": "woman-car.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:54:13.243Z",
+  "latencyMs": 19340,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 1069,
+    "total_tokens": 2634,
+    "cost": 0.00691,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00691,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.005345
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 772,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space 1 (Exterior): Desert highway and shoulder where a vintage wood-paneled station wagon is parked.",
+    "Space 2 (Car Interior): Station wagon cabin visible through the front windshield and driver-side windows, containing tan seats and a rearview mirror, with the desert background visible through the far passenger-side windows.",
+    "Boundary/Openings: Intact front windshield with wiper blades separating the cabin interior from the solid metal hood/cowl; driver-side windows along the side of the cabin.",
+    "Subject placement (00:00-00:09): Woman leaning with crossed arms on the driver-side hood directly in front of the windshield."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and station wagon hood/windshield junction",
+      "invariant_violated": "Impossible spatial connectivity / body occupying solid structure",
+      "description": "The woman is positioned as though leaning out of an opening with her arms resting on the hood, but her torso emerges directly out of the solid metal hood/cowl in front of the intact windshield glass where no opening or cabin space exists for her lower body.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Space 1 (Exterior): Desert highway and shoulder where a vintage wood-paneled station wagon is parked.\",\n    \"Space 2 (Car Interior): Station wagon cabin visible through the front windshield and driver-side windows, containing tan seats and a rearview mirror, with the desert background visible through the far passenger-side windows.\",\n    \"Boundary/Openings: Intact front windshield with wiper blades separating the cabin interior from the solid metal hood/cowl; driver-side windows along the side of the cabin.\",\n    \"Subject placement (00:00-00:09): Woman leaning with crossed arms on the driver-side hood directly in front of the windshield.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and station wagon hood/windshield junction\",\n      \"invariant_violated\": \"Impossible spatial connectivity / body occupying solid structure\",\n      \"description\": \"The woman is positioned as though leaning out of an opening with her arms resting on the hood, but her torso emerges directly out of the solid metal hood/cowl in front of the intact windshield glass where no opening or cabin space exists for her lower body.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

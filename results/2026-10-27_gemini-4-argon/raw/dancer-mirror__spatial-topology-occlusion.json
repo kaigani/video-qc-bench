@@ -1,0 +1,41 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:29:31.173Z",
+  "latencyMs": 44911,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3106,
+    "total_tokens": 4701,
+    "cost": 0.017125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017125,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01553
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2911,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio mirror wall | spans from center-left to right edge of frame | remains fixed in the exact same position throughout | none",
+    "Exit doors (real and reflected) | real brown door with window and green EXIT sign on far left; reflected door and EXIT sign adjacent to it in left edge of mirror | remain in consistent positions with unchanging window connectivity | none",
+    "Reflected background elements (ballet barre, wall plaque, blue bin, ceiling lights) | blue bin in back corner, wooden barre and dark plaque on back wall reflected in mirror | remain stationary and geometrically consistent across all frames | none",
+    "Dancer (foreground) | standing on wooden studio floor in front of mirror wall, occluding the mirror base and floor behind her | stays in the same foreground plane occluding background surfaces | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio mirror wall | spans from center-left to right edge of frame | remains fixed in the exact same position throughout | none\",\n    \"Exit doors (real and reflected) | real brown door with window and green EXIT sign on far left; reflected door and EXIT sign adjacent to it in left edge of mirror | remain in consistent positions with unchanging window connectivity | none\",\n    \"Reflected background elements (ballet barre, wall plaque, blue bin, ceiling lights) | blue bin in back corner, wooden barre and dark plaque on back wall reflected in mirror | remain stationary and geometrically consistent across all frames | none\",\n    \"Dancer (foreground) | standing on wooden studio floor in front of mirror wall, occluding the mirror base and floor behind her | stays in the same foreground plane occluding background surfaces | none\"\n  ],\n  \"findings\": []\n}"
+}

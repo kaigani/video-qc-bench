@@ -1,0 +1,69 @@
+{
+  "key": "man-cups__possession-tracking",
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:34:42.726Z",
+  "latencyMs": 32269,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2166,
+    "total_tokens": 3721,
+    "cost": 0.012385,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012385,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.01083
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1487,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Large gold coin resting flat on the top rim of the center cup",
+    "00:03: Coin on the center cup rim vanishes without being touched",
+    "00:00-00:03: Large gold coin held by the man's left hand over the table -> vanishes at 00:01 -> reappears in left hand near the back cup at 00:03",
+    "00:01-00:03: Large gold coin held by the man's right hand at the rim of the front-left cup",
+    "00:04-00:06: Coin in the right hand clips through the front-left cup wall and adheres flat against the outside of the cup",
+    "00:05-00:06: Coin in the left hand adheres/clips onto the exterior side of the rightmost cup, then disappears as the hand moves to the table at 00:07",
+    "00:07-00:09: Right hand lifts above the cups holding a coin while a second coin materializes below the fingers in mid-air at 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "gold coin on top of the center cup",
+      "invariant_violated": "placement persistence",
+      "description": "A large gold coin sitting flat on the top opening of the middle cup from 00:00 to 00:02 vanishes or drops into the cup at 00:03 without any hand or object touching it.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "gold coin in the man's right hand and front cup",
+      "invariant_violated": "transfer completeness",
+      "description": "As the man's right hand places a gold coin into the front cup, the coin phases through the container wall and appears plastered flat against the outer side of the red cup from 00:04 to 00:06.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "gold coin in the man's left hand",
+      "invariant_violated": "continuous chain of custody",
+      "description": "The coin held by the left hand vanishes against the table at 00:01, reappears at 00:03, merges onto the outside wall of the far cup at 00:05-00:06, and disappears again at 00:07 when the hand moves forward.",
+      "severity": "severe",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Large gold coin resting flat on the top rim of the center cup\",\n    \"00:03: Coin on the center cup rim vanishes without being touched\",\n    \"00:00-00:03: Large gold coin held by the man's left hand over the table -> vanishes at 00:01 -> reappears in left hand near the back cup at 00:03\",\n    \"00:01-00:03: Large gold coin held by the man's right hand at the rim of the front-left cup\",\n    \"00:04-00:06: Coin in the right hand clips through the front-left cup wall and adheres flat against the outside of the cup\",\n    \"00:05-00:06: Coin in the left hand adheres/clips onto the exterior side of the rightmost cup, then disappears as the hand moves to the table at 00:07\",\n    \"00:07-00:09: Right hand lifts above the cups holding a coin while a second coin materializes below the fingers in mid-air at 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"gold coin on top of the center cup\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"A large gold coin sitting flat on the top opening of the middle cup from 00:00 to 00:02 vanishes or drops into the cup at 00:03 without any hand or object touching it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"gold coin in the man's right hand and front cup\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"As the man's right hand places a gold coin into the front cup, the coin phases through the container wall and appears plastered flat against the outer side of the red cup from 00:04 to 00:06.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"gold coin in the man's left hand\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"The coin held by the left hand vanishes against the table at 00:01, reappears at 00:03, merges onto the outside wall of the far cup at 00:05-00:06, and disappears again at 00:07 when the hand moves forward.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

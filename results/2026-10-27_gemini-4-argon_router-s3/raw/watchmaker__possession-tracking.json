@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:04:55.918Z",
+  "latencyMs": 9524,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 543,
+    "total_tokens": 2098,
+    "cost": 0.00427,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00427,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.002715
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 388,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Metal pendant setting held continuously in the woman's left hand.",
+    "00:00-00:03: Tweezers held in the woman's right hand, used to place a tiny stone into the pendant setting.",
+    "00:03-00:04: Right hand lowers below the bottom edge of the frame to set down the tweezers.",
+    "00:05-00:09: Right hand returns empty and uses fingers to adjust the bail and chain attached to the pendant in the left hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Metal pendant setting held continuously in the woman's left hand.\",\n    \"00:00-00:03: Tweezers held in the woman's right hand, used to place a tiny stone into the pendant setting.\",\n    \"00:03-00:04: Right hand lowers below the bottom edge of the frame to set down the tweezers.\",\n    \"00:05-00:09: Right hand returns empty and uses fingers to adjust the bail and chain attached to the pendant in the left hand.\"\n  ],\n  \"findings\": []\n}"
+}

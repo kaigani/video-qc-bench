@@ -1,0 +1,45 @@
+{
+  "ledger": [
+    "Diner shell and glazing | exterior entrance between broad windows, truck left of building | interior window wall continues beside booth seating | exterior view establishes a single room; window-facing shots place the parking area beyond the glass",
+    "Booths and customer aisle | booths line the left window wall in kitchen-facing views; aisle separates booths from counter stools | same arrangement in the final wide shot | reverse views should place glazing and booths on the opposite screen side without exchanging their physical positions",
+    "Main counter | long solid counter on the right, with a rounded foreground return and wood-paneled customer face | same continuous counter separates customer aisle from service area | tabletop and front panel must block lower bodies behind them; crossing between sides requires going around an end",
+    "Stool row | stools follow the customer edge of the counter, facing the service wall | row remains beside the same counter edge | seated customers occupy the aisle side; stools remain in front of the counter panel",
+    "Kitchen hatch and cooking area | far-wall rectangular hatch reveals a broad stainless extractor hood and cooking equipment | later hatch views again show the hood arrangement | at 00:36 the same opening instead reveals a cabinet-lined preparation area with a blue panel",
+    "Service wall | coffee equipment and worktop behind the counter on the right; doorway beside the kitchen hatch | same service strip remains visible at the end | closer kitchen-facing views retain hatch-left/equipment-right ordering",
+    "Entrance and reverse sightline | kitchen-facing views look away from the entrance | kitchen-side reverse view shows the entrance and exit sign beyond the counter, with windows to the right | hatch framing occludes the room edges while the counter recedes toward the entrance",
+    "People relative to counter | server works on service side; customer approaches along the booth-side aisle and sits | server returns from customer side to service side | ordinary counter occlusion holds in most shots; at 01:52 her body crosses the continuous counter instead of passing around its end",
+    "Window, truck, and exterior pedestrian | truck established outside the diner | customer walks between diner glazing and truck cab | window mullions frame the exterior; pedestrian occludes truck; server's translucent window reflection overlays the exterior view"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Kitchen background through the service hatch",
+      "invariant_violated": "Fixed layout across cuts",
+      "description": "The kitchen-facing wide shot replaces the stainless extractor hood and cooking line visible through the hatch at 00:19\u201300:27 with tan wall cabinets, a preparation counter, and a blue panel on the left. The hatch, adjacent window, clock, and main counter retain essentially the same viewing alignment, so this is a different fixed kitchen arrangement through the same opening, not a reverse angle. The original hood arrangement is visible again at 00:51.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Server crossing the main counter",
+      "invariant_violated": "Solid-boundary crossing and depth ordering",
+      "description": "After rising from a customer-side stool, the server steps right through the continuous rounded counter. During the crossing, the tabletop cuts across her hips while a trousered leg remains visible in front of the solid wooden panel; she then emerges fully in the service aisle by 01:53. The counter remains intact throughout, and she never reaches or passes around its end.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

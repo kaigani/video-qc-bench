@@ -38,12 +38,12 @@ function loadRun(runId) {
   return out;
 }
 
-console.log(`| Group | Runs | Defects | Detection | FP | Score |\n|---|---|---|---|---|---|`);
+console.log(`| Group | Runs | Defects | Detection | FP per sample | FP total | Legacy score |\n|---|---|---|---|---|---|---|`);
 for (const g of groups) {
   const all = g.runs.flatMap(loadRun);
   const ids = new Set(all.filter((c) => c.startsWith('TP:')).map((c) => c.slice(3)));
   const det = [...ids].reduce((a, id) => a + WEIGHTS[byId.get(id).priority], 0);
   const fp = all.filter((c) => c === 'FP').length;
-  console.log(`| ${g.label} | ${g.runs.length} | ${ids.size}/${GT.defects.length} | ${det}/${maxDet} | ${fp} | **${det - penalty * fp}** |`);
-  console.log(`|  | defects: ${[...ids].sort().join(', ')} | | | | |`);
+  console.log(`| ${g.label} | ${g.runs.length} | **${ids.size}/${GT.defects.length}** | **${det}/${maxDet}** | ${(fp / g.runs.length).toFixed(1)} | ${fp} | ${det - penalty * fp} |`);
+  console.log(`|  | defects: ${[...ids].sort().join(', ')} | | | | | |`);
 }

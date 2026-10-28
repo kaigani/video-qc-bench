@@ -24,21 +24,22 @@ so false positives are reported as a separate review-burden column rather than s
 
 | # | System | Defects found | Detection | False positives | Run cost | Legacy score |
 |---|---|---|---|---|---|---|
-| 1 | Gemini Pro Latest (reasoning) | **24/48** | **70/141** | 48 | $2.15 | 22 |
-| 2 | Kimi K3 (reasoning) | **21/48** | **55/141** | 18 | $10.83 | 37 |
-| 3 | Qwen 3.8 Max (reasoning) | **15/48** | **52/141** | 11 | $4.42 | 41 |
-| 4 | Gemini 3.8 Flash | **12/48** | **46/141** | 3 | $0.53 | 43 |
-| 5 | Muse Spark 1.2 (reasoning) | **12/48** | **42/141** | 12 | $1.11 | 30 |
-| 6 | Seed 2.1 Turbo | **11/48** | **40/141** | 1 | $1.96 | 39 |
-| 7 | GLM 5.3 Flash (was Ox Alpha stealth) | **15/48** | **39/141** | 11 | ~$0.33* | 28 |
-| 8 | Gemini 3.6 Flash | **9/48** | **34/141** | 3 | $0.53 | 31 |
-| 9 | Gemma 4 31B (reasoning) | **11/48** | **33/141** | 6 | $0.11 | 27 |
-| 10 | Qwen 3.8 27B (reasoning) | **10/48** | **32/141** | 4 | $1.58 | 28 |
-| 11 | Muse Spark 1.3 (reasoning) | **8/48** | **30/141** | 0 | $0.08 | 30 |
-| 12 | Nemotron 3.5 Super VL (free, reasoning)† | **8/48** | **25/141** | 16 | $0.00 | 9 |
-| 13 | Gemini 3.7 Flash | **7/48** | **25/141** | 3 | $0.15 | 22 |
-| 14 | Nemotron 3 Nano (free, reasoning) | **5/48** | **14/141** | 3 | $0.00 | 11 |
-| 15 | TwelveLabs Pegasus 1.5 | **2/48** | **6/141** | 0 | ~$0.58 | 6 |
+| 1 | Gemini 4 Argon (reasoning: high, flex tier)‡ | **27/50** | **92/147** | 26 | $1.05 | 66 |
+| 2 | Gemini Pro Latest (reasoning) | **24/50** | **70/147** | 48 | $2.15 | 22 |
+| 3 | Kimi K3 (reasoning) | **21/50** | **55/147** | 18 | $10.83 | 37 |
+| 4 | Qwen 3.8 Max (reasoning) | **15/50** | **52/147** | 11 | $4.42 | 41 |
+| 5 | Gemini 3.8 Flash | **12/50** | **46/147** | 3 | $0.53 | 43 |
+| 6 | Muse Spark 1.2 (reasoning) | **12/50** | **42/147** | 12 | $1.11 | 30 |
+| 7 | Seed 2.1 Turbo | **11/50** | **40/147** | 1 | $1.96 | 39 |
+| 8 | GLM 5.3 Flash (was Ox Alpha stealth) | **15/50** | **39/147** | 11 | ~$0.33* | 28 |
+| 9 | Gemini 3.6 Flash | **9/50** | **34/147** | 3 | $0.53 | 31 |
+| 10 | Gemma 4 31B (reasoning) | **11/50** | **33/147** | 6 | $0.11 | 27 |
+| 11 | Qwen 3.8 27B (reasoning) | **10/50** | **32/147** | 4 | $1.58 | 28 |
+| 12 | Muse Spark 1.3 (reasoning) | **8/50** | **30/147** | 0 | $0.08 | 30 |
+| 13 | Nemotron 3.5 Super VL (free, reasoning)† | **8/50** | **25/147** | 16 | $0.00 | 9 |
+| 14 | Gemini 3.7 Flash | **7/50** | **25/147** | 3 | $0.15 | 22 |
+| 15 | Nemotron 3 Nano (free, reasoning) | **5/50** | **14/147** | 3 | $0.00 | 11 |
+| 16 | TwelveLabs Pegasus 1.5 | **2/50** | **6/147** | 0 | ~$0.58 | 6 |
 
 \* Ox Alpha was OpenRouter's anonymized stealth slug for GLM 5.3 Flash (revealed 2026-08-26).
 Pricing is $0.15/1M input tokens, $0.50/1M output tokens (cached input reads discounted, often
@@ -48,26 +49,63 @@ figure above is the estimated cost at published pricing applied to the run's act
 
 † First model run under the full 2.0 protocol (v1 × 3 samples + feature router × 3 samples;
 see `results/2026-10-27_nemotron-3.5-super-vl_2.0-protocol.md`). The row above is the first v1
-sample, for comparability; the three identical v1 runs scored 9 / 17 / 13. Union across all six
-samples: 14/48 defects, 39/141 detection. The provider samples a fixed handful of frames per clip
+sample, for comparability; the three identical v1 runs had legacy scores of 9 / 17 / 13. Union across all six
+samples: 14/50 defects, 39/147 detection. The provider samples a fixed handful of frames per clip
 (same prompt-token count for 10 s and 2 min videos), which drives most of its FPs.
 
-Detection = severity-weighted credit for unique human-baseline defects found (P0=8 … P4=1, max 141);
+‡ Gemini 4 Argon, run 2026-10-27 under the full 2.0 protocol on Google AI Studio's half-price flex
+tier (`--provider google-ai-studio/flex`, `--reasoning-effort high`; plain `reasoning: enabled` gives
+no reasoning on this model). The row above is the first v1 sample; the three v1 samples found 27 / 24 / 25
+defects. **Union across all six samples: 33/50 defects, 113/147 detection**, the best recall on this
+benchmark by a wide margin. Five of those defects had never been found by any leaderboard system
+(LONG-6 and LONG-10, both P0; LONG-7 and LONG-9, both P1; HOME-2), plus the newly confirmed LONG-16.
+Full 2.0 run cost $5.29. See
+`results/2026-10-27_gemini-4-argon_2.0-protocol.md`.
+
+Detection = severity-weighted credit for unique human-baseline defects found (P0=8 … P4=1, max 147);
 ties broken by defects found, then fewest false positives. Legacy score = detection − 1 per false-positive
-finding (the original single metric, kept for continuity). The ground truth includes 12 defects first surfaced
-or prompted by model findings and then human-confirmed (latest: DANC-4, 2026-09-04). Headline patterns: Gemini
-Pro finds the most real defects (24/48, 70/141) at the cost of 48 false positives to review; Kimi K3 is second
+finding (the original single metric, kept for continuity). The ground truth includes 14 defects first surfaced
+or prompted by model findings and then human-confirmed (latest: LONG-16 and LONG-17, 2026-10-27). Headline patterns: Gemini 4
+Argon leads by a wide margin (27/50, 92/147 in a single run; 33/50 pooled across six); Gemini Pro was the previous
+recall leader (24/50, 70/147) at the cost of 48 false positives to review; Kimi K3 is third
 on recall with honest confidence calibration; Seed 2.1 Turbo is the precision champion (1 FP) at ~9 min/call;
-Gemini 3.8 Flash is the best value (46/141 for $0.53, 3 FPs); and Gemini 3.7 Flash *regresses* against its 3.6
+Gemini 3.8 Flash is the best value (46/147 for $0.53, 3 FPs); and Gemini 3.7 Flash *regresses* against its 3.6
 predecessor on this task. Single runs vary by ±7–10 detection points, so adjacent placements are within noise.
 Full matrices and charts in the report.
+
+## GPT-6 Astra blind v2 evaluation (27 October 2026)
+
+[Full audit and evidence](DELIVERABLES/261027%20Astra%20QC%20Review/Audit.html).
+The frozen agent evaluation uses one six-role core sample and three feature-router samples.
+It follows the same recall-first scoring as Nemotron 3.5: unique severity-weighted detection
+leads; false positives are a separate review burden; subtraction is a secondary legacy metric.
+
+| Layer | Samples | Detection | Defects | FP/sample | FP total | Legacy score |
+|---|---|---|---|---|---|---|
+| Core | 1 | 51/147 | 12/50 | 1.0 | 1 | 50 |
+| Router union | 3 | 66/147 | 15/50 | 0.3 | 1 | 65 |
+| Combined union | 4 | **71/147** | **18/50** | 0.5* | **2** | 69 |
+
+*The combined mean mixes different layers; compare FP burden by layer. Nemotron used three
+core samples, so the sampling configurations differ. Astra inspected extracted frames, with
+optional denser inspection; audio was unassessed. This is a separate agent evaluation, not a
+controlled native-video model ranking. The 311 calls were frozen before grading.
+
+KT confirmed LONG-16 (two mugs merge) and LONG-17 (kitchen behind the hatch changes, including
+the poster above), both P2, and extended LONG-8 to the later counter crossing. These contribute
+nine additional detection points to Astra; only the two new IDs expand the truth to 50 defects
+and 147 points. The poster detail was supplied by KT. Existing published models' long-scene
+claims were reviewed; no additional matches were established, so their numerators are unchanged.
+Frozen raw predictions and the original 48-label reference remain in
+`RUNS/261027 GPT6 Astra blind audit/`; standard per-run classifications are in
+`results/2026-10-27_gpt-6-astra-blind_{core,router-s1,router-s2,router-s3}/`.
 
 ## Repo layout
 
 ```
 00 test videos/          the 14 test clips (13 × 10s + one 2-minute scene)
 review-human-baseline.md human reviewer's defect audit (ground truth source)
-ground-truth/            structured ground truth + adjudication of all 216 model findings
+ground-truth/            structured ground truth + model-finding adjudications
 src/
   roles.mjs              the 6 role prompts (invariant-ledger + strict-JSON contract)
   run-benchmark.mjs      runner: videos × roles → OpenRouter (or TwelveLabs) → results/
@@ -104,8 +142,8 @@ Runs are resumable: completed video×role calls are skipped on re-invocation.
 ## Method notes & caveats
 
 - Ground truth is a human visual audit (P0 = clip-ruining … P4 = minor). One clip (`dialogue`)
-  is deliberately defect-free as a false-positive trap.
-- All 216 findings were adjudicated against the baseline (by Claude, with frame-level
+  is visually clean as a false-positive trap; DIAL-1 is an audio defect.
+- Model findings are adjudicated against the baseline (with frame-level
   verification via extracted contact sheets): true positive, plausible **extra** (neutral,
   awaiting human confirmation — see the report), or penalized false positive.
 - Provider quirks encountered and worked around: Alibaba's content filter rejected a prompt

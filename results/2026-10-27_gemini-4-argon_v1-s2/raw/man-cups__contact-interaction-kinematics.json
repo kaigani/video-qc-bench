@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:56:38.909Z",
+  "latencyMs": 27986,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1881,
+    "total_tokens": 3501,
+    "cost": 0.011025,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011025,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.009405
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1269,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's right hand and coin | 00:01 reaches into foreground cup and withdraws coin at 00:02 | 00:09 hovers above cups pinching coin | at 00:04-00:06 coin clips through cup wall and sticks vertically to exterior of cup without support",
+    "man's left hand and rightmost cup | 00:00 holds coin near table, 00:04 contacts back/right cup | 00:09 rests fingers on table surface | at 00:05-00:06 coin clips onto exterior wall of rightmost cup without support",
+    "four metal cups on table | 00:00 arranged in a diamond pattern on table | 00:09 three cups remain in a cluster | at 00:06-00:08 the two leftmost cups slide together and clip/merge into a single cup"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "man's right hand, gold coin, and foreground cup",
+      "invariant_violated": "solidity and weight support",
+      "description": "The coin held above the foreground cup at 00:03 passes directly through the solid rim/wall of the cup at 00:04 and remains stuck vertically against the outer surface of the cup from 00:04 to 00:06 without an opposing grip or bottom support.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "man's left hand, gold coin, and rightmost cup",
+      "invariant_violated": "solidity and weight support",
+      "description": "As the man's left hand rests on the top rim of the rightmost cup, a coin clips through the side wall of the cup and hangs vertically against its exterior surface at 00:05-00:06 without fingers wrapping around to hold it in place.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "two leftmost cups",
+      "invariant_violated": "solidity",
+      "description": "The two cups on the left side of the lineup slide into the same physical space without being pushed together, clipping through one another at 00:07 and merging into a single cup by 00:08.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man's right hand and coin | 00:01 reaches into foreground cup and withdraws coin at 00:02 | 00:09 hovers above cups pinching coin | at 00:04-00:06 coin clips through cup wall and sticks vertically to exterior of cup without support\",\n    \"man's left hand and rightmost cup | 00:00 holds coin near table, 00:04 contacts back/right cup | 00:09 rests fingers on table surface | at 00:05-00:06 coin clips onto exterior wall of rightmost cup without support\",\n    \"four metal cups on table | 00:00 arranged in a diamond pattern on table | 00:09 three cups remain in a cluster | at 00:06-00:08 the two leftmost cups slide together and clip/merge into a single cup\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"man's right hand, gold coin, and foreground cup\",\n      \"invariant_violated\": \"solidity and weight support\",\n      \"description\": \"The coin held above the foreground cup at 00:03 passes directly through the solid rim/wall of the cup at 00:04 and remains stuck vertically against the outer surface of the cup from 00:04 to 00:06 without an opposing grip or bottom support.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"man's left hand, gold coin, and rightmost cup\",\n      \"invariant_violated\": \"solidity and weight support\",\n      \"description\": \"As the man's left hand rests on the top rim of the rightmost cup, a coin clips through the side wall of the cup and hangs vertically against its exterior surface at 00:05-00:06 without fingers wrapping around to hold it in place.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"two leftmost cups\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The two cups on the left side of the lineup slide into the same physical space without being pushed together, clipping through one another at 00:07 and merging into a single cup by 00:08.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

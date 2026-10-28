@@ -1,0 +1,67 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:49:27.054Z",
+  "latencyMs": 28062,
+  "usage": {
+    "prompt_tokens": 1547,
+    "completion_tokens": 1985,
+    "total_tokens": 3532,
+    "cost": 0.011472,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011472,
+      "upstream_inference_prompt_cost": 0.001547,
+      "upstream_inference_completions_cost": 0.009925
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1274,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Real subject tilts head up and holds a small grooming razor under his chin/lower jawline; reflection in the mirror shows the razor held higher up against his upper lip/philtrum just beneath his nose.",
+    "00:02-00:03: Real subject lowers his head and runs the grooming tool along the side of his head near his right temple and above his ear; reflection shows the tool held across the front of his eyebrow and forehead hairline.",
+    "00:04: Real subject holds the grooming tool to the side of his right temple/cheekbone; reflection holds the tool vertically at the center of his forehead between his eyebrows.",
+    "00:05-00:06: Real subject tilts his head back up and places the grooming tool under his chin/jawline; reflection shows the tool positioned higher at his upper lip and mouth.",
+    "00:07-00:09: Real subject holds the grooming tool upright near his lower right cheek/jawline slightly away from his face; reflection shows the blade pressed diagonally against his upper cheek/nasolabial fold beside his nose and upper lip."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "man's right hand and grooming razor in the mirror reflection",
+      "invariant_violated": "mirror reflection pose and prop position consistency",
+      "description": "From 00:00 to 00:01 (and again at 00:05-00:06), the real subject holds the grooming razor underneath his chin along his lower jawline, whereas his reflection in the mirror holds the razor higher up directly against his upper lip beneath his nose.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "man's right hand and grooming razor in the mirror reflection",
+      "invariant_violated": "mirror reflection pose and prop position consistency",
+      "description": "From 00:02 to 00:04, the real subject moves the grooming tool along the right side of his head near his temple and ear, while the mirror reflection shows the tool held across the front of his eyebrow (00:02) and centered between his eyebrows at the bridge of his nose (00:04).",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "man's right hand and grooming razor in the mirror reflection",
+      "invariant_violated": "mirror reflection pose and prop position consistency",
+      "description": "From 00:07 to 00:09, the real subject holds the razor upright near his right jawline slightly away from his skin, while the reflection shows the razor pressed diagonally against his upper cheek and nasolabial fold right next to his nose and mouth.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Real subject tilts head up and holds a small grooming razor under his chin/lower jawline; reflection in the mirror shows the razor held higher up against his upper lip/philtrum just beneath his nose.\",\n    \"00:02-00:03: Real subject lowers his head and runs the grooming tool along the side of his head near his right temple and above his ear; reflection shows the tool held across the front of his eyebrow and forehead hairline.\",\n    \"00:04: Real subject holds the grooming tool to the side of his right temple/cheekbone; reflection holds the tool vertically at the center of his forehead between his eyebrows.\",\n    \"00:05-00:06: Real subject tilts his head back up and places the grooming tool under his chin/jawline; reflection shows the tool positioned higher at his upper lip and mouth.\",\n    \"00:07-00:09: Real subject holds the grooming tool upright near his lower right cheek/jawline slightly away from his face; reflection shows the blade pressed diagonally against his upper cheek/nasolabial fold beside his nose and upper lip.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"man's right hand and grooming razor in the mirror reflection\",\n      \"invariant_violated\": \"mirror reflection pose and prop position consistency\",\n      \"description\": \"From 00:00 to 00:01 (and again at 00:05-00:06), the real subject holds the grooming razor underneath his chin along his lower jawline, whereas his reflection in the mirror holds the razor higher up directly against his upper lip beneath his nose.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"man's right hand and grooming razor in the mirror reflection\",\n      \"invariant_violated\": \"mirror reflection pose and prop position consistency\",\n      \"description\": \"From 00:02 to 00:04, the real subject moves the grooming tool along the right side of his head near his temple and ear, while the mirror reflection shows the tool held across the front of his eyebrow (00:02) and centered between his eyebrows at the bridge of his nose (00:04).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"man's right hand and grooming razor in the mirror reflection\",\n      \"invariant_violated\": \"mirror reflection pose and prop position consistency\",\n      \"description\": \"From 00:07 to 00:09, the real subject holds the razor upright near his right jawline slightly away from his skin, while the reflection shows the razor pressed diagonally against his upper cheek and nasolabial fold right next to his nose and mouth.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

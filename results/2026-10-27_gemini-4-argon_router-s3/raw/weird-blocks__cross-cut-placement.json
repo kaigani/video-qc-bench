@@ -1,0 +1,43 @@
+{
+  "key": "weird-blocks__cross-cut-placement",
+  "video": "weird-blocks.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:06:04.537Z",
+  "latencyMs": 26302,
+  "usage": {
+    "prompt_tokens": 1605,
+    "completion_tokens": 1827,
+    "total_tokens": 3432,
+    "cost": 0.01074,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01074,
+      "upstream_inference_prompt_cost": 0.001605,
+      "upstream_inference_completions_cost": 0.009135
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1456,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "STEP 1 — SHOT LIST: Shots 1-20 (00:00-00:09), static tabletop close-up framing with rapid stop-motion jump cuts every ~0.5s.",
+    "STEP 2 — FIXED ANCHORS: Anchor A = wooden tabletop rear edge; Anchor B = black chair frame in upper-right background; Anchor C = horizontal row of numbered blocks (positions 1 to 8, left to right).",
+    "STEP 3 — PER-SHOT STATE (00:00-00:07, Shots 1-15): Single person's right hand enters from top-left above Anchor A, sequentially placing and cycling numbered blocks from position 1 (left) to position 8 (right) along Anchor C.",
+    "STEP 3 — PER-SHOT STATE (00:07-00:09, Shots 16-19): Right hand taps pairs of blocks sequentially from right back to left across Anchor C (positions 6-7, 3-4, 2-3, 1-2).",
+    "STEP 3 — PER-SHOT STATE (00:09, Shot 20): Hand exits frame; final block sequence 2-3-2-2-3-5-2-6 rests on tabletop in front of Anchor A.",
+    "STEP 4 — DIFF SUMMARY: All cuts are intentional stop-motion/montage jump cuts from a single fixed camera showing progressive placement of blocks; no unexplained person disappearance, anchor-side teleportation, geometry overlap, duplication, or hand swap occurs."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"STEP 1 — SHOT LIST: Shots 1-20 (00:00-00:09), static tabletop close-up framing with rapid stop-motion jump cuts every ~0.5s.\",\n    \"STEP 2 — FIXED ANCHORS: Anchor A = wooden tabletop rear edge; Anchor B = black chair frame in upper-right background; Anchor C = horizontal row of numbered blocks (positions 1 to 8, left to right).\",\n    \"STEP 3 — PER-SHOT STATE (00:00-00:07, Shots 1-15): Single person's right hand enters from top-left above Anchor A, sequentially placing and cycling numbered blocks from position 1 (left) to position 8 (right) along Anchor C.\",\n    \"STEP 3 — PER-SHOT STATE (00:07-00:09, Shots 16-19): Right hand taps pairs of blocks sequentially from right back to left across Anchor C (positions 6-7, 3-4, 2-3, 1-2).\",\n    \"STEP 3 — PER-SHOT STATE (00:09, Shot 20): Hand exits frame; final block sequence 2-3-2-2-3-5-2-6 rests on tabletop in front of Anchor A.\",\n    \"STEP 4 — DIFF SUMMARY: All cuts are intentional stop-motion/montage jump cuts from a single fixed camera showing progressive placement of blocks; no unexplained person disappearance, anchor-side teleportation, geometry overlap, duplication, or hand swap occurs.\"\n  ],\n  \"findings\": []\n}"
+}

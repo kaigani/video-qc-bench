@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:07:54.949Z",
+  "latencyMs": 24578,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1439,
+    "total_tokens": 3059,
+    "cost": 0.008815,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008815,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.007195
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1161,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman's torso and lower body | positioned in front of the windshield/A-pillar while emerging out of the solid front fender/hood at 00:00 | remains embedded inside the car's hood/fender through 00:09 | continuous solidity violation where her body clips through the vehicle structure",
+    "Woman's crossed arms and right hand | forearms resting on the top surface of the hood/fender with right fingers gripping left denim sleeve at 00:00 | maintains steady contact on hood and sleeve through 00:09 | stable surface contact throughout camera push-in"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and car hood/fender",
+      "invariant_violated": "solidity",
+      "description": "The woman is positioned in front of the windshield and driver-side A-pillar while the exterior wood-paneled front fender remains uninterrupted in the foreground, causing her torso and lower body to clip directly through the solid metal of the car's hood and front fender.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman's torso and lower body | positioned in front of the windshield/A-pillar while emerging out of the solid front fender/hood at 00:00 | remains embedded inside the car's hood/fender through 00:09 | continuous solidity violation where her body clips through the vehicle structure\",\n    \"Woman's crossed arms and right hand | forearms resting on the top surface of the hood/fender with right fingers gripping left denim sleeve at 00:00 | maintains steady contact on hood and sleeve through 00:09 | stable surface contact throughout camera push-in\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and car hood/fender\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The woman is positioned in front of the windshield and driver-side A-pillar while the exterior wood-paneled front fender remains uninterrupted in the foreground, causing her torso and lower body to clip directly through the solid metal of the car's hood and front fender.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

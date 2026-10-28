@@ -1,0 +1,43 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:21:11.703Z",
+  "latencyMs": 91945,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 6869,
+    "total_tokens": 8464,
+    "cost": 0.03594,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.03594,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.034345
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6486,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground gaming table | round table covered in a red and white patterned cloth with coins along the perimeter | viewed from an orbiting camera moving counter-clockwise from the left side of the dealer to his right side | maintains consistent circular geometry and relative placement in the room",
+    "Four metal cups on table | clustered near the center of the table at 00:00 | arranged in a slight arc on the table surface at 00:09 | relative positions and mutual occlusions evolve consistently with the orbiting camera viewpoint",
+    "Dealer in blue suit | positioned on the left side of the table (only hands visible at 00:00) | positioned on the right side of the frame facing left at 00:09 as camera orbits in front of him | properly occludes background architecture and background person as camera sweeps past",
+    "Background table and two spectators | visible across the table in front of double windows at 00:00-00:03 | smoothly exit the right edge of the frame by 00:06 as the camera pans left while orbiting right | consistent parallax and layout",
+    "Three-pane window and chairs | enters on the left behind the dealer at 00:04-00:05 | shifts across the background to the right side of the frame at 00:07-00:09 as camera orbits | consistent architectural placement and depth ordering behind the dealer",
+    "Back wall with framed picture and recessed window | enters from the left edge of the frame at 00:07-00:08 | occupies the left and center background at 00:09 | consistent room connectivity and parallax"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground gaming table | round table covered in a red and white patterned cloth with coins along the perimeter | viewed from an orbiting camera moving counter-clockwise from the left side of the dealer to his right side | maintains consistent circular geometry and relative placement in the room\",\n    \"Four metal cups on table | clustered near the center of the table at 00:00 | arranged in a slight arc on the table surface at 00:09 | relative positions and mutual occlusions evolve consistently with the orbiting camera viewpoint\",\n    \"Dealer in blue suit | positioned on the left side of the table (only hands visible at 00:00) | positioned on the right side of the frame facing left at 00:09 as camera orbits in front of him | properly occludes background architecture and background person as camera sweeps past\",\n    \"Background table and two spectators | visible across the table in front of double windows at 00:00-00:03 | smoothly exit the right edge of the frame by 00:06 as the camera pans left while orbiting right | consistent parallax and layout\",\n    \"Three-pane window and chairs | enters on the left behind the dealer at 00:04-00:05 | shifts across the background to the right side of the frame at 00:07-00:09 as camera orbits | consistent architectural placement and depth ordering behind the dealer\",\n    \"Back wall with framed picture and recessed window | enters from the left edge of the frame at 00:07-00:08 | occupies the left and center background at 00:09 | consistent room connectivity and parallax\"\n  ],\n  \"findings\": []\n}"
+}

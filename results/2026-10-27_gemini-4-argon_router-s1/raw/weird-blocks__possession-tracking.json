@@ -1,0 +1,64 @@
+{
+  "key": "weird-blocks__possession-tracking",
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:42.549Z",
+  "latencyMs": 62443,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 4917,
+    "total_tokens": 6472,
+    "cost": 0.02614,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02614,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.024585
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4051,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Slot 1 block: held in right hand as a green '2' block above the left side of the table; Slot 3 block: green '2' block resting on the table to the right of an empty Slot 2.",
+    "00:00-00:01 - Slot 1 block: while held in the fingers, rapidly cycles through different colors and digits before being placed on the table as a blue '2' block.",
+    "00:01-00:02 - Slot 2 block: appears directly between the fingers at Slot 2 without the hand fetching it, cycles through multiple colors and digits, and is placed on the table as a blue '3' block.",
+    "00:02 - Slot 3 block: right hand holds the green '2' block at Slot 3, which cycles through different colors and digits in the fingers before settling back on the table as a green '2' block.",
+    "00:03 - Slot 4 block: appears in the right hand at Slot 4 without being picked up from any source, cycles through colors and digits, and is placed on the table as an orange '2' block.",
+    "00:04 - Slot 5 block: appears in the right hand at Slot 5 without being fetched, cycles through colors and digits, and is placed on the table as a light-blue '3' block.",
+    "00:05 - Slot 6 block: appears in the right hand at Slot 6 without being fetched, cycles through colors and digits, and is placed on the table as a green '5' block.",
+    "00:06 - Slot 7 block: appears in the right hand at Slot 7 without being fetched, cycles through colors and digits, and is placed on the table as a green '2' block.",
+    "00:07-00:08 - Slot 8 block: appears in the right hand at Slot 8 without being fetched, cycles through colors and digits, and is placed on the table as a blue '6' block.",
+    "00:08-00:09 - All 8 blocks ('2 3 2 2 3 5 2 6'): remain on the table surface while the right hand taps their tops from right to left."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Number blocks held by the right hand across slots 1 to 8",
+      "invariant_violated": "transfer completeness",
+      "description": "As the right hand places each block onto the table from left to right (00:00-00:07), the block held visibly between the thumb and index finger repeatedly swaps color and number mid-placement (e.g., the green '2' block held at 00:00 becomes a blue '2' block by 00:01) via rapid stop-motion jump cuts, which is physically impossible even with concealed palming.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Number blocks placed in slots 2 and 4 through 8",
+      "invariant_violated": "continuous chain of custody",
+      "description": "At 00:00 only two blocks are present in the scene, and the right hand never exits the frame or visits a container or surface supply; nevertheless, six additional blocks appear directly in the fingers at slots 2, 4, 5, 6, 7, and 8 between 00:01 and 00:07 with no physical source.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Slot 1 block: held in right hand as a green '2' block above the left side of the table; Slot 3 block: green '2' block resting on the table to the right of an empty Slot 2.\",\n    \"00:00-00:01 - Slot 1 block: while held in the fingers, rapidly cycles through different colors and digits before being placed on the table as a blue '2' block.\",\n    \"00:01-00:02 - Slot 2 block: appears directly between the fingers at Slot 2 without the hand fetching it, cycles through multiple colors and digits, and is placed on the table as a blue '3' block.\",\n    \"00:02 - Slot 3 block: right hand holds the green '2' block at Slot 3, which cycles through different colors and digits in the fingers before settling back on the table as a green '2' block.\",\n    \"00:03 - Slot 4 block: appears in the right hand at Slot 4 without being picked up from any source, cycles through colors and digits, and is placed on the table as an orange '2' block.\",\n    \"00:04 - Slot 5 block: appears in the right hand at Slot 5 without being fetched, cycles through colors and digits, and is placed on the table as a light-blue '3' block.\",\n    \"00:05 - Slot 6 block: appears in the right hand at Slot 6 without being fetched, cycles through colors and digits, and is placed on the table as a green '5' block.\",\n    \"00:06 - Slot 7 block: appears in the right hand at Slot 7 without being fetched, cycles through colors and digits, and is placed on the table as a green '2' block.\",\n    \"00:07-00:08 - Slot 8 block: appears in the right hand at Slot 8 without being fetched, cycles through colors and digits, and is placed on the table as a blue '6' block.\",\n    \"00:08-00:09 - All 8 blocks ('2 3 2 2 3 5 2 6'): remain on the table surface while the right hand taps their tops from right to left.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Number blocks held by the right hand across slots 1 to 8\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"As the right hand places each block onto the table from left to right (00:00-00:07), the block held visibly between the thumb and index finger repeatedly swaps color and number mid-placement (e.g., the green '2' block held at 00:00 becomes a blue '2' block by 00:01) via rapid stop-motion jump cuts, which is physically impossible even with concealed palming.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Number blocks placed in slots 2 and 4 through 8\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"At 00:00 only two blocks are present in the scene, and the right hand never exits the frame or visits a container or surface supply; nevertheless, six additional blocks appear directly in the fingers at slots 2, 4, 5, 6, 7, and 8 between 00:01 and 00:07 with no physical source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

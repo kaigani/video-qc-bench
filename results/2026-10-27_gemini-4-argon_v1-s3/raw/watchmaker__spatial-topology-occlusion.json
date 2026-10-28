@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:26:19.173Z",
+  "latencyMs": 10451,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 554,
+    "total_tokens": 2149,
+    "cost": 0.004365,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004365,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00277
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 415,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background wall | plain off-white surface behind subject | unchanged | remains consistently occluded by subject throughout",
+    "chair | white backrest visible behind subject's left shoulder (viewer's right), dark element near right elbow | unchanged | consistent relative position behind torso",
+    "table surface | dark edge visible at bottom left of frame | unchanged | remains in foreground below hands",
+    "subject torso and arms | positioned in front of background wall and chair, behind hands | slight postural shifts | proper depth ordering maintained as hands move in front of striped shirt"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"background wall | plain off-white surface behind subject | unchanged | remains consistently occluded by subject throughout\",\n    \"chair | white backrest visible behind subject's left shoulder (viewer's right), dark element near right elbow | unchanged | consistent relative position behind torso\",\n    \"table surface | dark edge visible at bottom left of frame | unchanged | remains in foreground below hands\",\n    \"subject torso and arms | positioned in front of background wall and chair, behind hands | slight postural shifts | proper depth ordering maintained as hands move in front of striped shirt\"\n  ],\n  \"findings\": []\n}"
+}

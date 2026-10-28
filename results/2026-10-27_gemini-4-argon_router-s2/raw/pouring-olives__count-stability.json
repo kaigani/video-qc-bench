@@ -1,0 +1,67 @@
+{
+  "key": "pouring-olives__count-stability",
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:51:13.078Z",
+  "latencyMs": 51284,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 3884,
+    "total_tokens": 5473,
+    "cost": 0.021009,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021009,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01942
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3045,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Small glass cup (first pour, 00:00-00:03): holds ~8-10 bright green olives and 0 dark purple/black olives at 00:00; emptied into the large jar by 00:03.",
+    "Large glass jar (00:00-00:09): 0 olives at 00:00; receives first pour at 00:01-00:03 resulting in ~10 green and ~10 dark purple/black olives despite only green olives leaving the cup; receives second pour at 00:07-00:09 resulting in ~20+ dark purple/black and ~20+ green olives.",
+    "Small glass cup (second pour, 00:05-00:09): appears already filled with ~10-12 bright green olives at 00:05-00:06 (0 dark olives visible through the clear glass); emptied into the jar by 00:09 with several green olives turning dark purple/black as they fall.",
+    "Stainless steel bowl (middle right, 00:00-00:09): contains ~12-15 bright green olives from 00:00 to 00:04; at 00:05 the count abruptly drops to ~5-6 olives (some turning brown/reddish) and a small bottle appears beside the bowl without a visible transfer.",
+    "Ceramic bowl (bottom right, 00:00-00:09): contains ~12-14 bright green olives, remaining unchanged throughout (partially cropped by frame edge at 00:07-00:09)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives poured from small glass cup into large glass jar",
+      "invariant_violated": "Unexplained kind transformation and count mismatch",
+      "description": "At 00:00, the clear small glass cup contains only bright green olives. As they are poured into the large glass jar from 00:01 to 00:03, roughly half of the olives inside the jar appear as dark purple/black olives with no visible mechanism explaining the transformation.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Green olives in the stainless steel bowl",
+      "invariant_violated": "Unexplained count change",
+      "description": "Between 00:04 and 00:05, the stainless steel bowl goes from holding ~12-15 green olives to only ~5-6 olives (some changed to brownish-red with loose bits), while the small glass cup simultaneously appears already full in the person's hands and a small bottle pops into existence next to the bowl.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Olives in small glass cup during second pour",
+      "invariant_violated": "Unexplained kind transformation",
+      "description": "At 00:06, the small glass cup is filled exclusively with bright green olives. As the person pours them into the jar from 00:07 to 00:09, several green olives visibly turn dark purple/black at the rim of the cup and as they land in the jar.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Small glass cup (first pour, 00:00-00:03): holds ~8-10 bright green olives and 0 dark purple/black olives at 00:00; emptied into the large jar by 00:03.\",\n    \"Large glass jar (00:00-00:09): 0 olives at 00:00; receives first pour at 00:01-00:03 resulting in ~10 green and ~10 dark purple/black olives despite only green olives leaving the cup; receives second pour at 00:07-00:09 resulting in ~20+ dark purple/black and ~20+ green olives.\",\n    \"Small glass cup (second pour, 00:05-00:09): appears already filled with ~10-12 bright green olives at 00:05-00:06 (0 dark olives visible through the clear glass); emptied into the jar by 00:09 with several green olives turning dark purple/black as they fall.\",\n    \"Stainless steel bowl (middle right, 00:00-00:09): contains ~12-15 bright green olives from 00:00 to 00:04; at 00:05 the count abruptly drops to ~5-6 olives (some turning brown/reddish) and a small bottle appears beside the bowl without a visible transfer.\",\n    \"Ceramic bowl (bottom right, 00:00-00:09): contains ~12-14 bright green olives, remaining unchanged throughout (partially cropped by frame edge at 00:07-00:09).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives poured from small glass cup into large glass jar\",\n      \"invariant_violated\": \"Unexplained kind transformation and count mismatch\",\n      \"description\": \"At 00:00, the clear small glass cup contains only bright green olives. As they are poured into the large glass jar from 00:01 to 00:03, roughly half of the olives inside the jar appear as dark purple/black olives with no visible mechanism explaining the transformation.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Green olives in the stainless steel bowl\",\n      \"invariant_violated\": \"Unexplained count change\",\n      \"description\": \"Between 00:04 and 00:05, the stainless steel bowl goes from holding ~12-15 green olives to only ~5-6 olives (some changed to brownish-red with loose bits), while the small glass cup simultaneously appears already full in the person's hands and a small bottle pops into existence next to the bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Olives in small glass cup during second pour\",\n      \"invariant_violated\": \"Unexplained kind transformation\",\n      \"description\": \"At 00:06, the small glass cup is filled exclusively with bright green olives. As the person pours them into the jar from 00:07 to 00:09, several green olives visibly turn dark purple/black at the rim of the cup and as they land in the jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

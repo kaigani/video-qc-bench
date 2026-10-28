@@ -1,0 +1,57 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:06:50.106Z",
+  "latencyMs": 30724,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1295,
+    "total_tokens": 3060,
+    "cost": 0.00824,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00824,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.006475
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 964,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with umbrella | Mid-stride pose holding fruit at 00:00 | Identical static pose at 00:09 | Frozen throughout camera movement",
+    "Background crowd and vendors | Mid-step and mid-clap at 00:00 | Unchanged positions through 00:09 | No temporal progression",
+    "Passing pedestrians | Walking forward at 00:01-00:04 | Frozen mid-stride in background at 00:04-00:06 | Abrupt halt in temporal flow"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman with umbrella and background crowd",
+      "invariant_violated": "temporal flow",
+      "description": "The central woman and background market crowd remain completely frozen in mid-stride and mid-gesture while the camera orbits and foreground pedestrians walk past.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Passing pedestrians in light blue and white shirts",
+      "invariant_violated": "temporal flow",
+      "description": "Pedestrians who actively walk past the main subject abruptly freeze in place once they reach the background.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with umbrella | Mid-stride pose holding fruit at 00:00 | Identical static pose at 00:09 | Frozen throughout camera movement\",\n    \"Background crowd and vendors | Mid-step and mid-clap at 00:00 | Unchanged positions through 00:09 | No temporal progression\",\n    \"Passing pedestrians | Walking forward at 00:01-00:04 | Frozen mid-stride in background at 00:04-00:06 | Abrupt halt in temporal flow\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman with umbrella and background crowd\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"The central woman and background market crowd remain completely frozen in mid-stride and mid-gesture while the camera orbits and foreground pedestrians walk past.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Passing pedestrians in light blue and white shirts\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"Pedestrians who actively walk past the main subject abruptly freeze in place once they reach the background.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

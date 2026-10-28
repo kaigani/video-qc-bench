@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:19:03.792Z",
+  "latencyMs": 25093,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1589,
+    "total_tokens": 2997,
+    "cost": 0.009353,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009353,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.007945
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1025,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "center cup contents | filled to the brim with a large coin visible at the top at 00:00-00:02 | appears empty at the top by 00:03 | coin inside vanishes untouched between 00:02 and 00:03",
+    "coin in right hand | held above the front cup at 00:02-00:03 | phases into and sticks flat against the outer wall of the cup at 00:04-00:06 | clips through solid cup geometry",
+    "small cups on table | four cups present from 00:00 to 00:06 | only three cups present from 00:07 to 00:09 | fourth cup on the right disappears as the man's left hand moves past it"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "center cup contents",
+      "invariant_violated": "object permanence",
+      "description": "A large gold coin sitting right at the rim of the center cup from 00:00 to 00:02 vanishes or sinks out of sight by 00:03 without anyone touching that cup.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "coin in right hand and leftmost cup",
+      "invariant_violated": "solid object non-interpenetration",
+      "description": "As the man lowers the gold coin with his right hand, the coin clips through the rim and becomes plastered flat against the outside wall of the leftmost cup from 00:04 to 00:06.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "fourth cup on the right",
+      "invariant_violated": "object permanence",
+      "description": "Four cups are lined up on the table at 00:05-00:06, but at 00:07 the rightmost cup vanishes completely as the man's left hand moves down to the table, leaving only three cups for the remainder of the shot.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"center cup contents | filled to the brim with a large coin visible at the top at 00:00-00:02 | appears empty at the top by 00:03 | coin inside vanishes untouched between 00:02 and 00:03\",\n    \"coin in right hand | held above the front cup at 00:02-00:03 | phases into and sticks flat against the outer wall of the cup at 00:04-00:06 | clips through solid cup geometry\",\n    \"small cups on table | four cups present from 00:00 to 00:06 | only three cups present from 00:07 to 00:09 | fourth cup on the right disappears as the man's left hand moves past it\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"center cup contents\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"A large gold coin sitting right at the rim of the center cup from 00:00 to 00:02 vanishes or sinks out of sight by 00:03 without anyone touching that cup.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"coin in right hand and leftmost cup\",\n      \"invariant_violated\": \"solid object non-interpenetration\",\n      \"description\": \"As the man lowers the gold coin with his right hand, the coin clips through the rim and becomes plastered flat against the outside wall of the leftmost cup from 00:04 to 00:06.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"fourth cup on the right\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"Four cups are lined up on the table at 00:05-00:06, but at 00:07 the rightmost cup vanishes completely as the man's left hand moves down to the table, leaving only three cups for the remainder of the shot.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

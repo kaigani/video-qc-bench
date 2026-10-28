@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:01:59.411Z",
+  "latencyMs": 39104,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2940,
+    "total_tokens": 4529,
+    "cost": 0.016289,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016289,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.0147
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2296,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Cups on table: 00:00-00:07 count is 4; 00:08-00:09 count drops to 3 with no cup removed or occluded.",
+    "Coins inside the middle cup: 00:00-00:02 cup is filled to the brim with large gold coins; 00:03-00:09 the coins inside are gone (0 visible) without the performer touching that cup.",
+    "Loose coins on the white center mat: 00:00 count is 4 (1 small yellow coin on left, 3 gold/yellow coins on right); 00:02 count on right side is 3; 00:03 count on right side drops to 2 with no contact; 00:04 count increases to 3; 00:05-00:08 coins on the mat shift count and color without being touched."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coins inside the middle cup",
+      "invariant_violated": "unexplained count change",
+      "description": "From 00:00 to 00:02, the middle cup is filled to the rim with a stack of large gold coins. At 00:03, the coins inside the middle cup completely vanish without the performer touching or manipulating that cup.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "loose coins on the white center mat",
+      "invariant_violated": "unexplained count change",
+      "description": "At 00:02 there are 3 coins lying on the white mat to the front-right of the cups. At 00:03, the coin closest to the middle and right cups disappears on its own without the performer touching it, and additional coins spontaneously appear and disappear on the mat between 00:04 and 00:07.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "cups on the table",
+      "invariant_violated": "unexplained count change",
+      "description": "There are 4 cups on the table from 00:00 through 00:07. Between 00:07 and 00:08, one cup vanishes into thin air without being removed or hidden, leaving only 3 cups on the table for the remainder of the video.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Cups on table: 00:00-00:07 count is 4; 00:08-00:09 count drops to 3 with no cup removed or occluded.\",\n    \"Coins inside the middle cup: 00:00-00:02 cup is filled to the brim with large gold coins; 00:03-00:09 the coins inside are gone (0 visible) without the performer touching that cup.\",\n    \"Loose coins on the white center mat: 00:00 count is 4 (1 small yellow coin on left, 3 gold/yellow coins on right); 00:02 count on right side is 3; 00:03 count on right side drops to 2 with no contact; 00:04 count increases to 3; 00:05-00:08 coins on the mat shift count and color without being touched.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coins inside the middle cup\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"From 00:00 to 00:02, the middle cup is filled to the rim with a stack of large gold coins. At 00:03, the coins inside the middle cup completely vanish without the performer touching or manipulating that cup.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"loose coins on the white center mat\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"At 00:02 there are 3 coins lying on the white mat to the front-right of the cups. At 00:03, the coin closest to the middle and right cups disappears on its own without the performer touching it, and additional coins spontaneously appear and disappear on the mat between 00:04 and 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"cups on the table\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"There are 4 cups on the table from 00:00 through 00:07. Between 00:07 and 00:08, one cup vanishes into thin air without being removed or hidden, leaving only 3 cups on the table for the remainder of the video.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

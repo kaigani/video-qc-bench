@@ -1,0 +1,80 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:10:18.002Z",
+  "latencyMs": 121650,
+  "usage": {
+    "prompt_tokens": 12325,
+    "completion_tokens": 8370,
+    "total_tokens": 20695,
+    "cost": 0.054175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.054175,
+      "upstream_inference_prompt_cost": 0.012325,
+      "upstream_inference_completions_cost": 0.04185
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7179,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | Older woman with greying hair in a bun, wearing a light blue short-sleeved polo shirt, white apron, and glasses on a neck cord; starts behind the counter wiping it down | Identical wardrobe and appearance at the end, but duplicated into two identical waitresses behind the counter | Wipes counter (00:10-00:23), pours coffee (00:24-00:31), disappears during 00:36-00:44 then appears at kitchen pass-through at 00:45, serves plate (01:09), walks around back of counter to sit on the man's left (01:18-01:26), switches to the man's right across the cut (01:27), stands by window (01:46-01:49), teleports to sitting at counter (01:50), and splits into two identical waitresses (01:51-01:58)",
+    "Trucker (Man) | Older man with short greying hair and beard, wearing a tan work jacket over a blue plaid long-sleeved shirt and dark jeans; enters from back hallway at 00:19 | Same appearance and wardrobe as he walks outside to the truck and climbs into the cab (01:41-01:49) | Walks to counter and sits facing right (00:19-00:26), sits facing front of diner (00:36-00:44), abruptly appears hunched facing the counter and looking into the kitchen across the cut (00:45), sits at counter as waitress joins him (01:00-01:34), leaves cash on counter (01:38), walks out to truck (01:41-01:49)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:45",
+      "entity": "Trucker (Man) and Waitress",
+      "invariant_violated": "placement_between_cuts",
+      "description": "At 00:44 (wide shot looking toward the kitchen), the man is sitting upright facing the front of the diner (away from the kitchen) and the kitchen pass-through window behind him is empty. Across the cut at 00:45 (reverse angle from inside the kitchen), the waitress is already standing at the pass-through wiping it, and the man in the background is hunched over facing the counter while looking back over his shoulder toward the kitchen.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "Waitress and Trucker (Man)",
+      "invariant_violated": "multi_character_consistency",
+      "description": "In 01:18-01:26, the waitress walks around the back (kitchen) end of the counter and sits on the stool immediately to the man's left. Across the cut at 01:27, their relative positions are reversed: the waitress is now sitting on the stool to the man's right (closer to the front window), and at 01:31 the man turns his head to his right to look at her.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "Waitress (hand) / Trucker (Man)",
+      "invariant_violated": "identity_consistency",
+      "description": "In the close-up of the counter as the man places dollar bills down with his left hand, the second hand reaching in from the right to pat his hand over the money is another weathered masculine hand wearing a blue plaid long-sleeved shirt cuff (matching the trucker's shirt) rather than the waitress's bare arm (she wears a short-sleeved polo shirt).",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "placement_between_cuts",
+      "description": "At 01:49, the waitress is standing beside the front window and booths watching the man get into his truck. Across the cut at 01:50, with no elapsed time as the man has just left, she is instantaneously seated on the stool at the counter.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress",
+      "invariant_violated": "identity_consistency",
+      "description": "As the waitress stands up from the counter stool at 01:51 and walks around the front of the counter to go behind it, an identical duplicate of the waitress (same hair bun, blue polo shirt, and white apron) is revealed standing at the far end of the counter wiping it down. Both waitresses then walk behind the counter and stand side by side through 01:58.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | Older woman with greying hair in a bun, wearing a light blue short-sleeved polo shirt, white apron, and glasses on a neck cord; starts behind the counter wiping it down | Identical wardrobe and appearance at the end, but duplicated into two identical waitresses behind the counter | Wipes counter (00:10-00:23), pours coffee (00:24-00:31), disappears during 00:36-00:44 then appears at kitchen pass-through at 00:45, serves plate (01:09), walks around back of counter to sit on the man's left (01:18-01:26), switches to the man's right across the cut (01:27), stands by window (01:46-01:49), teleports to sitting at counter (01:50), and splits into two identical waitresses (01:51-01:58)\",\n    \"Trucker (Man) | Older man with short greying hair and beard, wearing a tan work jacket over a blue plaid long-sleeved shirt and dark jeans; enters from back hallway at 00:19 | Same appearance and wardrobe as he walks outside to the truck and climbs into the cab (01:41-01:49) | Walks to counter and sits facing right (00:19-00:26), sits facing front of diner (00:36-00:44), abruptly appears hunched facing the counter and looking into the kitchen across the cut (00:45), sits at counter as waitress joins him (01:00-01:34), leaves cash on counter (01:38), walks out to truck (01:41-01:49)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"Trucker (Man) and Waitress\",\n      \"invariant_violated\": \"placement_between_cuts\",\n      \"description\": \"At 00:44 (wide shot looking toward the kitchen), the man is sitting upright facing the front of the diner (away from the kitchen) and the kitchen pass-through window behind him is empty. Across the cut at 00:45 (reverse angle from inside the kitchen), the waitress is already standing at the pass-through wiping it, and the man in the background is hunched over facing the counter while looking back over his shoulder toward the kitchen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"Waitress and Trucker (Man)\",\n      \"invariant_violated\": \"multi_character_consistency\",\n      \"description\": \"In 01:18-01:26, the waitress walks around the back (kitchen) end of the counter and sits on the stool immediately to the man's left. Across the cut at 01:27, their relative positions are reversed: the waitress is now sitting on the stool to the man's right (closer to the front window), and at 01:31 the man turns his head to his right to look at her.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"Waitress (hand) / Trucker (Man)\",\n      \"invariant_violated\": \"identity_consistency\",\n      \"description\": \"In the close-up of the counter as the man places dollar bills down with his left hand, the second hand reaching in from the right to pat his hand over the money is another weathered masculine hand wearing a blue plaid long-sleeved shirt cuff (matching the trucker's shirt) rather than the waitress's bare arm (she wears a short-sleeved polo shirt).\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"placement_between_cuts\",\n      \"description\": \"At 01:49, the waitress is standing beside the front window and booths watching the man get into his truck. Across the cut at 01:50, with no elapsed time as the man has just left, she is instantaneously seated on the stool at the counter.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"identity_consistency\",\n      \"description\": \"As the waitress stands up from the counter stool at 01:51 and walks around the front of the counter to go behind it, an identical duplicate of the waitress (same hair bun, blue polo shirt, and white apron) is revealed standing at the far end of the counter wiping it down. Both waitresses then walk behind the counter and stand side by side through 01:58.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

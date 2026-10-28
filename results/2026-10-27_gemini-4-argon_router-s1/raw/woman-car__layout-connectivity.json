@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__layout-connectivity",
+  "video": "woman-car.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:40:20.185Z",
+  "latencyMs": 25904,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 1531,
+    "total_tokens": 3096,
+    "cost": 0.00922,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00922,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.007655
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1195,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Space 1: Exterior desert highway where a vintage wood-paneled station wagon is parked on the shoulder.",
+    "Space 2: Station wagon interior cabin, visible from the exterior through the front windshield and driver-side windows, showing the front bench/seats and desert background through the far windows.",
+    "Openings: Front windshield bounded by the roof frame and left/right A-pillars; driver-side front door window behind the A-pillar and side mirror; rear side cargo windows.",
+    "Subject placement (00:00-00:09): A woman leans with her crossed forearms resting on the top ridge of the front-left fender and hood seam above the front wheel well, positioned forward of the driver-side A-pillar and side mirror."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and station wagon windshield / front fender",
+      "invariant_violated": "interior-exterior opening connectivity and functional arrangement",
+      "description": "The woman is posed as though leaning out of an open car window with her forearms resting on the exterior edge, but she is positioned forward of the driver-side A-pillar and side mirror, emerging directly out of the solid hood cowl and windshield glass above the front wheel well where no window or doorway opening exists, while the intact cabin interior remains visible behind her.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Space 1: Exterior desert highway where a vintage wood-paneled station wagon is parked on the shoulder.\",\n    \"Space 2: Station wagon interior cabin, visible from the exterior through the front windshield and driver-side windows, showing the front bench/seats and desert background through the far windows.\",\n    \"Openings: Front windshield bounded by the roof frame and left/right A-pillars; driver-side front door window behind the A-pillar and side mirror; rear side cargo windows.\",\n    \"Subject placement (00:00-00:09): A woman leans with her crossed forearms resting on the top ridge of the front-left fender and hood seam above the front wheel well, positioned forward of the driver-side A-pillar and side mirror.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and station wagon windshield / front fender\",\n      \"invariant_violated\": \"interior-exterior opening connectivity and functional arrangement\",\n      \"description\": \"The woman is posed as though leaning out of an open car window with her forearms resting on the exterior edge, but she is positioned forward of the driver-side A-pillar and side mirror, emerging directly out of the solid hood cowl and windshield glass above the front wheel well where no window or doorway opening exists, while the intact cabin interior remains visible behind her.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

@@ -1,0 +1,84 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:48:35.942Z",
+  "latencyMs": 102268,
+  "usage": {
+    "prompt_tokens": 12345,
+    "completion_tokens": 7670,
+    "total_tokens": 20015,
+    "cost": 0.050695,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.050695,
+      "upstream_inference_prompt_cost": 0.012345,
+      "upstream_inference_completions_cost": 0.03835
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6158,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Glass coffee carafe | held in waitress's right hand, full of black coffee at 00:24 | tilted pouring coffee into mug at 00:31 | pours a continuous stream of coffee from 00:28 to 00:31 with no visible drop in liquid level",
+    "Man's white coffee mug | empty on counter at 00:27, filled with coffee at 00:28-00:31 | picked up by waitress at 01:51 and vanishes at 01:52 | held by man at 00:36-00:44; vanishes from his hands in background shot at 00:45-00:50; reappears in his hands at 01:00; joined by a duplicate mug at 01:09-01:17; left on counter at 01:37-01:40; picked up by waitress at 01:51 and disappears as she walks behind counter at 01:52",
+    "Second white coffee mug | appears in waitress's right hand at 01:09 | held by waitress sitting next to man at 01:27-01:34 | waitress approaches with empty hands at 01:08, holds mug at 01:09, places it on counter right next to man's mug at 01:13; disappears from counter at 01:18 while waitress carries a mug on customer side",
+    "Plate with toast and fried egg | on counter with toast on left, egg on right, knife and fork to the right at 00:32-00:35 | picked up from counter at 01:51 and vanishes at 01:52 | food positions swap (egg on left, toast on right) and cutlery vanishes at 00:36; plate vanishes in background shot at 00:45-00:50; reappears at 01:00; cleared by waitress at 01:14-01:17; inexplicably reappears on counter at 01:50; vanishes from waitress's hand at 01:52",
+    "Condiment bottles and napkin dispensers | two silver napkin dispensers with white/yellow bottles on counter at 00:10 | same two sets on counter at 01:58 | red and yellow squeeze bottles appear in front of the man in the reverse shot at 00:45-00:50 and vanish in subsequent shots",
+    "Stack of dollar bills | placed on counter by man's hands at 01:38 | resting on counter next to mug at 01:40, absent in wide shot at 01:50 | top bill morphs from a small-portrait single-digit bill into a large-portrait $100 bill as the man's right hand passes over it at 01:38-01:39"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Plate of food and cutlery",
+      "invariant_violated": "location & orientation",
+      "description": "In the close-up at 00:32-00:35, the thick slice of toast is on the left side of the plate, the fried egg is on the right, and a knife and fork lie on the counter to the right of the plate. In the wide shot at 00:36, without anyone touching the plate, the egg is now on the left and the toast is on the right, and the knife and fork have vanished.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:45",
+      "entity": "Plate of food, coffee mug, and condiment bottles",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:36-00:44, the man holds a white coffee mug with his plate of food directly in front of him. In the reverse angle at 00:45-00:50, both the mug and the plate have vanished from the counter in front of him (his hands rest empty on the counter) and red and yellow condiment bottles have appeared in their place, before the mug and plate reappear at 01:00.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:09",
+      "entity": "Second white coffee mug",
+      "invariant_violated": "identity & persistence",
+      "description": "At 01:07-01:08, the waitress walks up to the counter opposite the man with empty hands. On the cut to 01:09, a white coffee mug suddenly appears in her right hand, which she sets down at 01:13 right next to the white mug the man is already holding. When the camera cuts back to the wide shot at 01:18, this second mug on the counter in front of the man has disappeared.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "Stack of dollar bills",
+      "invariant_violated": "identity & persistence",
+      "description": "As the man places cash on the counter at 01:38, the top bill beneath his left hand initially shows a small oval portrait and a single-digit corner denomination; as his right hand brushes over the bills at 01:38-01:39, the top bill transforms into a $100 bill with a large portrait of Benjamin Franklin.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Plate and coffee mug",
+      "invariant_violated": "identity & persistence",
+      "description": "Although the waitress already picked up and carried away the man's plate at 01:14-01:17, a plate is back on the counter next to the coffee mug at 01:50. The waitress then picks up both the plate and the mug at 01:51, and as she moves behind the counter at 01:52-01:53, both objects vanish from her hands.",
+      "severity": "severe",
+      "confidence": 0.97
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Glass coffee carafe | held in waitress's right hand, full of black coffee at 00:24 | tilted pouring coffee into mug at 00:31 | pours a continuous stream of coffee from 00:28 to 00:31 with no visible drop in liquid level\",\n    \"Man's white coffee mug | empty on counter at 00:27, filled with coffee at 00:28-00:31 | picked up by waitress at 01:51 and vanishes at 01:52 | held by man at 00:36-00:44; vanishes from his hands in background shot at 00:45-00:50; reappears in his hands at 01:00; joined by a duplicate mug at 01:09-01:17; left on counter at 01:37-01:40; picked up by waitress at 01:51 and disappears as she walks behind counter at 01:52\",\n    \"Second white coffee mug | appears in waitress's right hand at 01:09 | held by waitress sitting next to man at 01:27-01:34 | waitress approaches with empty hands at 01:08, holds mug at 01:09, places it on counter right next to man's mug at 01:13; disappears from counter at 01:18 while waitress carries a mug on customer side\",\n    \"Plate with toast and fried egg | on counter with toast on left, egg on right, knife and fork to the right at 00:32-00:35 | picked up from counter at 01:51 and vanishes at 01:52 | food positions swap (egg on left, toast on right) and cutlery vanishes at 00:36; plate vanishes in background shot at 00:45-00:50; reappears at 01:00; cleared by waitress at 01:14-01:17; inexplicably reappears on counter at 01:50; vanishes from waitress's hand at 01:52\",\n    \"Condiment bottles and napkin dispensers | two silver napkin dispensers with white/yellow bottles on counter at 00:10 | same two sets on counter at 01:58 | red and yellow squeeze bottles appear in front of the man in the reverse shot at 00:45-00:50 and vanish in subsequent shots\",\n    \"Stack of dollar bills | placed on counter by man's hands at 01:38 | resting on counter next to mug at 01:40, absent in wide shot at 01:50 | top bill morphs from a small-portrait single-digit bill into a large-portrait $100 bill as the man's right hand passes over it at 01:38-01:39\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Plate of food and cutlery\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"In the close-up at 00:32-00:35, the thick slice of toast is on the left side of the plate, the fried egg is on the right, and a knife and fork lie on the counter to the right of the plate. In the wide shot at 00:36, without anyone touching the plate, the egg is now on the left and the toast is on the right, and the knife and fork have vanished.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"Plate of food, coffee mug, and condiment bottles\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:36-00:44, the man holds a white coffee mug with his plate of food directly in front of him. In the reverse angle at 00:45-00:50, both the mug and the plate have vanished from the counter in front of him (his hands rest empty on the counter) and red and yellow condiment bottles have appeared in their place, before the mug and plate reappear at 01:00.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:09\",\n      \"entity\": \"Second white coffee mug\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 01:07-01:08, the waitress walks up to the counter opposite the man with empty hands. On the cut to 01:09, a white coffee mug suddenly appears in her right hand, which she sets down at 01:13 right next to the white mug the man is already holding. When the camera cuts back to the wide shot at 01:18, this second mug on the counter in front of the man has disappeared.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"Stack of dollar bills\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the man places cash on the counter at 01:38, the top bill beneath his left hand initially shows a small oval portrait and a single-digit corner denomination; as his right hand brushes over the bills at 01:38-01:39, the top bill transforms into a $100 bill with a large portrait of Benjamin Franklin.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Plate and coffee mug\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Although the waitress already picked up and carried away the man's plate at 01:14-01:17, a plate is back on the counter next to the coffee mug at 01:50. The waitress then picks up both the plate and the mug at 01:51, and as she moves behind the counter at 01:52-01:53, both objects vanish from her hands.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.97\n    }\n  ]\n}"
+}

@@ -1,0 +1,67 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:47:51.994Z",
+  "latencyMs": 46417,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 3376,
+    "total_tokens": 4941,
+    "cost": 0.018445,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018445,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.01688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2736,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:03: Kitchen space with stove and cabinets on the left, countertop microwave and cabinets on the right, and a grey dividing wall ahead with a floral print and small landscape print.",
+    "00:00-00:03: Open archway on the left side of the kitchen leads forward into a hallway with a white exterior door at the far end and an interior wall on its right.",
+    "00:03-00:04: Pocket doorway to the right of the grey dividing wall leads forward (parallel to the hallway) from the kitchen into an adjacent bedroom.",
+    "00:04-00:06: Inside the bedroom, a bed sits under a chandelier with two wooden dining chairs pushed against the foot of the bed; windows are present on both the right wall and the left wall (which should be the shared interior wall with the hallway).",
+    "00:06-00:09: Turning left in the bedroom past the left-wall window reveals another doorway flanked by a duplicate of the grey wall and floral print, leading into a second, altered version of the kitchen."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "bedroom left-wall window",
+      "invariant_violated": "opening view contradicts floor plan",
+      "description": "After walking forward into the room to the right of the kitchen, the left wall of the room—which must be the interior partition wall shared with the hallway seen at 00:00-00:03—features a window looking out onto a sunlit exterior with trees.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "bed and dining chairs",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two wooden dining chairs are tucked directly up against the foot of the bed beneath a dining chandelier, arranged as though serving a dining table rather than a bed.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "bedroom doorway and second kitchen",
+      "invariant_violated": "impossible spatial connectivity",
+      "description": "Turning left in the bedroom, the woman walks through a doorway past the left-wall window that opens into a second, altered copy of the kitchen (complete with a duplicate floral picture on the left wall, an over-the-range microwave above the stove on the left, and a window on the right wall) in a location occupied by the hallway in the initial layout.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:03: Kitchen space with stove and cabinets on the left, countertop microwave and cabinets on the right, and a grey dividing wall ahead with a floral print and small landscape print.\",\n    \"00:00-00:03: Open archway on the left side of the kitchen leads forward into a hallway with a white exterior door at the far end and an interior wall on its right.\",\n    \"00:03-00:04: Pocket doorway to the right of the grey dividing wall leads forward (parallel to the hallway) from the kitchen into an adjacent bedroom.\",\n    \"00:04-00:06: Inside the bedroom, a bed sits under a chandelier with two wooden dining chairs pushed against the foot of the bed; windows are present on both the right wall and the left wall (which should be the shared interior wall with the hallway).\",\n    \"00:06-00:09: Turning left in the bedroom past the left-wall window reveals another doorway flanked by a duplicate of the grey wall and floral print, leading into a second, altered version of the kitchen.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"bedroom left-wall window\",\n      \"invariant_violated\": \"opening view contradicts floor plan\",\n      \"description\": \"After walking forward into the room to the right of the kitchen, the left wall of the room—which must be the interior partition wall shared with the hallway seen at 00:00-00:03—features a window looking out onto a sunlit exterior with trees.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"bed and dining chairs\",\n      \"invariant_violated\": \"functional furniture arrangement\",\n      \"description\": \"Two wooden dining chairs are tucked directly up against the foot of the bed beneath a dining chandelier, arranged as though serving a dining table rather than a bed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"bedroom doorway and second kitchen\",\n      \"invariant_violated\": \"impossible spatial connectivity\",\n      \"description\": \"Turning left in the bedroom, the woman walks through a doorway past the left-wall window that opens into a second, altered copy of the kitchen (complete with a duplicate floral picture on the left wall, an over-the-range microwave above the stove on the left, and a window on the right wall) in a location occupied by the hallway in the initial layout.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

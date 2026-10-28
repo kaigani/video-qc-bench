@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "Smartphone and hands | black phone held upright in both hands, screen initially out of focus | phone lowered out of view | focus shifts onto the screen; right thumb repeatedly moves across it; malformed screen lettering persists",
+    "Background pedestrian | blue top, jeans, red bag | walks away beyond the upper frame | continuous movement away from the staircase",
+    "Staircase and railing | stone steps with dark metal railing in sunlight | same setting after phone is lowered | background becomes defocused as focus moves to the phone",
+    "Audio | unassessed | unassessed | no audio perception available"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Smartphone screen text",
+      "invariant_violated": "Malformed interface lettering",
+      "description": "As the screen comes into focus, the large central numeric readout has a malformed A-like character with detached strokes before '7.42'. Smaller labels above and below also contain fragmented, incoherent lettering. These defects remain visible in the sharp, unobscured screen at 00:06\u201300:09, so they are not explained by the initial defocus or moving reflections.",
+      "severity": "moderate",
+      "confidence": 0.96
+    }
+  ],
+  "video": "clip-08.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-08__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

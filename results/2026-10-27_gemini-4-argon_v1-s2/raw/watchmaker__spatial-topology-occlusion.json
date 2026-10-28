@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__spatial-topology-occlusion",
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:03:14.444Z",
+  "latencyMs": 15894,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 808,
+    "total_tokens": 2403,
+    "cost": 0.005635,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005635,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00404
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 705,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "background wall | plain off-white vertical surface behind subject | unchanged | none",
+    "table surface | dark horizontal edge at bottom foreground | unchanged | none",
+    "subject torso and hands | positioned in midground between table edge and wall, hands occluding striped shirt | consistent depth ordering throughout | jump cut at 00:04 maintains same camera viewpoint and scene geometry"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"background wall | plain off-white vertical surface behind subject | unchanged | none\",\n    \"table surface | dark horizontal edge at bottom foreground | unchanged | none\",\n    \"subject torso and hands | positioned in midground between table edge and wall, hands occluding striped shirt | consistent depth ordering throughout | jump cut at 00:04 maintains same camera viewpoint and scene geometry\"\n  ],\n  \"findings\": []\n}"
+}

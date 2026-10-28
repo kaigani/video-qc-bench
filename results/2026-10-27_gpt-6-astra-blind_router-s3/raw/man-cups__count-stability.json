@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "00:00.000\u201300:06.500, every 0.250-second sample: 4 metal cups; no addition, removal or destruction observed.",
+    "00:06.750\u201300:09.000, every 0.250-second sample: 4 cups remain distinguishable, with increasing overlap as the camera circles the table.",
+    "00:09.250: 3 cups are fully distinguishable and a narrow portion of the fourth remains behind the left foreground cup.",
+    "00:09.500\u201300:09.750: only 3 cups are separately distinguishable; the fourth cup's position overlaps the left cup from this viewpoint. Its disappearance is not confirmed.",
+    "00:00.000\u201300:00.500: 1 large coin held above the table, at least 1 coin inside the nearest cup, and overlapping coins in the middle cup; the middle stack's exact count is not exposed.",
+    "00:00.750\u201300:02.000: the nearer hand covers the nearest cup and its coin; occlusion prevents a reliable visible coin total.",
+    "00:02.250\u201300:02.750: 1 coin visibly lifted from the nearest cup; that cup's visible coin count changes from 1 to 0 through removal by the hand. The other held coin is obscured.",
+    "00:03.000\u201300:03.500: 2 hand-held coins are visible, one in each hand; coins remain visible in the middle cup, with overlapping edges preventing an exact stack count.",
+    "00:03.750\u201300:04.250: the 2 handled coins are partly hidden by fingers and cup rims; no confirmed change in their total.",
+    "00:04.500\u201300:06.500: 2 hand-held coins are distinguishable beside the outer cups. The lower camera angle hides the middle cup's contents.",
+    "00:06.750\u201300:09.750: 1 coin remains intermittently exposed in each hand; finger occlusion prevents a continuous visible total. No different-kind transformation is observed.",
+    "00:00.000: 3 large loose coins occupy the pale mat outside the cups, including 1 cropped at the bottom edge; 2 smaller overlapping gold discs are visible to the left of the cups.",
+    "00:01.500\u201300:06.500: the 3 large loose mat coins remain distinguishable in the unobstructed views; no visible handling changes their count. The smaller overlapping discs become obscured by the hands and cups.",
+    "00:06.750\u201300:08.250: the changing viewpoint increasingly hides the loose mat coins behind the cup group; at least 1 remains exposed to its left. A reduced total is not established.",
+    "00:08.500\u201300:09.750: the original loose-coin locations are not all exposed sufficiently to confirm a count change.",
+    "00:00.000\u201300:09.750: additional coin-like discs surround the mat among circular table decorations; cropping, overlap and changing perspective prevent a reliable complete group count or a specific confirmed disappearance."
+  ],
+  "findings": [],
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-06__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-06__count-stability.json",
+  "frozen_source_sha256": "545a58ccb2f72c384429b9cac9dc2d50a59bcf73742f9b58a3bd9b4db9a3c48c",
+  "key": "man-cups__count-stability",
+  "parseOk": true
+}

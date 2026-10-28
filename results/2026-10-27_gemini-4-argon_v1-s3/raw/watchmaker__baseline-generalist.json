@@ -1,0 +1,40 @@
+{
+  "key": "watchmaker__baseline-generalist",
+  "video": "watchmaker.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:25:54.831Z",
+  "latencyMs": 11098,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 499,
+    "total_tokens": 1907,
+    "cost": 0.003903,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003903,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.002495
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 383,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | navy striped shirt, necklace, watch on left wrist, rings on both ring fingers | same attributes throughout | puts down tweezers at 00:03 and picks up a small part",
+    "jewelry piece | held in left hand | held in left hand | worked on with tweezers and fingers",
+    "tweezers | held in right hand | placed on table out of frame | set down at 00:03"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | navy striped shirt, necklace, watch on left wrist, rings on both ring fingers | same attributes throughout | puts down tweezers at 00:03 and picks up a small part\",\n    \"jewelry piece | held in left hand | held in left hand | worked on with tweezers and fingers\",\n    \"tweezers | held in right hand | placed on table out of frame | set down at 00:03\"\n  ],\n  \"findings\": []\n}"
+}

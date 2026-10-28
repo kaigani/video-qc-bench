@@ -1,0 +1,49 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:24:43.583Z",
+  "latencyMs": 27823,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 973,
+    "total_tokens": 2738,
+    "cost": 0.00663,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00663,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.004865
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 731,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "first cup pour | tilted over jar at 00:00 | empty at 00:03 | olives fall into jar following hand tilt",
+    "cup refill and metal bowl | empty cup moved right toward full metal bowl at 00:04 | full cup raised at 00:05 while bowl is nearly empty | instantaneous transfer without scooping action",
+    "second cup pour | tilted over jar at 00:06 | empty at 00:09 | olives fall into jar following hand tilt"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "glass cup and metal bowl of olives",
+      "invariant_violated": "effect without proportional cause / implausible timing",
+      "description": "The empty cup moves briefly past the metal bowl without a scooping or pouring action, yet the bowl instantly empties and the cup becomes full.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"first cup pour | tilted over jar at 00:00 | empty at 00:03 | olives fall into jar following hand tilt\",\n    \"cup refill and metal bowl | empty cup moved right toward full metal bowl at 00:04 | full cup raised at 00:05 while bowl is nearly empty | instantaneous transfer without scooping action\",\n    \"second cup pour | tilted over jar at 00:06 | empty at 00:09 | olives fall into jar following hand tilt\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"glass cup and metal bowl of olives\",\n      \"invariant_violated\": \"effect without proportional cause / implausible timing\",\n      \"description\": \"The empty cup moves briefly past the metal bowl without a scooping or pouring action, yet the bowl instantly empties and the cup becomes full.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

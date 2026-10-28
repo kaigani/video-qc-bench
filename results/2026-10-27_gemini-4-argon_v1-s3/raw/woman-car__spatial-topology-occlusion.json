@@ -1,0 +1,49 @@
+{
+  "key": "woman-car__spatial-topology-occlusion",
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:32:30.747Z",
+  "latencyMs": 28794,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1572,
+    "total_tokens": 3167,
+    "cost": 0.009455,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009455,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00786
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1178,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon | Parked on the right shoulder of a desert road; closed hood, front left fender, windshield glass, and driver-side A-pillar visible | Camera pushes in toward the front-left corner of the cabin/hood | The junction of the closed hood/fender and windshield glass intersects the woman's torso throughout the shot",
+    "Woman | Positioned at the front-left corner of the car with crossed arms resting on the closed hood/fender in front of the windshield | Remains in the same impossible position as the camera pushes in and orbits slightly | Clips directly through the solid cowl, fender, and windshield glass where no window or opening exists",
+    "Desert road and background | Desert scrub visible on the left and through the car windows at 00:00 | Highway stretching into the distance toward mountains becomes visible on the left as camera orbits at 00:02-00:09 | Parallax shift of background road is consistent with camera movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman and station wagon (windshield, hood, and front fender)",
+      "invariant_violated": "impossible geometry and depth ordering / occlusion",
+      "description": "The woman occupies a geometrically impossible position relative to the car's structure: her torso emerges directly out of the solid junction of the cowl, closed hood/fender, and windshield, with her crossed arms resting on top of the front-left fender/hood in front of the windshield while the windshield glass and lower chrome trim terminate directly into her right side and the driver-side A-pillar sits behind her left shoulder.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Station wagon | Parked on the right shoulder of a desert road; closed hood, front left fender, windshield glass, and driver-side A-pillar visible | Camera pushes in toward the front-left corner of the cabin/hood | The junction of the closed hood/fender and windshield glass intersects the woman's torso throughout the shot\",\n    \"Woman | Positioned at the front-left corner of the car with crossed arms resting on the closed hood/fender in front of the windshield | Remains in the same impossible position as the camera pushes in and orbits slightly | Clips directly through the solid cowl, fender, and windshield glass where no window or opening exists\",\n    \"Desert road and background | Desert scrub visible on the left and through the car windows at 00:00 | Highway stretching into the distance toward mountains becomes visible on the left as camera orbits at 00:02-00:09 | Parallax shift of background road is consistent with camera movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and station wagon (windshield, hood, and front fender)\",\n      \"invariant_violated\": \"impossible geometry and depth ordering / occlusion\",\n      \"description\": \"The woman occupies a geometrically impossible position relative to the car's structure: her torso emerges directly out of the solid junction of the cowl, closed hood/fender, and windshield, with her crossed arms resting on top of the front-left fender/hood in front of the windshield while the windshield glass and lower chrome trim terminate directly into her right side and the driver-side A-pillar sits behind her left shoulder.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

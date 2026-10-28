@@ -1,0 +1,58 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:50:21.782Z",
+  "latencyMs": 32717,
+  "usage": {
+    "prompt_tokens": 1541,
+    "completion_tokens": 2496,
+    "total_tokens": 4037,
+    "cost": 0.014021,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014021,
+      "upstream_inference_prompt_cost": 0.001541,
+      "upstream_inference_completions_cost": 0.01248
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1850,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone center display (main clock area): reads as a deformed 'a742' at 00:01-00:02, sharpens and morphs into 'Ā7·42' (an 'A' with an overline before '7·42') from 00:03 to 00:08, and smears into vertical strokes at 00:09.",
+    "Smartphone top-left status bar: blurry until 00:04, then reads '7.42' next to a green rectangular icon from 00:04 to 00:08.",
+    "Smartphone top-center text: reads '4:41' at the top edge with 'A 7' directly beneath it at 00:03; from 00:04 to 00:08 the lower text reads 'A Ā' / 'A·Ā' with a floating horizontal bar.",
+    "Smartphone bottom-center text: emerges at 00:04 reading 'AZ - 12', fades into glare at 00:05-00:06, and reads '12' stacked above 'AZ - 12' at 00:07-00:08."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen interface text",
+      "invariant_violated": "text legibility",
+      "description": "The smartphone lock screen displays nonsensical, self-contradictory pseudo-text where a readable clock and UI should be: the main clock reads 'Ā7·42' (mixing a letter with a macron and digits), accompanied by conflicting status bar times ('7.42' on the left and '4:41' in the center) and gibberish labels ('A Ā' and 'AZ - 12').",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen characters",
+      "invariant_violated": "text stability",
+      "description": "Text elements on the phone screen mutate without any screen interaction: the first glyph of the main center text changes from a curved 'a'/'3' shape at 00:01-00:02 to a sharp 'Ā' by 00:04, the top-center sub-header changes from 'A 7' at 00:03 to 'A Ā' at 00:04, and an extra '12' appears above 'AZ - 12' at 00:07 after a shadow passes over the screen.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone center display (main clock area): reads as a deformed 'a742' at 00:01-00:02, sharpens and morphs into 'Ā7·42' (an 'A' with an overline before '7·42') from 00:03 to 00:08, and smears into vertical strokes at 00:09.\",\n    \"Smartphone top-left status bar: blurry until 00:04, then reads '7.42' next to a green rectangular icon from 00:04 to 00:08.\",\n    \"Smartphone top-center text: reads '4:41' at the top edge with 'A 7' directly beneath it at 00:03; from 00:04 to 00:08 the lower text reads 'A Ā' / 'A·Ā' with a floating horizontal bar.\",\n    \"Smartphone bottom-center text: emerges at 00:04 reading 'AZ - 12', fades into glare at 00:05-00:06, and reads '12' stacked above 'AZ - 12' at 00:07-00:08.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen interface text\",\n      \"invariant_violated\": \"text legibility\",\n      \"description\": \"The smartphone lock screen displays nonsensical, self-contradictory pseudo-text where a readable clock and UI should be: the main clock reads 'Ā7·42' (mixing a letter with a macron and digits), accompanied by conflicting status bar times ('7.42' on the left and '4:41' in the center) and gibberish labels ('A Ā' and 'AZ - 12').\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen characters\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"Text elements on the phone screen mutate without any screen interaction: the first glyph of the main center text changes from a curved 'a'/'3' shape at 00:01-00:02 to a sharp 'Ā' by 00:04, the top-center sub-header changes from 'A 7' at 00:03 to 'A Ā' at 00:04, and an extra '12' appears above 'AZ - 12' at 00:07 after a shadow passes over the screen.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

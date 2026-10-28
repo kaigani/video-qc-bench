@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "00:00\u201300:03: Foreground phone display is out of focus; apparent large digits are not used for character-level comparison.",
+    "00:03.25\u201300:06.25: Phone's central readout resembles an angular, malformed A-like glyph followed by '7.42'; moving glare intermittently obscures characters.",
+    "00:06.75, 00:07.25\u201300:07.75, 00:08.25\u201300:08.75: Sharp central phone readout consistently shows the same malformed A-like prefix and '7.42'; no supported character change.",
+    "00:06.75 and 00:08.25: Below the main readout, the phone label reads approximately 'AZ-12', with an additional tiny overlapping glyph above it; unchanged between these clear views.",
+    "00:04.25 and 00:06.75: Upper phone heading consists of two A-like characters with a detached horizontal stroke between/above them; no coherent word is readable.",
+    "00:06.75: Top-left phone status text resembles '7A2'; top-center text resembles '4.4' followed by a malformed mark. These are approximate transcriptions of irregular glyphs.",
+    "00:09.00\u201300:09.75: Phone tilts away and exits; darkening, blur, and cropping prevent further reliable text comparison."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Phone display text",
+      "invariant_violated": "Coherent readable text",
+      "description": "At 00:06.75, the sharply visible phone interface contains a malformed A-like character prefixed to the large '7.42' readout, an upper heading made of A-like glyphs and a floating stroke, and a lower 'AZ-12'-like label with an overlapping miniature glyph above it. Together these form garbled interface text rather than coherent clock/status labels. The same malformed forms remain clearly visible at 00:08.25, so the defect is not caused by passing glare or motion blur. No unexplained change between legible readings is established.",
+      "severity": "moderate",
+      "confidence": 0.94
+    }
+  ],
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-08__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-08__text-stability.json",
+  "frozen_source_sha256": "5e5afe692ba549d18551b1108fb7bb6bdcb41c87ba93cd6b06b00ff1236ba73c",
+  "key": "phone__text-stability",
+  "parseOk": true
+}

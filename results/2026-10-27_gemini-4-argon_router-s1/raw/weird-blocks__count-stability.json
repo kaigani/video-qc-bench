@@ -1,0 +1,71 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:05.909Z",
+  "latencyMs": 32319,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2559,
+    "total_tokens": 4148,
+    "cost": 0.014384,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014384,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.012795
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1769,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Numbered blocks: count = 2 (two green '2' blocks)",
+    "00:01 - Numbered blocks: count = 3 (left block turns blue '2', a blue '3' block spawns under the hand without coming from off-screen, right block is green '2')",
+    "00:02 - Numbered blocks: count = 4 (hand pulls right on the 3rd block, splitting it into a green '2' and a green '3')",
+    "00:03 - Numbered blocks: count = 5 (hand pulls right on the 4th block, splitting it into an orange '2' and a light-blue '3')",
+    "00:04 - Numbered blocks: count = 6 (hand pulls right on the 5th block, splitting it into two light-blue '3' blocks)",
+    "00:05 - Numbered blocks: count = 7 (hand pulls right on the 6th block, turning it into a green '5' while spawning a green '3' block to its right)",
+    "00:06 - Numbered blocks: count = 8 (hand pulls right on the 7th block, turning it into a green '2' while spawning a blue '3' block to its right)",
+    "00:07 - Numbered blocks: count = 8 (rightmost blue '3' block morphs into a blue '6' as the hand releases it)",
+    "00:08-00:09 - Numbered blocks: count = 8 (blocks remain stationary at 8 total as the hand taps along the row)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase and attribute transformation",
+      "description": "Starting with two green '2' blocks, the left block spontaneously changes color from green to blue while a third block (blue '3') materializes between the two blocks without the hand bringing anything from off-screen.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase by object splitting",
+      "description": "From 00:02 to 00:07, each time the hand slides a block to the right, the block duplicates/splits into two blocks with different colors and digits, increasing the total count from 3 to 8 (4 at 00:02, 5 at 00:03, 6 at 00:04, 7 at 00:05, and 8 at 00:06) with no blocks ever entering from off-screen.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "rightmost numbered block",
+      "invariant_violated": "unexplained object transformation",
+      "description": "As the hand releases the 8th block on the far right and moves away, the digit on the blue block spontaneously changes from '3' to '6'.",
+      "severity": "moderate",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Numbered blocks: count = 2 (two green '2' blocks)\",\n    \"00:01 - Numbered blocks: count = 3 (left block turns blue '2', a blue '3' block spawns under the hand without coming from off-screen, right block is green '2')\",\n    \"00:02 - Numbered blocks: count = 4 (hand pulls right on the 3rd block, splitting it into a green '2' and a green '3')\",\n    \"00:03 - Numbered blocks: count = 5 (hand pulls right on the 4th block, splitting it into an orange '2' and a light-blue '3')\",\n    \"00:04 - Numbered blocks: count = 6 (hand pulls right on the 5th block, splitting it into two light-blue '3' blocks)\",\n    \"00:05 - Numbered blocks: count = 7 (hand pulls right on the 6th block, turning it into a green '5' while spawning a green '3' block to its right)\",\n    \"00:06 - Numbered blocks: count = 8 (hand pulls right on the 7th block, turning it into a green '2' while spawning a blue '3' block to its right)\",\n    \"00:07 - Numbered blocks: count = 8 (rightmost blue '3' block morphs into a blue '6' as the hand releases it)\",\n    \"00:08-00:09 - Numbered blocks: count = 8 (blocks remain stationary at 8 total as the hand taps along the row)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase and attribute transformation\",\n      \"description\": \"Starting with two green '2' blocks, the left block spontaneously changes color from green to blue while a third block (blue '3') materializes between the two blocks without the hand bringing anything from off-screen.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase by object splitting\",\n      \"description\": \"From 00:02 to 00:07, each time the hand slides a block to the right, the block duplicates/splits into two blocks with different colors and digits, increasing the total count from 3 to 8 (4 at 00:02, 5 at 00:03, 6 at 00:04, 7 at 00:05, and 8 at 00:06) with no blocks ever entering from off-screen.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"rightmost numbered block\",\n      \"invariant_violated\": \"unexplained object transformation\",\n      \"description\": \"As the hand releases the 8th block on the far right and moves away, the digit on the blue block spontaneously changes from '3' to '6'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

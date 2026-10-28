@@ -1,0 +1,74 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:00:27.602Z",
+  "latencyMs": 26496,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2082,
+    "total_tokens": 3490,
+    "cost": 0.011818,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011818,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01041
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1264,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Olives | bright green inside the small pouring cup at 00:00 and 00:06 | mix of green and dark black/purple inside the large jar | spontaneously change color from green to black/purple while being poured at 00:01-00:03 and 00:07-00:08",
+    "Metal bowl and small glass cup | metal bowl full of green olives at 00:00-00:03 | metal bowl contains a few brown olives and debris at 00:05 | at 00:04 the person reaches an empty hand into the bowl and a filled glass cup instantaneously materializes from it",
+    "Small clear bottle | absent at 00:00-00:04 | sitting on the countertop between the two bowls at 00:05-00:08 | spontaneously materializes on the counter at 00:04-00:05",
+    "Large glass jar | has a pointed spout on the upper right rim at 00:00-00:05 | has a closed glass loop on the upper right rim at 00:06-00:09 | spout morphs into a loop handle between 00:05 and 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives",
+      "invariant_violated": "Attribute consistency",
+      "description": "The small glass cup held by the person contains only green olives at 00:00, but as they are poured into the large jar between 00:01 and 00:03, about half of them inexplicably turn into dark purple/black olives. The same color transformation occurs during the second pour between 00:06 and 00:08.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Small glass cup and metal bowl",
+      "invariant_violated": "Physical continuity",
+      "description": "After pouring the first batch, the empty glass cup disappears above the frame and the person reaches an empty left hand into the metal bowl at 00:04. A full glass cup of green olives abruptly materializes in his hand from inside the bowl while the remaining olives in the bowl instantly morph into a few brown, pitted olives.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Small bottle on countertop",
+      "invariant_violated": "Object permanence",
+      "description": "Between 00:04 and 00:05, a small clear glass bottle with a white cap spontaneously materializes on the countertop to the right of the metal bowl without anyone placing it there.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Large glass jar",
+      "invariant_violated": "Shape consistency",
+      "description": "From 00:00 to 00:05, the upper right side of the large glass jar features a pointed pouring spout. By 00:06, this spout morphs into a rounded, closed glass loop.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Olives | bright green inside the small pouring cup at 00:00 and 00:06 | mix of green and dark black/purple inside the large jar | spontaneously change color from green to black/purple while being poured at 00:01-00:03 and 00:07-00:08\",\n    \"Metal bowl and small glass cup | metal bowl full of green olives at 00:00-00:03 | metal bowl contains a few brown olives and debris at 00:05 | at 00:04 the person reaches an empty hand into the bowl and a filled glass cup instantaneously materializes from it\",\n    \"Small clear bottle | absent at 00:00-00:04 | sitting on the countertop between the two bowls at 00:05-00:08 | spontaneously materializes on the counter at 00:04-00:05\",\n    \"Large glass jar | has a pointed spout on the upper right rim at 00:00-00:05 | has a closed glass loop on the upper right rim at 00:06-00:09 | spout morphs into a loop handle between 00:05 and 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"Attribute consistency\",\n      \"description\": \"The small glass cup held by the person contains only green olives at 00:00, but as they are poured into the large jar between 00:01 and 00:03, about half of them inexplicably turn into dark purple/black olives. The same color transformation occurs during the second pour between 00:06 and 00:08.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Small glass cup and metal bowl\",\n      \"invariant_violated\": \"Physical continuity\",\n      \"description\": \"After pouring the first batch, the empty glass cup disappears above the frame and the person reaches an empty left hand into the metal bowl at 00:04. A full glass cup of green olives abruptly materializes in his hand from inside the bowl while the remaining olives in the bowl instantly morph into a few brown, pitted olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Small bottle on countertop\",\n      \"invariant_violated\": \"Object permanence\",\n      \"description\": \"Between 00:04 and 00:05, a small clear glass bottle with a white cap spontaneously materializes on the countertop to the right of the metal bowl without anyone placing it there.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Large glass jar\",\n      \"invariant_violated\": \"Shape consistency\",\n      \"description\": \"From 00:00 to 00:05, the upper right side of the large glass jar features a pointed pouring spout. By 00:06, this spout morphs into a rounded, closed glass loop.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

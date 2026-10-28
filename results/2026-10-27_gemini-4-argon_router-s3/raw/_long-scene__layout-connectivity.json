@@ -1,0 +1,79 @@
+{
+  "key": "_long-scene__layout-connectivity",
+  "video": "_long-scene.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:58:51.149Z",
+  "latencyMs": 89131,
+  "usage": {
+    "prompt_tokens": 12297,
+    "completion_tokens": 6502,
+    "total_tokens": 18799,
+    "cost": 0.044807,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.044807,
+      "upstream_inference_prompt_cost": 0.012297,
+      "upstream_inference_completions_cost": 0.03251
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5194,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09 Exterior establishing shot: rectangular diner building with wrap-around plate-glass windows, a front glass entrance door in the facade, booths visible on the left interior, and counter/kitchen on the right interior.",
+    "00:10-00:18 Interior shot looking toward the back kitchen pass-through: counter with red stools on the right, wood-paneled back wall with rectangular kitchen pass-through in the center, staff doorway behind the counter on the right wall, and a perpendicular wall/doorway opening immediately to the left of the pass-through.",
+    "00:19-00:26 Wide interior shot looking toward the back kitchen pass-through: the left side of the room now features a rear window with a neon 'OPEN' sign and a row of booths along a left window wall; the male customer enters by walking out from behind the counter near the staff doorway and kitchen pass-through, rounds the counter, and sits on a stool.",
+    "00:45-00:50 Reverse view from inside the kitchen looking out through the pass-through toward the front wall: counter is on the left, booths and windows on the right, and the far wall shows a solid white refrigerator and a glass entrance door with a glowing red 'EXIT' sign above it.",
+    "00:51-00:59 Closer interior shot looking toward the kitchen pass-through at sunrise: reverts to the 00:10 layout with the perpendicular doorway opening immediately left of the pass-through (and the seated customer missing from the counter).",
+    "01:00-01:26 Wide and medium shots looking toward the kitchen pass-through: waitress serves food from behind the counter, then walks around the back end of the counter past the pass-through to sit on a stool next to the customer.",
+    "01:27-01:34 Reverse angle looking toward the front wall opposite the kitchen: the glass entrance door, red 'EXIT' sign, and solid white refrigerator seen at 00:45 are replaced by a glass-front beverage cooler and a continuous plate-glass window.",
+    "01:41-01:49 Views through the left side windows above the booths: the male customer walks outside to a green-and-white truck parked parallel to the window wall while the waitress watches from inside.",
+    "01:50-01:58 Wide shot looking toward the kitchen pass-through: the waitress rises from the customer stool on the left side of the counter and walks directly through the solid counter into the staff area on the right while a second copy of her simultaneously appears at the kitchen pass-through in the background."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "male customer and back-of-house area behind counter",
+      "invariant_violated": "impossible traversal route",
+      "description": "Upon arriving from outside, the male customer enters the dining room by walking out from the staff doorway and workspace behind the counter next to the kitchen pass-through (accompanied by the sound of the entrance door), rather than entering from the exterior entrance door at the opposite end of the room.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:19",
+      "entity": "back wall to the left of the kitchen pass-through",
+      "invariant_violated": "inconsistent room layout and openings",
+      "description": "In the medium-wide shots at 00:10–00:18, 00:51–00:59, and 01:35–01:36, the wall immediately to the left of the kitchen pass-through terminates at a perpendicular wall with a side doorway/window opening and wood wainscoting. In the wide shots at 00:19–00:26, 00:36–00:44, 01:00–01:08, 01:18–01:26, and 01:50–01:58, that same space to the left of the pass-through is instead a wide rear window with a neon 'OPEN' sign and a line of booths.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "front wall opposite the kitchen pass-through",
+      "invariant_violated": "inconsistent wall openings and fixtures",
+      "description": "At 00:45–00:50, looking from the kitchen pass-through toward the opposite end of the diner shows a solid white refrigerator behind the counter and a glass entrance door with a red 'EXIT' sign above it at the end of the aisle. Looking in the same direction at 01:27–01:34, the entrance door, 'EXIT' sign, and white refrigerator are absent, replaced by a glass-door beverage cooler and an uninterrupted plate-glass window.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress and dining counter",
+      "invariant_violated": "traversal through solid fixture",
+      "description": "After standing up from the customer stool on the left side of the counter at 01:51, the waitress walks directly rightward through the solid dining counter to reach the workspace behind the counter at 01:53, while a duplicate of her simultaneously appears in the background at the kitchen pass-through.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09 Exterior establishing shot: rectangular diner building with wrap-around plate-glass windows, a front glass entrance door in the facade, booths visible on the left interior, and counter/kitchen on the right interior.\",\n    \"00:10-00:18 Interior shot looking toward the back kitchen pass-through: counter with red stools on the right, wood-paneled back wall with rectangular kitchen pass-through in the center, staff doorway behind the counter on the right wall, and a perpendicular wall/doorway opening immediately to the left of the pass-through.\",\n    \"00:19-00:26 Wide interior shot looking toward the back kitchen pass-through: the left side of the room now features a rear window with a neon 'OPEN' sign and a row of booths along a left window wall; the male customer enters by walking out from behind the counter near the staff doorway and kitchen pass-through, rounds the counter, and sits on a stool.\",\n    \"00:45-00:50 Reverse view from inside the kitchen looking out through the pass-through toward the front wall: counter is on the left, booths and windows on the right, and the far wall shows a solid white refrigerator and a glass entrance door with a glowing red 'EXIT' sign above it.\",\n    \"00:51-00:59 Closer interior shot looking toward the kitchen pass-through at sunrise: reverts to the 00:10 layout with the perpendicular doorway opening immediately left of the pass-through (and the seated customer missing from the counter).\",\n    \"01:00-01:26 Wide and medium shots looking toward the kitchen pass-through: waitress serves food from behind the counter, then walks around the back end of the counter past the pass-through to sit on a stool next to the customer.\",\n    \"01:27-01:34 Reverse angle looking toward the front wall opposite the kitchen: the glass entrance door, red 'EXIT' sign, and solid white refrigerator seen at 00:45 are replaced by a glass-front beverage cooler and a continuous plate-glass window.\",\n    \"01:41-01:49 Views through the left side windows above the booths: the male customer walks outside to a green-and-white truck parked parallel to the window wall while the waitress watches from inside.\",\n    \"01:50-01:58 Wide shot looking toward the kitchen pass-through: the waitress rises from the customer stool on the left side of the counter and walks directly through the solid counter into the staff area on the right while a second copy of her simultaneously appears at the kitchen pass-through in the background.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"male customer and back-of-house area behind counter\",\n      \"invariant_violated\": \"impossible traversal route\",\n      \"description\": \"Upon arriving from outside, the male customer enters the dining room by walking out from the staff doorway and workspace behind the counter next to the kitchen pass-through (accompanied by the sound of the entrance door), rather than entering from the exterior entrance door at the opposite end of the room.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"back wall to the left of the kitchen pass-through\",\n      \"invariant_violated\": \"inconsistent room layout and openings\",\n      \"description\": \"In the medium-wide shots at 00:10–00:18, 00:51–00:59, and 01:35–01:36, the wall immediately to the left of the kitchen pass-through terminates at a perpendicular wall with a side doorway/window opening and wood wainscoting. In the wide shots at 00:19–00:26, 00:36–00:44, 01:00–01:08, 01:18–01:26, and 01:50–01:58, that same space to the left of the pass-through is instead a wide rear window with a neon 'OPEN' sign and a line of booths.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"front wall opposite the kitchen pass-through\",\n      \"invariant_violated\": \"inconsistent wall openings and fixtures\",\n      \"description\": \"At 00:45–00:50, looking from the kitchen pass-through toward the opposite end of the diner shows a solid white refrigerator behind the counter and a glass entrance door with a red 'EXIT' sign above it at the end of the aisle. Looking in the same direction at 01:27–01:34, the entrance door, 'EXIT' sign, and white refrigerator are absent, replaced by a glass-door beverage cooler and an uninterrupted plate-glass window.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress and dining counter\",\n      \"invariant_violated\": \"traversal through solid fixture\",\n      \"description\": \"After standing up from the customer stool on the left side of the counter at 01:51, the waitress walks directly rightward through the solid dining counter to reach the workspace behind the counter at 01:53, while a duplicate of her simultaneously appears in the background at the kitchen pass-through.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

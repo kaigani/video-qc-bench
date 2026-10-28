@@ -1,0 +1,86 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:05:55.179Z",
+  "latencyMs": 25468,
+  "usage": {
+    "prompt_tokens": 1541,
+    "completion_tokens": 2315,
+    "total_tokens": 3856,
+    "cost": 0.013116,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013116,
+      "upstream_inference_prompt_cost": 0.001541,
+      "upstream_inference_completions_cost": 0.011575
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1379,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (leftmost): reads '2' from 00:00 to 00:09 (changes color from green at 00:00 to blue at 00:01)",
+    "Block 2 (second from left): appears at 00:01 reading '3', remains '3' through 00:09",
+    "Block 3 (third from left, green): reads '2' at 00:01, changes to '3' at 00:02, reverts to '2' from 00:03 to 00:09",
+    "Block 4 (fourth from left): appears at 00:03 reading '3' (green), changes to '2' (tan) from 00:04 to 00:09",
+    "Block 5 (fifth from left): appears at 00:04 reading '3', remains '3' through 00:09",
+    "Block 6 (sixth from left): appears at 00:05 reading '3' (light blue), changes to '5' (green) from 00:06 to 00:09",
+    "Block 7 (seventh from left, green): appears at 00:06 reading '3', changes to '2' from 00:07 to 00:09",
+    "Block 8 (eighth from left, blue): appears at 00:07 reading '3', changes to '6' at 00:08 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Third block from left (green)",
+      "invariant_violated": "text stability",
+      "description": "The front face of the green third block reads '2' at 00:01, changes into '3' at 00:02 when touched without being rotated, and then reverts to '2' at 00:03.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Fourth block from left",
+      "invariant_violated": "text stability",
+      "description": "The fourth block reads '3' at 00:03, then unexplainedly changes its front face digit to '2' (and color from green to tan) at 00:04 without being flipped or swapped.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Sixth block from left",
+      "invariant_violated": "text stability",
+      "description": "The sixth block reads '3' at 00:05, then morphs into '5' (and changes from light blue to green) at 00:06 without rotation or replacement.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Seventh block from left (green)",
+      "invariant_violated": "text stability",
+      "description": "The seventh block reads '3' at 00:06, then changes its front digit to '2' at 00:07 as it is set down without rotating.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Eighth block from left (blue)",
+      "invariant_violated": "text stability",
+      "description": "The eighth block reads '3' at 00:07, then changes to '6' at 00:08 after the hand releases it.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (leftmost): reads '2' from 00:00 to 00:09 (changes color from green at 00:00 to blue at 00:01)\",\n    \"Block 2 (second from left): appears at 00:01 reading '3', remains '3' through 00:09\",\n    \"Block 3 (third from left, green): reads '2' at 00:01, changes to '3' at 00:02, reverts to '2' from 00:03 to 00:09\",\n    \"Block 4 (fourth from left): appears at 00:03 reading '3' (green), changes to '2' (tan) from 00:04 to 00:09\",\n    \"Block 5 (fifth from left): appears at 00:04 reading '3', remains '3' through 00:09\",\n    \"Block 6 (sixth from left): appears at 00:05 reading '3' (light blue), changes to '5' (green) from 00:06 to 00:09\",\n    \"Block 7 (seventh from left, green): appears at 00:06 reading '3', changes to '2' from 00:07 to 00:09\",\n    \"Block 8 (eighth from left, blue): appears at 00:07 reading '3', changes to '6' at 00:08 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Third block from left (green)\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The front face of the green third block reads '2' at 00:01, changes into '3' at 00:02 when touched without being rotated, and then reverts to '2' at 00:03.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Fourth block from left\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The fourth block reads '3' at 00:03, then unexplainedly changes its front face digit to '2' (and color from green to tan) at 00:04 without being flipped or swapped.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Sixth block from left\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The sixth block reads '3' at 00:05, then morphs into '5' (and changes from light blue to green) at 00:06 without rotation or replacement.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Seventh block from left (green)\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The seventh block reads '3' at 00:06, then changes its front digit to '2' at 00:07 as it is set down without rotating.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Eighth block from left (blue)\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The eighth block reads '3' at 00:07, then changes to '6' at 00:08 after the hand releases it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

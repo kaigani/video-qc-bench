@@ -1,0 +1,41 @@
+{
+  "key": "woman-apple__spatial-topology-occlusion",
+  "video": "woman-apple.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:31:40.461Z",
+  "latencyMs": 117274,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 8271,
+    "total_tokens": 9866,
+    "cost": 0.04295,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04295,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.041355
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7943,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman with blue umbrella | center of market walkway facing camera (South) at 00:00 | seen from behind-right profile facing down the walkway as camera orbits counter-clockwise around her by 00:09 | serves as central foreground occluder throughout the continuous gimbal orbit",
+    "Left market stall (West side) | recedes into background on left of frame at 00:00 with hanging produce, green bin, and red bin | spans across midground from right (North) to left (South) at 00:06-00:09 as camera orbits and pans left | bin ordering (green bin, red bin, lined fruit trays, white produce boxes) remains geometrically consistent with camera translation and rotation",
+    "Right market walkway and stalls (East side) | visible in right background behind main subject at 00:00-00:05 | rotates out of view to the right at 00:06 as camera pans left toward the West stall | consistent perspective shift",
+    "Pedestrians passing in walkway | woman in light blue shirt and man in white shirt enter bottom-left foreground at 00:01-00:03 walking into scene depth | pass behind the main subject and emerge on the right side further down the street at 00:04-00:05 | depth ordering and occlusion boundaries evolve smoothly as they move from foreground to background"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman with blue umbrella | center of market walkway facing camera (South) at 00:00 | seen from behind-right profile facing down the walkway as camera orbits counter-clockwise around her by 00:09 | serves as central foreground occluder throughout the continuous gimbal orbit\",\n    \"Left market stall (West side) | recedes into background on left of frame at 00:00 with hanging produce, green bin, and red bin | spans across midground from right (North) to left (South) at 00:06-00:09 as camera orbits and pans left | bin ordering (green bin, red bin, lined fruit trays, white produce boxes) remains geometrically consistent with camera translation and rotation\",\n    \"Right market walkway and stalls (East side) | visible in right background behind main subject at 00:00-00:05 | rotates out of view to the right at 00:06 as camera pans left toward the West stall | consistent perspective shift\",\n    \"Pedestrians passing in walkway | woman in light blue shirt and man in white shirt enter bottom-left foreground at 00:01-00:03 walking into scene depth | pass behind the main subject and emerge on the right side further down the street at 00:04-00:05 | depth ordering and occlusion boundaries evolve smoothly as they move from foreground to background\"\n  ],\n  \"findings\": []\n}"
+}

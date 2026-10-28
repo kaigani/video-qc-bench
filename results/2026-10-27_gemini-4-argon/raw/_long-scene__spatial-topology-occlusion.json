@@ -1,0 +1,74 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:26:46.796Z",
+  "latencyMs": 102876,
+  "usage": {
+    "prompt_tokens": 12327,
+    "completion_tokens": 6671,
+    "total_tokens": 18998,
+    "cost": 0.045682,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.045682,
+      "upstream_inference_prompt_cost": 0.012327,
+      "upstream_inference_completions_cost": 0.033355
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5642,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner counter | Long counter on the right side of the room running toward the back kitchen pass-through, with red stools on the left (customer) side | Same position at end | Waitress walks directly through the solid counter from the customer side to the service side at 01:51-01:53",
+    "Back wall and left side of diner | At 00:10, immediately left of the kitchen pass-through is a short wall with a poster and a glass door frame with no booths | At 00:19, left of the pass-through expands into a wide area with a neon OPEN sign window and a row of booths | Reverts to the narrow wall/door layout in reused insert shots at 00:51 and 01:35",
+    "Kitchen pass-through and front-of-diner axis | Pass-through is at the back wall; entrance door with EXIT sign and glass beverage cooler are at the front wall (seen in 00:45 reverse angle) | Consistent in reverse angles at 00:45 and 01:27 | Used as reference for character ordering along the counter",
+    "Man and Waitress seated at counter | At 01:22-01:26, waitress sits on the stool to the man's left (closer to the back kitchen pass-through) | At 01:27 reverse angle, waitress is positioned to the man's right (closer to the front beverage cooler) | Spatial ordering along the counter inverts across the 180-degree cut at 01:27"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:19",
+      "entity": "Left wall and booth area of the diner",
+      "invariant_violated": "scene layout",
+      "description": "In the interior shot at 00:10 (and repeated at 00:51 and 01:35), the wall immediately to the left of the kitchen pass-through terminates after a short panel into a glass door/window wall right next to the counter aisle. When the camera cuts to a wider shot along the same axis at 00:19, that wall is gone and replaced by a wide dining area containing a row of booths and a window with a neon OPEN sign.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "Man at counter",
+      "invariant_violated": "viewpoint consistency",
+      "description": "At 00:25, the man sits on a stool midway down the straight section of the counter facing right. After close-ups of the coffee and plate, the wide shot at 00:36 shows him seated at the far foreground curved end of the counter facing the camera, before he is seen back midway down the straight counter in the reverse angle at 00:45 and wide shot at 01:00.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "Man and Waitress relative positions",
+      "invariant_violated": "viewpoint consistency",
+      "description": "In the wide shot at 01:22-01:26 (looking toward the back kitchen pass-through), the waitress sits down on a stool to the man's left, placing her closer to the back kitchen and the man closer to the front of the diner. When the camera cuts at 01:27 to the reverse angle looking toward the front of the diner (with the front beverage cooler in the background), their relative positions along the counter are inverted: the man is in the foreground (kitchen side) and the waitress is in the background to his right (front entrance side).",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress and diner counter",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "After standing up from the stool on the customer (left) side of the unbroken counter at 01:51, the waitress walks rightward directly through the solid counter structure at 01:52 to emerge in the service area behind the counter at 01:53.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner counter | Long counter on the right side of the room running toward the back kitchen pass-through, with red stools on the left (customer) side | Same position at end | Waitress walks directly through the solid counter from the customer side to the service side at 01:51-01:53\",\n    \"Back wall and left side of diner | At 00:10, immediately left of the kitchen pass-through is a short wall with a poster and a glass door frame with no booths | At 00:19, left of the pass-through expands into a wide area with a neon OPEN sign window and a row of booths | Reverts to the narrow wall/door layout in reused insert shots at 00:51 and 01:35\",\n    \"Kitchen pass-through and front-of-diner axis | Pass-through is at the back wall; entrance door with EXIT sign and glass beverage cooler are at the front wall (seen in 00:45 reverse angle) | Consistent in reverse angles at 00:45 and 01:27 | Used as reference for character ordering along the counter\",\n    \"Man and Waitress seated at counter | At 01:22-01:26, waitress sits on the stool to the man's left (closer to the back kitchen pass-through) | At 01:27 reverse angle, waitress is positioned to the man's right (closer to the front beverage cooler) | Spatial ordering along the counter inverts across the 180-degree cut at 01:27\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:19\",\n      \"entity\": \"Left wall and booth area of the diner\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"In the interior shot at 00:10 (and repeated at 00:51 and 01:35), the wall immediately to the left of the kitchen pass-through terminates after a short panel into a glass door/window wall right next to the counter aisle. When the camera cuts to a wider shot along the same axis at 00:19, that wall is gone and replaced by a wide dining area containing a row of booths and a window with a neon OPEN sign.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Man at counter\",\n      \"invariant_violated\": \"viewpoint consistency\",\n      \"description\": \"At 00:25, the man sits on a stool midway down the straight section of the counter facing right. After close-ups of the coffee and plate, the wide shot at 00:36 shows him seated at the far foreground curved end of the counter facing the camera, before he is seen back midway down the straight counter in the reverse angle at 00:45 and wide shot at 01:00.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"Man and Waitress relative positions\",\n      \"invariant_violated\": \"viewpoint consistency\",\n      \"description\": \"In the wide shot at 01:22-01:26 (looking toward the back kitchen pass-through), the waitress sits down on a stool to the man's left, placing her closer to the back kitchen and the man closer to the front of the diner. When the camera cuts at 01:27 to the reverse angle looking toward the front of the diner (with the front beverage cooler in the background), their relative positions along the counter are inverted: the man is in the foreground (kitchen side) and the waitress is in the background to his right (front entrance side).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress and diner counter\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"After standing up from the stool on the customer (left) side of the unbroken counter at 01:51, the waitress walks rightward directly through the solid counter structure at 01:52 to emerge in the service area behind the counter at 01:53.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

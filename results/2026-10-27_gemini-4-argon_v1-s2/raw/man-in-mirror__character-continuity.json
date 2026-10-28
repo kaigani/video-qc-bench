@@ -1,0 +1,55 @@
+{
+  "key": "man-in-mirror__character-continuity",
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:57:59.190Z",
+  "latencyMs": 31532,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 2119,
+    "total_tokens": 3712,
+    "cost": 0.012188,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012188,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.010595
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1633,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in bathroom (foreground and mirror reflection) | Dark hair combed back, white collared button-down shirt, standing before a framed bathroom mirror holding a small grooming brush/razor in his right hand near his mouth | Same white shirt and dark hair, holding the grooming tool in front of his face in the foreground while his mirror reflection holds it against his cheek | At 00:02-00:03 his facial features in the mirror morph noticeably when he tilts his head down; throughout the shot his mirror reflection uses the wrong (un-mirrored) hand, and from 00:05-00:09 the foreground character's head tilt and hand position decouple from his reflection's pose and motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man's face in mirror reflection",
+      "invariant_violated": "identity",
+      "description": "As the man tilts his head down and moves the grooming tool across his eyebrow and forehead between 00:02 and 00:03, his facial features in the mirror morph into a noticeably different facial structure (altered eye shape, brow ridge, and nose bridge) before reverting to his original face at 00:04.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Man and his mirror reflection",
+      "invariant_violated": "movement continuity",
+      "description": "In addition to the reflection's raised hand being on the wrong (non-mirrored) side of the body throughout, from 00:05 to 00:09 the man's physical pose and motion decouple between the foreground and the mirror: the foreground man tilts his head up and holds the tool vertically several inches away from his face while moving it up and down, whereas his reflection in the mirror keeps his head level and holds the tool diagonally against his upper lip and cheek.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in bathroom (foreground and mirror reflection) | Dark hair combed back, white collared button-down shirt, standing before a framed bathroom mirror holding a small grooming brush/razor in his right hand near his mouth | Same white shirt and dark hair, holding the grooming tool in front of his face in the foreground while his mirror reflection holds it against his cheek | At 00:02-00:03 his facial features in the mirror morph noticeably when he tilts his head down; throughout the shot his mirror reflection uses the wrong (un-mirrored) hand, and from 00:05-00:09 the foreground character's head tilt and hand position decouple from his reflection's pose and motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Man's face in mirror reflection\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"As the man tilts his head down and moves the grooming tool across his eyebrow and forehead between 00:02 and 00:03, his facial features in the mirror morph into a noticeably different facial structure (altered eye shape, brow ridge, and nose bridge) before reverting to his original face at 00:04.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Man and his mirror reflection\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"In addition to the reflection's raised hand being on the wrong (non-mirrored) side of the body throughout, from 00:05 to 00:09 the man's physical pose and motion decouple between the foreground and the mirror: the foreground man tilts his head up and holds the tool vertically several inches away from his face while moving it up and down, whereas his reflection in the mirror keeps his head level and holds the tool diagonally against his upper lip and cheek.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

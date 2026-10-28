@@ -1,0 +1,80 @@
+{
+  "key": "_long-scene__cross-cut-placement",
+  "video": "_long-scene.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:58:29.245Z",
+  "latencyMs": 78041,
+  "usage": {
+    "prompt_tokens": 12424,
+    "completion_tokens": 4891,
+    "total_tokens": 17315,
+    "cost": 0.036879,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036879,
+      "upstream_inference_prompt_cost": 0.012424,
+      "upstream_inference_completions_cost": 0.024455
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3690,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "ANCHORS: A1=Diner counter (separates left customer aisle/stools from right staff area), A2=Kitchen pass-through window (back wall), A3=Side windows and booths (left wall).",
+    "Shot 1: 00:00-00:09, ext. wide of diner and truck; no people visible.",
+    "Shot 2: 00:10-00:18, int. medium of A1 and A2; Waitress on right (staff side) of A1, facing left, wiping counter.",
+    "Shot 3: 00:19-00:26, int. wide down aisle; Customer walks from A2 along left (aisle side) of A1 and sits on stool facing right; Waitress on staff side of A1 facing left, pouring coffee.",
+    "Shot 4: 00:27-00:31, CU on A1; Customer's hands on left, Waitress pouring coffee on right.",
+    "Shot 5: 00:32-00:35, CU of plate on A1; no people visible.",
+    "Shot 6: 00:36-00:44, int. wide down aisle; Customer relocated to front curve of A1 sitting through counter geometry facing camera; Waitress absent.",
+    "Shot 7: 00:45-00:50, med. reverse from inside kitchen at A2; Waitress on kitchen side of A2 wiping counter; Customer seated at A1 in background.",
+    "Shot 8: 00:51-00:59, int. medium of A1 and A2; no people present.",
+    "Shot 9: 01:00-01:08, int. wide down aisle; Customer seated on stool on aisle side of A1 facing right; Waitress on staff side of A1 facing appliances then turning left.",
+    "Shot 10: 01:09-01:17, med. two-shot along A1; Customer seated on left (aisle side) facing right; Waitress on right (staff side) picking up plate and turning toward back.",
+    "Shot 11: 01:18-01:26, int. wide down aisle; Customer seated on aisle side of A1; Waitress starts on staff side of A1, walks through solid counter at 01:20 to sit on stool on aisle side.",
+    "Shot 12: 01:27-01:34, med. reverse two-shot at A1; Customer and Waitress both seated on aisle side of A1 holding mugs.",
+    "Shot 13: 01:35-01:36, int. medium of A1 and A2; no people present.",
+    "Shot 14: 01:37-01:40, CU on A1; Customer's hands placing cash by mug.",
+    "Shot 15: 01:41-01:45, med-wide looking out A3; Customer outside walking to truck; Waitress reflected in window.",
+    "Shot 16: 01:46-01:49, med. inside at A3; Waitress standing by window looking out; Customer outside entering truck.",
+    "Shot 17: 01:50-01:58, int. wide down aisle; Waitress seated on stool on aisle side of A1, stands at 01:51 and walks through solid counter A1 to staff side while a duplicate Waitress simultaneously appears on aisle side walking toward A2 and passes through A1 at 01:56."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Customer",
+      "invariant_violated": "Body overlapping/passing through fixed geometry",
+      "description": "After sitting on a stool on the aisle side of the counter in Shot 3, the customer appears at the front curve of the counter sitting directly through the solid counter structure with his torso on the staff side and legs protruding through to the aisle side.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:20",
+      "entity": "Waitress",
+      "invariant_violated": "Body passing through fixed geometry",
+      "description": "The waitress walks from the staff side of the counter directly through the solid counter barrier to sit on a stool on the customer side without using an opening.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "Duplicate person and passing through fixed geometry",
+      "description": "The waitress stands from the stool and walks directly through the solid counter to the staff side; simultaneously, a second duplicate instance of the waitress appears on the customer side walking toward the back kitchen before also walking through the counter at 01:56.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"ANCHORS: A1=Diner counter (separates left customer aisle/stools from right staff area), A2=Kitchen pass-through window (back wall), A3=Side windows and booths (left wall).\",\n    \"Shot 1: 00:00-00:09, ext. wide of diner and truck; no people visible.\",\n    \"Shot 2: 00:10-00:18, int. medium of A1 and A2; Waitress on right (staff side) of A1, facing left, wiping counter.\",\n    \"Shot 3: 00:19-00:26, int. wide down aisle; Customer walks from A2 along left (aisle side) of A1 and sits on stool facing right; Waitress on staff side of A1 facing left, pouring coffee.\",\n    \"Shot 4: 00:27-00:31, CU on A1; Customer's hands on left, Waitress pouring coffee on right.\",\n    \"Shot 5: 00:32-00:35, CU of plate on A1; no people visible.\",\n    \"Shot 6: 00:36-00:44, int. wide down aisle; Customer relocated to front curve of A1 sitting through counter geometry facing camera; Waitress absent.\",\n    \"Shot 7: 00:45-00:50, med. reverse from inside kitchen at A2; Waitress on kitchen side of A2 wiping counter; Customer seated at A1 in background.\",\n    \"Shot 8: 00:51-00:59, int. medium of A1 and A2; no people present.\",\n    \"Shot 9: 01:00-01:08, int. wide down aisle; Customer seated on stool on aisle side of A1 facing right; Waitress on staff side of A1 facing appliances then turning left.\",\n    \"Shot 10: 01:09-01:17, med. two-shot along A1; Customer seated on left (aisle side) facing right; Waitress on right (staff side) picking up plate and turning toward back.\",\n    \"Shot 11: 01:18-01:26, int. wide down aisle; Customer seated on aisle side of A1; Waitress starts on staff side of A1, walks through solid counter at 01:20 to sit on stool on aisle side.\",\n    \"Shot 12: 01:27-01:34, med. reverse two-shot at A1; Customer and Waitress both seated on aisle side of A1 holding mugs.\",\n    \"Shot 13: 01:35-01:36, int. medium of A1 and A2; no people present.\",\n    \"Shot 14: 01:37-01:40, CU on A1; Customer's hands placing cash by mug.\",\n    \"Shot 15: 01:41-01:45, med-wide looking out A3; Customer outside walking to truck; Waitress reflected in window.\",\n    \"Shot 16: 01:46-01:49, med. inside at A3; Waitress standing by window looking out; Customer outside entering truck.\",\n    \"Shot 17: 01:50-01:58, int. wide down aisle; Waitress seated on stool on aisle side of A1, stands at 01:51 and walks through solid counter A1 to staff side while a duplicate Waitress simultaneously appears on aisle side walking toward A2 and passes through A1 at 01:56.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Customer\",\n      \"invariant_violated\": \"Body overlapping/passing through fixed geometry\",\n      \"description\": \"After sitting on a stool on the aisle side of the counter in Shot 3, the customer appears at the front curve of the counter sitting directly through the solid counter structure with his torso on the staff side and legs protruding through to the aisle side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:20\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"Body passing through fixed geometry\",\n      \"description\": \"The waitress walks from the staff side of the counter directly through the solid counter barrier to sit on a stool on the customer side without using an opening.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"Duplicate person and passing through fixed geometry\",\n      \"description\": \"The waitress stands from the stool and walks directly through the solid counter to the staff side; simultaneously, a second duplicate instance of the waitress appears on the customer side walking toward the back kitchen before also walking through the counter at 01:56.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

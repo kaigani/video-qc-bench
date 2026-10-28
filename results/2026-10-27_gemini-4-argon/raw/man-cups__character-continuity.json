@@ -1,0 +1,41 @@
+{
+  "key": "man-cups__character-continuity",
+  "video": "man-cups.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:33:48.022Z",
+  "latencyMs": 66422,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 4662,
+    "total_tokens": 6255,
+    "cost": 0.024903,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024903,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.02331
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4314,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Main man at table | 00:00-00:03: hands and forearms visible in white shirt cuffs and blue suit sleeves manipulating coins over cups | 00:04-00:09: revealed as bearded man with glasses, dark hair, blue suit, white shirt, yellow pocket square, black bow tie over a red necktie, standing at the table leaning forward | Continuous single shot with consistent appearance and posture as camera orbits from his right side to his left side",
+    "Background person in black shirt | 00:00-00:02: torso visible standing across the table in a black t-shirt and dark pants | 00:03-00:05: visible in front of the windows to the right of a seated person before exiting the right edge of the frame as the camera orbits | Consistent position relative to table and adjacent person",
+    "Background person in light grey shirt | 00:03: first visible seated near the windows to the left of the person in the black shirt | 00:05: exits the right edge of the frame as the camera orbits | Consistent seated position relative to the person in the black shirt",
+    "Background person in dark top and jeans | 00:07: enters frame on the left in the rear of the room as the camera pans left while orbiting | 00:08-00:09: passes behind the main man and is occluded by his torso | Consistent background position during camera orbit"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Main man at table | 00:00-00:03: hands and forearms visible in white shirt cuffs and blue suit sleeves manipulating coins over cups | 00:04-00:09: revealed as bearded man with glasses, dark hair, blue suit, white shirt, yellow pocket square, black bow tie over a red necktie, standing at the table leaning forward | Continuous single shot with consistent appearance and posture as camera orbits from his right side to his left side\",\n    \"Background person in black shirt | 00:00-00:02: torso visible standing across the table in a black t-shirt and dark pants | 00:03-00:05: visible in front of the windows to the right of a seated person before exiting the right edge of the frame as the camera orbits | Consistent position relative to table and adjacent person\",\n    \"Background person in light grey shirt | 00:03: first visible seated near the windows to the left of the person in the black shirt | 00:05: exits the right edge of the frame as the camera orbits | Consistent seated position relative to the person in the black shirt\",\n    \"Background person in dark top and jeans | 00:07: enters frame on the left in the rear of the room as the camera pans left while orbiting | 00:08-00:09: passes behind the main man and is occluded by his torso | Consistent background position during camera orbit\"\n  ],\n  \"findings\": []\n}"
+}

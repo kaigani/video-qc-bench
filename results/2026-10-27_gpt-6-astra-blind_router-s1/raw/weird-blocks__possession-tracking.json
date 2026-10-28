@@ -1,0 +1,92 @@
+{
+  "ledger": [
+    "00:00\u201300:01.25: A, initially the left green numbered block, is pinched by the single visible hand, lifted and rocked; it becomes blue and expands into a blue 2 on the table plus a separately held blue 3 (B).",
+    "00:01.25\u201300:09.75: A remains the leftmost blue 2 on the tabletop; the hand contacts and slightly aligns it with B at 00:09\u201300:09.75.",
+    "00:01\u201300:02: B emerges beside A under the same fingers, is carried slightly right and placed between A and the original right green block. B remains the second, blue 3 through 00:09.75, with hand contact during final alignment.",
+    "00:00\u201300:03.25: C, the original right green 2, rests on the table until grasped around 00:02.25. The hand lifts and rocks it, showing 3; by 00:03.25 a green 2 remains in the third position while a separate green 3 (D) is held beside it.",
+    "00:03.25\u201300:09.75: C remains the third green 2 on the table; fingers briefly contact its top around 00:08.50.",
+    "00:03.25\u201300:04: D is held immediately right of C, initially green with 3, then yellow with 2 by 00:03.75. It is placed fourth while another blue block (E) emerges at its right. D remains the fourth yellow 2 through 00:09.75, with brief hand contact around 00:08.25\u201300:08.50.",
+    "00:04\u201300:05: E emerges under the fingers beside D as a pale blue 3, is placed fifth by 00:04.75, and remains there while another blue 3 (F) emerges at its right. E stays fifth through 00:09.75.",
+    "00:05\u201300:06: F is held to the right of E, initially blue with 3, then green with 3. Around 00:06, its exposed front becomes 5 as a separate green/blue 3 (G) emerges to its right. F remains the sixth green 5 through 00:09.75.",
+    "00:06\u201300:06.75: G is rocked in the same hand immediately right of F, displaying 3. By 00:06.75 a green 2 occupies the seventh tabletop position while a separate blue 3 (H) remains held farther right. G stays seventh through 00:09.75.",
+    "00:06.75\u201300:08: H is held and rocked at the far right, displaying 3 until approximately 00:07.75, when its exposed front becomes 6. It is released as the eighth blue 6 by 00:08 and remains there through 00:09.75.",
+    "00:00\u201300:09.75: No container or hand-to-hand transfer is shown. The small circular top studs remain associated with their blocks; none is separately handled. Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Initial left block A and emerging blue block B",
+      "invariant_violated": "Object identity and custody continuity",
+      "description": "Around 00:00.75\u201300:01.25, the single held block becomes blue and its visible right side widens into a second full block with its own top stud. A blue 2 is left on the table while the same pinch carries a blue 3 away. The visible body changes from one block into two beneath the fingers, rather than a separately concealed block simply being uncovered.",
+      "severity": "severe",
+      "confidence": 0.96
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Original right green block C and emerging block D",
+      "invariant_violated": "Object conservation",
+      "description": "At 00:02.75 the fingers hold one green block displaying 3. Around 00:03\u201300:03.25, that block separates visually into a stationary green 2 and a held green 3 immediately beside it, increasing the visible count from three to four. The second body grows from the exposed side of the handled block without a distinct incoming object.",
+      "severity": "severe",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Fourth block D and emerging pale blue block E",
+      "invariant_violated": "Object identity and custody continuity",
+      "description": "The green 3 held at 00:03.50 becomes a yellow 2 by 00:03.75. As that yellow block is set down around 00:04, an additional blue body extends from its right side beneath the fingers and becomes a separate pale blue 3 by 00:04.50. The placement leaves one block behind while producing another from the same visible body.",
+      "severity": "severe",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Fifth pale blue block E and emerging block F",
+      "invariant_violated": "Object conservation and appearance persistence",
+      "description": "After the pale blue 3 is placed fifth at 00:04.75, another blue 3 extends from its right side around 00:05 and is held separately by 00:05.25, while the placed block remains. The newly held block then changes from blue to green around 00:05.50\u201300:05.75 while its exposed 3 face stays directed toward the camera. The visible surface changes cannot be explained solely by a concealed pickup.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Sixth green block F and emerging block G",
+      "invariant_violated": "Object identity and conservation",
+      "description": "Immediately before 00:06, the held green block has an exposed front marked 3. That front changes to 5 as a second green/blue block marked 3 extends from its right side. The green 5 stays on the table while the fingers carry the new 3 rightward. The frontal numeral and body change in view without a covering hand or a turn exposing a different face.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Seventh block G and emerging blue block H",
+      "invariant_violated": "Object identity and conservation",
+      "description": "Between 00:06.50 and 00:06.75, the single greenish block marked 3 beneath the fingers becomes a green 2 resting in the seventh position plus a separately held blue 3 at its right. The held body visibly produces an additional block while leaving the first behind, with no separate source or transfer.",
+      "severity": "severe",
+      "confidence": 0.94
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Rightmost blue block H",
+      "invariant_violated": "Appearance persistence",
+      "description": "Around 00:07.70\u201300:07.80, the rightmost held block changes its exposed front numeral from 3 to 6. The same front face remains visible during a small rocking motion; it is neither covered nor rotated away to reveal another numbered face. The hand then releases the altered block in the eighth position.",
+      "severity": "moderate",
+      "confidence": 0.98
+    }
+  ],
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-12__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-12.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s1/raw/clip-12__possession-tracking.json",
+  "frozen_source_sha256": "42bd5dcc106a4c0048163e9d24d3032fe9b37d6aa321f630429e192442f8689b",
+  "key": "weird-blocks__possession-tracking",
+  "parseOk": true
+}

@@ -1,0 +1,62 @@
+{
+  "key": "pouring-olives__pour-conservation",
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:29.711Z",
+  "latencyMs": 34425,
+  "usage": {
+    "prompt_tokens": 1552,
+    "completion_tokens": 2478,
+    "total_tokens": 4030,
+    "cost": 0.013942,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013942,
+      "upstream_inference_prompt_cost": 0.001552,
+      "upstream_inference_completions_cost": 0.01239
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1866,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 - Small clear glass jar (in hands): full of exclusively bright green olives",
+    "00:00 - Large clear glass jar (center): initially empty, then receives the first few olives which appear as dark purple and green at the bottom",
+    "00:01-00:03 - Small clear glass jar (in hands): empties completely; all olives visible inside the jar remain bright green prior to exiting",
+    "00:01-00:03 - Large clear glass jar (center): fills to roughly one-third full with a mixture of dark purple/black olives and green olives",
+    "00:00-00:04 - Metal bowl (background right) and ceramic bowl (foreground right): both contain green olives and remain untouched until the hand reaches toward the metal bowl at 00:04",
+    "00:05-00:06 - Small clear glass jar (in hands, after jump cut): full of exclusively bright green olives again; metal bowl in background is now partially depleted",
+    "00:06-00:09 - Small clear glass jar (in hands): emptied into the large jar; green olives inside visibly turn dark purple/black at the rim as they exit",
+    "00:06-00:09 - Large clear glass jar (center): rises from one-third full to about two-thirds full with a mix of dark purple/black and green olives"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Large clear glass jar and small clear glass jar",
+      "invariant_violated": "source contents",
+      "description": "The small clear glass jar held by the person contains only bright green olives, yet as they are poured into the large glass jar from 00:00 to 00:03, roughly half of the olives arriving in the destination jar are dark purple/black.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Small clear glass jar and large clear glass jar",
+      "invariant_violated": "source contents",
+      "description": "At 00:06 the refilled small glass jar clearly holds only bright green olives, but during the pour from 00:07 to 00:09 several green olives change color to dark purple/black right at the mouth of the jar as they fall into the large glass jar.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 - Small clear glass jar (in hands): full of exclusively bright green olives\",\n    \"00:00 - Large clear glass jar (center): initially empty, then receives the first few olives which appear as dark purple and green at the bottom\",\n    \"00:01-00:03 - Small clear glass jar (in hands): empties completely; all olives visible inside the jar remain bright green prior to exiting\",\n    \"00:01-00:03 - Large clear glass jar (center): fills to roughly one-third full with a mixture of dark purple/black olives and green olives\",\n    \"00:00-00:04 - Metal bowl (background right) and ceramic bowl (foreground right): both contain green olives and remain untouched until the hand reaches toward the metal bowl at 00:04\",\n    \"00:05-00:06 - Small clear glass jar (in hands, after jump cut): full of exclusively bright green olives again; metal bowl in background is now partially depleted\",\n    \"00:06-00:09 - Small clear glass jar (in hands): emptied into the large jar; green olives inside visibly turn dark purple/black at the rim as they exit\",\n    \"00:06-00:09 - Large clear glass jar (center): rises from one-third full to about two-thirds full with a mix of dark purple/black and green olives\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Large clear glass jar and small clear glass jar\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"The small clear glass jar held by the person contains only bright green olives, yet as they are poured into the large glass jar from 00:00 to 00:03, roughly half of the olives arriving in the destination jar are dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Small clear glass jar and large clear glass jar\",\n      \"invariant_violated\": \"source contents\",\n      \"description\": \"At 00:06 the refilled small glass jar clearly holds only bright green olives, but during the pour from 00:07 to 00:09 several green olives change color to dark purple/black right at the mouth of the jar as they fall into the large glass jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

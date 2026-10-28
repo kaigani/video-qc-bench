@@ -1,0 +1,50 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:53:16.356Z",
+  "latencyMs": 68060,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 4938,
+    "total_tokens": 6533,
+    "cost": 0.026285,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026285,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.02469
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4426,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Studio exit doors and left wall | two dark doors with windows and green EXIT sign on the back-left wall | unchanged | consistent across all frames",
+    "Mirror wall and wooden baseboard | continuous mirror spanning from the back-left corner to the right edge of the frame, with a wooden baseboard sloping downward from left to right | continuous at end | at 00:02, the section of the baseboard and mirror immediately behind the foreground dancer is severed and flipped horizontally",
+    "Studio wood floor | light hardwood planks with a distinct dark plank beneath the dancer's left foot | returns to original layout from 00:03 onward | at 00:02, the floor patch beneath the dancer flips left-to-right, moving the dark plank under her right foot with visible vertical seams",
+    "Foreground dancer and mirror reflection | dancer faces the mirror raising her right arm (screen right), matched on the same side in the mirror reflection | dancer poses with right arm raised, matching reflection | at 00:02, the foreground dancer's region is horizontally flipped so her left arm (door side) is raised while her reflection still raises the arm on the opposite (barre) side"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Foreground dancer, mirror baseboard, and studio floor",
+      "invariant_violated": "scene layout and viewpoint consistency",
+      "description": "The rectangular region around the foreground dancer is horizontally flipped in place for a brief interval at 00:02 before reverting at 00:03. This breaks the room's geometry: the diagonal wooden baseboard of the mirror wall disappears to the left of the dancer's legs, appears angled in the opposite direction beneath her right hand, and terminates at a sharp vertical seam to the right of her right leg where the true baseboard resumes. The floorboards beneath her feet also reverse left-to-right (moving the dark plank from under her left foot to under her right foot), and the dancer's pose becomes geometrically incompatible with her mirror reflection (her left arm on the door side is raised straight up, while her reflection in the mirror has the arm on the opposite barre side raised).",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Studio exit doors and left wall | two dark doors with windows and green EXIT sign on the back-left wall | unchanged | consistent across all frames\",\n    \"Mirror wall and wooden baseboard | continuous mirror spanning from the back-left corner to the right edge of the frame, with a wooden baseboard sloping downward from left to right | continuous at end | at 00:02, the section of the baseboard and mirror immediately behind the foreground dancer is severed and flipped horizontally\",\n    \"Studio wood floor | light hardwood planks with a distinct dark plank beneath the dancer's left foot | returns to original layout from 00:03 onward | at 00:02, the floor patch beneath the dancer flips left-to-right, moving the dark plank under her right foot with visible vertical seams\",\n    \"Foreground dancer and mirror reflection | dancer faces the mirror raising her right arm (screen right), matched on the same side in the mirror reflection | dancer poses with right arm raised, matching reflection | at 00:02, the foreground dancer's region is horizontally flipped so her left arm (door side) is raised while her reflection still raises the arm on the opposite (barre) side\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Foreground dancer, mirror baseboard, and studio floor\",\n      \"invariant_violated\": \"scene layout and viewpoint consistency\",\n      \"description\": \"The rectangular region around the foreground dancer is horizontally flipped in place for a brief interval at 00:02 before reverting at 00:03. This breaks the room's geometry: the diagonal wooden baseboard of the mirror wall disappears to the left of the dancer's legs, appears angled in the opposite direction beneath her right hand, and terminates at a sharp vertical seam to the right of her right leg where the true baseboard resumes. The floorboards beneath her feet also reverse left-to-right (moving the dark plank from under her left foot to under her right foot), and the dancer's pose becomes geometrically incompatible with her mirror reflection (her left arm on the door side is raised straight up, while her reflection in the mirror has the arm on the opposite barre side raised).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

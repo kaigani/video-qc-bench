@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:51:09.246Z",
+  "latencyMs": 27365,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 1763,
+    "total_tokens": 3318,
+    "cost": 0.01037,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01037,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.008815
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1306,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:03: Small clear glass cup (held by left hand, assisted by right hand) containing only green olives -> poured into large glass jar on wooden board; upon landing in the large jar, approximately half of the olives are dark purple/black.",
+    "00:04-00:05: Left hand reaches toward metal bowl of green olives on counter; jump cut to hands holding a refilled small clear glass cup of green olives.",
+    "00:05-00:09: Small clear glass cup (held by left hand, assisted by right hand) containing only green olives -> poured into large glass jar; olives turn dark purple/black at the cup rim and inside the large jar."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives being poured from the small glass cup into the large glass jar",
+      "invariant_violated": "transfer completeness",
+      "description": "The small transparent glass cup held by the person contains exclusively bright green olives, but as they are poured into the large glass jar from 00:00 to 00:03, roughly half of the olives that arrive at the bottom of the large jar are dark purple/black.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "olives in the second small glass cup being transferred into the large glass jar",
+      "invariant_violated": "transfer completeness",
+      "description": "At 00:06, the refilled small transparent glass cup visibly contains only bright green olives, yet at 00:07-00:09 several olives turn dark purple/black as they pass the fingers at the rim and land inside the large glass jar.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:03: Small clear glass cup (held by left hand, assisted by right hand) containing only green olives -> poured into large glass jar on wooden board; upon landing in the large jar, approximately half of the olives are dark purple/black.\",\n    \"00:04-00:05: Left hand reaches toward metal bowl of green olives on counter; jump cut to hands holding a refilled small clear glass cup of green olives.\",\n    \"00:05-00:09: Small clear glass cup (held by left hand, assisted by right hand) containing only green olives -> poured into large glass jar; olives turn dark purple/black at the cup rim and inside the large jar.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"olives being poured from the small glass cup into the large glass jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The small transparent glass cup held by the person contains exclusively bright green olives, but as they are poured into the large glass jar from 00:00 to 00:03, roughly half of the olives that arrive at the bottom of the large jar are dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"olives in the second small glass cup being transferred into the large glass jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"At 00:06, the refilled small transparent glass cup visibly contains only bright green olives, yet at 00:07-00:09 several olives turn dark purple/black as they pass the fingers at the rim and land inside the large glass jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

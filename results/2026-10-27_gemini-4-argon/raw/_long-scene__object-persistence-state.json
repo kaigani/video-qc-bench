@@ -1,0 +1,102 @@
+{
+  "key": "_long-scene__object-persistence-state",
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:25:03.879Z",
+  "latencyMs": 88266,
+  "usage": {
+    "prompt_tokens": 12345,
+    "completion_tokens": 6425,
+    "total_tokens": 18770,
+    "cost": 0.04447,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.04447,
+      "upstream_inference_prompt_cost": 0.012345,
+      "upstream_inference_completions_cost": 0.032125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4744,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Truck outside diner | white aerodynamic sleeper semi-truck cab idling in parking lot at 00:00 | dark green box truck with white stripe at 01:41 | transforms from white semi cab into green box truck when driver exits diner",
+    "Wiping cloth / rag | grey/white cloth held in waitress's right hand wiping counter at 00:10 | on counter next to condiment caddy at 00:27 | vanishes/transforms into a full glass coffee pot in waitress's right hand at 00:24, then reappears on counter at 00:27",
+    "Glass coffee carafe | not present on counter or in waitress's hands at 00:20-00:23 | held by waitress pouring coffee at 00:27-00:31 | spontaneously materializes in waitress's right hand at 00:24; liquid level remains static while pouring at 00:28-00:31",
+    "Man's white coffee mug (Mug 1) | on counter held by man during pour at 00:27 | picked up from counter by waitress at 01:51 | merges with a second coffee mug handed by the waitress at 01:13",
+    "Waitress's white coffee mug (Mug 2) | held in waitress's right hand at 01:09 | merges into Mug 1 at 01:13; another mug held by waitress at 01:18-01:34 | placed next to Mug 1 at 01:11-01:12 and merges with it into a single mug at 01:13-01:14",
+    "Extra white coffee mug on counter | sitting on counter just left of condiment station at 01:50-01:51 | absent at 01:53 | vanishes into thin air as waitress walks past the end of the counter at 01:52",
+    "Plate of toast and fried egg | on counter in front of man at 00:32-00:44 | carried behind counter by waitress at 01:51-01:55 | vanishes from counter in front of man at 00:45-01:08, reappears being held by waitress at 01:09, is carried away by waitress at 01:15-01:17, vanishes from her hands at 01:18, is absent at 01:27-01:34, and reappears on counter at 01:50",
+    "Paper currency (dollar bills) | folded green bills placed on counter by man's left hand at 01:38 | crisp $100 bill on counter at 01:40 | top bill morphs design/denomination as man's right hand passes over it at 01:38-01:39"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:24",
+      "entity": "Glass coffee carafe and wiping cloth",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:21-00:23, the waitress is wiping the bare counter with a cloth in her right hand and no coffee pot is nearby. At 00:24, as she lifts her right hand from the counter, a full glass coffee carafe materializes directly in her hand in place of the cloth.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:28",
+      "entity": "Coffee in glass carafe",
+      "invariant_violated": "physical state transitions",
+      "description": "From 00:28 to 00:31, a heavy stream of coffee pours continuously out of the glass carafe into the mug, but the liquid level inside the clear carafe never decreases.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:45",
+      "entity": "Plate of toast and fried egg",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:36-00:44, the plate of toast and egg sits on the counter directly in front of the man. In the following shots at 00:45-00:50 and 01:00-01:08, the plate has vanished from the counter in front of him without being eaten or cleared, before appearing again with the waitress at 01:09.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:12",
+      "entity": "Two white coffee mugs",
+      "invariant_violated": "identity & persistence",
+      "description": "At 01:09-01:12, the man has a white coffee mug on the counter in his left hand while the waitress sets a second white coffee mug down next to it into his right hand. At 01:13-01:14, as the waitress lets go and the man brings his hands together, the two side-by-side mugs merge into a single mug.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "01:18",
+      "entity": "Plate of toast and fried egg",
+      "invariant_violated": "ownership & possession",
+      "description": "At 01:15-01:17, the waitress picks up the untouched plate of food with both hands and walks away with it. On the cut to 01:18, the plate has vanished from her hands (replaced by a coffee mug), vanishes again from the counter in the close angle at 01:27-01:34, and reappears on the counter at 01:50.",
+      "severity": "moderate",
+      "confidence": 0.93
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "Truck outside diner",
+      "invariant_violated": "identity & persistence",
+      "description": "In the opening shot at 00:00-00:09, the truck parked outside the diner is a white aerodynamic sleeper semi-cab. When the driver walks back out to his truck at 01:41, it has transformed into a dark green straight box truck with a white stripe.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "White coffee mug near condiment station",
+      "invariant_violated": "identity & persistence",
+      "description": "At 01:50-01:51, a second white coffee mug is sitting on the counter just to the left of the condiment station while the waitress picks up the first mug and plate. As she walks past at 01:52, the second mug remaining on the counter vanishes into thin air.",
+      "severity": "severe",
+      "confidence": 0.96
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Truck outside diner | white aerodynamic sleeper semi-truck cab idling in parking lot at 00:00 | dark green box truck with white stripe at 01:41 | transforms from white semi cab into green box truck when driver exits diner\",\n    \"Wiping cloth / rag | grey/white cloth held in waitress's right hand wiping counter at 00:10 | on counter next to condiment caddy at 00:27 | vanishes/transforms into a full glass coffee pot in waitress's right hand at 00:24, then reappears on counter at 00:27\",\n    \"Glass coffee carafe | not present on counter or in waitress's hands at 00:20-00:23 | held by waitress pouring coffee at 00:27-00:31 | spontaneously materializes in waitress's right hand at 00:24; liquid level remains static while pouring at 00:28-00:31\",\n    \"Man's white coffee mug (Mug 1) | on counter held by man during pour at 00:27 | picked up from counter by waitress at 01:51 | merges with a second coffee mug handed by the waitress at 01:13\",\n    \"Waitress's white coffee mug (Mug 2) | held in waitress's right hand at 01:09 | merges into Mug 1 at 01:13; another mug held by waitress at 01:18-01:34 | placed next to Mug 1 at 01:11-01:12 and merges with it into a single mug at 01:13-01:14\",\n    \"Extra white coffee mug on counter | sitting on counter just left of condiment station at 01:50-01:51 | absent at 01:53 | vanishes into thin air as waitress walks past the end of the counter at 01:52\",\n    \"Plate of toast and fried egg | on counter in front of man at 00:32-00:44 | carried behind counter by waitress at 01:51-01:55 | vanishes from counter in front of man at 00:45-01:08, reappears being held by waitress at 01:09, is carried away by waitress at 01:15-01:17, vanishes from her hands at 01:18, is absent at 01:27-01:34, and reappears on counter at 01:50\",\n    \"Paper currency (dollar bills) | folded green bills placed on counter by man's left hand at 01:38 | crisp $100 bill on counter at 01:40 | top bill morphs design/denomination as man's right hand passes over it at 01:38-01:39\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:24\",\n      \"entity\": \"Glass coffee carafe and wiping cloth\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:21-00:23, the waitress is wiping the bare counter with a cloth in her right hand and no coffee pot is nearby. At 00:24, as she lifts her right hand from the counter, a full glass coffee carafe materializes directly in her hand in place of the cloth.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"Coffee in glass carafe\",\n      \"invariant_violated\": \"physical state transitions\",\n      \"description\": \"From 00:28 to 00:31, a heavy stream of coffee pours continuously out of the glass carafe into the mug, but the liquid level inside the clear carafe never decreases.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"Plate of toast and fried egg\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:36-00:44, the plate of toast and egg sits on the counter directly in front of the man. In the following shots at 00:45-00:50 and 01:00-01:08, the plate has vanished from the counter in front of him without being eaten or cleared, before appearing again with the waitress at 01:09.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"Two white coffee mugs\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 01:09-01:12, the man has a white coffee mug on the counter in his left hand while the waitress sets a second white coffee mug down next to it into his right hand. At 01:13-01:14, as the waitress lets go and the man brings his hands together, the two side-by-side mugs merge into a single mug.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"01:18\",\n      \"entity\": \"Plate of toast and fried egg\",\n      \"invariant_violated\": \"ownership & possession\",\n      \"description\": \"At 01:15-01:17, the waitress picks up the untouched plate of food with both hands and walks away with it. On the cut to 01:18, the plate has vanished from her hands (replaced by a coffee mug), vanishes again from the counter in the close angle at 01:27-01:34, and reappears on the counter at 01:50.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.93\n    },\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Truck outside diner\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"In the opening shot at 00:00-00:09, the truck parked outside the diner is a white aerodynamic sleeper semi-cab. When the driver walks back out to his truck at 01:41, it has transformed into a dark green straight box truck with a white stripe.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"White coffee mug near condiment station\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 01:50-01:51, a second white coffee mug is sitting on the counter just to the left of the condiment station while the waitress picks up the first mug and plate. As she walks past at 01:52, the second mug remaining on the counter vanishes into thin air.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    }\n  ]\n}"
+}

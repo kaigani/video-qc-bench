@@ -1,0 +1,46 @@
+{
+  "ledger": [
+    "Hand labels are the child's anatomical hands: right hand enters from screen-left; left hand is at screen-right. Same-colored balls lack distinguishing marks, so individual identities become uncertain during stirring.",
+    "Red ball R1, initially at the bowl's front-left: 00:00.000 inside glass bowl \u2192 00:00.250\u201300:00.750 contacted/occluded by right fingers \u2192 00:01.000\u201300:02.000 remains in bowl while another red ball is held above it \u2192 00:02.500\u201300:05.000 among balls beneath right fingers \u2192 00:05.250\u201300:09.750 stirred inside bowl; individual identity unresolved.",
+    "Red ball R2, initially near bowl center: 00:00.000 inside glass bowl \u2192 00:00.250\u201300:00.750 partly occluded by reaching hands \u2192 00:01.000\u201300:02.000 visible in bowl beside R1 \u2192 00:02.500\u201300:05.000 beneath/adjacent to right fingertips \u2192 00:05.250\u201300:09.750 stirred inside bowl; individual identity unresolved.",
+    "Lifted red ball R3: 00:00.250\u201300:00.500 acquisition obscured by hands inside bowl \u2192 00:00.750 emerging between hands \u2192 00:01.000\u201300:02.000 held between both hands above bowl, with two other red balls visible below \u2192 00:02.250 lowered by right hand \u2192 00:02.500 returned among bowl contents \u2192 00:02.750\u201300:09.750 remains among handled bowl contents; identity becomes unresolved.",
+    "Yellow ball Y1, initially front-left: 00:00.000 inside bowl \u2192 00:00.250\u201300:00.750 near/under right fingers \u2192 00:01.000\u201300:04.750 still at bowl front-left \u2192 00:05.000\u201300:05.500 displaced by right-hand sweep \u2192 00:05.750\u201300:09.750 yellow balls roll within bowl; individual identity unresolved.",
+    "Yellow ball Y2, initially rear-center: 00:00.000\u201300:00.750 inside bowl near reaching hands \u2192 00:01.000\u201300:05.000 remains near rear of ball cluster \u2192 00:05.250\u201300:09.750 joins right-hand stirring inside bowl; individual identity unresolved.",
+    "Yellow ball Y3, initially right side: 00:00.000\u201300:05.000 inside bowl at right of cluster \u2192 00:05.250 contacted by sweeping right fingers \u2192 00:05.500\u201300:09.750 rolls among stirred contents; individual identity unresolved.",
+    "Green ball G1, initially rear-left: 00:00.000 inside bowl \u2192 00:00.250\u201300:00.750 partly covered by right hand \u2192 00:01.000\u201300:05.250 visible near rear-left of cluster \u2192 00:05.500\u201300:09.750 stirred within bowl; individual identity unresolved.",
+    "Green ball G2, initially mid-right: 00:00.000\u201300:05.000 inside bowl between yellow balls, intermittently occluded by hands \u2192 00:05.250\u201300:09.750 displaced during right-hand stirring; individual identity unresolved.",
+    "Green ball G3, initially front-right: 00:00.000\u201300:05.250 inside bowl near front rim \u2192 00:05.500\u201300:09.750 rolls among stirred contents; individual identity unresolved.",
+    "Glass bowl: 00:00.000 resting on wooden table \u2192 approximately 00:02.500\u201300:09.750 left fingers steady its right/rear rim while right hand handles contents. No ball is visibly taken from outside the bowl or carried out during stirring.",
+    "Additional red balls: 00:07.750 at least four spatially separate red balls are visible simultaneously within the bowl; 00:09.500 again shows more than the three red balls accounted for during the earlier lift-and-return sequence. Their entry into the bowl is not shown.",
+    "Assessment uses supplied visual samples from 00:00.000\u201300:09.750. Finger occlusion and motion blur prevent uninterrupted individual identification during rapid stirring. Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Red balls inside the glass bowl",
+      "invariant_violated": "Continuous chain of custody",
+      "description": "At 00:01.000\u201300:02.000, one red ball is held above the bowl and two remain inside. The held ball is returned by 00:02.500. During subsequent stirring neither hand brings in another ball, yet at 00:07.750 at least four separate red balls are visible: beneath the resting left fingers, near the center, at front-right, and partly beneath the stirring right fingers at front-left. More than three red balls are again visible at 00:09.500. The additional red ball has no visible source or transfer into the bowl.",
+      "severity": "moderate",
+      "confidence": 0.88
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s1/raw/clip-02__possession-tracking.json",
+  "frozen_source_sha256": "eba82b14a72203e1f77481d331cdba19b17e66125bc495a586925e4594876491",
+  "key": "child-marbles__possession-tracking",
+  "parseOk": true
+}

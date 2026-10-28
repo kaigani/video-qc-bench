@@ -1,0 +1,40 @@
+{
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:01.031Z",
+  "latencyMs": 23610,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1545,
+    "total_tokens": 3140,
+    "cost": 0.00932,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00932,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.007725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1370,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Mirror and wall (foreground/midground) | wooden-framed mirror mounted on beige wall on the right two-thirds of the frame | unchanged position and orientation throughout static shot | none",
+    "Man in foreground | positioned at left of frame in front of the wall and left edge of mirror frame | remains in foreground left; right hand briefly overlaps and properly occludes the outer left edge of the mirror frame at 00:02-00:04 | smooth occlusion edge evolution",
+    "Reflected bathroom layout | wooden door with brass knob on left, white doorframe and wall with light switch in center, dark shelving unit with bottles on right | all architectural and furniture elements remain fixed in identical relative positions | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Mirror and wall (foreground/midground) | wooden-framed mirror mounted on beige wall on the right two-thirds of the frame | unchanged position and orientation throughout static shot | none\",\n    \"Man in foreground | positioned at left of frame in front of the wall and left edge of mirror frame | remains in foreground left; right hand briefly overlaps and properly occludes the outer left edge of the mirror frame at 00:02-00:04 | smooth occlusion edge evolution\",\n    \"Reflected bathroom layout | wooden door with brass knob on left, white doorframe and wall with light switch in center, dark shelving unit with bottles on right | all architectural and furniture elements remain fixed in identical relative positions | none\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,42 @@
+This video contains a visible group of similar countable objects (confirmed by a prior inventory pass — cups, coins, blocks, balls, fruit, or similar). You are a forensic count checker for exactly those groups. For each group of similar objects:
+- count them at every moment the group is clearly visible, and track the count over time
+- a count may only change through a visible cause: an object visibly added, removed, carried off-screen, or destroyed
+- an object may only transform into a DIFFERENT KIND of object if a visible mechanism explains it — one kind of object becoming another kind with no cause is a defect even in a performance
+- occlusion is not disappearance: an object hidden behind a hand or another object still exists; only report a count change confirmed after the occluder moves away
+Special case — deliberate magic/sleight-of-hand performances: a performer making the count of the SAME kind of object go up or down (multiplying coins, vanishing balls) is the trick itself; do not report it as a defect. DO still report: counts of objects the performer is NOT manipulating changing on their own, and any object changing into a different KIND of object.
+Confounds to rule out: motion blur can smear one object into looking like two — count on sharp frames; objects at the frame edge may be cropped, not absent.
+
+TASK: Ledger = each countable group: kind, count at each clearly-visible moment, and the visible cause of every count change. Then report every unexplained count change or kind-transformation.
+
+OUTPUT FORMAT — respond with ONLY a single JSON object, no markdown fences, no prose before or after:
+{
+  "ledger": [
+    // one entry per entity/moment you tracked, as a short string
+  ],
+  "findings": [
+    {
+      "timestamp": "mm:ss",
+      "entity": "what is affected",
+      "invariant_violated": "short name of the rule that was broken",
+      "description": "precise description of what changed and why it is unexplained",
+      "severity": "minor" | "moderate" | "severe",
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+If you find no violations, return "findings": [] — an empty list is a valid and expected answer.
+Do NOT pad the findings list. Only report violations you can tie to specific visual evidence.
+
+MEDIA AND TOOL INSTRUCTIONS (neutral):
+Your only assigned video is /tmp/video-qc-astra-blind-261027/inputs/clip-07.mp4. Work solely under /tmp/video-qc-astra-blind-261027. Do not inspect the inherited project cwd, other videos, protocol, benchmark documents, prior evaluations, or sibling predictions. No web search. Do not delegate.
+Native video input and honest audio perception/transcription are unavailable in this harness. Actual visual input is timestamped extracted JPEG frames. Audio is UNASSESSED, not absent: do not invent hearing audio or infer speech absence. For scene inventory, spoken_dialogue must be true because uncertain booleans fail open. For an audio-only role, follow its instruction to return empty findings with an audio-unassessed reason in ledger.
+Sampling: 4 fps uniformly; short-clip uniform sampling. Inspect all supplied contact sheets using view_image (return tool images to vision with image(...) when using functions.exec), in chronological order. Each sheet contains six timestamped frames, at most 640x360 per thumbnail. The full-resolution originals and timestamp mapping are in /tmp/video-qc-astra-blind-261027/output/source/media/clip-07/extraction.json. You may inspect individual original frames using view_image, and extract denser frames from your assigned MP4 with ffmpeg if needed; put any additional media only in /tmp/video-qc-astra-blind-261027/output/source/media/clip-07/router__clip-07__count-stability__s1. Inspect images, not just file metadata.
+Contact sheets:
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-001.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-002.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-003.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-004.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-005.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-006.jpg
+/tmp/video-qc-astra-blind-261027/output/source/media/clip-07/sheet-007.jpg
+Write your single strict JSON object, matching the role's exact ledger/findings contract (or the feature-inventory object for the inventory role), to /tmp/video-qc-astra-blind-261027/output/source/responses/router__clip-07__count-stability__s1.json. This is your sole prediction output path. Do not read or write other prediction files. Do not perform a second evaluation, self-verification pass, or retraction pass. Return that JSON object as your final answer as well.

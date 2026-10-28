@@ -1,0 +1,51 @@
+{
+  "key": "woman-car__environment-response",
+  "video": "woman-car.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:54:41.033Z",
+  "latencyMs": 44235,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 3145,
+    "total_tokens": 4675,
+    "cost": 0.017255,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017255,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.015725
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2768,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Station wagon (00:00-00:09): Completely stationary on the shoulder of the desert highway; background displacement is caused solely by the camera pushing in and panning.",
+    "Roadside dry grass and desert scrub (00:00-00:05): Light grass tufts along the pavement edge and background bushes remain motionless, indicating no significant ambient wind.",
+    "Woman's denim jacket (00:00-00:09): Stiff, heavy denim remains still throughout the shot, as expected for heavy fabric.",
+    "Woman's hair (00:00-00:03): Rests on her shoulders with only slight settling movement.",
+    "Woman's hair (00:04-00:09): Lifts and streams horizontally backward toward the rear of the car as if in a strong headwind or fast-moving vehicle, contradicting the stationary car, still roadside grass, and her position within the windshield area."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "woman's hair",
+      "invariant_violated": "unexplained airflow / contradicted physical cause",
+      "description": "From 00:04 through 00:09, the woman's hair streams strongly backward and stays suspended horizontally as if subjected to high-speed airflow from a moving vehicle, despite the station wagon being parked stationary, the light dry grass along the road remaining motionless, and the woman being positioned through the enclosed windshield area.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Station wagon (00:00-00:09): Completely stationary on the shoulder of the desert highway; background displacement is caused solely by the camera pushing in and panning.\",\n    \"Roadside dry grass and desert scrub (00:00-00:05): Light grass tufts along the pavement edge and background bushes remain motionless, indicating no significant ambient wind.\",\n    \"Woman's denim jacket (00:00-00:09): Stiff, heavy denim remains still throughout the shot, as expected for heavy fabric.\",\n    \"Woman's hair (00:00-00:03): Rests on her shoulders with only slight settling movement.\",\n    \"Woman's hair (00:04-00:09): Lifts and streams horizontally backward toward the rear of the car as if in a strong headwind or fast-moving vehicle, contradicting the stationary car, still roadside grass, and her position within the windshield area.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"woman's hair\",\n      \"invariant_violated\": \"unexplained airflow / contradicted physical cause\",\n      \"description\": \"From 00:04 through 00:09, the woman's hair streams strongly backward and stays suspended horizontally as if subjected to high-speed airflow from a moving vehicle, despite the station wagon being parked stationary, the light dry grass along the road remaining motionless, and the woman being positioned through the enclosed windshield area.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

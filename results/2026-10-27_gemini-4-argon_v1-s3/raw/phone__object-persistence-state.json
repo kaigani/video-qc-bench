@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:23:16.223Z",
+  "latencyMs": 29013,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1768,
+    "total_tokens": 3381,
+    "cost": 0.010453,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010453,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00884
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1441,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in both hands in foreground, tall body extending well above the hands with rectangular top bezel and 'A742' on screen | tilted down at 00:09 with top bezel suddenly sitting right at the index finger level and screen text changed to 'UAW' | focused at 00:03, tapped by right thumb at 00:07-00:08, tilted forward at 00:09 where upper half of phone body vanishes/shrinks",
+    "red bag | carried in left hand of person walking down stairs at 00:00 | moves out of view behind foreground phone by 00:02 | carried down stairs from 00:00 to 00:02"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "smartphone",
+      "invariant_violated": "identity & persistence",
+      "description": "When the person tilts the smartphone forward at 00:09 without sliding their hands up the device, the entire upper portion of the phone above the hands vanishes—the top bezel suddenly appears directly at the level of the right index finger with a notched edge, and the screen display morphs from 'A7·42' into 'UAW'.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in both hands in foreground, tall body extending well above the hands with rectangular top bezel and 'A742' on screen | tilted down at 00:09 with top bezel suddenly sitting right at the index finger level and screen text changed to 'UAW' | focused at 00:03, tapped by right thumb at 00:07-00:08, tilted forward at 00:09 where upper half of phone body vanishes/shrinks\",\n    \"red bag | carried in left hand of person walking down stairs at 00:00 | moves out of view behind foreground phone by 00:02 | carried down stairs from 00:00 to 00:02\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"smartphone\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"When the person tilts the smartphone forward at 00:09 without sliding their hands up the device, the entire upper portion of the phone above the hands vanishes—the top bezel suddenly appears directly at the level of the right index finger with a notched edge, and the screen display morphs from 'A7·42' into 'UAW'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

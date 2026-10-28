@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__contact-interaction-kinematics",
+  "video": "man-cups.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:20:07.639Z",
+  "latencyMs": 38183,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 2700,
+    "total_tokens": 4320,
+    "cost": 0.01512,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01512,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.0135
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2013,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's right hand and coin | at 00:00 out of frame, enters at 00:01 reaching into the front cup and lifting a gold coin at 00:02-00:03 | at 00:09 raised above the cups pinching above a floating object | at 00:04-00:06 the coin passes to the exterior wall of the leftmost cup and adheres vertically against the side of the cup without bottom support",
+    "man's left hand and back/right cup | at 00:00 holds a coin in the background, rests on table at 00:01, holds coin near back cup at 00:03 | at 00:08-00:09 rests fingertips on the table surface | at 00:05-00:06 grips the top of the rightmost cup while a coin adheres vertically to the outside wall of the cup",
+    "cups on table | at 00:00 four cups arranged in a cluster on the table surface | at 00:08-00:09 three cups aligned in a row on the table | shift into a straight line between 00:03 and 00:05 without direct pushing mechanics explaining the rearrangement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "gold coin and leftmost cup",
+      "invariant_violated": "solidity and weight support",
+      "description": "The gold coin held by the man's right hand above the cup opening at 00:03 clips to the exterior wall of the cup at 00:04-00:06, remaining plastered vertically against the smooth outer side of the cup without underlying physical support before disappearing at 00:07.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "man's left hand, coin, and rightmost cup",
+      "invariant_violated": "solidity and weight support",
+      "description": "As the man's left fingers rest on the rim of the rightmost cup at 00:05-00:06, a gold coin is fused vertically against the outer wall of that cup without a valid grip or support holding its weight.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "man's right hand and coin above cup",
+      "invariant_violated": "floating object without contact",
+      "description": "While the man's right hand is poised several inches above the cups, a small coin-like disc hovers in mid-air between his fingertips and the cup rim with no physical contact or support.",
+      "severity": "moderate",
+      "confidence": 0.88
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man's right hand and coin | at 00:00 out of frame, enters at 00:01 reaching into the front cup and lifting a gold coin at 00:02-00:03 | at 00:09 raised above the cups pinching above a floating object | at 00:04-00:06 the coin passes to the exterior wall of the leftmost cup and adheres vertically against the side of the cup without bottom support\",\n    \"man's left hand and back/right cup | at 00:00 holds a coin in the background, rests on table at 00:01, holds coin near back cup at 00:03 | at 00:08-00:09 rests fingertips on the table surface | at 00:05-00:06 grips the top of the rightmost cup while a coin adheres vertically to the outside wall of the cup\",\n    \"cups on table | at 00:00 four cups arranged in a cluster on the table surface | at 00:08-00:09 three cups aligned in a row on the table | shift into a straight line between 00:03 and 00:05 without direct pushing mechanics explaining the rearrangement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"gold coin and leftmost cup\",\n      \"invariant_violated\": \"solidity and weight support\",\n      \"description\": \"The gold coin held by the man's right hand above the cup opening at 00:03 clips to the exterior wall of the cup at 00:04-00:06, remaining plastered vertically against the smooth outer side of the cup without underlying physical support before disappearing at 00:07.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"man's left hand, coin, and rightmost cup\",\n      \"invariant_violated\": \"solidity and weight support\",\n      \"description\": \"As the man's left fingers rest on the rim of the rightmost cup at 00:05-00:06, a gold coin is fused vertically against the outer wall of that cup without a valid grip or support holding its weight.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"man's right hand and coin above cup\",\n      \"invariant_violated\": \"floating object without contact\",\n      \"description\": \"While the man's right hand is poised several inches above the cups, a small coin-like disc hovers in mid-air between his fingertips and the cup rim with no physical contact or support.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    }\n  ]\n}"
+}

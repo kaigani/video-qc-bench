@@ -1,0 +1,40 @@
+{
+  "key": "dancer-mirror__text-stability",
+  "video": "dancer-mirror.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:59:45.859Z",
+  "latencyMs": 15407,
+  "usage": {
+    "prompt_tokens": 1541,
+    "completion_tokens": 380,
+    "total_tokens": 1921,
+    "cost": 0.003441,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003441,
+      "upstream_inference_prompt_cost": 0.001541,
+      "upstream_inference_completions_cost": 0.0019
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 238,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Illuminated green sign above the door on the left wall (00:00–00:09): reads 'EXIT' consistently throughout the clip.",
+    "Reflected green sign above the reflected door in the mirror (00:00–00:09): reversed 'EXIT', too small/distant to resolve individual letters sharply, remains stable.",
+    "Dark poster on the far wall reflected in the mirror on the right (00:00–00:09): too small and distant for legible text, remains static."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Illuminated green sign above the door on the left wall (00:00–00:09): reads 'EXIT' consistently throughout the clip.\",\n    \"Reflected green sign above the reflected door in the mirror (00:00–00:09): reversed 'EXIT', too small/distant to resolve individual letters sharply, remains stable.\",\n    \"Dark poster on the far wall reflected in the mirror on the right (00:00–00:09): too small and distant for legible text, remains static.\"\n  ],\n  \"findings\": []\n}"
+}

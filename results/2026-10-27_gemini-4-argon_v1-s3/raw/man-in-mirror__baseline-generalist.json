@@ -1,0 +1,73 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:21:00.648Z",
+  "latencyMs": 26444,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1800,
+    "total_tokens": 3208,
+    "cost": 0.010408,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010408,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.009
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1074,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man (foreground) | white collared shirt, holding grooming tool at chin | holding grooming tool at chin/jawline | raises tool to temple and hair at 00:02-00:04, then lowers back to chin",
+    "Mirror reflection | reflects man holding white brush at upper lip | reflects man holding brush near upper lip/cheek | face morphs at 00:03 when looking down; hand/tool position never matches the foreground",
+    "Grooming tool | white stick/toothbrush in reflection | thin grey/white brush/razor | morphs into a dark comb at 00:03 when brushing hair, then back into a white/grey stick"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection",
+      "invariant_violated": "Reflection consistency",
+      "description": "The position of the man's hand and tool in the mirror does not match his actual body in the foreground. At 00:00-00:01 and 00:05-00:09, his foreground hand holds the tool under his chin and jawline, while the reflection shows him holding it up against his upper lip and cheek. Similarly, at 00:02 and 00:04, the foreground tool is near his temple while the reflection shows it over his eyebrow and nose bridge.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Grooming tool and action",
+      "invariant_violated": "Action and audio-visual plausibility",
+      "description": "Continuous tooth-brushing audio plays throughout the video while the man rubs a toothbrush-like tool across his dry skin (chin, upper lip, eyebrow, and hair) rather than inside his mouth.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Man's face in mirror reflection",
+      "invariant_violated": "Identity consistency",
+      "description": "As the man tilts his head down between 00:02 and 00:03, his facial features in the mirror reflection morph into a noticeably different face before morphing back to his original appearance at 00:04.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Grooming tool",
+      "invariant_violated": "Object permanence and consistency",
+      "description": "The object in the man's hand changes shape and appearance, starting as a white toothbrush-like stick at 00:00-00:01, turning into a dark hair comb with teeth at 00:03 as he brushes his hair, and reverting to a thin white/grey stick at 00:04-00:09.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man (foreground) | white collared shirt, holding grooming tool at chin | holding grooming tool at chin/jawline | raises tool to temple and hair at 00:02-00:04, then lowers back to chin\",\n    \"Mirror reflection | reflects man holding white brush at upper lip | reflects man holding brush near upper lip/cheek | face morphs at 00:03 when looking down; hand/tool position never matches the foreground\",\n    \"Grooming tool | white stick/toothbrush in reflection | thin grey/white brush/razor | morphs into a dark comb at 00:03 when brushing hair, then back into a white/grey stick\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Mirror reflection\",\n      \"invariant_violated\": \"Reflection consistency\",\n      \"description\": \"The position of the man's hand and tool in the mirror does not match his actual body in the foreground. At 00:00-00:01 and 00:05-00:09, his foreground hand holds the tool under his chin and jawline, while the reflection shows him holding it up against his upper lip and cheek. Similarly, at 00:02 and 00:04, the foreground tool is near his temple while the reflection shows it over his eyebrow and nose bridge.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Grooming tool and action\",\n      \"invariant_violated\": \"Action and audio-visual plausibility\",\n      \"description\": \"Continuous tooth-brushing audio plays throughout the video while the man rubs a toothbrush-like tool across his dry skin (chin, upper lip, eyebrow, and hair) rather than inside his mouth.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Man's face in mirror reflection\",\n      \"invariant_violated\": \"Identity consistency\",\n      \"description\": \"As the man tilts his head down between 00:02 and 00:03, his facial features in the mirror reflection morph into a noticeably different face before morphing back to his original appearance at 00:04.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Grooming tool\",\n      \"invariant_violated\": \"Object permanence and consistency\",\n      \"description\": \"The object in the man's hand changes shape and appearance, starting as a white toothbrush-like stick at 00:00-00:01, turning into a dark hair comb with teeth at 00:03 as he brushes his hair, and reverting to a thin white/grey stick at 00:04-00:09.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

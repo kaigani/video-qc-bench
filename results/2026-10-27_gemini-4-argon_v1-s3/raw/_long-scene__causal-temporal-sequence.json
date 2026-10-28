@@ -1,0 +1,61 @@
+{
+  "key": "_long-scene__causal-temporal-sequence",
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:12:16.948Z",
+  "latencyMs": 56988,
+  "usage": {
+    "prompt_tokens": 12497,
+    "completion_tokens": 2700,
+    "total_tokens": 15197,
+    "cost": 0.025997,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.025997,
+      "upstream_inference_prompt_cost": 0.012497,
+      "upstream_inference_completions_cost": 0.0135
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2208,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Truck exhaust | idling at 00:00 | smoke rises and dissipates continuously through 00:09 | plausible",
+    "Waitress wiping counter | moves rag across surface at 00:10 | rag follows hand motion through 00:18 | plausible",
+    "Customer entering and sitting | walks to stool at 00:19, sits at 00:25 | waitress reacts by picking up coffee pot at 00:24 | plausible",
+    "Coffee pot pouring | held level above mug at 00:27 | coffee streams out at 00:28 and stops at 00:30 without pot tilting | implausible (effect without cause)",
+    "Clearing dishes | waitress reaches for mug at 01:12 | customer places hand on mug at 01:13, waitress releases and leaves with plate at 01:15 | plausible",
+    "Customer and waitress at counter | waitress speaks at 01:25 | customer sighs and turns head toward her at 01:31 | plausible",
+    "Waitress at window | turns and walks away at 01:48 | window reflection remains frozen in place through 01:49 | implausible (frozen effect)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "Coffee pot and liquid stream",
+      "invariant_violated": "effect without cause",
+      "description": "Coffee pours from the carafe and stops at 00:30 while the vessel remains held completely level without being tilted.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:48",
+      "entity": "Waitress window reflection",
+      "invariant_violated": "temporal flow and cause-effect sync",
+      "description": "When the waitress turns her head and walks away from the window, her reflection in the glass remains frozen in its prior pose.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Truck exhaust | idling at 00:00 | smoke rises and dissipates continuously through 00:09 | plausible\",\n    \"Waitress wiping counter | moves rag across surface at 00:10 | rag follows hand motion through 00:18 | plausible\",\n    \"Customer entering and sitting | walks to stool at 00:19, sits at 00:25 | waitress reacts by picking up coffee pot at 00:24 | plausible\",\n    \"Coffee pot pouring | held level above mug at 00:27 | coffee streams out at 00:28 and stops at 00:30 without pot tilting | implausible (effect without cause)\",\n    \"Clearing dishes | waitress reaches for mug at 01:12 | customer places hand on mug at 01:13, waitress releases and leaves with plate at 01:15 | plausible\",\n    \"Customer and waitress at counter | waitress speaks at 01:25 | customer sighs and turns head toward her at 01:31 | plausible\",\n    \"Waitress at window | turns and walks away at 01:48 | window reflection remains frozen in place through 01:49 | implausible (frozen effect)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"Coffee pot and liquid stream\",\n      \"invariant_violated\": \"effect without cause\",\n      \"description\": \"Coffee pours from the carafe and stops at 00:30 while the vessel remains held completely level without being tilted.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:48\",\n      \"entity\": \"Waitress window reflection\",\n      \"invariant_violated\": \"temporal flow and cause-effect sync\",\n      \"description\": \"When the waitress turns her head and walks away from the window, her reflection in the glass remains frozen in its prior pose.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

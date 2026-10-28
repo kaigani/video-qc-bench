@@ -1,0 +1,72 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:56:27.033Z",
+  "latencyMs": 59831,
+  "usage": {
+    "prompt_tokens": 12287,
+    "completion_tokens": 4352,
+    "total_tokens": 16639,
+    "cost": 0.034047,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.034047,
+      "upstream_inference_prompt_cost": 0.012287,
+      "upstream_inference_completions_cost": 0.02176
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3342,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:10-00:23: Cleaning rag held in waitress's right hand while wiping counter, then left on counter at 00:23.",
+    "00:23-00:31: Glass coffee pot picked up by waitress's right hand (00:23) and used to pour coffee into man's white mug (00:27-00:31).",
+    "00:27-00:44: Man's white coffee mug adjusted by man's right hand on counter (00:27), filled with coffee, and held by man with both hands on counter (00:36-00:44).",
+    "00:32-00:35: Plate with toast and egg resting on counter alongside fork and knife.",
+    "00:45-00:50: Cleaning rag held in waitress's right hand wiping kitchen pass-through counter.",
+    "01:00-01:14: Waitress picks up a second white mug behind counter (01:07) and brings it in her right hand toward the man's white mug on the counter (01:09-01:12); at 01:13 the two mugs merge into one mug in the man's hands.",
+    "01:09-01:17: Plate of food touched by waitress's left hand on counter (01:09-01:14), then picked up in her left hand and carried away (01:15-01:17).",
+    "01:18-01:34: Waitress walks around counter with empty hands and sits next to man (01:18-01:26); at 01:27 a white mug is unexplainedly in her hands on the counter.",
+    "01:37-01:40: Stack of cash bills slid onto counter under a left hand and patted by a right hand next to the white mug.",
+    "01:50-01:53: Two white mugs sit on the counter at 01:50; waitress grabs the further mug with her right hand at 01:51 while the closer mug vanishes from the counter without being picked up."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "white coffee mugs",
+      "invariant_violated": "transfer completeness and placement persistence",
+      "description": "At 01:09-01:12, the man has a white coffee mug on the counter in front of his left hand while the waitress approaches holding a second white coffee mug in her right hand. At 01:12-01:13, as the waitress moves her mug against the man's mug and the man reaches out with his right hand, the two separate mugs merge into a single mug on the counter.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "waitress's white coffee mug",
+      "invariant_violated": "continuous chain of custody",
+      "description": "When the waitress walks around the counter and sits down next to the man at 01:20-01:26, her hands are empty and there is no mug on the counter in front of her stool. Upon cutting to the close-up at 01:27, she is holding a white coffee mug with both hands on the counter with no visible source.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "white coffee mug on counter",
+      "invariant_violated": "placement persistence",
+      "description": "At 01:50, two white coffee mugs are sitting on the counter in front of the waitress. At 01:51, she stands up with her left hand flat against the counter and picks up only the further mug with her right hand, yet as her body passes by at 01:51-01:52, the closer mug vanishes from the counter without being picked up.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:10-00:23: Cleaning rag held in waitress's right hand while wiping counter, then left on counter at 00:23.\",\n    \"00:23-00:31: Glass coffee pot picked up by waitress's right hand (00:23) and used to pour coffee into man's white mug (00:27-00:31).\",\n    \"00:27-00:44: Man's white coffee mug adjusted by man's right hand on counter (00:27), filled with coffee, and held by man with both hands on counter (00:36-00:44).\",\n    \"00:32-00:35: Plate with toast and egg resting on counter alongside fork and knife.\",\n    \"00:45-00:50: Cleaning rag held in waitress's right hand wiping kitchen pass-through counter.\",\n    \"01:00-01:14: Waitress picks up a second white mug behind counter (01:07) and brings it in her right hand toward the man's white mug on the counter (01:09-01:12); at 01:13 the two mugs merge into one mug in the man's hands.\",\n    \"01:09-01:17: Plate of food touched by waitress's left hand on counter (01:09-01:14), then picked up in her left hand and carried away (01:15-01:17).\",\n    \"01:18-01:34: Waitress walks around counter with empty hands and sits next to man (01:18-01:26); at 01:27 a white mug is unexplainedly in her hands on the counter.\",\n    \"01:37-01:40: Stack of cash bills slid onto counter under a left hand and patted by a right hand next to the white mug.\",\n    \"01:50-01:53: Two white mugs sit on the counter at 01:50; waitress grabs the further mug with her right hand at 01:51 while the closer mug vanishes from the counter without being picked up.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:13\",\n      \"entity\": \"white coffee mugs\",\n      \"invariant_violated\": \"transfer completeness and placement persistence\",\n      \"description\": \"At 01:09-01:12, the man has a white coffee mug on the counter in front of his left hand while the waitress approaches holding a second white coffee mug in her right hand. At 01:12-01:13, as the waitress moves her mug against the man's mug and the man reaches out with his right hand, the two separate mugs merge into a single mug on the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"waitress's white coffee mug\",\n      \"invariant_violated\": \"continuous chain of custody\",\n      \"description\": \"When the waitress walks around the counter and sits down next to the man at 01:20-01:26, her hands are empty and there is no mug on the counter in front of her stool. Upon cutting to the close-up at 01:27, she is holding a white coffee mug with both hands on the counter with no visible source.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"white coffee mug on counter\",\n      \"invariant_violated\": \"placement persistence\",\n      \"description\": \"At 01:50, two white coffee mugs are sitting on the counter in front of the waitress. At 01:51, she stands up with her left hand flat against the counter and picks up only the further mug with her right hand, yet as her body passes by at 01:51-01:52, the closer mug vanishes from the counter without being picked up.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

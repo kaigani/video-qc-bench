@@ -1,0 +1,39 @@
+{
+  "key": "home-tour__causal-temporal-sequence",
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:55:34.811Z",
+  "latencyMs": 18567,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 501,
+    "total_tokens": 2266,
+    "cost": 0.00427,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00427,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.002505
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 384,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman walking | initiates steps in kitchen at 00:00 | continues walking through doorways until 00:10 | continuous forward locomotion with plausible pace and body mechanics",
+    "woman's head and hair | turns head right at 00:02 and left at 00:05 | returns to forward gaze at 00:07 | hair sways proportionally in response to head rotation and stepping motion"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"woman walking | initiates steps in kitchen at 00:00 | continues walking through doorways until 00:10 | continuous forward locomotion with plausible pace and body mechanics\",\n    \"woman's head and hair | turns head right at 00:02 and left at 00:05 | returns to forward gaze at 00:07 | hair sways proportionally in response to head rotation and stepping motion\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "man-in-mirror__object-persistence-state",
+  "video": "man-in-mirror.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:13:18.675Z",
+  "latencyMs": 35450,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1889,
+    "total_tokens": 3502,
+    "cost": 0.011058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011058,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.009445
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1409,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "grooming tool (toothbrush/comb) | held vertically in the man's right hand near his mouth/chin, appearing as a white-and-blue toothbrush | held in front of his face in direct view while pressed diagonally against his cheek/lip in the mirror | morphs into a dark comb/brush at the hairline around 00:03, then reverts to a white-and-blue toothbrush at 00:04, with conflicting position and orientation between direct view and mirror reflection at 00:05-00:09",
+    "bathroom mirror | wooden frame mounted on wall in front of the man | unchanged | none",
+    "wooden door and shelves | visible in background via mirror reflection | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "grooming tool (toothbrush)",
+      "invariant_violated": "identity & persistence",
+      "description": "As the man raises the white-and-blue toothbrush from his mouth to his eyebrow and hair (00:02-00:03), the object morphs into a dark grey/black comb-like tool used to brush his hair, then transforms back into a white-and-blue toothbrush as he lowers his hand back toward his mouth at 00:04-00:05.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "grooming tool (toothbrush)",
+      "invariant_violated": "location & orientation",
+      "description": "From 00:05 to 00:09, the toothbrush's position and orientation in the man's hand do not match its reflection: in the direct foreground view the toothbrush is held vertically below his chin and then several inches away from his face, whereas in the mirror reflection it is angled diagonally and pressed directly against his upper lip and cheek.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"grooming tool (toothbrush/comb) | held vertically in the man's right hand near his mouth/chin, appearing as a white-and-blue toothbrush | held in front of his face in direct view while pressed diagonally against his cheek/lip in the mirror | morphs into a dark comb/brush at the hairline around 00:03, then reverts to a white-and-blue toothbrush at 00:04, with conflicting position and orientation between direct view and mirror reflection at 00:05-00:09\",\n    \"bathroom mirror | wooden frame mounted on wall in front of the man | unchanged | none\",\n    \"wooden door and shelves | visible in background via mirror reflection | unchanged | none\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"grooming tool (toothbrush)\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the man raises the white-and-blue toothbrush from his mouth to his eyebrow and hair (00:02-00:03), the object morphs into a dark grey/black comb-like tool used to brush his hair, then transforms back into a white-and-blue toothbrush as he lowers his hand back toward his mouth at 00:04-00:05.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"grooming tool (toothbrush)\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"From 00:05 to 00:09, the toothbrush's position and orientation in the man's hand do not match its reflection: in the direct foreground view the toothbrush is held vertically below his chin and then several inches away from his face, whereas in the mirror reflection it is angled diagonally and pressed directly against his upper lip and cheek.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

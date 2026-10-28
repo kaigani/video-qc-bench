@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:22:35.093Z",
+  "latencyMs": 27732,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1096,
+    "total_tokens": 2861,
+    "cost": 0.007245,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007245,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00548
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 749,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's right arm | holding brush at chin at 00:00 | holding brush near jawline at 00:09 | raises hand to head at 00:02-00:03 and lowers it back to chin at 00:05",
+    "mirror reflection | reflects man holding brush near mouth at 00:00 | reflects man holding brush near mouth at 00:09 | moves brush across forehead and front hair at 00:02-00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "mirror reflection",
+      "invariant_violated": "proportionality & completion",
+      "description": "As the man raises his hand along the side of his head, the reflection moves its hand across the center of the forehead and eyebrows, failing to match the direction and trajectory of the physical cause.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "man's motion",
+      "invariant_violated": "temporal flow",
+      "description": "After lowering his hand from his hair, the man snaps back into the nearly static pose from 00:00 with minimal continuous motion for the remainder of the shot.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man's right arm | holding brush at chin at 00:00 | holding brush near jawline at 00:09 | raises hand to head at 00:02-00:03 and lowers it back to chin at 00:05\",\n    \"mirror reflection | reflects man holding brush near mouth at 00:00 | reflects man holding brush near mouth at 00:09 | moves brush across forehead and front hair at 00:02-00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"mirror reflection\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"As the man raises his hand along the side of his head, the reflection moves its hand across the center of the forehead and eyebrows, failing to match the direction and trajectory of the physical cause.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"man's motion\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"After lowering his hand from his hair, the man snaps back into the nearly static pose from 00:00 with minimal continuous motion for the remainder of the shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

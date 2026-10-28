@@ -1,0 +1,41 @@
+{
+  "key": "child-marbles__count-stability",
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:45:15.043Z",
+  "latencyMs": 34408,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 1291,
+    "total_tokens": 2880,
+    "cost": 0.008044,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008044,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.006455
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1035,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Balls in glass bowl (and held above it) — 9 total (3 red, 3 green, 3 yellow); child lifts 1 red ball while 2 red, 3 green, and 3 yellow remain visible in the bowl.",
+    "00:01-00:03: Balls on table at bottom-right — 4 partially visible balls (2 red, 1 green, 1 blue) and a small metal cup; cropped out of frame at 00:04 due to camera zoom-in.",
+    "00:02-00:05: Balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); child drops the lifted red ball back in and rests his hand on them.",
+    "00:06-00:09: Balls in glass bowl — 9 total (3 red, 3 green, 3 yellow), with varying partial occlusion and motion blur as the child stirs them rapidly with his right hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Balls in glass bowl (and held above it) — 9 total (3 red, 3 green, 3 yellow); child lifts 1 red ball while 2 red, 3 green, and 3 yellow remain visible in the bowl.\",\n    \"00:01-00:03: Balls on table at bottom-right — 4 partially visible balls (2 red, 1 green, 1 blue) and a small metal cup; cropped out of frame at 00:04 due to camera zoom-in.\",\n    \"00:02-00:05: Balls in glass bowl — 9 total (3 red, 3 green, 3 yellow); child drops the lifted red ball back in and rests his hand on them.\",\n    \"00:06-00:09: Balls in glass bowl — 9 total (3 red, 3 green, 3 yellow), with varying partial occlusion and motion blur as the child stirs them rapidly with his right hand.\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,73 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:42:29.358Z",
+  "latencyMs": 43526,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2837,
+    "total_tokens": 4245,
+    "cost": 0.015593,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015593,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.014185
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2026,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman with umbrella | standing frozen holding a blue umbrella and a red spherical object between her hands at 00:00 | begins moving at 00:03, and the red object vanishes from her hands between 00:07 and 00:08 | transitions from a still freeze-frame to normal motion, then loses the red object",
+    "background pedestrians on the right | man in green shirt, woman in purple, and woman in red shirt frozen mid-stride at 00:00 | completely gone by 00:06 | remain frozen in place until wiped away behind passing pedestrians between 00:04 and 00:06",
+    "left market stall and vendor | vendor in dark blue shirt behind green crate of avocados, blue plums, and red tomatoes at 00:00 | replaced by different stalls and multi-colored crates by 00:04-00:08 | wiped and replaced via compositing masks as pedestrians walk left to right"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "left market stall and vendor",
+      "invariant_violated": "background continuity / compositing wipe",
+      "description": "As the woman in the light blue shirt and the man in the white shirt walk from left to right between 00:01 and 00:04, a visible compositing wipe follows them across the left market stall: the vendor in the dark blue shirt, the blue plums, and the red tomatoes disappear and are replaced by a seated man wearing a face mask and crates of orange and teal fruit.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "background pedestrians on the right",
+      "invariant_violated": "temporal and spatial continuity",
+      "description": "The pedestrians on the right side of the aisle (man in green, woman in purple, woman in red) remain completely frozen in a still frame from 00:00 to 00:04 while foreground pedestrians walk past in real time, and then abruptly vanish behind the central woman and the man in the white shirt between 00:04 and 00:06.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "fruit crates on the left stall",
+      "invariant_violated": "color consistency",
+      "description": "The fruit crates and the produce inside them on the left stall unnaturally shift colors across frames—showing teal-dyed fruit in a teal crate next to orange fruit in a purple crate at 00:05, which then abruptly turn entirely bright purple (both crate and fruit) at 00:06.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red object in the central woman's hands",
+      "invariant_violated": "object permanence",
+      "description": "The bright red spherical object (ball or apple) held between the central woman's hands from 00:00 to 00:07 abruptly vanishes between 00:07 and 00:08, leaving her hands holding only the umbrella shaft.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"central woman with umbrella | standing frozen holding a blue umbrella and a red spherical object between her hands at 00:00 | begins moving at 00:03, and the red object vanishes from her hands between 00:07 and 00:08 | transitions from a still freeze-frame to normal motion, then loses the red object\",\n    \"background pedestrians on the right | man in green shirt, woman in purple, and woman in red shirt frozen mid-stride at 00:00 | completely gone by 00:06 | remain frozen in place until wiped away behind passing pedestrians between 00:04 and 00:06\",\n    \"left market stall and vendor | vendor in dark blue shirt behind green crate of avocados, blue plums, and red tomatoes at 00:00 | replaced by different stalls and multi-colored crates by 00:04-00:08 | wiped and replaced via compositing masks as pedestrians walk left to right\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"left market stall and vendor\",\n      \"invariant_violated\": \"background continuity / compositing wipe\",\n      \"description\": \"As the woman in the light blue shirt and the man in the white shirt walk from left to right between 00:01 and 00:04, a visible compositing wipe follows them across the left market stall: the vendor in the dark blue shirt, the blue plums, and the red tomatoes disappear and are replaced by a seated man wearing a face mask and crates of orange and teal fruit.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"background pedestrians on the right\",\n      \"invariant_violated\": \"temporal and spatial continuity\",\n      \"description\": \"The pedestrians on the right side of the aisle (man in green, woman in purple, woman in red) remain completely frozen in a still frame from 00:00 to 00:04 while foreground pedestrians walk past in real time, and then abruptly vanish behind the central woman and the man in the white shirt between 00:04 and 00:06.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"fruit crates on the left stall\",\n      \"invariant_violated\": \"color consistency\",\n      \"description\": \"The fruit crates and the produce inside them on the left stall unnaturally shift colors across frames—showing teal-dyed fruit in a teal crate next to orange fruit in a purple crate at 00:05, which then abruptly turn entirely bright purple (both crate and fruit) at 00:06.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red object in the central woman's hands\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The bright red spherical object (ball or apple) held between the central woman's hands from 00:00 to 00:07 abruptly vanishes between 00:07 and 00:08, leaving her hands holding only the umbrella shaft.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

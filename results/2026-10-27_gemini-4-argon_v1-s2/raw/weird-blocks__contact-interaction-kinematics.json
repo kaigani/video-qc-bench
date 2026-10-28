@@ -1,0 +1,56 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:04:01.818Z",
+  "latencyMs": 22455,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1688,
+    "total_tokens": 3308,
+    "cost": 0.01006,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01006,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.00844
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1251,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Right hand | enters from top-left gripping the first number block between thumb and index/middle fingers | rests fingertips on the second block from the left at 00:09 | repeatedly grips the rightmost block and drags rightward from 00:00 to 00:07 before moving back left across the row at 00:08-00:09",
+    "Number blocks on table | two green blocks at 00:00 (left block held by hand, right block resting on table) | row of eight blocks resting on table at 00:09 | each time the hand pulls a block to the right, a new block clips out from inside the stationary block"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Rightmost green block and left held block",
+      "invariant_violated": "contact points and solidity",
+      "description": "As the hand lowers the left block, a second blue block clips out from inside it under the fingers, while the separate green block on the right slides rightward across the table before any hand or object makes contact with it.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Number blocks gripped by hand",
+      "invariant_violated": "solidity",
+      "description": "When the hand grips the rightmost green block and pulls to the right, a duplicate block clips and extrudes directly out from inside the stationary block rather than moving as a single rigid body; this interpenetration/splitting repeats at 00:03, 00:04, 00:05, and 00:06 to generate five additional blocks.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Right hand | enters from top-left gripping the first number block between thumb and index/middle fingers | rests fingertips on the second block from the left at 00:09 | repeatedly grips the rightmost block and drags rightward from 00:00 to 00:07 before moving back left across the row at 00:08-00:09\",\n    \"Number blocks on table | two green blocks at 00:00 (left block held by hand, right block resting on table) | row of eight blocks resting on table at 00:09 | each time the hand pulls a block to the right, a new block clips out from inside the stationary block\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Rightmost green block and left held block\",\n      \"invariant_violated\": \"contact points and solidity\",\n      \"description\": \"As the hand lowers the left block, a second blue block clips out from inside it under the fingers, while the separate green block on the right slides rightward across the table before any hand or object makes contact with it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Number blocks gripped by hand\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"When the hand grips the rightmost green block and pulls to the right, a duplicate block clips and extrudes directly out from inside the stationary block rather than moving as a single rigid body; this interpenetration/splitting repeats at 00:03, 00:04, 00:05, and 00:06 to generate five additional blocks.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

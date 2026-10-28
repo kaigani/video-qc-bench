@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:32:01.932Z",
+  "latencyMs": 21452,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1037,
+    "total_tokens": 2657,
+    "cost": 0.006805,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006805,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.005185
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 781,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's torso and lower body | positioned at the front left fender/cowl in front of the windshield at 00:00 | remains embedded in the hood/fender area through 00:09 | clips continuously through the solid car body above the front wheel well",
+    "woman's crossed arms | resting on the top surface of the front left fender/hood at 00:00 | remains resting in the same crossed pose at 00:09 | stable contact with the hood surface and sleeves"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and car hood/fender",
+      "invariant_violated": "solidity",
+      "description": "The woman's torso and lower body clip directly through the solid metal of the station wagon's front left fender and hood, emerging from the car body directly above the front wheel well and in front of the windshield and A-pillar.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's torso and lower body | positioned at the front left fender/cowl in front of the windshield at 00:00 | remains embedded in the hood/fender area through 00:09 | clips continuously through the solid car body above the front wheel well\",\n    \"woman's crossed arms | resting on the top surface of the front left fender/hood at 00:00 | remains resting in the same crossed pose at 00:09 | stable contact with the hood surface and sleeves\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and car hood/fender\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The woman's torso and lower body clip directly through the solid metal of the station wagon's front left fender and hood, emerging from the car body directly above the front wheel well and in front of the windshield and A-pillar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

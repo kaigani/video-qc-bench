@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "00:00.000\u201300:00.250: Small clear pouring container is supported by the person's left hand; right fingers restrain and guide the olives at its mouth above the initially empty large jar.",
+    "00:00.250\u201300:00.500 approximately: First distinguishable green olive leaves the small container and descends inside the large jar, then disappears while the jar interior and bottom remain visible; no exit or hand interception is shown.",
+    "00:00.500\u201300:01.250: A dark purple olive becomes visible falling inside the large jar and bouncing near its bottom. Its connection to the preceding green olive is not visually continuous.",
+    "00:00.500\u201300:01.250: Subsequent green olives pass from the hand-guided pouring container through the jar mouth and bounce at the bottom; three green olives are separately visible near the base at 00:01.000.",
+    "00:01.250\u201300:02.750: Further olives descend from the pouring container into the large jar, forming a mixed green and dark purple pile. Overlap and motion blur prevent reliable individual identities within this batch.",
+    "00:02.750\u201300:03.750: The accumulated olives remain inside the large jar. Right fingers continue working at the small container's mouth; no removal from the large jar is visible.",
+    "00:04.000\u201300:05.250: The left hand carries the small container to the rear metal bowl; hands and container overlap the bowl during reloading. The container rises holding green olives, while some olives and brown pieces remain in the bowl. Individual pickup paths are occluded.",
+    "00:05.250\u201300:06.250: The refilled small container remains in the left hand and moves above the large jar; right fingers control its contents. Dark olives become visible among the green ones as the container tilts.",
+    "00:06.500\u201300:07.250: Green olives leave the small container and enter the large jar; the existing pile stays inside and shifts with arrivals.",
+    "00:07.500\u201300:08.750: Green and dark purple olives pass the right fingers and fall from the tilted small container into the large jar, increasing the pile. The container becomes mostly clear as the last visible stream falls.",
+    "00:08.750\u201300:09.750: Left hand lifts and rotates the small container away; right hand withdraws from its mouth. A green olive is visible inside it at 00:09.750, but fingers and the changing view obscure the far side during emptying, so complete prior emptiness cannot be established.",
+    "00:02.750\u201300:09.750: Olives already deposited remain within the large jar; no hand enters to retrieve them and none visibly exits. The front ceramic bowl's olives remain on the counter without visible manipulation.",
+    "Observation limits: Similar overlapping olives cannot all receive unique identities from these frames. Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "First green olive entering the large glass jar",
+      "invariant_violated": "Continuous chain of custody",
+      "description": "At approximately 00:00.25\u201300:00.50, a green olive visibly passes through the jar mouth and descends into its upper interior, then disappears before reaching the bottom. Several intervening frames show the unobstructed jar interior and base without that olive. A dark purple olive subsequently appears falling and reaches the base around 00:00.50\u201300:00.75. No hand reaches inside, no olive exits, and no continuous path accounts for the missing green olive or its replacement by the dark one.",
+      "severity": "moderate",
+      "confidence": 0.94
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-09__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-10-27T22:43:21.304954+00:00",
+  "status": "complete; blind evaluation and assistant adjudication finished",
+  "ground_truth_defects": 48,
+  "maximum_weighted_detection": 141,
+  "new_defects_recommended_for_immediate_promotion": [],
+  "method": "Non-blind parent audit of original videos via timestamped extracted frames: 2fps for 13 shorts, 0.25fps overview for long clip, selected full-resolution frames and dense follow-ups. No native motion playback or independent audio perception. This is an evidence review, not proof that no other defects exist.",
+  "coverage": [
+    {
+      "video": "_long-scene",
+      "defects_and_weight": "15 / 57",
+      "assessment": "Counter/body geometry, character placement, duplicate waitress, props, lighting and meal chronology are already represented. Overview sampled every 4 seconds; selected original-resolution frames checked. Brief events between samples are not exhaustively audited."
+    },
+    {
+      "video": "child-marbles",
+      "defects_and_weight": "1 / 3",
+      "assessment": "Red-ball duplication and changing ball geometry are covered by MARB-1. No separate additional defect established."
+    },
+    {
+      "video": "dancer-mirror",
+      "defects_and_weight": "4 / 12",
+      "assessment": "Pose mismatch, tattoo changes, hand in front/behind, and extra reflected door are already in the current truth."
+    },
+    {
+      "video": "dialogue",
+      "defects_and_weight": "1 / 2",
+      "assessment": "No additional visual defect established. The audio claim is in the structured truth; audio was not independently heard in this audit."
+    },
+    {
+      "video": "home-tour",
+      "defects_and_weight": "2 / 8",
+      "assessment": "Kitchen connectivity and chairs at the foot of the bed are already covered. Do not count the microwave in the second kitchen as a separate defect."
+    },
+    {
+      "video": "man-cups",
+      "defects_and_weight": "5 / 12",
+      "assessment": "Count/state changes, double tie and extra-finger annotation are already covered. Deliberate sleight of hand must not itself count as a defect."
+    },
+    {
+      "video": "man-in-mirror",
+      "defects_and_weight": "2 / 2",
+      "assessment": "Reflected action mismatch and changing grooming implement are already covered."
+    },
+    {
+      "video": "phone",
+      "defects_and_weight": "1 / 2",
+      "assessment": "Garbled UI and lack of response already belong to PHON-1. No additional defect established."
+    },
+    {
+      "video": "pouring-olives",
+      "defects_and_weight": "4 / 6",
+      "assessment": "Source-vessel and transfer defects are covered. The receiving jar\u2019s side protrusion is visible at the start and end; rejected as a new hardware-appearance claim."
+    },
+    {
+      "video": "skateboarder",
+      "defects_and_weight": "2 / 4",
+      "assessment": "Malformed underside/wheel arrangement is visible in the 2.0s frame and is already SKAT-1. Foot-state problems are already SKAT-2."
+    },
+    {
+      "video": "watchmaker",
+      "defects_and_weight": "1 / 1",
+      "assessment": "The later winding motion is already within WATC-1. The tweezers move down out of frame around 4s; that is insufficient evidence of disappearance."
+    },
+    {
+      "video": "weird-blocks",
+      "defects_and_weight": "1 / 8",
+      "assessment": "Multiplication and color changes are already BLOC-1. A 3\u21926 face change near 7.75s occurs during a turn; without resolving face rotation, it is not a defensible extra text defect."
+    },
+    {
+      "video": "woman-apple",
+      "defects_and_weight": "4 / 10",
+      "assessment": "Apple support/disappearance, unnatural fruit colors and background glyphs are already covered. Do not reintroduce the previously rejected umbrella claim."
+    },
+    {
+      "video": "woman-car",
+      "defects_and_weight": "5 / 14",
+      "assessment": "Body/hood geometry, plate, road, airflow and wiper annotations already exist. No separate additional defect established."
+    }
+  ],
+  "ground_truth_unchanged": true,
+  "blind_protocol": "One independent core evaluation per video \u00d7 six roles; separate feature inventory; deterministic router; three independent evaluations per triggered check; union score; no global confounds or verification pass.",
+  "blind_limitations": [
+    "GPT-6 Astra high reasoning, default service tier, Codex harness.",
+    "Actual input is timestamped image frames with optional denser inspection, not native video.",
+    "Audio currently unassessed, not evidence of silence.",
+    "Fresh task contexts and restricted-path instructions; shared filesystem is not an OS-enforced blind sandbox.",
+    "Existing v2 prompts were developed from this benchmark and include dataset-informed examples. Blind access to labels is not equivalent to an unseen holdout benchmark.",
+    "Three router samples are not three independent complete benchmark replications."
+  ],
+  "followup_candidates": [
+    {
+      "candidate": "mug-merge",
+      "video": "_long-scene",
+      "time": "01:12.5\u201301:14",
+      "recommendation": "Add a distinct mug-conservation defect if human-confirmed. Suggested P2; priority is a proposal and is not scored.",
+      "evidence": "Two visibly separate mugs approach; only one survives, and the waitress withdraws an empty hand.",
+      "finding_ids": [
+        "F002",
+        "F007",
+        "F037",
+        "F091"
+      ],
+      "status": "EXTRA; zero score credit/penalty"
+    },
+    {
+      "candidate": "hatch-kitchen",
+      "video": "_long-scene",
+      "time": "00:19/00:27 versus 00:36\u201300:44; restoration after 00:51",
+      "recommendation": "Add a distinct hatch-background continuity defect if human-confirmed. Suggested P2; priority is a proposal and is not scored.",
+      "evidence": "The hatch changes from a metal extractor/cooking station to a blue-panel and worktop arrangement.",
+      "finding_ids": [
+        "F008",
+        "F064",
+        "F089"
+      ],
+      "status": "EXTRA; zero score credit/penalty"
+    },
+    {
+      "candidate": "counter-return",
+      "video": "_long-scene",
+      "time": "01:52\u201301:53",
+      "recommendation": "Prefer extending LONG-8 to include the later return crossing if desired, rather than creating an automatically separate defect.",
+      "evidence": "The waitress moves from the stool side through the solid counter into the service aisle, after rising. Existing LONG-8 describes approaching to sit.",
+      "finding_ids": [
+        "F004",
+        "F006",
+        "F009",
+        "F034",
+        "F036",
+        "F062",
+        "F065",
+        "F087",
+        "F090"
+      ],
+      "status": "EXTRA under strict event matching; accepting as LONG-8 adds three points once"
+    }
+  ],
+  "final_scores_path": "scores.json",
+  "note": "Initial no-additions conclusion was superseded by original-frame follow-up on frozen blind discoveries. Two new candidates and a LONG-8 extension are now proposed; none is promoted or counted as new truth."
+}

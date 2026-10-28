@@ -1,0 +1,40 @@
+{
+  "key": "child-marbles__possession-tracking",
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:59:30.441Z",
+  "latencyMs": 15393,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 804,
+    "total_tokens": 2359,
+    "cost": 0.005575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005575,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.00402
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 652,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Red ball picked up from inside the glass bowl by the child's left and right hands.",
+    "00:02-00:03: Red ball released from hands back into the glass bowl; left hand moves to rest on the bowl's rim while right hand remains touching the balls inside.",
+    "00:04-00:09: All 8 colored balls (3 red, 3 yellow, 2 green) remain inside the glass bowl while the child's right hand stirs them around continuously."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Red ball picked up from inside the glass bowl by the child's left and right hands.\",\n    \"00:02-00:03: Red ball released from hands back into the glass bowl; left hand moves to rest on the bowl's rim while right hand remains touching the balls inside.\",\n    \"00:04-00:09: All 8 colored balls (3 red, 3 yellow, 2 green) remain inside the glass bowl while the child's right hand stirs them around continuously.\"\n  ],\n  \"findings\": []\n}"
+}

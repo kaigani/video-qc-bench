@@ -1,0 +1,59 @@
+{
+  "key": "phone__text-stability",
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:20.124Z",
+  "latencyMs": 43756,
+  "usage": {
+    "prompt_tokens": 1541,
+    "completion_tokens": 2964,
+    "total_tokens": 4505,
+    "cost": 0.016361,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016361,
+      "upstream_inference_prompt_cost": 0.001541,
+      "upstream_inference_completions_cost": 0.01482
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2174,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone center display text: reads 'λ742' (00:00-00:01, blurry), '2742' / '3742' (00:02), 'Ā7·42' (00:03-00:05, sharp), 'ĀZ·42' with a bottom horizontal bar on the 7 (00:06, sharp), 'Ā7·42' (00:07-00:08, sharp), and garbled slashes '//W' (00:09, tilted/blurry).",
+    "Smartphone top-left status bar text (next to green icon): blurry at 00:00-00:03, reads '7.4Z' (00:04-00:05), '7.42' (00:06-00:08).",
+    "Smartphone top-center status bar text: blurry at 00:00-00:02, reads '4.41' (00:03-00:07).",
+    "Smartphone upper-center header text: blurry at 00:00-00:02, reads 'A¯A' (00:03-00:08).",
+    "Smartphone lower-center text: not visible at 00:00-00:03, reads 'AZ - 12' (00:04-00:06, partial glare), and a garbled small glyph ('x2'/'12') above 'AZ - 12' with malformed strokes on '12' (00:07-00:08)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Smartphone screen UI text",
+      "invariant_violated": "text_legibility",
+      "description": "When the smartphone screen comes into sharp focus (00:04–00:08), the lock-screen/app interface consists of incoherent, garbled pseudo-text and contradictory clock/status strings: the main clock display reads 'Ā7·42' (mixing an overlined letter 'A' with digits), the header reads 'A¯A', the battery status bar reads '7.4Z' next to a separate '4.41' time display, and the bottom text shows a malformed miniature glyph above 'AZ - 12'.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Smartphone center display text ('Ā7·42')",
+      "invariant_violated": "text_stability",
+      "description": "The large central text on the phone screen changes characters without any user interaction: at 00:02 the first character appears as a curved digit ('2742'/'3742') before becoming 'Ā7·42' at 00:03–00:05; at 00:06 the '7' sprouts a horizontal base stroke to become a 'Z'-like glyph ('ĀZ·42'), and at 00:07–00:08 it reverts to 'Ā7·42'.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone center display text: reads 'λ742' (00:00-00:01, blurry), '2742' / '3742' (00:02), 'Ā7·42' (00:03-00:05, sharp), 'ĀZ·42' with a bottom horizontal bar on the 7 (00:06, sharp), 'Ā7·42' (00:07-00:08, sharp), and garbled slashes '//W' (00:09, tilted/blurry).\",\n    \"Smartphone top-left status bar text (next to green icon): blurry at 00:00-00:03, reads '7.4Z' (00:04-00:05), '7.42' (00:06-00:08).\",\n    \"Smartphone top-center status bar text: blurry at 00:00-00:02, reads '4.41' (00:03-00:07).\",\n    \"Smartphone upper-center header text: blurry at 00:00-00:02, reads 'A¯A' (00:03-00:08).\",\n    \"Smartphone lower-center text: not visible at 00:00-00:03, reads 'AZ - 12' (00:04-00:06, partial glare), and a garbled small glyph ('x2'/'12') above 'AZ - 12' with malformed strokes on '12' (00:07-00:08).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Smartphone screen UI text\",\n      \"invariant_violated\": \"text_legibility\",\n      \"description\": \"When the smartphone screen comes into sharp focus (00:04–00:08), the lock-screen/app interface consists of incoherent, garbled pseudo-text and contradictory clock/status strings: the main clock display reads 'Ā7·42' (mixing an overlined letter 'A' with digits), the header reads 'A¯A', the battery status bar reads '7.4Z' next to a separate '4.41' time display, and the bottom text shows a malformed miniature glyph above 'AZ - 12'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Smartphone center display text ('Ā7·42')\",\n      \"invariant_violated\": \"text_stability\",\n      \"description\": \"The large central text on the phone screen changes characters without any user interaction: at 00:02 the first character appears as a curved digit ('2742'/'3742') before becoming 'Ā7·42' at 00:03–00:05; at 00:06 the '7' sprouts a horizontal base stroke to become a 'Z'-like glyph ('ĀZ·42'), and at 00:07–00:08 it reverts to 'Ā7·42'.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

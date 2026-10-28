@@ -1,0 +1,49 @@
+{
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:15:45.560Z",
+  "latencyMs": 64771,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 4557,
+    "total_tokens": 6152,
+    "cost": 0.02438,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02438,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.022785
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4207,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dance studio architecture (left wall with door and exit sign, wooden floor, ceiling lights) | fixed in left/background of frame | unchanged | consistent throughout",
+    "Wall-length mirror and reflected room (reflected door, blue bin, ballet barre, wall plaque) | spans center-right wall | unchanged | consistent background layout throughout",
+    "Dancer (foreground) and mirror reflection | standing facing the mirror, raising right arm at 00:00-00:01 | holding overhead right-arm pose at 00:07-00:09 | at 00:02 the foreground torso/arms violate occlusion and spatial compatibility with the mirror view before returning to normal at 00:03"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Dancer's arms and background mirror/door occlusion",
+      "invariant_violated": "depth ordering & occlusion / viewpoint consistency",
+      "description": "At 00:02, the foreground dancer's upper body becomes geometrically incompatible with the simultaneous view in the mirror and breaks depth ordering: the background mirror surface renders over and truncates her right arm at the elbow while a raised arm appears on her left shoulder (opposite to the mirror reflection, where her right arm is raised), and her lowered left tattooed forearm remains detached at her waist with the background doorframe visible above the elbow.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dance studio architecture (left wall with door and exit sign, wooden floor, ceiling lights) | fixed in left/background of frame | unchanged | consistent throughout\",\n    \"Wall-length mirror and reflected room (reflected door, blue bin, ballet barre, wall plaque) | spans center-right wall | unchanged | consistent background layout throughout\",\n    \"Dancer (foreground) and mirror reflection | standing facing the mirror, raising right arm at 00:00-00:01 | holding overhead right-arm pose at 00:07-00:09 | at 00:02 the foreground torso/arms violate occlusion and spatial compatibility with the mirror view before returning to normal at 00:03\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Dancer's arms and background mirror/door occlusion\",\n      \"invariant_violated\": \"depth ordering & occlusion / viewpoint consistency\",\n      \"description\": \"At 00:02, the foreground dancer's upper body becomes geometrically incompatible with the simultaneous view in the mirror and breaks depth ordering: the background mirror surface renders over and truncates her right arm at the elbow while a raised arm appears on her left shoulder (opposite to the mirror reflection, where her right arm is raised), and her lowered left tattooed forearm remains detached at her waist with the background doorframe visible above the elbow.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

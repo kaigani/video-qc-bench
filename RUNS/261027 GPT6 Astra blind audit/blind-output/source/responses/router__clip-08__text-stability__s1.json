@@ -1,0 +1,21 @@
+{
+  "ledger": [
+    "00:00\u201300:03.25: Foreground phone display is defocused or reflection-obscured; no reliable complete reading for comparison.",
+    "00:03.50\u201300:06.50: Phone's large central readout shows a malformed A-like leading glyph followed by 7.42; moving reflections intermittently conceal characters.",
+    "00:06.75, 00:07.25\u201300:07.75, 00:08.25\u201300:09.00: Central phone readout consistently resembles [malformed A-like glyph]7.42; sharpest unobscured examples at 00:06.75 and 00:08.50. No demonstrated character change.",
+    "00:04.00\u201300:08.75: Upper-left phone status text resembles 7AZ; upper-center status resembles 44 followed by an ambiguous narrow glyph. Their visible forms remain consistent; exact transcription is uncertain.",
+    "00:03.75\u201300:09.00: Phone header resembles A\u2013A, with an elevated connecting stroke; unchanged when visible.",
+    "00:06.75\u201300:08.75: Lower phone label resembles AZ-12, with a small x2-like mark above it; consistent across clear views.",
+    "00:09.25\u201300:09.75: Phone tilts and exits the image; text is too blurred, angled, or cropped for further comparison."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Phone screen's large central readout",
+      "invariant_violated": "Legible text must have coherent glyphs",
+      "description": "At 00:06.75, and again clearly at 00:08.50, the oversized readout begins with a malformed A-like character with a disconnected bent upper stroke and overlapping diagonal strokes, followed by 7.42. The leading character remains visibly garbled in sharp, unobscured views; it is not a transient smear from motion or reflection. The defect is persistent glyph corruption, not an evidenced change between readings.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ]
+}

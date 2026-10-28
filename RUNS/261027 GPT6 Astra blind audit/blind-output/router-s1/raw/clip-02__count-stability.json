@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "00:00.000 \u2014 Bowl: 8 balls, comprising 2 red, 3 yellow and 3 green; hands are above the bowl.",
+    "00:00.250\u201300:00.500 \u2014 Hands enter the bowl and obscure several balls; no reliable complete recount.",
+    "00:00.750 \u2014 A red ball is lifted between the hands while 8 balls remain visible in the bowl: 9 balls total, with no visible addition from outside the group.",
+    "00:01.000, 00:01.250, 00:01.500, 00:01.750, 00:02.000 \u2014 8 balls in the bowl (2 red, 3 yellow, 3 green) plus 1 red ball held above it; total 9.",
+    "00:02.250\u201300:02.750 \u2014 The held red ball is visibly lowered back into the bowl; the hand obscures its release and prevents a complete recount. This transfer does not explain the earlier increase from 8 to 9.",
+    "00:03.000\u201300:05.000 \u2014 Balls remain partly covered by the hand; exposed balls include 2 red, 3 yellow and 3 green across these frames. The returned ball's separate position is unresolved, so no disappearance is asserted.",
+    "00:05.250\u201300:09.750 \u2014 The child stirs the balls continuously. Hand occlusion, overlapping balls and motion blur prevent a reliable complete count; no further count change or definite change into another kind of object is established.",
+    "00:00.000\u201300:01.250 \u2014 Separate tabletop balls at the lower-right edge: 1 red and 1 green are visible, with the group cropped.",
+    "00:01.500\u201300:01.750 \u2014 Separate tabletop balls: 2 red and 1 green visible as the framing widens; the group remains cropped.",
+    "00:02.000\u201300:03.250 \u2014 Separate tabletop balls: 4 visible, comprising 2 red, 1 green and 1 yellow. Additional visibility is explained by camera framing; no manipulation or spontaneous count change is observed.",
+    "00:03.500 onward \u2014 The separate tabletop group progressively leaves the camera framing; cropping is not counted as disappearance."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Red balls in and above the glass bowl",
+      "invariant_violated": "Unexplained count increase",
+      "description": "At 00:00.000 the unobstructed bowl contains 8 balls: 2 red, 3 yellow and 3 green. After the child reaches into the bowl and lifts a red ball, the clear frames from 00:01.000 through 00:02.000 still show those 8 balls in the bowl plus the held red ball, raising the total to 9. No ball is visibly brought in from elsewhere to explain the extra red ball.",
+      "severity": "moderate",
+      "confidence": 0.91
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "count-stability",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__count-stability__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,30 @@
+{
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__spatial-topology-occlusion__s1",
+  "childThreadId": "thread:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__spatial-topology-occlusion__s1",
+  "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-01__spatial-topology-occlusion__s1:ordinal:1",
+  "childNodeId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__spatial-topology-occlusion__s1",
+  "status": "completed",
+  "workState": "result_available",
+  "hasPendingChildRuns": false,
+  "latestTerminalRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-01__spatial-topology-occlusion__s1:ordinal:1",
+  "latestTerminalStatus": "completed",
+  "latestTerminalSummary": null,
+  "latestTerminalResultContextTransferId": null,
+  "providerInstanceId": "codex",
+  "model": "gpt-6-astra",
+  "options": [
+    {
+      "id": "reasoningEffort",
+      "value": "high"
+    },
+    {
+      "id": "serviceTier",
+      "value": "default"
+    }
+  ],
+  "summary": "{\n  \"ledger\": [\n    \"Diner shell and glazing | exterior entrance between broad windows, truck left of building | interior window wall continues beside booth seating | exterior view establishes a single room; window-facing shots place the parking area beyond the glass\",\n    \"Booths and customer aisle | booths line the left window wall in kitchen-facing views; aisle separates booths from counter stools | same arrangement in the final wide shot | reverse views should place glazing and booths on the opposite screen side without exchanging their physical positions\",\n    \"Main counter | long solid counter on the right, with a rounded foreground return and wood-paneled customer face | same continuous counter separates customer aisle from service area | tabletop and front panel must block lower bodies behind them; crossing between sides requires going around an end\",\n    \"Stool row | stools follow the customer edge of the counter, facing the service wall | row remains beside the same counter edge | seated customers occupy the aisle side; stools remain in front of the counter panel\",\n    \"Kitchen hatch and cooking area | far-wall rectangular hatch reveals a broad stainless extractor hood and cooking equipment | later hatch views again show the hood arrangement | at 00:36 the same opening instead reveals a cabinet-lined preparation area with a blue panel\",\n    \"Service wall | coffee equipment and worktop behind the counter on the right; doorway beside the kitchen hatch | same service strip remains visible at the end | closer kitchen-facing views retain hatch-left/equipment-right ordering\",\n    \"Entrance and reverse sightline | kitchen-facing views look away from the entrance | kitchen-side reverse view shows the entrance and exit sign beyond the counter, with windows to the right | hatch framing occludes the room edges while the counter recedes toward the entrance\",\n    \"People relative to counter | server works on service side; customer approaches along the booth-side aisle and sits | server returns from customer side to service side | ordinary counter occlusion holds in most shots; at 01:52 her body crosses the continuous counter instead of passing around its end\",\n    \"Window, truck, and exterior pedestrian | truck established outside the diner | customer walks between diner glazing and truck cab | window mullions frame the exterior; pedestrian occludes truck; server's translucent window reflection overlays the exterior view\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:36\",\n      \"entity\": \"Kitchen background through the service hatch\",\n      \"invariant_violated\": \"Fixed layout across cuts\",\n      \"description\": \"The kitchen-facing wide shot replaces the stainless extractor hood and cooking line visible through the hatch at 00:19–00:27 with tan wall cabinets, a preparation counter, and a blue panel on the left. The hatch, adjacent window, clock, and main counter retain essentially the same viewing alignment, so this is a different fixed kitchen arrangement through the same opening, not a reverse angle. The original hood arrangement is visible again at 00:51.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"Server crossing the main counter\",\n      \"invariant_violated\": \"Solid-boundary crossing and depth ordering\",\n      \"description\": \"After rising from a customer-side stool, the server steps right through the continuous rounded counter. During the crossing, the tabletop cuts across her hips while a trousered leg remains visible in front of the solid wooden panel; she then emerges fully in the service aisle by 01:53. The counter remains intact throughout, and she never reaches or passes around its end.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}",
+  "resultContextTransferId": "context-transfer:type:subagent_result:source-thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-01__spatial-topology-occlusion__s1:target-thread:thread%3Adelegated-task%3Acommand%253Amcp%253Acf73e3ea-a778-4e5b-b379-88410c4fba15%253Adelegate-task%253Aastra-blind-v2-261027-round1:95257e52-ca13-4d39-a9dc-3d62cd70d6e7",
+  "hasPendingQuestion": false,
+  "pendingApproval": null,
+  "waitTimedOut": false
+}

@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__baseline-generalist",
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:07:12.831Z",
+  "latencyMs": 22698,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1109,
+    "total_tokens": 2517,
+    "cost": 0.006953,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006953,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.005545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 893,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman | positioned mid-hood in front of the windshield with arms crossed resting on the hood | remains embedded in the hood/cowl area as camera pushes in | torso impossibly intersects solid car body throughout",
+    "station wagon | beige vintage wood-paneled wagon parked on desert road | camera pushes in toward hood and windshield | solid hood and windshield occupied by woman's torso"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and station wagon",
+      "invariant_violated": "solid object non-interpenetration",
+      "description": "The woman's torso emerges vertically straight out of the solid metal hood and cowl in front of the windshield, well inboard of the driver's side fender, with no opening for her lower body.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman | positioned mid-hood in front of the windshield with arms crossed resting on the hood | remains embedded in the hood/cowl area as camera pushes in | torso impossibly intersects solid car body throughout\",\n    \"station wagon | beige vintage wood-paneled wagon parked on desert road | camera pushes in toward hood and windshield | solid hood and windshield occupied by woman's torso\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and station wagon\",\n      \"invariant_violated\": \"solid object non-interpenetration\",\n      \"description\": \"The woman's torso emerges vertically straight out of the solid metal hood and cowl in front of the windshield, well inboard of the driver's side fender, with no opening for her lower body.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

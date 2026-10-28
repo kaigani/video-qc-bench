@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__causal-temporal-sequence",
+  "video": "dancer-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:15:50.232Z",
+  "latencyMs": 34769,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1913,
+    "total_tokens": 3678,
+    "cost": 0.01133,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01133,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.009565
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1612,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer right arm | lowered at side at 00:00 | raised overhead at 00:09 | raised at 00:01, abruptly swaps to left arm at 00:02, resumes lowering from overhead at 00:03-00:04, and raises again at 00:06-00:09",
+    "mirror reflection | matches dancer posture at 00:00 | matches dancer posture at 00:09 | continuously shows the viewer-right arm raised at 00:02 despite the foreground dancer switching arms"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer and mirror reflection",
+      "invariant_violated": "temporal flow and cause-effect consistency",
+      "description": "During a continuous right-arm raise between 00:01 and 00:03, the foreground dancer abruptly switches to having her left arm raised at 00:02 before snapping back to the right arm at 00:03, while the mirror reflection continues showing the original arm raised without reflecting the change.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer right arm | lowered at side at 00:00 | raised overhead at 00:09 | raised at 00:01, abruptly swaps to left arm at 00:02, resumes lowering from overhead at 00:03-00:04, and raises again at 00:06-00:09\",\n    \"mirror reflection | matches dancer posture at 00:00 | matches dancer posture at 00:09 | continuously shows the viewer-right arm raised at 00:02 despite the foreground dancer switching arms\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer and mirror reflection\",\n      \"invariant_violated\": \"temporal flow and cause-effect consistency\",\n      \"description\": \"During a continuous right-arm raise between 00:01 and 00:03, the foreground dancer abruptly switches to having her left arm raised at 00:02 before snapping back to the right arm at 00:03, while the mirror reflection continues showing the original arm raised without reflecting the change.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

@@ -1,0 +1,30 @@
+{
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__possession-tracking__s1",
+  "childThreadId": "thread:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__possession-tracking__s1",
+  "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-02__possession-tracking__s1:ordinal:1",
+  "childNodeId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__possession-tracking__s1",
+  "status": "completed",
+  "workState": "result_available",
+  "hasPendingChildRuns": false,
+  "latestTerminalRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-02__possession-tracking__s1:ordinal:1",
+  "latestTerminalStatus": "completed",
+  "latestTerminalSummary": null,
+  "latestTerminalResultContextTransferId": null,
+  "providerInstanceId": "codex",
+  "model": "gpt-6-astra",
+  "options": [
+    {
+      "id": "reasoningEffort",
+      "value": "high"
+    },
+    {
+      "id": "serviceTier",
+      "value": "default"
+    }
+  ],
+  "summary": "{\n  \"ledger\": [\n    \"Hand labels are the child's anatomical hands: right hand enters from screen-left; left hand is at screen-right. Same-colored balls lack distinguishing marks, so individual identities become uncertain during stirring.\",\n    \"Red ball R1, initially at the bowl's front-left: 00:00.000 inside glass bowl → 00:00.250–00:00.750 contacted/occluded by right fingers → 00:01.000–00:02.000 remains in bowl while another red ball is held above it → 00:02.500–00:05.000 among balls beneath right fingers → 00:05.250–00:09.750 stirred inside bowl; individual identity unresolved.\",\n    \"Red ball R2, initially near bowl center: 00:00.000 inside glass bowl → 00:00.250–00:00.750 partly occluded by reaching hands → 00:01.000–00:02.000 visible in bowl beside R1 → 00:02.500–00:05.000 beneath/adjacent to right fingertips → 00:05.250–00:09.750 stirred inside bowl; individual identity unresolved.\",\n    \"Lifted red ball R3: 00:00.250–00:00.500 acquisition obscured by hands inside bowl → 00:00.750 emerging between hands → 00:01.000–00:02.000 held between both hands above bowl, with two other red balls visible below → 00:02.250 lowered by right hand → 00:02.500 returned among bowl contents → 00:02.750–00:09.750 remains among handled bowl contents; identity becomes unresolved.\",\n    \"Yellow ball Y1, initially front-left: 00:00.000 inside bowl → 00:00.250–00:00.750 near/under right fingers → 00:01.000–00:04.750 still at bowl front-left → 00:05.000–00:05.500 displaced by right-hand sweep → 00:05.750–00:09.750 yellow balls roll within bowl; individual identity unresolved.\",\n    \"Yellow ball Y2, initially rear-center: 00:00.000–00:00.750 inside bowl near reaching hands → 00:01.000–00:05.000 remains near rear of ball cluster → 00:05.250–00:09.750 joins right-hand stirring inside bowl; individual identity unresolved.\",\n    \"Yellow ball Y3, initially right side: 00:00.000–00:05.000 inside bowl at right of cluster → 00:05.250 contacted by sweeping right fingers → 00:05.500–00:09.750 rolls among stirred contents; individual identity unresolved.\",\n    \"Green ball G1, initially rear-left: 00:00.000 inside bowl → 00:00.250–00:00.750 partly covered by right hand → 00:01.000–00:05.250 visible near rear-left of cluster → 00:05.500–00:09.750 stirred within bowl; individual identity unresolved.\",\n    \"Green ball G2, initially mid-right: 00:00.000–00:05.000 inside bowl between yellow balls, intermittently occluded by hands → 00:05.250–00:09.750 displaced during right-hand stirring; individual identity unresolved.\",\n    \"Green ball G3, initially front-right: 00:00.000–00:05.250 inside bowl near front rim → 00:05.500–00:09.750 rolls among stirred contents; individual identity unresolved.\",\n    \"Glass bowl: 00:00.000 resting on wooden table → approximately 00:02.500–00:09.750 left fingers steady its right/rear rim while right hand handles contents. No ball is visibly taken from outside the bowl or carried out during stirring.\",\n    \"Additional red balls: 00:07.750 at least four spatially separate red balls are visible simultaneously within the bowl; 00:09.500 again shows more than the three red balls accounted for during the earlier lift-and-return sequence. Their entry into the bowl is not shown.\",\n    \"Assessment uses supplied visual samples from 00:00.000–00:09.750. Finger occlusion and motion blur prevent uninterrupted individual identification during rapid stirring. Audio is unassessed.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Red balls inside the glass bowl\",\n      \"invariant_violated\": \"Continuous chain of custody\",\n      \"description\": \"At 00:01.000–00:02.000, one red ball is held above the bowl and two remain inside. The held ball is returned by 00:02.500. During subsequent stirring neither hand brings in another ball, yet at 00:07.750 at least four separate red balls are visible: beneath the resting left fingers, near the center, at front-right, and partly beneath the stirring right fingers at front-left. More than three red balls are again visible at 00:09.500. The additional red ball has no visible source or transfer into the bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    }\n  ]\n}",
+  "resultContextTransferId": "context-transfer:type:subagent_result:source-thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-02__possession-tracking__s1:target-thread:thread%3Adelegated-task%3Acommand%253Amcp%253Acf73e3ea-a778-4e5b-b379-88410c4fba15%253Adelegate-task%253Aastra-blind-v2-261027-round1:07b1b393-0dd9-4686-8b64-4e33c37e97e3",
+  "hasPendingQuestion": false,
+  "pendingApproval": null,
+  "waitTimedOut": false
+}

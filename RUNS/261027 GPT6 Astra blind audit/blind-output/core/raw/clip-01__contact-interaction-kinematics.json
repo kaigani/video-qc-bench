@@ -1,0 +1,42 @@
+{
+  "ledger": [
+    "Woman's right hand / cloth / counter | Contact first clearly visible at 00:11; palm presses cloth onto countertop | Contact continues through 00:23; cloth rests separately on counter by 00:24 | Cloth follows the wiping hand across the surface; exact initial touch and release fall outside clearly resolved samples.",
+    "Woman's left hand / counter | Palm visibly rests on counter at 00:11\u201300:13 | Hand again supports her beside the pouring action at 00:24\u201300:27 | Intermittent resting contact; no visible penetration or unsupported leaning; intervening touch/release instants are not resolved.",
+    "Man / floor / stool / counter | Walks toward counter at 00:19\u201300:24 with alternating leg positions | Seated by 00:26; remains supported on stool in subsequent diner views | Hand contacts counter by 00:25 as he lowers onto stool; seat contact occurs between 00:25 and 00:26 and is partly occluded. Departure from stool is not shown.",
+    "Woman's right hand / coffee pot | Handle grip already established when pot is visibly raised at 00:24 | Still held as pot withdraws at 00:32.292; release not shown | Hand encloses handle in the wide view; pot tilts for pouring at 00:28\u201300:30 and returns upright by 00:31. Close-up crops part of the grip.",
+    "Man's hands / first mug / counter | Hand encloses mug at 00:27 | Mug rests on its base with hand withdrawn by 00:28 | Contact release occurs between the supplied 00:27.125 and 00:28 views; mug remains supported during pouring. Both hands surround a counter-supported mug again at 00:36\u201300:44.917; that grip's onset and release are offscreen.",
+    "Plate / food / counter | Plate and its contents already supported at 00:32 | Remain supported through 00:36.417 | No placement or lifting action is shown in this close-up.",
+    "Woman's right hand / cloth / serving ledge | Contact already established at 00:44.958 | Still established at 00:51.333 before cut | Palm and fingers press cloth against ledge during wiping and the pause at 00:46\u201300:48; release not shown.",
+    "Woman's hands / plate | Fingers contact plate rim by 01:09 | Plate carried away at 01:15\u201301:17.542; release not shown | Rim contact accompanies small repositioning movements at 01:09\u201301:14; fingers support the plate as it lifts from the counter by 01:15.",
+    "Man's and woman's hands / mugs at counter | Man grips his mug by 01:11; woman holds another mug by 01:12 | Man's mug is counter-supported by 01:14; woman's reaching hand withdraws | Raised mugs move with their respective hands at 01:12\u201301:13. Their closest approach is partly occluded; exact inter-mug contact and the woman's release are not clearly resolved.",
+    "Woman / adjacent stool / mug | Approaches beside seated man at 01:20\u201301:21 | Seated by 01:22; hands visibly surround counter-supported mug at 01:26.792\u201301:35.208 | Seat contact develops between 01:21 and 01:22 behind partial occlusion; neither departure nor mug release is shown in this shot.",
+    "Hands / banknotes / counter | Fingers visibly press banknotes onto counter at 01:38 | Both hands withdrawn by 01:40; banknotes remain supported | Finger contact persists at 01:39 while the other hand has withdrawn; final release occurs between 01:39 and 01:40.",
+    "Man / ground / truck door | Walking toward truck at 01:41\u201301:46 | Reaches door by 01:47; door opens at 01:48\u201301:49 | Grounded walking is visible; hand-to-handle region is small and partly obscured, preventing exact grip-onset timing. Door remains adjacent to his reaching hand; release and cab entry are not shown clearly.",
+    "Woman / stool / mug / counter in final shot | Seated with stool support at 01:50.208; reaches toward mug while rising at 01:51 | Behind counter by 01:53 | Mug contact precedes carrying; seat support is released as she stands. At 01:52 her hips and trailing leg cross the counter's solid edge and front panel instead of clearing its end. Mug release at rear work surface is obscured.",
+    "Truck wheels / ground | Parked vehicle supported on ground in opening exterior | Wheels remain ground-supported in 01:41\u201301:50 exterior views | No wheel lift or unsupported vehicle movement is visible; contact is already established when each view begins."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Woman's hips and legs / diner counter",
+      "invariant_violated": "Body passes through solid counter",
+      "description": "After rising from the customer-side stool, the woman moves diagonally through the counter into the staff aisle. The continuous countertop edge cuts across her hips while her trailing leg remains visible on the customer side below it, then disappears through the solid front panel. She does not walk around an end or pass through an opening; the counter remains intact throughout the crossing.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

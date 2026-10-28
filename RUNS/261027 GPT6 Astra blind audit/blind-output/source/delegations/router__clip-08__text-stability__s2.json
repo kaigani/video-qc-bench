@@ -1,0 +1,30 @@
+{
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-08__text-stability__s2",
+  "childThreadId": "thread:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-08__text-stability__s2",
+  "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-08__text-stability__s2:ordinal:1",
+  "childNodeId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-08__text-stability__s2",
+  "status": "completed",
+  "workState": "result_available",
+  "hasPendingChildRuns": false,
+  "latestTerminalRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-08__text-stability__s2:ordinal:1",
+  "latestTerminalStatus": "completed",
+  "latestTerminalSummary": null,
+  "latestTerminalResultContextTransferId": null,
+  "providerInstanceId": "codex",
+  "model": "gpt-6-astra",
+  "options": [
+    {
+      "id": "reasoningEffort",
+      "value": "high"
+    },
+    {
+      "id": "serviceTier",
+      "value": "default"
+    }
+  ],
+  "summary": "{\n  \"ledger\": [\n    \"00:00–00:02.75 — Phone screen: out of focus; large central digits resemble '742', but these frames do not support exact character comparisons.\",\n    \"00:03–00:06.50 — Phone central readout: increasingly readable as an abnormal A-like glyph with an extra hooked stroke followed by '7.42'; moving glare intermittently obscures characters.\",\n    \"00:06.75, 00:07.25–00:07.75, 00:08.25–00:09 — Phone central readout: the same malformed leading glyph followed by '7.42'; sharpest at 00:06.75 and 00:08.75, with no supported character change.\",\n    \"00:04.25–00:08.75 — Phone upper-left readout: approximately '7A2'; same appearance at the clearest moments, including 00:06.75 and 00:08.75.\",\n    \"00:04.25–00:08.75 — Phone upper-center readout: '44' followed by an ambiguous malformed character; clearest at 00:06.75.\",\n    \"00:04.25–00:09 — Phone heading beneath the upper readouts: 'A' and 'A' joined by a raised horizontal stroke, approximately 'A–A'; unchanged in clear views.\",\n    \"00:06.75, 00:07.25–00:07.75, 00:08.25–00:08.75 — Phone lower label: approximately 'AZ-12', with an irregular final character; a separate small mark above resembles 'x2'. These retain the same appearance.\",\n    \"00:09.25–00:09.75 — Phone tilts away and leaves the frame; no further reliable readings.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Phone screen text and central numeric readout\",\n      \"invariant_violated\": \"Coherent readable text\",\n      \"description\": \"At 00:06.75, with the screen sharp and glare clear of the text, the large '7.42' readout is prefixed by a malformed A-like character with an extra detached hooked stroke. Surrounding labels resemble 'A–A' and 'AZ-12', with malformed character shapes rather than a coherent readable interface. The same malformed rendering is clearly visible at 00:08.75, so it is not explained by transient blur, compression, or glare. No unexplained change between clear readings is established.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}",
+  "resultContextTransferId": "context-transfer:type:subagent_result:source-thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-router__clip-08__text-stability__s2:target-thread:thread%3Adelegated-task%3Acommand%253Amcp%253Acf73e3ea-a778-4e5b-b379-88410c4fba15%253Adelegate-task%253Aastra-blind-v2-261027-round1:78e7e328-21a7-4f00-9bde-a3b54be626cd",
+  "hasPendingQuestion": false,
+  "pendingApproval": null,
+  "waitTimedOut": false
+}

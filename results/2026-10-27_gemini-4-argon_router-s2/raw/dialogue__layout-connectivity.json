@@ -1,0 +1,50 @@
+{
+  "key": "dialogue__layout-connectivity",
+  "video": "dialogue.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:47:05.555Z",
+  "latencyMs": 70907,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 5013,
+    "total_tokens": 6578,
+    "cost": 0.02663,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02663,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.025065
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4584,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:07 Established room layout: The man stands in front of a wooden door with two vertical recessed panels and a round brass ornament at the top center. A solid dark-blue coat hangs on a hook on the door's left panel.",
+    "00:00-00:07 Established right-side layout: To the right of the center door's right panel is a vertical strip of green wall with a wooden switch box, followed on the far right by another wood-paneled section holding a framed picture.",
+    "00:00-00:07 Established left-side layout: To the left of the center door is a perpendicular wall with another wooden door seen at a steep angle along the left edge of the frame.",
+    "00:07-00:09 Traversal and camera pan: The man turns to screen left and steps toward the left-hand door to knock on it as the camera pans left, revealing the area that was previously behind him and to his left."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "Center door and surrounding wall layout",
+      "invariant_violated": "Spatial layout and wall/door continuity",
+      "description": "As the man steps left to knock on the adjacent door and the camera pans left, the established layout of the door and wall behind him warps impossibly: the right vertical panel of the center door, its top-center round brass ornament, and the adjacent green wall strip with the wooden switch box all vanish. Instead, a wood-paneled section with a framed picture appears immediately to the right of the hanging blue coat (which also gains a white stripe), in the exact space occupied seconds earlier by the right half of the wooden door.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:07 Established room layout: The man stands in front of a wooden door with two vertical recessed panels and a round brass ornament at the top center. A solid dark-blue coat hangs on a hook on the door's left panel.\",\n    \"00:00-00:07 Established right-side layout: To the right of the center door's right panel is a vertical strip of green wall with a wooden switch box, followed on the far right by another wood-paneled section holding a framed picture.\",\n    \"00:00-00:07 Established left-side layout: To the left of the center door is a perpendicular wall with another wooden door seen at a steep angle along the left edge of the frame.\",\n    \"00:07-00:09 Traversal and camera pan: The man turns to screen left and steps toward the left-hand door to knock on it as the camera pans left, revealing the area that was previously behind him and to his left.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Center door and surrounding wall layout\",\n      \"invariant_violated\": \"Spatial layout and wall/door continuity\",\n      \"description\": \"As the man steps left to knock on the adjacent door and the camera pans left, the established layout of the door and wall behind him warps impossibly: the right vertical panel of the center door, its top-center round brass ornament, and the adjacent green wall strip with the wooden switch box all vanish. Instead, a wood-paneled section with a framed picture appears immediately to the right of the hanging blue coat (which also gains a white stripe), in the exact space occupied seconds earlier by the right half of the wooden door.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

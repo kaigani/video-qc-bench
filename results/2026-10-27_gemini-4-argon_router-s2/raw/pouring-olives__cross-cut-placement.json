@@ -1,0 +1,43 @@
+{
+  "key": "pouring-olives__cross-cut-placement",
+  "video": "pouring-olives.mp4",
+  "role": "cross-cut-placement",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:51:28.057Z",
+  "latencyMs": 18799,
+  "usage": {
+    "prompt_tokens": 1605,
+    "completion_tokens": 1203,
+    "total_tokens": 2808,
+    "cost": 0.00762,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00762,
+      "upstream_inference_prompt_cost": 0.001605,
+      "upstream_inference_completions_cost": 0.006015
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 924,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Shot 1: 00:00-00:04, medium close-up frontal/high-angle view of kitchen island counter with stove in background",
+    "Shot 2: 00:04-00:09, same camera framing after a jump cut (editing ellipsis skipping the refilling of the small cup), slight pan left/up",
+    "Anchors: (1) wooden cutting board with large glass jar on foreground counter, (2) stainless steel stove in background, (3) metal and ceramic olive bowls on counter right",
+    "Shot 1 state — Person in blue shirt: present, standing behind wooden cutting board and in front of stove, facing counter/camera, pouring olives from small cup into jar then reaching toward metal bowl",
+    "Shot 2 state — Person in blue shirt: present, standing in same position behind cutting board and in front of stove, facing counter/camera, lifting refilled small cup from right and pouring olives into jar",
+    "Diff Shot 1 -> Shot 2: jump cut with implied elapsed time (olives transferred from metal bowl to small cup); person remains in consistent position with no cross-cut placement violations"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Shot 1: 00:00-00:04, medium close-up frontal/high-angle view of kitchen island counter with stove in background\",\n    \"Shot 2: 00:04-00:09, same camera framing after a jump cut (editing ellipsis skipping the refilling of the small cup), slight pan left/up\",\n    \"Anchors: (1) wooden cutting board with large glass jar on foreground counter, (2) stainless steel stove in background, (3) metal and ceramic olive bowls on counter right\",\n    \"Shot 1 state — Person in blue shirt: present, standing behind wooden cutting board and in front of stove, facing counter/camera, pouring olives from small cup into jar then reaching toward metal bowl\",\n    \"Shot 2 state — Person in blue shirt: present, standing in same position behind cutting board and in front of stove, facing counter/camera, lifting refilled small cup from right and pouring olives into jar\",\n    \"Diff Shot 1 -> Shot 2: jump cut with implied elapsed time (olives transferred from metal bowl to small cup); person remains in consistent position with no cross-cut placement violations\"\n  ],\n  \"findings\": []\n}"
+}

@@ -1,0 +1,65 @@
+{
+  "key": "man-cups__count-stability",
+  "video": "man-cups.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:34:24.578Z",
+  "latencyMs": 33974,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2358,
+    "total_tokens": 3947,
+    "cost": 0.013379,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013379,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01179
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1752,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Brown/silver cups on table: 00:00-00:07 count is 4; at 00:08-00:09 count drops to 3 with no cup removed or occluded.",
+    "Stack of coins inside the center cup: 00:00-00:02 cup is filled to the brim with coins; at 00:03 the coins inside vanish completely without the performer touching the cup.",
+    "Loose gold coins on the cream central mat: 00:02-00:03 2 coins lie in front of the cups; at 00:04 a 3rd coin appears under the leftmost cup, and by 00:05-00:06 the loose coins on the mat vanish without being picked up."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coins inside the center cup",
+      "invariant_violated": "unexplained count change",
+      "description": "From 00:00 to 00:02, the center cup is filled to the rim with large coins. At 00:03, while both of the performer's hands are away from that cup, the coins inside vanish completely, leaving the cup empty.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "loose gold coins on the cream table mat",
+      "invariant_violated": "unexplained count change",
+      "description": "At 00:03 there are 2 loose coins on the cream mat in front of the cups; at 00:04 a 3rd gold coin spontaneously appears beneath the front-left cup without being placed there, and by 00:06 the loose coins on the mat disappear untouched.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "brown/silver cups",
+      "invariant_violated": "unexplained count change",
+      "description": "There are 4 cups on the table from 00:00 through 00:07. Between 00:07 and 00:08, as the performer's left hand moves slightly across the table, the rightmost cup vanishes completely, leaving only 3 cups for the rest of the video.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Brown/silver cups on table: 00:00-00:07 count is 4; at 00:08-00:09 count drops to 3 with no cup removed or occluded.\",\n    \"Stack of coins inside the center cup: 00:00-00:02 cup is filled to the brim with coins; at 00:03 the coins inside vanish completely without the performer touching the cup.\",\n    \"Loose gold coins on the cream central mat: 00:02-00:03 2 coins lie in front of the cups; at 00:04 a 3rd coin appears under the leftmost cup, and by 00:05-00:06 the loose coins on the mat vanish without being picked up.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coins inside the center cup\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"From 00:00 to 00:02, the center cup is filled to the rim with large coins. At 00:03, while both of the performer's hands are away from that cup, the coins inside vanish completely, leaving the cup empty.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"loose gold coins on the cream table mat\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"At 00:03 there are 2 loose coins on the cream mat in front of the cups; at 00:04 a 3rd gold coin spontaneously appears beneath the front-left cup without being placed there, and by 00:06 the loose coins on the mat disappear untouched.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"brown/silver cups\",\n      \"invariant_violated\": \"unexplained count change\",\n      \"description\": \"There are 4 cups on the table from 00:00 through 00:07. Between 00:07 and 00:08, as the performer's left hand moves slightly across the table, the rightmost cup vanishes completely, leaving only 3 cups for the rest of the video.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

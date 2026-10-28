@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:04:29.825Z",
+  "latencyMs": 25214,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 912,
+    "total_tokens": 2677,
+    "cost": 0.006325,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006325,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00456
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 589,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand and number blocks | hand grasps first block on table at 00:00 | hand taps second block on left at 00:09 | hand repeats identical tilting gesture across the row from 00:00 to 00:07 as blocks appear without being fetched, then reverses direction from 00:07 to 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "hand and number blocks",
+      "invariant_violated": "temporal flow and effect-without-cause",
+      "description": "The hand performs a repetitive, looping tilt gesture from 00:01 to 00:07 while sliding right, causing new blocks to appear in sequence without the hand ever reaching to fetch or place them.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "hand",
+      "invariant_violated": "proportionality and completion",
+      "description": "After moving right to the end of the row at 00:07, the hand abruptly shifts leftward across the middle blocks doing disconnected tapping motions without a continuous reach trajectory.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand and number blocks | hand grasps first block on table at 00:00 | hand taps second block on left at 00:09 | hand repeats identical tilting gesture across the row from 00:00 to 00:07 as blocks appear without being fetched, then reverses direction from 00:07 to 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"hand and number blocks\",\n      \"invariant_violated\": \"temporal flow and effect-without-cause\",\n      \"description\": \"The hand performs a repetitive, looping tilt gesture from 00:01 to 00:07 while sliding right, causing new blocks to appear in sequence without the hand ever reaching to fetch or place them.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"hand\",\n      \"invariant_violated\": \"proportionality and completion\",\n      \"description\": \"After moving right to the end of the row at 00:07, the hand abruptly shifts leftward across the middle blocks doing disconnected tapping motions without a continuous reach trajectory.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

@@ -1,0 +1,57 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:57:10.456Z",
+  "latencyMs": 31528,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1263,
+    "total_tokens": 3028,
+    "cost": 0.00808,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00808,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.006315
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 857,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand and coin | reaches into foreground cup at 00:01 | hovers above cup holding coin at 00:09 | action of placing or retrieving coin stalls on cup exterior from 00:03 to 00:07 without completing",
+    "left hand and coin | holds coin above table at 00:00 | rests fingers on coin on table at 00:09 | reaches toward back cup at 00:03-00:06 without completing placement",
+    "coin on middle cup | rests flat on rim of middle cup at 00:00 | disappears inside cup by 00:03 | sinks into cup between 00:02 and 00:03 with no contact"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "coin on middle cup",
+      "invariant_violated": "effect without cause",
+      "description": "The coin resting on top of the middle cup sinks down into the cup between 00:02 and 00:03 without being touched or acted upon.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "man's hands and coins",
+      "invariant_violated": "proportionality & completion",
+      "description": "The initiated action of placing coins into the cups stalls mid-motion, with the coins sliding along the exterior rims from 00:03 to 00:07 rather than completing the drop.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand and coin | reaches into foreground cup at 00:01 | hovers above cup holding coin at 00:09 | action of placing or retrieving coin stalls on cup exterior from 00:03 to 00:07 without completing\",\n    \"left hand and coin | holds coin above table at 00:00 | rests fingers on coin on table at 00:09 | reaches toward back cup at 00:03-00:06 without completing placement\",\n    \"coin on middle cup | rests flat on rim of middle cup at 00:00 | disappears inside cup by 00:03 | sinks into cup between 00:02 and 00:03 with no contact\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"coin on middle cup\",\n      \"invariant_violated\": \"effect without cause\",\n      \"description\": \"The coin resting on top of the middle cup sinks down into the cup between 00:02 and 00:03 without being touched or acted upon.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"man's hands and coins\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"The initiated action of placing coins into the cups stalls mid-motion, with the coins sliding along the exterior rims from 00:03 to 00:07 rather than completing the drop.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__text-stability",
+  "video": "_long-scene.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:42:28.210Z",
+  "latencyMs": 39461,
+  "usage": {
+    "prompt_tokens": 12443,
+    "completion_tokens": 1926,
+    "total_tokens": 14369,
+    "cost": 0.022073,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022073,
+      "upstream_inference_prompt_cost": 0.012443,
+      "upstream_inference_completions_cost": 0.00963
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1615,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Neon window sign (00:19-00:26, 00:36-00:44, 01:00-01:26, 01:50-01:58): 'OPEN'",
+    "Exit sign above door (00:45-00:50): 'EXIT'",
+    "Banknote on counter (01:38-01:40): shifts from '1' to conflicting '2' and '100' with garbled serial text",
+    "Truck hood emblem (01:41-01:45): indistinct/garbled badge lettering"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:39",
+      "entity": "Banknote on counter",
+      "invariant_violated": "Text legibility and stability",
+      "description": "In close-up, the bill's corner denomination changes as the hand lifts (from '1' at 01:38 to '100' at 01:39), displaying contradictory denominations ('2' top-left, '100' bottom-right) and garbled serial characters.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Neon window sign (00:19-00:26, 00:36-00:44, 01:00-01:26, 01:50-01:58): 'OPEN'\",\n    \"Exit sign above door (00:45-00:50): 'EXIT'\",\n    \"Banknote on counter (01:38-01:40): shifts from '1' to conflicting '2' and '100' with garbled serial text\",\n    \"Truck hood emblem (01:41-01:45): indistinct/garbled badge lettering\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"Banknote on counter\",\n      \"invariant_violated\": \"Text legibility and stability\",\n      \"description\": \"In close-up, the bill's corner denomination changes as the hand lifts (from '1' at 01:38 to '100' at 01:39), displaying contradictory denominations ('2' top-left, '100' bottom-right) and garbled serial characters.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

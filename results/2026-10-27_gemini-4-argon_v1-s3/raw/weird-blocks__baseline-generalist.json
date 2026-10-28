@@ -1,0 +1,94 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:26:42.391Z",
+  "latencyMs": 21854,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1881,
+    "total_tokens": 3289,
+    "cost": 0.010813,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010813,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.009405
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 871,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (far left) | green cube with number 2 | blue cube with number 2 | changes color from green to blue at 00:01",
+    "Block 2 | not present at start | blue cube with number 3 | materializes under the hand at 00:01",
+    "Block 3 | green cube with number 2 | green cube with number 2 | briefly morphs number to 3 at 00:02 before splitting off Block 4",
+    "Block 4 | not present at start | tan cube with number 2 | spawns as a green 3 at 00:03, then morphs into a tan 2 at 00:04",
+    "Block 5 | not present at start | light-blue cube with number 3 | spawns under the hand at 00:04",
+    "Block 6 | not present at start | green cube with number 5 | spawns as a blue 3 at 00:05, then morphs into a green 5 at 00:06",
+    "Block 7 | not present at start | green cube with number 2 | spawns as a green 3 at 00:06, then morphs number to 2 at 00:07",
+    "Block 8 (far right) | not present at start | blue cube with number 6 | spawns as a blue 3 at 00:07, then morphs number to 6 at 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "First and second blocks",
+      "invariant_violated": "Object permanence and attribute consistency",
+      "description": "The leftmost green '2' block spontaneously changes color to blue while a second blue '3' block materializes out of thin air under the person's fingers.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Third and fourth blocks",
+      "invariant_violated": "Object permanence and attribute consistency",
+      "description": "The third block (green '2') morphs its digit into a '3' when touched, and as the hand moves right at 00:03, it splits into two blocks: the original green '2' and a newly materialized fourth block (green '3').",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Fourth and fifth blocks",
+      "invariant_violated": "Object permanence and attribute consistency",
+      "description": "The fourth block morphs from a green '3' into a tan '2' as the hand pulls a newly materialized fifth block (light-blue '3') out of it.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Sixth block",
+      "invariant_violated": "Object permanence",
+      "description": "As the hand shifts to the right of the fifth block, a sixth block (blue '3') materializes under the fingers.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Sixth and seventh blocks",
+      "invariant_violated": "Object permanence and attribute consistency",
+      "description": "The sixth block morphs from a blue '3' into a green '5' while a seventh block (green '3') materializes in the hand.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Seventh and eighth blocks",
+      "invariant_violated": "Object permanence and attribute consistency",
+      "description": "The seventh block's digit morphs from '3' to '2' while an eighth block (blue '3') materializes under the hand, which then morphs its digit from '3' into '6' as the hand releases it at 00:08.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (far left) | green cube with number 2 | blue cube with number 2 | changes color from green to blue at 00:01\",\n    \"Block 2 | not present at start | blue cube with number 3 | materializes under the hand at 00:01\",\n    \"Block 3 | green cube with number 2 | green cube with number 2 | briefly morphs number to 3 at 00:02 before splitting off Block 4\",\n    \"Block 4 | not present at start | tan cube with number 2 | spawns as a green 3 at 00:03, then morphs into a tan 2 at 00:04\",\n    \"Block 5 | not present at start | light-blue cube with number 3 | spawns under the hand at 00:04\",\n    \"Block 6 | not present at start | green cube with number 5 | spawns as a blue 3 at 00:05, then morphs into a green 5 at 00:06\",\n    \"Block 7 | not present at start | green cube with number 2 | spawns as a green 3 at 00:06, then morphs number to 2 at 00:07\",\n    \"Block 8 (far right) | not present at start | blue cube with number 6 | spawns as a blue 3 at 00:07, then morphs number to 6 at 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"First and second blocks\",\n      \"invariant_violated\": \"Object permanence and attribute consistency\",\n      \"description\": \"The leftmost green '2' block spontaneously changes color to blue while a second blue '3' block materializes out of thin air under the person's fingers.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Third and fourth blocks\",\n      \"invariant_violated\": \"Object permanence and attribute consistency\",\n      \"description\": \"The third block (green '2') morphs its digit into a '3' when touched, and as the hand moves right at 00:03, it splits into two blocks: the original green '2' and a newly materialized fourth block (green '3').\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Fourth and fifth blocks\",\n      \"invariant_violated\": \"Object permanence and attribute consistency\",\n      \"description\": \"The fourth block morphs from a green '3' into a tan '2' as the hand pulls a newly materialized fifth block (light-blue '3') out of it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Sixth block\",\n      \"invariant_violated\": \"Object permanence\",\n      \"description\": \"As the hand shifts to the right of the fifth block, a sixth block (blue '3') materializes under the fingers.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Sixth and seventh blocks\",\n      \"invariant_violated\": \"Object permanence and attribute consistency\",\n      \"description\": \"The sixth block morphs from a blue '3' into a green '5' while a seventh block (green '3') materializes in the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Seventh and eighth blocks\",\n      \"invariant_violated\": \"Object permanence and attribute consistency\",\n      \"description\": \"The seventh block's digit morphs from '3' to '2' while an eighth block (blue '3') materializes under the hand, which then morphs its digit from '3' into '6' as the hand releases it at 00:08.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

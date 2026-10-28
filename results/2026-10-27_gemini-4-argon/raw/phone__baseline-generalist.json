@@ -1,0 +1,49 @@
+{
+  "key": "phone__baseline-generalist",
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:28.432Z",
+  "latencyMs": 27379,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1740,
+    "total_tokens": 3148,
+    "cost": 0.010108,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010108,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.0087
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1384,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone screen | out-of-focus teal screen displaying 'ƛ742' at start | dark tilted screen with warped scribbles at end | text morphs into 'A̅7·42' with garbled UI elements at 00:03-00:07, then distorts into scribbles at 00:09",
+    "hands holding phone | both hands holding phone edges | right hand taps bottom-right corner and tilts phone down | normal movement",
+    "background pedestrian | walking down stairs in blue shirt with red bag at 00:00 | exits top of frame along walkway after 00:02 | normal movement"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "smartphone screen",
+      "invariant_violated": "text and UI consistency",
+      "description": "The text and interface elements on the smartphone screen are nonsensical and unstable. The central text starts as 'ƛ742' (00:00–00:02), morphs into 'A̅7·42' surrounded by garbled status bar symbols ('7.42', '4.41', 'A¯A', 'AZ - 12') as focus racks to the screen (00:03–00:07), and then warps into illegible scribbles as the phone tilts down at 00:09.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone screen | out-of-focus teal screen displaying 'ƛ742' at start | dark tilted screen with warped scribbles at end | text morphs into 'A̅7·42' with garbled UI elements at 00:03-00:07, then distorts into scribbles at 00:09\",\n    \"hands holding phone | both hands holding phone edges | right hand taps bottom-right corner and tilts phone down | normal movement\",\n    \"background pedestrian | walking down stairs in blue shirt with red bag at 00:00 | exits top of frame along walkway after 00:02 | normal movement\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"smartphone screen\",\n      \"invariant_violated\": \"text and UI consistency\",\n      \"description\": \"The text and interface elements on the smartphone screen are nonsensical and unstable. The central text starts as 'ƛ742' (00:00–00:02), morphs into 'A̅7·42' surrounded by garbled status bar symbols ('7.42', '4.41', 'A¯A', 'AZ - 12') as focus racks to the screen (00:03–00:07), and then warps into illegible scribbles as the phone tilts down at 00:09.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,88 @@
+{
+  "key": "_long-scene__character-continuity",
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:23:47.249Z",
+  "latencyMs": 80386,
+  "usage": {
+    "prompt_tokens": 12325,
+    "completion_tokens": 5256,
+    "total_tokens": 17581,
+    "cost": 0.038605,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.038605,
+      "upstream_inference_prompt_cost": 0.012325,
+      "upstream_inference_completions_cost": 0.02628
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4112,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress | older woman, grey-brown hair in a bun, short-sleeved light blue collared shirt, white apron, glasses on neck cord; standing behind counter wiping surface | duplicated into two identical copies behind the counter walking toward each other | pours coffee at 00:24, appears at pass-through window at 00:45, serves plate at 01:09, sits on stool next to customer at 01:21, vanishes from counter shot at 01:35, stands by window at 01:46, teleports to sitting on counter stool at 01:50, duplicates into two waitresses at 01:51",
+    "Customer (truck driver) | older man with grey hair and beard, brown jacket with dark collar, dark plaid shirt, blue jeans; enters diner at 00:19 and sits on counter stool | walks outside toward green box truck and climbs into cab at 01:46-01:49 | sits at counter at 00:25, faces forward at 00:36, hunched facing right in background at 00:45, vanishes from counter at 00:51, reappears on stool at 01:00, vanishes with waitress at 01:35, walks outside at 01:41"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:45",
+      "entity": "Customer and Waitress",
+      "invariant_violated": "placement between cuts",
+      "description": "From 00:36 to 00:44, the customer is seated at the counter angled toward the camera with the empty kitchen pass-through window visible directly behind him. Across the cut at 00:45, the waitress is suddenly standing at the pass-through window wiping it while the customer is in the background hunched over the counter facing right.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:51",
+      "entity": "Customer (truck driver)",
+      "invariant_violated": "placement between cuts",
+      "description": "The customer is seated at the diner counter prior to 00:51, but in the counter shot from 00:51 to 00:59 he has completely vanished from the stools, only to reappear seated in the exact same spot at the next cut at 01:00.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:35",
+      "entity": "Customer and Waitress",
+      "invariant_violated": "placement between cuts",
+      "description": "In 01:27-01:34, both the customer and the waitress are seated side-by-side on the stools at the counter. At the cut at 01:35-01:36, the shot of the counter shows all stools completely empty with both characters gone, before cutting at 01:37 to a close-up of hands still interacting at the counter.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:38",
+      "entity": "Waitress",
+      "invariant_violated": "identity",
+      "description": "In the close-up of the counter at 01:38, the second hand entering from the right to pat the customer's hand over the money is a weathered male-looking hand wearing a long-sleeved blue-and-white striped shirt cuff, whereas the waitress wears a short-sleeved light blue polo shirt with bare forearms throughout the scene.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "placement between cuts",
+      "description": "At 01:46-01:49, the waitress is standing upright by the front window on the booth side of the diner watching the customer get into his truck. Across the immediate cut at 01:50, she is suddenly seated on the customer's stool at the counter leaning over the counter surface.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress",
+      "invariant_violated": "multi-character consistency",
+      "description": "As the waitress stands up from the stool at 01:51 and walks around the front of the counter to go behind it, a second identical copy of the waitress simultaneously appears behind the counter in the background wiping the surface, leaving two identical waitresses visible together through 01:58.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress | older woman, grey-brown hair in a bun, short-sleeved light blue collared shirt, white apron, glasses on neck cord; standing behind counter wiping surface | duplicated into two identical copies behind the counter walking toward each other | pours coffee at 00:24, appears at pass-through window at 00:45, serves plate at 01:09, sits on stool next to customer at 01:21, vanishes from counter shot at 01:35, stands by window at 01:46, teleports to sitting on counter stool at 01:50, duplicates into two waitresses at 01:51\",\n    \"Customer (truck driver) | older man with grey hair and beard, brown jacket with dark collar, dark plaid shirt, blue jeans; enters diner at 00:19 and sits on counter stool | walks outside toward green box truck and climbs into cab at 01:46-01:49 | sits at counter at 00:25, faces forward at 00:36, hunched facing right in background at 00:45, vanishes from counter at 00:51, reappears on stool at 01:00, vanishes with waitress at 01:35, walks outside at 01:41\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"Customer and Waitress\",\n      \"invariant_violated\": \"placement between cuts\",\n      \"description\": \"From 00:36 to 00:44, the customer is seated at the counter angled toward the camera with the empty kitchen pass-through window visible directly behind him. Across the cut at 00:45, the waitress is suddenly standing at the pass-through window wiping it while the customer is in the background hunched over the counter facing right.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:51\",\n      \"entity\": \"Customer (truck driver)\",\n      \"invariant_violated\": \"placement between cuts\",\n      \"description\": \"The customer is seated at the diner counter prior to 00:51, but in the counter shot from 00:51 to 00:59 he has completely vanished from the stools, only to reappear seated in the exact same spot at the next cut at 01:00.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:35\",\n      \"entity\": \"Customer and Waitress\",\n      \"invariant_violated\": \"placement between cuts\",\n      \"description\": \"In 01:27-01:34, both the customer and the waitress are seated side-by-side on the stools at the counter. At the cut at 01:35-01:36, the shot of the counter shows all stools completely empty with both characters gone, before cutting at 01:37 to a close-up of hands still interacting at the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:38\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"identity\",\n      \"description\": \"In the close-up of the counter at 01:38, the second hand entering from the right to pat the customer's hand over the money is a weathered male-looking hand wearing a long-sleeved blue-and-white striped shirt cuff, whereas the waitress wears a short-sleeved light blue polo shirt with bare forearms throughout the scene.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:50\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"placement between cuts\",\n      \"description\": \"At 01:46-01:49, the waitress is standing upright by the front window on the booth side of the diner watching the customer get into his truck. Across the immediate cut at 01:50, she is suddenly seated on the customer's stool at the counter leaning over the counter surface.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress\",\n      \"invariant_violated\": \"multi-character consistency\",\n      \"description\": \"As the waitress stands up from the stool at 01:51 and walks around the front of the counter to go behind it, a second identical copy of the waitress simultaneously appears behind the counter in the background wiping the surface, leaving two identical waitresses visible together through 01:58.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

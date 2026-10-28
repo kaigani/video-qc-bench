@@ -1,0 +1,39 @@
+{
+  "key": "dialogue__environment-response",
+  "video": "dialogue.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:33:31.863Z",
+  "latencyMs": 11297,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 465,
+    "total_tokens": 1995,
+    "cost": 0.003855,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003855,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.002325
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 335,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Indoor environment (00:00-00:09): still air indoors; no wind or weather forces present. The man's hair, striped shirt, and the hanging blue jacket in the background all remain appropriately still.",
+    "Subject movement (00:06-00:09): the man turns and steps toward the door on the left; his shirt deforms naturally with his torso and arm movement while static background elements (hanging jacket, framed picture, woodwork) remain undisturbed."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Indoor environment (00:00-00:09): still air indoors; no wind or weather forces present. The man's hair, striped shirt, and the hanging blue jacket in the background all remain appropriately still.\",\n    \"Subject movement (00:06-00:09): the man turns and steps toward the door on the left; his shirt deforms naturally with his torso and arm movement while static background elements (hanging jacket, framed picture, woodwork) remain undisturbed.\"\n  ],\n  \"findings\": []\n}"
+}

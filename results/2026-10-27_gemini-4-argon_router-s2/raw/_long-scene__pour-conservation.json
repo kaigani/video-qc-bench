@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:41:18.004Z",
+  "latencyMs": 37292,
+  "usage": {
+    "prompt_tokens": 12284,
+    "completion_tokens": 2022,
+    "total_tokens": 14306,
+    "cost": 0.022394,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022394,
+      "upstream_inference_prompt_cost": 0.012284,
+      "upstream_inference_completions_cost": 0.01011
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:24-00:26: Glass coffee carafe (transparent globe with black collar/handle) held by waitress, approximately 50% full of dark coffee.",
+    "00:27-00:31: Glass coffee carafe held upright directly above the white ceramic mug; fill level remains completely static at ~50% full while a stream of brown coffee pours out from the bottom of the carafe.",
+    "00:27-00:31: White ceramic mug (opaque) on the counter receiving the coffee stream; interior fill level obscured by opaque walls.",
+    "00:36-00:44: White ceramic mug (opaque) held by the man at the counter; interior fill level not visible.",
+    "01:00-01:17: White ceramic mug (opaque) resting on the counter in the man's hands; interior fill level not visible.",
+    "01:27-01:34: Two white ceramic mugs (opaque) held on the counter by the man and the waitress; interior fill levels not visible.",
+    "01:37-01:40: White ceramic mug (opaque) resting on the counter beside the cash; interior fill level not visible.",
+    "01:50-01:52: White ceramic mug (opaque) on the counter picked up and carried away by the waitress."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "glass coffee carafe",
+      "invariant_violated": "conservation and fill-level monotonicity",
+      "description": "A stream of coffee pours into the mug below for several seconds while the transparent glass carafe is held completely upright (un-tilted), with liquid emerging through the solid bottom of the pot and the coffee fill level inside the carafe remaining completely unchanged rather than falling.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:24-00:26: Glass coffee carafe (transparent globe with black collar/handle) held by waitress, approximately 50% full of dark coffee.\",\n    \"00:27-00:31: Glass coffee carafe held upright directly above the white ceramic mug; fill level remains completely static at ~50% full while a stream of brown coffee pours out from the bottom of the carafe.\",\n    \"00:27-00:31: White ceramic mug (opaque) on the counter receiving the coffee stream; interior fill level obscured by opaque walls.\",\n    \"00:36-00:44: White ceramic mug (opaque) held by the man at the counter; interior fill level not visible.\",\n    \"01:00-01:17: White ceramic mug (opaque) resting on the counter in the man's hands; interior fill level not visible.\",\n    \"01:27-01:34: Two white ceramic mugs (opaque) held on the counter by the man and the waitress; interior fill levels not visible.\",\n    \"01:37-01:40: White ceramic mug (opaque) resting on the counter beside the cash; interior fill level not visible.\",\n    \"01:50-01:52: White ceramic mug (opaque) on the counter picked up and carried away by the waitress.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"glass coffee carafe\",\n      \"invariant_violated\": \"conservation and fill-level monotonicity\",\n      \"description\": \"A stream of coffee pours into the mug below for several seconds while the transparent glass carafe is held completely upright (un-tilted), with liquid emerging through the solid bottom of the pot and the coffee fill level inside the carafe remaining completely unchanged rather than falling.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

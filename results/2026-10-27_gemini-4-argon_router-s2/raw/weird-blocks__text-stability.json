@@ -1,0 +1,86 @@
+{
+  "key": "weird-blocks__text-stability",
+  "video": "weird-blocks.mp4",
+  "role": "text-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:52:43.822Z",
+  "latencyMs": 27428,
+  "usage": {
+    "prompt_tokens": 1541,
+    "completion_tokens": 2421,
+    "total_tokens": 3962,
+    "cost": 0.013646,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013646,
+      "upstream_inference_prompt_cost": 0.001541,
+      "upstream_inference_completions_cost": 0.012105
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1415,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Block 1 (1st from left): reads '2' from 00:00 to 00:09 (block color shifts from green at 00:00 to blue at 00:01)",
+    "Block 2 (2nd from left): reads '3' on a blue block from 00:01 to 00:09",
+    "Block 3 (3rd from left, green): reads '2' at 00:01 (with '6' on right face), changes to '3' at 00:02 while '6' remains on the right face, then reverts to '2' from 00:03 to 00:09",
+    "Block 4 (4th from left): reads '3' on a green block at 00:03, then changes to '2' on a tan block from 00:04 to 00:09",
+    "Block 5 (5th from left, light blue): reads '3' from 00:04 to 00:09",
+    "Block 6 (6th from left): reads '3' on a blue block at 00:05, then changes to '5' on a green block from 00:06 to 00:09",
+    "Block 7 (7th from left): reads '3' at 00:06, then changes to '2' from 00:07 to 00:09",
+    "Block 8 (8th from left, blue): reads '3' at 00:07, then changes to '6' at 00:08–00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "3rd block from left (green block)",
+      "invariant_violated": "text stability",
+      "description": "The front face of the green block reads '2' at 00:01, morphs into '3' at 00:02 without the block being rotated (the '6' on its right face remains in place), and reverts to '2' at 00:03.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "4th block from left",
+      "invariant_violated": "text stability",
+      "description": "The 4th block reads '3' (on a green block) when placed at 00:03, then inexplicably changes to '2' (on a tan block) at 00:04 as the hand moves to the next position.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "6th block from left",
+      "invariant_violated": "text stability",
+      "description": "The 6th block reads '3' (on a blue block) at 00:05, then inexplicably changes to '5' (on a green block) at 00:06 as the hand moves to the right.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "7th block from left",
+      "invariant_violated": "text stability",
+      "description": "The 7th block reads '3' at 00:06, then changes to '2' at 00:07 without being rotated or swapped.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "8th block from left (rightmost blue block)",
+      "invariant_violated": "text stability",
+      "description": "The 8th block reads '3' when held at 00:07, then changes to '6' at 00:08 after the hand moves away from it.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Block 1 (1st from left): reads '2' from 00:00 to 00:09 (block color shifts from green at 00:00 to blue at 00:01)\",\n    \"Block 2 (2nd from left): reads '3' on a blue block from 00:01 to 00:09\",\n    \"Block 3 (3rd from left, green): reads '2' at 00:01 (with '6' on right face), changes to '3' at 00:02 while '6' remains on the right face, then reverts to '2' from 00:03 to 00:09\",\n    \"Block 4 (4th from left): reads '3' on a green block at 00:03, then changes to '2' on a tan block from 00:04 to 00:09\",\n    \"Block 5 (5th from left, light blue): reads '3' from 00:04 to 00:09\",\n    \"Block 6 (6th from left): reads '3' on a blue block at 00:05, then changes to '5' on a green block from 00:06 to 00:09\",\n    \"Block 7 (7th from left): reads '3' at 00:06, then changes to '2' from 00:07 to 00:09\",\n    \"Block 8 (8th from left, blue): reads '3' at 00:07, then changes to '6' at 00:08–00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"3rd block from left (green block)\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The front face of the green block reads '2' at 00:01, morphs into '3' at 00:02 without the block being rotated (the '6' on its right face remains in place), and reverts to '2' at 00:03.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"4th block from left\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The 4th block reads '3' (on a green block) when placed at 00:03, then inexplicably changes to '2' (on a tan block) at 00:04 as the hand moves to the next position.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"6th block from left\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The 6th block reads '3' (on a blue block) at 00:05, then inexplicably changes to '5' (on a green block) at 00:06 as the hand moves to the right.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"7th block from left\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The 7th block reads '3' at 00:06, then changes to '2' at 00:07 without being rotated or swapped.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"8th block from left (rightmost blue block)\",\n      \"invariant_violated\": \"text stability\",\n      \"description\": \"The 8th block reads '3' when held at 00:07, then changes to '6' at 00:08 after the hand moves away from it.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

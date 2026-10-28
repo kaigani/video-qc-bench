@@ -1,0 +1,49 @@
+{
+  "key": "woman-apple__causal-temporal-sequence",
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:44:17.798Z",
+  "latencyMs": 26741,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1209,
+    "total_tokens": 2974,
+    "cost": 0.00781,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00781,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.006045
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 975,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "central woman with umbrella | posed mid-stride holding umbrella and fruit at 00:00 | remains in identical static pose at 00:09 | camera orbits around her while she remains completely frozen",
+    "background pedestrians on right | positioned mid-stride at 00:00 | remain completely motionless until out of frame at 00:05 | frozen in time while foreground subjects move",
+    "foreground pedestrians | enter frame walking forward at 00:00 | exit frame after walking past central subject | continuous forward motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "central woman with umbrella and background pedestrians",
+      "invariant_violated": "temporal flow",
+      "description": "The central woman and several background pedestrians remain completely frozen mid-stride throughout the shot while foreground walkers move normally.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"central woman with umbrella | posed mid-stride holding umbrella and fruit at 00:00 | remains in identical static pose at 00:09 | camera orbits around her while she remains completely frozen\",\n    \"background pedestrians on right | positioned mid-stride at 00:00 | remain completely motionless until out of frame at 00:05 | frozen in time while foreground subjects move\",\n    \"foreground pedestrians | enter frame walking forward at 00:00 | exit frame after walking past central subject | continuous forward motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"central woman with umbrella and background pedestrians\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"The central woman and several background pedestrians remain completely frozen mid-stride throughout the shot while foreground walkers move normally.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

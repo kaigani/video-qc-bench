@@ -1,0 +1,57 @@
+{
+  "key": "dialogue__baseline-generalist",
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:16:24.270Z",
+  "latencyMs": 38696,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2723,
+    "total_tokens": 4131,
+    "cost": 0.015023,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015023,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.013615
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2169,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Background wall and door | From left to right: dark open recess, wooden door with solid dark blue garment on left side, green wall strip with wooden switch, wooden panel with bird print | Wooden door on left, blue garment with white stripe directly adjacent to framed emblem print; middle door panels and green wall strip vanished | Major background restructuring during camera pan at 00:07-00:08",
+    "Blue hanging garment | Solid dark blue jacket/robe hanging on left side of rear door | Dark blue garment with a thick white stripe hanging directly next to the framed picture | Changes appearance and relative position after passing behind the man at 00:07-00:08",
+    "Framed picture on right | Shows bird legs and partial text 'VO...' | Shows a symmetrical circular emblem/diagram | Artwork morphs between 00:06 and 00:08"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Background wall and door layout",
+      "invariant_violated": "Spatial and architectural continuity",
+      "description": "From 00:00 to 00:06, the hanging blue garment and the framed picture on the right are separated by the wooden door panels and an olive-green wall strip with a wooden switch. As the man turns left at 00:07–00:08 and occludes the background, the door panels and the green wall strip with the switch vanish completely, leaving the blue garment hanging immediately adjacent to the framed picture. Additionally, the dark open space on the far left at 00:00–00:06 becomes a closed wooden door and wall when the camera pans left.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Blue hanging garment and framed picture",
+      "invariant_violated": "Object permanence and appearance consistency",
+      "description": "After passing behind the man at 00:07–00:08, the solid dark blue garment hanging on the door suddenly acquires a bold white stripe. Simultaneously, the image inside the picture frame on the right changes from the lower half of a bird with partial text ('VO...') into a symmetrical diagram/emblem.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Background wall and door | From left to right: dark open recess, wooden door with solid dark blue garment on left side, green wall strip with wooden switch, wooden panel with bird print | Wooden door on left, blue garment with white stripe directly adjacent to framed emblem print; middle door panels and green wall strip vanished | Major background restructuring during camera pan at 00:07-00:08\",\n    \"Blue hanging garment | Solid dark blue jacket/robe hanging on left side of rear door | Dark blue garment with a thick white stripe hanging directly next to the framed picture | Changes appearance and relative position after passing behind the man at 00:07-00:08\",\n    \"Framed picture on right | Shows bird legs and partial text 'VO...' | Shows a symmetrical circular emblem/diagram | Artwork morphs between 00:06 and 00:08\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Background wall and door layout\",\n      \"invariant_violated\": \"Spatial and architectural continuity\",\n      \"description\": \"From 00:00 to 00:06, the hanging blue garment and the framed picture on the right are separated by the wooden door panels and an olive-green wall strip with a wooden switch. As the man turns left at 00:07–00:08 and occludes the background, the door panels and the green wall strip with the switch vanish completely, leaving the blue garment hanging immediately adjacent to the framed picture. Additionally, the dark open space on the far left at 00:00–00:06 becomes a closed wooden door and wall when the camera pans left.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Blue hanging garment and framed picture\",\n      \"invariant_violated\": \"Object permanence and appearance consistency\",\n      \"description\": \"After passing behind the man at 00:07–00:08, the solid dark blue garment hanging on the door suddenly acquires a bold white stripe. Simultaneously, the image inside the picture frame on the right changes from the lower half of a bird with partial text ('VO...') into a symmetrical diagram/emblem.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

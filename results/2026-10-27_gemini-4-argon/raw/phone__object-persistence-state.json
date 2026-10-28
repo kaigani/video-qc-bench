@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:49.755Z",
+  "latencyMs": 22608,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1500,
+    "total_tokens": 3113,
+    "cost": 0.009113,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009113,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.0075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1223,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | held in foreground by two hands, displaying dark text on light screen | held in two hands, tilted downward at 00:09 | zoomed in slightly around 00:03, right thumb swipes across screen at 00:07-00:08, tilted down at 00:09",
+    "red bag | held in the left hand of the person walking down the stairs in the background at 00:00 | absent (vanished) | disappears from the person's left hand between 00:01 and 00:02 while they walk away"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red bag",
+      "invariant_violated": "identity & persistence",
+      "description": "The bright red bag carried in the left hand of the person walking away in the background vanishes into thin air between 00:01 and 00:02, leaving their visible left hand completely empty without any action of setting it down.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | held in foreground by two hands, displaying dark text on light screen | held in two hands, tilted downward at 00:09 | zoomed in slightly around 00:03, right thumb swipes across screen at 00:07-00:08, tilted down at 00:09\",\n    \"red bag | held in the left hand of the person walking down the stairs in the background at 00:00 | absent (vanished) | disappears from the person's left hand between 00:01 and 00:02 while they walk away\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red bag\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The bright red bag carried in the left hand of the person walking away in the background vanishes into thin air between 00:01 and 00:02, leaving their visible left hand completely empty without any action of setting it down.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "child-marbles__spatial-topology-occlusion",
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:50:56.470Z",
+  "latencyMs": 17329,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 754,
+    "total_tokens": 2349,
+    "cost": 0.005365,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005365,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00377
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 492,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "wooden table | foreground surface with distinct wood grain, knots, and seam lines | zoomed-in view of the same wood grain pattern beneath the bowl | camera zooms out slightly at 00:02 and zooms in continuously from 00:04 to 00:09, maintaining consistent surface layout",
+    "glass bowl | resting on the center of the wooden table containing colored balls | remains stationary on the same table spot in close-up | normal perspective shift during camera zoom",
+    "small metal cup and loose balls | positioned on the table to the right of the glass bowl | moves out of the right frame edge as camera zooms in at 00:04 | consistent relative position on the tabletop",
+    "patio background | stone pavers, brick wall on left, and door frame on upper right | occluded/cropped out as camera zooms in on the bowl | consistent geometry during wider framing",
+    "child's hands | reaching into the glass bowl from the upper left | left hand gripping upper-right rim, right hand inside bowl above the balls | proper depth ordering and occlusion with the glass rim and balls throughout"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"wooden table | foreground surface with distinct wood grain, knots, and seam lines | zoomed-in view of the same wood grain pattern beneath the bowl | camera zooms out slightly at 00:02 and zooms in continuously from 00:04 to 00:09, maintaining consistent surface layout\",\n    \"glass bowl | resting on the center of the wooden table containing colored balls | remains stationary on the same table spot in close-up | normal perspective shift during camera zoom\",\n    \"small metal cup and loose balls | positioned on the table to the right of the glass bowl | moves out of the right frame edge as camera zooms in at 00:04 | consistent relative position on the tabletop\",\n    \"patio background | stone pavers, brick wall on left, and door frame on upper right | occluded/cropped out as camera zooms in on the bowl | consistent geometry during wider framing\",\n    \"child's hands | reaching into the glass bowl from the upper left | left hand gripping upper-right rim, right hand inside bowl above the balls | proper depth ordering and occlusion with the glass rim and balls throughout\"\n  ],\n  \"findings\": []\n}"
+}

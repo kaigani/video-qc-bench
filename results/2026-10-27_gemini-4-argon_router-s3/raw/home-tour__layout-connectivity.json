@@ -1,0 +1,59 @@
+{
+  "key": "home-tour__layout-connectivity",
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:01:37.395Z",
+  "latencyMs": 49186,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 3817,
+    "total_tokens": 5382,
+    "cost": 0.02065,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02065,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.019085
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3214,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Kitchen #1 and hallway — stove and cabinets on the left, countertop with microwave on the right, white glass-paned door straight ahead at the end of the hallway, and a grey partition wall on the right with a framed blue-flower print and light switches.",
+    "00:02-00:04: Traversal 1 — woman turns 90 degrees right at the grey partition wall and walks through a doorway into a bedroom.",
+    "00:04-00:06: Bedroom interior — contains a bed positioned under a dining chandelier, with two wooden dining chairs placed side-by-side facing the foot of the bed as if tucked up to a dining table.",
+    "00:06-00:07: Bedroom exit wall — woman turns toward a doorway inside the bedroom; to the left of this doorway hangs a duplicate of the framed blue-flower print from Kitchen #1.",
+    "00:07-00:09: Traversal 2 — woman walks straight through the bedroom doorway directly into a second, reoriented version of the kitchen and hallway, where the white glass-paned door is straight ahead instead of perpendicular, and the microwave is now mounted above the stove on the left."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Bedroom bed and dining chairs",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two wooden dining chairs are arranged side-by-side facing inward against the footboard of the bed (beneath a low dining chandelier), tucked up to the bed as though serving a dining table rather than a bed.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Bedroom doorway and kitchen/hallway layout",
+      "invariant_violated": "spatial connectivity and floor plan consistency",
+      "description": "After turning 90 degrees right from the kitchen to enter the bedroom at 00:03, the woman turns around and walks straight out a bedroom doorway at 00:07-00:09 into an impossible duplicate of the kitchen and hallway. The framed blue-flower print from the kitchen wall now appears inside the bedroom to the left of the doorway, the hallway with the white glass-paned door is now aligned straight through the bedroom doorway rather than perpendicular to it, and the microwave has moved from the right countertop to over the stove on the left.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Kitchen #1 and hallway — stove and cabinets on the left, countertop with microwave on the right, white glass-paned door straight ahead at the end of the hallway, and a grey partition wall on the right with a framed blue-flower print and light switches.\",\n    \"00:02-00:04: Traversal 1 — woman turns 90 degrees right at the grey partition wall and walks through a doorway into a bedroom.\",\n    \"00:04-00:06: Bedroom interior — contains a bed positioned under a dining chandelier, with two wooden dining chairs placed side-by-side facing the foot of the bed as if tucked up to a dining table.\",\n    \"00:06-00:07: Bedroom exit wall — woman turns toward a doorway inside the bedroom; to the left of this doorway hangs a duplicate of the framed blue-flower print from Kitchen #1.\",\n    \"00:07-00:09: Traversal 2 — woman walks straight through the bedroom doorway directly into a second, reoriented version of the kitchen and hallway, where the white glass-paned door is straight ahead instead of perpendicular, and the microwave is now mounted above the stove on the left.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Bedroom bed and dining chairs\",\n      \"invariant_violated\": \"functional furniture arrangement\",\n      \"description\": \"Two wooden dining chairs are arranged side-by-side facing inward against the footboard of the bed (beneath a low dining chandelier), tucked up to the bed as though serving a dining table rather than a bed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Bedroom doorway and kitchen/hallway layout\",\n      \"invariant_violated\": \"spatial connectivity and floor plan consistency\",\n      \"description\": \"After turning 90 degrees right from the kitchen to enter the bedroom at 00:03, the woman turns around and walks straight out a bedroom doorway at 00:07-00:09 into an impossible duplicate of the kitchen and hallway. The framed blue-flower print from the kitchen wall now appears inside the bedroom to the left of the doorway, the hallway with the white glass-paned door is now aligned straight through the bedroom doorway rather than perpendicular to it, and the microwave has moved from the right countertop to over the stove on the left.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

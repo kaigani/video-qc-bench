@@ -1,0 +1,95 @@
+{
+  "key": "weird-blocks__count-stability",
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:05:29.704Z",
+  "latencyMs": 33770,
+  "usage": {
+    "prompt_tokens": 1589,
+    "completion_tokens": 2976,
+    "total_tokens": 4565,
+    "cost": 0.016469,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016469,
+      "upstream_inference_prompt_cost": 0.001589,
+      "upstream_inference_completions_cost": 0.01488
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1741,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00 — Numbered blocks: 2 visible (green '2' held by hand on left, green '2' on right)",
+    "00:01 — Numbered blocks: 3 visible (blue '2', blue '3' held by hand, green '2'); unexplained count increase from 2 to 3 and left block changes color from green to blue",
+    "00:02 — Numbered blocks: 3 visible (blue '2', blue '3', green '3' held by hand)",
+    "00:03 — Numbered blocks: 4 visible (blue '2', blue '3', green '2', green '3' held by hand); unexplained count increase from 3 to 4 as block splits under hand",
+    "00:04 — Numbered blocks: 5 visible (blue '2', blue '3', green '2', tan '2', light-blue '3' held by hand); unexplained count increase from 4 to 5 and 4th block changes from green '3' to tan '2'",
+    "00:05 — Numbered blocks: 6 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', blue '3' held by hand); unexplained count increase from 5 to 6 as hand shifts right",
+    "00:06 — Numbered blocks: 7 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', teal '3' held by hand); unexplained count increase from 6 to 7 and 6th block transforms from blue '3' to green '5'",
+    "00:07 — Numbered blocks: 8 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', green '2', blue '3'/'6' held by hand); unexplained count increase from 7 to 8 as hand shifts right",
+    "00:08–00:09 — Numbered blocks: 8 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', green '2', blue '6'), no further count change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase and property transformation",
+      "description": "The count of blocks increases from 2 to 3 without any new block being brought in from off-screen, and the leftmost green '2' block spontaneously turns into a blue '2' block while a blue '3' block appears under the hand.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase",
+      "description": "As the hand moves rightward from the third block, the single green block splits/spawns in place into two green blocks ('2' and '3'), increasing the total count from 3 to 4 with no visible source.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase and property transformation",
+      "description": "As the hand continues moving right, the 4th block changes from a green '3' into a tan '2' while a 5th light-blue '3' block materializes under the hand, increasing the count from 4 to 5 without cause.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase",
+      "description": "A 6th blue '3' block spawns out of the 5th light-blue '3' block as the hand moves right, increasing the block count from 5 to 6 without any object entering the scene.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase and property transformation",
+      "description": "The 6th block transforms from a blue '3' into a green '5' while a 7th block ('3') spawns under the hand as it shifts right, increasing the total count from 6 to 7.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "numbered blocks",
+      "invariant_violated": "unexplained count increase",
+      "description": "An 8th block spawns under the hand as it moves right from the 7th block, increasing the total count from 7 to 8 without a visible cause, and its face morphs from '3' to '6' by 00:08.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00 — Numbered blocks: 2 visible (green '2' held by hand on left, green '2' on right)\",\n    \"00:01 — Numbered blocks: 3 visible (blue '2', blue '3' held by hand, green '2'); unexplained count increase from 2 to 3 and left block changes color from green to blue\",\n    \"00:02 — Numbered blocks: 3 visible (blue '2', blue '3', green '3' held by hand)\",\n    \"00:03 — Numbered blocks: 4 visible (blue '2', blue '3', green '2', green '3' held by hand); unexplained count increase from 3 to 4 as block splits under hand\",\n    \"00:04 — Numbered blocks: 5 visible (blue '2', blue '3', green '2', tan '2', light-blue '3' held by hand); unexplained count increase from 4 to 5 and 4th block changes from green '3' to tan '2'\",\n    \"00:05 — Numbered blocks: 6 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', blue '3' held by hand); unexplained count increase from 5 to 6 as hand shifts right\",\n    \"00:06 — Numbered blocks: 7 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', teal '3' held by hand); unexplained count increase from 6 to 7 and 6th block transforms from blue '3' to green '5'\",\n    \"00:07 — Numbered blocks: 8 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', green '2', blue '3'/'6' held by hand); unexplained count increase from 7 to 8 as hand shifts right\",\n    \"00:08–00:09 — Numbered blocks: 8 visible (blue '2', blue '3', green '2', tan '2', light-blue '3', green '5', green '2', blue '6'), no further count change\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase and property transformation\",\n      \"description\": \"The count of blocks increases from 2 to 3 without any new block being brought in from off-screen, and the leftmost green '2' block spontaneously turns into a blue '2' block while a blue '3' block appears under the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase\",\n      \"description\": \"As the hand moves rightward from the third block, the single green block splits/spawns in place into two green blocks ('2' and '3'), increasing the total count from 3 to 4 with no visible source.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase and property transformation\",\n      \"description\": \"As the hand continues moving right, the 4th block changes from a green '3' into a tan '2' while a 5th light-blue '3' block materializes under the hand, increasing the count from 4 to 5 without cause.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase\",\n      \"description\": \"A 6th blue '3' block spawns out of the 5th light-blue '3' block as the hand moves right, increasing the block count from 5 to 6 without any object entering the scene.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase and property transformation\",\n      \"description\": \"The 6th block transforms from a blue '3' into a green '5' while a 7th block ('3') spawns under the hand as it shifts right, increasing the total count from 6 to 7.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"unexplained count increase\",\n      \"description\": \"An 8th block spawns under the hand as it moves right from the 7th block, increasing the total count from 7 to 8 without a visible cause, and its face morphs from '3' to '6' by 00:08.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

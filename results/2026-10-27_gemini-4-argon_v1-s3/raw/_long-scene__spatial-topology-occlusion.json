@@ -1,0 +1,59 @@
+{
+  "key": "_long-scene__spatial-topology-occlusion",
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:12:54.435Z",
+  "latencyMs": 98841,
+  "usage": {
+    "prompt_tokens": 12327,
+    "completion_tokens": 6776,
+    "total_tokens": 19103,
+    "cost": 0.046207,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.046207,
+      "upstream_inference_prompt_cost": 0.012327,
+      "upstream_inference_completions_cost": 0.03388
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5837,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Diner main counter and stools | Runs perpendicular to the back kitchen wall on the right side of the room, with stools along its left (window-facing) side and a curved end in the foreground away from the kitchen | Retains layout in wide front-to-back shots, but inverts curved end in reverse kitchen shot (00:45) | Waitress walks around the far kitchen end at 01:19 and around the foreground curved end at 01:51",
+    "Kitchen pass-through window and back wall | Located on the back wall at the far end of the counter, with a round clock to its upper right and an 'OPEN' sign window to its left | Present in all front-to-back wide shots | Serves as the camera viewpoint looking back into the dining room at 00:45",
+    "Left exterior window wall and booths | Line of booths along large exterior windows on the left side of the diner when facing the kitchen (behind the counter stools) | Appears on the right side behind the characters' backs when viewed from the kitchen end at 00:45 and 01:27 | Consistent relative to counter orientation",
+    "Front wall (opposite kitchen) | Not visible in front-to-back shots; shown at 00:45 (looking from kitchen) as a solid wall with a white refrigerator and a door marked with a red 'EXIT' sign | At 01:27 (looking in the same direction with exterior windows on the right and counter on the left), the background wall is replaced by a glass-door drink cooler and a large window facing the sunrise | Inconsistent architecture across shots facing the same direction",
+    "Male customer and waitress seating positions | Customer sits at the counter facing the counter surface (windows behind his back); at 01:20-01:26 the waitress walks around the kitchen end of the counter and sits on the stool to the customer's left | At 01:27, while both still sit with the windows behind their backs facing the counter, the waitress is positioned on the customer's right | Spatial reversal of relative seating positions across the cut at 01:27"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:45",
+      "entity": "Diner counter and customer seating position",
+      "invariant_violated": "scene layout",
+      "description": "In the wide shot at 00:36-00:44 looking toward the kitchen pass-through window, the counter runs straight back to the kitchen wall while its curved end is in the foreground (far from the kitchen), where the customer sits facing away from the kitchen. When cutting at 00:45 to the reverse angle looking out from the kitchen pass-through window, a curved counter end with stools wrapping around it is now located directly in front of the pass-through window behind the waitress, while the customer is seated at a separate far end near the exit door.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:27",
+      "entity": "Waitress, customer, and background wall layout",
+      "invariant_violated": "viewpoint consistency",
+      "description": "In the wide shot at 01:18-01:26 (looking toward the kitchen), the customer sits with the exterior windows behind his back, and the waitress walks around the kitchen end of the counter to sit on the stool to the customer's left (closer to the kitchen). At 01:27, the camera cuts to an angle looking from the opposite side along the counter (with the exterior windows and booths on the right behind their backs and the counter on the left in front of them). From this viewpoint, the waitress should be in the foreground on the customer's left, but their relative positions are inverted so she sits in the background to the customer's right. Additionally, the wall at that end of the room changes from the solid wall with the EXIT door established at 00:45 to a glass-door cooler and large exterior window.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Diner main counter and stools | Runs perpendicular to the back kitchen wall on the right side of the room, with stools along its left (window-facing) side and a curved end in the foreground away from the kitchen | Retains layout in wide front-to-back shots, but inverts curved end in reverse kitchen shot (00:45) | Waitress walks around the far kitchen end at 01:19 and around the foreground curved end at 01:51\",\n    \"Kitchen pass-through window and back wall | Located on the back wall at the far end of the counter, with a round clock to its upper right and an 'OPEN' sign window to its left | Present in all front-to-back wide shots | Serves as the camera viewpoint looking back into the dining room at 00:45\",\n    \"Left exterior window wall and booths | Line of booths along large exterior windows on the left side of the diner when facing the kitchen (behind the counter stools) | Appears on the right side behind the characters' backs when viewed from the kitchen end at 00:45 and 01:27 | Consistent relative to counter orientation\",\n    \"Front wall (opposite kitchen) | Not visible in front-to-back shots; shown at 00:45 (looking from kitchen) as a solid wall with a white refrigerator and a door marked with a red 'EXIT' sign | At 01:27 (looking in the same direction with exterior windows on the right and counter on the left), the background wall is replaced by a glass-door drink cooler and a large window facing the sunrise | Inconsistent architecture across shots facing the same direction\",\n    \"Male customer and waitress seating positions | Customer sits at the counter facing the counter surface (windows behind his back); at 01:20-01:26 the waitress walks around the kitchen end of the counter and sits on the stool to the customer's left | At 01:27, while both still sit with the windows behind their backs facing the counter, the waitress is positioned on the customer's right | Spatial reversal of relative seating positions across the cut at 01:27\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:45\",\n      \"entity\": \"Diner counter and customer seating position\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"In the wide shot at 00:36-00:44 looking toward the kitchen pass-through window, the counter runs straight back to the kitchen wall while its curved end is in the foreground (far from the kitchen), where the customer sits facing away from the kitchen. When cutting at 00:45 to the reverse angle looking out from the kitchen pass-through window, a curved counter end with stools wrapping around it is now located directly in front of the pass-through window behind the waitress, while the customer is seated at a separate far end near the exit door.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"01:27\",\n      \"entity\": \"Waitress, customer, and background wall layout\",\n      \"invariant_violated\": \"viewpoint consistency\",\n      \"description\": \"In the wide shot at 01:18-01:26 (looking toward the kitchen), the customer sits with the exterior windows behind his back, and the waitress walks around the kitchen end of the counter to sit on the stool to the customer's left (closer to the kitchen). At 01:27, the camera cuts to an angle looking from the opposite side along the counter (with the exterior windows and booths on the right behind their backs and the counter on the left in front of them). From this viewpoint, the waitress should be in the foreground on the customer's left, but their relative positions are inverted so she sits in the background to the customer's right. Additionally, the wall at that end of the room changes from the solid wall with the EXIT door established at 00:45 to a glass-door cooler and large exterior window.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

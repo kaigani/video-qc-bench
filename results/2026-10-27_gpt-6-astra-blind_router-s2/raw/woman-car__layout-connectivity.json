@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "00:00\u201300:09.75: One continuous exterior view of a station wagon on a desert road; the connected spaces are the passenger cabin and the surrounding roadside.",
+    "00:00\u201300:04: The windshield fronts the cabin above the hood; the near-side front door and its window lie behind the windshield pillar, with additional cabin windows farther rearward.",
+    "00:00\u201300:09.75: The windows reveal dark seats and glimpses of the surrounding desert; no contradictory destination or second interior is established.",
+    "00:00\u201300:09.75: The woman remains with her upper body outside above the rear corner of the hood, ahead of the near-side windshield pillar; no entry, exit, or walking traversal occurs.",
+    "00:06: The closer view clearly separates the glazed windshield, its lower trim and wiper, and the side window behind the pillar; the woman's torso nevertheless occupies the windshield boundary with her forearms resting outside on the hood.",
+    "00:00\u201300:09.75: Visible cabin seats face forward; no separate furniture or room-fixture arrangement is shown.",
+    "Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Windshield connection between passenger cabin and exterior",
+      "invariant_violated": "Closed window treated as an open passage",
+      "description": "The woman projects forward from the cabin through the windshield area and rests both forearms on the hood. The closer view places her ahead of the windshield pillar, while the actual side window is behind it. Glazing, lower windshield trim and a wiper remain visible beside her, with no opened or removed windshield section explaining this cabin-to-hood passage.",
+      "severity": "moderate",
+      "confidence": 0.89
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "layout-connectivity",
+  "sample": 2,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-14__layout-connectivity__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s2/raw/clip-14__layout-connectivity.json",
+  "frozen_source_sha256": "12451807a17bf597e37de98a9e1735df42c4a226bb65adcf19a36a23f51dfbdd",
+  "key": "woman-car__layout-connectivity",
+  "parseOk": true
+}

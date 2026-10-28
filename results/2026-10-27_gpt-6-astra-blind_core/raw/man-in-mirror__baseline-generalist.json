@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "Man | dark swept-back hair, white open-collar shirt, facing a mirror with a small razor | same appearance and clothing | moves the razor from the mouth and chin to the forehead, then back across the cheeks and chin",
+    "Mirror reflection | shows the man's face and raised grooming hand | continues showing the same man and tool | razor placement does not consistently match the directly visible placement",
+    "Bathroom | wooden mirror frame, wooden door with brass knob, shelves of bottles | same arrangement | no clear background changes",
+    "Audio | unassessed | unassessed | only extracted visual frames were available for perception"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Razor and mirror reflection",
+      "invariant_violated": "Mirror correspondence",
+      "description": "The razor does not consistently occupy the same position relative to the face in the direct view and reflection. At the opening, the directly visible razor is at the underside of the chin while its reflection is at the upper lip. Around 00:03, the directly visible blade passes over the hair near the temple while the reflected blade crosses the bare forehead; around 00:08\u201300:09, the direct view places it beneath the chin while the reflection places it on the cheek. These simultaneous contact locations do not match.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-07__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/core/raw/clip-07__baseline-generalist.json",
+  "frozen_source_sha256": "8f655e068c41e5fe1a76be03af759c93f97df4a87b63956ed5b7d3777399bab3",
+  "key": "man-in-mirror__baseline-generalist",
+  "parseOk": true
+}

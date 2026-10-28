@@ -1,0 +1,49 @@
+{
+  "key": "child-marbles__contact-interaction-kinematics",
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:13:22.833Z",
+  "latencyMs": 22554,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1483,
+    "total_tokens": 3103,
+    "cost": 0.009035,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009035,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.007415
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1143,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "child's hands and lifted red ball | both hands reach into the bowl at 00:00 and grasp a single red ball at 00:01 | ball is dropped back into the bowl at 00:02 | contact and release are physically consistent",
+    "child's left hand and bowl rim | left fingers contact the upper right rim of the glass bowl at 00:02 | fingers remain resting on the rim through 00:09 | continuous stable support on the rim",
+    "child's right hand and balls in bowl | right hand rests on the balls from 00:02 to 00:04 and begins stirring at 00:05 | vigorous stirring continues until 00:09 | fingers and balls clip through one another and merge during stirring between 00:06 and 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "child's right hand and colored balls",
+      "invariant_violated": "solidity",
+      "description": "During the stirring motion from 00:06 to 00:09, the fingers of the child's right hand clip directly through the colored balls, and the balls interpenetrate and merge with each other rather than colliding as solid objects.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"child's hands and lifted red ball | both hands reach into the bowl at 00:00 and grasp a single red ball at 00:01 | ball is dropped back into the bowl at 00:02 | contact and release are physically consistent\",\n    \"child's left hand and bowl rim | left fingers contact the upper right rim of the glass bowl at 00:02 | fingers remain resting on the rim through 00:09 | continuous stable support on the rim\",\n    \"child's right hand and balls in bowl | right hand rests on the balls from 00:02 to 00:04 and begins stirring at 00:05 | vigorous stirring continues until 00:09 | fingers and balls clip through one another and merge during stirring between 00:06 and 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"child's right hand and colored balls\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"During the stirring motion from 00:06 to 00:09, the fingers of the child's right hand clip directly through the colored balls, and the balls interpenetrate and merge with each other rather than colliding as solid objects.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

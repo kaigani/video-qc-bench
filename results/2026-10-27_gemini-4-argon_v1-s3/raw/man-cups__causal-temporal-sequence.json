@@ -1,0 +1,57 @@
+{
+  "key": "man-cups__causal-temporal-sequence",
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:20:34.185Z",
+  "latencyMs": 26527,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1148,
+    "total_tokens": 2913,
+    "cost": 0.007505,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007505,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00574
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 787,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "right hand coin placement | lowers coin into front cup at 00:01 | hovers on cup rim with coin stuck to exterior at 00:04-00:06 | placement action does not complete normally",
+    "middle cup coin stack | filled to brim at 00:00-00:02 | coin stack disappears inside cup at 00:03 | state changes without physical interaction",
+    "left hand action | places coin near back cup at 00:01-00:03 | holds cup rim with coin suspended at 00:05-00:06 | release does not result in normal drop"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coins in the center cup",
+      "invariant_violated": "effect-without-cause",
+      "description": "The stack of coins filling the middle cup vanishes without either hand touching or interacting with the cup.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "right hand and coin on front cup",
+      "invariant_violated": "proportionality & completion",
+      "description": "The initiated action of dropping a coin into the front cup dissolves into the hand holding the rim while the coin remains suspended against the outside wall instead of falling.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"right hand coin placement | lowers coin into front cup at 00:01 | hovers on cup rim with coin stuck to exterior at 00:04-00:06 | placement action does not complete normally\",\n    \"middle cup coin stack | filled to brim at 00:00-00:02 | coin stack disappears inside cup at 00:03 | state changes without physical interaction\",\n    \"left hand action | places coin near back cup at 00:01-00:03 | holds cup rim with coin suspended at 00:05-00:06 | release does not result in normal drop\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"coins in the center cup\",\n      \"invariant_violated\": \"effect-without-cause\",\n      \"description\": \"The stack of coins filling the middle cup vanishes without either hand touching or interacting with the cup.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"right hand and coin on front cup\",\n      \"invariant_violated\": \"proportionality & completion\",\n      \"description\": \"The initiated action of dropping a coin into the front cup dissolves into the hand holding the rim while the coin remains suspended against the outside wall instead of falling.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

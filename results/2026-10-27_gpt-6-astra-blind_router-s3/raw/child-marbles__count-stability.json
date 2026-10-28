@@ -1,0 +1,45 @@
+{
+  "ledger": [
+    "00:00.000 \u2014 Bowl balls: 8 clearly visible, comprising 2 red, 3 yellow and 3 green; hands are above the bowl.",
+    "00:00.250\u201300:00.500 \u2014 Bowl balls: hands enter and partly obscure the group; no ball is visibly brought in from outside the bowl.",
+    "00:00.750 \u2014 A red ball is lifted between the hands while the original 8 balls remain in the bowl; combined bowl-and-hand count increases from 8 to 9 without a visible addition.",
+    "00:01.000, 00:01.250, 00:01.500, 00:01.750, 00:02.000 \u2014 8 balls remain clearly visible in the bowl (2 red, 3 yellow, 3 green), with 1 additional red ball held above it: 9 total at each moment.",
+    "00:02.250\u201300:02.500 \u2014 The held red ball is visibly lowered back into the bowl; this is a transfer within the tracked group, not a new addition. The hand obscures the resulting bowl count.",
+    "00:02.750\u201300:05.000 \u2014 The hand remains over part of the ball group; a complete post-return count cannot be established, so no disappearance is confirmed.",
+    "00:05.250 \u2014 8 bowl balls are individually identifiable (2 red, 3 yellow, 3 green), but the hand still obscures part of the bowl; the ninth ball's status is unresolved.",
+    "00:05.500\u201300:09.750 \u2014 Balls are stirred continuously. Hand occlusion, overlapping balls and motion blur prevent reliable complete counts; no additional count change or different-kind transformation is confirmed.",
+    "00:00.000\u201300:01.250 \u2014 Separate tabletop balls at the right frame edge: 1 red and 1 green are visible; the group is cropped, so this is not a complete group count.",
+    "00:01.500 \u2014 Separate tabletop balls: 2 red and 1 green are visible as the camera reveals more of the right edge; the increased visible count is explained by framing.",
+    "00:01.750\u201300:03.250 \u2014 Separate tabletop balls: 4 visible, comprising 2 red, 1 green and 1 partly cropped yellow; no manipulation or spontaneous change is observed.",
+    "00:03.500\u201300:04.000 \u2014 The tabletop ball group becomes progressively cropped as framing tightens on the bowl; its subsequent absence from view is not disappearance."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Red balls in the bowl and the child's hands",
+      "invariant_violated": "Unexplained count increase",
+      "description": "At 00:00.000 the unobstructed bowl contains 8 balls: 2 red, 3 yellow and 3 green. The child reaches into the bowl and lifts a red ball at 00:00.750, yet the same 8-ball arrangement remains below. Clear frames from 00:01.000 through 00:02.000 show 2 red balls still in the bowl plus the held red ball, increasing the combined total to 9. No ball is visibly added from elsewhere; the action is an ordinary pickup, with no visible magic-performance context.",
+      "severity": "moderate",
+      "confidence": 0.94
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-02__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-02__count-stability.json",
+  "frozen_source_sha256": "f04bb38919d7b0c026827bf58ddecf24d4184c4f6020541891189ab8783a1293",
+  "key": "child-marbles__count-stability",
+  "parseOk": true
+}

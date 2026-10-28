@@ -1,0 +1,54 @@
+{
+  "key": "_long-scene__pour-conservation",
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:55:27.137Z",
+  "latencyMs": 45638,
+  "usage": {
+    "prompt_tokens": 12284,
+    "completion_tokens": 2479,
+    "total_tokens": 14763,
+    "cost": 0.024679,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024679,
+      "upstream_inference_prompt_cost": 0.012284,
+      "upstream_inference_completions_cost": 0.012395
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1996,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:23-00:26: Glass coffee carafe (source), transparent glass with black handle/collar, ~50% full of dark coffee, held upright by the waitress over the counter.",
+    "00:27-00:31: Glass coffee carafe (source), ~50% full of dark coffee, held level/upright directly above the mug; coffee streams out through the bottom of the pot while the internal fill level remains completely static at ~50%.",
+    "00:27-00:31: White ceramic mug (destination), opaque, resting on counter beneath the carafe and receiving the stream of coffee.",
+    "00:36-00:44: White ceramic mug, opaque, held by the man at the counter (fill level hidden by opaque walls).",
+    "01:09-01:17: White ceramic mug, opaque, held by the man on the counter while the waitress clears his plate.",
+    "01:27-01:34: Two opaque white ceramic mugs, one held by the man and one held by the waitress seated beside him (fill levels hidden).",
+    "01:37-01:40: White ceramic mug, opaque, resting on the counter next to the cash bills.",
+    "01:50-01:52: White ceramic mug, opaque, picked up from the counter by the waitress."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "glass coffee carafe and white ceramic mug",
+      "invariant_violated": "conservation and fill-level monotonicity",
+      "description": "As coffee pours into the white mug from 00:28 to 00:30, the glass carafe is held completely upright without tilting, the liquid streams impossibly through the solid bottom of the glass pot rather than the spout, and the visible coffee level inside the transparent carafe does not decrease at all during the pour.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:23-00:26: Glass coffee carafe (source), transparent glass with black handle/collar, ~50% full of dark coffee, held upright by the waitress over the counter.\",\n    \"00:27-00:31: Glass coffee carafe (source), ~50% full of dark coffee, held level/upright directly above the mug; coffee streams out through the bottom of the pot while the internal fill level remains completely static at ~50%.\",\n    \"00:27-00:31: White ceramic mug (destination), opaque, resting on counter beneath the carafe and receiving the stream of coffee.\",\n    \"00:36-00:44: White ceramic mug, opaque, held by the man at the counter (fill level hidden by opaque walls).\",\n    \"01:09-01:17: White ceramic mug, opaque, held by the man on the counter while the waitress clears his plate.\",\n    \"01:27-01:34: Two opaque white ceramic mugs, one held by the man and one held by the waitress seated beside him (fill levels hidden).\",\n    \"01:37-01:40: White ceramic mug, opaque, resting on the counter next to the cash bills.\",\n    \"01:50-01:52: White ceramic mug, opaque, picked up from the counter by the waitress.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:28\",\n      \"entity\": \"glass coffee carafe and white ceramic mug\",\n      \"invariant_violated\": \"conservation and fill-level monotonicity\",\n      \"description\": \"As coffee pours into the white mug from 00:28 to 00:30, the glass carafe is held completely upright without tilting, the liquid streams impossibly through the solid bottom of the glass pot rather than the spout, and the visible coffee level inside the transparent carafe does not decrease at all during the pour.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

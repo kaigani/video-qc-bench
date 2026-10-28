@@ -1,0 +1,109 @@
+{
+  "ledger": [
+    "Block A, initially left | Green upright block showing 2, top stud upward, supported by table and manipulated by the visible hand | Blue 2 at far left, upright on table | Hand lifts and rotates it at 00:00\u201300:01; green body becomes blue without a recoloring action; block B emerges beside it; hand nudges A toward B at 00:09.",
+    "Block B, final second from left | First resolves beside A at 00:01.000\u201300:01.250 as a blue block showing 3, supported by the hand | Blue 3, upright on table beside A | Appears during manipulation of A without a visible independent source; hand places it by 00:02 and adjusts it with A at 00:09.",
+    "Block C, initially right | Green upright block showing 2, top stud upward, supported by table | Green 2, upright in third position | Hand lifts and rotates it at 00:02.250\u201300:03.250, briefly exposing 3; C returns to table showing 2 while another green block D emerges at its right; remains there afterward.",
+    "Block D, final fourth | First resolves at 00:03.000\u201300:03.250 as a green block showing 3 beside C, held by the hand | Yellow-orange 2, upright on table | Emerges without an independent source; hand moves it right; body changes from green to yellow-orange by 00:03.750; placed at 00:04 as block E emerges beside it.",
+    "Block E, final fifth | First appears at 00:04 as a blue block beside D, held by the hand; shows 3 by 00:04.250 | Pale blue 3, upright on table | Emerges without a visible independent source; hand places it by 00:04.750; block F subsequently emerges at its right while E remains in place.",
+    "Block F, final sixth | First appears at 00:05 as a blue block beside E, held by the hand; shows 3 at 00:05.250 | Green 5, upright on table | Emerges without a visible independent source; hand moves it right; body changes through cyan to green at 00:05.500\u201300:05.750; set down showing 5 at 00:06 while block G emerges beside it.",
+    "Block G, final seventh | First appears at 00:06 as a cyan/blue-green block beside F, held by the hand; shows 3 at 00:06.250 | Green 2, upright on table | Emerges without a visible independent source; body becomes green during handling at 00:06.500\u201300:06.750; set down showing 2 as block H emerges at its right.",
+    "Block H, final eighth | First appears at 00:06.750 as a blue block showing 3 beside G, held by the hand | Blue 6, upright on table at far right | Emerges without a visible independent source; hand moves and turns it through 00:07.750, then releases it by 00:08.",
+    "Wooden tabletop | Stationary horizontal support beneath two blocks | Same support beneath eight blocks | Supports all placed blocks throughout; no observed state change."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Block A, initially left green 2",
+      "invariant_violated": "Material/color persistence",
+      "description": "During the initial lift and turn, the green block develops blue surfaces at 00:00.500 and is blue across its visible body by 00:00.750. No replacement or action changing its material or color is visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Block B, blue 3",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:01.000\u201300:01.250, a second blue block resolves from beside the block being handled. The blue 2 remains at left and the original green block remains at right, increasing the visible total from two to three without a separate block being brought into the scene.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Block D, emerging green 3",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:03.000\u201300:03.250, manipulation of the right green block produces two separate green blocks: a 2 left on the table and a 3 in the hand to its right. The two blue blocks persist, increasing the total from three to four without a visible source for the additional block.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Block D, green 3 becoming yellow-orange 2",
+      "invariant_violated": "Material/color persistence",
+      "description": "The block held to the right of the green 2 is green at 00:03.500 and yellow-orange at 00:03.750. It remains continuously in the same hand with no visible exchange or recoloring action.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Block E, pale blue 3",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:04.000\u201300:04.250, a blue block emerges at the right edge of the yellow-orange block as the hand moves right. The yellow-orange block stays on the table and all three earlier blocks persist, increasing the count to five without a visible independent source.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Block F, additional blue 3",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:05.000\u201300:05.250, the hand moves away from the placed pale blue 3 holding another blue 3. The placed block remains, and no additional block enters from elsewhere, increasing the visible count from five to six.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Block F, blue 3 becoming green block",
+      "invariant_violated": "Material/color persistence",
+      "description": "The newly held block is blue at 00:05.250, cyan at 00:05.500, and green at 00:05.750 while still showing 3. Handling changes its position but supplies no cause for the body color change.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block G, cyan/blue-green 3",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:06.000\u201300:06.250, the green 5 remains on the table while another block showing 3 emerges in the hand immediately to its right. The earlier five blocks remain present, increasing the total to seven without an independently introduced block.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block G, cyan/blue-green block becoming green",
+      "invariant_violated": "Material/color persistence",
+      "description": "The held block has a blue/cyan top and body at 00:06.250, becomes pale green at 00:06.500, and is green when placed at 00:06.750. No exchange or action altering its color is visible.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block H, final blue block",
+      "invariant_violated": "Object count conservation",
+      "description": "At 00:06.750, a green 2 occupies the seventh position while a separate blue 3 appears in the hand to its right. At 00:06.500 only one held block occupied this area; the other six blocks persist. The count rises to eight without a visible source for the extra block.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-12__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

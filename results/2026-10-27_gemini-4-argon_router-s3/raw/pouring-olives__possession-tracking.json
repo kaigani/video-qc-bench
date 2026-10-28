@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:04:25.350Z",
+  "latencyMs": 18289,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 1210,
+    "total_tokens": 2765,
+    "cost": 0.007605,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007605,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.00605
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 770,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:03: Small glass cup held in both hands (contains only bright green olives) -> poured into large glass jar on cutting board (olives arrive in the jar as a mix of bright green and dark purple/black olives)",
+    "00:04-00:05: Jump cut as hands reach toward metal bowl on counter -> hands now hold refilled small glass cup of green olives, metal bowl contents reduced, and small bottle appears on counter",
+    "00:06-00:09: Small glass cup held in both hands (contains bright green olives) -> poured into large glass jar (several olives turn dark purple/black during transfer into the jar)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "green olives poured from small glass container into large jar",
+      "invariant_violated": "transfer completeness",
+      "description": "The small glass cup held at the top of the jar contains only bright green olives, but as the olives drop into the large glass jar between 00:00 and 00:03, many of them arrive at the bottom of the jar as dark purple/black olives.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "second batch of green olives poured from small glass container into large jar",
+      "invariant_violated": "transfer completeness",
+      "description": "At 00:06, the small glass cup held above the jar contains only green olives, but as they are poured into the large jar between 00:07 and 00:09, several olives change appearance to dark purple/black.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:03: Small glass cup held in both hands (contains only bright green olives) -> poured into large glass jar on cutting board (olives arrive in the jar as a mix of bright green and dark purple/black olives)\",\n    \"00:04-00:05: Jump cut as hands reach toward metal bowl on counter -> hands now hold refilled small glass cup of green olives, metal bowl contents reduced, and small bottle appears on counter\",\n    \"00:06-00:09: Small glass cup held in both hands (contains bright green olives) -> poured into large glass jar (several olives turn dark purple/black during transfer into the jar)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"green olives poured from small glass container into large jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The small glass cup held at the top of the jar contains only bright green olives, but as the olives drop into the large glass jar between 00:00 and 00:03, many of them arrive at the bottom of the jar as dark purple/black olives.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"second batch of green olives poured from small glass container into large jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"At 00:06, the small glass cup held above the jar contains only green olives, but as they are poured into the large jar between 00:07 and 00:09, several olives change appearance to dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

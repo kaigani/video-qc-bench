@@ -1,94 +1,97 @@
 # Benchmark scores vs human baseline
 
-Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 141). Ranked recall-first by severity-weighted detection: a missed defect ships, a false positive only costs a second look, so FPs are reported separately as review burden. Legacy score = detection − 1 × FP, kept for continuity. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
+Ground truth: 50 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2=3, P3=2, P4=1; max detection = 147). Ranked recall-first by severity-weighted detection: a missed defect ships, a false positive only costs a second look, so FPs are reported separately as review burden. Legacy score = detection − 1 × FP, kept for continuity. EXTRA findings (plausible, not in baseline) are neutral and listed at the bottom for adjudication.
 
 ## Leaderboard
 
 | Model | Detection | Defects found | FP findings (review burden) | Precision* | TP findings | EXTRA | Legacy score |
 |---|---|---|---|---|---|---|---|
-| pro | **70/141** | **24/48** | 48 | 58% | 66 | 0 | 22 |
-| kimi | **55/141** | **21/48** | 18 | 71% | 44 | 0 | 37 |
-| qwen | **52/141** | **15/48** | 11 | 76% | 34 | 0 | 41 |
-| flash38 | **46/141** | **12/48** | 3 | 88% | 22 | 0 | 43 |
-| muse | **42/141** | **12/48** | 12 | 61% | 19 | 0 | 30 |
-| seed | **40/141** | **11/48** | 1 | 95% | 21 | 0 | 39 |
-| oxalpha | **39/141** | **15/48** | 11 | 70% | 26 | 0 | 28 |
-| flash | **34/141** | **9/48** | 3 | 86% | 18 | 0 | 31 |
-| gemma | **33/141** | **11/48** | 6 | 82% | 28 | 0 | 27 |
-| qwen27b | **32/141** | **10/48** | 4 | 82% | 18 | 0 | 28 |
-| muse13 | **30/141** | **8/48** | 0 | 100% | 9 | 0 | 30 |
-| nemotron35 | **25/141** | **8/48** | 16 | 47% | 14 | 0 | 9 |
-| flash37 | **25/141** | **7/48** | 3 | 81% | 13 | 0 | 22 |
-| nemotron | **14/141** | **5/48** | 3 | 75% | 9 | 0 | 11 |
-| pegasus | **6/141** | **2/48** | 0 | 100% | 2 | 0 | 6 |
+| argon | **92/147** | **27/50** | 26 | 75% | 65 | 11 | 66 |
+| pro | **70/147** | **24/50** | 48 | 58% | 66 | 0 | 22 |
+| kimi | **55/147** | **21/50** | 18 | 71% | 44 | 0 | 37 |
+| qwen | **52/147** | **15/50** | 11 | 76% | 34 | 0 | 41 |
+| flash38 | **46/147** | **12/50** | 3 | 88% | 22 | 0 | 43 |
+| muse | **42/147** | **12/50** | 12 | 61% | 19 | 0 | 30 |
+| seed | **40/147** | **11/50** | 1 | 95% | 21 | 0 | 39 |
+| oxalpha | **39/147** | **15/50** | 11 | 70% | 26 | 0 | 28 |
+| flash | **34/147** | **9/50** | 3 | 86% | 18 | 0 | 31 |
+| gemma | **33/147** | **11/50** | 6 | 82% | 28 | 0 | 27 |
+| qwen27b | **32/147** | **10/50** | 4 | 82% | 18 | 0 | 28 |
+| muse13 | **30/147** | **8/50** | 0 | 100% | 9 | 0 | 30 |
+| nemotron35 | **25/147** | **8/50** | 16 | 47% | 14 | 0 | 9 |
+| flash37 | **25/147** | **7/50** | 3 | 81% | 13 | 0 | 22 |
+| nemotron | **14/147** | **5/50** | 3 | 75% | 9 | 0 | 11 |
+| pegasus | **6/147** | **2/50** | 0 | 100% | 2 | 0 | 6 |
 
 *Precision counts TP+EXTRA findings as non-noise.
 
 ## Defect coverage (which model found which baseline defect)
 
-| Defect | Prio | flash | qwen | pro | gemma | pegasus | muse | muse13 | flash37 | nemotron | seed | kimi | qwen27b | oxalpha | flash38 | nemotron35 | Description |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| LONG-1 | P2 | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | · | Time of day changes after the first cut from dark to light |
-| LONG-2 | P3 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Shifts back to earlier time of day as the man enters |
-| LONG-3 | P3 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | Man enters from what seems like the kitchen of the diner |
-| LONG-4 | P4 | · | · | ✓ | · | · | ✓ | · | · | · | · | ✓ | ✓ | ✓ | · | · | 'Open' sign / interior layout doesn't match the exterior establishing shot |
-| LONG-5 | P4 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man seems to bring his own cup for the coffee |
-| LONG-6 | P0 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man sitting clipping through the counter as he faces camera; woman is missing |
-| LONG-7 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man shifts to opposite end of the counter |
-| LONG-8 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | · | Woman crosses through the counter to sit next to him |
-| LONG-9 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Woman changes to the opposite side of him on the reverse shot |
-| LONG-10 | P0 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man's hand leaves tip and another of his hands takes it |
-| LONG-11 | P0 | ✓ | ✓ | ✓ | · | · | ✓ | ✓ | ✓ | · | ✓ | ✓ | · | · | ✓ | · | Two instances of the same woman in the diner |
-| LONG-12 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Coffee pours from a carafe whose top half is transparent/empty; solid black liquid mass at |
-| LONG-13 | P1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | · | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Truck outside changes from white semi (00:00) to dark green box truck at departure (KT-con |
-| LONG-14 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Man's mug has moved position on the counter without visible cause (KT-confirmed from model |
-| MARB-1 | P2 | · | ✓ | ✓ | ✓ | · | ✓ | · | · | · | ✓ | · | · | · | · | · | Red ball duplicates when picked up (2 red -> 3 red); heavy morphing while stirring, up to  |
-| DANC-1 | P2 | · | · | ✓ | · | · | · | · | · | · | · | · | ✓ | ✓ | · | · | Mirrored pose does not match the in-room pose, especially foot position |
-| DANC-2 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | ✓ | · | · | Shoulder tattoo morphs as she raises her arm |
-| DANC-3 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | At 00:05 reflection shows hand in front, in-room shows hand behind her back |
-| DANC-4 | P3 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Mirror reflection shows two exit doors where only one reflection of the single door should |
-| HOME-1 | P1 | ✓ | ✓ | ✓ | ✓ | · | ✓ | · | · | · | ✓ | ✓ | ✓ | · | ✓ | · | Implausible interior layout: walking the length of the kitchen through a bedroom reveals a |
-| HOME-2 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Bedroom has two chairs tucked under the foot of the bed as if the bed is a table |
-| CUPS-1 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | · | ✓ | · | · | · | · | Coin placed into a cup moves to the outside of the cup |
-| CUPS-2 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Other hand places a coin on the table and the coin changes into a cup (appearance of 5 cup |
-| CUPS-3 | P2 | · | ✓ | ✓ | · | · | ✓ | · | · | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Shot starts with 4 cups, implies 5, ends with 3 visible; gold coins in center of table dis |
-| MIRR-1 | P4 | · | · | ✓ | · | · | · | · | · | · | · | ✓ | · | ✓ | · | · | Mirror reflection of hair-brushing does not match in-room action (0:04 in-room hand over e |
-| MIRR-2 | P4 | ✓ | · | ✓ | · | · | · | · | · | · | ✓ | · | · | ✓ | · | · | The brush object itself morphs and changes |
-| PHON-1 | P3 | ✓ | · | ✓ | · | · | · | ✓ | · | ✓ | · | ✓ | ✓ | ✓ | ✓ | · | Screen contains garbled text and hand gestures have no effect on the screen UI |
-| OLIV-1 | P4 | ✓ | · | ✓ | ✓ | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | · | Dark purple olives not visible at start (could feasibly be underneath the green) |
-| OLIV-2 | P4 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Amount poured from first container exceeds what arrives in the jar |
-| OLIV-3 | P3 | · | · | · | · | · | ✓ | ✓ | ✓ | · | ✓ | ✓ | · | · | · | ✓ | First container (bowl) becomes a small bottle when set down |
-| OLIV-4 | P3 | · | · | · | · | · | ✓ | ✓ | · | · | ✓ | · | · | ✓ | · | ✓ | Second batch of olives gathers into his hand unnaturally and a container appears around th |
-| SKAT-1 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | First jump reveals board underside with only two wheels, unnaturally placed |
-| SKAT-2 | P4 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Feet morph together and switch position on the turn |
-| WATC-1 | P4 | · | · | ✓ | ✓ | ✓ | · | · | · | ✓ | · | · | · | ✓ | · | ✓ | Small details on the watch morph slightly; winding/spinning action seems unusual |
-| BLOC-1 | P0 | ✓ | ✓ | ✓ | ✓ | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Two green blocks become 8 multicolored blocks |
-| APPL-1 | P1 | · | ✓ | ✓ | · | · | · | · | · | · | · | · | · | ✓ | ✓ | · | Apple held unnaturally: closed hand plus clapping hand, nothing holding it up |
-| APPL-2 | P3 | ✓ | ✓ | · | ✓ | · | · | ✓ | ✓ | · | ✓ | ✓ | ✓ | · | ✓ | · | Apple disappears after she passes in front of the camera (seen from behind) |
-| CAR-1 | P0 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Woman's torso pokes out of the hood in front of the windshield (primary defect) |
-| CAR-2 | P4 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | License plate number is garbled |
-| CAR-3 | P3 | · | · | · | ✓ | · | · | · | ✓ | · | · | ✓ | · | · | ✓ | ✓ | Road topology nonsensical: poles in the middle of the road, lane lines morph |
-| LONG-15 | P3 | · | ✓ | · | ✓ | · | ✓ | · | · | · | · | ✓ | ✓ | ✓ | · | · | Man has the plated meal at night (00:33-00:44) before the waitress serves it at dawn (01:1 |
-| CUPS-4 | P3 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | Magician wears a black bow tie and a red necktie simultaneously (KT-confirmed 2026-08-14;  |
-| CUPS-5 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | Right hand shows 6 fingers as the camera rotates around it - 5 fingers with no thumb in vi |
-| APPL-3 | P3 | ✓ | ✓ | · | · | · | · | · | ✓ | · | · | ✓ | · | · | ✓ | · | Crates of unnatural teal/cyan fruit at the market stalls (KT-confirmed 2026-08-14; P3 assi |
-| APPL-4 | P4 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | Top-left market sign shows garbled glyphs; KT: very low priority, difficult to see (KT-con |
-| CAR-4 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | · | ✓ | · | ✓ | · | ✓ | Hair streams violently in wind while vegetation and antenna are unaffected (KT-confirmed 2 |
-| DIAL-1 | P3 | · | · | · | · | · | ✓ | · | · | ✓ | · | · | · | · | · | · | Spoken dialogue references 'the red door is locked, the blue door is open' but all visible |
-| CAR-5 | P4 | · | · | ✓ | · | · | · | · | · | · | · | ✓ | · | · | · | · | Windshield wiper arms relocate/change configuration between frames (KT-confirmed 2026-08-1 |
+| Defect | Prio | flash | qwen | pro | gemma | pegasus | muse | muse13 | flash37 | nemotron | seed | kimi | qwen27b | oxalpha | flash38 | nemotron35 | argon | Description |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| LONG-1 | P2 | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Time of day changes after the first cut from dark to light |
+| LONG-2 | P3 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Shifts back to earlier time of day as the man enters |
+| LONG-3 | P3 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | ✓ | Man enters from what seems like the kitchen of the diner |
+| LONG-4 | P4 | · | · | ✓ | · | · | ✓ | · | · | · | · | ✓ | ✓ | ✓ | · | · | · | 'Open' sign / interior layout doesn't match the exterior establishing shot |
+| LONG-5 | P4 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man seems to bring his own cup for the coffee |
+| LONG-6 | P0 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Man sitting clipping through the counter as he faces camera; woman is missing |
+| LONG-7 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Man shifts to opposite end of the counter |
+| LONG-8 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | · | ✓ | Woman crosses through the solid counter to sit next to the man; also crosses back through  |
+| LONG-9 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Woman changes to the opposite side of him on the reverse shot |
+| LONG-10 | P0 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Man's hand leaves tip and another of his hands takes it |
+| LONG-11 | P0 | ✓ | ✓ | ✓ | · | · | ✓ | ✓ | ✓ | · | ✓ | ✓ | · | · | ✓ | · | ✓ | Two instances of the same woman in the diner |
+| LONG-12 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Coffee pours from a carafe whose top half is transparent/empty; solid black liquid mass at |
+| LONG-13 | P1 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | · | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Truck outside changes from white semi (00:00) to dark green box truck at departure (KT-con |
+| LONG-14 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Man's mug has moved position on the counter without visible cause (KT-confirmed from model |
+| MARB-1 | P2 | · | ✓ | ✓ | ✓ | · | ✓ | · | · | · | ✓ | · | · | · | · | · | ✓ | Red ball duplicates when picked up (2 red -> 3 red); heavy morphing while stirring, up to  |
+| DANC-1 | P2 | · | · | ✓ | · | · | · | · | · | · | · | · | ✓ | ✓ | · | · | ✓ | Mirrored pose does not match the in-room pose, especially foot position |
+| DANC-2 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | ✓ | · | · | · | Shoulder tattoo morphs as she raises her arm |
+| DANC-3 | P1 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | At 00:05 reflection shows hand in front, in-room shows hand behind her back |
+| DANC-4 | P3 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Mirror reflection shows two exit doors where only one reflection of the single door should |
+| HOME-1 | P1 | ✓ | ✓ | ✓ | ✓ | · | ✓ | · | · | · | ✓ | ✓ | ✓ | · | ✓ | · | ✓ | Implausible interior layout: walking the length of the kitchen through a bedroom reveals a |
+| HOME-2 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Bedroom has two chairs tucked under the foot of the bed as if the bed is a table |
+| CUPS-1 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | · | ✓ | · | · | · | · | ✓ | Coin placed into a cup moves to the outside of the cup |
+| CUPS-2 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Other hand places a coin on the table and the coin changes into a cup (appearance of 5 cup |
+| CUPS-3 | P2 | · | ✓ | ✓ | · | · | ✓ | · | · | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Shot starts with 4 cups, implies 5, ends with 3 visible; gold coins in center of table dis |
+| MIRR-1 | P4 | · | · | ✓ | · | · | · | · | · | · | · | ✓ | · | ✓ | · | · | ✓ | Mirror reflection of hair-brushing does not match in-room action (0:04 in-room hand over e |
+| MIRR-2 | P4 | ✓ | · | ✓ | · | · | · | · | · | · | ✓ | · | · | ✓ | · | · | ✓ | The brush object itself morphs and changes |
+| PHON-1 | P3 | ✓ | · | ✓ | · | · | · | ✓ | · | ✓ | · | ✓ | ✓ | ✓ | ✓ | · | ✓ | Screen contains garbled text and hand gestures have no effect on the screen UI |
+| OLIV-1 | P4 | ✓ | · | ✓ | ✓ | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | · | ✓ | Dark purple olives not visible at start (could feasibly be underneath the green) |
+| OLIV-2 | P4 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | · | Amount poured from first container exceeds what arrives in the jar |
+| OLIV-3 | P3 | · | · | · | · | · | ✓ | ✓ | ✓ | · | ✓ | ✓ | · | · | · | ✓ | ✓ | First container (bowl) becomes a small bottle when set down |
+| OLIV-4 | P3 | · | · | · | · | · | ✓ | ✓ | · | · | ✓ | · | · | ✓ | · | ✓ | ✓ | Second batch of olives gathers into his hand unnaturally and a container appears around th |
+| SKAT-1 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | First jump reveals board underside with only two wheels, unnaturally placed |
+| SKAT-2 | P4 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | · | Feet morph together and switch position on the turn |
+| WATC-1 | P4 | · | · | ✓ | ✓ | ✓ | · | · | · | ✓ | · | · | · | ✓ | · | ✓ | · | Small details on the watch morph slightly; winding/spinning action seems unusual |
+| BLOC-1 | P0 | ✓ | ✓ | ✓ | ✓ | · | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Two green blocks become 8 multicolored blocks |
+| APPL-1 | P1 | · | ✓ | ✓ | · | · | · | · | · | · | · | · | · | ✓ | ✓ | · | · | Apple held unnaturally: closed hand plus clapping hand, nothing holding it up |
+| APPL-2 | P3 | ✓ | ✓ | · | ✓ | · | · | ✓ | ✓ | · | ✓ | ✓ | ✓ | · | ✓ | · | ✓ | Apple disappears after she passes in front of the camera (seen from behind) |
+| CAR-1 | P0 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Woman's torso pokes out of the hood in front of the windshield (primary defect) |
+| CAR-2 | P4 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | · | License plate number is garbled |
+| CAR-3 | P3 | · | · | · | ✓ | · | · | · | ✓ | · | · | ✓ | · | · | ✓ | ✓ | · | Road topology nonsensical: poles in the middle of the road, lane lines morph |
+| LONG-15 | P3 | · | ✓ | · | ✓ | · | ✓ | · | · | · | · | ✓ | ✓ | ✓ | · | · | ✓ | Man has the plated meal at night (00:33-00:44) before the waitress serves it at dawn (01:1 |
+| CUPS-4 | P3 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | ✓ | Magician wears a black bow tie and a red necktie simultaneously (KT-confirmed 2026-08-14;  |
+| CUPS-5 | P3 | · | · | ✓ | · | · | · | · | · | · | · | · | · | · | · | · | · | Right hand shows 6 fingers as the camera rotates around it - 5 fingers with no thumb in vi |
+| APPL-3 | P3 | ✓ | ✓ | · | · | · | · | · | ✓ | · | · | ✓ | · | · | ✓ | · | ✓ | Crates of unnatural teal/cyan fruit at the market stalls (KT-confirmed 2026-08-14; P3 assi |
+| APPL-4 | P4 | · | ✓ | · | · | · | · | · | · | · | · | ✓ | · | · | · | · | · | Top-left market sign shows garbled glyphs; KT: very low priority, difficult to see (KT-con |
+| CAR-4 | P3 | · | · | ✓ | ✓ | · | · | · | · | · | · | ✓ | · | ✓ | · | ✓ | · | Hair streams violently in wind while vegetation and antenna are unaffected (KT-confirmed 2 |
+| DIAL-1 | P3 | · | · | · | · | · | ✓ | · | · | ✓ | · | · | · | · | · | · | · | Spoken dialogue references 'the red door is locked, the blue door is open' but all visible |
+| CAR-5 | P4 | · | · | ✓ | · | · | · | · | · | · | · | ✓ | · | · | · | · | · | Windshield wiper arms relocate/change configuration between frames (KT-confirmed 2026-08-1 |
+| LONG-16 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | ✓ | Two separate white mugs held by the man and waitress merge into one at 01:12.5–01:14; wait |
+| LONG-17 | P2 | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | · | Kitchen visible through the serving hatch changes from the established extractor/cooking s |
 
-**Missed by every model (11):** LONG-2 (P3), LONG-5 (P4), LONG-6 (P0), LONG-7 (P1), LONG-9 (P1), LONG-10 (P0), DANC-3 (P1), DANC-4 (P3), HOME-2 (P2), CUPS-2 (P2), SKAT-1 (P2)
+**Missed by every model (9):** LONG-2 (P3), LONG-5 (P4), LONG-6 (P0), DANC-3 (P1), DANC-4 (P3), HOME-2 (P2), CUPS-2 (P2), SKAT-1 (P2), LONG-17 (P2)
 
 ## Role contribution (TP findings / total findings per role)
 
-| Role | flash | qwen | pro | gemma | pegasus | muse | muse13 | flash37 | nemotron | seed | kimi | qwen27b | oxalpha | flash38 | nemotron35 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| baseline-generalist | 6tp/2fp/8 | 18tp/7fp/25 | 12tp/10fp/22 | 15tp/4fp/19 | 1tp/0fp/1 | 10tp/5fp/15 | 4tp/0fp/4 | 7tp/2fp/9 | 4tp/1fp/5 | 5tp/1fp/6 | 24tp/11fp/35 | 13tp/3fp/16 | 15tp/10fp/25 | 12tp/2fp/14 | 5tp/6fp/11 |
-| character-continuity | 1tp/0fp/1 | 1tp/2fp/3 | 4tp/11fp/15 | 0tp/2fp/2 | — | 1tp/1fp/2 | — | 0tp/1fp/1 | 2tp/2fp/4 | 1tp/0fp/1 | 2tp/2fp/4 | 0tp/1fp/1 | 2tp/1fp/3 | 2tp/0fp/2 | — |
-| object-persistence-state | 7tp/0fp/7 | 10tp/2fp/12 | 22tp/6fp/28 | 5tp/0fp/5 | 1tp/0fp/1 | 5tp/3fp/8 | 5tp/0fp/5 | 5tp/0fp/5 | 3tp/0fp/3 | 14tp/0fp/14 | 9tp/1fp/10 | 4tp/0fp/4 | 4tp/0fp/4 | 4tp/1fp/5 | 6tp/2fp/8 |
-| contact-interaction-kinematics | 1tp/0fp/1 | 1tp/0fp/1 | 7tp/9fp/16 | 4tp/0fp/4 | — | — | — | — | — | — | 3tp/2fp/5 | — | 1tp/0fp/1 | 1tp/0fp/1 | 1tp/2fp/3 |
-| spatial-topology-occlusion | 2tp/1fp/3 | 2tp/0fp/2 | 9tp/9fp/18 | 1tp/0fp/1 | — | 3tp/0fp/3 | — | — | — | — | 3tp/0fp/3 | 1tp/0fp/1 | 2tp/0fp/2 | 3tp/0fp/3 | 2tp/2fp/4 |
-| causal-temporal-sequence | 1tp/0fp/1 | 2tp/0fp/2 | 12tp/3fp/15 | 3tp/0fp/3 | — | 0tp/3fp/3 | — | 1tp/0fp/1 | — | 1tp/0fp/1 | 3tp/2fp/5 | — | 2tp/0fp/2 | — | 0tp/4fp/4 |
+| Role | flash | qwen | pro | gemma | pegasus | muse | muse13 | flash37 | nemotron | seed | kimi | qwen27b | oxalpha | flash38 | nemotron35 | argon |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| baseline-generalist | 6tp/2fp/8 | 18tp/7fp/25 | 12tp/10fp/22 | 15tp/4fp/19 | 1tp/0fp/1 | 10tp/5fp/15 | 4tp/0fp/4 | 7tp/2fp/9 | 4tp/1fp/5 | 5tp/1fp/6 | 24tp/11fp/35 | 13tp/3fp/16 | 15tp/10fp/25 | 12tp/2fp/14 | 5tp/6fp/11 | 24tp/8fp/36 |
+| character-continuity | 1tp/0fp/1 | 1tp/2fp/3 | 4tp/11fp/15 | 0tp/2fp/2 | — | 1tp/1fp/2 | — | 0tp/1fp/1 | 2tp/2fp/4 | 1tp/0fp/1 | 2tp/2fp/4 | 0tp/1fp/1 | 2tp/1fp/3 | 2tp/0fp/2 | — | 2tp/4fp/10 |
+| object-persistence-state | 7tp/0fp/7 | 10tp/2fp/12 | 22tp/6fp/28 | 5tp/0fp/5 | 1tp/0fp/1 | 5tp/3fp/8 | 5tp/0fp/5 | 5tp/0fp/5 | 3tp/0fp/3 | 14tp/0fp/14 | 9tp/1fp/10 | 4tp/0fp/4 | 4tp/0fp/4 | 4tp/1fp/5 | 6tp/2fp/8 | 17tp/11fp/28 |
+| contact-interaction-kinematics | 1tp/0fp/1 | 1tp/0fp/1 | 7tp/9fp/16 | 4tp/0fp/4 | — | — | — | — | — | — | 3tp/2fp/5 | — | 1tp/0fp/1 | 1tp/0fp/1 | 1tp/2fp/3 | 7tp/0fp/8 |
+| spatial-topology-occlusion | 2tp/1fp/3 | 2tp/0fp/2 | 9tp/9fp/18 | 1tp/0fp/1 | — | 3tp/0fp/3 | — | — | — | — | 3tp/0fp/3 | 1tp/0fp/1 | 2tp/0fp/2 | 3tp/0fp/3 | 2tp/2fp/4 | 9tp/1fp/11 |
+| causal-temporal-sequence | 1tp/0fp/1 | 2tp/0fp/2 | 12tp/3fp/15 | 3tp/0fp/3 | — | 0tp/3fp/3 | — | 1tp/0fp/1 | — | 1tp/0fp/1 | 3tp/2fp/5 | — | 2tp/0fp/2 | — | 0tp/4fp/4 | 6tp/2fp/9 |
 
 ## Specialist vs generalist detection (per model: defects found only by specialists / only by baseline / by both)
 
@@ -107,6 +110,7 @@ Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
 - **oxalpha**: specialists-only [LONG-4, DANC-2, APPL-1, CAR-4], baseline-only [CUPS-3, MIRR-1, MIRR-2, PHON-1, OLIV-4, WATC-1], both [LONG-15, LONG-13, DANC-1, OLIV-1, BLOC-1]
 - **flash38**: specialists-only [LONG-8, APPL-1, APPL-2], baseline-only [LONG-13, PHON-1, OLIV-1, APPL-3], both [LONG-11, HOME-1, CUPS-3, BLOC-1, CAR-3]
 - **nemotron35**: specialists-only [OLIV-3, WATC-1, BLOC-1], baseline-only [CUPS-3, CAR-3, CAR-4], both [LONG-13, OLIV-4]
+- **argon**: specialists-only [LONG-16, LONG-8, LONG-13, LONG-14, LONG-7, LONG-9, MARB-1, OLIV-4], baseline-only [LONG-3, DANC-1, CUPS-4, MIRR-2, PHON-1, APPL-3, APPL-2], both [LONG-10, LONG-11, LONG-12, LONG-15, HOME-1, CUPS-1, CUPS-3, MIRR-1, OLIV-1, OLIV-3, BLOC-1, CAR-1]
 
 ## False positives (penalized findings)
 
@@ -264,8 +268,39 @@ Ground truth: 48 defects from `review-human-baseline.md` (weights P0=8, P1=5, P2
   - skateboarder / baseline-generalist @00:04: The skateboarder is shown at the peak of a jump in mid-air at 00:03, then instantly appears grounded and riding away at 00:04, ski
   - skateboarder / baseline-generalist @00:09: The skateboarder is shown crouching on the ground preparing to jump at 00:08, then instantly appears high in mid-air at 00:09, ski
   - woman-apple / spatial-topology-occlusion @00:05: The man in the white t-shirt and grey shorts exits the frame to the left foreground at 00:03-00:04 after passing the camera, but r
+- **argon** (26):
+  - _long-scene / baseline-generalist @01:31: Through the window behind the waitress (left of center), a semi-truck on the road moves smoothly from left to right trailer-first,
+  - _long-scene / baseline-generalist @01:46: The waitress's reflection in the window shows her torso and hanging glasses facing toward the camera at an impossible angle relati
+  - _long-scene / character-continuity @00:45: From 00:36 to 00:44, the customer is seated at the counter angled toward the camera with the empty kitchen pass-through window vis
+  - _long-scene / character-continuity @00:51: The customer is seated at the diner counter prior to 00:51, but in the counter shot from 00:51 to 00:59 he has completely vanished
+  - _long-scene / character-continuity @01:35: In 01:27-01:34, both the customer and the waitress are seated side-by-side on the stools at the counter. At the cut at 01:35-01:36
+  - _long-scene / character-continuity @01:50: At 01:46-01:49, the waitress is standing upright by the front window on the booth side of the diner watching the customer get into
+  - _long-scene / object-persistence-state @00:24: At 00:21-00:23, the waitress is wiping the bare counter with a cloth in her right hand and no coffee pot is nearby. At 00:24, as s
+  - _long-scene / object-persistence-state @01:18: At 01:15-01:17, the waitress picks up the untouched plate of food with both hands and walks away with it. On the cut to 01:18, the
+  - dialogue / baseline-generalist @00:07: From 00:00 to 00:07, the man stands to the right of a plain blue coat, with an olive-green wall strip (featuring a mounted wooden 
+  - dialogue / object-persistence-state @00:08: The circular ornate brass medallion mounted on the door rail directly above the coat hook vanishes completely as the man turns to 
+  - dialogue / object-persistence-state @00:08: The solid dark blue jacket hanging on the door hook spontaneously develops a thick white stripe across its lower half without anyo
+  - dialogue / object-persistence-state @00:08: The framed picture originally hanging on a separate door to the right of the green wall strip shifts onto the previously bare righ
+  - dialogue / spatial-topology-occlusion @00:08: From 00:00 to 00:07, the panel immediately to the right of the hanging blue coat (behind the man's head) is a plain recessed woode
+  - home-tour / object-persistence-state @00:08: At 00:06, the framed artwork above the small side table has a wide mat with a small muted center image, and a small horizontal pho
+  - man-cups / object-persistence-state @00:04: A large gold coin spontaneously appears on the beige tabletop directly in front of the foreground cup at 00:04 in a spot that was 
+  - man-in-mirror / causal-temporal-sequence @00:05: Motion resets to the initial pose at 00:05 and then stalls with the brush hovering static in mid-air from 00:06 to 00:09.
+  - phone / object-persistence-state @00:02: The bright red bag carried in the left hand of the person walking away in the background vanishes into thin air between 00:01 and 
+  - pouring-olives / baseline-generalist @00:05: From 00:00 to 00:04, the person's dark blue shirt is buttoned up with no undershirt visible. Across the jump cut at 00:05, the shi
+  - pouring-olives / baseline-generalist @00:05: From 00:00 to 00:04, the right side of the jar's upper neck has a bare glass lug. At 00:05, a metal wire loop/clasp suddenly appea
+  - pouring-olives / object-persistence-state @00:06: The small pointed glass lug/spout on the upper-right neck of the large jar (visible from 00:00 to 00:05) morphs into a larger roun
+  - skateboarder / baseline-generalist @00:01: Although the sun is directly behind the skateboarder, his shadow on the concrete ramp completely disappears during his jump from 0
+  - skateboarder / baseline-generalist @00:03: As the skateboarder lands, the right half of the skateboard and its front truck vanish/warp out of existence while his right foot 
+  - skateboarder / baseline-generalist @00:08: During the second jump at 00:08, the left truck and wheels completely disappear from the underside of the airborne skateboard; upo
+  - skateboarder / object-persistence-state @00:03: As the skater lands the first trick, the front half of the skateboard under his left foot disappears, then spontaneously reappears
+  - skateboarder / object-persistence-state @00:08: While the skateboard is mid-air during the second jump, the left truck and wheels vanish completely from the underside of the deck
+  - weird-blocks / causal-temporal-sequence @00:07: The hand exhibits discontinuous, choppy motion as it jumps from the rightmost block back to the center blocks.
 
 ## EXTRA findings awaiting human adjudication (plausible defects not in the baseline)
 
 If confirmed, these should be added to ground-truth.json and rescored; if rejected, reclassify as FP in matches.json.
 
+- **dancer-arm-flip-0002** (argon×3): dancer-mirror: at ~00:01.6-00:02.4 the in-room dancer snaps into a horizontally mirrored pose (raised right arm becomes raised left arm, weight shifts legs) and snaps back; frame-verified by Claude. Gemini 4 Argon, 5 of 6 samples. Pending KT.
+- **back-wall-doorway-vs-window** (argon×1): _long-scene: medium shots show a door/window frame and poster left of the kitchen pass-through; wide shots of the same wall show booths and a window with an OPEN sign instead. Gemini 4 Argon, 4 of 6 samples. Pending KT.
+- **apple-frozen-background** (argon×6): woman-apple: right-side background pedestrians and stall stay frozen like a still plate while foreground pedestrians walk; a vendor vanishes and a passer-by is wiped out as the plate edge passes. Gemini 4 Argon, all 3 v1 samples. Pending KT.
+- **home-tour-phantom-hand** (argon×1): home-tour: a distorted flesh-coloured hand/forearm briefly appears beside the woman's left hip/arm at ~00:08. Gemini 4 Argon, 2 of 3 v1 samples. Pending KT.

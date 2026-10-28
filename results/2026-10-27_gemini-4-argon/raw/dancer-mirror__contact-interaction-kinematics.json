@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__contact-interaction-kinematics",
+  "video": "dancer-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:29:06.009Z",
+  "latencyMs": 31827,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1901,
+    "total_tokens": 3521,
+    "cost": 0.011125,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011125,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.009505
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1549,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "dancer's feet | both feet planted flat in wide stance on studio floor at 00:00 | right foot supporting weight, left foot pointed on floor at 00:09 | slight weight shifts and foot pivoting between 00:02 and 00:05 with solid floor contact maintained",
+    "dancer's arms | right arm extending outward, left arm resting down by left side at 00:00 | right arm curved overhead, left arm resting by left side at 00:09 | right arm raises overhead (00:01), warps/switches sides abnormally (00:02), lowers (00:03-00:05), and sweeps back overhead (00:06-00:09)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "dancer's arms and torso",
+      "invariant_violated": "limb mechanics and continuous trajectory",
+      "description": "As the dancer holds her right arm overhead at 00:01, her limb configuration snaps impossibly at 00:02: the raised right arm disappears from her right shoulder and an upright arm extends from her left shoulder instead while a segment of her tattooed left forearm remains at her waist, before snapping back to a raised right arm and lowered left arm at 00:03.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"dancer's feet | both feet planted flat in wide stance on studio floor at 00:00 | right foot supporting weight, left foot pointed on floor at 00:09 | slight weight shifts and foot pivoting between 00:02 and 00:05 with solid floor contact maintained\",\n    \"dancer's arms | right arm extending outward, left arm resting down by left side at 00:00 | right arm curved overhead, left arm resting by left side at 00:09 | right arm raises overhead (00:01), warps/switches sides abnormally (00:02), lowers (00:03-00:05), and sweeps back overhead (00:06-00:09)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"dancer's arms and torso\",\n      \"invariant_violated\": \"limb mechanics and continuous trajectory\",\n      \"description\": \"As the dancer holds her right arm overhead at 00:01, her limb configuration snaps impossibly at 00:02: the raised right arm disappears from her right shoulder and an upright arm extends from her left shoulder instead while a segment of her tattooed left forearm remains at her waist, before snapping back to a raised right arm and lowered left arm at 00:03.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

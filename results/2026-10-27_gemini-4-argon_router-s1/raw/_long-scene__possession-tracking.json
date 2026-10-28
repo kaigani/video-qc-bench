@@ -1,0 +1,64 @@
+{
+  "key": "_long-scene__possession-tracking",
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:28:39.335Z",
+  "latencyMs": 80161,
+  "usage": {
+    "prompt_tokens": 12287,
+    "completion_tokens": 5425,
+    "total_tokens": 17712,
+    "cost": 0.039412,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.039412,
+      "upstream_inference_prompt_cost": 0.012287,
+      "upstream_inference_completions_cost": 0.027125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4469,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:10-00:23: Grey wiping cloth — held in waitress's right hand while wiping counter, then placed on counter at 00:23",
+    "00:23-00:31: Glass coffee pot — picked up from counter by waitress's right hand (00:23), used to pour coffee into white mug (00:25-00:31)",
+    "00:27-00:44: White coffee mug #1 — touched by man's right hand on counter (00:27), filled with coffee (00:27-00:31), held by man's hands on counter (00:36-00:44)",
+    "00:32-00:44: Plate with toast and egg — resting on counter in front of man (00:32-00:44)",
+    "00:45-00:50: Grey wiping cloth — held in waitress's right hand wiping pass-through counter",
+    "01:09-01:17: Plate with toast and egg — held on counter by waitress's hands (01:09-01:10), left hand (01:11-01:13), then picked up with both hands and carried away toward kitchen (01:14-01:17)",
+    "01:09-01:17: White coffee mug #1 and White coffee mug #2 — Mug #1 sits in front of man and is grasped by his hands (01:09-01:12); Mug #2 sits near condiment caddy, is picked up by waitress's right hand (01:11-01:12), and merges into Mug #1 at 01:13 leaving only a single mug in man's hands (01:14-01:17)",
+    "01:27-01:34: Two white coffee mugs — one held by waitress on counter, one held by man on counter",
+    "01:38-01:40: Stack of dollar bills — slid onto counter next to white mug by man's left hand (01:38), touched by man's right hand (01:39) while morphing shape/denomination, left resting on counter (01:40)",
+    "01:50-01:55: Stack of dollar bills and white coffee mug — picked up from counter by waitress's left hand (bills) and right hand (mug) at 01:51 and carried behind counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "white coffee mugs",
+      "invariant_violated": "continuous chain of custody / placement persistence",
+      "description": "At 01:11-01:12, two distinct white coffee mugs are visible: one on the counter held by the man's hands and a second picked up by the waitress's right hand. At 01:13, the waitress moves the second mug directly into the space occupied by the man's mug, and the two mugs visibly merge into a single mug, leaving only one mug on the counter when her hand withdraws at 01:14.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:39",
+      "entity": "dollar bills",
+      "invariant_violated": "transfer completeness",
+      "description": "At 01:38, the left hand places folded bills onto the counter showing a '1' in the lower-left corner and pulls away. As the right hand's fingers touch the top of the bills at 01:39, an extra upper-left corner of paper materializes without mechanical unfolding and the top bill morphs into a different bill showing '100' in the lower-right corner.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:10-00:23: Grey wiping cloth — held in waitress's right hand while wiping counter, then placed on counter at 00:23\",\n    \"00:23-00:31: Glass coffee pot — picked up from counter by waitress's right hand (00:23), used to pour coffee into white mug (00:25-00:31)\",\n    \"00:27-00:44: White coffee mug #1 — touched by man's right hand on counter (00:27), filled with coffee (00:27-00:31), held by man's hands on counter (00:36-00:44)\",\n    \"00:32-00:44: Plate with toast and egg — resting on counter in front of man (00:32-00:44)\",\n    \"00:45-00:50: Grey wiping cloth — held in waitress's right hand wiping pass-through counter\",\n    \"01:09-01:17: Plate with toast and egg — held on counter by waitress's hands (01:09-01:10), left hand (01:11-01:13), then picked up with both hands and carried away toward kitchen (01:14-01:17)\",\n    \"01:09-01:17: White coffee mug #1 and White coffee mug #2 — Mug #1 sits in front of man and is grasped by his hands (01:09-01:12); Mug #2 sits near condiment caddy, is picked up by waitress's right hand (01:11-01:12), and merges into Mug #1 at 01:13 leaving only a single mug in man's hands (01:14-01:17)\",\n    \"01:27-01:34: Two white coffee mugs — one held by waitress on counter, one held by man on counter\",\n    \"01:38-01:40: Stack of dollar bills — slid onto counter next to white mug by man's left hand (01:38), touched by man's right hand (01:39) while morphing shape/denomination, left resting on counter (01:40)\",\n    \"01:50-01:55: Stack of dollar bills and white coffee mug — picked up from counter by waitress's left hand (bills) and right hand (mug) at 01:51 and carried behind counter\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:13\",\n      \"entity\": \"white coffee mugs\",\n      \"invariant_violated\": \"continuous chain of custody / placement persistence\",\n      \"description\": \"At 01:11-01:12, two distinct white coffee mugs are visible: one on the counter held by the man's hands and a second picked up by the waitress's right hand. At 01:13, the waitress moves the second mug directly into the space occupied by the man's mug, and the two mugs visibly merge into a single mug, leaving only one mug on the counter when her hand withdraws at 01:14.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:39\",\n      \"entity\": \"dollar bills\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"At 01:38, the left hand places folded bills onto the counter showing a '1' in the lower-left corner and pulls away. As the right hand's fingers touch the top of the bills at 01:39, an extra upper-left corner of paper materializes without mechanical unfolding and the top bill morphs into a different bill showing '100' in the lower-right corner.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

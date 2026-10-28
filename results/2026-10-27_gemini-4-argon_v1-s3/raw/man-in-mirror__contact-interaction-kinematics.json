@@ -1,0 +1,56 @@
+{
+  "key": "man-in-mirror__contact-interaction-kinematics",
+  "video": "man-in-mirror.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:22:07.351Z",
+  "latencyMs": 36549,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 2379,
+    "total_tokens": 3999,
+    "cost": 0.013515,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.013515,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.011895
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1929,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man's right hand and grooming tool | 00:00 gripped in right fist with upper end pressed against lower jaw/mouth area | 00:09 held stationary in mid-air near right cheek | moves up to comb hair at 00:02-00:03, returns to mouth/chin at 00:05, pulls away from face at 00:06",
+    "grooming tool and man's face/hair | 00:00 contacting chin/mouth area | 00:09 no contact with face | contacts eyebrow and hair at 00:02-00:03, re-contacts chin/mouth at 00:05, releases contact at 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "grooming tool and man's chin/jaw",
+      "invariant_violated": "solidity and contact consistency",
+      "description": "In the foreground view, the upper shaft and head of the tool clip into the underside of the man's chin and jawline (and again at 00:05), while simultaneously making contact higher up on his upper lip in the mirror reflection.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "man's right hand and grooming tool",
+      "invariant_violated": "contact points and grip mechanics",
+      "description": "As the hand moves upward from the chin to the hair (00:02-00:03) and back down (00:04), the tool rotates roughly 90 degrees within the closed fist without the fingers opening or articulating to adjust the grip.",
+      "severity": "moderate",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man's right hand and grooming tool | 00:00 gripped in right fist with upper end pressed against lower jaw/mouth area | 00:09 held stationary in mid-air near right cheek | moves up to comb hair at 00:02-00:03, returns to mouth/chin at 00:05, pulls away from face at 00:06\",\n    \"grooming tool and man's face/hair | 00:00 contacting chin/mouth area | 00:09 no contact with face | contacts eyebrow and hair at 00:02-00:03, re-contacts chin/mouth at 00:05, releases contact at 00:06\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"grooming tool and man's chin/jaw\",\n      \"invariant_violated\": \"solidity and contact consistency\",\n      \"description\": \"In the foreground view, the upper shaft and head of the tool clip into the underside of the man's chin and jawline (and again at 00:05), while simultaneously making contact higher up on his upper lip in the mirror reflection.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"man's right hand and grooming tool\",\n      \"invariant_violated\": \"contact points and grip mechanics\",\n      \"description\": \"As the hand moves upward from the chin to the hair (00:02-00:03) and back down (00:04), the tool rotates roughly 90 degrees within the closed fist without the fingers opening or articulating to adjust the grip.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

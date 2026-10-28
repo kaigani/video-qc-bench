@@ -1,0 +1,56 @@
+{
+  "key": "man-cups__environment-response",
+  "video": "man-cups.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:35:13.857Z",
+  "latencyMs": 31115,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 1942,
+    "total_tokens": 3472,
+    "cost": 0.01124,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01124,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.00971
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1566,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Indoor airflow/wind (00:00-00:09): No visible wind source in the enclosed room; the subject's hair, red tie, yellow pocket square, suit jacket, and the red tablecloth all remain appropriately still throughout the camera orbit.",
+    "Gravity on table props (00:00-00:09): Cups and flat coins on the tablecloth rest normally under gravity, except for coins manipulated by the subject's right hand which momentarily defy gravity at 00:04-00:06 and 00:08-00:09."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "gold coin on the leftmost cup",
+      "invariant_violated": "consistent gravity response",
+      "description": "From 00:04 to 00:06, a gold coin adheres vertically to the smooth outer side wall of the leftmost cup without being held or supported, failing to fall under gravity.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "coin below the right hand",
+      "invariant_violated": "consistent gravity response",
+      "description": "From 00:08 to 00:09, a coin hovers suspended in mid-air between the subject's open fingertips and the top rim of the cup instead of falling into the cup.",
+      "severity": "minor",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Indoor airflow/wind (00:00-00:09): No visible wind source in the enclosed room; the subject's hair, red tie, yellow pocket square, suit jacket, and the red tablecloth all remain appropriately still throughout the camera orbit.\",\n    \"Gravity on table props (00:00-00:09): Cups and flat coins on the tablecloth rest normally under gravity, except for coins manipulated by the subject's right hand which momentarily defy gravity at 00:04-00:06 and 00:08-00:09.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"gold coin on the leftmost cup\",\n      \"invariant_violated\": \"consistent gravity response\",\n      \"description\": \"From 00:04 to 00:06, a gold coin adheres vertically to the smooth outer side wall of the leftmost cup without being held or supported, failing to fall under gravity.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"coin below the right hand\",\n      \"invariant_violated\": \"consistent gravity response\",\n      \"description\": \"From 00:08 to 00:09, a coin hovers suspended in mid-air between the subject's open fingertips and the top rim of the cup instead of falling into the cup.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

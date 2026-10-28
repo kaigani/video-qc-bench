@@ -1,0 +1,50 @@
+{
+  "key": "dialogue__spatial-topology-occlusion",
+  "video": "dialogue.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:30:58.132Z",
+  "latencyMs": 46276,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3316,
+    "total_tokens": 4911,
+    "cost": 0.018175,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018175,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01658
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2821,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Man in striped shirt | stands facing camera in front of back wooden door | turns left and knocks on left wooden door at 00:08-00:09 | moves leftward, uncovering the door panel previously behind his head",
+    "Back wooden door with hanging blue coat | has a round brass medallion above the coat and a plain recessed wooden panel immediately to the right of the coat behind the man's head | round brass medallion disappears, a framed picture appears inside the recessed panel immediately right of the coat, and a bright glass window pane appears to its right | layout changes during camera pan at 00:07-00:09",
+    "Right green wall strip and adjacent picture door | located immediately to the right of the back wooden door's frame with a mounted wooden switch box | replaced by the newly materialized framed picture and glass window pane next to the blue coat | disappears during leftward pan",
+    "Left wooden door and wall | angled wooden door partially visible on the far left edge | fully revealed on the left with a brass doorknob and adjacent green wall with switches/boxes | revealed as camera pans left at 00:08-00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "back wooden door and right wall layout",
+      "invariant_violated": "scene layout",
+      "description": "From 00:00 to 00:07, the panel immediately to the right of the hanging blue coat (behind the man's head) is a plain recessed wooden door panel, followed to the right by the door casing, a narrow green wall strip with a wooden switch box, and a separate door holding a framed picture. When the man turns left and the camera pans left at 00:08-00:09, the layout directly to the right of the blue coat changes: the plain panel behind where his head was now contains a framed picture right next to the coat, the round brass ornament above the coat vanishes, and a glass window pane appears where the doorframe and green wall strip were located.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Man in striped shirt | stands facing camera in front of back wooden door | turns left and knocks on left wooden door at 00:08-00:09 | moves leftward, uncovering the door panel previously behind his head\",\n    \"Back wooden door with hanging blue coat | has a round brass medallion above the coat and a plain recessed wooden panel immediately to the right of the coat behind the man's head | round brass medallion disappears, a framed picture appears inside the recessed panel immediately right of the coat, and a bright glass window pane appears to its right | layout changes during camera pan at 00:07-00:09\",\n    \"Right green wall strip and adjacent picture door | located immediately to the right of the back wooden door's frame with a mounted wooden switch box | replaced by the newly materialized framed picture and glass window pane next to the blue coat | disappears during leftward pan\",\n    \"Left wooden door and wall | angled wooden door partially visible on the far left edge | fully revealed on the left with a brass doorknob and adjacent green wall with switches/boxes | revealed as camera pans left at 00:08-00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"back wooden door and right wall layout\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"From 00:00 to 00:07, the panel immediately to the right of the hanging blue coat (behind the man's head) is a plain recessed wooden door panel, followed to the right by the door casing, a narrow green wall strip with a wooden switch box, and a separate door holding a framed picture. When the man turns left and the camera pans left at 00:08-00:09, the layout directly to the right of the blue coat changes: the plain panel behind where his head was now contains a framed picture right next to the coat, the round brass ornament above the coat vanishes, and a glass window pane appears where the doorframe and green wall strip were located.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

@@ -1,0 +1,69 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:11:19.920Z",
+  "latencyMs": 61877,
+  "usage": {
+    "prompt_tokens": 12522,
+    "completion_tokens": 2383,
+    "total_tokens": 14905,
+    "cost": 0.024437,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.024437,
+      "upstream_inference_prompt_cost": 0.012522,
+      "upstream_inference_completions_cost": 0.011915
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1782,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Waitress and rag/counter | 00:10 right hand grips rag and wipes counter | 00:22 releases rag on counter | continuous contact during wiping",
+    "Man and diner stool/counter | 00:24 sits on stool and rests forearms on counter | 00:26 supported on stool | normal weight transfer",
+    "Man's hand and coffee mug | 00:27 right hand releases mug on counter | 00:31 hand rests beside mug | clean release",
+    "Waitress's mug and man's mug | 01:09 waitress holds mug in right hand, man holds mug on counter | 01:13 mugs clip and merge into one | solidity failure during handoff",
+    "Waitress and diner counter | 01:18 standing behind counter | 01:23 seated next to man on customer side | passes through solid counter at 01:20",
+    "Man's hands and dollar bills | 01:37 left hand slides bills on counter, right hand taps them | 01:39 both hands release bills | normal contact",
+    "Waitress and diner counter (exit) | 01:50 seated on customer stool | 01:53 walking behind counter | steps through solid counter at 01:51"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "Waitress's coffee mug and man's coffee mug",
+      "invariant_violated": "solidity",
+      "description": "The mug in the waitress's right hand clips directly into the mug already held by the man on the counter, merging the two objects together.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:20",
+      "entity": "Waitress and diner counter",
+      "invariant_violated": "solidity",
+      "description": "The waitress walks forward from behind the counter and passes directly through the solid counter structure to sit beside the man.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress and diner counter",
+      "invariant_violated": "solidity",
+      "description": "After standing up from the stool on the customer side, the waitress steps directly through the solid counter to move behind it.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Waitress and rag/counter | 00:10 right hand grips rag and wipes counter | 00:22 releases rag on counter | continuous contact during wiping\",\n    \"Man and diner stool/counter | 00:24 sits on stool and rests forearms on counter | 00:26 supported on stool | normal weight transfer\",\n    \"Man's hand and coffee mug | 00:27 right hand releases mug on counter | 00:31 hand rests beside mug | clean release\",\n    \"Waitress's mug and man's mug | 01:09 waitress holds mug in right hand, man holds mug on counter | 01:13 mugs clip and merge into one | solidity failure during handoff\",\n    \"Waitress and diner counter | 01:18 standing behind counter | 01:23 seated next to man on customer side | passes through solid counter at 01:20\",\n    \"Man's hands and dollar bills | 01:37 left hand slides bills on counter, right hand taps them | 01:39 both hands release bills | normal contact\",\n    \"Waitress and diner counter (exit) | 01:50 seated on customer stool | 01:53 walking behind counter | steps through solid counter at 01:51\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"Waitress's coffee mug and man's coffee mug\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The mug in the waitress's right hand clips directly into the mug already held by the man on the counter, merging the two objects together.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"01:20\",\n      \"entity\": \"Waitress and diner counter\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The waitress walks forward from behind the counter and passes directly through the solid counter structure to sit beside the man.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"Waitress and diner counter\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"After standing up from the stool on the customer side, the waitress steps directly through the solid counter to move behind it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.8\n    }\n  ]\n}"
+}

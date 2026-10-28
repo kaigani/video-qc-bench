@@ -1,0 +1,67 @@
+{
+  "key": "home-tour__object-persistence-state",
+  "video": "home-tour.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:32:12.317Z",
+  "latencyMs": 56884,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 4007,
+    "total_tokens": 5620,
+    "cost": 0.021648,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021648,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.020035
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3317,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Microwave | 00:00 sitting on right kitchen counter with wooden bowl on top | 00:09 mounted inside upper cabinet above the stove on the left | relocates/replaces the range hood above the stove",
+    "Red kettle | 00:01-00:02 sitting on the back left burner of the stove | 00:09 absent from the stove | vanishes without being touched",
+    "Framed floral collage picture | 00:00-00:03 hanging on kitchen wall with double light switch below | 00:07 hanging on interior bedroom wall to the left of the doorway | duplicates/relocates onto bedroom wall",
+    "Wall artwork above small wooden bedroom table | 00:06 small muted brown image inside wide white mat | 00:08 large colorful green/red/blue painting filling the frame | transforms into a different painting",
+    "Framed photo on small wooden bedroom table | 00:06 small horizontal dark-framed photo | 00:08 larger arched-mat portrait of a person in a white shirt | transforms in size, shape, and image content"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Framed floral collage picture",
+      "invariant_violated": "location & orientation",
+      "description": "The framed floral collage picture that hangs on the kitchen wall at 00:00-00:03 unexplainedly appears on the interior bedroom wall to the left of the doorway at 00:07.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Framed wall artwork and tabletop photo beside bedroom doorway",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:06, the framed artwork above the small side table has a wide mat with a small muted center image, and a small horizontal photo sits on the table below it. By 00:08, after the woman passes in front of them, the wall art transforms into a large colorful painting with green and blue shapes, and the tabletop frame changes into a larger arched portrait.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Red kettle and stove range hood / microwave",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:01-00:02, a red kettle sits on the stove beneath a stainless steel range hood (while the microwave sits on the opposite counter at 00:00). At 00:09, the red kettle has vanished from the stove and the range hood above the stove has transformed into a built-in microwave.",
+      "severity": "severe",
+      "confidence": 0.96
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Microwave | 00:00 sitting on right kitchen counter with wooden bowl on top | 00:09 mounted inside upper cabinet above the stove on the left | relocates/replaces the range hood above the stove\",\n    \"Red kettle | 00:01-00:02 sitting on the back left burner of the stove | 00:09 absent from the stove | vanishes without being touched\",\n    \"Framed floral collage picture | 00:00-00:03 hanging on kitchen wall with double light switch below | 00:07 hanging on interior bedroom wall to the left of the doorway | duplicates/relocates onto bedroom wall\",\n    \"Wall artwork above small wooden bedroom table | 00:06 small muted brown image inside wide white mat | 00:08 large colorful green/red/blue painting filling the frame | transforms into a different painting\",\n    \"Framed photo on small wooden bedroom table | 00:06 small horizontal dark-framed photo | 00:08 larger arched-mat portrait of a person in a white shirt | transforms in size, shape, and image content\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Framed floral collage picture\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The framed floral collage picture that hangs on the kitchen wall at 00:00-00:03 unexplainedly appears on the interior bedroom wall to the left of the doorway at 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Framed wall artwork and tabletop photo beside bedroom doorway\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:06, the framed artwork above the small side table has a wide mat with a small muted center image, and a small horizontal photo sits on the table below it. By 00:08, after the woman passes in front of them, the wall art transforms into a large colorful painting with green and blue shapes, and the tabletop frame changes into a larger arched portrait.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"Red kettle and stove range hood / microwave\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:01-00:02, a red kettle sits on the stove beneath a stainless steel range hood (while the microwave sits on the opposite counter at 00:00). At 00:09, the red kettle has vanished from the stove and the range hood above the stove has transformed into a built-in microwave.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.96\n    }\n  ]\n}"
+}

@@ -1,0 +1,56 @@
+{
+  "key": "child-marbles__baseline-generalist",
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:12:48.256Z",
+  "latencyMs": 31269,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2157,
+    "total_tokens": 3565,
+    "cost": 0.012193,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012193,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.010785
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1666,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "boy | toddler in blue zip-up jacket with hands in glass bowl at start | swirling balls with right hand while left hand holds bowl rim at end | lifts a red ball at 00:01, lowers hand at 00:02, swirls balls rapidly from 00:06 to 00:09",
+    "colored balls in bowl | 8 balls resting in bowl (2 red, 3 green, 3 yellow) plus 1 red ball held in boy's hands at 00:01 | deformed spinning blobs of red, green, and yellow at 00:09 | held red ball disappears/merges into stationary balls at 00:02; balls deform and morph during swirling from 00:06 to 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red ball in boy's hands",
+      "invariant_violated": "object permanence",
+      "description": "At 00:01, the boy holds a red ball above the bowl while eight other balls (two red, three green, three yellow) sit stationary in the bottom of the bowl. When he lowers his right hand back into the bowl at 00:02, the held red ball vanishes/merges into the center red ball, leaving the exact same eight stationary balls in their original positions at 00:03.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "colored balls in bowl",
+      "invariant_violated": "rigid body consistency",
+      "description": "As the boy swirls his hand in the bowl from 00:06 to 00:09, the solid plastic balls lose their rigid spherical shape, stretching into misshapen oblong blobs and morphing into a flat dark-red smudge in the center of the bowl at 00:07.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"boy | toddler in blue zip-up jacket with hands in glass bowl at start | swirling balls with right hand while left hand holds bowl rim at end | lifts a red ball at 00:01, lowers hand at 00:02, swirls balls rapidly from 00:06 to 00:09\",\n    \"colored balls in bowl | 8 balls resting in bowl (2 red, 3 green, 3 yellow) plus 1 red ball held in boy's hands at 00:01 | deformed spinning blobs of red, green, and yellow at 00:09 | held red ball disappears/merges into stationary balls at 00:02; balls deform and morph during swirling from 00:06 to 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"red ball in boy's hands\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"At 00:01, the boy holds a red ball above the bowl while eight other balls (two red, three green, three yellow) sit stationary in the bottom of the bowl. When he lowers his right hand back into the bowl at 00:02, the held red ball vanishes/merges into the center red ball, leaving the exact same eight stationary balls in their original positions at 00:03.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"colored balls in bowl\",\n      \"invariant_violated\": \"rigid body consistency\",\n      \"description\": \"As the boy swirls his hand in the bowl from 00:06 to 00:09, the solid plastic balls lose their rigid spherical shape, stretching into misshapen oblong blobs and morphing into a flat dark-red smudge in the center of the bowl at 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

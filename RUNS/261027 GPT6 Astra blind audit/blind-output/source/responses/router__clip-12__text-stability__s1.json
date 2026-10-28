@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "00:00–00:01.00: Initially leftmost block, front '2'; handling introduces blur, but sharp readings remain '2'.",
+    "00:01.25–00:09.75: Leftmost settled blue block, front '2'; exposed right-side face reads '6' when sufficiently visible.",
+    "00:01.25–00:09.75: Second blue block, front '3', unchanged at subsequent legible samples.",
+    "00:00–00:02.25: Initially rightmost green block, later third in the row, front '2'.",
+    "00:02.50–00:02.75: Handled green block at the third position, front '3'; by 00:03.00–00:03.25 a front '2' is visible at that position and a '3' block extends to its right.",
+    "00:03.25–00:09.75: Settled third green block, front '2', unchanged.",
+    "00:03.25–00:03.58: Held block immediately right of the third block, front '3'.",
+    "00:03.75–00:09.75: Fourth block, becoming yellow, front '2'; sharp settled reading at 00:04.00.",
+    "00:04.25–00:09.75: Fifth, pale blue block, front '3', unchanged after placement.",
+    "00:05.25–00:05.92: Held block at the sixth position, front '3', including sharp green-face readings at 00:05.75–00:05.83.",
+    "00:06.00–00:09.75: Sixth green block, front '5'; another '3' block emerges to its right.",
+    "00:06.25–00:06.67: Held block at the seventh position, front '3'.",
+    "00:06.75–00:09.75: Seventh green block, front '2'; held blue '3' is now to its right.",
+    "00:06.75–00:07.67: Rightmost held blue block, front '3'.",
+    "00:07.75–00:09.75: Rightmost blue block, front '6'.",
+    "00:08.00–00:09.75: Complete settled row reads '23223526'; no further character changes.",
+    "Other narrow side-face markings are too oblique or occluded for reliable transcription or stability comparison. No sustained garbled numeral is established."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Front numeral of the handled green block at the third position",
+      "invariant_violated": "Text stability",
+      "description": "The clearly readable front '2' at 00:02.25–00:02.42 becomes '3' at 00:02.50–00:02.75 while that face remains directed toward the viewer. The hand lifts and slightly tilts the block without turning a different face into view or replacing the printed numeral.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Front numeral of the block being placed fourth",
+      "invariant_violated": "Text stability",
+      "description": "The held block reads '3' at 00:03.50–00:03.58, then '2' at 00:03.75 and clearly at 00:04.00. Its front remains visible during the small tilt; no face-changing rotation or rewriting explains the changed digit.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Front numeral of the green block being placed sixth",
+      "invariant_violated": "Text stability",
+      "description": "The front reads '3' at 00:05.75–00:05.92 and '5' at 00:06.00. The visible face changes while the block is lowered, with another '3' emerging to the right. There is no visible rotation to a different face or legitimate alteration of the printed character.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Front numeral of the green block being placed seventh",
+      "invariant_violated": "Text stability",
+      "description": "The held front face reads '3' at 00:06.50–00:06.67, then the placed face reads '2' at 00:06.75, while another '3' appears to its right. The numeral changes on the viewer-facing surface without a visible face-changing turn or replacement of its text.",
+      "severity": "moderate",
+      "confidence": 0.87
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Front numeral of the rightmost blue block",
+      "invariant_violated": "Text stability",
+      "description": "The same held blue block clearly reads '3' at 00:07.50–00:07.67 and '6' at 00:07.75–00:08.00. Its front stays toward the camera as it is lowered; the slight tilt cannot expose a different cube face, and no action changes the printed text.",
+      "severity": "moderate",
+      "confidence": 0.98
+    }
+  ]
+}

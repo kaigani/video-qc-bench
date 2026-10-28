@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__object-persistence-state",
+  "video": "watchmaker.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:40:00.292Z",
+  "latencyMs": 13500,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 719,
+    "total_tokens": 2332,
+    "cost": 0.005208,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.005208,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.003595
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 534,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "jewelry piece | held in left hand | held in left hand with threaded pin attached | manipulated with tweezers (00:00-00:03), then has a small pin screwed into its side by the right hand (00:05-00:09)",
+    "tweezers | held in right hand touching jewelry piece | placed down on table out of frame | lowered onto surface at 00:04",
+    "small threaded pin/bail | picked up from table at 00:04 | screwed into the side of the jewelry piece | inserted at 00:05 and twisted by right fingers through 00:09",
+    "wristwatch | worn on left wrist | worn on left wrist | none"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"jewelry piece | held in left hand | held in left hand with threaded pin attached | manipulated with tweezers (00:00-00:03), then has a small pin screwed into its side by the right hand (00:05-00:09)\",\n    \"tweezers | held in right hand touching jewelry piece | placed down on table out of frame | lowered onto surface at 00:04\",\n    \"small threaded pin/bail | picked up from table at 00:04 | screwed into the side of the jewelry piece | inserted at 00:05 and twisted by right fingers through 00:09\",\n    \"wristwatch | worn on left wrist | worn on left wrist | none\"\n  ],\n  \"findings\": []\n}"
+}

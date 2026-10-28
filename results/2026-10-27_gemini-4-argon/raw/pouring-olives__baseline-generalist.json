@@ -1,0 +1,74 @@
+{
+  "key": "pouring-olives__baseline-generalist",
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:37:34.357Z",
+  "latencyMs": 26399,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2052,
+    "total_tokens": 3460,
+    "cost": 0.011668,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011668,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01026
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1210,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Olives in small glass cup and large jar | all bright green in the small cup at 00:00 and 00:06 | mixed green and dark purple inside the large jar | several green olives spontaneously turn dark purple/black as they are poured into the jar at 00:01-00:03 and 00:07-00:09",
+    "Person's shirt | dark blue button-up shirt fastened closed (00:00-00:04) | dark blue shirt unbuttoned open over a white undershirt (00:05-00:09) | changes instantaneously across the cut at 00:05",
+    "Large glass jar neck | glass lug on right side without metal hardware (00:00-00:04) | metal wire bail/loop attached to right side of neck (00:05-00:09) | metal wire appears at 00:05",
+    "Countertop next to metal bowl | empty space to the right of the metal bowl (00:00-00:04) | small clear bottle with white cap present next to the metal bowl (00:05-00:09) | bottle appears across the cut at 00:05"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives",
+      "invariant_violated": "Attribute consistency (color change)",
+      "description": "The small glass cup held by the person contains only bright green olives at 00:00, but as they drop into the large jar between 00:01 and 00:03, several of the olives inexplicably turn dark purple/black. The same defect occurs with the second cup between 00:06 and 00:09, where green olives turn dark purple in the cup and jar.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Person's shirt",
+      "invariant_violated": "Wardrobe continuity",
+      "description": "From 00:00 to 00:04, the person's dark blue shirt is buttoned up with no undershirt visible. Across the jump cut at 00:05, the shirt is suddenly unbuttoned and open, revealing a white t-shirt underneath.",
+      "severity": "moderate",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Small clear bottle on countertop",
+      "invariant_violated": "Object permanence / continuity",
+      "description": "From 00:00 to 00:04, the counter surface immediately to the right of the metal bowl is empty. At 00:05, a small clear bottle with a white top suddenly appears beside the metal bowl.",
+      "severity": "moderate",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Large glass jar",
+      "invariant_violated": "Object consistency",
+      "description": "From 00:00 to 00:04, the right side of the jar's upper neck has a bare glass lug. At 00:05, a metal wire loop/clasp suddenly appears attached to the right side of the jar's neck.",
+      "severity": "minor",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Olives in small glass cup and large jar | all bright green in the small cup at 00:00 and 00:06 | mixed green and dark purple inside the large jar | several green olives spontaneously turn dark purple/black as they are poured into the jar at 00:01-00:03 and 00:07-00:09\",\n    \"Person's shirt | dark blue button-up shirt fastened closed (00:00-00:04) | dark blue shirt unbuttoned open over a white undershirt (00:05-00:09) | changes instantaneously across the cut at 00:05\",\n    \"Large glass jar neck | glass lug on right side without metal hardware (00:00-00:04) | metal wire bail/loop attached to right side of neck (00:05-00:09) | metal wire appears at 00:05\",\n    \"Countertop next to metal bowl | empty space to the right of the metal bowl (00:00-00:04) | small clear bottle with white cap present next to the metal bowl (00:05-00:09) | bottle appears across the cut at 00:05\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives\",\n      \"invariant_violated\": \"Attribute consistency (color change)\",\n      \"description\": \"The small glass cup held by the person contains only bright green olives at 00:00, but as they drop into the large jar between 00:01 and 00:03, several of the olives inexplicably turn dark purple/black. The same defect occurs with the second cup between 00:06 and 00:09, where green olives turn dark purple in the cup and jar.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Person's shirt\",\n      \"invariant_violated\": \"Wardrobe continuity\",\n      \"description\": \"From 00:00 to 00:04, the person's dark blue shirt is buttoned up with no undershirt visible. Across the jump cut at 00:05, the shirt is suddenly unbuttoned and open, revealing a white t-shirt underneath.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Small clear bottle on countertop\",\n      \"invariant_violated\": \"Object permanence / continuity\",\n      \"description\": \"From 00:00 to 00:04, the counter surface immediately to the right of the metal bowl is empty. At 00:05, a small clear bottle with a white top suddenly appears beside the metal bowl.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Large glass jar\",\n      \"invariant_violated\": \"Object consistency\",\n      \"description\": \"From 00:00 to 00:04, the right side of the jar's upper neck has a bare glass lug. At 00:05, a metal wire loop/clasp suddenly appears attached to the right side of the jar's neck.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

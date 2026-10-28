@@ -1,0 +1,56 @@
+{
+  "key": "weird-blocks__contact-interaction-kinematics",
+  "video": "weird-blocks.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:41:13.486Z",
+  "latencyMs": 18362,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1472,
+    "total_tokens": 3092,
+    "cost": 0.00898,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00898,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.00736
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1079,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Hand | Grips first block on left at 00:00 | Grips second block from left at 00:09 | Repeatedly grips, twists, and pulls blocks rightward along the table from 00:00 to 00:07, then taps/grips existing blocks from right to left at 00:08-00:09",
+    "Numbered blocks | Two green blocks on table at 00:00 | Eight multicolored blocks in a row at 00:09 | Blocks repeatedly split/clip out of one another as the hand pulls rightward between 00:01 and 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Green block on the right",
+      "invariant_violated": "contact points",
+      "description": "The standalone green block initially at the second position shifts rightward to the third position to make room for the blue '3' block without the hand making physical contact to push it.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Numbered blocks",
+      "invariant_violated": "solidity",
+      "description": "From 00:02 through 00:07, each time the hand grips and twists the rightmost block and pulls it to the right, a second solid block emerges from inside the same physical volume, with the two blocks clipping through each other as they separate.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Hand | Grips first block on left at 00:00 | Grips second block from left at 00:09 | Repeatedly grips, twists, and pulls blocks rightward along the table from 00:00 to 00:07, then taps/grips existing blocks from right to left at 00:08-00:09\",\n    \"Numbered blocks | Two green blocks on table at 00:00 | Eight multicolored blocks in a row at 00:09 | Blocks repeatedly split/clip out of one another as the hand pulls rightward between 00:01 and 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Green block on the right\",\n      \"invariant_violated\": \"contact points\",\n      \"description\": \"The standalone green block initially at the second position shifts rightward to the third position to make room for the blue '3' block without the hand making physical contact to push it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Numbered blocks\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"From 00:02 through 00:07, each time the hand grips and twists the rightmost block and pulls it to the right, a second solid block emerges from inside the same physical volume, with the two blocks clipping through each other as they separate.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

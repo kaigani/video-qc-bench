@@ -1,0 +1,50 @@
+{
+  "key": "woman-car__layout-connectivity",
+  "video": "woman-car.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:07:28.386Z",
+  "latencyMs": 28281,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 1690,
+    "total_tokens": 3255,
+    "cost": 0.010015,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010015,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.00845
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1349,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Exterior space: two-lane desert highway bordered by sandy scrubland and distant mountains.",
+    "Vehicle interior space: vintage wood-paneled station wagon cabin, connected to the exterior view via the front windshield and side windows.",
+    "Window views (00:00-00:04): through the front windshield and driver-side windows, the car interior (seats, steering wheel, headrests) and the desert exterior beyond the passenger-side windows are visible.",
+    "Occupant placement at vehicle boundary (00:00-00:09): a woman rests her crossed arms on the driver-side front fender/hood edge right at the base of the windshield and in front of the driver-side A-pillar, where only solid vehicle body and engine bay exist."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman and station wagon front fender/windshield junction",
+      "invariant_violated": "impossible spatial connectivity between interior and exterior",
+      "description": "The woman is posed as though leaning out of an opening in the vehicle with her arms resting on the driver-side front fender/hood, but she is positioned forward of the closed driver-side door and A-pillar, with her torso emerging directly out of the solid metal cowl/fender and windshield base where no window, door, or standing space exists.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Exterior space: two-lane desert highway bordered by sandy scrubland and distant mountains.\",\n    \"Vehicle interior space: vintage wood-paneled station wagon cabin, connected to the exterior view via the front windshield and side windows.\",\n    \"Window views (00:00-00:04): through the front windshield and driver-side windows, the car interior (seats, steering wheel, headrests) and the desert exterior beyond the passenger-side windows are visible.\",\n    \"Occupant placement at vehicle boundary (00:00-00:09): a woman rests her crossed arms on the driver-side front fender/hood edge right at the base of the windshield and in front of the driver-side A-pillar, where only solid vehicle body and engine bay exist.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman and station wagon front fender/windshield junction\",\n      \"invariant_violated\": \"impossible spatial connectivity between interior and exterior\",\n      \"description\": \"The woman is posed as though leaning out of an opening in the vehicle with her arms resting on the driver-side front fender/hood, but she is positioned forward of the closed driver-side door and A-pillar, with her torso emerging directly out of the solid metal cowl/fender and windshield base where no window, door, or standing space exists.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

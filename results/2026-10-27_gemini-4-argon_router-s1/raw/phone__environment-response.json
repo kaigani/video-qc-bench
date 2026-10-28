@@ -1,0 +1,40 @@
+{
+  "key": "phone__environment-response",
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:35:55.262Z",
+  "latencyMs": 16797,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 1009,
+    "total_tokens": 2539,
+    "cost": 0.006575,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006575,
+      "upstream_inference_prompt_cost": 0.00153,
+      "upstream_inference_completions_cost": 0.005045
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 832,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Wind/Airflow (00:00-00:02): Calm outdoor conditions; the shrubs beside the railing remain still, which is consistent with the lack of wind movement on the background pedestrian's loose blue shirt and hair.",
+    "Gravity and Walking Motion (00:00-00:02): The pedestrian walking away carries a red bag that hangs vertically under gravity and swings naturally with their stride; hair bounces slightly in sync with footsteps.",
+    "Sunlight/Weather Environment (00:00-00:09): Direct overhead/angled sunlight casts steady shadows from the metal railing onto the steps and produces a consistent specular glare across the smartphone screen as the user tilts and lowers the device."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Wind/Airflow (00:00-00:02): Calm outdoor conditions; the shrubs beside the railing remain still, which is consistent with the lack of wind movement on the background pedestrian's loose blue shirt and hair.\",\n    \"Gravity and Walking Motion (00:00-00:02): The pedestrian walking away carries a red bag that hangs vertically under gravity and swings naturally with their stride; hair bounces slightly in sync with footsteps.\",\n    \"Sunlight/Weather Environment (00:00-00:09): Direct overhead/angled sunlight casts steady shadows from the metal railing onto the steps and produces a consistent specular glare across the smartphone screen as the user tilts and lowers the device.\"\n  ],\n  \"findings\": []\n}"
+}

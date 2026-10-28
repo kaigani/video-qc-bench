@@ -1,0 +1,65 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:06:19.360Z",
+  "latencyMs": 55846,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 3771,
+    "total_tokens": 5391,
+    "cost": 0.020475,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020475,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.018855
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3125,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman in dark cardigan (hands, umbrella shaft, and red fruit) | at 00:00 left fist grips vertical umbrella shaft while red fruit is held lightly between outer left hand and open right fingers | by 00:08 right fingers press directly against left fist around the umbrella handle with the red fruit gone | between 00:06 and 00:08 hands close through the space occupied by the red fruit",
+    "Man in white polo shirt | enters from left foreground at 00:01 walking forward | emerges on the right behind the main woman at 00:05 | walks directly into the main woman's position at 00:03 and passes through her space between 00:03 and 00:05",
+    "Background pedestrians (man in green shirt, women in purple and red tops) | stationary in mid-stride poses at 00:00 | remain fixed as camera orbits until leaving frame at 00:04 | static bullet-time style poses"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Woman's hands and red fruit",
+      "invariant_violated": "solidity and contact continuity",
+      "description": "Between 00:06 and 00:08, the woman's open right hand closes directly onto her left fist around the umbrella handle, passing straight through the space occupied by the red fruit until both hands touch each other directly and the fruit disappears.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's left hand, umbrella shaft, and red fruit",
+      "invariant_violated": "contact points and weight support",
+      "description": "From 00:00 to 00:06, the red fruit is suspended against the side of the woman's curled left fist (which grips the umbrella shaft) and her vertical right fingers without underneath support or a wrapping grip, and by 00:07 the umbrella shaft shifts from inside her curled fingers to resting atop the fruit and thumb web.",
+      "severity": "moderate",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Man in white polo shirt and main woman",
+      "invariant_violated": "solidity",
+      "description": "The man in the white shirt walks directly into the physical space occupied by the woman under the umbrella at 00:03, clipping through her position without physical clearance before reappearing on her far side at 00:05.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman in dark cardigan (hands, umbrella shaft, and red fruit) | at 00:00 left fist grips vertical umbrella shaft while red fruit is held lightly between outer left hand and open right fingers | by 00:08 right fingers press directly against left fist around the umbrella handle with the red fruit gone | between 00:06 and 00:08 hands close through the space occupied by the red fruit\",\n    \"Man in white polo shirt | enters from left foreground at 00:01 walking forward | emerges on the right behind the main woman at 00:05 | walks directly into the main woman's position at 00:03 and passes through her space between 00:03 and 00:05\",\n    \"Background pedestrians (man in green shirt, women in purple and red tops) | stationary in mid-stride poses at 00:00 | remain fixed as camera orbits until leaving frame at 00:04 | static bullet-time style poses\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Woman's hands and red fruit\",\n      \"invariant_violated\": \"solidity and contact continuity\",\n      \"description\": \"Between 00:06 and 00:08, the woman's open right hand closes directly onto her left fist around the umbrella handle, passing straight through the space occupied by the red fruit until both hands touch each other directly and the fruit disappears.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman's left hand, umbrella shaft, and red fruit\",\n      \"invariant_violated\": \"contact points and weight support\",\n      \"description\": \"From 00:00 to 00:06, the red fruit is suspended against the side of the woman's curled left fist (which grips the umbrella shaft) and her vertical right fingers without underneath support or a wrapping grip, and by 00:07 the umbrella shaft shifts from inside her curled fingers to resting atop the fruit and thumb web.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.88\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Man in white polo shirt and main woman\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The man in the white shirt walks directly into the physical space occupied by the woman under the umbrella at 00:03, clipping through her position without physical clearance before reappearing on her far side at 00:05.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.85\n    }\n  ]\n}"
+}

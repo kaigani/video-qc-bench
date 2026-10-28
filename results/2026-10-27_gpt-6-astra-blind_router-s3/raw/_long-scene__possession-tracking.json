@@ -1,0 +1,53 @@
+{
+  "ledger": [
+    "00:10\u201300:23 \u2014 Pale cleaning cloth: beneath the waitress's right hand on the customer counter; moves left and right with her wiping strokes. By 00:24 it rests beside the condiment caddy.",
+    "00:24\u201300:32 \u2014 Glass coffee pot with black handle/lid: held in the waitress's right hand, brought over the customer's white mug, tilted to pour at 00:28\u201300:30, then raised upright and moved toward screen right. Its subsequent placement is outside the shot.",
+    "00:26\u201300:31 \u2014 Customer's white mug: steadied by his hand at 00:27, released onto the counter by 00:28, and stationary beneath the pouring pot through 00:31.",
+    "00:28\u201300:30 \u2014 Coffee: visibly travels from the tilted pot into the white mug. The opaque mug prevents inspection of the retained liquid; no contradictory later contents are visible.",
+    "00:27\u201300:32 \u2014 Cleaning cloth: remains on the counter to the right of the mug throughout the pouring close-up; neither person removes it in that shot.",
+    "00:32\u201300:36 \u2014 Breakfast plate, toast, fried egg, fork and knife: already resting on the counter in the insert; no hand contact or movement is visible. Delivery occurs outside the shown action.",
+    "00:36\u201300:44 \u2014 Customer's white mug: held between both hands at counter level beside the breakfast plate; no transfer or removal is visible.",
+    "00:45\u201300:51 \u2014 Pale cleaning cloth at the kitchen pass: pressed to the surface by the waitress's right hand and moved with her wiping. The intervening cut prevents establishing whether this is the earlier cloth.",
+    "00:59\u201301:08 \u2014 White mug remains on the counter in front of the seated customer. The waitress works at the rear counter; individual objects in her hands are not sufficiently resolved to assign identities.",
+    "01:09\u201301:14 \u2014 Breakfast plate with food and a dark utensil: held at its rim by the waitress, lowered/slid on the counter, and steadied with her left hand while her right hand lifts a separate mug.",
+    "01:10\u201301:14 \u2014 Customer's mug: counter \u2192 his right hand at 01:11 \u2192 lifted toward the waitress's mug at 01:12 \u2192 lowered onto the counter around 01:13, still held by him.",
+    "01:10\u201301:14 \u2014 Waitress's separate light-colored mug: beside the plate \u2192 her right hand at 01:11.5 \u2192 extended toward the customer's mug at 01:12.5. The two mug silhouettes overlap around 01:12.75; afterward only one mug is visible, and her right hand withdraws empty by 01:14 without a visible separate placement.",
+    "01:14\u201301:17 \u2014 Breakfast plate and its remaining contents: counter \u2192 waitress's hands \u2192 carried toward the rear work area. The customer's mug remains on the counter in his hand.",
+    "01:18\u201301:26 \u2014 Customer's mug remains at his place. The waitress moves around to sit beside him; the wide view and intervening cut do not establish a continuous route for a second mug.",
+    "01:27\u201301:35 \u2014 Two separate white mugs are visible again, one held by each seated person at counter level. The waitress's mug cannot be securely identified as the mug lost from view at 01:13.",
+    "01:37\u201301:40 \u2014 White mug in payment close-up: stationary on the counter behind the money. Its identity relative to the two earlier mugs is not established across the edits.",
+    "01:37.5\u201301:40 \u2014 Upper visible banknote: enters from upper left with the customer's hand, is pressed onto the counter beside the mug, and is adjusted by both hands. One end bends upward as the hands withdraw; it stays with the stack through the cut at 01:41.",
+    "01:37.5\u201301:40 \u2014 Underlying banknote layer(s): travel with the upper note onto the counter and remain beneath it after release. Overlapping edges prevent a reliable individual count; no separate removal or multiplication is established.",
+    "01:50\u201301:53 \u2014 Two light-colored cups and a plate/saucer are present at the waitress's seat after a cut. She reaches for the rightmost mug with her right hand and gathers the other crockery with her other hand, then carries the items around the counter. Her body obscures their final placement at the rear work surface.",
+    "Assessment uses timestamped visual frames with denser sampling of mug contact, cash placement and final clearing. Audio is unassessed; off-screen intervals and editorial cuts are not treated as observed transfers."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "The separate mug in the waitress's right hand",
+      "invariant_violated": "Custody continuity / object persistence",
+      "description": "At 01:12.5 the customer and waitress visibly hold two separate mugs. As they bring them together around 01:12.75, the waitress's mug loses its separate outline. Only the customer's mug remains visible at 01:13\u201301:14; the waitress withdraws an empty right hand and then carries away only the plate. No second mug is visibly set down, carried away, or taken out of frame. The initial overlap explains brief occlusion, but the missing mug is not restored when her hand withdraws.",
+      "severity": "moderate",
+      "confidence": 0.86
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-01__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s3/raw/clip-01__possession-tracking.json",
+  "frozen_source_sha256": "7848eb982ef55323a63709f735f1b153be622c48aea6e446084b46df208c55a3",
+  "key": "_long-scene__possession-tracking",
+  "parseOk": true
+}

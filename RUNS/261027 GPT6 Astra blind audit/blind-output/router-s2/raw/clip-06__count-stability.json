@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "00:00.000\u201300:06.750, every 0.250-second sample: 4 metal cups; no cup added or removed.",
+    "00:07.000\u201300:08.750, every 0.250-second sample: 4 cups remain distinguishable, with increasing overlap as the camera circles the table.",
+    "00:09.000\u201300:09.125: 4 cup rims remain distinguishable in the closer transition frames; the left pair increasingly overlap.",
+    "00:09.250\u201300:09.750: 3 cups are separately visible; the fourth cup's projected position is behind the left-hand cluster. Occlusion prevents confirming a physical decrease from 4.",
+    "00:00.000\u201300:00.500: manipulated gold coins comprise 1 held upright, 1 visible inside the nearest cup, and at least 2 overlapping disks in the middle cup; concealed contents cannot be counted.",
+    "00:00.750\u201300:02.000: the foreground hand covers the nearest cup and its coin; retain the hidden coin rather than infer disappearance.",
+    "00:02.250\u201300:03.500: 1 coin is visibly lifted from the nearest cup; 2 coins are subsequently distinguishable in the performer's hands. This is a visible transfer, not an increase.",
+    "00:03.750\u201300:06.500: 2 hand-held coins are intermittently visible beside the cups; cup contents become obscured by hands, rims, and the lowering viewpoint.",
+    "00:06.750\u201300:08.500: hand-held coins are intermittently occluded; no reliable total-count change is established.",
+    "00:08.750\u201300:09.750: 1 coin is clearly raised in one hand; the other hand obscures the second coin near the tabletop. No confirmed disappearance or change of object kind.",
+    "00:00.000\u201300:03.500: the pale tabletop area shows 3 large loose coin-like disks, one initially cropped at the bottom, and 2 overlapping small disks. The large disk becoming fully visible is explained by camera movement.",
+    "00:03.750\u201300:07.750: the 3 large loose tabletop disks remain distinguishable when unobstructed; small disks and cup contents become difficult to resolve. No visible pickup of the loose large disks.",
+    "00:08.000\u201300:09.750: cups and hands obscure the previously visible loose tabletop disks as the camera circles; a complete loose-coin count is unavailable, so no disappearance is established.",
+    "00:00.000\u201300:09.750: numerous coin-like border designs cannot reliably be separated into physical objects versus cloth decoration; no defensible count-change finding for this border."
+  ],
+  "findings": [],
+  "video": "clip-06.mp4",
+  "role": "count-stability",
+  "sample": 2,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-06__count-stability__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

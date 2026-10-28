@@ -1,0 +1,81 @@
+{
+  "ledger": [
+    "00:00\u201300:01.50 \u2014 A, initially the left green '2' block: tabletop \u2192 the single visible hand's fingertip grip \u2192 leftmost tabletop position. Its exposed body becomes blue by 00:00.75; a second block B separates from its right side around 00:01.00\u201300:01.25.",
+    "00:01.00\u201300:02.00 \u2014 B, blue '3' block: first becomes separately visible beside A under the same grip \u2192 hand moves it right \u2192 second tabletop position, released by 00:02.00. Its earlier separate custody is not visible.",
+    "00:00\u201300:02.25 \u2014 C, original right green '2' block: remains upright on the tabletop while A and B are handled.",
+    "00:02.25\u201300:03.25 \u2014 C: tabletop \u2192 fingertip grip and rotation \u2192 third tabletop position. Another green block D emerges at its right while C remains behind.",
+    "00:03.00\u201300:04.00 \u2014 D: first appears beside C in the hand, showing green '3' \u2192 remains in the grip while becoming yellow/tan '2' at 00:03.75 \u2192 fourth tabletop position at 00:04.00.",
+    "00:04.00\u201300:04.75 \u2014 E, pale-blue '3' block: appears extending from D's right side under the fingers \u2192 hand moves it right \u2192 fifth tabletop position.",
+    "00:05.00\u201300:06.00 \u2014 F: another blue '3' block appears beside E in the hand \u2192 moves right and becomes green by 00:05.75 \u2192 sixth tabletop position showing '5' at 00:06.00.",
+    "00:06.00\u201300:06.75 \u2014 G: another blue/green '3' block emerges beside F in the hand \u2192 moves right \u2192 seventh tabletop position, green and showing '2' by 00:06.75.",
+    "00:06.75\u201300:08.00 \u2014 H, blue block: appears in the grip to G's right showing '3' \u2192 remains held and turns \u2192 eighth tabletop position showing '6', released by 00:08.00.",
+    "00:03.25\u201300:08.00 \u2014 Previously placed blocks remain in their respective row positions as the hand adds blocks to the right.",
+    "00:08.25\u201300:08.75 \u2014 Hand touches and aligns the central green C and yellow D blocks; both remain on the tabletop.",
+    "00:09.00\u201300:09.75 \u2014 Hand grips/nudges the leftmost blue pair A and B together; all eight blocks remain visible on the tabletop.",
+    "Throughout \u2014 Circular top studs remain associated with their blocks; no separate stud transfer, container use, or hand-to-hand transfer is visible. Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Initial left green block A and emerging blue block B",
+      "invariant_violated": "Object identity and custody continuity",
+      "description": "At 00:00.50 the held object is a single green-fronted '2' block. Its exposed body becomes blue by 00:00.75, then its right side extends into a separately studded blue '3' block by 00:01.25. A remains on the table while the hand carries B away. The visible body changes and separates without an incoming replacement or a separately supplied second block; this is more than a finger-obscured transfer.",
+      "severity": "severe",
+      "confidence": 0.97
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Original right green block C and additional green block D",
+      "invariant_violated": "Unexplained object multiplication",
+      "description": "Between 00:02.75 and 00:03.25, the one green block held to the right of the blue pair becomes two full blocks: a green '2' is left standing in position three while a green '3' continues right in the same grip. The additional body emerges from the held block's side, with no separate arrival or release from a concealed palm visible.",
+      "severity": "severe",
+      "confidence": 0.94
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Held green block D, resulting yellow block D, and pale-blue block E",
+      "invariant_violated": "Object identity and custody continuity",
+      "description": "The exposed green '3' held at 00:03.50 becomes a yellow/tan '2' at 00:03.75. By 00:04.00 that yellow block stands on the table while a blue body extends from its right; at 00:04.25 the hand holds a separate pale-blue '3'. The continuous grip produces a changed block and an additional full block without a visible source or exchange.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Pale-blue block E and additional block F",
+      "invariant_violated": "Unexplained object multiplication",
+      "description": "At 00:04.75 the hand is over the single pale-blue '3' at the row's end. At 00:05.00 another blue block extends from its right side, becoming a separate held '3' by 00:05.25 while the original remains in position five. No second block approaches from elsewhere; its body appears during separation from the first.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Held block F and additional block G",
+      "invariant_violated": "Object identity and custody continuity",
+      "description": "The blue '3' held at 00:05.25 changes to green through 00:05.50\u201300:05.75. At 00:06.00 a green '5' remains on the table while another blue/green '3' extends from its right and moves away in the hand by 00:06.25. The exposed object changes appearance and yields an additional block without a supplied source.",
+      "severity": "severe",
+      "confidence": 0.97
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Held block G and final blue block H",
+      "invariant_violated": "Unexplained object multiplication",
+      "description": "At 00:06.50 the hand holds one greenish '3' beside the six placed blocks. By 00:06.75 a green '2' stands in position seven and a separate blue '3' occupies the continuing grip to its right. The extra block emerges during the held object's separation rather than arriving along a visible custody path.",
+      "severity": "severe",
+      "confidence": 0.94
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-12__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

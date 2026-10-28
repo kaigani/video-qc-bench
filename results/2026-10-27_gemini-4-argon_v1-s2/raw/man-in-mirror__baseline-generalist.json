@@ -1,0 +1,64 @@
+{
+  "key": "man-in-mirror__baseline-generalist",
+  "video": "man-in-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:57:35.560Z",
+  "latencyMs": 25083,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1736,
+    "total_tokens": 3144,
+    "cost": 0.010088,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010088,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.00868
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1264,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man | standing in front of mirror holding toothbrush at chin | holding toothbrush outside closed mouth | foreground posture and hand position desynchronized from mirror reflection",
+    "grooming tool | white toothbrush at 00:00 | white toothbrush at 00:09 | morphs into a black comb at 00:03 when raised to hair, then reverts to a toothbrush at 00:04"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "man and mirror reflection",
+      "invariant_violated": "mirror reflection consistency",
+      "description": "The man's reflection in the mirror does not match his foreground posture and hand position. In the foreground, his hand holds the toothbrush down at his chin, whereas in the mirror reflection the toothbrush is held high up under his nose.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "grooming tool",
+      "invariant_violated": "object identity and plausible use",
+      "description": "The man raises the toothbrush from his mouth to brush his eyebrow, and at 00:03 the white toothbrush morphs into a black comb as he combs his hair, before morphing back into a white toothbrush at 00:04 as he lowers his hand across his forehead.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "man and toothbrush",
+      "invariant_violated": "plausible action and audio-visual sync",
+      "description": "While continuous tooth-brushing sound effects play from 00:05 to 00:09, the man merely holds the toothbrush against the outside of his upper lip and cheek rather than brushing inside his mouth.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"man | standing in front of mirror holding toothbrush at chin | holding toothbrush outside closed mouth | foreground posture and hand position desynchronized from mirror reflection\",\n    \"grooming tool | white toothbrush at 00:00 | white toothbrush at 00:09 | morphs into a black comb at 00:03 when raised to hair, then reverts to a toothbrush at 00:04\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"man and mirror reflection\",\n      \"invariant_violated\": \"mirror reflection consistency\",\n      \"description\": \"The man's reflection in the mirror does not match his foreground posture and hand position. In the foreground, his hand holds the toothbrush down at his chin, whereas in the mirror reflection the toothbrush is held high up under his nose.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"grooming tool\",\n      \"invariant_violated\": \"object identity and plausible use\",\n      \"description\": \"The man raises the toothbrush from his mouth to brush his eyebrow, and at 00:03 the white toothbrush morphs into a black comb as he combs his hair, before morphing back into a white toothbrush at 00:04 as he lowers his hand across his forehead.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"man and toothbrush\",\n      \"invariant_violated\": \"plausible action and audio-visual sync\",\n      \"description\": \"While continuous tooth-brushing sound effects play from 00:05 to 00:09, the man merely holds the toothbrush against the outside of his upper lip and cheek rather than brushing inside his mouth.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

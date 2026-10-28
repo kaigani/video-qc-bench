@@ -1,0 +1,55 @@
+{
+  "key": "weird-blocks__causal-temporal-sequence",
+  "video": "weird-blocks.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:41:45.793Z",
+  "latencyMs": 25819,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 911,
+    "total_tokens": 2676,
+    "cost": 0.00632,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00632,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.004555
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 631,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hand and numbered blocks | hand holds green block '2' beside another green block '2' at 00:00 | eight blocks lined up in a row with hand resting on the second block at 00:09 | pulling a single block repeatedly causes it to split into multiple new blocks from 00:01 to 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered blocks",
+      "invariant_violated": "proportionality and plausible cause-effect",
+      "description": "Pulling a block rightward repeatedly causes new blocks to spawn and split off from existing blocks rather than simply moving the grabbed block.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "hand",
+      "invariant_violated": "temporal flow",
+      "description": "The hand exhibits discontinuous, choppy motion as it jumps from the rightmost block back to the center blocks.",
+      "severity": "minor",
+      "confidence": 0.65
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hand and numbered blocks | hand holds green block '2' beside another green block '2' at 00:00 | eight blocks lined up in a row with hand resting on the second block at 00:09 | pulling a single block repeatedly causes it to split into multiple new blocks from 00:01 to 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"numbered blocks\",\n      \"invariant_violated\": \"proportionality and plausible cause-effect\",\n      \"description\": \"Pulling a block rightward repeatedly causes new blocks to spawn and split off from existing blocks rather than simply moving the grabbed block.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.75\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"hand\",\n      \"invariant_violated\": \"temporal flow\",\n      \"description\": \"The hand exhibits discontinuous, choppy motion as it jumps from the rightmost block back to the center blocks.\",\n      \"severity\": \"minor\",\n      \"confidence\": 0.65\n    }\n  ]\n}"
+}

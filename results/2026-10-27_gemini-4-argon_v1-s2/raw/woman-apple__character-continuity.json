@@ -1,0 +1,68 @@
+{
+  "key": "woman-apple__character-continuity",
+  "video": "woman-apple.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:05:23.492Z",
+  "latencyMs": 53647,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 3784,
+    "total_tokens": 5377,
+    "cost": 0.020513,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020513,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.01892
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2907,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground woman with umbrella | dark blue cardigan, light grey pleated skirt/shorts, ponytail, silver watch on left wrist, holding a blue umbrella and a red apple/tomato, facing camera at 00:00 | same wardrobe and pose at 00:09, viewed from her left/back as the camera orbits around her | remains stationary in pose throughout the camera orbit",
+    "Left stall vendor in dark blue shirt | standing behind the produce stall on the left at 00:00, wearing a dark blue shirt and apron | absent from the stall from 00:01 onward | vanishes abruptly between 00:00 and 00:01",
+    "Man in light green t-shirt and denim shorts | frozen mid-stride in the center aisle behind the foreground woman from 00:00 to 00:03 | absent at 00:04 | frozen in place for three seconds, then disappears completely between 00:03 and 00:04",
+    "Woman in red shirt and black pants | frozen mid-stride on the right side of the aisle from 00:00 to 00:04 | exits frame right as camera orbits at 00:05 | completely static mid-stride while other pedestrians walk at normal speed",
+    "Pedestrian woman in light blue t-shirt and jeans | enters frame left at 00:01 walking away from camera | walks up the central aisle at 00:05 | walks normally behind the foreground woman, replacing the vanished man in the green t-shirt at 00:04",
+    "Pedestrian man in white polo shirt | enters frame left at 00:02 walking away from camera | walks up the aisle behind the foreground woman through 00:05 | continuous normal walking motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Left stall vendor in dark blue shirt",
+      "invariant_violated": "placement and movement continuity",
+      "description": "At 00:00, a male vendor in a dark blue shirt and apron is standing behind the produce stall on the left. Between 00:00 and 00:01, he vanishes into thin air, replaced by stacked produce and boxes without walking away or being occluded.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Man in light green t-shirt and denim shorts",
+      "invariant_violated": "placement and movement continuity",
+      "description": "The man in the light green t-shirt and denim shorts stands frozen mid-stride in the aisle behind the foreground woman from 00:00 to 00:03. Between 00:03 and 00:04, as the pedestrian in the light blue shirt walks behind the foreground woman into that space, the man in the green t-shirt disappears completely.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Background shoppers and vendors",
+      "invariant_violated": "movement continuity",
+      "description": "Multiple background characters—including the woman in the red shirt mid-stride, the man in the green t-shirt mid-stride, the vendor in the white shirt and mask on the far left, and the bystanders behind the stalls at 00:07–00:08—are completely frozen like statues while select pedestrians (woman in light blue shirt, man in white polo, man in blue shirt at 00:06) walk past them at normal speed.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground woman with umbrella | dark blue cardigan, light grey pleated skirt/shorts, ponytail, silver watch on left wrist, holding a blue umbrella and a red apple/tomato, facing camera at 00:00 | same wardrobe and pose at 00:09, viewed from her left/back as the camera orbits around her | remains stationary in pose throughout the camera orbit\",\n    \"Left stall vendor in dark blue shirt | standing behind the produce stall on the left at 00:00, wearing a dark blue shirt and apron | absent from the stall from 00:01 onward | vanishes abruptly between 00:00 and 00:01\",\n    \"Man in light green t-shirt and denim shorts | frozen mid-stride in the center aisle behind the foreground woman from 00:00 to 00:03 | absent at 00:04 | frozen in place for three seconds, then disappears completely between 00:03 and 00:04\",\n    \"Woman in red shirt and black pants | frozen mid-stride on the right side of the aisle from 00:00 to 00:04 | exits frame right as camera orbits at 00:05 | completely static mid-stride while other pedestrians walk at normal speed\",\n    \"Pedestrian woman in light blue t-shirt and jeans | enters frame left at 00:01 walking away from camera | walks up the central aisle at 00:05 | walks normally behind the foreground woman, replacing the vanished man in the green t-shirt at 00:04\",\n    \"Pedestrian man in white polo shirt | enters frame left at 00:02 walking away from camera | walks up the aisle behind the foreground woman through 00:05 | continuous normal walking motion\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Left stall vendor in dark blue shirt\",\n      \"invariant_violated\": \"placement and movement continuity\",\n      \"description\": \"At 00:00, a male vendor in a dark blue shirt and apron is standing behind the produce stall on the left. Between 00:00 and 00:01, he vanishes into thin air, replaced by stacked produce and boxes without walking away or being occluded.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Man in light green t-shirt and denim shorts\",\n      \"invariant_violated\": \"placement and movement continuity\",\n      \"description\": \"The man in the light green t-shirt and denim shorts stands frozen mid-stride in the aisle behind the foreground woman from 00:00 to 00:03. Between 00:03 and 00:04, as the pedestrian in the light blue shirt walks behind the foreground woman into that space, the man in the green t-shirt disappears completely.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Background shoppers and vendors\",\n      \"invariant_violated\": \"movement continuity\",\n      \"description\": \"Multiple background characters—including the woman in the red shirt mid-stride, the man in the green t-shirt mid-stride, the vendor in the white shirt and mask on the far left, and the bystanders behind the stalls at 00:07–00:08—are completely frozen like statues while select pedestrians (woman in light blue shirt, man in white polo, man in blue shirt at 00:06) walk past them at normal speed.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

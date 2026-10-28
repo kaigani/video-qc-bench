@@ -1,0 +1,30 @@
+{
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-14__spatial-topology-occlusion__s1",
+  "childThreadId": "thread:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-14__spatial-topology-occlusion__s1",
+  "childRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-14__spatial-topology-occlusion__s1:ordinal:1",
+  "childNodeId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-14__spatial-topology-occlusion__s1",
+  "status": "completed",
+  "workState": "result_available",
+  "hasPendingChildRuns": false,
+  "latestTerminalRunId": "run:thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-14__spatial-topology-occlusion__s1:ordinal:1",
+  "latestTerminalStatus": "completed",
+  "latestTerminalSummary": null,
+  "latestTerminalResultContextTransferId": null,
+  "providerInstanceId": "codex",
+  "model": "gpt-6-astra",
+  "options": [
+    {
+      "id": "reasoningEffort",
+      "value": "high"
+    },
+    {
+      "id": "serviceTier",
+      "value": "default"
+    }
+  ],
+  "summary": "{\n  \"ledger\": [\n    \"Station wagon | front grille at screen left, hood ahead of cabin, near-side doors extending right | hood and front cabin dominate the close view | continuous camera approach crops the grille, wheel and doors without reversing their ordering.\",\n    \"Windshield and near-side A-pillar | windshield spans the cabin front behind the hood; A-pillar separates it from the side window | windshield remains behind the woman, with glass visible beside her and the A-pillar to her right | closer views preserve the front-versus-side window distinction.\",\n    \"Woman | upper body projects ahead of the near-side windshield, with forearms above the hood and lower body hidden | same position relative to hood and windshield in close-up | she occludes the cabin and windshield, but her torso occupies a passage through the windshield plane without a visible opening.\",\n    \"Roof rack, antenna and mirror | rack above cabin, antenna on far side of hood, mirror beside near-side front window | rack partly cropped, antenna left of windshield, mirror outside crop | positions remain compatible with the camera approach.\",\n    \"Road and roadside poles | pavement beside and beneath vehicle, desert shoulder behind | road recedes behind the cabin, with poles in the background | road markings and poles enter the framing as the viewpoint changes; vehicle consistently occludes the road behind it.\",\n    \"Desert scrub and mountain ridge | scrub beyond pavement and mountains on distant horizon | background progressively cropped by the closer vehicle and woman | foreground vehicle consistently occludes scrub and distant terrain.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"Woman and front windshield\",\n      \"invariant_violated\": \"Solid-surface separation\",\n      \"description\": \"The woman's torso emerges from the cabin through the front windshield plane, with her arms outside over the hood. The near-side A-pillar and separate side window are to her right, so she is not leaning through that side opening. Glass remains visible across the windshield beside her, with no opening or displaced pane providing a route for her body. The closer views around 00:06 make this same impossible intersection especially clear.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.94\n    }\n  ]\n}",
+  "resultContextTransferId": "context-transfer:type:subagent_result:source-thread:thread%3Adelegated-task%3Acommand%253Amcp%253A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%253Adelegate-task%253Ablind-261027-core__clip-14__spatial-topology-occlusion__s1:target-thread:thread%3Adelegated-task%3Acommand%253Amcp%253Acf73e3ea-a778-4e5b-b379-88410c4fba15%253Adelegate-task%253Aastra-blind-v2-261027-round1:87640c8b-c8e1-4b10-9b27-6865c61ade89",
+  "hasPendingQuestion": false,
+  "pendingApproval": null,
+  "waitTimedOut": false
+}

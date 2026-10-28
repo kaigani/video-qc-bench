@@ -1,0 +1,66 @@
+{
+  "key": "dialogue__object-persistence-state",
+  "video": "dialogue.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:30:12.589Z",
+  "latencyMs": 28041,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 2192,
+    "total_tokens": 3805,
+    "cost": 0.012573,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012573,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.01096
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1687,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "hanging blue jacket | hanging on brass hook on left panel of rear door, solid dark blue | hanging on brass hook, now has a thick white stripe across it | transforms appearance around 00:07-00:08 with no interaction",
+    "round brass medallion | mounted on upper rail of rear door directly above the coat hook | vanished | disappears completely from the door between 00:07 and 00:08",
+    "framed picture | hanging on the far-right door, showing a bird illustration and text | relocated onto the right panel of the center door behind the man, showing a circular emblem | changes position and artwork around 00:07-00:08",
+    "left wooden door | out of frame on the left | closed, knocked on by the man | man walks up and knocks on it at 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "round brass medallion",
+      "invariant_violated": "identity & persistence",
+      "description": "The circular ornate brass medallion mounted on the door rail directly above the coat hook vanishes completely as the man turns to his right.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "hanging blue jacket",
+      "invariant_violated": "identity & persistence",
+      "description": "The solid dark blue jacket hanging on the door hook spontaneously develops a thick white stripe across its lower half without anyone touching it.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "framed picture",
+      "invariant_violated": "location & orientation",
+      "description": "The framed picture originally hanging on a separate door to the right of the green wall strip shifts onto the previously bare right panel of the door with the coat hook, and its artwork changes from a bird illustration to a symmetrical emblem.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"hanging blue jacket | hanging on brass hook on left panel of rear door, solid dark blue | hanging on brass hook, now has a thick white stripe across it | transforms appearance around 00:07-00:08 with no interaction\",\n    \"round brass medallion | mounted on upper rail of rear door directly above the coat hook | vanished | disappears completely from the door between 00:07 and 00:08\",\n    \"framed picture | hanging on the far-right door, showing a bird illustration and text | relocated onto the right panel of the center door behind the man, showing a circular emblem | changes position and artwork around 00:07-00:08\",\n    \"left wooden door | out of frame on the left | closed, knocked on by the man | man walks up and knocks on it at 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"round brass medallion\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The circular ornate brass medallion mounted on the door rail directly above the coat hook vanishes completely as the man turns to his right.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"hanging blue jacket\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The solid dark blue jacket hanging on the door hook spontaneously develops a thick white stripe across its lower half without anyone touching it.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"framed picture\",\n      \"invariant_violated\": \"location & orientation\",\n      \"description\": \"The framed picture originally hanging on a separate door to the right of the green wall strip shifts onto the previously bare right panel of the door with the coat hook, and its artwork changes from a bird illustration to a symmetrical emblem.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

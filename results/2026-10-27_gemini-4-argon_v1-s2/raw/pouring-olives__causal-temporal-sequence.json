@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:01:29.934Z",
+  "latencyMs": 30946,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1442,
+    "total_tokens": 3207,
+    "cost": 0.008975,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008975,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.00721
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1145,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "First pour | person tilts small cup of olives over empty jar at 00:00 | jar is half-full of green and dark olives at 00:03 | pile volume increases faster than the rate of falling olives",
+    "Refill action | person moves empty cup toward metal bowl at 00:04 | person lifts full cup at 00:05 while metal bowl is suddenly depleted | cup fills and bowl depletes without a completed scooping motion",
+    "Second pour | person tilts refilled cup into jar at 00:07 | jar fills to near the top at 00:09 | plausible downward flow"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives in jar",
+      "invariant_violated": "proportionality and completion",
+      "description": "The volume of olives accumulating at the bottom of the jar increases disproportionately compared to the few olives visibly falling from the cup.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small glass cup and metal bowl",
+      "invariant_violated": "effect without cause",
+      "description": "The small cup becomes full and the metal bowl depletes instantly as hands pass near the bowl, without any physical scooping action occurring.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\"ledger\": [\"First pour | person tilts small cup of olives over empty jar at 00:00 | jar is half-full of green and dark olives at 00:03 | pile volume increases faster than the rate of falling olives\", \"Refill action | person moves empty cup toward metal bowl at 00:04 | person lifts full cup at 00:05 while metal bowl is suddenly depleted | cup fills and bowl depletes without a completed scooping motion\", \"Second pour | person tilts refilled cup into jar at 00:07 | jar fills to near the top at 00:09 | plausible downward flow\"], \"findings\": [{\"timestamp\": \"00:01\", \"entity\": \"olives in jar\", \"invariant_violated\": \"proportionality and completion\", \"description\": \"The volume of olives accumulating at the bottom of the jar increases disproportionately compared to the few olives visibly falling from the cup.\", \"severity\": \"moderate\", \"confidence\": 0.65}, {\"timestamp\": \"00:04\", \"entity\": \"small glass cup and metal bowl\", \"invariant_violated\": \"effect without cause\", \"description\": \"The small cup becomes full and the metal bowl depletes instantly as hands pass near the bowl, without any physical scooping action occurring.\", \"severity\": \"moderate\", \"confidence\": 0.7}]}"
+}

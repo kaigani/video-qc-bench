@@ -1,0 +1,48 @@
+{
+  "key": "woman-car__contact-interaction-kinematics",
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:45:25.806Z",
+  "latencyMs": 22989,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 1107,
+    "total_tokens": 2727,
+    "cost": 0.007155,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007155,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.005535
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 841,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "woman's crossed arms and hands | resting on the top surface of the car's rear hood/fender area with right hand fingers touching left forearm sleeve at 00:00 | remains in static crossed-arm contact on the hood through 00:09 | slight head turn while arms remain planted",
+    "woman's torso and lower body | embedded directly into the solid cowl/fender area in front of the windshield at 00:00 | remains clipping into the solid car body through 00:09 | continuous solidity violation"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman's torso and lower body / car fender and cowl",
+      "invariant_violated": "solidity",
+      "description": "The woman's upper body emerges directly out of the solid metal cowl/fender area in front of the closed windshield and above the front wheel well, with her torso and lower body completely clipping through the solid structure of the car.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"woman's crossed arms and hands | resting on the top surface of the car's rear hood/fender area with right hand fingers touching left forearm sleeve at 00:00 | remains in static crossed-arm contact on the hood through 00:09 | slight head turn while arms remain planted\",\n    \"woman's torso and lower body | embedded directly into the solid cowl/fender area in front of the windshield at 00:00 | remains clipping into the solid car body through 00:09 | continuous solidity violation\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"woman's torso and lower body / car fender and cowl\",\n      \"invariant_violated\": \"solidity\",\n      \"description\": \"The woman's upper body emerges directly out of the solid metal cowl/fender area in front of the closed windshield and above the front wheel well, with her torso and lower body completely clipping through the solid structure of the car.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

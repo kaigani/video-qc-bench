@@ -38,11 +38,23 @@ const LABELS = {
   oxalpha: 'GLM 5.3 Flash (was Ox Alpha)',
   flash38: 'Gemini 3.8 Flash',
   nemotron35: 'Nemotron 3.5 Super VL',
+  astra: 'GPT-6 Astra (frame-assisted agent)',
+  argon: 'Gemini 4 Argon',
 };
 
 // 2.0 protocol (v1 harness × N samples + feature router × N samples). Each run needs a
 // results/<run>/classifications.json (keys "<video>|<role>|<i>"). Headline = union recall.
 const PROTOCOL_2_0 = {
+  argon: {
+    v1: ['2026-10-27_gemini-4-argon', '2026-10-27_gemini-4-argon_v1-s2', '2026-10-27_gemini-4-argon_v1-s3'],
+    router: ['2026-10-27_gemini-4-argon_router-s1', '2026-10-27_gemini-4-argon_router-s2', '2026-10-27_gemini-4-argon_router-s3'],
+    note: 'Core ×3 + router ×3 on Google AI Studio flex tier (half price), reasoning_effort high. Native video and audio.',
+  },
+  astra: {
+    v1: ['2026-10-27_gpt-6-astra-blind_core'],
+    router: ['2026-10-27_gpt-6-astra-blind_router-s1', '2026-10-27_gpt-6-astra-blind_router-s2', '2026-10-27_gpt-6-astra-blind_router-s3'],
+    note: 'Core ×1 + router ×3; high reasoning. Extracted frames with optional closer inspection; audio unassessed. Different sampling and media access from the native-video models. Human-confirmed LONG-16/17 and LONG-8 extension included.',
+  },
   nemotron35: {
     v1: ['2026-10-27_nemotron-3.5-super-vl', '2026-10-27_nemotron-3.5-super-vl_v1-s2', '2026-10-27_nemotron-3.5-super-vl_v1-s3'],
     router: ['2026-10-27_nemotron-3.5-super-vl_router-s1', '2026-10-27_nemotron-3.5-super-vl_router-s2', '2026-10-27_nemotron-3.5-super-vl_router-s3'],
@@ -138,6 +150,7 @@ for (const [key, runId] of Object.entries(MATCHES._runs)) {
 const protocol20 = Object.entries(PROTOCOL_2_0).map(([key, g]) => ({
   key,
   label: LABELS[key] ?? key,
+  note: g.note ?? null,
   v1: poolStats(g.v1),
   router: poolStats(g.router),
   all: poolStats([...g.v1, ...g.router]),

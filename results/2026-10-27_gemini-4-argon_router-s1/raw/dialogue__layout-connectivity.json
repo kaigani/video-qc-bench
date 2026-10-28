@@ -1,0 +1,50 @@
+{
+  "key": "dialogue__layout-connectivity",
+  "video": "dialogue.mp4",
+  "role": "layout-connectivity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:33:34.160Z",
+  "latencyMs": 32594,
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2245,
+    "total_tokens": 3810,
+    "cost": 0.01279,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01279,
+      "upstream_inference_prompt_cost": 0.001565,
+      "upstream_inference_completions_cost": 0.011225
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1774,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:06: Interior hallway/foyer corner; the back wall behind the man features a wooden door with a brass ornament and a solid dark-blue coat hanging on its left stile, bare recessed wood panels behind the man's torso, a narrow vertical strip of green wall with a switch box to the right, and another wooden panel with a framed print on the far right.",
+    "00:00-00:06: An angled wooden door is positioned on the left wall perpendicular/angled to the back wall.",
+    "00:07-00:09: The man turns left and steps toward the left-hand wooden door to knock on it as the camera pans left, revealing a green wall strip with brass chimes/switches to the left of that door.",
+    "00:07-00:08: During the leftward pan, the back wall to the right of the hanging coat changes layout: the bare wooden panels and green wall strip with the switch box vanish, replaced by a framed emblem print mounted immediately to the right of the coat (which now also displays a white horizontal stripe)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Back wall and door panels to the right of the hanging coat",
+      "invariant_violated": "Spatial and architectural layout consistency",
+      "description": "At 00:00-00:06, the section of the back wooden door immediately to the right of the hanging blue coat consists of bare recessed wood panels, followed by a doorframe, a strip of green wall with a switch box, and a separate wooden panel on the far right with a framed picture. As the man turns left and the camera pans left at 00:07-00:08, the bare door panels and the green wall section with the switch box disappear entirely, and a framed picture now hangs directly on the wooden panel immediately adjacent to the coat.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:06: Interior hallway/foyer corner; the back wall behind the man features a wooden door with a brass ornament and a solid dark-blue coat hanging on its left stile, bare recessed wood panels behind the man's torso, a narrow vertical strip of green wall with a switch box to the right, and another wooden panel with a framed print on the far right.\",\n    \"00:00-00:06: An angled wooden door is positioned on the left wall perpendicular/angled to the back wall.\",\n    \"00:07-00:09: The man turns left and steps toward the left-hand wooden door to knock on it as the camera pans left, revealing a green wall strip with brass chimes/switches to the left of that door.\",\n    \"00:07-00:08: During the leftward pan, the back wall to the right of the hanging coat changes layout: the bare wooden panels and green wall strip with the switch box vanish, replaced by a framed emblem print mounted immediately to the right of the coat (which now also displays a white horizontal stripe).\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Back wall and door panels to the right of the hanging coat\",\n      \"invariant_violated\": \"Spatial and architectural layout consistency\",\n      \"description\": \"At 00:00-00:06, the section of the back wooden door immediately to the right of the hanging blue coat consists of bare recessed wood panels, followed by a doorframe, a strip of green wall with a switch box, and a separate wooden panel on the far right with a framed picture. As the man turns left and the camera pans left at 00:07-00:08, the bare door panels and the green wall section with the switch box disappear entirely, and a framed picture now hangs directly on the wooden panel immediately adjacent to the coat.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

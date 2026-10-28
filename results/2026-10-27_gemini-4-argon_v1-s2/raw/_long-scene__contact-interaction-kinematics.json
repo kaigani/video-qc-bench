@@ -1,0 +1,66 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:48:29.800Z",
+  "latencyMs": 57810,
+  "usage": {
+    "prompt_tokens": 12352,
+    "completion_tokens": 4112,
+    "total_tokens": 16464,
+    "cost": 0.032912,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.032912,
+      "upstream_inference_prompt_cost": 0.012352,
+      "upstream_inference_completions_cost": 0.02056
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3304,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress | wiping counter with rag in right hand and left hand resting on counter at 00:10 | picks up mug from counter at 01:51 and walks behind counter at 01:53 | pours coffee at 00:27, merges second mug into man's mug at 01:13, lifts plate at 01:15, walks through counter at 01:19-01:21 and again at 01:51-01:53",
+    "man | walks into diner at 00:19 and sits on counter stool at 00:25 | walks outside to truck at 01:41 and opens cab door at 01:48 | holds coffee mug on counter at 00:27, 00:36-00:44, 01:09-01:34, places dollar bills on counter with both hands at 01:38-01:39",
+    "coffee mugs | single mug placed and filled in front of man at 00:25-00:31 | single mug picked up from counter by waitress at 01:51 | second mug lifted by waitress at 01:10 clips and merges into the mug held in the man's hands at 01:13",
+    "diner counter | continuous solid counter separating service area from customer stools | remains stationary throughout video | waitress passes directly through the solid counter structure from service side to customer side at 01:19-01:21 and from customer side to service side at 01:51-01:53"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "waitress's coffee mug and man's coffee mug",
+      "invariant_violated": "solidity / object pass-through",
+      "description": "While the man is already holding a white coffee mug with both hands on the counter, the waitress lifts a second white mug with her right hand and pushes it directly into the space occupied by the man's mug at 01:13, causing the two mugs to clip and merge into a single object before she withdraws her empty hand at 01:14.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:19",
+      "entity": "waitress and diner counter",
+      "invariant_violated": "solidity / body-object pass-through",
+      "description": "Standing behind the counter in the service area at 01:18, the waitress walks forward directly through the solid, continuous diner counter between 01:19 and 01:21 to emerge on the customer side and sit on the stool beside the man.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress and diner counter",
+      "invariant_violated": "solidity / body-object pass-through",
+      "description": "After standing up from the customer-side stool at 01:51 and grabbing the mug on the counter, the waitress steps directly through the solid counter structure at 01:52 to walk into the service area behind the counter.",
+      "severity": "severe",
+      "confidence": 0.97
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress | wiping counter with rag in right hand and left hand resting on counter at 00:10 | picks up mug from counter at 01:51 and walks behind counter at 01:53 | pours coffee at 00:27, merges second mug into man's mug at 01:13, lifts plate at 01:15, walks through counter at 01:19-01:21 and again at 01:51-01:53\",\n    \"man | walks into diner at 00:19 and sits on counter stool at 00:25 | walks outside to truck at 01:41 and opens cab door at 01:48 | holds coffee mug on counter at 00:27, 00:36-00:44, 01:09-01:34, places dollar bills on counter with both hands at 01:38-01:39\",\n    \"coffee mugs | single mug placed and filled in front of man at 00:25-00:31 | single mug picked up from counter by waitress at 01:51 | second mug lifted by waitress at 01:10 clips and merges into the mug held in the man's hands at 01:13\",\n    \"diner counter | continuous solid counter separating service area from customer stools | remains stationary throughout video | waitress passes directly through the solid counter structure from service side to customer side at 01:19-01:21 and from customer side to service side at 01:51-01:53\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"waitress's coffee mug and man's coffee mug\",\n      \"invariant_violated\": \"solidity / object pass-through\",\n      \"description\": \"While the man is already holding a white coffee mug with both hands on the counter, the waitress lifts a second white mug with her right hand and pushes it directly into the space occupied by the man's mug at 01:13, causing the two mugs to clip and merge into a single object before she withdraws her empty hand at 01:14.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:19\",\n      \"entity\": \"waitress and diner counter\",\n      \"invariant_violated\": \"solidity / body-object pass-through\",\n      \"description\": \"Standing behind the counter in the service area at 01:18, the waitress walks forward directly through the solid, continuous diner counter between 01:19 and 01:21 to emerge on the customer side and sit on the stool beside the man.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"01:51\",\n      \"entity\": \"waitress and diner counter\",\n      \"invariant_violated\": \"solidity / body-object pass-through\",\n      \"description\": \"After standing up from the customer-side stool at 01:51 and grabbing the mug on the counter, the waitress steps directly through the solid counter structure at 01:52 to walk into the service area behind the counter.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.97\n    }\n  ]\n}"
+}

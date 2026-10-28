@@ -1,0 +1,74 @@
+{
+  "key": "man-cups__baseline-generalist",
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:56:10.906Z",
+  "latencyMs": 36066,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2268,
+    "total_tokens": 3676,
+    "cost": 0.012748,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012748,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.01134
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1484,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Foreground (leftmost) cup and coin | cup holds coins inside, hand holds a coin above rim at 00:00 | cup merges with adjacent cup by 00:08 | coin clips through cup wall at 00:04 and sticks to the exterior before vanishing at 00:07",
+    "Center cup | filled to the brim with a prominent gold coin on top at 00:00 | top coin is gone by 00:03 | top coin vanishes untouched between 00:02 and 00:03",
+    "Set of cups on table | 4 metal cups arranged on the table at 00:00 | 3 metal cups on the table at 00:09 | two leftmost cups merge into a single cup between 00:07 and 00:08",
+    "Rightmost cup and left hand | empty cup untouched at 00:00 | hand moves away from cup at 00:08 | a gold coin materializes stuck to the outside wall of the cup at 00:05-00:06 and disappears at 00:07"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Gold coin in the center cup",
+      "invariant_violated": "Object permanence",
+      "description": "A large gold coin resting at the top rim of the middle cup from 00:00 to 00:02 abruptly disappears at 00:03 without anyone touching the cup.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Gold coin and leftmost cup",
+      "invariant_violated": "Solid object impenetrability",
+      "description": "As the man's right hand lowers a gold coin into the foreground cup at 00:03, the coin passes through the solid metal wall of the cup at 00:04, remains stuck flat against the exterior side of the cup from 00:04 to 00:06, and vanishes at 00:07.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Gold coin on rightmost cup",
+      "invariant_violated": "Object permanence and physics consistency",
+      "description": "Under the man's left hand, a gold coin materializes flat against the exterior wall of the rightmost cup at 00:05–00:06 and then disappears completely by 00:07.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Cups on the table",
+      "invariant_violated": "Object count consistency",
+      "description": "There are four cups on the table from 00:00 to 00:07, but between 00:07 and 00:08 the two leftmost cups merge into a single cup, leaving only three cups on the table for the remainder of the video.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Foreground (leftmost) cup and coin | cup holds coins inside, hand holds a coin above rim at 00:00 | cup merges with adjacent cup by 00:08 | coin clips through cup wall at 00:04 and sticks to the exterior before vanishing at 00:07\",\n    \"Center cup | filled to the brim with a prominent gold coin on top at 00:00 | top coin is gone by 00:03 | top coin vanishes untouched between 00:02 and 00:03\",\n    \"Set of cups on table | 4 metal cups arranged on the table at 00:00 | 3 metal cups on the table at 00:09 | two leftmost cups merge into a single cup between 00:07 and 00:08\",\n    \"Rightmost cup and left hand | empty cup untouched at 00:00 | hand moves away from cup at 00:08 | a gold coin materializes stuck to the outside wall of the cup at 00:05-00:06 and disappears at 00:07\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"Gold coin in the center cup\",\n      \"invariant_violated\": \"Object permanence\",\n      \"description\": \"A large gold coin resting at the top rim of the middle cup from 00:00 to 00:02 abruptly disappears at 00:03 without anyone touching the cup.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Gold coin and leftmost cup\",\n      \"invariant_violated\": \"Solid object impenetrability\",\n      \"description\": \"As the man's right hand lowers a gold coin into the foreground cup at 00:03, the coin passes through the solid metal wall of the cup at 00:04, remains stuck flat against the exterior side of the cup from 00:04 to 00:06, and vanishes at 00:07.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Gold coin on rightmost cup\",\n      \"invariant_violated\": \"Object permanence and physics consistency\",\n      \"description\": \"Under the man's left hand, a gold coin materializes flat against the exterior wall of the rightmost cup at 00:05–00:06 and then disappears completely by 00:07.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Cups on the table\",\n      \"invariant_violated\": \"Object count consistency\",\n      \"description\": \"There are four cups on the table from 00:00 to 00:07, but between 00:07 and 00:08 the two leftmost cups merge into a single cup, leaving only three cups on the table for the remainder of the video.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

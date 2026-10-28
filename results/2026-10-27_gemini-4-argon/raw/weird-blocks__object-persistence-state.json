@@ -1,0 +1,66 @@
+{
+  "key": "weird-blocks__object-persistence-state",
+  "video": "weird-blocks.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:41:19.930Z",
+  "latencyMs": 26789,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 2223,
+    "total_tokens": 3836,
+    "cost": 0.012728,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012728,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.011115
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1490,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Position 1 block | green block with digit '2' held by hand at 00:00 | blue block with digit '2' resting on table at 00:09 | transforms from green '2' to blue '2' at 00:01",
+    "Position 2 block | green block with digit '2' on table at 00:00 | blue block with digit '3' on table at 00:09 | a blue '3' block materializes under the hand at 00:01 while the original green '2' shifts to position 3",
+    "Position 3 block | green block with digit '2' at 00:01 | green block with digit '2' at 00:09 | morphs into green '3' at 00:02 when touched, then reverts to green '2' at 00:03",
+    "Position 4-8 blocks | not present at 00:00 | row of blocks ('2', '3', '5', '2', '6') on table at 00:09 | each block spontaneously materializes under the hand between 00:03 and 00:08 and morphs in color and digit after the hand moves right"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "First and second number blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "The green '2' block held at position 1 inexplicably changes color into a blue '2' block, while a new blue '3' block spontaneously materializes under the hand at position 2 without the hand bringing any new object into frame.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Third and fourth number blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "The green '2' block at position 3 morphs its front digit into a '3' at 00:02, then reverts to a green '2' at 00:03 as a fourth block (green '3') spontaneously spawns under the hand.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Fourth through eighth number blocks",
+      "invariant_violated": "identity & persistence",
+      "description": "As the hand moves rightward from 00:04 to 00:08, four additional blocks spontaneously materialize one by one under the fingers while each previously touched block changes color and digit (green '3' becomes tan '2' at 00:04; blue '3' becomes green '5' at 00:06; green '3' becomes green '2' at 00:07; blue '3' becomes blue '6' at 00:08).",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Position 1 block | green block with digit '2' held by hand at 00:00 | blue block with digit '2' resting on table at 00:09 | transforms from green '2' to blue '2' at 00:01\",\n    \"Position 2 block | green block with digit '2' on table at 00:00 | blue block with digit '3' on table at 00:09 | a blue '3' block materializes under the hand at 00:01 while the original green '2' shifts to position 3\",\n    \"Position 3 block | green block with digit '2' at 00:01 | green block with digit '2' at 00:09 | morphs into green '3' at 00:02 when touched, then reverts to green '2' at 00:03\",\n    \"Position 4-8 blocks | not present at 00:00 | row of blocks ('2', '3', '5', '2', '6') on table at 00:09 | each block spontaneously materializes under the hand between 00:03 and 00:08 and morphs in color and digit after the hand moves right\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"First and second number blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The green '2' block held at position 1 inexplicably changes color into a blue '2' block, while a new blue '3' block spontaneously materializes under the hand at position 2 without the hand bringing any new object into frame.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Third and fourth number blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"The green '2' block at position 3 morphs its front digit into a '3' at 00:02, then reverts to a green '2' at 00:03 as a fourth block (green '3') spontaneously spawns under the hand.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Fourth through eighth number blocks\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the hand moves rightward from 00:04 to 00:08, four additional blocks spontaneously materialize one by one under the fingers while each previously touched block changes color and digit (green '3' becomes tan '2' at 00:04; blue '3' becomes green '5' at 00:06; green '3' becomes green '2' at 00:07; blue '3' becomes blue '6' at 00:08).\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

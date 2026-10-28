@@ -1,0 +1,57 @@
+{
+  "key": "home-tour__spatial-topology-occlusion",
+  "video": "home-tour.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:55:39.682Z",
+  "latencyMs": 46435,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3273,
+    "total_tokens": 4868,
+    "cost": 0.01796,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01796,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.016365
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2567,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Kitchen/hallway | At 00:00-00:02, features a stove on the left, counter with microwave on the right, a grey wall ahead-right with a floral picture and light switches, a doorway on the right leading to a bedroom, and a wide doorway ahead leading to a hallway with a glass-paned door | At 00:09, accessed via a perpendicular doorway from the bedroom; now has a microwave mounted above the stove on the left and a curtained window on the right wall where the bedroom entrance and grey wall previously were | Undergoes impossible topological loop and layout change",
+    "Grey wall with floral picture | Located in the kitchen facing the camera at 00:00-00:03, to the left of the bedroom entrance | At 00:07, appears inside the bedroom on the wall to the left of the exit doorway | Teleports from the kitchen wall to the interior bedroom wall",
+    "Bedroom | Entered at 00:03-00:05 by turning 90 degrees right from the kitchen; window to the left of the bed is immediately adjacent to the entrance doorframe | At 00:06-00:07, panning left past that same window reveals a new wall section with a side table, artwork, and an exit doorway leading back into the kitchen | Wall layout mutates during pan and connects back to the kitchen along an incompatible axis"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Bedroom left wall and grey wall with floral picture",
+      "invariant_violated": "scene layout",
+      "description": "At 00:04-00:05, the window to the left of the bed is directly adjacent to the doorway frame the woman just walked through. When the camera pans left across that same window at 00:06-00:07, the entrance doorway is gone and replaced by a side table, framed artwork, a new doorway, and the grey wall with the floral picture that was previously located outside in the kitchen.",
+      "severity": "severe",
+      "confidence": 0.99
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Bedroom-to-kitchen doorway connectivity and kitchen layout",
+      "invariant_violated": "connectivity",
+      "description": "After turning 90 degrees right out of the kitchen to enter the bedroom (00:03-00:04) and then turning 90 degrees left inside the bedroom (00:06-00:07), the woman walks straight through a doorway and impossibly re-enters the kitchen along the original approach vector facing the far glass door. Furthermore, the right side of the kitchen where the grey wall and bedroom doorway were located at 00:00-00:03 is now replaced at 00:09 by a curtained window, and a microwave now appears mounted above the stove on the left.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Kitchen/hallway | At 00:00-00:02, features a stove on the left, counter with microwave on the right, a grey wall ahead-right with a floral picture and light switches, a doorway on the right leading to a bedroom, and a wide doorway ahead leading to a hallway with a glass-paned door | At 00:09, accessed via a perpendicular doorway from the bedroom; now has a microwave mounted above the stove on the left and a curtained window on the right wall where the bedroom entrance and grey wall previously were | Undergoes impossible topological loop and layout change\",\n    \"Grey wall with floral picture | Located in the kitchen facing the camera at 00:00-00:03, to the left of the bedroom entrance | At 00:07, appears inside the bedroom on the wall to the left of the exit doorway | Teleports from the kitchen wall to the interior bedroom wall\",\n    \"Bedroom | Entered at 00:03-00:05 by turning 90 degrees right from the kitchen; window to the left of the bed is immediately adjacent to the entrance doorframe | At 00:06-00:07, panning left past that same window reveals a new wall section with a side table, artwork, and an exit doorway leading back into the kitchen | Wall layout mutates during pan and connects back to the kitchen along an incompatible axis\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Bedroom left wall and grey wall with floral picture\",\n      \"invariant_violated\": \"scene layout\",\n      \"description\": \"At 00:04-00:05, the window to the left of the bed is directly adjacent to the doorway frame the woman just walked through. When the camera pans left across that same window at 00:06-00:07, the entrance doorway is gone and replaced by a side table, framed artwork, a new doorway, and the grey wall with the floral picture that was previously located outside in the kitchen.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Bedroom-to-kitchen doorway connectivity and kitchen layout\",\n      \"invariant_violated\": \"connectivity\",\n      \"description\": \"After turning 90 degrees right out of the kitchen to enter the bedroom (00:03-00:04) and then turning 90 degrees left inside the bedroom (00:06-00:07), the woman walks straight through a doorway and impossibly re-enters the kitchen along the original approach vector facing the far glass door. Furthermore, the right side of the kitchen where the grey wall and bedroom doorway were located at 00:00-00:03 is now replaced at 00:09 by a curtained window, and a microwave now appears mounted above the stove on the left.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

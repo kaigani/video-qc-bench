@@ -1,0 +1,58 @@
+{
+  "key": "child-marbles__object-persistence-state",
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:13:39.133Z",
+  "latencyMs": 44678,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 3396,
+    "total_tokens": 5009,
+    "cost": 0.018593,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018593,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.01698
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2790,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "glass bowl | sitting on the wooden table holding colored balls | sitting on the wooden table as camera zooms in | remains intact and stationary on the table",
+    "red ball held by child | lifted from the center of the bowl at 00:00-00:01 | vanishes/merges into the center red ball at 00:02 | duplicates upon lifting at 00:01 and disappears back into the bowl at 00:02",
+    "colored balls inside the bowl | 7 balls in bowl at 00:01 (2 red, 2 green, 3 yellow) | 6 visible balls of shifting colors at 00:09 (3 red, 2 green, 1 yellow) | remain stationary from 00:01 to 00:05, then spontaneously change colors and counts while being stirred between 00:06 and 00:09",
+    "small metal cup and loose balls on table | resting on the right side of the wooden table at 00:00 | out of frame by 00:05 due to camera zoom | no state changes while visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red ball held by child",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:01, the child holds a red ball in both hands above the bowl while seven balls (two red, two green, three yellow) sit inside the bowl. When the child lowers his right hand at 00:02–00:03, the held red ball vanishes or merges into the center red ball, leaving the exact same seven balls (only two red) in the bowl at 00:04–00:05.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "colored balls inside the bowl",
+      "invariant_violated": "identity & persistence",
+      "description": "As the child stirs the balls, they spontaneously transform into different colors: between 00:07 and 00:08, a red ball in the upper-right of the bowl turns green; between 00:08 and 00:09, the yellow ball on the far right turns red, the red ball on the far left turns green, and the green ball at the front-left turns yellow.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"glass bowl | sitting on the wooden table holding colored balls | sitting on the wooden table as camera zooms in | remains intact and stationary on the table\",\n    \"red ball held by child | lifted from the center of the bowl at 00:00-00:01 | vanishes/merges into the center red ball at 00:02 | duplicates upon lifting at 00:01 and disappears back into the bowl at 00:02\",\n    \"colored balls inside the bowl | 7 balls in bowl at 00:01 (2 red, 2 green, 3 yellow) | 6 visible balls of shifting colors at 00:09 (3 red, 2 green, 1 yellow) | remain stationary from 00:01 to 00:05, then spontaneously change colors and counts while being stirred between 00:06 and 00:09\",\n    \"small metal cup and loose balls on table | resting on the right side of the wooden table at 00:00 | out of frame by 00:05 due to camera zoom | no state changes while visible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"red ball held by child\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:01, the child holds a red ball in both hands above the bowl while seven balls (two red, two green, three yellow) sit inside the bowl. When the child lowers his right hand at 00:02–00:03, the held red ball vanishes or merges into the center red ball, leaving the exact same seven balls (only two red) in the bowl at 00:04–00:05.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"colored balls inside the bowl\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the child stirs the balls, they spontaneously transform into different colors: between 00:07 and 00:08, a red ball in the upper-right of the bowl turns green; between 00:08 and 00:09, the yellow ball on the far right turns red, the red ball on the far left turns green, and the green ball at the front-left turns yellow.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

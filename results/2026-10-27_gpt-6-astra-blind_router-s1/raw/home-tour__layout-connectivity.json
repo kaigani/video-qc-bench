@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "00:00\u201300:02: Initial kitchen has a microwave counter on the right and a range, hood, sink and curtained window on the left; its open passage leads toward a short hall with a closed, glazed exterior-style door.",
+    "00:02\u201300:04: The woman turns right beside the framed portrait and approaches a white-trimmed bedroom opening; the bed, bedside lamp and windows are visible through it.",
+    "00:04\u201300:05: She crosses from the kitchen/hall area into the bedroom, consistent with the bedroom already visible through that opening.",
+    "00:05\u201300:06: Bedroom contains a made double bed, bedside table and lamp, overhead chandelier, and two wooden dining-style chairs facing inward at the foot of the bed with their seats tucked against or beneath its edge.",
+    "00:05\u201300:08: Bedroom windows on adjoining walls show daylight, greenery and portions of nearby exterior structures; no exterior reverse view establishes a contradictory far side.",
+    "00:06\u201300:09: As she turns left across the bedroom, another doorway appears beside a window and small photo table; through it are a light-colored room and a closed glazed door, followed by visible kitchen fixtures as the angle opens.",
+    "00:09\u201300:09.75: She crosses that doorway into a kitchen with a range and over-range microwave on the left, a window on the right and the glazed door ahead. The footage does not establish that this must be the original kitchen or exclude a second connection, so the route alone does not prove impossibility.",
+    "00:00\u201300:09.75: Neither closed exterior-style door is traversed; exterior entrance positions cannot be checked from outside. Audio is unassessed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Two chairs at the foot of the bedroom bed",
+      "invariant_violated": "Furniture must serve the actual furnishing",
+      "description": "At 00:05.25\u201300:05.75, two dining-style chairs sit side by side facing into the foot of a made bed, with their seats tucked against or beneath the bedding edge as though the bed were a dining table. The mattress and bed base occupy the space where seated users would need knee clearance; no table is present to explain the arrangement.",
+      "severity": "moderate",
+      "confidence": 0.96
+    }
+  ],
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-router__clip-05__layout-connectivity__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/router-s1/raw/clip-05__layout-connectivity.json",
+  "frozen_source_sha256": "7f63f685709393dffa28f2c901d6b0dad3224be2f1cbd20c420d5491fa9287c5",
+  "key": "home-tour__layout-connectivity",
+  "parseOk": true
+}

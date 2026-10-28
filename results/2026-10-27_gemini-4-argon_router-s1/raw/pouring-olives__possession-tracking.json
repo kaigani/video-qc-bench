@@ -1,0 +1,57 @@
+{
+  "key": "pouring-olives__possession-tracking",
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:36:48.901Z",
+  "latencyMs": 19176,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 1258,
+    "total_tokens": 2813,
+    "cost": 0.007845,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007845,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.00629
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 790,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:03: Small glass jar of green fruits held in both hands -> poured into large glass jar on cutting board (several fruits arrive as dark purple instead of green)",
+    "00:04-00:05: Left hand reaches into metal bowl of green fruits -> cut to both hands holding a full small glass jar of green fruits above the large jar while metal bowl contents are depleted and a small bottle appears beside it",
+    "00:06-00:09: Second small glass jar of green fruits held in both hands -> poured into large glass jar (fruits at the mouth of the small jar turn dark purple and land in the large jar as a mix of green and dark purple fruits)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "green fruits (olives/plums) poured from small jar into large jar",
+      "invariant_violated": "transfer completeness",
+      "description": "The small glass container held at the top of the frame contains only bright green fruits at 00:00, but as they fall into the empty large glass jar from 00:01 to 00:03, roughly half of the fruits landing in the bottom of the large jar are dark purple/black.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "green fruits in second small jar poured into large jar",
+      "invariant_violated": "transfer completeness",
+      "description": "At 00:06 the refilled small glass container visibly holds only green fruits, but as the fingers pull them out into the large jar at 00:07-00:08, several fruits at the opening of the small jar and falling into the large jar have changed into dark purple fruits.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:03: Small glass jar of green fruits held in both hands -> poured into large glass jar on cutting board (several fruits arrive as dark purple instead of green)\",\n    \"00:04-00:05: Left hand reaches into metal bowl of green fruits -> cut to both hands holding a full small glass jar of green fruits above the large jar while metal bowl contents are depleted and a small bottle appears beside it\",\n    \"00:06-00:09: Second small glass jar of green fruits held in both hands -> poured into large glass jar (fruits at the mouth of the small jar turn dark purple and land in the large jar as a mix of green and dark purple fruits)\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"green fruits (olives/plums) poured from small jar into large jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"The small glass container held at the top of the frame contains only bright green fruits at 00:00, but as they fall into the empty large glass jar from 00:01 to 00:03, roughly half of the fruits landing in the bottom of the large jar are dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"green fruits in second small jar poured into large jar\",\n      \"invariant_violated\": \"transfer completeness\",\n      \"description\": \"At 00:06 the refilled small glass container visibly holds only green fruits, but as the fingers pull them out into the large jar at 00:07-00:08, several fruits at the opening of the small jar and falling into the large jar have changed into dark purple fruits.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

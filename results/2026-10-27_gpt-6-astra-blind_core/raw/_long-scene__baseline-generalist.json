@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "Woman | gray hair in a bun, blue polo, white apron, glasses hanging at chest | same clothing, working behind counter | wipes surfaces, serves customer, sits beside him, watches him leave; duplicated in final shot",
+    "Man | gray hair, brown jacket, dark checked shirt, jeans | same clothing, approaching truck outside | enters, sits with coffee and breakfast, leaves money and exits; body intersects counter in frontal seated shot",
+    "Coffee mugs | white ceramic mugs, initially separate | one remains with man after cups meet | woman's mug and man's mug converge and become a single visible vessel",
+    "Diner counter | continuous solid countertop with metal edging and wooden front | same general construction | intersects seated man's body and later woman's walking path",
+    "Breakfast plate | toast and fried egg on white plate | plate carried away by woman | shown in close-up, then beside man's mug, then removed",
+    "Audio | unassessed | unassessed | review used extracted visual frames only"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Seated man and diner counter",
+      "invariant_violated": "Solid-object intersection",
+      "description": "In the frontal seated shot, the man's torso is behind the countertop on the service side, while his jeans-clad leg emerges on the customer side below the continuous metal edge and wooden front. The counter passes through his waist rather than the man occupying a coherent seat beside it; this persists throughout the shot.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:13",
+      "entity": "Two white coffee mugs",
+      "invariant_violated": "Object permanence",
+      "description": "The woman and man each hold a separate white mug at 01:12. As they bring them together, the two mug bodies overlap and collapse into one visible mug. The woman withdraws an empty hand, leaving only the man's mug without a separate placement or removal of hers.",
+      "severity": "moderate",
+      "confidence": 0.94
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Woman in blue polo and white apron",
+      "invariant_violated": "Unexplained character duplication",
+      "description": "As the woman rises and moves toward the service area, another matching woman appears at the far end of the counter wiping its surface. Both figures remain visible and move independently in the same uninterrupted shot, with no entrance or introduction explaining the duplicate.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Walking woman and diner counter",
+      "invariant_violated": "Solid-object intersection",
+      "description": "The foreground woman moves from the stool side directly into the service area through the continuous countertop and wooden front. During the crossing, her upper body is behind the countertop while a leg remains in front of the panel; she never goes around an end or through an opening.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "gpt-6-astra",
+  "options": {
+    "reasoningEffort": "high",
+    "serviceTier": "default"
+  },
+  "providerInstanceId": "codex",
+  "actual_input_modality": "timestamped JPEG frames via view_image, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A0ea9cc6f-c83d-4aed-9e5a-76c8c9a61843%3Adelegate-task%3Ablind-261027-core__clip-01__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261027 GPT6 Astra blind audit/blind-output/core/raw/clip-01__baseline-generalist.json",
+  "frozen_source_sha256": "072a99f7d5e382cb2fc17b5d41ff1cac03ee7b2ce93b26b0acca63c227f9b286",
+  "key": "_long-scene__baseline-generalist",
+  "parseOk": true
+}

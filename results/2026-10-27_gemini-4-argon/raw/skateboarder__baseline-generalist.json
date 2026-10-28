@@ -1,0 +1,64 @@
+{
+  "key": "skateboarder__baseline-generalist",
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:32.971Z",
+  "latencyMs": 24856,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 1615,
+    "total_tokens": 3023,
+    "cost": 0.009483,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009483,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.008075
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1123,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboard | intact deck with two trucks and four wheels at 00:00 | deformed and split into warped fragments at 00:09 | partially vanishes on landing at 00:03, loses left truck in mid-air at 00:08, and breaks/morphs on landing at 00:09",
+    "skateboarder | riding in skatepark with shadow cast toward camera at 00:00 | landing trick at 00:09 | shadow vanishes while backlit between 00:01 and 00:03"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "skateboarder's shadow",
+      "invariant_violated": "shadow consistency",
+      "description": "Although the sun is directly behind the skateboarder, his shadow on the concrete ramp completely disappears during his jump from 00:01 to 00:03 before suddenly reappearing at 00:04.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "skateboard",
+      "invariant_violated": "object permanence and rigidity",
+      "description": "As the skateboarder lands, the right half of the skateboard and its front truck vanish/warp out of existence while his right foot touches the ground, before the board reforms intact at 00:04.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "skateboard",
+      "invariant_violated": "object permanence and structural integrity",
+      "description": "During the second jump at 00:08, the left truck and wheels completely disappear from the underside of the airborne skateboard; upon landing at 00:09, the deck severely warps and splits into deformed fragments beneath the skater's feet.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboard | intact deck with two trucks and four wheels at 00:00 | deformed and split into warped fragments at 00:09 | partially vanishes on landing at 00:03, loses left truck in mid-air at 00:08, and breaks/morphs on landing at 00:09\",\n    \"skateboarder | riding in skatepark with shadow cast toward camera at 00:00 | landing trick at 00:09 | shadow vanishes while backlit between 00:01 and 00:03\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"skateboarder's shadow\",\n      \"invariant_violated\": \"shadow consistency\",\n      \"description\": \"Although the sun is directly behind the skateboarder, his shadow on the concrete ramp completely disappears during his jump from 00:01 to 00:03 before suddenly reappearing at 00:04.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"object permanence and rigidity\",\n      \"description\": \"As the skateboarder lands, the right half of the skateboard and its front truck vanish/warp out of existence while his right foot touches the ground, before the board reforms intact at 00:04.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"object permanence and structural integrity\",\n      \"description\": \"During the second jump at 00:08, the left truck and wheels completely disappear from the underside of the airborne skateboard; upon landing at 00:09, the deck severely warps and splits into deformed fragments beneath the skater's feet.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

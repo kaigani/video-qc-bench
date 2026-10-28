@@ -1,0 +1,49 @@
+{
+  "key": "pouring-olives__causal-temporal-sequence",
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:38.950Z",
+  "latencyMs": 32052,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 1359,
+    "total_tokens": 3124,
+    "cost": 0.00856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00856,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.006795
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1073,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "first pour | man tilts small container over large jar at 00:00 | olives fall into bottom of large jar from 00:01 to 00:03 | order and timing are plausible",
+    "bowl interaction | man reaches toward metal bowl at 00:04 | bowl contents suddenly deplete at 00:05 while a full glass container appears in hands | incomplete scooping action and disproportionate effect",
+    "second pour | man tilts second small container over large jar at 00:06 | olives fall and fill large jar through 00:09 | order and timing are plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "man's hands and metal bowl contents",
+      "invariant_violated": "proportionality and action completion",
+      "description": "The man initiates a reach into the metal bowl at 00:04, but without completing a scooping or refilling motion, the bowl's contents abruptly deplete at 00:05 while an already-filled glass container emerges in his hands.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"first pour | man tilts small container over large jar at 00:00 | olives fall into bottom of large jar from 00:01 to 00:03 | order and timing are plausible\",\n    \"bowl interaction | man reaches toward metal bowl at 00:04 | bowl contents suddenly deplete at 00:05 while a full glass container appears in hands | incomplete scooping action and disproportionate effect\",\n    \"second pour | man tilts second small container over large jar at 00:06 | olives fall and fill large jar through 00:09 | order and timing are plausible\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"man's hands and metal bowl contents\",\n      \"invariant_violated\": \"proportionality and action completion\",\n      \"description\": \"The man initiates a reach into the metal bowl at 00:04, but without completing a scooping or refilling motion, the bowl's contents abruptly deplete at 00:05 while an already-filled glass container emerges in his hands.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.7\n    }\n  ]\n}"
+}

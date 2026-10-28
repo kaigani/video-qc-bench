@@ -1,0 +1,48 @@
+{
+  "key": "dancer-mirror__character-continuity",
+  "video": "dancer-mirror.mp4",
+  "role": "character-continuity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:28:19.683Z",
+  "latencyMs": 43527,
+  "usage": {
+    "prompt_tokens": 1593,
+    "completion_tokens": 3167,
+    "total_tokens": 4760,
+    "cost": 0.017428,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017428,
+      "upstream_inference_prompt_cost": 0.001593,
+      "upstream_inference_completions_cost": 0.015835
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2770,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Female dancer | woman with hair in a bun wearing a black Y-back sports bra and black leggings, barefoot, with tattoos on her right rear shoulder and left tricep, standing facing the studio mirror with right arm extended | same woman facing the mirror in a pose with right arm curved overhead and weight on right leg | at 00:02 her foreground body abruptly flips poses to left-arm-up and weight-on-left-leg with her right-shoulder tattoo disappearing, contradicting her ongoing right-arm movement in the mirror reflection, before snapping back to right-arm-up at 00:03",
+    "Dancer's mirror reflection | reflection in the studio mirror matching the dancer's right-arm lift and stance | reflection matching the dancer's final overhead right-arm pose | remains in the right-arm-raised pose at 00:02 while the foreground dancer abruptly switches to having her left arm raised"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Female dancer",
+      "invariant_violated": "movement and identity continuity",
+      "description": "Between 00:01 and 00:03, while raising her right arm with her weight on her right leg, the foreground dancer abruptly snaps at 00:02 into an opposite pose with her left arm raised overhead, right arm down, weight shifted onto her left leg, and her right-shoulder tattoo missing, while her mirror reflection continues to show her right arm raised overhead; at 00:03 she instantaneously snaps back to having her right arm raised and right-shoulder tattoo visible.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Female dancer | woman with hair in a bun wearing a black Y-back sports bra and black leggings, barefoot, with tattoos on her right rear shoulder and left tricep, standing facing the studio mirror with right arm extended | same woman facing the mirror in a pose with right arm curved overhead and weight on right leg | at 00:02 her foreground body abruptly flips poses to left-arm-up and weight-on-left-leg with her right-shoulder tattoo disappearing, contradicting her ongoing right-arm movement in the mirror reflection, before snapping back to right-arm-up at 00:03\",\n    \"Dancer's mirror reflection | reflection in the studio mirror matching the dancer's right-arm lift and stance | reflection matching the dancer's final overhead right-arm pose | remains in the right-arm-raised pose at 00:02 while the foreground dancer abruptly switches to having her left arm raised\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"Female dancer\",\n      \"invariant_violated\": \"movement and identity continuity\",\n      \"description\": \"Between 00:01 and 00:03, while raising her right arm with her weight on her right leg, the foreground dancer abruptly snaps at 00:02 into an opposite pose with her left arm raised overhead, right arm down, weight shifted onto her left leg, and her right-shoulder tattoo missing, while her mirror reflection continues to show her right arm raised overhead; at 00:03 she instantaneously snaps back to having her right arm raised and right-shoulder tattoo visible.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

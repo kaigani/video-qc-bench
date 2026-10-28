@@ -1,0 +1,64 @@
+{
+  "key": "dancer-mirror__baseline-generalist",
+  "video": "dancer-mirror.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:14:37.997Z",
+  "latencyMs": 58849,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 4101,
+    "total_tokens": 5509,
+    "cost": 0.021913,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021913,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.020505
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3508,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Dancer (foreground) | stands in studio facing mirror with wide stance, weight on right leg, raising right arm | stands with weight on left leg and right leg extended to the right while holding right arm overhead | shifts weight between legs and twists torso at 00:02, 00:05, and 00:08",
+    "Dancer's reflection (mirror) | stands with narrow stance facing forward while raising arm | stands with weight on right leg and left foot pointed out to the left | performs different leg stances, weight shifts, and torso angles that do not match the foreground dancer"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Dancer's reflection in the mirror",
+      "invariant_violated": "Mirror reflection consistency",
+      "description": "The dancer's reflection in the mirror does not match her actual body position and movement: from 00:00 to 00:02, the foreground dancer stands with her feet wide apart and at 00:02 shifts her weight onto her left leg while twisting her torso and head to the left with her arm straight up, whereas her reflection keeps a narrow foot stance and faces straight ahead with her arm curved to the side.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Dancer's reflection in the mirror",
+      "invariant_violated": "Mirror reflection consistency",
+      "description": "At 00:05, the foreground dancer shifts her weight onto her left leg with her right leg extended out to the right and brings her hands toward the front-left of her waist, while her mirror reflection has her weight on the opposite (right) leg with her left leg extended to the left and her left hand resting on her hip.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Dancer's reflection in the mirror",
+      "invariant_violated": "Mirror reflection consistency",
+      "description": "From 00:08 to 00:09, the foreground dancer stands with her weight on her flat left foot and extends her right leg out to the right, whereas the mirror reflection shows the opposite leg position with her weight on her right foot and her left foot pointed out to the left.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Dancer (foreground) | stands in studio facing mirror with wide stance, weight on right leg, raising right arm | stands with weight on left leg and right leg extended to the right while holding right arm overhead | shifts weight between legs and twists torso at 00:02, 00:05, and 00:08\",\n    \"Dancer's reflection (mirror) | stands with narrow stance facing forward while raising arm | stands with weight on right leg and left foot pointed out to the left | performs different leg stances, weight shifts, and torso angles that do not match the foreground dancer\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Dancer's reflection in the mirror\",\n      \"invariant_violated\": \"Mirror reflection consistency\",\n      \"description\": \"The dancer's reflection in the mirror does not match her actual body position and movement: from 00:00 to 00:02, the foreground dancer stands with her feet wide apart and at 00:02 shifts her weight onto her left leg while twisting her torso and head to the left with her arm straight up, whereas her reflection keeps a narrow foot stance and faces straight ahead with her arm curved to the side.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Dancer's reflection in the mirror\",\n      \"invariant_violated\": \"Mirror reflection consistency\",\n      \"description\": \"At 00:05, the foreground dancer shifts her weight onto her left leg with her right leg extended out to the right and brings her hands toward the front-left of her waist, while her mirror reflection has her weight on the opposite (right) leg with her left leg extended to the left and her left hand resting on her hip.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Dancer's reflection in the mirror\",\n      \"invariant_violated\": \"Mirror reflection consistency\",\n      \"description\": \"From 00:08 to 00:09, the foreground dancer stands with her weight on her flat left foot and extends her right leg out to the right, whereas the mirror reflection shows the opposite leg position with her weight on her right foot and her left foot pointed out to the left.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

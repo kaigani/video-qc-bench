@@ -1,0 +1,76 @@
+{
+  "key": "pouring-olives__object-persistence-state",
+  "video": "pouring-olives.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:24:15.747Z",
+  "latencyMs": 30331,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 2260,
+    "total_tokens": 3873,
+    "cost": 0.012913,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.012913,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.0113
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1354,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | on wooden cutting board, empty, with a pointed pouring spout on the right side of the neck | half-full of green and dark purple olives, with a rounded glass loop on the right side of the neck | fills with olives at 00:01-00:03 and 00:07-00:09; volume jumps and spout morphs into a loop at 00:06",
+    "Small glass cup | held by person's hands above the large jar, filled with green olives | held empty above the large jar at 00:09 | emptied at 00:01-00:03, disappears/retrieved near metal bowl at 00:04-00:05 full of green olives again, emptied at 00:07-00:09",
+    "Olives in small glass cup | bright green whole olives inside the small cup | inside large jar as a mix of green and dark purple olives | several green olives inexplicably turn dark purple/black upon falling into the large jar at 00:01-00:03 and 00:07-00:09",
+    "Metal bowl on counter | on countertop to the right, filled with large green olives | on countertop, containing a small amount of smaller brownish and green items | contents abruptly change in count, color, and size at 00:05",
+    "Small clear bottle | not present on countertop at 00:00-00:04 | sitting on countertop to the right of the metal bowl from 00:05 onward | materializes on the counter at 00:05",
+    "Ceramic bowl on lower right | on countertop at bottom right, filled with green olives | on countertop at bottom right, filled with green olives | remains static throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "Olives in small glass cup",
+      "invariant_violated": "physical state transitions / identity & persistence",
+      "description": "The small glass cup held by the person contains only bright green olives, but as they fall into the large glass jar (at 00:01-00:03 and again at 00:07-00:09), many of the olives instantaneously turn dark purple/black.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Small clear bottle",
+      "invariant_violated": "identity & persistence",
+      "description": "A small clear glass bottle with a white top suddenly appears on the countertop to the right of the metal bowl with no one placing it there.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Metal bowl on counter",
+      "invariant_violated": "identity & persistence",
+      "description": "Between 00:04 and 00:05, as the person reaches toward the counter, the large green olives inside the metal bowl abruptly transform into a much smaller quantity of tiny brown and green items, while the person pulls away a full glass cup that was not in the bowl.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Large glass jar",
+      "invariant_violated": "identity & persistence",
+      "description": "At 00:06, the pointed pouring spout on the upper-right neck of the large glass jar morphs into a rounded glass loop/handle, and the quantity of olives sitting inside the jar increases before the person begins pouring the second batch.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | on wooden cutting board, empty, with a pointed pouring spout on the right side of the neck | half-full of green and dark purple olives, with a rounded glass loop on the right side of the neck | fills with olives at 00:01-00:03 and 00:07-00:09; volume jumps and spout morphs into a loop at 00:06\",\n    \"Small glass cup | held by person's hands above the large jar, filled with green olives | held empty above the large jar at 00:09 | emptied at 00:01-00:03, disappears/retrieved near metal bowl at 00:04-00:05 full of green olives again, emptied at 00:07-00:09\",\n    \"Olives in small glass cup | bright green whole olives inside the small cup | inside large jar as a mix of green and dark purple olives | several green olives inexplicably turn dark purple/black upon falling into the large jar at 00:01-00:03 and 00:07-00:09\",\n    \"Metal bowl on counter | on countertop to the right, filled with large green olives | on countertop, containing a small amount of smaller brownish and green items | contents abruptly change in count, color, and size at 00:05\",\n    \"Small clear bottle | not present on countertop at 00:00-00:04 | sitting on countertop to the right of the metal bowl from 00:05 onward | materializes on the counter at 00:05\",\n    \"Ceramic bowl on lower right | on countertop at bottom right, filled with green olives | on countertop at bottom right, filled with green olives | remains static throughout\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"Olives in small glass cup\",\n      \"invariant_violated\": \"physical state transitions / identity & persistence\",\n      \"description\": \"The small glass cup held by the person contains only bright green olives, but as they fall into the large glass jar (at 00:01-00:03 and again at 00:07-00:09), many of the olives instantaneously turn dark purple/black.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Small clear bottle\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"A small clear glass bottle with a white top suddenly appears on the countertop to the right of the metal bowl with no one placing it there.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Metal bowl on counter\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"Between 00:04 and 00:05, as the person reaches toward the counter, the large green olives inside the metal bowl abruptly transform into a much smaller quantity of tiny brown and green items, while the person pulls away a full glass cup that was not in the bowl.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:06\",\n      \"entity\": \"Large glass jar\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"At 00:06, the pointed pouring spout on the upper-right neck of the large glass jar morphs into a rounded glass loop/handle, and the quantity of olives sitting inside the jar increases before the person begins pouring the second batch.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

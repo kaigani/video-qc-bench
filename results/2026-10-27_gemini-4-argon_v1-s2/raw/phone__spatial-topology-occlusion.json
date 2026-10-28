@@ -1,0 +1,41 @@
+{
+  "key": "phone__spatial-topology-occlusion",
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:00:01.086Z",
+  "latencyMs": 23604,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1404,
+    "total_tokens": 2999,
+    "cost": 0.008615,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.008615,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.00702
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1118,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Smartphone and hands | Held in immediate foreground, initially slightly out of focus, occluding the center-left portion of the stairs | Lowered at 00:09 revealing more of the stairs and courtyard behind it | Shifts into sharp focus from 00:03 to 00:08 while maintaining consistent foreground depth ordering",
+    "Staircase and left wall | Descending away from camera on the left side toward a paved courtyard | Remains in the same relative position in the background | Blurred during rack focus (00:03-00:08) and revealed further as phone lowers at 00:09",
+    "Metal railing and bushes | Positioned along the right side of the staircase with vertical bars and bushes behind/below it | Remains fixed on the right side of the frame | Consistently occludes the background courtyard and the walking person at 00:00",
+    "Walking person in blue shirt | Visible at the base of the stairs/courtyard behind the foreground railing at 00:00 | Walks away into the courtyard and becomes fully occluded by the smartphone by 00:03 | Smoothly transitions from behind the railing into the open courtyard area before passing behind the top edge of the phone"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Smartphone and hands | Held in immediate foreground, initially slightly out of focus, occluding the center-left portion of the stairs | Lowered at 00:09 revealing more of the stairs and courtyard behind it | Shifts into sharp focus from 00:03 to 00:08 while maintaining consistent foreground depth ordering\",\n    \"Staircase and left wall | Descending away from camera on the left side toward a paved courtyard | Remains in the same relative position in the background | Blurred during rack focus (00:03-00:08) and revealed further as phone lowers at 00:09\",\n    \"Metal railing and bushes | Positioned along the right side of the staircase with vertical bars and bushes behind/below it | Remains fixed on the right side of the frame | Consistently occludes the background courtyard and the walking person at 00:00\",\n    \"Walking person in blue shirt | Visible at the base of the stairs/courtyard behind the foreground railing at 00:00 | Walks away into the courtyard and becomes fully occluded by the smartphone by 00:03 | Smoothly transitions from behind the railing into the open courtyard area before passing behind the top edge of the phone\"\n  ],\n  \"findings\": []\n}"
+}

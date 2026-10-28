@@ -1,0 +1,79 @@
+{
+  "key": "weird-blocks__baseline-generalist",
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:03:39.354Z",
+  "latencyMs": 24896,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2033,
+    "total_tokens": 3441,
+    "cost": 0.011573,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011573,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.010165
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1340,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "numbered blocks | two green '2' blocks at 00:00 | eight multicolored blocks ('2', '3', '2', '2', '3', '5', '2', '6') at 00:08 | blocks repeatedly split/materialize from existing blocks and spontaneously change colors and numerals as the hand moves across them"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "first and second blocks",
+      "invariant_violated": "object permanence and attribute consistency",
+      "description": "The leftmost green '2' block spontaneously changes color to blue, and a new blue '3' block materializes in the hand's grip between the existing blocks without being brought in from off-screen.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "third block (green)",
+      "invariant_violated": "object permanence and attribute consistency",
+      "description": "When the hand grabs the green '2' block, its numeral morphs into a '3', and as the hand pulls to the right at 00:03, the block splits into two separate blocks (a green '2' and a green '3').",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "fourth and fifth blocks",
+      "invariant_violated": "object permanence and attribute consistency",
+      "description": "As the hand moves right from the fourth block, the green '3' block transforms into a tan '2' block while a new blue '3' block materializes in the hand's grip.",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "sixth, seventh, and eighth blocks",
+      "invariant_violated": "object permanence and attribute consistency",
+      "description": "From 00:05 to 00:07, each movement of the hand to the right continuously duplicates the held block into a new block while the previous block changes color and number (blue '3' becomes green '5' at 00:06; green '3' becomes green '2' at 00:07).",
+      "severity": "severe",
+      "confidence": 1
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "eighth block (rightmost blue block)",
+      "invariant_violated": "attribute consistency",
+      "description": "As the hand releases the rightmost blue '3' block and moves back to the left, the number on the front face of the eighth block spontaneously morphs from '3' into '6'.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"numbered blocks | two green '2' blocks at 00:00 | eight multicolored blocks ('2', '3', '2', '2', '3', '5', '2', '6') at 00:08 | blocks repeatedly split/materialize from existing blocks and spontaneously change colors and numerals as the hand moves across them\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:01\",\n      \"entity\": \"first and second blocks\",\n      \"invariant_violated\": \"object permanence and attribute consistency\",\n      \"description\": \"The leftmost green '2' block spontaneously changes color to blue, and a new blue '3' block materializes in the hand's grip between the existing blocks without being brought in from off-screen.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:02\",\n      \"entity\": \"third block (green)\",\n      \"invariant_violated\": \"object permanence and attribute consistency\",\n      \"description\": \"When the hand grabs the green '2' block, its numeral morphs into a '3', and as the hand pulls to the right at 00:03, the block splits into two separate blocks (a green '2' and a green '3').\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"fourth and fifth blocks\",\n      \"invariant_violated\": \"object permanence and attribute consistency\",\n      \"description\": \"As the hand moves right from the fourth block, the green '3' block transforms into a tan '2' block while a new blue '3' block materializes in the hand's grip.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"sixth, seventh, and eighth blocks\",\n      \"invariant_violated\": \"object permanence and attribute consistency\",\n      \"description\": \"From 00:05 to 00:07, each movement of the hand to the right continuously duplicates the held block into a new block while the previous block changes color and number (blue '3' becomes green '5' at 00:06; green '3' becomes green '2' at 00:07).\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"eighth block (rightmost blue block)\",\n      \"invariant_violated\": \"attribute consistency\",\n      \"description\": \"As the hand releases the rightmost blue '3' block and moves back to the left, the number on the front face of the eighth block spontaneously morphs from '3' into '6'.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

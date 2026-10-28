@@ -1,0 +1,50 @@
+{
+  "key": "_long-scene__vehicle-identity",
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:28:58.416Z",
+  "latencyMs": 27726,
+  "usage": {
+    "prompt_tokens": 12245,
+    "completion_tokens": 1268,
+    "total_tokens": 13513,
+    "cost": 0.018585,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018585,
+      "upstream_inference_prompt_cost": 0.012245,
+      "upstream_inference_completions_cost": 0.00634
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 861,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Driver's truck outside diner — white aerodynamic high-roof sleeper-cab semi-tractor (bobtail, no trailer/box, tandem rear axles) parked next to the diner.",
+    "00:19-00:26, 00:36-00:44, 01:00-01:08, 01:18-01:26: Parked vehicle visible through left diner window — white front hood and bumper facing the window.",
+    "01:41-01:49: Driver's truck outside diner — dark green conventional-cab straight box truck with a white horizontal stripe, vertical chrome exhaust stacks, attached cargo box, and single rear axle.",
+    "01:50-01:58: Parked vehicle visible through left diner window — reverts to the white vehicle front hood/bumper in the same position."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Driver's parked truck",
+      "invariant_violated": "vehicle identity and configuration",
+      "description": "The truck parked outside the diner initially appears at 00:00-00:09 as a white high-roof sleeper-cab semi-tractor with no trailer (bobtail), with its white front end visible through the diner window throughout the scene. When the driver exits the diner at 01:41 to get into his truck outside the window, it has inexplicably transformed into a dark green and white conventional-cab straight box truck with chrome exhaust stacks and an attached cargo box.",
+      "severity": "severe",
+      "confidence": 0.99
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Driver's truck outside diner — white aerodynamic high-roof sleeper-cab semi-tractor (bobtail, no trailer/box, tandem rear axles) parked next to the diner.\",\n    \"00:19-00:26, 00:36-00:44, 01:00-01:08, 01:18-01:26: Parked vehicle visible through left diner window — white front hood and bumper facing the window.\",\n    \"01:41-01:49: Driver's truck outside diner — dark green conventional-cab straight box truck with a white horizontal stripe, vertical chrome exhaust stacks, attached cargo box, and single rear axle.\",\n    \"01:50-01:58: Parked vehicle visible through left diner window — reverts to the white vehicle front hood/bumper in the same position.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:41\",\n      \"entity\": \"Driver's parked truck\",\n      \"invariant_violated\": \"vehicle identity and configuration\",\n      \"description\": \"The truck parked outside the diner initially appears at 00:00-00:09 as a white high-roof sleeper-cab semi-tractor with no trailer (bobtail), with its white front end visible through the diner window throughout the scene. When the driver exits the diner at 01:41 to get into his truck outside the window, it has inexplicably transformed into a dark green and white conventional-cab straight box truck with chrome exhaust stacks and an attached cargo box.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.99\n    }\n  ]\n}"
+}

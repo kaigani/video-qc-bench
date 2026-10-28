@@ -1,0 +1,55 @@
+{
+  "key": "skateboarder__object-persistence-state",
+  "video": "skateboarder.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:38:57.510Z",
+  "latencyMs": 18542,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1130,
+    "total_tokens": 2743,
+    "cost": 0.007263,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.007263,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.00565
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 781,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "skateboard | intact black deck with two silver trucks and four white wheels under skater's feet at 00:00 | deformed/split into two separate small fragments under skater's feet at 00:09 | popped into air at 00:01-00:02; front half vanishes on landing at 00:03 and reforms at 00:04; popped into air at 00:08 where one truck vanishes, then splits into two disconnected pieces at 00:09"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "skateboard",
+      "invariant_violated": "identity & persistence",
+      "description": "As the skater lands the first trick, the front half of the skateboard under his left foot disappears, then spontaneously reappears intact by 00:04.",
+      "severity": "severe",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "skateboard",
+      "invariant_violated": "identity & persistence",
+      "description": "While the skateboard is mid-air during the second jump, the left truck and wheels vanish completely from the underside of the deck, and upon landing at 00:09 the deck morphs into two separate, tiny fragments.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"skateboard | intact black deck with two silver trucks and four white wheels under skater's feet at 00:00 | deformed/split into two separate small fragments under skater's feet at 00:09 | popped into air at 00:01-00:02; front half vanishes on landing at 00:03 and reforms at 00:04; popped into air at 00:08 where one truck vanishes, then splits into two disconnected pieces at 00:09\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"As the skater lands the first trick, the front half of the skateboard under his left foot disappears, then spontaneously reappears intact by 00:04.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"skateboard\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"While the skateboard is mid-air during the second jump, the left truck and wheels vanish completely from the underside of the deck, and upon landing at 00:09 the deck morphs into two separate, tiny fragments.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

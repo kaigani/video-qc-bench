@@ -1,0 +1,68 @@
+{
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:02:50.719Z",
+  "latencyMs": 29548,
+  "usage": {
+    "prompt_tokens": 1547,
+    "completion_tokens": 1972,
+    "total_tokens": 3519,
+    "cost": 0.011407,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.011407,
+      "upstream_inference_prompt_cost": 0.001547,
+      "upstream_inference_completions_cost": 0.00986
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1327,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:01: Real subject holds the grooming tool low against the underside of his chin/jawline; reflection shows the tool held higher up directly on his upper lip/mustache.",
+    "00:02: Real subject holds the tool back near his right temple/ear; reflection shows the tool held horizontally across his eyebrow.",
+    "00:03: Real subject raises his hand to comb the hair on the top/side of his head; reflection shows the tool positioned lower on his forehead just above the eyebrow.",
+    "00:04: Real subject's hand is back at his temple with his nose and brow profile completely clear; reflection shows his hand and tool centered on the bridge of his nose/inner eyebrow.",
+    "00:05-00:06: Real subject holds the tool against the bottom of his chin/jawline; reflection shows the tool on his upper lip.",
+    "00:07-00:09: Real subject holds the tool vertically in the air a few inches away from his face; reflection shows the tool angled diagonally and resting against his upper lip and cheek."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "man and grooming tool in mirror reflection",
+      "invariant_violated": "mirror pose and prop position consistency",
+      "description": "The real subject holds the grooming tool at the underside of his chin and jawline, whereas his reflection simultaneously shows his hand and the tool positioned higher up on his upper lip/mustache.",
+      "severity": "moderate",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "man's right hand and grooming tool in mirror reflection",
+      "invariant_violated": "mirror pose and prop position consistency",
+      "description": "From 00:02 to 00:04, the real subject moves the tool along his temple and up into the hair on top of his head (leaving his nose and brow profile unobstructed), while the reflection shows him brushing across his eyebrow, forehead, and the bridge of his nose.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "man's right hand and grooming tool in mirror reflection",
+      "invariant_violated": "mirror pose and prop position consistency",
+      "description": "From 00:07 to 00:09, the real subject holds the tool vertically in the air several inches away from his face, while the reflection shows the tool held diagonally against his upper lip and cheek.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:01: Real subject holds the grooming tool low against the underside of his chin/jawline; reflection shows the tool held higher up directly on his upper lip/mustache.\",\n    \"00:02: Real subject holds the tool back near his right temple/ear; reflection shows the tool held horizontally across his eyebrow.\",\n    \"00:03: Real subject raises his hand to comb the hair on the top/side of his head; reflection shows the tool positioned lower on his forehead just above the eyebrow.\",\n    \"00:04: Real subject's hand is back at his temple with his nose and brow profile completely clear; reflection shows his hand and tool centered on the bridge of his nose/inner eyebrow.\",\n    \"00:05-00:06: Real subject holds the tool against the bottom of his chin/jawline; reflection shows the tool on his upper lip.\",\n    \"00:07-00:09: Real subject holds the tool vertically in the air a few inches away from his face; reflection shows the tool angled diagonally and resting against his upper lip and cheek.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"man and grooming tool in mirror reflection\",\n      \"invariant_violated\": \"mirror pose and prop position consistency\",\n      \"description\": \"The real subject holds the grooming tool at the underside of his chin and jawline, whereas his reflection simultaneously shows his hand and the tool positioned higher up on his upper lip/mustache.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"man's right hand and grooming tool in mirror reflection\",\n      \"invariant_violated\": \"mirror pose and prop position consistency\",\n      \"description\": \"From 00:02 to 00:04, the real subject moves the tool along his temple and up into the hair on top of his head (leaving his nose and brow profile unobstructed), while the reflection shows him brushing across his eyebrow, forehead, and the bridge of his nose.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"man's right hand and grooming tool in mirror reflection\",\n      \"invariant_violated\": \"mirror pose and prop position consistency\",\n      \"description\": \"From 00:07 to 00:09, the real subject holds the tool vertically in the air several inches away from his face, while the reflection shows the tool held diagonally against his upper lip and cheek.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

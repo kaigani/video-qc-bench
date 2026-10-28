@@ -1,0 +1,65 @@
+{
+  "key": "woman-apple__baseline-generalist",
+  "video": "woman-apple.mp4",
+  "role": "baseline-generalist",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:05:09.681Z",
+  "latencyMs": 40933,
+  "usage": {
+    "prompt_tokens": 1408,
+    "completion_tokens": 2639,
+    "total_tokens": 4047,
+    "cost": 0.014603,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.014603,
+      "upstream_inference_prompt_cost": 0.001408,
+      "upstream_inference_completions_cost": 0.013195
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2029,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "foreground woman | holding a blue umbrella and a red spherical object between her hands | facing left holding only the umbrella shaft | red spherical object vanishes at 00:08",
+    "left market stall | vendor in blue shirt behind stall, green avocados in front left bin | unnatural blue and purple fruit crates | vendor vanishes at 00:01 and bins shift/morph while awning stays static",
+    "background pedestrians on right | frozen in mid-stride (man in green shirt, women in pink and red) | gone from scene | remain completely frozen from 00:00 to 00:04 while foreground moves, then vanish behind passing pedestrian at 00:05"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "background pedestrians and market stalls",
+      "invariant_violated": "spatiotemporal continuity",
+      "description": "From 00:00 to 00:04, the right half of the background (the man in the green shirt, women in pink and red, and the right fruit stall) is completely frozen like a still photograph while pedestrians walk past in the foreground. Simultaneously, at 00:01 on the left side, the vendor in the blue shirt abruptly vanishes and the fruit bins shift and change color (from green to orange/yellow and cyan) even though the red awning above remains completely stationary.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "background pedestrians",
+      "invariant_violated": "object permanence",
+      "description": "As the man in the white shirt walks past the center of the frame between 00:04 and 00:05, the woman in the light blue shirt walking ahead of him and the frozen pedestrians on the right (the man in the green shirt and woman in pink) completely disappear behind him instead of remaining visible in the walkway.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red spherical object in foreground woman's hands",
+      "invariant_violated": "object permanence",
+      "description": "The bright red spherical object (ball/apple) that the foreground woman holds at the base of the umbrella shaft from 00:00 to 00:07 abruptly vanishes at 00:08, leaving her hands clasping only the narrow umbrella handle.",
+      "severity": "moderate",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"foreground woman | holding a blue umbrella and a red spherical object between her hands | facing left holding only the umbrella shaft | red spherical object vanishes at 00:08\",\n    \"left market stall | vendor in blue shirt behind stall, green avocados in front left bin | unnatural blue and purple fruit crates | vendor vanishes at 00:01 and bins shift/morph while awning stays static\",\n    \"background pedestrians on right | frozen in mid-stride (man in green shirt, women in pink and red) | gone from scene | remain completely frozen from 00:00 to 00:04 while foreground moves, then vanish behind passing pedestrian at 00:05\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"background pedestrians and market stalls\",\n      \"invariant_violated\": \"spatiotemporal continuity\",\n      \"description\": \"From 00:00 to 00:04, the right half of the background (the man in the green shirt, women in pink and red, and the right fruit stall) is completely frozen like a still photograph while pedestrians walk past in the foreground. Simultaneously, at 00:01 on the left side, the vendor in the blue shirt abruptly vanishes and the fruit bins shift and change color (from green to orange/yellow and cyan) even though the red awning above remains completely stationary.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"background pedestrians\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"As the man in the white shirt walks past the center of the frame between 00:04 and 00:05, the woman in the light blue shirt walking ahead of him and the frozen pedestrians on the right (the man in the green shirt and woman in pink) completely disappear behind him instead of remaining visible in the walkway.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"red spherical object in foreground woman's hands\",\n      \"invariant_violated\": \"object permanence\",\n      \"description\": \"The bright red spherical object (ball/apple) that the foreground woman holds at the base of the umbrella shaft from 00:00 to 00:07 abruptly vanishes at 00:08, leaving her hands clasping only the narrow umbrella handle.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,65 @@
+{
+  "key": "_long-scene__contact-interaction-kinematics",
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:25:04.764Z",
+  "latencyMs": 77477,
+  "usage": {
+    "prompt_tokens": 12352,
+    "completion_tokens": 4739,
+    "total_tokens": 17091,
+    "cost": 0.036047,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 11306
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036047,
+      "upstream_inference_prompt_cost": 0.012352,
+      "upstream_inference_completions_cost": 0.023695
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3820,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "waitress and counter rag (00:10-00:18) | right hand gripping rag flat against counter surface | rag held in right hand at counter edge | continuous wiping contact across counter",
+    "customer and counter stool (00:20-00:26) | customer walking across diner floor | customer seated on stool with hands resting on counter | weight transfers smoothly onto stool at 00:25",
+    "customer hands and coffee mug (00:27-00:31) | right hand touching mug body during pour | both hands resting together on counter beside mug | right hand releases mug at 00:28",
+    "customer and coffee mug (00:36-00:44) | seated at counter with both hands wrapped around mug and forearms supported | same stable seated posture and grip | continuous support and contact",
+    "waitress and counter rag (00:45-00:50) | right hand pressing rag onto pass-through counter | right hand wiping rag across surface | continuous surface contact",
+    "waitress, customer, plate, and coffee mugs (01:09-01:17) | customer holding mug on counter while waitress sets down plate and grasps second mug | waitress walks away carrying plate while customer holds single merged mug | two solid mugs clip into each other and merge at 01:12-01:13",
+    "waitress and counter stool (01:18-01:26) | waitress standing on customer side of counter | waitress seated on stool beside customer with forearms on counter | sits down onto stool at 01:21-01:22",
+    "waitress and customer with mugs (01:27-01:34) | both seated at counter with hands wrapped around their respective mugs | same seated support and hand contact | continuous grip and counter support",
+    "hands and dollar bills (01:37-01:40) | empty counter beside mug | stack of bills resting flat on counter | two hands press and slide bills onto counter surface at 01:38-01:39 before releasing",
+    "customer and truck cab (01:41-01:49) | customer walking across gravel lot toward truck | customer gripping cab door handle and stepping up | opens door at 01:47 and steps onto running board at 01:48-01:49",
+    "waitress and diner counter (01:50-01:58) | seated on stool on customer side of counter | walking away behind counter on employee side | stands up at 01:51, grips mug, and clips directly through the solid counter at 01:52-01:53"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "waitress's coffee mug and customer's coffee mug",
+      "invariant_violated": "solidity (object pass-through and merging)",
+      "description": "While the customer holds a white coffee mug on the counter with both hands, the waitress lifts a second white mug with her right hand and brings it into the exact same space; the two solid mugs clip through each other and merge into a single mug within the customer's hands by 01:13.",
+      "severity": "severe",
+      "confidence": 0.98
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress and diner counter",
+      "invariant_violated": "solidity (body clipping through solid structure)",
+      "description": "After standing up from a stool on the customer side of the counter at 01:51 and reaching for the mug, the waitress steps forward and walks directly through the solid counter body and stools at 01:52, emerging on the employee side behind the counter at 01:53.",
+      "severity": "severe",
+      "confidence": 1
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"waitress and counter rag (00:10-00:18) | right hand gripping rag flat against counter surface | rag held in right hand at counter edge | continuous wiping contact across counter\",\n    \"customer and counter stool (00:20-00:26) | customer walking across diner floor | customer seated on stool with hands resting on counter | weight transfers smoothly onto stool at 00:25\",\n    \"customer hands and coffee mug (00:27-00:31) | right hand touching mug body during pour | both hands resting together on counter beside mug | right hand releases mug at 00:28\",\n    \"customer and coffee mug (00:36-00:44) | seated at counter with both hands wrapped around mug and forearms supported | same stable seated posture and grip | continuous support and contact\",\n    \"waitress and counter rag (00:45-00:50) | right hand pressing rag onto pass-through counter | right hand wiping rag across surface | continuous surface contact\",\n    \"waitress, customer, plate, and coffee mugs (01:09-01:17) | customer holding mug on counter while waitress sets down plate and grasps second mug | waitress walks away carrying plate while customer holds single merged mug | two solid mugs clip into each other and merge at 01:12-01:13\",\n    \"waitress and counter stool (01:18-01:26) | waitress standing on customer side of counter | waitress seated on stool beside customer with forearms on counter | sits down onto stool at 01:21-01:22\",\n    \"waitress and customer with mugs (01:27-01:34) | both seated at counter with hands wrapped around their respective mugs | same seated support and hand contact | continuous grip and counter support\",\n    \"hands and dollar bills (01:37-01:40) | empty counter beside mug | stack of bills resting flat on counter | two hands press and slide bills onto counter surface at 01:38-01:39 before releasing\",\n    \"customer and truck cab (01:41-01:49) | customer walking across gravel lot toward truck | customer gripping cab door handle and stepping up | opens door at 01:47 and steps onto running board at 01:48-01:49\",\n    \"waitress and diner counter (01:50-01:58) | seated on stool on customer side of counter | walking away behind counter on employee side | stands up at 01:51, grips mug, and clips directly through the solid counter at 01:52-01:53\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"01:12\",\n      \"entity\": \"waitress's coffee mug and customer's coffee mug\",\n      \"invariant_violated\": \"solidity (object pass-through and merging)\",\n      \"description\": \"While the customer holds a white coffee mug on the counter with both hands, the waitress lifts a second white mug with her right hand and brings it into the exact same space; the two solid mugs clip through each other and merge into a single mug within the customer's hands by 01:13.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    },\n    {\n      \"timestamp\": \"01:52\",\n      \"entity\": \"waitress and diner counter\",\n      \"invariant_violated\": \"solidity (body clipping through solid structure)\",\n      \"description\": \"After standing up from a stool on the customer side of the counter at 01:51 and reaching for the mug, the waitress steps forward and walks directly through the solid counter body and stools at 01:52, emerging on the employee side behind the counter at 01:53.\",\n      \"severity\": \"severe\",\n      \"confidence\": 1.0\n    }\n  ]\n}"
+}

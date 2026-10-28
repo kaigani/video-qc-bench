@@ -1,0 +1,58 @@
+{
+  "key": "man-cups__spatial-topology-occlusion",
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:57:27.648Z",
+  "latencyMs": 53525,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 3378,
+    "total_tokens": 4973,
+    "cost": 0.018485,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018485,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.01689
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2760,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Round casino-style table | red surface with green-and-white circular track in foreground | viewed from the opposite side as camera orbits counter-clockwise | remains consistent in shape and surface pattern",
+    "Four reddish-brown metal cups | arranged in a cluster/row on the table at 00:00 | reduced to three cups in a tight cluster by 00:08-00:09 | coins render over opaque cup walls at 00:04-00:06, and one cup disappears during camera orbit at 00:08",
+    "Gold coins | placed onto table and into cups at 00:00-00:03 | held above and beside cups at 00:08-00:09 | violate depth ordering at 00:04-00:06 by rendering in front of opaque cup walls",
+    "Background room architecture (windows, framed boards, seating) | two multi-pane windows and seated patrons visible at 00:03 | shifts smoothly from left to right across the frame as camera orbits counter-clockwise through 00:09 | consistent panoramic geometry"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "Gold coins and opaque cups",
+      "invariant_violated": "depth ordering & occlusion",
+      "description": "After the man lowers a gold coin inside the nearest cup at 00:03, the camera drops to a lower angle where the opaque side wall of the cup should occlude the coin. Instead, from 00:04 to 00:06, the coin renders directly over the exterior surface of the nearest cup's wall, and at 00:06 another coin similarly renders over the exterior wall of the rightmost cup.",
+      "severity": "severe",
+      "confidence": 0.95
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Row of four cups on the table",
+      "invariant_violated": "scene layout & viewpoint consistency",
+      "description": "From 00:00 through 00:07, four cups are present on the table (arranged in a four-cup row across the table at 00:05-00:07). As the camera continues its smooth orbit to the right between 00:07 and 00:08, the layout shifts incompatibly with the viewpoint change and two of the cups merge/vanish, leaving only three cups on the table for the remainder of the shot.",
+      "severity": "moderate",
+      "confidence": 0.92
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Round casino-style table | red surface with green-and-white circular track in foreground | viewed from the opposite side as camera orbits counter-clockwise | remains consistent in shape and surface pattern\",\n    \"Four reddish-brown metal cups | arranged in a cluster/row on the table at 00:00 | reduced to three cups in a tight cluster by 00:08-00:09 | coins render over opaque cup walls at 00:04-00:06, and one cup disappears during camera orbit at 00:08\",\n    \"Gold coins | placed onto table and into cups at 00:00-00:03 | held above and beside cups at 00:08-00:09 | violate depth ordering at 00:04-00:06 by rendering in front of opaque cup walls\",\n    \"Background room architecture (windows, framed boards, seating) | two multi-pane windows and seated patrons visible at 00:03 | shifts smoothly from left to right across the frame as camera orbits counter-clockwise through 00:09 | consistent panoramic geometry\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:04\",\n      \"entity\": \"Gold coins and opaque cups\",\n      \"invariant_violated\": \"depth ordering & occlusion\",\n      \"description\": \"After the man lowers a gold coin inside the nearest cup at 00:03, the camera drops to a lower angle where the opaque side wall of the cup should occlude the coin. Instead, from 00:04 to 00:06, the coin renders directly over the exterior surface of the nearest cup's wall, and at 00:06 another coin similarly renders over the exterior wall of the rightmost cup.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    },\n    {\n      \"timestamp\": \"00:08\",\n      \"entity\": \"Row of four cups on the table\",\n      \"invariant_violated\": \"scene layout & viewpoint consistency\",\n      \"description\": \"From 00:00 through 00:07, four cups are present on the table (arranged in a four-cup row across the table at 00:05-00:07). As the camera continues its smooth orbit to the right between 00:07 and 00:08, the layout shifts incompatibly with the viewpoint change and two of the cups merge/vanish, leaving only three cups on the table for the remainder of the shot.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    }\n  ]\n}"
+}

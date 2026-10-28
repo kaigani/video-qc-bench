@@ -1,0 +1,56 @@
+{
+  "key": "dialogue__audio-visual-claims",
+  "video": "dialogue.mp4",
+  "role": "audio-visual-claims",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:46:32.383Z",
+  "latencyMs": 42951,
+  "usage": {
+    "prompt_tokens": 1466,
+    "completion_tokens": 3147,
+    "total_tokens": 4613,
+    "cost": 0.017201,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017201,
+      "upstream_inference_prompt_cost": 0.001466,
+      "upstream_inference_completions_cost": 0.015735
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2772,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:02: Speaker states 'The red door is locked.' Visually, there is a closed wooden door behind him and another closed wooden door to the left (which he knocks on at 00:09); while their closed state aligns with being locked, both doors are brown wood rather than red.",
+    "00:03-00:06: Speaker states 'The blue door is open.' Visually, neither of the two doors shown in the room is blue (both are brown wood, though a dark blue jacket hangs on a hook on the rear door) and both doors are fully closed rather than open."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "room doors",
+      "invariant_violated": "spoken object color matches visible scene",
+      "description": "The speaker claims 'The red door is locked' before turning to knock on the door beside him, but both doors visible in the room are unpainted brown wood rather than red.",
+      "severity": "moderate",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "room doors",
+      "invariant_violated": "spoken object color and state match visible scene",
+      "description": "The speaker claims 'The blue door is open,' contradicting the visuals where both doors in the room are brown wood (with only a blue coat hanging on the rear door) and both are completely closed.",
+      "severity": "severe",
+      "confidence": 0.95
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:02: Speaker states 'The red door is locked.' Visually, there is a closed wooden door behind him and another closed wooden door to the left (which he knocks on at 00:09); while their closed state aligns with being locked, both doors are brown wood rather than red.\",\n    \"00:03-00:06: Speaker states 'The blue door is open.' Visually, neither of the two doors shown in the room is blue (both are brown wood, though a dark blue jacket hangs on a hook on the rear door) and both doors are fully closed rather than open.\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:00\",\n      \"entity\": \"room doors\",\n      \"invariant_violated\": \"spoken object color matches visible scene\",\n      \"description\": \"The speaker claims 'The red door is locked' before turning to knock on the door beside him, but both doors visible in the room are unpainted brown wood rather than red.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    },\n    {\n      \"timestamp\": \"00:03\",\n      \"entity\": \"room doors\",\n      \"invariant_violated\": \"spoken object color and state match visible scene\",\n      \"description\": \"The speaker claims 'The blue door is open,' contradicting the visuals where both doors in the room are brown wood (with only a blue coat hanging on the rear door) and both are completely closed.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "pouring-olives__spatial-topology-occlusion",
+  "video": "pouring-olives.mp4",
+  "role": "spatial-topology-occlusion",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:24:34.673Z",
+  "latencyMs": 20263,
+  "usage": {
+    "prompt_tokens": 1595,
+    "completion_tokens": 1153,
+    "total_tokens": 2748,
+    "cost": 0.00736,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00736,
+      "upstream_inference_prompt_cost": 0.001595,
+      "upstream_inference_completions_cost": 0.005765
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1007,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Large glass jar | Positioned center-frame on wooden cutting board | Remains in same position on cutting board | Partially occludes background oven and man's torso with normal glass refraction",
+    "Metal bowl and ceramic bowl | Positioned on white countertop to the right of the cutting board | Remain in same relative positions | Metal bowl further back, ceramic bowl in foreground right",
+    "Background stove and cabinets | Stainless steel range centered behind island, flanked by wooden cabinets and white countertops | Remain fixed in background | Slight camera tilt up after 00:04 reveals stacked bowls on right background counter"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"Large glass jar | Positioned center-frame on wooden cutting board | Remains in same position on cutting board | Partially occludes background oven and man's torso with normal glass refraction\",\n    \"Metal bowl and ceramic bowl | Positioned on white countertop to the right of the cutting board | Remain in same relative positions | Metal bowl further back, ceramic bowl in foreground right\",\n    \"Background stove and cabinets | Stainless steel range centered behind island, flanked by wooden cabinets and white countertops | Remain fixed in background | Slight camera tilt up after 00:04 reveals stacked bowls on right background counter\"\n  ],\n  \"findings\": []\n}"
+}

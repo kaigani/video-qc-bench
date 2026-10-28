@@ -30,7 +30,7 @@ const RETRYABLE_STATUS = new Set([408, 429, 500, 502, 503, 504]);
 /**
  * Send one prompt + video to a model. Returns { text, usage, raw, latencyMs }.
  */
-export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning = false, reasoningEffort = null, maxRetries = 3, timeoutMs = 900_000 }) {
+export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning = false, reasoningEffort = null, provider = null, maxRetries = 3, timeoutMs = 900_000 }) {
   const body = JSON.stringify({
     model,
     messages: [
@@ -45,6 +45,8 @@ export async function callModel({ apiKey, model, prompt, videoDataUrl, reasoning
     usage: { include: true },
     ...(reasoning ? { reasoning: { enabled: true } } : {}),
     ...(reasoningEffort ? { reasoning_effort: reasoningEffort } : {}),
+    // Pin to specific provider endpoints, e.g. ['google-ai-studio/flex'] for half-price flex tier.
+    ...(provider ? { provider: { only: provider, allow_fallbacks: false } } : {}),
     // Stream to survive gateway/upstream idle timeouts on long generations:
     // OpenRouter sends SSE keep-alive comments while the provider works.
     stream: true,

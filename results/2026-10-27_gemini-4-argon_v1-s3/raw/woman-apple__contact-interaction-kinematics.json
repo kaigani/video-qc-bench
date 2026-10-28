@@ -1,0 +1,57 @@
+{
+  "key": "woman-apple__contact-interaction-kinematics",
+  "video": "woman-apple.mp4",
+  "role": "contact-interaction-kinematics",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T02:30:16.751Z",
+  "latencyMs": 37772,
+  "usage": {
+    "prompt_tokens": 1620,
+    "completion_tokens": 2342,
+    "total_tokens": 3962,
+    "cost": 0.01333,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01333,
+      "upstream_inference_prompt_cost": 0.00162,
+      "upstream_inference_completions_cost": 0.01171
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1844,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "Woman in dark blue cardigan (hands, umbrella, red fruit) | at 00:00 holds a red fruit between her right palm and left fist while the umbrella shaft aligns with her left hand | by 00:08-00:09 both hands clasp together around the umbrella shaft and the red fruit is gone | at 00:05-00:06 side angle reveals left fingers are curled into her own palm rather than wrapping the shaft, and at 00:07-00:08 her left hand clips through the red fruit as it vanishes",
+    "Foreground pedestrians (woman in light blue shirt, man in white shirt, man in blue shirt) | enter frame walking past main subject | exit frame cleanly | continuous gait and clear spatial separation without clipping",
+    "Background market shoppers | slow-motion walking posture at 00:00 | maintain grounded stance through 00:05 | no foot sliding or joint anomalies"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "Woman's left hand and umbrella shaft",
+      "invariant_violated": "floating grip / missing contact support",
+      "description": "As the camera rotates to a side view at 00:05-00:06, the woman's left fingers are visibly curled closed against her own palm rather than wrapping around the umbrella pole. The thin shaft terminates mid-air at hand level and rests ungrasped between the outside of her knuckles and the red fruit.",
+      "severity": "moderate",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Woman's hands and red fruit",
+      "invariant_violated": "solidity / object clipping",
+      "description": "Between 00:07 and 00:08, the woman's left hand closes directly through the space occupied by the red fruit held in her right hand, clipping through the fruit until it completely disappears inside her clasped hands.",
+      "severity": "severe",
+      "confidence": 0.98
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"Woman in dark blue cardigan (hands, umbrella, red fruit) | at 00:00 holds a red fruit between her right palm and left fist while the umbrella shaft aligns with her left hand | by 00:08-00:09 both hands clasp together around the umbrella shaft and the red fruit is gone | at 00:05-00:06 side angle reveals left fingers are curled into her own palm rather than wrapping the shaft, and at 00:07-00:08 her left hand clips through the red fruit as it vanishes\",\n    \"Foreground pedestrians (woman in light blue shirt, man in white shirt, man in blue shirt) | enter frame walking past main subject | exit frame cleanly | continuous gait and clear spatial separation without clipping\",\n    \"Background market shoppers | slow-motion walking posture at 00:00 | maintain grounded stance through 00:05 | no foot sliding or joint anomalies\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:05\",\n      \"entity\": \"Woman's left hand and umbrella shaft\",\n      \"invariant_violated\": \"floating grip / missing contact support\",\n      \"description\": \"As the camera rotates to a side view at 00:05-00:06, the woman's left fingers are visibly curled closed against her own palm rather than wrapping around the umbrella pole. The thin shaft terminates mid-air at hand level and rests ungrasped between the outside of her knuckles and the red fruit.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.92\n    },\n    {\n      \"timestamp\": \"00:07\",\n      \"entity\": \"Woman's hands and red fruit\",\n      \"invariant_violated\": \"solidity / object clipping\",\n      \"description\": \"Between 00:07 and 00:08, the woman's left hand closes directly through the space occupied by the red fruit held in her right hand, clipping through the fruit until it completely disappears inside her clasped hands.\",\n      \"severity\": \"severe\",\n      \"confidence\": 0.98\n    }\n  ]\n}"
+}

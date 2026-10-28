@@ -1,0 +1,41 @@
+{
+  "key": "watchmaker__possession-tracking",
+  "video": "watchmaker.mp4",
+  "role": "possession-tracking",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:37:33.572Z",
+  "latencyMs": 11614,
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 642,
+    "total_tokens": 2197,
+    "cost": 0.004765,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.004765,
+      "upstream_inference_prompt_cost": 0.001555,
+      "upstream_inference_completions_cost": 0.00321
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 497,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "00:00-00:09: Round jewelry setting held continuously in the left hand.",
+    "00:00-00:03: Tweezers held in the right hand, interacting with the jewelry setting.",
+    "00:04: Right hand exits lower frame to place tweezers on the table surface and pick up a small screw/pin.",
+    "00:05-00:09: Small screw/pin held in the right hand and twisted into the side of the jewelry setting held in the left hand."
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"00:00-00:09: Round jewelry setting held continuously in the left hand.\",\n    \"00:00-00:03: Tweezers held in the right hand, interacting with the jewelry setting.\",\n    \"00:04: Right hand exits lower frame to place tweezers on the table surface and pick up a small screw/pin.\",\n    \"00:05-00:09: Small screw/pin held in the right hand and twisted into the side of the jewelry setting held in the left hand.\"\n  ],\n  \"findings\": []\n}"
+}

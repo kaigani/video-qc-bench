@@ -1,0 +1,48 @@
+{
+  "key": "phone__object-persistence-state",
+  "video": "phone.mp4",
+  "role": "object-persistence-state",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:59:38.173Z",
+  "latencyMs": 27584,
+  "usage": {
+    "prompt_tokens": 1613,
+    "completion_tokens": 1629,
+    "total_tokens": 3242,
+    "cost": 0.009758,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.009758,
+      "upstream_inference_prompt_cost": 0.001613,
+      "upstream_inference_completions_cost": 0.008145
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1300,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "smartphone | black smartphone with thick top bezel and front camera held in both hands, displaying 'A742' | significantly shorter smartphone with notched bezel and altered screen text ('UAW') held in the same grip | comes into focus at 00:03; tilts down at 00:09 while the upper portion of the phone shrinks/morphs so the top corners sit directly at the fingers that were previously mid-frame",
+    "red bag | bright red rectangular bag carried in the left hand of the walking person in the background | occluded behind the smartphone and carried out of frame | moves away with the walking person from 00:00 to 00:02"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "smartphone",
+      "invariant_violated": "identity & persistence",
+      "description": "When the person tilts the smartphone down at 00:09, the upper half of the device above their hands vanishes/shrinks so that the top edge of the phone now sits directly at their right index finger and left thumb (which were previously holding the middle of the phone), the thick top bezel from 00:00 transforms into a notched bezel, and the 'A7·42' screen text morphs into an illegible scribble.",
+      "severity": "moderate",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "{\n  \"ledger\": [\n    \"smartphone | black smartphone with thick top bezel and front camera held in both hands, displaying 'A742' | significantly shorter smartphone with notched bezel and altered screen text ('UAW') held in the same grip | comes into focus at 00:03; tilts down at 00:09 while the upper portion of the phone shrinks/morphs so the top corners sit directly at the fingers that were previously mid-frame\",\n    \"red bag | bright red rectangular bag carried in the left hand of the walking person in the background | occluded behind the smartphone and carried out of frame | moves away with the walking person from 00:00 to 00:02\"\n  ],\n  \"findings\": [\n    {\n      \"timestamp\": \"00:09\",\n      \"entity\": \"smartphone\",\n      \"invariant_violated\": \"identity & persistence\",\n      \"description\": \"When the person tilts the smartphone down at 00:09, the upper half of the device above their hands vanishes/shrinks so that the top edge of the phone now sits directly at their right index finger and left thumb (which were previously holding the middle of the phone), the thick top bezel from 00:00 transforms into a notched bezel, and the 'A7·42' screen text morphs into an illegible scribble.\",\n      \"severity\": \"moderate\",\n      \"confidence\": 0.9\n    }\n  ]\n}"
+}

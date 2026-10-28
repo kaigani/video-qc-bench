@@ -1,0 +1,40 @@
+{
+  "key": "dialogue__causal-temporal-sequence",
+  "video": "dialogue.mp4",
+  "role": "causal-temporal-sequence",
+  "model": "google/gemini-4-argon",
+  "timestamp": "2026-10-28T01:30:36.074Z",
+  "latencyMs": 23477,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 599,
+    "total_tokens": 2364,
+    "cost": 0.00476,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 1010
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00476,
+      "upstream_inference_prompt_cost": 0.001765,
+      "upstream_inference_completions_cost": 0.002995
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 473,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "parseOk": true,
+  "parseError": null,
+  "ledger": [
+    "man speaking | begins vocalizing at 00:00 | finishes speaking at 00:06 | lip movements and speech audio are synchronized",
+    "man walking to door | initiates turn at 00:06 | arrives at door at 00:08 | continuous forward motion",
+    "man knocking on door | raises hand at 00:08 | strikes door at 00:09 producing knock sound | impact and sound align"
+  ],
+  "findings": [],
+  "rawText": "{\n  \"ledger\": [\n    \"man speaking | begins vocalizing at 00:00 | finishes speaking at 00:06 | lip movements and speech audio are synchronized\",\n    \"man walking to door | initiates turn at 00:06 | arrives at door at 00:08 | continuous forward motion\",\n    \"man knocking on door | raises hand at 00:08 | strikes door at 00:09 producing knock sound | impact and sound align\"\n  ],\n  \"findings\": []\n}"
+}
