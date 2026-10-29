@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "handheld grooming tool (small razor/blade-like stick) | 00:00 held in man's right hand at chin, white/pale silver slim bar in both the real view and the mirror reflection | 09:75 held in right hand at nose/temple, reads as a silver metallic razor in both views | moves chin -> nose -> brow/hairline (01.75-04.25) -> chin/lip (04.5-09.0) -> nose (09.75), always moved by the hand; during 02.25-04.0 the real-side object looks like a dark comb in the hair while the reflection shows a bright white bar on the forehead; at 09.0 the real-side hand shows no visible tool while the reflection still shows it",
+    "mirror (gold/brown wooden frame) | wall-mounted, fixed | unchanged | no transitions",
+    "wooden door with brass knob (reflected) | closed, behind subject | unchanged | knob occasionally occluded by arm, no state change",
+    "light switch plate (reflected) | on wall left of reflected head | unchanged | none",
+    "shelving with bottles/jars (reflected, upper right) | static, bottle count and layout stable | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "identity persistence / real-vs-reflection consistency",
+      "description": "From about 00:02.25 to 00:04.0 the object in the real hand, pressed into the hair above the ear, appears as a dark comb-like shape. In the mirror at the same moments, the hand holds a bright white/pale bar on the forehead. Before (00:01.75) and after (00:04.25) this stretch, both views show the same pale slim tool. During the stretch the object seems to change identity or appearance with no visible swap.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "possession consistency (real vs reflection)",
+      "description": "At 00:08.75-00:09.0 the real right hand's fingers pinch at the jaw with no tool visible, while the mirror clearly shows the tool held against the cheek. At 00:09.25 the tool reappears in the real hand, held upright. This could be occlusion behind the fingers or jaw, but the tool is missing on the real side for at least one frame.",
+      "severity": "minor",
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "identity persistence (material/appearance)",
+      "description": "For most of the clip the tool reads as a white/pale slim bar. At 00:09.25-00:09.75 it reads as a clearly metallic silver straight razor with a visible blade and handle, in both views. Nothing visible accounts for the change in appearance. This may be lighting or motion blur on the same object.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

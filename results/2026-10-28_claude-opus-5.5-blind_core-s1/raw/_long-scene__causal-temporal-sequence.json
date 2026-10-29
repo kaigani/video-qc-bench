@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "Truck exhaust/smoke (shot 1, 00:00-00:10) | idling white semi, smoke plume billowing at cab/front wheel | smoke dissipated, truck static | smoke emitted continuously then thins by ~00:07; source (idling truck) precedes effect; plausible",
+    "Diner OPEN neon sign (exterior, ~00:09-00:10) | unlit through 00:09 | red sign lit at 00:10.167 just before cut | turns on at dusk with off-screen cause (switch inside); plausible, not flagged",
+    "Waitress wiping counter (00:10-00:18) | wiping cloth across counter | still wiping, turns toward camera | continuous repetitive wiping motion; no cause-effect break",
+    "Man entering diner (00:18.7-00:25) | appears near rear/kitchen doorway | walks along stools and sits | waitress turns and readies coffee pot after he approaches; reaction follows action; plausible",
+    "Coffee pour (00:24-00:32) | waitress lifts pot toward mug at 00:24-00:27 | pot lifted away at 00:31-00:32 | stream appears only when pot tilts over mug (00:28-00:30), stops when pot uprights (00:31); order and timing plausible",
+    "Steam from eggs/toast plate (00:32-00:36) | steam rising | steam continues | effect consistent with hot food; plausible",
+    "Man at counter with coffee (00:36-00:45) | seated, mug in hand, plate of eggs/toast in front | unchanged | static hold, slight motion; no violations",
+    "Waitress wiping counter, man in background (00:45-00:51) | wiping, glances back at man | wiping | glance is unprompted but plausible idle behavior",
+    "Empty counter insert (00:51-00:60) | empty diner counter, window light | unchanged | static shot; no events",
+    "Waitress plate service (01:09-01:17) | waitress sets plate of food before man at 01:09, mug slid to him 01:12-01:13 | waitress walks away holding the plate at 01:15-01:17, counter empty in front of man | served plate is lifted back and carried off untouched with no visible prompt (no gesture/refusal from man)",
+    "Waitress joins man at counter (01:17-01:35) | waitress standing behind counter | waitress seated beside man on customer side holding mug | transition happens across a cut; truck passes outside window 01:30-01:31 with no reaction required",
+    "Money left on counter (01:37-01:41) | mug alone on counter | bills under hand, then bills left beside mug | hand places bills before they appear on counter; cause precedes effect; plausible",
+    "Man walks to truck (01:41-01:50) | man exiting past window | man at cab door, opening it | continuous walk; waitress watches through window after he passes (reaction follows action); plausible",
+    "Waitress rises from stool and moves behind counter (01:50-01:58) | seated on stool at counter, sunlit | walking at back of counter near pass-through | at ~01:51.8-01:52.5 she rises and lunges right at implausible speed while a second faint waitress figure materializes at the rear of the counter; she is then behind the counter without visibly passing around it"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress (sunset wide shot)",
+      "invariant_violated": "temporal flow / continuous motion",
+      "description": "Within roughly one second after rising from the customer-side stool (01:51), the waitress lunges rightward and is then walking behind the counter at the back wall (01:53) with no visible path around the counter; at the same moment a second, semi-transparent waitress figure fades in at the rear by the pass-through window and persists (01:52-01:57). Motion is discontinuous and an entity appears without any entering action.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "01:15",
+      "entity": "Plate of food served to the man",
+      "invariant_violated": "action completion / effect-without-cause",
+      "description": "The waitress places a plate of food in front of the man at 01:09 and slides him a mug; by 01:15 she is holding the same plate again and carries it away (01:16-01:17), leaving the counter empty. The man never eats, gestures, or refuses, so the reversal of the serving action has no visible cause.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-01__causal-temporal-sequence.json",
+  "frozen_source_sha256": "e69c60f66fdbd2ea124a3c4feb7f2aff306f30d5aa08800cb30d0526f40d6a6c",
+  "key": "_long-scene__causal-temporal-sequence",
+  "parseOk": true
+}

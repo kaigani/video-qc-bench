@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "Space A (exterior): desert roadside, gravel shoulder with a two-lane road with yellow center dashes behind/left of the car; scrub, distant purple mountains, telephone poles visible from ~4.5s as the camera arcs around. The background stays consistent throughout.",
+    "Space B (interior): cabin of a cream station wagon with wood-panel sides, roof rack and plate 'STE 97'. Visible side = driver side (car nose faces camera-left).",
+    "Openings of B: windshield (shows dashboard, front seats, steering wheel and rear-view mirror); driver front door window directly behind the driver side mirror; rear side windows. Through the glass you see the seats and the desert, which fits.",
+    "Car geometry: hood -> cowl/wipers -> windshield -> A-pillar -> driver side mirror -> front door window. The engine bay and fender are ahead of the A-pillar, and there is no opening there.",
+    "Woman (denim jacket, arms crossed): 0:00-1:75 her torso rises from the hood/cowl at the right edge of the windshield, LEFT of (forward of) the side mirror and A-pillar, with her forearms on the hood. The near-side fender below her is unobstructed (no legs or body outside the car), so she is not standing beside the car.",
+    "Woman 3:00-6:00: as the camera moves forward and left, she stays in front of the windshield glass, between the wiper arms and the A-pillar, with her elbows on the hood. The cabin seats and steering wheel show behind her through the glass.",
+    "Woman 6:00-9:75: close-up with the windshield/door frame and seats behind her shoulder. It reads as if she is leaning out of the driver window, but her arms still rest on the hood ahead of the A-pillar.",
+    "Traversals: none. Nobody moves between spaces; the camera does a continuous push-in/arc.",
+    "Functional arrangement: the antenna, mirror, wipers and roof rack are placed plausibly. The antenna base appears to move from the fender to the hood/cowl as the camera moves; parallax probably explains this, so it is not flagged."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman's body vs. the station wagon's openings (cowl/hood area forward of the A-pillar)",
+      "invariant_violated": "occupant must pass through an existing opening",
+      "description": "She is posed as if leaning out of the car window, but her torso comes up through solid bodywork. She sits forward of the A-pillar and driver side mirror, overlapping the windshield's outer edge, with her forearms on the hood. No window or door opening exists there; it is the cowl/engine-bay area. The fender below her is empty, which rules out standing outside the car. This continues all the way through (frames 00:00-09:75, e.g. 00:00 and 06:50 full-res), with the wipers on one side of her and the A-pillar/door window on the other. The actual driver window is behind the mirror and is not the opening she occupies.",
+      "severity": "severe",
+      "confidence": 0.72
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "layout-connectivity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-14__layout-connectivity__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

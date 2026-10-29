@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "Foreground hands (POV) holding phone | left thumb/fingers on left edge, right fingers wrapping right edge, right thumb resting near screen edge at 00:00 | same two-hand grip, phone lowered out of frame by 00:09.75 | right thumb lifts and moves over screen ~00:06.5, 00:07.75-00:08.75 (motion-blurred taps/swipes with plausible fingertip contact); camera push-in 00:03-00:04 keeps grip continuous; phone tilted and lowered 00:09.25-00:09.5 with hands still in contact",
+    "Phone | held firmly by both hands, no float or clipping against fingers | held, then lowered out of frame | no effect-before-contact observed for the phone body",
+    "Background woman (blue top, jeans) | walking along paved area carrying red bag by handles in one hand at 00:00-00:02.0 | walking away empty-handed at 00:02.5-00:03.0 | feet plant and alternate normally while walking; red bag grip shrinks and disappears ~00:02.25-00:02.5 with no release/set-down action",
+    "Red bag | hanging from woman's hand by handles, swinging with stride 00:00-00:02.0 | not visible; hand empty | only a sliver of handle at the hand at ~00:02.3, then gone while hand stays visible at hip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Background woman's hand / red bag",
+      "invariant_violated": "grip continuity (held object lost without release)",
+      "description": "The woman carries the red bag by its handles through ~00:02.0; between ~00:02.25 and ~00:02.5 the bag shrinks to a sliver at her fingers and then is gone, while her hand remains visible at hip level, open and empty. There is no release, drop, or set-down motion and the bag does not appear on the ground, so the grip dissolves rather than being released.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-08.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__contact-interaction-kinematics__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

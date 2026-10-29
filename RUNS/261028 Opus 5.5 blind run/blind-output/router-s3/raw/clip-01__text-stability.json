@@ -1,0 +1,64 @@
+{
+  "ledger": [
+    "Exterior dusk shot 00:00-00:09: no legible text on the building; window neon not lit",
+    "Exterior frame at 00:10.167 (cut-000-before): red/blue neon sign now lit in the front window, reads 'OPEN' (glyphs soft but correct, readable from outside)",
+    "Night interior wide 00:18.7-00:44.9: main window neon reads 'OPEN' at every legible moment (00:18.7, 00:21, 00:25, 00:27, 00:36.5, 00:40, 00:44) - stable; it reads correctly from inside",
+    "Night interior wide 00:18.7-00:44.9: second neon sign in the window to the left of OPEN reads as a red vertical bar, a gap, then 'O' (roughly 'I O') at every legible moment - stable but not a coherent word",
+    "Night interior wide 00:36-00:45: dark menu board above the pass-through window - too small and soft to read",
+    "Reverse angle 00:44.9-00:51.3: red 'EXIT' sign above the door - reads 'EXIT', stable",
+    "Daytime interior wide 00:59.9-01:09 and 01:17.6-01:26.7: window neon reads 'OPEN' - stable; second sign unlit and faint, which fits daylight",
+    "Medium two-shot 01:09-01:17.5: window neon reads 'OPEN' (large, sharp) - stable across 01:09, 01:12, 01:14, 01:16, 01:17.5",
+    "Golden-hour interior wide 01:50-01:58: window neon (unlit or washed out) reads 'OPEN' - stable",
+    "Cash close-up 01:38-01:40.9: banknotes with '100' corner numerals; the border lettering and serial text are mushy glyph strings, not words; the portrait is generic",
+    "Truck cab door 01:41-01:46: script nameplate is unreadable glyphs (about 'TAMAS'-like), stylised and small; the same blob appears in every shot",
+    "Posters, wall frames and the coffee machine label in the counter shots (00:10-00:18, 00:51-00:60, 01:35-01:37): too small or blurred to read"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:21",
+      "entity": "secondary neon window sign left of the OPEN sign (night interior wide shots 00:18.7-00:44.9)",
+      "invariant_violated": "legibility - coherent text required",
+      "description": "A lit neon sign the same size and as steady as the 'OPEN' sign beside it reads only as a red vertical bar, an empty gap, and an 'O'. Nothing blocks it (no mullion or figure covers the gap), and it looks the same in every wide night shot. So it is a garbled, non-word sign where the context calls for real text (another 'OPEN' or a brand sign).",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:40",
+      "entity": "banknotes on the counter (cash close-up 01:38-01:40.9)",
+      "invariant_violated": "legibility - coherent text required",
+      "description": "The bills fill much of the frame and lie still at 01:40. The '100' numerals look right, but the lettering along the top border and the serial and seal text are runs of non-word glyphs instead of 'FEDERAL RESERVE NOTE' / 'THE UNITED STATES OF AMERICA'. This is a typical AI-generated currency defect. Some of it is microtext, which lowers confidence.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "01:09",
+      "entity": "window 'OPEN' neon sign, interior vs exterior views",
+      "invariant_violated": "self-consistent text orientation",
+      "description": "From outside (00:10.167) the window neon reads 'OPEN' correctly. From inside (00:18.7-01:58) the window sign reads 'OPEN' correctly as well, not mirrored. A single-sided neon sign cannot read correctly from both sides of the glass, so the two views contradict each other.",
+      "severity": "minor",
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "01:44",
+      "entity": "truck cab door nameplate (01:41-01:46)",
+      "invariant_violated": "legibility - coherent text required",
+      "description": "The chrome script badge on the cab door stays in view across several seconds of a static shot. It is a string of indistinct glyphs, not a recognisable make or name. It is small and stylised, so this is low confidence.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,106 @@
+{
+  "ledger": [
+    "00:00.000 - Cube A (green, '2', left) in right hand on table; Cube B (green, '2') resting on table to its right, untouched.",
+    "00:00.250-00:00.750 - Hand rotates Cube A in place; during the rotation Cube A's body changes from green to blue (green faces visibly turning blue mid-turn at ~00:00.50-00:00.70).",
+    "00:00.833-00:01.250 - While hand is still holding the single blue cube, a second blue cube (Cube C, '3') appears joined to its right side; result: blue '2' (A) + blue '3' (C) + green '2' (B). Hand never fetched a cube from off-frame.",
+    "00:01.500-00:02.250 - Row A(blue 2), C(blue 3), B(green 2) on table; hand moves to Cube B.",
+    "00:02.500-00:02.750 - Hand rotates Cube B in place; it shows '3'.",
+    "00:03.000-00:03.250 - While hand holds the single green cube B, it resolves into two cubes: B shows '2' again and a new green cube D ('3') appears to its right under the fingers.",
+    "00:03.500-00:03.750 - Hand holding Cube D (green '3'); D turns into a beige/orange cube showing '2' with no swap.",
+    "00:04.000-00:04.500 - New blue cube E appears to the right of D under the hand (hand never fetched it); E shows '3', its color drifts from blue to pale grey-blue.",
+    "00:04.750 - Row: blue2, blue3, green2, beige2, pale-blue3; hand releases.",
+    "00:05.000-00:05.250 - New blue cube F ('3') appears at right of E under the hand.",
+    "00:05.500-00:05.750 - Cube F in hand changes from blue to green, still '3'.",
+    "00:06.000 - F now reads green '5' and yet another green cube G appears to its right under the hand.",
+    "00:06.250-00:06.500 - Hand holds G (green '3').",
+    "00:06.750-00:07.250 - G resolves into green '2' and a new blue cube H ('3') appears to its right under the hand.",
+    "00:07.500-00:07.750 - Hand rotates H; it reads '6'. Hand exits top-right.",
+    "00:08.000-00:09.750 - Final row of 8 cubes (2 3 2 2 3 5 2 6) at rest; hand returns to touch first two cubes; no further changes.",
+    "Summary: clip starts with exactly 2 cubes on the table and the hand never brings in an object from outside the frame, yet ends with 8 cubes; colors of held cubes change mid-handling."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Cube A (left cube in hand)",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "The green cube being rotated in place by the hand turns blue during the rotation (green faces visibly become blue between ~00:00.50 and 00:00.75); no swap or second cube is involved.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Cube C (blue '3')",
+      "invariant_violated": "continuous chain of custody (object materialization)",
+      "description": "While the hand holds a single blue cube, a second blue cube appears fused to its right side (00:00.83-00:01.25). The hand never picks up a cube from the table or from off-frame; the object count rises from 2 to 3 with no source.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Cube B / new Cube D (green '3')",
+      "invariant_violated": "continuous chain of custody (object materialization)",
+      "description": "Hand rotates green cube B to show '3' (00:02.5-00:02.9); then B snaps back to showing '2' and a new green '3' cube emerges beside it under the fingers (00:03.0-00:03.25). Object count rises with no source.",
+      "severity": "severe",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Cube D",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "The held green '3' cube D becomes a beige/orange cube showing '2' between 00:03.50 and 00:03.75 without leaving the hand.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Cube E (blue/pale '3')",
+      "invariant_violated": "continuous chain of custody (object materialization)",
+      "description": "A blue cube appears to the right of the beige cube under the hand at 00:04.00 with no pickup from any source; then its color drifts from saturated blue to pale grey-blue by 00:04.50.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Cube F",
+      "invariant_violated": "continuous chain of custody / object identity",
+      "description": "Another blue '3' cube materializes at the right end under the hand (00:05.00-00:05.25), then changes from blue to green while held (00:05.50-00:05.75), and later reads '5'.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Cube G (green)",
+      "invariant_violated": "continuous chain of custody (object materialization)",
+      "description": "At 00:06.00 a further green cube appears to the right of F under the hand without any pickup.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Cube H (blue '3' \u2192 '6')",
+      "invariant_violated": "continuous chain of custody (object materialization)",
+      "description": "Held green '3' cube G resolves into green '2' plus a new blue '3' cube beside it (00:06.50-00:06.75). Final count reaches 8 cubes from an initial 2 with no cube ever brought into frame.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "weird-blocks.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-12__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-12.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-12__possession-tracking.json",
+  "frozen_source_sha256": "a674d2dd7da9458fcb19df907092351410e6a6b792619d603962add930079e21",
+  "key": "weird-blocks__possession-tracking",
+  "parseOk": true
+}

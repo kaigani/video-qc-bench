@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "woman (short bob, teal three-quarter-sleeve top) | walking past kitchen counter at 00:00, camera follows from behind | walking back toward a kitchen doorway at 00:09.75 | continuous walk: kitchen -> hallway (00:01-00:03, head turns left/right looking around) -> through open doorway into bedroom (00:03.5-00:05.75) -> turns and walks back out (00:06-00:09.75); arm swings follow gait, right-hand extension at 00:02.75/00:03.5 is a turning arm swing that relaxes, not an initiated reach",
+    "cause-effect: woman's turn of head (00:02.25-00:03.25) -> no stimulus visible, no downstream effect required | plausible self-initiated glance",
+    "cause-effect: woman enters bedroom (00:03.75) -> doorway already open in all frames, no door actuation needed | no push/pull required, order consistent",
+    "cause-effect: woman turns body (00:05.25-00:06.5) -> camera/view swings to reveal room and exit doorway | turn precedes reversal of walking direction, timing plausible",
+    "lights/lamps/ceiling fixtures | on/steady at start | steady at end | no light changes and no switches operated",
+    "temporal flow | continuous handheld follow shot | continuous to end | no frozen frames, repeated beats, or time reversal observed at 4 fps sampling"
+  ],
+  "findings": [],
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-05__causal-temporal-sequence.json",
+  "frozen_source_sha256": "7423fd9a39ea7c08c4b8683850b441ac8240465a96d90867306a773ca330a099",
+  "key": "home-tour__causal-temporal-sequence",
+  "parseOk": true
+}

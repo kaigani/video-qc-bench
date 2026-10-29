@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "00:00-00:09 EXTERIOR (night): small flat-roofed single-storey building alone on a dark gravel lot in open flat country; front facade has a center-left glass door flanked by window bays; glazing wraps the front-right corner; white sleeper-cab semi tractor (no trailer visible) idling off the building's LEFT side; no neighboring buildings or parked cars near the building",
+    "00:00-00:09 EXTERIOR view THROUGH front windows: white walls, ceiling fluorescents, a stainless kitchen hood/pass-through area and orange counter visible directly behind the front glass; no booth row visible; no OPEN neon in any window",
+    "00:10.167 brief exterior frame between interior frames: a red neon sign now appears in the front-right window bay",
+    "00:10-00:18 INTERIOR close angle: counter with stools, kitchen pass-through window on back wall, staff door with small window to right of pass-through behind counter, coffee machine; waitress wiping counter",
+    "00:18.7-00:44 INTERIOR wide (night, from front end of room): long counter with stools on right, booth row along LEFT wall under a continuous window wall, back wall holds a window with OPEN neon (left) and the kitchen pass-through (center) and a staff door (right, behind counter); view out windows = parked cars, street lights, a gabled-roof building",
+    "00:19 traversal: man first appears standing behind the counter's far end beside the staff door next to the kitchen pass-through, then walks around the counter end into the customer aisle (00:20-00:23) and sits at counter (00:24)",
+    "00:27-00:36 inserts: coffee pour at counter, plate of toast and egg; window light in background consistent with dining-room windows",
+    "00:45-00:51 REVERSE from kitchen side through pass-through: counter now on LEFT, booths and window wall on RIGHT (consistent mirror of wide shot), refrigerator and a glass customer door with EXIT sign at the far/front end; man seated at counter",
+    "00:51-00:59 empty-diner insert (same close angle as 00:10), later in the morning",
+    "00:59-01:26 INTERIOR wide (dawn/day): same layout; windows show parked cars and gabled building; no truck visible through window wall; waitress later sits beside man on customer side",
+    "01:09-01:17 two-shot across counter: OPEN neon window at left of kitchen pass-through, consistent with back-wall layout",
+    "01:26-01:35 close two-shot: behind man and waitress = booths, refrigerator case, window showing sunrise/road; a white trailer passes outside",
+    "01:35-01:40 empty-counter insert, cash left by mug",
+    "01:41-01:50 POV through a booth window: GREEN box-body truck (straight truck, conventional cab) parked directly outside the window; man walks from building to it and climbs into cab; waitress seated in booth watching through window",
+    "01:50-01:58 INTERIOR wide (sunrise): same layout, waitress at counter; window wall shows parked cars, gabled building, sun glare; no green truck visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "truck visible through diner window",
+      "invariant_violated": "view through opening must match established exterior",
+      "description": "The establishing exterior (00:00-00:09) shows the only vehicle as a white sleeper-cab semi tractor parked off the building's left side, with nothing else near the building. The window POV from 01:41 instead shows a dark-green box-body straight truck with a conventional cab parked right outside the booth windows, and the man walks to it as his vehicle. The interior wide shots of the same booth window wall (00:59-01:26, 01:50-01:58) show parked cars and a gabled building, with no large truck right outside. So the far side of this opening contradicts both the establishing exterior and the other window views.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:18",
+      "entity": "diner interior vs. exterior building",
+      "invariant_violated": "interior seen through front windows must match the interior set",
+      "description": "From outside (00:00-00:09), the front glass shows white walls with a stainless kitchen hood/pass-through and orange counter directly behind it. There is no booth row and no OPEN neon. The interior wide shots show a long room with a full wall of windows lined with booths and an OPEN neon in a back-wall window, and the kitchen pass-through sits on the back wall away from the glazing. The interior also shows a neighboring gabled building and parked cars outside, while the exterior shows the building standing alone in an empty lot. The exterior and interior do not describe the same footprint or glazing.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:19",
+      "entity": "man's entrance route",
+      "invariant_violated": "traversal consistent with established entrances",
+      "description": "The exterior establishes the customer entrance as the glass door in the front facade, and the reverse at 00:45 shows the customer glass/EXIT door at the front end of the dining room. Yet the arriving customer first appears behind the far end of the counter, beside the staff door next to the kitchen pass-through, in the employee work area. He then walks around the counter end into the aisle. His route comes through the staff/kitchen side rather than any customer entrance. An off-screen back door could explain it, so confidence is low.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "layout-connectivity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__layout-connectivity__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

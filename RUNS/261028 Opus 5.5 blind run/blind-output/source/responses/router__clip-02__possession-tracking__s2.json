@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "Audio UNASSESSED (frames only); visual tracking from 4 fps frames, 00:00-00:09.75",
+    "Clear glass bowl on wooden table: stays in place throughout; left hand rests on rim from ~00:03 onward",
+    "Bowl contents at 00:01.00: 2 red, 3 green, 3 yellow glossy balls in bowl + 1 red ball held in both hands = 9 balls (3 red, 3 green, 3 yellow)",
+    "Held red ball: 00:00.25-00:00.75 right/left hands lift it from bowl -> 00:01.00-00:02.00 held up in both hands above bowl -> 00:02.25-00:02.50 lowered back into bowl (front-left)",
+    "Small silver cup with green/white contents: on table right of bowl 00:00-00:04, untouched; leaves frame as camera reframes ~00:04.25",
+    "Spare red/green/yellow balls on table at far right edge: never touched, leave frame as camera reframes ~00:03.75",
+    "00:03.00-00:05.00 right hand pokes/stirs balls in bowl; full-res 00:04.75 shows 2 red, 3 green, 3 yellow visible, 1 more under fingers - consistent with 9",
+    "00:05.25 (full-res): bowl shows 2 red, 3 green (1 behind hand), 3 yellow (1 behind hand) - consistent",
+    "00:05.75 (full-res): bowl visibly holds only 2 green, 2 yellow and ~1-2 red under the right hand; nothing seen leaving the bowl",
+    "00:06.00-00:09.75 vigorous stirring with motion blur; balls remain in bowl, none exits",
+    "00:09.25-00:09.75 (full-res): bowl shows ~4-5 red balls, 3-4 green, 0-1 yellow - color distribution no longer matches the 3/3/3 starting set"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05.75",
+      "entity": "balls in glass bowl (yellow, green, red)",
+      "invariant_violated": "placement persistence / chain of custody",
+      "description": "At 00:05.25 the bowl contains ~8-9 balls (2 red, 3 green, 3 yellow visible). Half a second later at 00:05.75 only 2 green, 2 yellow and 1-2 red are visible in an otherwise clearly visible, open glass bowl; roughly 3 balls are unaccounted for. No ball is seen lifted out or leaving the bowl, and the single small hand at the front-left cannot occlude that many. Balls then reappear in quantity during later stirring.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09.25",
+      "entity": "red and yellow balls in glass bowl",
+      "invariant_violated": "transfer completeness / object identity (count by color)",
+      "description": "The bowl started with exactly 3 red, 3 green, 3 yellow balls (00:01) and no balls were added from the table. By 00:09.25-00:09.75 the bowl shows 4-5 distinct red balls (e.g. 00:09.50: red in fingertips top, red left, red center, red front, red right) while yellow drops to 0-1 visible. Red balls have multiplied and yellow balls effectively became red during stirring with no visible cause; no extra balls were brought in.",
+      "severity": "severe",
+      "confidence": 0.7
+    }
+  ]
+}

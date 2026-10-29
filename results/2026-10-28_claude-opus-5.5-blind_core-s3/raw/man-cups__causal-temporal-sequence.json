@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "Shot structure | single continuous shot, close low angle on cups and coins at 00:00 | wide/side view of seated man in blue suit at the table at 09:75 | continuous camera pull-back and orbit with no cuts; time keeps moving forward",
+    "Hand A (coin pinched, upper left) | 00:00 holds a gold coin above the table near the cups | joins the other hand over the front cup by ~00:01 | no release or drop of the coin is shown; it simply merges into the two-hand reach",
+    "Reach into front cup (cause) -> coins lifted out (effect) | 00:01.00-00:02.00 hand descends into the front-left cup, which holds coins at its base | 00:02.25 coins come up out of the cup in the fingers; 00:02.50 cup is empty and coins are held above it | order and timing plausible",
+    "Near hand coin placement (cause initiated) | 00:02.50-00:03.00 coin held just above the front cup rim, poised to drop | 00:09.75 coin still pinched at the rim of the near cup | no drop or insertion ever happens: the lowering motion is held for about 7 s without completing or being visibly stopped",
+    "Far hand coin placement (cause initiated) | 00:03.50 second hand appears pinching a coin at the rim of the far/right cup | 00:09.75 coin still pinched at a cup rim | no release; same stalled pose for about 6 s",
+    "Cups | three or four steel cups in a cluster, centre cup holding a coin stack | still clustered with coins hovering over them | no cup moves or reacts in response to the hands (none is pushed, lifted or tipped)",
+    "Man in blue suit (reaction) | seen from 00:04.50, eyes down on his hands | still watching the cups at the end | no outside event needing a reaction; gaze tracks his own hands, so this is consistent",
+    "Lighting | steady daylight from the windows | unchanged | no light change, so no cause is needed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Coins held in both hands above the cups",
+      "invariant_violated": "action completion / cause-without-effect",
+      "description": "After lifting coins out of the front cup (00:02.25), the near hand holds a coin at the cup rim from about 00:03 to 00:09.75. From 00:03.50 the far hand also holds a coin at another cup rim. Throughout, the camera pulls back from close-up to a wide side view. Neither coin is ever dropped, inserted or set down, and neither hand withdraws. Over about 7 s of continuous footage the placing motion starts but never completes and is never visibly interrupted. It plays as an endless hover loop, not as a placement with an outcome.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-06__causal-temporal-sequence.json",
+  "frozen_source_sha256": "b476bbcadfa19ca846e8f2becc458ef2f232927a01b4aa0fd78bf10e3d63549a",
+  "key": "man-cups__causal-temporal-sequence",
+  "parseOk": true
+}

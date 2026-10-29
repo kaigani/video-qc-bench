@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "center metal cup (cluster middle) | 0:00 upright on cream felt, holds a tall stack of embossed gold coins with 'SA'-style emblem near the rim | later in a row of four cups, contents not resolvable | 0:00-0:02.75 stack unchanged; at 0:03.00 contents become a single plain silver/white disc sitting lower, no hand touched this cup",
+    "front-left metal cup | 0:00 upright, one gold coin lying in bottom | upright, hand dropping a coin into it repeatedly | ~0:02.25 hand lifts the gold coin out (visible), 0:02.50 cup empty, ~0:03.50 coin dropped back in (visible)",
+    "back metal cup (cluster rear) | 0:00 upright, empty-looking | upright at rear of group | far hand repeatedly drops a coin toward it from ~0:03.25 onward",
+    "right metal cup | 0:00 upright, empty | upright in row | no state change observed",
+    "cup group count | 4 cups from 0:00 through 0:09.00 (triangle cluster, later shown as a row/cluster from a wider angle) | 3 cups visible at 0:09.25-0:09.75 | one cup no longer visible from 0:09.25 without any visible removal",
+    "loose coin held by near (right) hand | 0:00 held by far hand top-left; near hand takes coin from front-left cup ~0:02.25 | held over front-left cup at end | repeated drop/lift motions, possession consistent",
+    "coin held by far (left) hand | appears at 0:03.00 between fingers near back cup | held over back cup through 0:09.75 | consistent possession",
+    "loose coins on cream felt (gold 'Ferovn' coin right of center cup, large silver/gold coin front) | 0:00 on felt in front of cups | not clearly resolvable at wide angles after ~0:07 | no clear unexplained change given camera movement",
+    "decorative coins/chips on red border | fixed printed/placed ring around table | same ring at end | no tracked transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "contents of center metal cup",
+      "invariant_violated": "state change without visible cause / object transformation",
+      "description": "From 0:00 to 0:02.75 the center cup holds a tall stack of embossed gold coins rising near the rim. At 0:03.00 the same cup instead contains a single plain silver/white disc sitting lower in the cup. No hand reaches into or touches the center cup during this interval (the hands are working the front-left cup), so the coin stack changes identity, color and quantity with no causal action.",
+      "severity": "moderate",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "metal cup (one of four)",
+      "invariant_violated": "object persistence / count stability",
+      "description": "At 0:09.00 four cups are visible in the group (rear, left, front-center, front-right). From 0:09.25 through 0:09.75 only three cups are visible; the near hand rests empty on the felt and the far hand is holding a coin, and no hand lifts or moves a cup away. Partial occlusion from the camera move is possible, but the remaining cups are clearly separated, so a cup appears to vanish.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

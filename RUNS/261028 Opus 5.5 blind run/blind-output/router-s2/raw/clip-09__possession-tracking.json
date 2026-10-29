@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "00:00.000 large glass jar: empty, on wooden board; small glass cup in right hand held over jar, visible contents all green olives",
+    "00:00.000-00:04.500 metal bowl (back right): green olives only visible; white bowl (front right): green olives, untouched throughout clip",
+    "00:00.500-00:03.750 small cup -> jar: pour #1; olives fall into jar; by 00:01.750 jar holds ~6 dark purple/grey olives plus ~6 green although cup showed only green olives",
+    "00:03.000-00:05.750 jar: settled mix of green, dark purple and slate-grey olives, arrangement stable (placement persistence holds)",
+    "00:04.000-00:04.250 small cup carried right by right hand, briefly blurred/out of frame",
+    "00:04.500-00:05.000 right hand (with cup) scoops from metal bowl; bowl at 00:05.000 shows only green olives",
+    "00:05.250 metal bowl: now nearly empty, a few green olives plus a brown olive/almond and debris not previously visible (may have been buried)",
+    "00:05.500-00:06.250 small cup in both hands above jar, visible contents green olives",
+    "00:06.500-00:08.750 small cup -> jar: pour #2; cup now shows 2-3 dark olives among ~10 green (00:06.750-00:07.500)",
+    "00:08.750 small cup empty",
+    "00:09.000-00:09.750 jar: top layer predominantly dark purple (~10 dark vs ~6 green); empty cup lifted away in right hand; metal bowl remainder unchanged; white bowl unchanged"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06.750",
+      "entity": "dark olives in small glass cup (pour #2)",
+      "invariant_violated": "transfer completeness",
+      "description": "The cup was filled from the metal bowl, which at 00:05.000 showed only green olives, and the cup itself showed only green olives from 00:05.500 to 00:06.500. At 00:06.750-00:07.500 two or three dark purple olives are visible in the cup with no visible source. They could have been hidden at the bottom of the bowl or cup, which is why confidence is only moderate.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09.000",
+      "entity": "jar contents after pour #2",
+      "invariant_violated": "transfer completeness",
+      "description": "Pour #2 delivered mostly green olives, about 10 green and 2-3 dark visible in the cup at 00:07.000-00:08.250. Yet the jar's new top layer at 00:09.000 is mostly dark purple, about 10 dark and 6 green. The color mix that arrived does not match what left the cup.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:01.750",
+      "entity": "dark olives in jar (pour #1)",
+      "invariant_violated": "transfer completeness",
+      "description": "At 00:00.000-00:01.250 the small cup showed only green olives. By 00:01.750 the jar holds about 6 dark purple or slate-grey olives, roughly half of what was poured. Dark olives hidden lower in the cup cannot be ruled out.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "possession-tracking",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__possession-tracking__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

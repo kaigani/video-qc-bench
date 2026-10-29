@@ -1,0 +1,68 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior: 1 semi truck cab, 1 diner building; count stable",
+    "00:10-00:18.6 counter shot A: 3 red counter stools in foreground (stable); condiment caddy cluster on counter stable; 1 waitress",
+    "00:18.7-00:27 wide interior: row of ~6-7 counter stools visible, stable; man enters (visible entrance from left) and sits -> 2 people + waitress; count change explained",
+    "00:27-00:32 coffee pour close-up: 1 white mug, 1 carafe, 1 folded rag; stable",
+    "00:32-00:36.4 plate close-up: 1 plate, 1 toast slice, 1 fried egg, 1 fork, 1 knife; stable",
+    "00:36-00:45 wide with man seated: 1 mug in hand, 1 plate; stool row stable",
+    "00:45-00:51.3 reverse from behind counter: 2 plate stacks on shelf (stable), 1 mug foreground left (stable), red ketchup bottle near man occluded by waitress at 00:45/00:50 and visible 00:46-00:49 (occlusion, not disappearance)",
+    "00:51.4-00:59.8 empty counter shot: 3 stools, condiment caddies stable",
+    "00:59.9-01:09 daytime wide: 1 man, 1 waitress, stool row stable",
+    "01:09-01:12.5 counter medium: 2 mugs (man's mug + second mug near waitress, partially hidden by her hand at 01:09 then visible), 1 plate held by waitress",
+    "01:12.5-01:13 waitress pushes second mug toward man's mug; mugs overlap and resolve into a single mug; 01:13-01:17.5 only 1 mug on counter, waitress walks off holding only the plate -> count 2->1 with no visible removal",
+    "01:17.6-01:26.7 wide: man + waitress seated; stool row stable",
+    "01:26.8-01:35.2 two-shot: 2 mugs (one each), 1 napkin dispenser, shakers; stable",
+    "01:35.3-01:37.4 empty counter shot: 3 stools, condiment cluster stable",
+    "01:37.4-01:41 mug + cash: 1 mug; bills placed by man's hand (visible cause), small stack of ~2-3 bills stable once placed",
+    "01:41-01:50.2 truck through window: 1 truck, 1 man walking (exits toward truck), waitress reflection; ketchup + mustard bottles stable",
+    "01:50.2-01:51.9 wide sunset interior: 1 waitress",
+    "01:52-01:56.5 same continuous shot: 2 identical waitresses (one far end of counter, one foreground near coffee machine) with no entrance",
+    "01:56.5-01:58 the two waitress figures converge and become 1 waitress; stool row and condiment caddies stable throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "coffee mugs on counter in front of the man",
+      "invariant_violated": "count change without visible cause (merge)",
+      "description": "Within one continuous shot two mugs are on the counter (the man's mug in his hand and a second mug the waitress slides toward him). Around 01:12.5-01:13 the second mug slides into the man's mug and the two merge into a single mug. Afterward only one mug is present (01:13-01:17.5), and the waitress walks away holding only the plate. Nobody visibly picks up or removes the second mug.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress (person count in the sunset wide shot)",
+      "invariant_violated": "count change without visible cause (duplication)",
+      "description": "In one continuous shot starting at 01:50.2 there is one waitress. Around 01:52 a second, identical waitress (same blue shirt, white apron, hair bun) fades in semi-transparently at the far end of the counter while the original waitress is still in the foreground. She does not enter through any door or from off-frame. The person count goes from 1 to 2 with no cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:56",
+      "entity": "waitress (person count in the sunset wide shot)",
+      "invariant_violated": "count change without visible cause (merge)",
+      "description": "The two identical waitresses walk toward each other behind the counter, and around 01:56.5-01:57 they merge into a single figure. By 01:57-01:58 only one waitress remains. Neither one exits frame or goes behind an occluder that later clears.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__count-stability__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-01__count-stability.json",
+  "frozen_source_sha256": "1757eca515a9d42ab58635b71a104ec784e89573a80f366067e670db7da07e83",
+  "key": "_long-scene__count-stability",
+  "parseOk": true
+}

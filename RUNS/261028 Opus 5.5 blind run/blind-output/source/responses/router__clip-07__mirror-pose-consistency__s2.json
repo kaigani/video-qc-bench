@@ -1,0 +1,58 @@
+{
+  "ledger": [
+    "True mirror confirmed: gold-framed bathroom mirror; the man in a white shirt is seen from behind (left foreground) and his reflection faces the camera for the whole clip (00:00-00:09.75). The hand holding the tool (his right) is on image-right in both, so left-right handedness is consistent throughout.",
+    "00:00.00 real: head tilted up, razor at chin/jaw | reflection: razor at chin. Consistent.",
+    "00:00.25 real: razor held vertically below the jaw, clear of the skin | reflection: razor angled and pressed against chin.",
+    "00:00.50-00:01.50 real: razor under chin/jaw, head up | reflection: razor at chin/upper lip. Broadly consistent.",
+    "00:01.75 real: hand raised to temple/hairline, blade near brow beside ear | reflection: blade at nose bridge/inner eye.",
+    "00:02.00 real: razor at temple/side of face | reflection: blade at nose bridge. Hand motion in progress.",
+    "00:02.25-00:04.00 real: dark comb pushed into the hair above the ear, fist on top/side of head | reflection: head bowed, fist at center of forehead pressing a flat white blade horizontally across the brow, no comb in the hair.",
+    "00:04.25 real: tool at temple/hairline beside the ear | reflection: white blade at eye/nose bridge.",
+    "00:04.50-00:08.75 real: razor at cheek/chin/jaw, head tilted up | reflection: razor at cheek/chin. Broadly consistent.",
+    "00:09.00 real: fingers pinched near chin, no blade clearly visible | reflection: razor blade held against cheek.",
+    "00:09.25 real: razor held upright, several cm below and away from the jaw, head tilted up | reflection: razor angled and touching the jaw/cheek, head near level.",
+    "00:09.50-00:09.75 real: razor at cheek/upper face | reflection: razor at upper lip/nose. Approximately consistent."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "subject's held prop and right-hand position vs reflection (00:02.25-00:04.00)",
+      "invariant_violated": "reflection prop/pose must match subject",
+      "description": "For about 2 seconds the real man has a dark comb pushed into his hair above his ear, with his fist on the top/side of his head. At the same instants the reflection shows his fist at the center of his forehead, pressing a flat white blade horizontally across his brow, with his head bowed. There is no comb in the reflection's hair. The prop is a different kind and color of object, and the hand is somewhere else. Viewing angle cannot explain either difference.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "tool contact point on face (00:01.75 and 00:04.25)",
+      "invariant_violated": "reflection pose must match current pose",
+      "description": "The real man holds the tool up at his temple/hairline beside his ear. At the same instants the reflection shows the white blade at his nose bridge/inner eye, near the middle of his face. The contact point is in a different place on the face.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "razor position relative to jaw (00:09.25)",
+      "invariant_violated": "reflection prop position must match subject",
+      "description": "The real razor is held upright, clearly away from the skin below his jaw, with his chin tilted up. The reflection shows the razor angled and pressed against his jaw/cheek, with his head close to level. The prop's position and contact do not match at the same instant.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "razor position relative to chin (00:00.25)",
+      "invariant_violated": "reflection prop position must match subject",
+      "description": "The real razor is held vertically below his jaw and not touching the skin. In the reflection the razor is diagonal and pressed against his chin.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "presence of razor in hand (00:09.00)",
+      "invariant_violated": "reflection prop must match subject",
+      "description": "The real hand shows pinched fingers near his chin with no blade visible. The reflection shows a razor blade held against his cheek.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "glass jar contents | empty at 00:00.00 | packed with mixed green and dark-purple olives to near the shoulder at 00:09.75 | 00:00.50 a dark blurred olive is already on the jar floor while the first green olive is only just leaving the bowl; 00:01.00 three green olives; 00:01.50-00:01.75 about 12 olives incl. ~5 dark; grows through 00:03.00; static 00:03.00-00:06.00; grows again during second pour 00:06.50-00:08.50; appears fuller still at 00:09.00-00:09.75 after the bowl is shown empty",
+    "small glass pouring bowl (first pour) | full of only green olives at 00:00.00 | tilted and emptied over the jar by ~00:03.75 | pour stream visible 00:00.50-00:02.75; it never shows dark olives, yet dark olives land in the jar",
+    "pour action (cause) -> olives landing in jar (effect) | tilt begins 00:00.25 | olives land 00:00.75-00:02.75 | ordering is mostly plausible, but the jar gains more olives (and a different color) than the trickle from the bowl accounts for at 00:00.50-00:01.75",
+    "hand grabbing from steel bowl | reach starts 00:04.25 (fast blurred motion) | grabs a handful of green olives 00:05.00 | steel bowl drops from ~10 green olives to a few olives plus brown bits by 00:05.25; reach completes and the action is readable",
+    "glass pouring bowl (second pour) | holds green olives at 00:05.75-00:06.50; dark olives visible in it from 00:06.75 | empty and upside down over jar at 00:08.50-00:09.25 | olives fall into jar 00:06.50, 00:07.50-00:08.50 (cause and effect line up)",
+    "glass pouring bowl after the second pour | empty at 00:08.75-00:09.25 | contains green olives again at 00:09.75 | no refill action is shown",
+    "steel bowl and grey bowl on counter | static apart from the 00:05.00 grab | static | no unexplained changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "dark olive on the jar floor at the start of the first pour",
+      "invariant_violated": "effect-without-cause / effect-before-cause",
+      "description": "At 00:00.50 a blurred dark-purple olive is already lying on the jar's floor. The pouring bowl holds only green olives, and the first green olive is only just tipping off the bowl's lip, so nothing has fallen yet. Nothing was in the jar at 00:00.25. The olive arrives with no visible drop and is not the color of anything being poured.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "jar fill vs. first pour",
+      "invariant_violated": "effect outpaces / mismatches cause",
+      "description": "Between 00:01.00 (three green olives in the jar) and 00:01.75 (about 12 olives, about five of them dark purple), the jar fills much faster than the single-file trickle of green olives from the bowl allows. Dark olives keep piling up even though the poured stream is green only, so the result does not match its cause in quantity or color.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "glass pouring bowl contents after emptying",
+      "invariant_violated": "effect-without-cause (refill without action)",
+      "description": "From 00:08.50 to 00:09.25 the bowl is turned upside down and visibly empty over the jar. At 00:09.75 the same bowl, still held overhead, contains green olives again, with no scoop or refill action in between.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

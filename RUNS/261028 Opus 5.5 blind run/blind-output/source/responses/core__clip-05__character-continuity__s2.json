@@ -1,0 +1,23 @@
+{
+  "ledger": [
+    "Woman (sole character) | 00:00 in a light-wood kitchen, walking right-to-left in profile, facing left; short honey-blonde layered bob, drop earrings, teal-blue 3/4-sleeve top worn as an OPEN V-neck cardigan with a white camisole visible underneath | 09:75 seen from behind entering a different dark-wood kitchen, walking away from camera; short bob gathered/tucked at the nape, dark navy fitted 3/4-sleeve top, dark wrist band on left wrist | 00:00-01:50 turns away from camera and walks into the hallway past the stove; 02:25-03:25 profile facing right toward the hallway pictures; 03:50-04:50 walks away from camera into the bedroom doorway; 05:00-06:50 stands in the bedroom, head turning left and right, camera orbiting; 06:50-07:00 her back now faces camera with a doorway ahead (a turn that matches the camera orbit); 07:00-09:75 walks away from camera through the doorway into the kitchen. Single continuous take with no hard cuts. Wardrobe neckline changes between 00:25 and 03:00 (open V cardigan + white camisole -> closed high-neck fitted top); hair goes from a loose side-swept bob to a tucked/chignon-like nape over the back-view frames; face proportions drift a little across profile views."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Woman - top/wardrobe",
+      "invariant_violated": "wardrobe identity persistence",
+      "description": "At 00:00 she wears an open V-neck teal cardigan with a white camisole clearly visible at the chest. By 00:03.0-00:03.25, in clear profile, the same garment is a closed, high/jewel-neck fitted dark navy top. The deep V opening and the white camisole are gone, and the colour reads darker. This happens in one continuous walking take, she never touches her clothing, and there is no time off-screen in which she could have changed. Back-view frames from 00:01 onward show a seamless fitted top, which matches the later garment, not the open cardigan.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Woman - hairstyle",
+      "invariant_violated": "hair identity persistence",
+      "description": "At 00:00-00:01 the hair is a loose layered bob that falls to the jaw and nape. From about 00:04.0 onward, in the back views, the nape hair looks gathered and tucked up into a low twist or chignon with curled ends. In the profile views at 05:75-06:25 it again reads as a loose short bob. Nothing on screen restyles the hair, so the structure appears to morph.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

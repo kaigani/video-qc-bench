@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "countertop microwave (kitchen 1) | stainless, on counter right of doorway, round bread/basket on top, closed | passes out of frame ~01.50 | no state change observed",
+    "kettle / coffee maker / rice cooker on kitchen counter | on counter beside microwave | out of frame by ~00.75 | no transitions",
+    "red kettle/pot by sink, fruit bowl by range (kitchen 1) | on counter near window/sink | out of frame ~02.50 | no transitions",
+    "hallway framed painting (woman with blue flower) | hung on hallway wall right of kitchen opening, dark frame | passes left of frame ~04.25 as she enters bedroom | stays put in hallway; identical artwork later reappears on bedroom wall left of the bedroom door (~07.00)",
+    "small framed orange/brown picture | hung right of hallway painting | passes out of frame ~04.50 | stays put",
+    "bedroom chandelier | hanging over bed, candles unlit-style bulbs | still present ~06.50 | no state change",
+    "bed, pillows, white duvet | made bed, two pillows, centered on far wall | unchanged when last seen ~07.25 | no transitions",
+    "wooden chairs at foot of bed | two chairs (left one partly occluded by door jamb at 05.00, fully visible 05.25) | one chair edge visible ~07.25 | count consistent once occlusion accounted for",
+    "nightstand with lamp and small photo frame | lamp lit, frame on left nightstand | unchanged ~06.50 | no transitions",
+    "painting above bed with small paper item in front | static | static | no transitions",
+    "side table by window with framed photo | photo shows light/yellow scene with blurred figures-landscape (06.00-06.50) | photo shows a seated person in dark/white clothing (07.50-08.75) | content of photo changes with no handling",
+    "framed artwork above side table | small dark-framed colorful piece with inset image (06.00-06.50) | larger light-wood-framed green/red abstract (07.50-09.25) | appearance/frame changes with no handling",
+    "dresser right of bedroom entrance | wooden, right edge of frame 04.75-05.25 | out of frame | no transitions",
+    "kitchen 2 items (over-range microwave, range, white bowl, wall picture) | seen through exit doorway 09.00-09.75 | unchanged to end | first appearance only"
+  ],
+  "findings": [
+    {
+      "timestamp": "07:25",
+      "entity": "framed photo on side table beside bedroom window",
+      "invariant_violated": "identity persistence (object content transforms)",
+      "description": "At 06.00-06.50 the photo frame on the small side table left of the window shows a light, yellowish scene with indistinct figures/landscape. When the same table and frame come back into view at 07.25-07.75 (same position under the artwork, left of the same curtained window), the photo is a clearly different image of a seated person in dark/white clothing. Nobody touches the frame, so the image change has no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "woman-with-blue-flower framed painting",
+      "invariant_violated": "no duplication / location persistence",
+      "description": "This exact painting hangs on the hallway wall (00:01.50-00:04.25), which she walks past before entering the bedroom. Turning back inside the bedroom at 07.00-08.50, the identical painting, with the same image and dark frame, hangs on the bedroom wall left of the doorway. It now appears in a second place, or has moved, with no action shown.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "07:25",
+      "entity": "framed artwork above bedroom side table",
+      "invariant_violated": "identity persistence (object transforms)",
+      "description": "Above the side table at 06.00-06.50 is a smaller, darker-framed picture with a small colorful inset. By 07.50 the art in the same spot, above the same table, is a larger light-wood-framed green/red abstract with a different layout. Nobody touches it, yet the object looks like a different picture.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "home-tour.mp4",
+  "role": "object-persistence-state",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__object-persistence-state__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-05__object-persistence-state.json",
+  "frozen_source_sha256": "5a36c742b96a1a57297a527ce27f4048d7a2628774fb9b172d99850322c6fe38",
+  "key": "home-tour__object-persistence-state",
+  "parseOk": true
+}

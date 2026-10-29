@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "Shelf bottles/jars reflected in mirror (upper-right cabinet), 00:00-00:09.75: upper shelf ~3-4 clear jars plus a white box, lower shelf ~3 dark/green bottles; count consistent on every sharp frame, partly cropped by mirror frame edge; no visible additions or removals",
+    "Hand-held grooming tool (real hand, foreground), 00:00-00:02.00: 1 slim silver/white straight razor-like blade",
+    "Hand-held grooming tool (real hand), 00:02.25-00:04.00: 1 dark/black comb-shaped object held against hair at temple; no set-down, pickup, or hand-off of a different item is visible",
+    "Hand-held grooming tool (reflection), 00:02.25-00:04.00: 1 white/lilac flat blade-like strip across forehead; does not match the dark comb held by the real hand",
+    "Hand-held grooming tool (real hand), 00:04.25-00:09.75: 1 slim silver razor-like blade again, matching reflection",
+    "Count of held tools stays 1 throughout; no count change in any group"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "hand-held grooming tool in the man's right hand (foreground, real side)",
+      "invariant_violated": "kind transformation without visible cause",
+      "description": "At 00:02.00 the real hand holds a slim silver razor blade at the eye; at 00:02.25 the same grip holds a dark black comb-like object at the temple, which persists through 00:04.00 and then reverts to a silver razor at 00:04.25. No set-down, pickup, or swap is visible, and the hand never leaves frame. The reflection meanwhile shows a white/lilac blade, not a dark comb.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-07__count-stability__s2-a2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-07__count-stability.json",
+  "frozen_source_sha256": "9d264b9ef5acfc61cedd5b71e0ddbece32095f3efea79d28693c3b28116ccccd",
+  "key": "man-in-mirror__count-stability",
+  "parseOk": true
+}

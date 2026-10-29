@@ -1,0 +1,68 @@
+{
+  "ledger": [
+    "00:00.000 small glass tumbler in right hand holds only green olives; large glass jar on board empty; steel bowl holds ~8 green olives; ceramic bowl (right) holds green olives",
+    "00:00.500 tumbler tilted, green olive falling; a dark purple olive already sits on jar floor before any poured olive has landed",
+    "00:01.000-00:01.750 pour continues, only green olives visible leaving tumbler; jar fills with a mix of green AND many dark purple/black olives (about half dark by 00:01.750)",
+    "00:02.000-00:03.750 pour continues from tumbler (green visible); jar settles at ~1/3 full, mixed green and dark olives",
+    "00:04.000 tumbler carried off right; 00:04.500 right hand reaches into steel bowl (~8 green olives visible)",
+    "00:05.000-00:05.250 hand lifts a handful of green olives from steel bowl; steel bowl now shows ~2 green olives plus brown nut-like items not previously visible",
+    "00:05.500-00:06.500 tumbler reappears in hands holding only green olives; jar contents unchanged",
+    "00:06.750-00:07.750 tumbler now visibly contains several dark purple olives mixed with green; poured into jar",
+    "00:08.000-00:08.750 tumbler emptied into jar, tumbler visibly empty at 00:08.750; jar ~2/3 full, majority dark olives",
+    "00:09.000-00:09.500 empty tumbler held above jar, partly out of frame",
+    "00:09.750 tumbler at top of frame shows green olive content again; steel bowl and ceramic bowl unchanged since 00:06"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "dark purple olives in large jar",
+      "invariant_violated": "transfer completeness",
+      "description": "The tumbler being poured contains only green olives (00:00.000-00:00.500), yet a dark purple olive is already on the jar floor at 00:00.500 before any olive lands, and by 00:01.750 roughly half the olives in the jar are dark purple/black. No dark olives exist in the tumbler or anywhere else in the scene; the arriving objects are a different kind than those leaving.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives inside glass tumbler",
+      "invariant_violated": "object identity / transfer completeness",
+      "description": "At 00:06.000-00:06.500 the tumbler holds only green olives (refilled from the steel bowl of green olives), but at 00:06.750-00:07.250 several dark purple olives are visible inside it with no source; the steel bowl and ceramic bowl contain only green olives and brown items. Dark olives then pour into the jar.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "glass tumbler contents",
+      "invariant_violated": "placement persistence",
+      "description": "The tumbler is shown fully empty after the pour at 00:08.750 and 00:09.250, held above the jar, yet at 00:09.750 it shows green olive content again with no visible refill from any bowl.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "steel bowl contents",
+      "invariant_violated": "continuous chain of custody",
+      "description": "Steel bowl held only green olives through 00:04.500; after one handful is taken (00:05.250) brown nut-like objects appear in the bowl that were never visible or placed there.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-09__possession-tracking.json",
+  "frozen_source_sha256": "85a4e65267b2c9c539c548741b75e79d3ed2f23f60199e3d698abbedf332c17f",
+  "key": "pouring-olives__possession-tracking",
+  "parseOk": true
+}

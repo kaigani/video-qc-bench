@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    "man in green/white striped shirt | facing camera, slicked dark hair, white undershirt, talking in front of wood-panelled door | back to camera, hands raised at a door panel left of coat hook | turns at ~07.0, camera follows him screen-left to door",
+    "navy jacket on brass hook | hanging on hook below brass medallion | same hook, white stripe on sleeve visible from other side | consistent across camera move",
+    "framed pictures | V/rearing-animal print at right edge, partially hidden print behind head | smiley-face line drawing revealed behind where head was | revealed by camera move"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.750",
+      "entity": "man's hands at the door",
+      "invariant_violated": "implausible hand-object interaction",
+      "description": "From ~08.75 to 09.75 the man raises both hands to the middle of the door panel and makes fumbling/rubbing motions in empty air against flat wood, well above the doorknob (visible at bottom-left of frame); no handle, lock or knocking contact is evident, so the action reads as purposeless and unmotivated.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "00:07.250",
+      "entity": "man's hair",
+      "invariant_violated": "hairstyle continuity",
+      "description": "As the man turns away, his hair appears to gain a noticeably taller, more sculpted pompadour wave compared with the flatter slicked style seen from 00:00 to 06.75, with no action that would restyle it.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "dialogue.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-04__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-04.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-04__baseline-generalist.json",
+  "frozen_source_sha256": "9c72dec1c695f9c841a99634dced310cf73e121e078cd2a7ed7e80f6535bcc37",
+  "key": "dialogue__baseline-generalist",
+  "parseOk": true
+}

@@ -1,0 +1,54 @@
+{
+  "ledger": [
+    "countertop microwave (first kitchen) | stainless, on counter right of walkway, round wooden bread board/loaf on top | passes out of frame ~01.25 | no transitions; untouched",
+    "counter appliances (kettle/coffee maker, red appliance, slow cooker) | on counter beside microwave | out of frame ~00.50 | none",
+    "red kettle/pitcher on sink windowsill | on sill by faucet | out of frame ~02.25 | none",
+    "hallway framed portrait with blue flower | on hallway wall, dark frame, left of small frame | passed by ~04.00 | none in hallway",
+    "hallway small framed picture (reddish figure) | right of portrait, light frame | passed ~04.50 | none",
+    "bedroom chandelier, lamps, bed, chairs | static furniture in bedroom | static | none; untouched",
+    "bedroom wall frame between doorway and window | 06.50-06.75: small light frame with colorful red/blue/green graphic | 07.25-08.75: larger light frame with green/red/blue mountain-shaped graphic | artwork content and size changed while camera only rotated",
+    "framed photo on side table near window | 06.00-06.75: photo shows pale yellow/blue still-life/landscape | 07.25-08.75: photo shows a person in dark suit with white shirt | content changed while briefly occluded by the woman at 07.00-07.25; nobody touched it",
+    "framed blue-flower portrait inside bedroom | absent from bedroom view earlier | appears on bedroom wall left of doorway from 07.00 | duplicate of hallway portrait now on bedroom interior wall",
+    "final kitchen objects (over-range microwave, stove, white bowl/mortar) | first seen ~09.00 through bedroom doorway | static | none; room layout itself out of scope"
+  ],
+  "findings": [
+    {
+      "timestamp": "07:25",
+      "entity": "framed photo on bedroom side table",
+      "invariant_violated": "identity persistence (object content transformation)",
+      "description": "At 06.00-06.75 the framed photo on the side table between the doorway and window shows a pale yellow/blue still-life or landscape image. After the woman briefly occludes it (07.00), from 07.25 onward the same frame on the same table shows a portrait of a person in a dark suit and white shirt. No one touches the frame; its displayed image changed with no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "07:25",
+      "entity": "framed artwork on bedroom wall between doorway and window",
+      "invariant_violated": "identity persistence (object transformation)",
+      "description": "At 06.50-06.75 the wall frame next to the doorway is a small light frame with a compact colorful red/blue/green graphic. From 07.25 it is a noticeably larger frame containing a different green/red/blue mountain-like composition, in the same wall position. Camera motion explains a scale change but not the altered artwork and frame proportions.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "blue-flower framed portrait",
+      "invariant_violated": "no duplication",
+      "description": "The distinctive blue-flower portrait in a dark frame hung on the hallway wall (01.50-04.00). When the camera turns back toward the bedroom doorway at 07.00-08.25, an identical portrait now hangs on the bedroom's interior wall left of the doorway, so the same unique object appears in two places.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-05.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

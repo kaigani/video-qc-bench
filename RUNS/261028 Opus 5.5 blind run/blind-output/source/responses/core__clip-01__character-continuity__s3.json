@@ -1,0 +1,65 @@
+{
+  "ledger": [
+    "Waitress | 00:10 older woman, grey hair in low bun, light-blue short-sleeve shirt, white apron, reading glasses hanging on chest; behind counter wiping it, facing screen-right | 01:58 same wardrobe and hair, behind counter in golden-light wide, but by then a second identical waitress figure is also present | 00:10-00:18 wiping counter behind it; 00:19-00:27 behind counter, pours coffee for trucker; 00:36-00:44 absent from the wide; 00:45-00:51 reverse shot, wiping counter near camera with trucker far in background; 00:59-01:19 behind counter, serves plate, walks to back counter; 01:20-01:26 ends up seated beside trucker on customer side; 01:26-01:35 close two-shot, she is screen-left of him; 01:46-01:49 standing at a window looking out at trucker by his truck; 01:50 seated alone on a counter stool; 01:51-01:52 stands and passes through the counter; 01:52-01:57 two copies of her are visible behind the counter",
+    "Trucker (man) | 00:19 grey-haired middle-aged man in a tan/brown canvas jacket over a plaid shirt and jeans; comes in through the rear door, walks round the far end of the counter and sits on the near stool facing screen-right toward the waitress | 01:41-01:50 same jacket and jeans; leaves, walks to his truck and opens the cab door | 00:27 seated on a stool at the counter curve, three-quarter back to camera, facing screen-right; 00:36-00:44 same wide setup but now further right and facing straight at camera with mug and plate; 00:45 reverse shot, seated at far end of counter; 00:59-01:26 seated on near stool facing right; 01:26-01:35 close two-shot, screen-right of waitress; 01:37-01:39 hands leave cash; 01:41-01:50 outside walking to the truck. Identity, face and wardrobe stay consistent throughout",
+    "Waitress-duplicate | appears about 01:51.5 behind the far end of the counter, same blue shirt, apron and bun | still present 01:57 | not present before the waitress's pass-through move; fades in while the original waitress is still on screen"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "single-identity / no duplication",
+      "description": "As the waitress gets up from the stool and moves behind the counter, a second figure with identical wardrobe (light-blue shirt, white apron, hair bun) fades in behind the far end of the counter. From 01:52 to 01:57 both copies are on screen together, one in the foreground working at the coffee station and one at the far end wiping the counter. No other staff member is ever set up, so the character has been cloned.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress",
+      "invariant_violated": "movement continuity (no passing through solid set pieces)",
+      "description": "At 01:50-01:51 the waitress is seated on a stool on the customer side of the counter. Over about 01:51.5-01:52 she stands and ends up behind the counter without walking round its end: her torso is behind the counter while her legs are still visible in front of the counter apron. The move between the two sides of the counter is physically impossible.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:20",
+      "entity": "Waitress",
+      "invariant_violated": "placement / no teleporting",
+      "description": "At 01:19-01:20 the waitress is standing behind the counter, across from the trucker. Within about one second, at 01:20.5-01:21, she is beside him on the customer side and stays there seated through 01:26. She never walks round the end of the counter, and there is no cut in this continuous wide shot.",
+      "severity": "severe",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "01:17",
+      "entity": "Waitress",
+      "invariant_violated": "placement and facing across cut",
+      "description": "Just before the cut at 01:17.54 (medium shot), the waitress has her back to the trucker and camera. She is walking away to the rear service counter, holding a plate. One frame later (01:17.58, wide) she is at the front counter directly across from him, facing him and leaning over the counter. Her position and facing both reverse across a zero-time cut.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "01:26",
+      "entity": "Waitress / Trucker relative position",
+      "invariant_violated": "multi-character left/right consistency",
+      "description": "In the wide shot from 01:20 to 01:26 the waitress sits on the trucker's far side, deeper into the room toward the back wall, which is on his left as he faces the counter. In the reverse close two-shot from 01:26.79, shot from behind the counter, she should therefore appear screen-right of him. She appears screen-left, so their relative left/right placement is flipped across the cut.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "Trucker",
+      "invariant_violated": "position and facing across cut",
+      "description": "At 00:27 the trucker sits on a stool at the counter curve, three-quarter back to camera and facing screen-right toward the waitress. When the same wide camera setup returns at 00:36.46, he is noticeably further right and deeper along the counter, square-on to camera, with the mug and plate set in front of him. The waitress has also vanished from where she was pouring. Only a 9 s food insert separates the shots, and no movement is shown to explain the change of seat and facing.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "placement across cut",
+      "description": "Just before the cut (01:50.17) the waitress stands at a window by the booths, watching the trucker at his truck door. Right after it (01:50.21) she sits on a counter stool across the room, with the same golden light. Nothing on screen indicates elapsed time, so this reads as a jump between locations.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

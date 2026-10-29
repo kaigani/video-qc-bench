@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "Space A (00:00-00:02.5): Kitchen 1. Light oak cabinets, multicolor brick-tile backsplash, countertop microwave, electric range with a hood, sink under a window on the left wall, grey walls. An open doorway leads forward into a hallway.",
+    "Opening A->Hallway (00:00-00:02.5): through the kitchen opening is a cream hallway. At the far end is a white exterior-style door with a half-curtained window. The hallway's right-hand grey wall holds a large blue-flower portrait print, a small orange print to its right, and light switches.",
+    "Traversal 1 (00:00-00:04.0): the woman walks from the kitchen into the hallway. She turns right through a doorway just past the flower print, on the right wall, and enters the bedroom. The flower and orange prints stay on the hallway side of that wall, to the left of the bedroom door.",
+    "Opening Hallway->Bedroom (00:03.5-00:04.5): through the bedroom door we see a bed, a brass chandelier and a window on the right. This matches the bedroom she then enters.",
+    "Space B (00:04.5-00:06.5): Bedroom. Queen bed with headboard against the back wall, an abstract print above it, a bedside table with lamp and photo, windows to the left and right of the bed, a brass chandelier, a dresser at the right edge, and two wooden dining-style chairs at the foot of the bed facing the mattress.",
+    "Bedroom pan (00:06.0-00:07.0): the camera pans left past a side table with a framed photo to a doorway on the bedroom wall, left of a window. Through it is a cream hall and a white door with a 6-pane window. Its window style differs from the half-curtained door at the end of the hallway.",
+    "Bedroom doorway wall (00:07.0-00:08.75): the blue-flower portrait print that hung in the hallway now hangs inside the bedroom, left of this doorway. A red/green landscape print is to the right, with a side table holding a photo frame below it.",
+    "Traversal 2 (00:08.0-00:09.75): she exits the bedroom through that doorway and arrives straight into Space C, a kitchen. There is no hallway between.",
+    "Space C (00:09.0-00:09.75): Kitchen 2. Dark cherry cabinets, an over-the-range stainless microwave, a gas range, a white door with a window at the far end, a small framed print, a curtained window on the right wall, and cream walls. It shares no fixture with Kitchen 1: no oak cabinets, no brick backsplash, no countertop microwave, no hood, no sink window."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Bedroom exit doorway / destination room",
+      "invariant_violated": "traversal consistent with floor plan (no duplicate rooms)",
+      "description": "Walking out of the bedroom leads directly into a second, different kitchen. It has dark cherry cabinets, an over-range microwave, a gas range and cream walls. The kitchen established at 00:00-00:02 had light oak cabinets, a brick-tile backsplash, a countertop microwave, an electric range with a hood, and a sink window. The established plan is kitchen -> hallway -> bedroom door on the hallway's right wall, so the bedroom should open onto that hallway, not into a kitchen. The two kitchens do not match, so this is not the original kitchen seen again. A bedroom door opening into a second copy of the kitchen is an impossible route under the established layout. There is no cut or time skip; it is one continuous take.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Blue-flower portrait print / bedroom doorway wall",
+      "invariant_violated": "opening sides consistent (decor belongs to established side of wall)",
+      "description": "At 00:03-00:04 the large blue-flower print hangs on the hallway side of the wall, to the left of the bedroom door. At 00:07-00:08 the same print hangs inside the bedroom, left of the bedroom's doorway. The view through that doorway (a 6-pane-window door, then a kitchen) does not match the established hallway. The wall and its opening have swapped sides, or the doorway shows the wrong far side.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Two wooden chairs at foot of bed",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two dining-style wooden chairs are pulled up and tucked against the foot of the bed, facing the mattress, as though it were a table. They are clearly visible at 00:04.5-00:05.75 and still in place at 00:06.5. Seating arranged to serve a bed as if it were a table is not a functional arrangement for a bedroom.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ]
+}

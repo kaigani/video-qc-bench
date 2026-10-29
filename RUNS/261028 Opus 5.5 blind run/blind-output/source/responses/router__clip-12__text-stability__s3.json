@@ -1,0 +1,56 @@
+{
+  "ledger": [
+    "Text elements are large black outlined digits printed on the front faces of toy cubes lined up left-to-right on a wooden table; no other readable text in scene. Small side-face glyphs (partial '6'/'G'-like shapes) are too angled/small to read and not judged.",
+    "Pos1 cube (left): starts green '2' held at 00:00.000; while handled turns blue by 00:00.750 still reading '2'; reads '2' steadily 00:01.000-00:09.750.",
+    "Pos2 cube: blue '3' first legible 00:01.250 (emerges beside pos1 while hand is on it); reads '3' steadily 00:01.500-00:09.750.",
+    "Pos3 cube (green, originally the untouched right cube at 00:00): reads '2' 00:00.000-00:02.375; reads '3' ~00:02.45-00:02.95 while fingertips rest on top (front face stays frontal, no visible rotation); reads '2' again from ~00:03.0 as a new green '3' cube splits off to its right; '2' steady 00:03.250-00:09.750.",
+    "Pos4 cube: green '3' 00:03.250-00:03.600 (held); becomes tan/orange '2' by 00:03.750 while held; tan '2' steady 00:04.000-00:09.750.",
+    "Pos5 cube: blue '3' 00:04.250 (held), light-blue '3' 00:04.500, grey/white '3' 00:04.750 onward; reads '3' steadily through 00:09.750 (color drifts, digit stable).",
+    "Pos6 cube: blue '3' 00:05.250, teal '3' 00:05.500, green '3' 00:05.600-00:05.900 (held, sharp, front-facing); reads green '5' from ~00:05.95 as another cube splits off to its right; '5' steady 00:06.000-00:09.750.",
+    "Pos7 cube: green '3' 00:06.250-00:06.500 (held, sharp); green '2' at 00:06.750 as a blue '3' cube appears to its right; '2' steady 00:07.000-00:09.750.",
+    "Pos8 cube: blue '3' 00:06.750-00:07.600 (held at right frame edge); blue '6' from ~00:07.65; '6' steady 00:07.750-00:09.750.",
+    "Final settled row 00:08.000-00:09.750: 2 3 2 2 3 5 2 6, stable across all settled frames; all glyphs are coherent digits (no garbled characters)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Pos3 green cube front-face digit",
+      "invariant_violated": "text stability (digit changes without visible face rotation)",
+      "description": "The green cube that sat untouched reading '2' from 00:00 to ~00:02.4 reads '3' from ~00:02.45 to ~00:02.95 while fingertips merely rest on its top; the same front face stays toward camera with no visible rotation. Then at ~00:03.0 it reverts to '2' as a new green '3' cube splits off its right side. The digit flips 2->3->2 on the same face with no physical action that would change it.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Pos6 green cube front-face digit",
+      "invariant_violated": "text stability (digit morph on same face)",
+      "description": "Pos6 cube reads a sharp '3' through ~00:05.9 while held front-facing, then reads '5' at ~00:05.95-00:06.0 as the hand slides right and a new cube emerges from it; no rotation of the cube is visible, the face stays frontal and the cube remains in place, so 3->5 is an unexplained glyph change.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Pos7 green cube front-face digit",
+      "invariant_violated": "text stability (digit morph on same face)",
+      "description": "Pos7 cube reads a clear green '3' at 00:06.250-00:06.500, then a green '2' at 00:06.750 as a blue '3' cube appears beside it; no visible flip of the cube between the two legible readings.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Pos4 cube front-face digit",
+      "invariant_violated": "text stability (digit and body colour change while held)",
+      "description": "Pos4 cube reads green '3' at 00:03.250-00:03.500 and, still in the hand at the same position, reads '2' on a tan/orange body by 00:03.750. A real rotation would not change the cube's body colour; the digit change accompanies an object morph rather than a visible face swap.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Pos8 blue cube front-face digit",
+      "invariant_violated": "text stability (digit change while held)",
+      "description": "Pos8 cube reads blue '3' from 00:06.750 to ~00:07.6, then '6' from ~00:07.65 onward, with the face staying frontal at the right frame edge. A rotation could in principle expose a different face, but no turning motion is visible; possible morph.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

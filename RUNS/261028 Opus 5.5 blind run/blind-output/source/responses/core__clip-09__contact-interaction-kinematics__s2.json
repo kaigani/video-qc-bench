@@ -1,0 +1,28 @@
+{
+  "ledger": [
+    "small glass cup (pouring vessel) | 00:00 gripped from above by right hand, fingers wrapped over rim, tilted over large jar mouth | 09:75 held by right hand at top of frame, near empty | pour 00:00-03:75 with fingers over rim; leaves frame top-right ~04:00 (release not visible); absent from hands 04:25-05:25; reappears filled and gripped two-handed at 05:50 with no visible pickup; second pour 06:25-08:75 with left fingertips guiding olives at rim, right hand gripping cup body",
+    "right hand | 00:00 gripping cup over jar | 09:75 gripping cup at frame top | 04:50 empty hand reaches toward steel bowl; 05:00 fingers in bowl scooping olives; 05:25 hand holds a loose clump of olives with no container; 05:50 same hands now hold filled glass cup",
+    "left hand | 00:00 resting/out of contact at frame left | 09:75 hovering above jar | 06:00-08:75 fingertips touch olives at cup lip, guiding them out; no clipping into glass observed",
+    "olives (falling) | 00:00 in cup | 09:75 settled in large jar | fall vertically from cup lip into jar and come to rest on bottom/stack; no pass-through of jar wall observed",
+    "large glass jar | 00:00 standing on cutting board, empty | 09:75 standing on board, ~2/3 full | never touched by hands; stays supported on board; no rim clipping by cup (cup stays above rim)",
+    "steel bowl | 00:00 on counter right | 09:75 on counter right | contacted by right hand 04:50-05:00 (fingers inside bowl, scooping); bowl remains stationary and supported"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "small glass cup / right hand",
+      "invariant_violated": "object appears in grip without pickup contact",
+      "description": "At 00:05.00 the right hand is bare, scooping olives directly from the steel bowl; at 00:05.25 it holds a loose clump of olives with no container visible; at 00:05.50 the hands are suddenly gripping the filled glass pouring cup. No moment of reaching for, touching, or grasping the cup is visible — the vessel materializes inside the grip between consecutive frames.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "olives exiting cup / right-hand fingers",
+      "invariant_violated": "objects passing through occluding fingers",
+      "description": "During 00:02.00-00:02.75 the right-hand fingers drape fully across the cup mouth while olives continue to emerge below the fingertips into the jar, as if passing through the fingers rather than around them; the gap needed for the olives is not visible.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

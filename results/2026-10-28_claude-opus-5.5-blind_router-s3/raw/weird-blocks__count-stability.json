@@ -1,0 +1,121 @@
+{
+  "ledger": [
+    "Group: numbered toy cubes (with top peg) on a table, built into a row by one hand; not a magic performance framing.",
+    "00:00.000: 2 cubes - green '2' held at left, green '2' standing at right.",
+    "00:00.250-00:00.750: held left cube rotated in hand; its colour shifts green -> blended green/blue (00:00.5) -> fully blue '2' (00:00.75). Count still 2.",
+    "00:01.000-00:01.250: a second blue cube ('3') emerges from the side of the held blue cube; no cube brought in from off-screen. Count 2 -> 3 (blue 2, blue 3, green 2).",
+    "00:01.500-00:02.250: stable 3 (blue 2, blue 3, green 2).",
+    "00:02.500-00:02.750: hand touches the green cube; its face reads '3' (rotation plausible). Count 3.",
+    "00:03.000-00:03.250: the held green cube splits into two - green '2' remains and a green '3' emerges to its right. Count 3 -> 4.",
+    "00:03.500-00:03.750: green '3' slid right; it turns into a peach/beige '2' cube. Count 4.",
+    "00:04.000-00:04.250: a blue cube emerges from the right side of the peach cube while held; count 4 -> 5.",
+    "00:04.500-00:04.750: that blue cube becomes light grey/white '3'. Row: blue2, blue3, green2, peach2, grey3 = 5.",
+    "00:05.000-00:05.250: a blue '3' cube emerges from the right of the grey cube, no source; count 5 -> 6.",
+    "00:05.500-00:05.750: held blue '3' turns teal -> green '3'. Count 6.",
+    "00:06.000-00:06.250: the green '3' now reads '5' and another green '3' cube emerges to its right; count 6 -> 7.",
+    "00:06.500-00:06.750: held green '3' moved right; it becomes green '2' and a blue '3' cube appears to its right; count 7 -> 8.",
+    "00:07.000-00:07.750: blue cube held at right edge, face 3 -> 6 (rotation possible). Count 8.",
+    "00:08.000-00:09.750: stable 8 cubes (blue2, blue3, green2, peach2, grey3, green5, green2, blue6); hand hovers/touches left cubes, no further change."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered cubes (second cube from left, blue '3')",
+      "invariant_violated": "count change without visible cause",
+      "description": "The hand holds a single blue cube; between 00:00.75 and 00:01.25 a second blue '3' cube materialises out of the side of the held cube. No cube is picked up or carried in from off-screen. Count goes 2 -> 3.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "numbered cubes (green '2' / green '3')",
+      "invariant_violated": "count change without visible cause",
+      "description": "The single green cube being handled (showing '3' at 00:02.75) splits at 00:03.0-00:03.25 into a green '2' and an additional green '3' cube. No new cube is brought in. Count 3 -> 4.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered cubes (fifth cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:04.0-00:04.25 a blue cube emerges from the right side of the peach cube the hand is touching; nothing is carried in. Count 4 -> 5.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "numbered cubes (sixth cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:05.0-00:05.25 a blue '3' cube appears out of the right side of the grey '3' cube under the hand, with no source. Count 5 -> 6.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "numbered cubes (sixth/seventh cubes)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:06.0 the green '3' cube now reads '5' in place and a further green '3' cube emerges beside it; count 6 -> 7 with no cube brought in.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "numbered cubes (seventh/eighth cubes)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:06.5-00:06.75 the single held green '3' becomes a green '2' and a blue '3' cube appears to its right; count 7 -> 8 with no visible source.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "leftmost cube",
+      "invariant_violated": "object identity/colour transformation without cause",
+      "description": "The held green '2' cube gradually changes colour to blue (blended green/blue at 00:00.5, fully blue including top at 00:00.75) while merely being rotated in hand.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "fourth cube",
+      "invariant_violated": "object identity/colour transformation without cause",
+      "description": "The green '3' cube slid right at 00:03.5 becomes a peach/beige '2' cube at 00:03.75 with no swap or occlusion explaining it.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "fifth cube",
+      "invariant_violated": "object identity/colour transformation without cause",
+      "description": "The newly emerged blue cube (00:04.25) turns light grey/white '3' by 00:04.5-00:04.75 while held.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "sixth cube",
+      "invariant_violated": "object identity/colour transformation without cause",
+      "description": "The blue '3' cube at 00:05.25 shifts to teal and then green '3' by 00:05.75 while held, then its face reads '5' at 00:06.0 while it sits in place.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "video": "weird-blocks.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-12__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-12.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-12__count-stability.json",
+  "frozen_source_sha256": "2fe26fad769926bb18c38a29b23a9e56470106f89677d4234e223c367e59abe3",
+  "key": "weird-blocks__count-stability",
+  "parseOk": true
+}

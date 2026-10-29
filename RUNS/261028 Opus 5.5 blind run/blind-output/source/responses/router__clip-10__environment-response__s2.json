@@ -1,0 +1,20 @@
+{
+  "ledger": [
+    "Wind: no evidence of airflow anywhere. Trees, short hair and the black T-shirt/trousers show no streaming or flutter across 0:00-0:10. Everything is consistently still, so there is no partial-response problem.",
+    "Sun/shadows: hard sunlight. The sun is in frame behind and above the skater at 0:01.5-0:03.5, so his shadow falls toward or off camera. From 0:04.5-0:07.5 the shadow falls to the lower left. At 0:09.0-0:09.75 a cast shadow is on the bowl floor. The direction fits a sun moving relative to the orbiting camera, and nothing contradicts it.",
+    "Gravity, first trick (approx. 0:01.6 takeoff to 0:03.1 landing; checked with 8 fps re-extraction): the skater and board stay airborne for about 1.4-1.5 s. From 0:01.75-0:02.75 the tucked pose and board height above the ground/horizon line stay almost unchanged. A flat-ground flip trick should last about 0.5-0.7 s.",
+    "Gravity, second trick (approx. 0:08.0 takeoff to 0:09.1-0:09.25 landing): about 1.0-1.1 s in the air, which includes a drop off the coping into the bowl. That is borderline but plausible given the height difference.",
+    "Board vs rider: the board stays under the feet and comes back onto them. There are no free-falling loose objects to compare against.",
+    "Camera motion: a handheld/orbiting low-angle fisheye. The background shifts on screen, so object deformation was used rather than screen displacement."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "skater and skateboard during first flip trick",
+      "invariant_violated": "gravity / ballistic hang time",
+      "description": "From takeoff around 0:01.6 to landing around 0:03.1, the rider and board stay airborne for about 1.4-1.5 s. Between 0:01.75 and 0:02.75 they hold a nearly fixed tucked pose at a nearly constant height relative to the horizon, with no visible rise and fall. Ballistically, that hang time needs a jump of about 2.5 m, which the framing does not show (the ground and coping stay at the same screen level), so the rider and board seem to float with gravity weakened.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

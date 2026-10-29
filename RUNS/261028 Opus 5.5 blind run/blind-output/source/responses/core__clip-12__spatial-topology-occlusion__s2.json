@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "camera | static locked-off, low angle on wooden tabletop, dark chair backs behind table edge | unchanged | no cuts or moves; background chair/table-edge layout constant throughout",
+    "tabletop & background | table edge horizontal at upper quarter, chair silhouettes behind | same | consistent with static camera; no layout changes",
+    "cube row (left-to-right order) | 0:00 green cube at left (x~50-135) and green '2' cube at x~210-275 with a gap between | 9:75 eight cubes in a tight row: blue2, blue3, green2, orange2, white3, green5, green2, blue6 | row grows rightward one cube at a time; the original right-hand green '2' stays at slot 3 the whole time; the left cube slot stays fixed",
+    "hand | enters from top, works at the right end of the row as it grows; returns left 8:25-9:75 | rests on blue2/blue3 at end | fingers/thumb correctly occlude cube faces when in front; cube tops occlude the lower finger at contact; no background-over-foreground rendering",
+    "new-cube generation | each new cube splits off the cube the hand holds: the held cube slides right and a new cube occupies its old spot (around 1:00, 3:00, 4:00, 5:00, 6:00, 7:00) | ends with 8 cubes | for a few frames the two cube volumes overlap in the same space, with no clean depth ordering between them",
+    "occlusion between adjacent cubes | from the camera, side faces of nearer cubes show connector pegs; adjacent cubes butt together without overlap once settled | settled row is consistent | overlap only during split transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "left cube pair (blue '2' and emerging blue '3')",
+      "invariant_violated": "solid interpenetration / depth ordering",
+      "description": "While the hand pulls the held cube right, a second cube emerges from the same volume. At 1.0s the right half of the blue cube and the new cube overlap and blend in the same space; neither surface consistently occludes the other until they separate at about 1.25s.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "green cube at slot 3 and new cube at slot 4",
+      "invariant_violated": "solid interpenetration / depth ordering",
+      "description": "Dense frames from 2.9 to 3.1s show the green '3' cube being slid right while a green '2' cube materializes in the same footprint. For several frames the two cubes share overlapping volume, with blended faces ('2' and '3' merged in one blob) and no consistent occlusion edge between them.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "green '5' cube at slot 6 and held cube at slot 7",
+      "invariant_violated": "solid interpenetration / depth ordering",
+      "description": "From 5.9 to 6.0s the held cube's left part sits inside the green '5' cube's volume. The '5' face renders over the held cube's half-visible digit, then the held cube pops to the right as a separate solid. Two rigid cubes cannot occupy the same space this way, and the occlusion boundary jumps instead of changing smoothly.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

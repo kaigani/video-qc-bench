@@ -1,0 +1,58 @@
+{
+  "ledger": [
+    "Verified true mirror: large gold-framed bathroom mirror; the subject (white shirt, back to camera) and his frontal reflection are both visible in every frame 00:00-00:09.75",
+    "Subject holds a straight razor/blade in the right hand throughout; the reflection shows the raised hand on the image-right side, which is consistent mirror handedness",
+    "00:00-00:01.50: subject shaving chin/jaw with chin raised; reflection is also shaving the jaw with chin raised. Broadly consistent, but at 00:00.25 the real razor is held vertically, clear of the chin, while the reflected blade presses on the jaw (ambiguous because of depth)",
+    "00:01.75: subject's hand is at the side of the face near the cheekbone/temple, blade angled up; reflection shows the blade across the nose bridge",
+    "00:02.00-00:04.00: subject holds the razor up in the hair above and beside the right ear/temple, like combing at the side hairline, with the head fairly upright; reflection shows a fist on the centre forehead/brow, blade horizontal across the brow, and the head bowed with eyes down",
+    "00:04.25-00:04.75: subject's hand comes down to the cheek/eye level; reflection shows the blade at the eye/nose. Roughly consistent",
+    "00:05.00-00:08.75: subject shaving chin, jaw and upper lip; reflection is shaving the jaw/lip in step. Broadly consistent apart from small blade-position offsets",
+    "00:09.00-00:09.25: subject's head is tilted strongly back (chin up) and at 00:09.25 the razor is held upright, clear of the face; reflection's head is level, looking straight out, with the blade pressed flat on the left jaw",
+    "00:09.50-00:09.75: subject raises the razor to the cheek/temple; reflection shows the blade at the upper lip/nose. Minor offset"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "mirror reflection of subject's razor hand and head",
+      "invariant_violated": "reflection must show current pose / prop position",
+      "description": "From 00:02.00 to 00:04.00 the real subject holds the razor in the hair at the side of his head, above the right ear/temple, with his head roughly upright. The reflection instead shows the fist and a horizontal blade on the centre of the forehead/brow, with the head clearly bowed and the eyes cast down. Viewing angle cannot move the prop from the side hairline to the front of the forehead or change the head tilt.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "mirror reflection head tilt and razor contact",
+      "invariant_violated": "reflection must show current pose / prop position",
+      "description": "At 00:09.00-00:09.25 the real subject's head is tilted far back with the chin up, and at 00:09.25 the razor is held upright, clear of the face. The reflection's head is level and looking straight ahead, and its blade is pressed flat against the jaw.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "mirror reflection razor position",
+      "invariant_violated": "prop at mirrored position",
+      "description": "At 00:01.75 the real razor is at the outer side of the face near the cheekbone/temple, blade pointing up. In the reflection the blade lies across the nose bridge near the centre of the face, which does not match the side-of-face placement.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "mirror-pose-consistency",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-07__mirror-pose-consistency__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-07__mirror-pose-consistency.json",
+  "frozen_source_sha256": "efbfe105c7456b850e0e12efd0a0c9353b01c82caf4b6b4ced6b0a1bdfa17711",
+  "key": "man-in-mirror__mirror-pose-consistency",
+  "parseOk": true
+}

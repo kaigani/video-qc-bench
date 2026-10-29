@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "performer right hand (frame-left) | 00:00 pinches single gold coin between thumb and index above table, contact visible | 00:09.75 pinching small coin above back cup cluster | 00:00.75-01:00 hand sweeps toward front cup (motion blur, coin hidden in fingers); 01:25-02:00 fingers wrap over rim of front cup, reaching inside; 02:25 lifts coin stack out of front cup with fingertip grip visible; 02:50-03:25 coin pinched at fingertips over cup mouth; 03:50-04:25 coin held at fingertips at front cup rim; 04:50-06:00 fingertips rest on top rim of front cup while a coin sits flush on the cup's outer face; 06:25-09:75 repeated pinching of coins above the cups, contact maintained",
+    "performer left hand (frame-right) | 00:00-02:00 resting/hovering near top-left of frame, fingers curled | 09:75 resting flat on table beside cups | 03:50-07:00 fingertips touch rear cup rim and pinch a coin beside it; 07:50-09:75 hand slides to table surface near cups, palm/fingers resting on cloth with visible contact",
+    "front-left steel cup | 00:00 upright on cloth, coins inside | 09:75 upright in cup cluster | hand-over-rim contact 01:25-02:25; coin stack removed through mouth 02:25 without cup moving (cup supported by table throughout)",
+    "middle cup with coin stack | 00:00 upright, coin stack visible in mouth | end upright in cluster | no direct hand contact observed",
+    "gold coin in front-hand pinch | 00:00 pinched edge-on by thumb/index | 09:75 pinched over cups | 04:50-06:00 appears pressed flat against outer wall of front cup with only fingertip edge contact",
+    "seated performer body/arms | 04:50 seated at table, forearms extended over cloth | 09:75 seated, arms extended over table | elbows/wrists bend naturally; no clipping of sleeves into table observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04.75",
+      "entity": "gold coin held at front cup by performer's right hand",
+      "invariant_violated": "solidity / contact (coin fused with cup wall)",
+      "description": "From ~04:50 to ~06:00 the coin sits flat and flush on the outer face of the front cup as if embedded in or merged with the metal wall, while the fingertips rest mostly on the cup rim rather than gripping the coin; the coin has no visible edge separation from the cup surface and is not clearly supported by the fingers, reading as coin/cup interpenetration or an unsupported coin.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-06.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__contact-interaction-kinematics__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

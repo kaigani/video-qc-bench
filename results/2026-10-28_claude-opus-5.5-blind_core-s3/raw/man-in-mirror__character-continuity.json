@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    "Man (real, over-shoulder foreground) | dark short swept-back hair, dark sideburns/stubble, white open-collar button-up shirt, seated/standing at left of frame facing right toward mirror, small white razor in right hand at chin | same wardrobe/hair at 09.75, still at frame left facing mirror, hand at cheek/brow | single continuous shot, no cuts; hand travels chin -> cheek -> temple/hair (01.75-04.25) -> chin/cheek again; at ~09.00 hand shown pinching at chin with no razor visible",
+    "Man (mirror reflection) | same face, dark swept-back hair, white open-collar shirt, positioned center-right inside mirror facing camera, razor in hand at chin | same identity/wardrobe at 09.75, razor at nose/upper lip | identity stable throughout; during 02.00-04.00 head bowed with razor held flat at center forehead/brow; at 04.25 eyes open looking at lens; at ~09.00 razor clearly held against left cheek while real hand shows no razor",
+    "Relative placement real vs reflection | real at frame left, reflection at frame center-right, consistent with camera behind man's right shoulder | unchanged | no cuts or camera changes; placement stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man - real body vs mirror reflection (razor hand position)",
+      "invariant_violated": "reflection must mirror real pose",
+      "description": "From ~02.25 to ~04.00 the real man's right hand holds the razor up in the hair at the side/top of his head above the right ear (as if combing), while the reflection shows the hand and razor held horizontally across the center of the forehead/brow with the head bowed. The reflected hand placement does not correspond to the real hand position visible over his shoulder.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Man - real body vs mirror reflection (hand/head pose)",
+      "invariant_violated": "reflection must mirror real pose",
+      "description": "At ~09.00 the real man has his head tilted up and his hand low at the chin with fingers pinched and no razor visible, whereas the reflection shows the head nearly level and the hand raised holding the razor clearly against the cheek. The reflection's pose diverges from the real figure in the same instant.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__character-continuity__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-07__character-continuity.json",
+  "frozen_source_sha256": "04836b62e4803e77eb07ee440f51baf1898fadfd7179990dd8baf36acad592c4",
+  "key": "man-in-mirror__character-continuity",
+  "parseOk": true
+}

@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "Kitchen A (start room) | oak upper/lower cabinets, brick-tile backsplash, countertop microwave on right side of frame, doorway to hallway on left | left behind by 0:01.5, never seen again | camera follows woman out of it through doorway left of flower print",
+    "Kitchen doorway / hallway | white-trimmed opening left of flower print; hallway beyond runs straight to a white paneled door with curtained window and ceiling light | traversed 0:01.0-0:03.0 | stove/sink/window run sits at the left side of this passage as camera enters; geometry ambiguous but not flagged",
+    "Flower print (blue flower / figure, dark frame) | on grey hallway-side wall immediately right of kitchen doorway, small orange framed print to its right, light switches below | 0:07.0-0:08.5 appears on a grey wall INSIDE the bedroom, left of the bedroom's exit doorway | visible 0:00-0:04.5 on hallway wall left of bedroom door; reappears inside bedroom 0:07.0",
+    "Small orange framed print | right of flower print on hallway wall | last seen 0:04.5 at left edge as camera enters bedroom | consistent while visible",
+    "Bedroom doorway (entry) | opening right of flower/orange prints on hallway wall, entered by turning right at 0:03.5-0:04.25 | n/a | entry from side of hallway",
+    "Bedroom | bed headboard on far wall, chandelier center, abstract painting above bed, nightstand+lamp left of bed, window right of bed, second window left of nightstand (revealed 0:05.5), small table with photo frame left of left window | camera pans left 0:06.0-0:07.5 revealing a doorway on the left/back wall | pan reveal order window->doorway is self-consistent",
+    "Bedroom exit doorway | doorway with flower print on its left and red/green geometric print on its right, window+curtain further right, photo table below | traversed 0:08.5-0:09.25 | corridor beyond leads straight to a second kitchen",
+    "Kitchen B (end room) | dark cherry cabinets, over-range microwave, stainless gas range on left, white door at end, small framed print, window on right | visible 0:08.5-0:09.75 | does not match Kitchen A and is reached from the bedroom rather than via the original hallway",
+    "Woman (moving occluder) | walks ahead of camera throughout | occludes background prints/doorways correctly; no depth-order inversions seen | no background-over-foreground errors observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Flower print (blue flower/figure in dark frame)",
+      "invariant_violated": "fixed-object location consistency",
+      "description": "The flower print was established on the hallway-side wall, right of the kitchen doorway and left of the bedroom entry (0:00-0:04.5). After the camera pans around inside the bedroom, the same print appears hung on a grey bedroom interior wall immediately left of the bedroom's exit doorway (0:07.0-0:08.5), on the same wall plane as the bedroom switch plate and photo table. A hallway fixture cannot be on the bedroom side of the wall; the print has migrated/duplicated into the bedroom.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Bedroom exit doorway / space beyond (Kitchen B)",
+      "invariant_violated": "room connectivity",
+      "description": "The woman entered the bedroom by turning right off a hallway whose only established neighbor was Kitchen A (oak cabinets, brick backsplash, countertop microwave). On exiting the bedroom through a doorway, the corridor beyond leads straight into a different kitchen with dark cherry cabinets, an over-range microwave, a stainless gas range and a window, which matches neither the hallway outside the bedroom door nor Kitchen A. The room graph does not close consistently: the bedroom's doorway opens onto an unestablished second kitchen instead of the hallway it was entered from.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

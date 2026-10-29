@@ -1,0 +1,18 @@
+{
+  "ledger": [
+    "woman (denim jacket) | 00:00 torso rises out of the hood/cowl area in front of the windshield, ahead of the A-pillar, door and side mirror; forearms folded and resting on the hood top | 09:75 same folded-arm lean, close-up, torso still emerging from the same cowl/hood region with the windshield behind her | no limb repositioning; arms stay crossed throughout; slight torso sway and head turn; forearm contact with the hood stays continuous with no float",
+    "woman forearms <-> hood surface | contact already established at 00:00; forearms lie flat on the sheet metal with plausible compression and a contact shadow | still in contact at 09:75 | never released; support looks plausible for the arms alone",
+    "woman torso <-> car body (hood/cowl/fender) | 00:00 lower torso hidden inside solid hood/cowl panel; no window or opening there (driver window and mirror are further back) | 09:75 unchanged | body occupies solid car geometry for the whole clip",
+    "station wagon | 00:00 parked beside desert road, front 3/4 view | 09:75 close framing on cowl/windshield | camera push-in; no physical contact interactions with other objects"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman's torso / car hood-cowl",
+      "invariant_violated": "solidity / no pass-through",
+      "description": "The woman's torso comes up through the solid hood/cowl panel in front of the windshield. The windshield and wipers are behind her, and the driver's door, window and side mirror are clearly further back (mirror visible to her right at 00:00-03:00). No opening exists there, so her body is passing through the car's sheet metal. This lasts the whole clip (e.g. 05:00, where the wipers sit beside her chest), so she is never actually supported by a seat or window frame.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ]
+}

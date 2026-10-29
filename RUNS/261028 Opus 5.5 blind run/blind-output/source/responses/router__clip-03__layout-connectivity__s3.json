@@ -1,0 +1,24 @@
+{
+  "ledger": [
+    "Single space: dance studio, static camera, 0:00-0:09.75, no cuts or time skip; one dancer seen from behind plus her mirror reflection",
+    "Real left wall (frame x~0-280): ONE single-leaf dark door (x~110-270) with a glazed panel, handle on its left edge, one EXIT sign centered above it (x~185); to the left of the door, plain wall with a thermostat/control panel (x~70-100) and an outlet; small dark switch between the door and the mirror corner",
+    "Back wall (x~280 to right edge): floor-to-ceiling mirror panels with black base trim; no physical openings",
+    "Opening (real door window): shows exterior, i.e. a parking lot with cars, light poles and trees; consistent across all frames",
+    "Mirror reflection, left side (x~285-545): DOUBLE door in one shared dark frame. Two leaves, each with a glazed panel showing the same exterior parking lot, and TWO EXIT signs (x~358 and x~497). The reflected thermostat/panel appears to the RIGHT of the second leaf (x~555-570)",
+    "Mirror reflection, center/right: plain cream wall with corner at x~840, then the wall behind the camera holding a double ballet barre on floor brackets, a framed dark poster, a blue storage bin and an outlet. Functionally sensible: barre along the wall, bin on the floor",
+    "Reflected dancer: pose and arm sides mirror the real dancer correctly in every frame checked (0:00, 0:01.25, 0:02, 0:04, 0:05.5, 0:07, 0:09.75)",
+    "Traversals: none; the dancer stays at one floor position and does port de bras and a tendu/relevé",
+    "Functional arrangement: barre, bin and poster all serve a dance studio; no misused furniture",
+    "Confounds considered: an off-screen second door further left on the real wall would appear in the reflection beyond the thermostat, not between the door and the thermostat, so it cannot explain the reflected double door. Wide-angle distortion cannot create an extra door leaf or extra exit sign"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Mirror reflection of the left-wall door (reflected double door with two EXIT signs)",
+      "invariant_violated": "mirror/far-side view must match the established room",
+      "description": "The real left wall has one single-leaf door with one EXIT sign above it and only plain wall with a thermostat to its left. The mirror shows a double door: two glazed leaves in a shared frame, clearest at 00:05.5 and 00:09.75, with two EXIT signs. The reflected thermostat sits to the right of the second leaf. That puts an extra door and extra exit sign at a spot the real image shows as blank wall between the door and the thermostat. The reflection is inconsistent with the real layout throughout the clip (00:00-00:09.75). No off-screen connection or lens effect explains it.",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ]
+}

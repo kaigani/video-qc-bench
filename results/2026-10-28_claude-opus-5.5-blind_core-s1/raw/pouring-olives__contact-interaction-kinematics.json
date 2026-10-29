@@ -1,0 +1,48 @@
+{
+  "ledger": [
+    "small glass pouring bowl | 00:00 gripped from above by both hands (fingers wrapped on rim/side), tilted over jar mouth | 09:75 held in right hand near top of frame | contact continuous 00:00-04:00 while pouring; 04:00-04:25 blurred in right hand during fast move; 04:50-05:00 both hands visibly empty at/in steel bowl with no bowl set down anywhere; 05:25-05:50 bowl reappears filled in both hands; pours 06:25-08:75 with plausible two-hand grip",
+    "right hand | 00:00 wrapped over bowl rim pouring | 09:75 holding bowl at top right | 04:25-05:00 reaches into steel bowl, fingers contact olives; 05:00 cupped scoop of olives; trajectories continuous, no joint anomalies",
+    "left hand | 00:00 fingers on bowl from left | 09:75 fingers near bowl | 04:75 rests open on steel bowl rim (supported); otherwise steady on pouring bowl",
+    "large glass jar | 00:00 empty, resting flat on cutting board | 09:75 filled with green and dark olives, still resting on board | never touched by hands; no movement; olives inside rest on bottom and on each other",
+    "falling olives | leave tilted bowl lip from 00:50 | settle on jar bottom/pile | most show continuous fall streaks; jar pile at times grows faster than the visible stream (00:50, 01:50-01:75)",
+    "steel bowl of olives | 00:00 ~12 green olives on counter | 09:75 a few green olives plus dark/brown pieces | hand contacts at 04:50-05:00 and scoops; olive count drops when scooped; bowl itself never moves",
+    "white/grey bowl of olives (front right) | 00:00 full of green olives | 09:75 unchanged | never touched"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "small glass pouring bowl / right hand",
+      "invariant_violated": "held object vanishes without release (contact continuity)",
+      "description": "The glass bowl being gripped for pouring is last seen blurred in the right hand around 00:04.00-00:04.25. At 00:04.50-00:05.00 both hands are visibly empty (right hand fingers in the steel bowl, left hand resting open on the steel bowl rim) and the glass bowl is not set down anywhere in frame. At 00:05.25-00:05.50 it reappears, already filled, in both hands. There is no release, put-down, or pick-up contact event, so the object disappears from the grip and comes back.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "olives landing in jar",
+      "invariant_violated": "effect without contact / no continuous trajectory",
+      "description": "Between 00:01.50 and 00:01.75 the pile in the jar jumps from about 6 olives to about 13 (many of them dark), while only a thin stream of one or two green olives is visibly leaving the bowl. Several olives arrive in the pile with no falling path from the pouring vessel. A similar dark olive is already resting on the jar bottom at 00:00.50 just as the pour begins.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-09__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "8451c3954ef8637be3f201911f79fe7584082d6ecfa7a41cc77bd85a6576eb3d",
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "parseOk": true
+}

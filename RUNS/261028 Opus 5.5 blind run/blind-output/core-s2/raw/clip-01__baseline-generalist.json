@@ -1,0 +1,99 @@
+{
+  "ledger": [],
+  "findings": [
+    {
+      "timestamp": "01:51",
+      "entity": "waitress (blue shirt, white apron)",
+      "invariant_violated": "character duplication",
+      "description": "In the sunlit wide shot the waitress rises from a stool on the customer side and moves along the counter; around 01:51.5-01:52 a second, identically dressed waitress materializes at the far end of the counter while the first is still in the foreground. Both are visible at once (01:52-01:55), and then only one remains. Nothing sets up a second waitress, so this is a spawned duplicate figure.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress / counter",
+      "invariant_violated": "object passes through solid geometry",
+      "description": "The waitress goes from the customer side of the counter, by the stools, to the working side behind it (01:52 to 01:53) without walking around the end of the counter or through a gap. Her body seems to pass through the counter.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:20",
+      "entity": "waitress / counter",
+      "invariant_violated": "teleport through counter",
+      "description": "In the morning wide shot she stands behind the counter facing the man (01:20.0-01:20.4). Within about 0.5-1 s she is sitting beside him on the customer side (01:20.8-01:21.2), with no path around the continuous counter. She effectively passes through it.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "man's truck",
+      "invariant_violated": "prop identity continuity",
+      "description": "The opening shots show a white cab-over-style semi tractor with no trailer, parked beside the diner. When the man leaves at 01:41 he walks to a completely different vehicle: a dark green conventional-cab straight box truck with chrome stacks.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:18",
+      "entity": "interior neon window signs",
+      "invariant_violated": "text orientation / legibility",
+      "description": "Seen from inside the diner, the window neon sign reads 'OPEN' the right way round. A sign facing the street would look mirrored from inside. The second neon sign beside it is garbled, unreadable glyphs ('O|O'). In the exterior shot at 00:10 the sign also renders as unreadable red shapes. Both are typical AI text artifacts.",
+      "severity": "minor",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "diner building interior vs exterior",
+      "invariant_violated": "set/location continuity",
+      "description": "From outside (00:00-00:10) the lit windows show a small, stark, white-walled room with cool fluorescent light and stainless equipment. The interior shots that follow show warm tones, a long curved counter with stools, a row of booths along big windows, and a pass-through kitchen. The exterior footprint and window layout do not match this interior.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "window light in close interior shot",
+      "invariant_violated": "lighting / time-of-day continuity",
+      "description": "The exterior establishes deep dusk or night, and the wide interior shots from 00:18 show dark blue windows. Yet the close counter shot (00:10-00:18) has a bright white daylight window at frame left.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:44",
+      "entity": "diner layout in reverse angle",
+      "invariant_violated": "spatial geography continuity",
+      "description": "In the wide shots the man sits at the end of the curved main counter, with the waitress across the counter serving him. In the reverse shot at 00:44.9 he sits at a separate small counter beside a glass-door refrigerator and a lit EXIT door, while she works at a back counter well away from him. That geography does not match the established room.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "01:12",
+      "entity": "coffee mug",
+      "invariant_violated": "prop count continuity",
+      "description": "In the over-the-counter two-shot only one mug sits in front of the man (01:09-01:11). At 01:12 two mugs are on the counter: one in his hands and one under the waitress's hand. By 01:13-01:14 there is only one again.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "man's position / waitress",
+      "invariant_violated": "blocking continuity",
+      "description": "Before the food insert the man sits side-on at the counter with the waitress pouring coffee across from him. In the next wide shot (00:36) he sits square to camera at the end of the counter, plate in front of him, and the waitress has vanished from the room. Neither his position nor her exit is accounted for.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

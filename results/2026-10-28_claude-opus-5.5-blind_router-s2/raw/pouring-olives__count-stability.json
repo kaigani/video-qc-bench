@@ -1,0 +1,69 @@
+{
+  "ledger": [
+    "00:00.0 jar: 0 olives (empty). Small glass bowl in hand: green olives only (no dark olives visible). Steel bowl: ~9 green olives. Ceramic bowl (right): ~10+ green olives.",
+    "00:00.5 first pour starts from green-only glass bowl; a dark olive is already at the jar bottom (blurred).",
+    "00:01.0-00:01.25 jar: ~3-5 olives, mix of green and dark, while only green olives are being poured.",
+    "00:01.75 jar (sharp): ~12 olives, ~7 dark purple + ~5 green; glass bowl still shows only green olives.",
+    "00:03.0-00:04.25 jar: ~20 olives, stable (green + dark), glass bowl set aside; steel bowl ~9 green, ceramic bowl unchanged.",
+    "00:04.5 steel bowl: ~9 green olives only; hand reaches in.",
+    "00:05.0 hand scoops olives from steel bowl into glass bowl (visible removal cause).",
+    "00:05.25 steel bowl: ~2 green olives plus ~2 brown nut/pit-like objects that were not present before; jar unchanged ~20.",
+    "00:05.75-00:06.25 glass bowl in hand: green olives only.",
+    "00:06.75-00:07.25 glass bowl now contains several dark purple olives alongside green; steel bowl now ~4-5 green + brown objects.",
+    "00:07.5-00:08.75 second pour: green and dark olives fall into jar (visible add). Steel bowl ~6 green + brown objects with no visible addition.",
+    "00:09.0-00:09.75 jar: ~35-40 olives (mix green/dark/grey), increase explained by second pour. Ceramic bowl green olives remain."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "olives poured into jar (first pour)",
+      "invariant_violated": "kind transformation without cause",
+      "description": "The glass bowl being poured contains only green olives (00:00.0-00:01.75), yet dark purple olives appear in the jar from the first moment (00:00.5) and by 00:01.75 roughly 7 of ~12 olives in the jar are dark purple. No dark olives are seen in the source bowl or falling; green olives effectively become dark olives on landing.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives in glass bowl (second scoop)",
+      "invariant_violated": "kind transformation without cause",
+      "description": "The glass bowl is refilled from the steel bowl, which held only green olives (00:04.5), and appears green-only at 00:05.75-00:06.25, but at 00:06.75-00:07.5 it contains several dark purple olives with no dark source in view.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "contents of steel bowl",
+      "invariant_violated": "unexplained object appearance",
+      "description": "At 00:04.5 the steel bowl holds only ~9 green olives. After the scoop, at 00:05.25 it holds ~2 green olives plus ~2 brown nut/pit-like objects that were never seen or added; these brown objects persist through 00:09.75.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "green olives remaining in steel bowl",
+      "invariant_violated": "count increase without visible cause",
+      "description": "After the scoop the steel bowl holds ~2-3 green olives (00:05.25-00:05.75). With nothing added, the count grows to ~4-5 at 00:06.75 and ~6 green olives at 00:08.25-00:09.5.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__count-stability__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-09__count-stability.json",
+  "frozen_source_sha256": "da3aca948f8e21bee22148a707c87dc246199940f225e567695271b5380be1e2",
+  "key": "pouring-olives__count-stability",
+  "parseOk": true
+}

@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "camera | 0:00 front-left three-quarter wide of parked station wagon, grille and near (wood-panel) side visible | 9:75 tight profile-ish close-up of woman with hood and road behind | single continuous push-in/arc toward woman, no cuts",
+    "station wagon body | front faces camera-left, hood diagonal, near side with wood panels and door mirror at right | same orientation, only hood/A-pillar/window frame in view | car orientation in frame changes only modestly from 0:00 to ~5:00",
+    "woman | torso rising above hood at near-side cowl, just left of near A-pillar/door mirror, arms crossed resting on hood/fender, windshield and cabin seats visible behind her | same placement, arms on hood, A-pillar and side window behind/right of her | lower body never visible; hood and near fender run continuously beneath her arms",
+    "windshield / cabin | windshield with wipers behind woman, steering wheel/seats visible through glass to her left and behind her | windshield and side-window frame behind her right shoulder, seat visible through glass | woman consistently occludes windshield base",
+    "door mirror | on near front door just right of woman's elbow | exits frame right ~4:50 as camera pushes in | consistent",
+    "antenna | on far-left cowl/fender at base of windshield | same position near wiper base | consistent",
+    "roof rack | spans roof above windows | partially visible at top right until ~8:00 | consistent",
+    "background road | 0:00-3:50 asphalt shoulder/road edge only at lower left, open desert scrub field directly behind hood | 4:50+ two-lane highway with yellow center dashes and white edge line receding to vanishing point directly behind hood/antenna | transition 3:50-4:50 while car orientation barely changes",
+    "telephone poles | absent at 0:00-4:25 | appear from 4:50 along road at left, multiple by 6:00-8:00 | drift right with camera move",
+    "mountains | low purple range on horizon throughout | same | consistent general shape"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman relative to car hood/cowl",
+      "invariant_violated": "impossible geometry / depth ordering",
+      "description": "The woman's torso emerges from the hood at the near-side cowl, outside the windshield (cabin seats and windshield glass visible behind her) yet with the hood and near fender continuing uninterrupted beneath her crossed arms. There is no physical space for a standing body there \u2014 her lower body would have to be inside the engine bay. She is neither inside the cabin nor standing beside the fender (no body occluding the fender/wood panel). The impossible placement persists through the entire push-in.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "background road layout behind hood",
+      "invariant_violated": "layout consistency across viewpoint",
+      "description": "Between ~3.5s and ~4.5-5.0s the car's orientation in frame is nearly unchanged, but the background directly behind the hood changes from an open desert scrub field with only a road edge at far left to a straight two-lane highway with yellow center dashes receding to a vanishing point, plus telephone poles that were absent earlier. The modest camera move does not account for the road swinging into the region previously occupied by scrubland.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__spatial-topology-occlusion__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-14__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "eba2582b2af340b03de4532867630fd913aa678989fb11e1798fe584a5a41fcc",
+  "key": "woman-car__spatial-topology-occlusion",
+  "parseOk": true
+}

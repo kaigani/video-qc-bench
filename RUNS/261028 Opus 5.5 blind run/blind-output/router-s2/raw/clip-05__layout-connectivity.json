@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "Space A, kitchen 1 (00:00-00:02.5): light oak cabinets, multicolor brick-tile backsplash, countertop stainless microwave, gas range on the left run with the sink under a curtained window. Opens at the far end into a hallway",
+    "Space B, hallway (00:01.5-00:03.5): continues straight from kitchen 1 and ends at a white panel door with a sheer curtain. Right wall is grey, with a framed blue-flower portrait print, a small orange print and a light switch. A doorway on the right, past the prints, leads to the bedroom",
+    "Traversal 1 (00:03.25-00:04.5): woman turns right from the hallway through the doorway into the bedroom. The doorway showed a bed, lamp and chandelier from the hallway side, consistent with the room entered",
+    "Space C, bedroom (00:04.5-00:07.25): bed with headboard, lamp and nightstand, brass chandelier, a large window to the right of the bed and a red/abstract print above the bed. Two wooden chairs stand at the foot of the bed with their seats pushed against the mattress",
+    "Bedroom opening seen after the camera turns (00:06.5-00:08.75): a doorway in the bedroom wall with the blue-flower portrait print on its left and a green/red landscape print on its right. Through it: a light hall with a white paneled door, a small framed picture and a ceiling light",
+    "Traversal 2 (00:07.5-00:09.75): woman walks straight out through that bedroom doorway and arrives in a kitchen with dark cherry cabinets, an over-range microwave, a stainless gas range, a window on the right wall and a white door at the end",
+    "Comparison: the kitchen at 00:09-00:09.75 shares no fixtures with kitchen 1 (cabinet colour, backsplash, microwave type and placement, window position all differ). It is a second kitchen reached from the bedroom"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Route out of the bedroom / kitchen",
+      "invariant_violated": "traversal consistent with floor plan (no duplicate room)",
+      "description": "The only established link from the bedroom is the hallway door, which leads back down the hall to kitchen 1 (light oak cabinets, brick backsplash, countertop microwave). Walking out of the bedroom, the woman instead arrives directly in a different kitchen: dark cherry cabinets, over-range microwave, plain wall, window on the right. A bedroom door opening straight into a second kitchen contradicts the layout established in the same continuous take.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Blue-flower portrait print and the bedroom doorway wall",
+      "invariant_violated": "opening/wall sides consistent",
+      "description": "The blue-flower portrait print was established on the hallway wall beside the bedroom door (00:02-00:04). After the camera turns inside the bedroom, the same print hangs on the bedroom-side wall next to the doorway (00:07-00:08.25). The hallway side of that wall cannot be visible from inside the room. The view through the doorway also shows a hall with a paneled door and a small picture rather than the established grey hallway wall, so the bedroom's opening does not match its established far side.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05.5",
+      "entity": "Wooden chairs at the foot of the bed",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two wooden side chairs are tucked against the foot of the bed with their seats pushed under the mattress edge, as if the bed were a dining table (visible 00:05.0-00:06.75). This seating serves an object that is not a table.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05.5",
+      "entity": "Bedroom windows",
+      "invariant_violated": "stable room geometry",
+      "description": "At 00:04.75 the wall to the left of the bed shows only the lamp and nightstand, with a single window to the right of the bed. By 00:05.5 a second large curtained window has appeared to the left of the lamp. At 00:06.5-00:07.25 a window sits between the doorway and the nightstand. The number and position of window openings shift during a single continuous pan.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-05.mp4",
+  "role": "layout-connectivity",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-05__layout-connectivity__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

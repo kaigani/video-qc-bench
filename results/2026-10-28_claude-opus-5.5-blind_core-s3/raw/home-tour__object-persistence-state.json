@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "woman (carrier only) | hands empty, walking through kitchen | hands empty, walking into a kitchen | never picks up, carries or moves any object during the 10 s clip",
+    "countertop microwave with round bread/wicker basket on top (start kitchen) | on counter right of hallway opening, basket on top | out of frame after ~01:25 | no interaction; end-of-clip kitchen instead shows an over-range microwave in different cabinetry (treated as a room/set difference, not tracked as an object violation)",
+    "red kettle/pitcher at sink (start kitchen) | on counter by sink window | out of frame after ~02:25 | static, no interaction",
+    "framed blue-flower/woman portrait print (hallway) | hung on hallway wall beside small orange framed picture | an identical print appears on bedroom wall left of the doorway from 07:00 | no one moves it; appears in two places",
+    "small orange framed picture (hallway) | right of blue-flower print on hallway wall | passed at ~04:50 | static",
+    "framed painting above bed (bedroom) | on wall above headboard | out of frame after ~06:25 | static",
+    "bedside lamps, chandelier, chairs at foot of bed | static in bedroom | static | no interaction",
+    "small side table with framed photo (bedroom, between doorway and window) | photo shows a colorful yellow/blue/white image (06:00-06:50) | photo shows a portrait of a seated man in dark jacket (07:50-08:75) | content change with no interaction",
+    "wall picture between doorway and window (bedroom) | small framed colorful green/red/blue block image (06:50-06:75) | larger framed red/green hillside landscape with small figure (07:50-09:25) | content/size change with no interaction",
+    "white door at hallway end | closed | closed | no state change"
+  ],
+  "findings": [
+    {
+      "timestamp": "07:00",
+      "entity": "framed blue-flower portrait print",
+      "invariant_violated": "identity/duplication",
+      "description": "The distinctive print of a woman's head over a blue flower hung on the hallway wall outside the bedroom (02:00-04:25). When the camera turns back toward the bedroom doorway, an identical print is hanging on the bedroom-side wall left of the doorway (07:00-08:50). Nobody moved it, and from inside the bedroom the hallway wall should not be visible in that spot, so the object has been duplicated.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "07:50",
+      "entity": "framed photo on bedroom side table",
+      "invariant_violated": "identity/state persistence",
+      "description": "The framed photo on the small table between the doorway and window shows a colorful yellow/blue/white image at 06:00-06:50. When it is seen again at 07:50 in the same place, it shows a portrait of a seated man in a dark jacket. Nobody touches it.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "07:50",
+      "entity": "wall picture between bedroom doorway and window",
+      "invariant_violated": "identity transformation",
+      "description": "At 06:50-06:75 the wall between the doorway and window holds a small framed colorful block image in green, red and blue. From 07:50 the same spot holds a larger framed landscape of red and green hills with a small figure, in a different frame. There is no action that would swap it.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "home-tour.mp4",
+  "role": "object-persistence-state",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__object-persistence-state__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-05__object-persistence-state.json",
+  "frozen_source_sha256": "13bf190c3fe2acec4f48e707f4aea1f7a6e05637892e1554c4e85a2476b3255c",
+  "key": "home-tour__object-persistence-state",
+  "parseOk": true
+}

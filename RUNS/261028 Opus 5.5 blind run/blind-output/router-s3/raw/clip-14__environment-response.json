@@ -1,0 +1,45 @@
+{
+  "ledger": [
+    "00:00-02:00 vehicle state: station wagon parked on sandy/gravel shoulder beside desert road, hubcaps static, no motion cues; woman leans on door sill, hair only gently moving at ends - consistent with light/no wind",
+    "00:00-04:25 desert scrub (light, exposed foliage): no visible sway/flutter at any point; camera dolly/orbit produces only screen displacement",
+    "03:00-04:50 camera reframes so road with yellow center dashes is visible ahead/behind; dashes and roadside poles drift slowly with camera move only, never streaming past - no evidence the car is driving",
+    "04:50-05:25 hair begins lifting slightly toward the rear of the car",
+    "05:25-09:75 hair streams strongly rearward and intensifies steadily (full backward billow, strands backlit) - implies sustained strong airflow from front of car",
+    "05:00-07:25 implied cause check: lane dashes and telephone poles in background remain at near-constant frame positions across 8 fps dense frames (no rapid passing), road surface near car shows no motion blur; vehicle appears stationary",
+    "04:00-08:50 whip radio antenna on fender: stays perfectly straight and vertical throughout, no flex or bend despite implied strong head-on airflow",
+    "05:25-09:75 denim jacket collar, lapels, sleeves: no flutter or lift while hair is fully streamed (heavy material, weaker expected response)",
+    "07:50-09:75 background scrub (out of focus): no visible deformation; too blurred to judge reliably"
+  ],
+  "findings": [
+    {
+      "timestamp": "05:25",
+      "entity": "woman's hair",
+      "invariant_violated": "effect without plausible cause / inconsistent wind over time",
+      "description": "Hair goes from nearly still (00:00-04:75) to strongly streaming rearward from ~05:25 and keeps intensifying to the end, yet nothing indicates a cause: the car shows no forward motion (background lane dashes and telephone poles only drift with the camera move and never pass by, no road motion blur), the whip antenna stays rigidly vertical with no flex, and visible desert scrub shows no sway. A sustained gale-level airflow appears on the hair alone.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "denim jacket collar and sleeves",
+      "invariant_violated": "wind must affect comparable exposed loose material",
+      "description": "While the hair is fully blown back by strong airflow (07:00-09:75), the jacket collar and lapels right beside the hair remain completely inert with no lift or ripple. Denim is heavier than hair so a weaker response is expected, but zero response under wind strong enough to stream hair horizontally is unlikely.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "environment-response",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-router__clip-14__environment-response__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

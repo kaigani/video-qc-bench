@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "camera | single static low-angle shot of a wooden tabletop, dark chair/backdrop strip at top; no cuts | unchanged at 09.75 | no camera moves or cuts; no viewpoint changes to reconcile",
+    "tabletop / background | wood table fills lower frame, dark chair backs behind table edge | unchanged | stable horizon line and background throughout",
+    "static green '2' cube (right of start) | at ~x420-555 (full-res), right of the handled cube | stays in same spot, becomes 3rd cube of row | does not drift; acts as anchor for the row",
+    "first handled cube (left) | green cube under hand at far left, ~x120-265 | blue '2' cube at far left of row | rocked in place; the row's left end stays fixed",
+    "row of cubes | 2 cubes with a gap at 00.00 | 8 cubes left-to-right 2,3,2,2,3,5,2,6 abutting in a line at 08.00 | row grows rightward one cube at a time; each new cube is set down at the right end except the 0:01 cube, which fills the gap between the left cube and the static green cube",
+    "hand | enters from top, grips cubes from above; fingers in front of cube tops | at 09.00-09.75 hand rests on the two leftmost cubes | hand correctly occludes cubes it is in front of; finger occlusion over the orange cube at 08.50 is consistent",
+    "occlusion between adjacent cubes | each placed cube sits side by side with its neighbour, with a clean vertical edge between them | clean edges in final row | at the moments new cubes appear (01.00-01.25, 03.00-03.25, 06.00), the held cube and its neighbour overlap or merge with no consistent depth edge"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "leftmost cube and newly emerging blue '3' cube",
+      "invariant_violated": "solid-body depth ordering / no interpenetration",
+      "description": "The hand is holding a single cube at the left of the row. At 01.00 a second cube body emerges out of it: the blue '2' cube and a blurred cube holding a '3' share overlapping volume (~x125-375) with no clean occluding edge between them. At 01.25 the blue '3' cube's left face still blends into the right face of the blue '2' cube. Two solid cubes occupy the same space before separating into side-by-side blocks.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "green '2' cube (3rd position) and new green '3' cube",
+      "invariant_violated": "solid-body depth ordering / no interpenetration",
+      "description": "While the hand grips the 3rd cube, a second green cube with a '3' splits off to its right. At 03.00-03.25 the two green bodies overlap at their shared edge (~x540-560 full-res) with no consistent near/far occlusion boundary. The new cube appears to come out of the existing one instead of being brought in from outside.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "green '5' cube and newly emerging green cube at right end",
+      "invariant_violated": "solid-body depth ordering / no interpenetration",
+      "description": "At 06.00 the held green cube at the right end overlaps the right side of the green '5' cube (~x930-1015 full-res). Its partly drawn face sits inside the neighbouring cube's volume instead of clearly in front of it or beside it. By 06.25 they separate into adjacent cubes.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

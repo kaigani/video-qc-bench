@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "parked truck (exterior) | 00:00 white conventional tractor cab, no trailer visible, parked left of diner at night, exhaust/steam rising | 01:41-01:49 dark-green cab pulling a dark-green box body with white stripe, parked outside diner window in daylight | no on-screen arrival/departure; the man walks to and climbs into the green truck as if it were his",
+    "OPEN neon sign | 00:00-00:09 not lit (dark rectangle in window) | lit through rest of clip | flickers on/off/on 00:09-00:10 (consistent with neon warm-up); stays lit in interior shots",
+    "condiment caddies / sugar pourers / steel carafe on counter | grouped at counter ends throughout | unchanged | no unexplained moves observed",
+    "waitress's wiping cloth | in her hand on counter 00:10-00:27; resting folded on counter in pour close-ups 00:27-00:32 | in hand again 00:45-00:51 | consistent with use",
+    "glass coffee carafe | held by waitress, ~2/3 full, 00:24-00:32 | returned off-screen | pours into man's mug 00:28-00:30; level visibly ~unchanged but a single-mug pour is small, not flagged",
+    "man's white mug (night) | held by man, empty, 00:27 | filled by pour 00:28-00:30; on counter beside plate 00:36-00:44 | consistent",
+    "plate of toast + fried egg (night) | appears between shots (served off-screen) 00:32 | in front of man 00:36-00:44 | no state change (uneaten)",
+    "white mug at back counter (waitress shot) | on counter left 00:45-00:51 | unchanged | consistent",
+    "man's mug (dawn shot) | on counter by man 01:09 | single mug in man's hand 01:13 onward | a second mug appears with waitress 01:10 and merges into it at ~01:13 (see findings)",
+    "plate of food (dawn) | set down by waitress 01:09 | waitress lifts it again and carries it away 01:14-01:17 | removal caused by visible action",
+    "two mugs (man + waitress, seated side by side) | 01:26.8 each holds one mug | unchanged to 01:35 | consistent",
+    "cash bills | absent beside mug 01:37 | folded bills left by mug 01:38-01:41 | placed by visible hand action",
+    "ketchup/mustard bottles + napkin holder at window table | 01:46-01:50 | unchanged | consistent",
+    "waitress's mug + cup/saucer (final shot) | on counter by seated waitress 01:50 | waitress then wipes counter 01:51+ | no unexplained change observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "coffee mugs on counter (man's mug and the second mug handled by the waitress)",
+      "invariant_violated": "object count / identity persistence",
+      "description": "From ~01:10 to ~01:12.6 two distinct white mugs are visible side by side: the man holds one and the waitress's hand slides/holds a second one right beside it. Over ~01:12.6-01:13 the second mug slides into the man's mug and the two merge into a single mug; from 01:13 onward only one mug exists, and nobody lifts the second one off the counter or out of frame.",
+      "severity": "severe",
+      "confidence": 0.82
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "the man's truck parked outside the diner",
+      "invariant_violated": "object identity persistence",
+      "description": "In the opening exterior (00:00-00:10) the only vehicle at the diner is a white conventional tractor cab with no trailer. When the man leaves (01:41-01:49) he walks to a dark-green truck pulling a dark-green box body with a white stripe, parked as the same lone vehicle he arrived in. No other truck is shown arriving and the white tractor is never seen leaving, so the vehicle's color and body type appear to have changed.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

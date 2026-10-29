@@ -1,0 +1,96 @@
+{
+  "ledger": [
+    "hand | right hand holding green '2' cube at far left | hand touching first two cubes of an 8-cube row | moves left-to-right along the row placing cubes, never seen fetching new cubes from off-frame",
+    "cube row | two green '2' cubes spaced apart | eight touching cubes reading 2-3-2-2-3-5-2-6 (blue, blue, green, beige, white, green, green, blue) | cubes count rises from 2 to 8 with no source for the extra cubes",
+    "cube A (leftmost) | green, face '2' | blue, face '2' | turns from green to blue while being rotated in hand 00:00.50-00:00.75",
+    "cube at slot 4 | green '3' split from green slot-3 cube | beige/orange '2' | colour green->beige at 00:03.75",
+    "cube at slot 5 | blue '3' materialises beside hand | white/grey '3' | colour blue->white at 00:04.50-00:04.75",
+    "cube at slot 6 | blue '3' materialises | green '5' | blue->green at 00:05.50-00:05.75, face 3->5 at 00:06.00",
+    "cube at slot 8 | blue '3' | blue '6' | face 3->6 at 00:07.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "leftmost cube held by hand",
+      "invariant_violated": "object colour permanence",
+      "description": "The cube the hand is turning starts solid green with a '2' (00:00.00), becomes half green/half blue at 00:00.50 and is fully blue by 00:00.75. A plastic cube cannot change colour by being rotated; it is a morph, not a different face.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "blue '3' cube (slot 2)",
+      "invariant_violated": "object spawning / conservation of objects",
+      "description": "A second blue cube with a '3' grows out of the side of the held blue cube at 00:01.00-00:01.25 and settles between it and the green '2'. The hand never picks up a new cube, so the cube appears from nowhere.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "green cube (slot 3) and new green '3' cube",
+      "invariant_violated": "object duplication / face identity",
+      "description": "The static green '2' cube shows a '3' on its front at 00:02.50-00:02.75 without being turned to a new face, then goes back to '2' at 00:03.25 while a separate green '3' cube splits off its right side. One cube becomes two.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "slot-4 cube",
+      "invariant_violated": "object colour permanence",
+      "description": "The green '3' cube in the hand at 00:03.50 has become a beige/orange '2' cube by 00:03.75. Colour and number both change in 0.25 s with no visible flip.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "slot-5 cube",
+      "invariant_violated": "object spawning and colour permanence",
+      "description": "A blue '3' cube appears at the hand at 00:04.00 with no source, then turns pale white/grey by 00:04.75.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "slot-6 cube",
+      "invariant_violated": "object spawning, colour and number permanence",
+      "description": "Another blue '3' cube materialises at 00:05.00-00:05.25. It turns green by 00:05.75, and at 00:06.00 its front face reads '5' while a new green '3' cube splits off beside it.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "slot-7 and slot-8 cubes",
+      "invariant_violated": "object duplication / number permanence",
+      "description": "The green '3' cube at 00:06.50 reads '2' by 00:06.75 while a blue '3' cube appears next to it from nowhere. That blue '3' then reads '6' at 00:07.75 without a visible rotation.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "cube count in scene",
+      "invariant_violated": "object count continuity",
+      "description": "The clip starts with two cubes on an otherwise empty table and ends with eight in a row. No cubes are brought in from off-frame and the hand never carries more than the cube it is touching, so the cube count grows on its own.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "weird-blocks.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-12.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-12__baseline-generalist.json",
+  "frozen_source_sha256": "ce08457206a9fe428574ecc3430fffbd431b23804597f6e7c02b48eb4565c7bd",
+  "key": "weird-blocks__baseline-generalist",
+  "parseOk": true
+}

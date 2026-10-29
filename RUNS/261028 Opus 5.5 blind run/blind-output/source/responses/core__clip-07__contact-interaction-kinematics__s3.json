@@ -1,0 +1,26 @@
+{
+  "ledger": [
+    "Man (real body, back-of-head view, left of frame) | right hand raised to chin, pinch grip near jaw | right hand raised near chin, fingers loosely pinched | hand travels chin -> cheek/temple (01:75) -> hairline/top of head (02:25-04:00) -> back down to cheek/chin (04:50 onward); trajectory continuous at 4 fps, elbow/wrist bends anatomically plausible throughout",
+    "Man (mirror reflection) | right hand holding white straight razor against upper lip/cheek | razor held at upper lip/nose | razor moves lip -> chin -> nose bridge (01:75-02:00) -> centre forehead above brow (02:25-04:00) -> nose/cheek (04:25-04:75) -> chin/jaw strokes (05:00-09:25) -> upper lip (09:50-09:75); fingers visibly wrap the razor handle in all frames",
+    "Straight razor / grooming tool in real-world hand | small pale tool barely visible at chin pinch | silver blade visible in real hand at 09:25-09:75 | contact with face established at 00:00; during 02:25-04:00 real hand holds a dark comb-like object in the hair at the side/top of the head; at 09:00 real hand shows no visible tool",
+    "Body support | seated/standing upright before mirror, no leaning on surfaces | unchanged | no foot or support contact visible; no weight transfers occur"
+  ],
+  "findings": [
+    {
+      "timestamp": "02:25",
+      "entity": "Man's right hand / razor contact point (real body vs mirror reflection)",
+      "invariant_violated": "contact-point consistency between body and its reflection",
+      "description": "From 02:25 to 04:00 the real hand grips a dark object pressed into the hair at the side/top of the head behind the temple, while the mirror reflection shows the hand pressing a white razor blade flat against the centre of the forehead above the brow. The contact location (hair at side of head vs centre forehead) and the gripped object do not correspond, so the reflected contact is not produced by the real hand's contact.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "09:00",
+      "entity": "Man's right hand (real body)",
+      "invariant_violated": "holding without contact / grip mismatch",
+      "description": "At 09:00 the real hand is raised near the chin with fingers curled but empty and not touching the face, whereas the reflection simultaneously shows the same hand firmly gripping the razor with the blade in contact with the cheek. The tool reappears in the real hand at 09:25. The reflected contact has no corresponding grip or skin contact in the real body.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

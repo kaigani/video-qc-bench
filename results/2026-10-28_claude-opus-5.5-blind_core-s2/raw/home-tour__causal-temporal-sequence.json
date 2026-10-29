@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "woman (blue cardigan, short bob) walking | 00:00 walking left-to-right past kitchen counter/microwave | 00:09.75 walking away from camera into a kitchen through a doorway | continuous forward gait with alternating arm swing throughout; turns away from camera ~00:00.5, walks down hallway 00:01-00:03, turns head right toward pictures ~00:02.25-00:03.25, enters bedroom ~00:04-00:05, pivots toward window/back toward doorway ~00:05.5-00:07, walks back out through doorway ~00:07.5-00:09.75; each turn of head/body precedes the corresponding change in heading \u2014 order plausible",
+    "following camera | 00:00 tracking alongside subject in kitchen | 00:09.75 tracking behind subject | camera motion follows subject motion with plausible lag; pans/turns coincide with her turns; no frozen or repeated frames observed in 4 fps sampling",
+    "right hand reach near light switch | 00:02.75 hand extends toward wall at lower right | 00:03.0 hand out of frame as camera pans | no switch actuation or light change follows, but no light change occurs either, and the gesture is consistent with ordinary arm swing; not treated as an incomplete action",
+    "doors | all doors visible (kitchen back door, hallway, bedroom doorway) are open or static throughout | unchanged | no door moves, so no push/pull cause required",
+    "lighting (ceiling fixtures, bedroom lamp, window daylight) | lamp lit, daylight through windows at start of bedroom view | same at end | no light changes occur, so no cause required",
+    "audio | UNASSESSED | UNASSESSED | audio not available in this harness; no audio-based cause/effect evaluated"
+  ],
+  "findings": [],
+  "video": "home-tour.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__causal-temporal-sequence__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-05__causal-temporal-sequence.json",
+  "frozen_source_sha256": "a7fab56ad51ef1ade809395ffabc08415f5007c8d88534b9e520c7a42a066744",
+  "key": "home-tour__causal-temporal-sequence",
+  "parseOk": true
+}

@@ -1,0 +1,42 @@
+{
+  "ledger": [
+    "truck exhaust (00:00-00:10) | semi parked beside diner, smoke puffing from stack/ground | smoke dissipates | exhaust puffs then thins: plausible idle exhaust, order ok",
+    "OPEN neon sign (00:10.167 exterior, then interior shots) | dark in exterior at start | lit red at end of exterior shot and in all later interior shots | sign switches on with no visible operator, plausible off-screen switch; not flagged",
+    "waitress wiping counter (00:10-00:18, 00:45-00:51) | hand with rag on counter | rag moves along surface continuously | wipe motion continuous, no causal issue",
+    "man entering (00:19-00:26) | appears at back of diner, walks toward counter | sits on stool at 00:24-00:26 | walk -> approach -> sit order plausible; waitress looks up / brings carafe after he arrives (reaction after cause)",
+    "coffee pour (00:26-00:32) | waitress tilts carafe over mug | stream enters mug 00:28-00:30, stream stops 00:31, carafe withdrawn 00:32 | pour start/stop ordered correctly; carafe fill level appears nearly unchanged after pouring a full mug",
+    "breakfast plate steam (00:32-00:36) | toast and fried egg, steam rising | steam continues | hot food -> steam, plausible",
+    "plate/mug service (01:09-01:17) | waitress sets plate and second mug, slides mug to man | man's hand takes mug, waitress withdraws plate and walks off | hand-off: release follows grasp, plausible",
+    "waitress joining man (01:17-01:26) | behind counter wiping at 01:18-01:20 | seated on customer-side stool beside man by 01:21 | transition occurs through the counter without walking around it (flagged)",
+    "man looks/turns (01:26-01:35) | both seated with mugs, man looks to camera then turns head to waitress at ~01:31 | turn could follow unheard speech (audio unassessed); a truck passes in window background, plausible",
+    "cash payment (01:37-01:41) | empty counter by mug | hands lay bills down 01:38, hand withdraws 01:39-01:40, bills remain | placement precedes presence, plausible",
+    "man leaving to truck (01:41-01:50) | man exits past window, walks to green truck | reaches cab door and climbs/opens door 01:47-01:50 | walk -> arrive -> open door ordered correctly; waitress watches through window after he leaves (reaction follows cause)",
+    "waitress final shot (01:50-01:58) | seated alone at counter with mug | stands at 01:51, ends behind counter working | gets from customer side to behind counter through the counter; a second identical waitress materialises in background ~01:52 and later disappears/merges (flagged)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "waitress",
+      "invariant_violated": "continuous motion / action path completion",
+      "description": "At 01:19-01:20 the waitress is standing behind the counter wiping it. Within about half a second (01:20.0-01:20.5) her legs and apron appear on the customer side beneath the counter while her torso is still above the counter top, and by 01:21 she is seated on the stool beside the man. She never walks around the counter end; the end state (seated beside him) is reached with no physically possible path, so the transition dissolves the action instead of completing it.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress (final shot)",
+      "invariant_violated": "continuous motion / effect without cause",
+      "description": "In the last shot the waitress rises from a customer stool (01:51) and, in about 0.5 s (01:52.0-01:52.8), goes from the customer side to behind the counter: her legs stay on the stool side while her torso slides along behind the bar, with no walk around the counter end. At the same time (~01:52.0) a second waitress figure fades in at the far end of the counter with no entrance, works there for several seconds, then fades out or merges into the foreground figure around 01:56-01:57 with no exit.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:31",
+      "entity": "coffee carafe",
+      "invariant_violated": "proportionality of effect to cause",
+      "description": "The waitress pours a steady stream of coffee into the mug from 00:28 to 00:30, filling it, but the liquid level in the glass carafe looks about the same before the pour (00:27) and after it (00:31-00:32). The pour shows no matching loss of volume.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

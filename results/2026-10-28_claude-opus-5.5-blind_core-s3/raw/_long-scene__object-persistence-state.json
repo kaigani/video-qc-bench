@@ -1,0 +1,57 @@
+{
+  "ledger": [
+    "Semi truck (opening exterior) | 00:00 white conventional sleeper cab parked left of diner, exhaust/steam venting, night | 00:10 same white cab, same position | steam dissipates naturally; no motion",
+    "Truck (closing exterior) | 01:41 dark green conventional tractor with green box body, chrome stacks, parked outside window at sunset | 01:50 same, driver opening cab door | presented as the man's truck he walks back to; does not match the white cab of the opening shot",
+    "OPEN neon sign | 00:00-00:09 not lit in exterior window | 00:10 onward lit (red/blue) in window, remains lit through 01:58 (dimmer/orange in daylight) | 00:09.4-00:10.2 flickers on/off then stays on - plausible neon power-up, not flagged",
+    "Counter condiment caddies / sugar pourers / steel carafe | on counter right side throughout empty-diner shots 00:10-00:18, 00:51-00:59, 01:35-01:37 | unchanged positions | stable",
+    "Wiping rag | 00:11-00:18 in waitress hand on counter; 00:27-00:32 folded rag rests on counter beside mug; 00:45-00:51 in waitress hand at back counter | consistent | moves only with hand",
+    "Glass coffee pot | 00:24-00:27 waitress lifts and holds over man's mug | 00:28-00:31 pours into mug, 00:32.3 held level above mug | level change not resolvable at this framing; no unexplained transition",
+    "Man's white mug (night scene) | 00:27 on counter under his hand, empty-to-filled by pour 00:28-00:31 | 00:36-00:44 held in his hands at counter next to plate | consistent",
+    "Plate of toast and fried egg + fork/knife | 00:32-00:36 static on counter, steam rising | 00:36-00:44 in front of man beside mug | stable, food untouched",
+    "White mug on back counter (waitress side) | 00:45-00:51 lower-left foreground | unchanged | stable",
+    "Morning-scene mug A (man's) | 01:09 on counter in front of man, steaming | 01:12 man grasps it | see finding at 01:12.7",
+    "Morning-scene mug B (waitress-carried) | 01:09.9 appears in waitress's hand alongside the plate she carries | 01:12.5 she holds it right beside mug A | 01:12.7 merges into mug A and ceases to exist as a separate object",
+    "Morning-scene plate (eggs/toast) | 01:09 waitress sets near man | 01:15-01:17 waitress carries plate away to back counter | consistent",
+    "Mugs (sunrise two-shot) | 01:26.8-01:35 waitress holds one mug, man holds one mug, napkin dispenser/salt shaker left | unchanged | stable",
+    "Mug + cash (insert) | 01:37 mug alone on counter | 01:38 hand slides folded bills in, 01:39-01:40 bills left beside mug | bills appear only via visible hand action; consistent",
+    "Ketchup/mustard bottles + napkin holder on booth table | 01:46-01:50 on window-side table | unchanged | stable",
+    "Waitress mug + saucer (golden-hour) | 01:50.2 on counter in front of seated waitress | 01:51+ she stands and wipes counter; items out of clear view | no clear violation"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "two white coffee mugs (man's mug and the mug carried by the waitress)",
+      "invariant_violated": "object count / identity persistence (merge)",
+      "description": "From 01:09.9 the waitress carries a second white mug next to the plate while the man's own steaming mug sits on the counter; at 01:12.5 both mugs are clearly visible side by side (man's hand gripping his, waitress's hand on hers). Within ~0.2 s (by 01:12.7) the two mugs fuse into a single mug held by both hands; from 01:13 onward only one mug exists. No hand lifts, removes, or hides either mug, so one mug vanishes into the other.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "the man's truck",
+      "invariant_violated": "identity persistence (object transforms into a different object)",
+      "description": "The truck parked at the diner in the opening exterior (00:00-00:10) is a white conventional sleeper cab with no box body. The truck the man walks out to and opens at 01:41-01:50 is a dark green conventional tractor with a green box body and chrome stacks. Nothing shows a different vehicle arriving, so the same parked truck appears to have changed into a different vehicle.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "object-persistence-state",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__object-persistence-state__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-01__object-persistence-state.json",
+  "frozen_source_sha256": "7e58e424a2136f3285c5d6ae7b3dcdad77526ac7e2a305a7421e627d2f22acdc",
+  "key": "_long-scene__object-persistence-state",
+  "parseOk": true
+}

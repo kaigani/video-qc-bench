@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "00:00-02:00 small silver/white razor-like grooming tool: in man's right hand (foreground), worked along chin/jaw then cheek; mirror reflection shows matching white tool in hand at chin/lip",
+    "02:00 foreground hand holds silver tool at temple/brow; reflection shows white tool at brow - consistent",
+    "02:25-04:00 foreground hand at hairline now holds a DARK comb-shaped object pushed into the hair; reflection over the same interval shows the hand holding a WHITE flat tool against the forehead/brow, not in the hair; no set-down, pickup or swap seen, hand never leaves frame",
+    "04:25 foreground object at brow is silver/white tool again; reflection white tool at brow - consistent again",
+    "04:50-08:75 same silver/white tool in right hand, moved between nose, lip, chin, cheek; reflection matches",
+    "09:00 foreground right hand at jaw shows pinched fingers with no tool clearly visible while reflection shows the white tool held against the cheek (likely occlusion by fingers/angle)",
+    "09:25-09:75 silver tool visible again in foreground hand moving to chin then brow; reflection matches",
+    "No surfaces or containers used; the tool never visibly leaves the right hand or the frame",
+    "Audio: unassessed (not used for this role)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld grooming tool (silver razor) in right hand",
+      "invariant_violated": "object identity persistence / transfer completeness",
+      "description": "At 00:02.0 the foreground hand holds a slim silver razor-like tool at the brow. From 00:02.25 through 00:04.0 the same hand, never leaving frame or touching any surface, is holding a dark comb-like object stuck into the hairline; at 00:04.25 it is the silver tool again. No set-down, pickup, or swap is visible, so the object changes kind and then changes back with no cause.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "handheld tool vs its mirror reflection",
+      "invariant_violated": "object in two places/forms at once (reflection mismatch)",
+      "description": "Between 00:02.25 and 00:04.0 the real hand holds a dark comb in the hair, but the mirror reflection shows that hand pressing a white flat tool against the forehead/eyebrow. The object and its reflection differ in kind, color, and position at the same moment, which is physically impossible.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "handheld grooming tool at jaw",
+      "invariant_violated": "reflection/custody consistency",
+      "description": "At 00:09.0 the foreground right hand's pinched fingers at the jaw show no visible tool, while the reflection clearly shows a white tool held against the cheek. At 00:09.25 the tool is visible again. This could be occlusion by the fingers, so confidence is low.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ledger": [
+    "Exterior shot 00:00-00:09: diner windows show no legible text; small red neon sign appears lit in right window only at 00:10.167 (sign switching on is a plausible action); reads as a smeared 'OPEN'-shaped glyph block, too small to judge letters",
+    "Main 'OPEN' neon sign (red letters, blue border) in front window, dusk wide shots 00:18.7-00:45: reads 'OPEN' at every legible moment (00:19, 00:22, 00:26, 00:36.5, 00:39, 00:44)",
+    "Second neon sign in adjacent left window, dusk wide shots 00:18.7-00:45: sharpest reading (frames 00:20, 00:38) is a red bar fragment + 'I' + 'O' ('\u25aeIO') inside a blue rectangular border; same garbled reading in every dusk frame; in daylight wide shots (01:00-01:26) it is washed out to a faint red mark, unreadable",
+    "Main 'OPEN' neon sign, daylight wide shots 00:59.9-01:26: reads 'OPEN' consistently",
+    "Main 'OPEN' neon sign, medium two-shot 01:09-01:17 (left of frame, large): reads 'OPEN' consistently",
+    "Main 'OPEN' neon sign, golden-hour wide shots 01:50-01:58 (unlit/washed, orange outline): reads 'OPEN' consistently",
+    "Menu/notice boards above kitchen pass-through and wall posters (00:10-00:18, 00:36-00:45, 00:51-01:00, 01:35-01:37): too small/blurred to read at 992x416; no comparison possible",
+    "Banknotes 01:38-01:41: corner numerals read '100' with Franklin-style portrait; fine print too small to read; consistent between 01:39 and 01:41",
+    "Truck hood badge 01:41-01:46: small script/block lettering ~'KENWORTH'-like but unreadable at this resolution; consistent shape across frames",
+    "Exit sign 00:45-00:51: red 'EXIT' too small but shape consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:20",
+      "entity": "secondary neon sign in left front window (beside the 'OPEN' sign)",
+      "invariant_violated": "legibility: coherent real text",
+      "description": "A boxed neon sign rendered at a size and brightness comparable to the adjacent 'OPEN' sign reads as '\u25aeIO' (red bar fragment, 'I', 'O') \u2014 not a word or plausible sign text. The reading is identical across all dusk wide shots (00:19-00:45), so it is not motion blur; the window mullion does not cover enough of the box to explain the missing letters. Appears to be a garbled AI-rendered neon sign.",
+      "severity": "minor",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "text-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__text-stability__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

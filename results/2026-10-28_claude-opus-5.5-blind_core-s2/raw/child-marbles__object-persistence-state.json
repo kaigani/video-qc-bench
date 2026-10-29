@@ -1,0 +1,54 @@
+{
+  "ledger": [
+    "glass bowl | on wooden table center, upright, empty of liquid, holds 8 balls | same bowl, upright, same table, still holds balls | child grips its rim with left hand from ~00:04; bowl never moves meaningfully",
+    "balls in bowl (set) | 00:00 exactly 8 rigid glossy spheres: 2 red, 3 yellow, 3 green, at rest in bowl | ~00:09.75 roughly 8-10 lumpy blobs, mostly red and green, ~1 yellow | 00:00.25-00:00.75 right/left hand reaches in and lifts a red ball; 00:01.00 bowl still shows all 8 originals (both reds present) plus the red in hand; 00:02.50 held red put back into bowl (9 total, 3 red); 00:05.00-00:09.75 child stirs balls vigorously by hand",
+    "held red ball | appears in child's hands above bowl at 00:00.75-00:01.00 | returned into bowl at ~00:02.50 | child holds it in both hands 00:01.00-00:02.25, then lowers it into the bowl",
+    "balls on table at right edge | 00:00 one red and one green ball resting on table near right edge | 00:03.50 still at right edge (more red/green/yellow visible after camera reframing at 00:01.50) | not touched; leave frame as camera pushes in from ~00:04",
+    "small metal cup with white/green decorated egg-like object | on table to right of bowl, upright | still there at 00:04.25 when it leaves frame due to camera push-in | not touched, no state change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red ball (bowl contents)",
+      "invariant_violated": "count conservation / no duplication",
+      "description": "At 00:00 the bowl holds 8 balls (2 red, 3 yellow, 3 green). Between 00:00.25 and 00:00.75 the child's hand reaches into the bowl and lifts out a red ball, yet at 00:01.00 the bowl still shows the identical 8-ball arrangement including both red balls, with an extra red ball in the child's hands. No ball was brought in from outside the bowl; a red ball has effectively been duplicated.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07.75",
+      "entity": "balls in bowl (color composition)",
+      "invariant_violated": "object identity / color persistence",
+      "description": "Before stirring (00:04.75) the bowl holds 3 red, 3 yellow, 3 green balls. During hand-stirring, with no balls added or removed, the composition drifts: at 00:07.75 at least 4-5 distinct red balls are visible with only one yellow; at 00:09.25 there are ~4 red and ~4 green and no yellow; at 00:09.50 ~5 red, 1 yellow, 1 green. Yellow balls vanish and red balls multiply without any visible cause.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06.00",
+      "entity": "balls in bowl (shape)",
+      "invariant_violated": "rigid object shape persistence",
+      "description": "The balls are rigid glossy spheres in 00:00-00:05. From ~00:06 onward while stirred they render as lumpy, pinched, egg- or pepper-shaped blobs (e.g. the yellow at upper right at 00:06.00, the stretched red and green at 00:09.25) beyond what motion blur explains, implying a material/shape transformation with no cause.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "object-persistence-state",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__object-persistence-state__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-02__object-persistence-state.json",
+  "frozen_source_sha256": "10726f7695d7ebb9cfef903789cda533f50c6fa5dc15e556ad5e844d35ecfdbc",
+  "key": "child-marbles__object-persistence-state",
+  "parseOk": true
+}

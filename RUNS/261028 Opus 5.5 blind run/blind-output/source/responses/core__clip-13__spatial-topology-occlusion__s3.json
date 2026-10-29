@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "camera | 0:00-4:00 frontal shot, dollying backward ahead of the woman walking toward camera down an open-air market aisle | 4:50-9:75 continuous orbit around her right side (profile facing screen-right, 6:00-8:75) ending behind her (9:00-9:75) | single continuous take, no cuts",
+    "protagonist woman with blue umbrella (left hand) and tomato (right hand) | centre frame, walking toward camera in the middle of the aisle | seen from behind at 9:00-9:75, umbrella still in her left hand on screen-left, consistent with the orbit | no geometric issues with her own pose or orientation",
+    "left (screen-left at 0:00) stall row | dark stall interiors with tube lights and hanging red produce; avocado table (0:00-1:25), then red bin of oranges/yellow fruit with teal fruit in a blue crate in front (1:50-5:50), purple crate of peaches lower-left (5:00-5:50) | 6:25-6:75 the same region shows purple trays of purple fruit and white boxes of green apples; 7:75-8:25 white boxes of tomatoes plus purple trays of peaches/teal fruit; 9:00 rows of grey metal tables with purple-rimmed trays of pale produce | stall contents and arrangement change during the orbit (see findings)",
+    "right (screen-right at 0:00) stall row | blue crates, wooden crates of apples/avocados along the right edge (0:00-4:00) | only visible on the far right through 4:25, then out of frame as the camera orbits | consistent while visible",
+    "aisle / open-air street | open sky, buildings and a receding row of red patio umbrellas over the aisle; dense crowd walking toward camera (red-shirt woman, green-shirt man, purple-top woman) | red umbrellas/sky visible top-right through ~6:25; from 6:50 the background is an enclosed dim hall with fluorescent tubes; at 9:00-9:75 a wide covered hall with long table rows and only a few people | the open street gives way to an enclosed hall-like space (see findings)",
+    "light-blue-top ponytail woman | foreground left at 0:75-1:50, walking away from camera | passes behind the protagonist around 2:50-3:25 (correctly occluded), reappears on her right at 3:75-5:25 | occlusion order consistent",
+    "white-shirt man | enters foreground left at 2:50, larger and nearer than the protagonist at 3:00-3:25 | moves behind her by 3:75-4:25 (she occludes him), continues away on her right at 4:50-5:75 | fast depth change, but plausible given the camera dollying back while he walks away; occlusion order correct",
+    "balding blue-tee man | foreground left beside her at 6:00 | her tomato hand overlaps him at 6:25-6:50 (hand in front), hidden behind her shoulder at 6:75-7:00, reappears on her right walking away at 7:50 | consistent pass behind her",
+    "light-blue-shirt man with glasses | screen-left at 8:00-8:50 | partly behind her left shoulder at 9:00-9:25, hidden at 9:50, beside her on the right at 9:75 | consistent pass behind her",
+    "white-top woman | stands in the stall behind her at 6:75-7:50 (left of her), right of her at 8:75-9:00 | moves across frame as the camera orbits | consistent parallax"
+  ],
+  "findings": [
+    {
+      "timestamp": "06:25",
+      "entity": "fruit stall directly behind the protagonist (screen-left stall row)",
+      "invariant_violated": "scene layout consistency across viewpoint change",
+      "description": "From 1:50 to 5:50 this stall is clearly established: a red bin of oranges and yellow fruit, teal fruit in a light-blue crate in front of it, and a purple crate of peaches at the lower left. As the camera orbits in one continuous move, this arrangement never comes back into view. The same area turns into purple trays of purple fruit next to white boxes of green apples (6:25-6:75), then white boxes of tomatoes and purple trays holding peaches and teal fruit (7:75-8:25). The teal fruit is now in purple trays, not the blue crate, and the red bin is gone. By 9:00 it is rows of grey metal tables with purple-rimmed trays. A camera orbiting a nearly stationary subject should keep showing the same fixed stall from new angles, so the layout is morphing rather than being re-viewed.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "06:50",
+      "entity": "market aisle / overall environment",
+      "invariant_violated": "connectivity / background layout consistency",
+      "description": "The opening view sets up a narrow open-air street aisle: open sky and building facades, a long row of red patio umbrellas, and a dense crowd walking along it. During the continuous orbit (6:50-8:75) the background becomes an enclosed dim hall with a dark ceiling and fluorescent tubes. In the rear view (9:00-9:75) the space is a broad covered hall with long parallel rows of tables and only a few people. The crowded aisle and the red-umbrella row, which should still line up with the established street axis, are gone. The geometry of the space does not match the street layout established in the first five seconds.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

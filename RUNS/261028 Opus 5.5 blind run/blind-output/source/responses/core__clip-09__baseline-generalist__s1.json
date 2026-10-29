@@ -1,0 +1,68 @@
+{
+  "ledger": [
+    "small glass pouring bowl | held in right hand, contains only green olives | contains mixed green and dark purple olives | dark olives emerge from an all-green bowl at 00:00.5; bowl leaves frame ~04:00, re-appears 05:50 out of a bare handful",
+    "large glass jar | empty, spout at upper right | filled ~2/3 with mixed green/dark olives, wire-bail hardware visible | fill grows far beyond what the small bowl visibly held",
+    "metal bowl (back) | full layer of green olives | a few green olives plus brown pit/nut-like items | sudden content change between 05:00 and 05:25",
+    "ceramic speckled bowl (front right) | green olives | green olives | stable",
+    "small clear bottle on counter | absent | present right of metal bowl | appears at 04:50 with no placement",
+    "presenter wrist accessory | none visible | metal-band watch (04:50-05:00), chain bracelet on right wrist (06:25+) | appears mid-clip, style differs"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured from small glass bowl",
+      "invariant_violated": "object color/identity continuity",
+      "description": "The small bowl being poured holds only green olives, yet the first olive to land in the jar (00:00.5) is dark purple, and by 01:75 roughly half the jar is dark olives. Dark olives come out of a container with no visible dark olives.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:75",
+      "entity": "jar fill vs. source bowl quantity",
+      "invariant_violated": "conservation of quantity",
+      "description": "The small bowl visibly holds ~8-10 olives and still looks full while it pours, but the jar fills with ~20 olives by 03:00 and keeps growing to 50+ by 09:00. More olives come out than the container could hold.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "04:50",
+      "entity": "small clear glass bottle on counter",
+      "invariant_violated": "object permanence (spontaneous appearance)",
+      "description": "A small clear bottle appears on the counter right of the metal bowl. At 04:25 that same area of counter is visible and empty, and no hand places the bottle.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "05:25",
+      "entity": "metal bowl contents",
+      "invariant_violated": "object state continuity",
+      "description": "At 05:00 the metal bowl holds a full layer of green olives. At 05:25 it is nearly empty and holds brown pit- or nut-like items that were never there before. One handful grab can't explain the change in contents.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "05:50",
+      "entity": "small glass bowl in hand",
+      "invariant_violated": "object morphing / spontaneous appearance",
+      "description": "At 05:00-05:25 the hand grabs a bare handful of olives from the metal bowl, with no container. At 05:50 that hand is suddenly holding the small glass bowl full of olives, which had left the frame around 04:00.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "04:50",
+      "entity": "presenter's wrist accessory",
+      "invariant_violated": "wardrobe/accessory continuity",
+      "description": "No wristwatch or bracelet is visible during the first pours (00:00-03:75). A metal-band watch then appears on the reaching wrist at 04:50-05:00, and from 06:25 a chain-link bracelet is on the right wrist. The accessory appears mid-clip and its style is inconsistent.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "06:50",
+      "entity": "olives inside jar",
+      "invariant_violated": "material/rendering plausibility",
+      "description": "Several of the 'dark' olives in the jar render as flat, semi-translucent slate-gray blobs with no clear outlines. They look different from the glossy purple olives that fell earlier, which is typical of generative rendering artifacts.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

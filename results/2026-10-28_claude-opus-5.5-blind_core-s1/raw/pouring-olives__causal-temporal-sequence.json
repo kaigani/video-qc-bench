@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "small glass bowl pour #1 | tilted over empty jar holding ~6-8 visible green olives | still tilted over jar, still showing green olives, never visibly empties | olives fall 0:00.5-0:02.75; pour ends ~0:03.5 when the hand withdraws",
+    "jar contents (pour #1) | empty at 0:00.0 | ~25-30 olives, mixed green and dark, ~1/3 full by 0:03.0 | a dark olive is already at the bottom by 0:00.5 although only green olives are in the bowl; ~12+ olives, mostly dark, by 0:01.75; contents then hold still from 0:03.0 to 0:05.75 (plausible, no cause acting)",
+    "metal bowl (back) | ~10 green olives | a few olives plus brown nuts/pits | hand reaches in 0:04.5-0:05.0, comes out with a handful at 0:05.25; bowl visibly depleted right after the grab (cause precedes effect)",
+    "hand-carried olives -> glass bowl pour #2 | handful taken from metal bowl at 0:05.25; glass bowl with olives held over jar from 0:05.5 | bowl tilted fully and empty by ~0:08.75 | olives fall into the jar 0:06.5-0:08.5",
+    "jar contents (pour #2) | ~1/3 full at 0:06.0 | ~2/3-3/4 full, densely packed at 0:09.0-0:09.75 | fill grows during the pour; still grows between 0:08.5 and 0:09.0 after the bowl looks empty",
+    "camera/subject motion | close framing | wider, lower framing | fast whip/blurred reach at 0:04.0-0:04.25; continuous, no frozen or repeated beats seen"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "jar contents / first pour",
+      "invariant_violated": "effect-without-cause (olive appears before any is seen falling)",
+      "description": "At 0:00.5 a dark olive is already sitting at the bottom of the empty jar. The only olives seen leaving the bowl are green, and none had yet reached the bottom. Dark olives keep piling up (mostly dark by 0:01.75) while every falling olive in frame is green.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "jar fill vs. small glass bowl pour",
+      "invariant_violated": "proportionality (effect exceeds cause)",
+      "description": "The small bowl holds about 6-8 green olives and never visibly empties. Yet within about 1.25 s (0:00.5-0:01.75) the jar goes from empty to ~12+ olives, and by 0:03.0 it holds ~25-30. Only a trickle of single olives is seen falling. The amount added to the jar far exceeds what leaves the bowl.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "jar fill after second pour",
+      "invariant_violated": "effect-without-cause (fill grows after the source is empty)",
+      "description": "By 0:08.5-0:08.75 the glass bowl is tilted and empty and nothing is falling. Even so, by 0:09.0 the jar's olive level has risen to near the shoulder, noticeably higher than at 0:08.5. The total rise from ~1/3 to ~3/4 full is also far more than the handful in the bowl could supply.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-09__causal-temporal-sequence.json",
+  "frozen_source_sha256": "c33c70e918e41f311d871398d9106a23db4639aa6ef28ba6eb267b2f7da454bf",
+  "key": "pouring-olives__causal-temporal-sequence",
+  "parseOk": true
+}

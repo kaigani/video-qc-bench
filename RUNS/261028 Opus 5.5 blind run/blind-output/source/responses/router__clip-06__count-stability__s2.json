@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Steel/copper cups 00:00.00-00:02.75: 4 cups (back-left, middle with coin stack, back-right, front-left handled by performer); count stable through hand occlusions",
+    "Cups 00:03.00-00:04.50 (camera arcs left/low): 4 cups; back cups overlap at 00:04.25 but both rims visible",
+    "Cups 00:05.00-00:07.50 (cups now seen in a row): 4 cups at every sharp frame (e.g. 00:06.00, 00:06.25, 00:07.00, 00:07.50)",
+    "Cups 00:08.00-00:08.75: 4 cups (one partly behind the left-front cup, rim visible)",
+    "Cups 00:09.00-00:09.25 (dense 12fps check): 4 cups clearly visible - back, back-left (partial), front-left, front-right",
+    "Cups ~00:09.30-00:09.75: 3 cups only (back, left, front); hands are not holding or moving any cup (left hand holds a coin above, right hand rests on table) - no visible removal",
+    "Coin stack inside middle cup 00:00-00:03.25: present throughout; top coin reads gold/engraved at 00:00, pale silver/white by 00:02.75-00:03.00 with no handling",
+    "Loose coins on felt near cups 00:00-00:03.50: gold coin right of middle cup and large coin in foreground persist (shift with camera); gold coins in performer's hands appear/disappear at front-left cup - treated as the performed coin manipulation, not a defect"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "cups (group of 4 identical steel/copper cups)",
+      "invariant_violated": "count changes only through visible cause",
+      "description": "Four cups are clearly visible through 00:09.25 (back, back-left, front-left, front-right). Within roughly 0.1-0.2 s the group resolves to three cups (back, left, front) and stays at three through 00:09.75. Neither hand touches or carries a cup (left hand is dropping a coin from above, right hand rests flat on the felt), and with the low side camera a cup hidden behind another would still show its rim above the front cup. The cups are not the objects being manipulated in the trick, so the drop from 4 to 3 is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "coin stack inside the middle cup",
+      "invariant_violated": "object kind/appearance persistence",
+      "description": "The top coin of the stack in the untouched middle cup is gold with an engraved design at 00:00-00:01, but by 00:02.75-00:03.00 it is a pale silver/white disc. Nobody touches that cup; this may be a lighting shift but looks like a gold coin turning into a silver one.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

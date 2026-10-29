@@ -1,0 +1,53 @@
+{
+  "ledger": [
+    "woman in blue top and jeans | walking away across plaza, carrying large red bag in her right hand | walking away, both hands empty, no bag | red bag shrinks/fades and vanishes between ~2.0s and ~2.5s with no hand-off or drop",
+    "red bag | large red tote carried by woman | absent | dissolves out of existence at ~2.25s",
+    "smartphone held in two hands | teal screen with large '742'-style code, blurred foreground | teal screen with garbled glyphs '\u01007\u00b742', 'A\u203eA', 'x2', 'AZ-12' | text glyphs change form as focus racks; sunlight glare patch moves around screen; lowered out of frame at ~9.5s",
+    "camera | over-shoulder POV looking down stairs/plaza | tilts down to staircase | rack focus from background to phone at ~3.0s, pan down at ~9.25s"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red bag carried by woman walking away",
+      "invariant_violated": "object permanence",
+      "description": "The woman carries a large, clearly visible red bag in her right hand from 0:00 to 0:02.0. Between ~0:02.0 and ~0:02.5 the bag shrinks, turns pinkish and fades away while still at her side; by 0:02.5 both of her hands are visibly empty. She does not set it down, drop it, or pass it behind her body \u2014 it simply dissolves.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "phone screen text/UI",
+      "invariant_violated": "illegible / garbled generated text",
+      "description": "Once the phone comes into focus, the on-screen content is nonsensical pseudo-text: a large '\u01007\u00b742' with a stray macron-like mark, a header 'A\u203eA', a status-bar '7.42' / '4.49', a stray 'x2' and 'AZ-12'. Glyph shapes also mutate between frames (e.g. '742' reading as '\u03bb742' early on, the 'A' gaining a hooked overline later). This reads as AI text artifacts rather than a real app UI.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "sunlight glare/shadow on phone screen",
+      "invariant_violated": "lighting consistency",
+      "description": "The bright sun patch on the screen jumps in position and shape between adjacent frames (e.g. 0:04.5 \u2192 0:04.75, 0:06.5 \u2192 0:06.75 where it disappears almost entirely, then returns at 0:07.0 and 0:08.0) without corresponding large phone or hand movement, giving a flickering, unstable lighting look.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "phone.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-08__baseline-generalist.json",
+  "frozen_source_sha256": "1ab35e39735c1b71403fd7ebde208b2c9125de9c936121b4036a519dd07720c5",
+  "key": "phone__baseline-generalist",
+  "parseOk": true
+}

@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "metal cups | 4 cups in a loose cluster (back, middle w/ coin stack, right, front-left) | 3 cups visible at 09:50-09:75 | cluster becomes a straight row ~04:00-05:00; 4 cups at 09:00, only 3 at 09:50 with no hand removing one",
+    "middle cup contents | brim-full stack of gold embossed coins | not visible / appears empty from ~04:30 | top coin reads silver-faced from 02:75",
+    "performer | hands only, blue sleeve, white cuff | full figure: blue suit, red tie, bow tie, yellow pocket square, glasses, goatee | consistent wardrobe through continuous pull-back/orbit",
+    "background audience | several spectators standing/seated behind table (00:00-05:00) | room largely empty, only 1-2 shadowy figures (07:00-09:75) | progressive thinning during continuous shot",
+    "tablecloth/table | ornate red border with dense chip rings, large table filling frame | plainer red cloth with thin chain-pattern ring, smaller round table | pattern and scale shift during continuous move"
+  ],
+  "findings": [
+    {
+      "timestamp": "09:50",
+      "entity": "metal cups",
+      "invariant_violated": "object permanence / count",
+      "description": "At 09:00 four cups are clearly on the felt (two front, one rear, one partially behind on the left). By 09:50 and 09:75 only three cups remain. Neither hand picks up or moves a cup; one hand is holding a coin above the cups and the other rests on the felt. A cup disappears for no reason.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "02:75",
+      "entity": "coin stack in middle cup",
+      "invariant_violated": "object appearance continuity",
+      "description": "From 00:00 to 02:50 the middle cup is filled to the brim with a stack of gold embossed coins. At 02:75 the top coin turns silver-faced, and after about 04:30 the stack is no longer visible. No coin is removed or added to this cup.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "04:00",
+      "entity": "cup arrangement",
+      "invariant_violated": "spatial layout continuity",
+      "description": "The four cups start in a triangular cluster with clear gaps (00:00-03:00). By 05:00-06:00 they stand in a straight, evenly spaced row across the felt. The hands only rest on the end cups and never slide them into a line, so the rearrangement is not explained by the action or by the camera move.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "background audience",
+      "invariant_violated": "background continuity",
+      "description": "During 00:00-05:00 several spectators stand and sit close behind the table. As the continuous shot pulls back (07:00-09:75), the room behind the performer is nearly empty: rows of vacant chairs and only one or two dim figures. Spectators vanish with no cut.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "06:00",
+      "entity": "table and tablecloth",
+      "invariant_violated": "set/prop consistency",
+      "description": "Early frames show a very large table with a detailed white ornamental border, dense rings of large decorated chips, and three big gold coins on the central felt. In the later wide frames the table is a smaller round table with plain red cloth, one thin chain-pattern ring of small discs, and a mostly empty center. These changes go beyond what the change in perspective can explain.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

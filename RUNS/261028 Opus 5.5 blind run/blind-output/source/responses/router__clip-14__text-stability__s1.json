@@ -1,0 +1,22 @@
+{
+  "ledger": [
+    "Front license plate (white plate, red painted characters, center of front bumper), 00:00.000: sharpest reading 'STE|97' — 'S','T','E' clear; 5th position is a vertical stroke fused into a looped '9'-like glyph whose tail hooks back into the stroke; final '7' clear",
+    "Front license plate, 00:00.250: reads 'STE|97' — same fused stroke+loop glyph, same shape and spacing as 00:00.000",
+    "Front license plate, 00:00.500: reads 'STE|97' — fused glyph still present; loop bottom appears slightly more closed (8-like) but within compression/angle variation",
+    "Front license plate, 00:00.750: reads 'STE|97' partially; bottom of characters clipped by frame edge so 'E' looks like 'F' (occlusion, not a change)",
+    "Front license plate, 00:01.000-00:01.250: only upper halves visible at frame bottom, consistent with 'STE|97'; exits frame by 00:01.500 and never returns",
+    "Fender side-marker/badge on wood-grain panel (00:00-00:04.5): small chrome emblem, no legible text",
+    "Distant roadside sign posts (00:06.5-00:07.5): too small/blurred to read, not assessed",
+    "No other text elements (screens, signage, labels) legible in the clip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Front license plate 'STE|97'",
+      "invariant_violated": "legible text must be coherent characters",
+      "description": "The plate is large, sharp and steady enough to be read in the opening frames (00:00.000-00:00.500), but between the 'E' and the '7' it shows a malformed glyph: a vertical stroke fused to a looped '9' whose tail curls back into the stroke, forming no real letter or digit (neither a clean '1','9', nor '8'). The plate therefore reads as an incoherent 'STE?97' string rather than a plausible registration. The malformation is consistent across frames (not a stability change), so this is a rendering/legibility defect, not motion blur.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ]
+}

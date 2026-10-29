@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "far/left hand (blue sleeve) | 00:00 holds a single coin edge-on above table near back-left cup | 09:75 still holding a coin edge-on above/beside the rear cup | coin is never released into a cup or onto the table across the whole clip; pose drifts but drop never happens",
+    "near/right hand | 00:00 out of frame, enters 00:00.75 and reaches toward front-left cup | 09:75 holding coin(s) poised above the front cup | 01:50-02:00 hand descends into front cup (cause) -> 02:25 coins lifted out of cup (effect, plausible order/timing) -> 02:50 onward hand holds coin hovering at cup rim, drop never completes",
+    "front-left cup | 00:00 gold coin resting at bottom | 02:50 appears empty after hand lift | removal follows the hand's reach-in; consistent",
+    "middle cup | 00:00 stack of embossed gold coins | 03:00 top disc reads pale/silver, later no visible contents | not touched by any hand (state bookkeeping, out of scope)",
+    "camera | 00:00 tight low close-up on cups | 09:75 wide side view of seated man at table | continuous pull-back/orbit; no cuts; forward temporal flow",
+    "seated man (face/body) | hidden until ~04:50 | visible, looking down at cups | no reactions required; no events to react to"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02.75",
+      "entity": "near/right hand holding coin over front cup (and far hand holding coin at rear cup)",
+      "invariant_violated": "initiated action must complete (cause-without-effect / stalled action)",
+      "description": "After lifting coins out of the front cup at ~02:25, the right hand poises a coin at the cup rim in a dropping posture from ~02:75 and holds it there for the remaining ~7 seconds while the camera pulls back; the coin is never released. The far hand likewise holds a coin edge-on over the rear cup from 00:00 to 09:75 without ever dropping it. The 'drop coin into cup' action is set up repeatedly but never resolves, giving a looping/stalled hover rather than a completed or visibly interrupted action.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-06.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

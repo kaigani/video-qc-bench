@@ -1,0 +1,24 @@
+{
+  "ledger": [
+    "00:00-00:07 truck exhaust/smoke (night exterior, stationary semi beside lit diner): evidence = a large dark plume billows from behind/left of the cab at ground level, rising and drifting up-left; from ~00:02.5 a second whitish plume appears at ground level by the front bumper/front wheel, rising and drifting right; both thin out from ~00:06 and are nearly gone by 00:07. Should affect: any shared airflow should push both plumes the same way; nearby foliage/wires show no visible deformation (too dark and far to judge). Truck shows no visible stack or outlet at either plume source.",
+    "00:07-00:10 / 00:10.17 exterior: no smoke, no wind cues; static scene, consistent",
+    "00:10-01:00 diner interior shots (waitress wiping, man entering, sitting): indoor, no airflow implied; hair, aprons and cloths behave as if in still air, consistent",
+    "00:27-00:32 coffee pour close-up: gravity stream from carafe into mug, stream follows the carafe tilt and stops when it is raised at 00:31; consistent. No visible steam from the fresh pour (lighting-dependent, not flagged)",
+    "00:32-00:36.4 egg-and-toast plate close-up: thin steam wisps rise from the egg area and curl upward against the blurred booth background; still indoor air, plausible cause (hot food), consistent across the shot",
+    "01:09-01:14 counter shot: faint steam rises from the man's coffee mug; plausible, consistent with a hot drink in still air",
+    "01:26-01:35 window two-shot: sunrise/sunset outside, no visible wind cues; distant pole and field static, consistent",
+    "01:37-01:41 cash on counter: bills lie flat after placement, no airflow, consistent",
+    "01:41-01:50 daylight exterior through window: man walks to a parked truck; jacket, hair and distant grass/trees show no wind deformation, and the truck shows no exhaust before it starts; consistent still air",
+    "01:50-01:58 sunlit diner interior with waitress: light haze in sunbeams, no airflow, consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "two smoke/exhaust plumes around the parked semi truck",
+      "invariant_violated": "consistent airflow / plausible cause",
+      "description": "Two plumes come from the same stationary truck over the same seconds, but they drift in opposite directions. The large dark plume behind the cab rises and drifts up-left, while a second whitish plume at ground level by the front bumper rises and drifts right (00:02.5-00:06). Neither source has a visible exhaust stack or outlet, and there is no airflow that would split the plumes this way. Both then thin out and are mostly gone by 00:07 while the truck stays in place.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

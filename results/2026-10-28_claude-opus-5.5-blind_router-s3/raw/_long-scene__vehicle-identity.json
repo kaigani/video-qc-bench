@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "Truck sighting A (00:00-00:10, exterior establishing wide at dusk/pre-dawn): white/light-colored modern aerodynamic conventional tractor with sloped hood and tall roof fairing/sleeper, white box/trailer front behind it, parked facing right at left of the lit diner, engine running (exhaust plume); no legible markings",
+    "Interior wides 00:18-00:44 (blue-hour) and 00:59-01:30 (dawn): through left windows only a white/light sedan-type car in the lot is visible; no truck legible",
+    "01:29-01:31 (two-shot, defocused background through window): a pale white box/trailer shape passes/appears in the right background; too blurred to identify",
+    "Truck sighting B (01:41-01:45, through diner window, golden hour): dark green long-nose classic conventional (W900-style) straight box truck with integrated green box body, horizontal white stripe, twin chrome vertical stacks, chrome fuel tank, amber cab-roof marker lights, script badge on hood side (not legible); man walks to it",
+    "Truck sighting C (01:46-01:50, over waitress's shoulder through window): same dark green box body with white stripe, chrome stack/tank, green cab, man climbing into cab door; consistent with sighting B",
+    "B vs C: body type, color, stripe livery and chrome hardware consistent; no plate legible at any sighting"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "the man's truck parked outside the diner (opening white tractor vs closing green box truck)",
+      "invariant_violated": "vehicle identity / configuration",
+      "description": "The only truck established outside the diner in the opening (00:00-00:10) is a white modern aerodynamic conventional tractor with a sloped hood and high roof fairing. When the man leaves and walks to his truck at 01:41-01:50, it is a dark green long-nose classic conventional straight box truck with a white stripe and twin chrome stacks. The difference is not only paint (which lighting could explain) but cab/hood shape and configuration (aero tractor vs classic long-nose box truck). No other truck arriving or leaving is shown, and the lone customer walks straight to it, so the scene implies it is the same vehicle that sat outside all night.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__vehicle-identity__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-01__vehicle-identity.json",
+  "frozen_source_sha256": "026d7c84512fdf23750b4a66ebb13084f24c99bb78b42364f51a55855afffa96",
+  "key": "_long-scene__vehicle-identity",
+  "parseOk": true
+}

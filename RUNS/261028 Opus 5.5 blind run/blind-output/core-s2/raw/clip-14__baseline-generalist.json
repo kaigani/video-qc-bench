@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "woman | shoulder-length wavy blonde hair, calm; teal denim jacket; arms crossed on hood at windshield base | same outfit; hair strongly wind-blown; arms still crossed on hood | hair goes from still to heavily blown ~5.5s with no change in setting",
+    "station wagon | cream/pale yellow, woodgrain side panels, roof rack, chrome antenna on fender, plate 'STE 97' | paint reads pale white/mint, only hood/woodgrain edge visible | camera orbits left and pushes in toward woman",
+    "background | desert scrub, mountains, road edge at left, no poles visible | two-lane road with yellow center dashes, telephone poles, mountains | road markings and poles enter view as camera orbits"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman / windshield",
+      "invariant_violated": "physical impossibility / object interpenetration",
+      "description": "The woman's torso occupies the plane of the windshield: her head and shoulders sit inside the cabin area behind the glass while her crossed arms rest on the outside of the hood in front of the wipers. There is no opening in the windshield, so her body passes through the glass. Most obvious from 4.5s to 6.0s, where the wipers and the windshield frame run behind her arms.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "unexplained environmental change",
+      "description": "Through about 4.5s her hair hangs calmly. From about 5.5s it is suddenly blown hard sideways as if by strong wind or driving, but the car is parked and the background scrub is static. The sudden onset has no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "station wagon paint",
+      "invariant_violated": "color/material drift",
+      "description": "The car body starts as a warm cream/pale yellow and becomes a cool pale white/mint as the camera pushes in. The sun direction stays the same, so the hue change is not explained by lighting.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "license plate",
+      "invariant_violated": "garbled text",
+      "description": "The front license plate reads 'STE 97' with malformed, irregular glyphs and no state or other legible plate markings, which is typical of AI-generated text.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "road / car placement",
+      "invariant_violated": "scene layout inconsistency",
+      "description": "At the start the car appears parked on dirt or gravel off the road. As the camera orbits, yellow center-line dashes appear directly beside and ahead of the car, which puts it in the traffic lane of a two-lane highway. Telephone poles also appear that were not visible in the earlier wide view of the same horizon.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "large glass jar with spout | on cutting board, empty, upright, no lid | on board, ~2/3 full of mixed green and dark purple olives | fills only via pours from small glass bowl and a handful; contents gain dark olives that were never seen in any source container",
+    "small clear glass pouring bowl | held in hand over jar, full of GREEN olives only | held above jar at 09:75 with green content visible again | poured 00:00-03:75; not clearly visible 04:25-05:00; refilled with green olives ~05:25-05:50; dark olives appear inside at 06:75; poured until visibly empty at 08:75-09:25; green content reappears at 09:75 with no refill action",
+    "olives in jar | none at 00:00 | dense mix of green and dark purple | dark olive present at jar bottom at 00:50 before the first olive lands; dark olives accumulate 00:75-01:75 while only green olives are visible in the pouring bowl",
+    "steel mixing bowl (rear, right) | on counter, ~10 green olives | ~6 green olives plus brown pit/nut-like items | one handful grabbed 04:50-05:00; at 05:25 only ~2 green olives plus brown items remain; count then climbs back (~3 at 06:00, ~5 at 08:75, ~6 at 09:75) with no olives added",
+    "white/grey ceramic bowl (front, right) | on counter, full of dark-green olives | unchanged, full | no interaction; consistent",
+    "small clear glass bottle | not visible on counter at 00:00-04:25 | standing on counter right of steel bowl | first appears at 04:50 in an area previously showing bare counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured into jar (color/identity)",
+      "invariant_violated": "identity persistence / object transformation",
+      "description": "The pouring bowl visibly contains only green olives (00:00-01:75) and the falling olives are green, yet dark purple/black olives appear in the jar: one sits at the jar bottom at 00:50 before the first green olive has landed, and by 01:75 roughly half the olives in the jar are dark purple. Green olives effectively turn into dark olives, or dark olives spawn with no source.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "05:25",
+      "entity": "steel mixing bowl contents",
+      "invariant_violated": "count conservation / object transformation",
+      "description": "At 05:00 the steel bowl holds ~10 green olives and one hand takes a handful. At 05:25 the bowl holds only ~2 green olives plus several brown pit/nut-like objects never seen before, which is more removal than one handful and introduces new objects. Afterwards the green count rises with no olives added (~3 at 06:00, ~5 at 08:75, ~6 at 09:75).",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "06:75",
+      "entity": "small glass pouring bowl contents",
+      "invariant_violated": "identity persistence / unexplained appearance",
+      "description": "The bowl was refilled with green olives from the green steel bowl (06:00-06:50 shows only green olives inside), but at 06:75-07:50 several dark purple olives are inside it with no visible source of dark olives.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "09:75",
+      "entity": "small glass pouring bowl contents",
+      "invariant_violated": "state reversal (empty -> full without action)",
+      "description": "The pouring bowl is visibly empty at 08:75-09:25 after being poured out, but at 09:75 green olive content shows inside it again with no refill from any container.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "04:50",
+      "entity": "small clear glass bottle",
+      "invariant_violated": "object appearance without cause",
+      "description": "A small clear bottle stands on the counter right of the steel bowl from 04:50 on. That spot is bare counter at 00:00-04:25, and nobody places a bottle there.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

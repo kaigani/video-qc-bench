@@ -1,0 +1,29 @@
+{
+  "ledger": [
+    "Red apple/tomato (single small red fruit with green stem): 00:00-00:07.25 held in woman's cupped hands at chest height in front of the umbrella shaft, continuously visible, consistent size",
+    "Red apple: 00:07.50 still in hands but appears smaller, partially behind fingers",
+    "Red apple: 00:07.75 only a small red sliver visible between fingertips; noticeably smaller than at 00:06.00",
+    "Red apple: 00:08.00 only a tiny green stem tip visible at fingertips, no red body visible",
+    "Red apple: 00:08.25-00:09.75 not visible anywhere; hands are closed tightly around the thin umbrella shaft; never seen placed on a stall, pocketed, handed off, or dropped; nothing leaves frame",
+    "Blue umbrella: 00:00-00:09.75 shaft held in woman's hands throughout; continuous",
+    "No other small objects are manipulated by hands in the clip"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "red apple held in the woman's hands",
+      "invariant_violated": "continuous chain of custody / object vanishing",
+      "description": "The apple, held in plain view from 00:00 to 00:07.25, shrinks over 00:07.50-00:08.00 (by 00:08.00 only the stem tip shows) and is gone by 00:08.25. It is never placed down, handed off, pocketed or dropped. From 00:08.25 to 00:09.75 both hands are wrapped tightly around the thin umbrella shaft with no room to hide a fruit that size. This is ordinary walking footage, not a magic performance. The fruit dissolves rather than being moved anywhere.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "red apple held in the woman's hands",
+      "invariant_violated": "object identity / size consistency",
+      "description": "From 00:06.00-00:07.00 the fruit is roughly palm-sized. Over 00:07.25-00:07.75 it shrinks steadily to a small sliver between the fingertips, though the camera distance hardly changes and it is not occluded in a way that would explain it. The object morphs before it disappears.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ]
+}

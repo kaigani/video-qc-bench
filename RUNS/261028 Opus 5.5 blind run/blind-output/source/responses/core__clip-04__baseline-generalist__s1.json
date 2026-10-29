@@ -1,0 +1,26 @@
+{
+  "ledger": [
+    "man (dark slicked hair, green/white vertical-stripe shirt over white tee) | facing camera, talking, center frame | back three-quarter to camera, hands at left door panel | turns left at ~07.0s, walks past coat hook to door at ~08.5s",
+    "navy coat on brass hook | hanging left of center door, plain navy visible side | hanging right of man, white sleeve stripe visible | stripe revealed as camera reangles ~08.25s",
+    "framed face drawing on center door | partly occluded behind man's head | fully visible right of coat | revealed ~07.5s",
+    "left door / doorknob | knob not visible | brass knob at bottom-left of door panel, wall plates on left | revealed ~08.75s"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.750",
+      "entity": "man's hands / left door",
+      "invariant_violated": "action-object mismatch",
+      "description": "The man appears to work at the door with both hands at mid-panel height, like turning or unlocking something, but there is no knob, lock, latch or handle there. The only doorknob is at the bottom-left of the door, well below his hands. He seems to be operating a mechanism that isn't there, and this lasts through to the end of the clip.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:07.250",
+      "entity": "man's hair",
+      "invariant_violated": "appearance consistency",
+      "description": "As he turns, his hair suddenly looks fuller and taller, with more of a pompadour, than the flat slicked style he has in the first 7 seconds. His face shape also shifts slightly. This may be caused by motion or the change in angle.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

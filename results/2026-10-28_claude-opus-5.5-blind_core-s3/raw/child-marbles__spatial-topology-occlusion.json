@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "camera/shot structure | single continuous handheld high-angle shot from table's far/right side looking down at child and bowl | same continuous shot, progressively pushed in and rotated so bowl fills frame | no cuts; framing drifts wider at ~1.5-3.25s, pushes in from ~3.75s, tight close-up on bowl from ~4.5s to end",
+    "wooden table | large planked table with diagonal board seam at upper right; near edge runs along child's side, patio visible beyond it | same planked table, grain consistent, near edge behind bowl/between child's arms | edge orientation and seam stay geometrically consistent with camera rotation",
+    "glass bowl | centered on table in front of child, small metal cup to its right | same bowl, now filling frame center | stays fixed on table; near rim occludes balls/hand inside, far rim is seen through/overlapped correctly by the child's hands gripping it",
+    "small metal cup with leaf-print contents | on table right of bowl, slightly behind | right of bowl until it exits frame right ~4.25-4.5s due to push-in | position relative to bowl consistent in every frame it appears",
+    "loose balls on table | cluster of red/green/yellow balls at right table edge, right of and in front of metal cup | out of frame after ~3.75s | relative position to cup/bowl consistent while visible",
+    "background patio | brick/stone paving, terracotta pots along wall and white door/window frame at top right (visible ~1.5-3.25s) | patio paving seen in gap between child's torso and right arm/beyond table edge | pots/door stay at top right in wide portion; gap view of paving at 7.5-9.75s consistent frame to frame",
+    "child (spatial only) | standing at near/left edge of table behind bowl, left hand reaching into bowl, right hand on far-right rim | same position; left hand inside bowl stirring, right hand gripping rim | hands inside bowl seen through glass behind near rim; right fingers drape over rim correctly; no depth inversions observed",
+    "occlusion relationships | left forearm passes over left rim into bowl; balls inside bowl behind near glass wall; hand in front of balls when reaching | same relationships persist through motion-blurred stirring 5.0-9.75s | occlusion edges evolve smoothly; blur present but no background-over-foreground rendering detected"
+  ],
+  "findings": [],
+  "video": "child-marbles.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-02__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "a83319d868384ce001d60f7ba1bfff9857b3dc52df075510d2f0589caf5751b0",
+  "key": "child-marbles__spatial-topology-occlusion",
+  "parseOk": true
+}

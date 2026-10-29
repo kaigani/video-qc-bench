@@ -1,0 +1,64 @@
+{
+  "ledger": [
+    "ANCHORS: A1 = lunch counter (customer/stool side vs service side); A2 = row of red stools along customer side; A3 = kitchen pass-through window on back wall; A4 = front windows with OPEN sign (left wall in wide shots)",
+    "shot 1: 00:00-00:10.17, exterior wide of lit diner at dusk with white semi truck at left; no people visible (1 fps sample at 00:10.000 already shows interior, a sampling/timing quirk, not a placement issue)",
+    "shot 2: 00:10.21-00:18.67, interior medium on counter/kitchen pass; WAITRESS on service side of A1, wiping counter, moving left-to-right; no customer",
+    "shot 3: 00:18.71-00:27.08, wide from customer end; WAITRESS service side of A1 wiping, then pouring coffee; MAN appears at back near A3 / end of counter (~00:19), walks round the counter end onto customer side, sits on a stool at the near curve (~00:24), faces counter",
+    "shot 4: 00:27.13-00:32.29, close-up of coffee pour; MAN's hand on customer side, WAITRESS arm and pot from service side; consistent with shot 3",
+    "shot 5: 00:32.33-00:36.42, insert of toast and egg plate; no people",
+    "shot 6: 00:36.46-00:44.92, wide; MAN alone, mug in hand, plate in front; WAITRESS absent (food served, so elapsed time implied); MAN's legs appear on customer side below the counter front while his torso sits behind the counter top, with no stool under him",
+    "shot 7: 00:44.96-00:51.33, reverse from service side; WAITRESS foreground wiping counter, service side; MAN in background seated at counter on customer side near the door; consistent 180-degree reversal",
+    "shot 8: 00:51.38-00:59.83, empty counter (same setup as shot 2); no people",
+    "shot 9: 00:59.88-01:09.04, wide in daylight (time skip); MAN on stool, customer side; WAITRESS service side at back counter, facing away, then moves toward him",
+    "shot 10: 01:09.08-01:17.54, medium two-shot; MAN customer side, screen-left; WAITRESS service side, sets plate down, then turns away to the back counter with her back to camera",
+    "shot 11: 01:17.58-01:26.75, wide; MAN on stool, customer side; WAITRESS starts on service side facing him (~01:17.6-01:20), then by ~01:21-01:22 is seated beside him on the customer side, feet near the stools, with no walk around the counter",
+    "shot 12: 01:26.79-01:35.21, close two-shot from service side; WAITRESS screen-left and MAN screen-right, both seated on customer side holding mugs; matches end of shot 11",
+    "shot 13: 01:35.25-01:37.38, empty sunlit counter; no people",
+    "shot 14: 01:37.42-01:40.96, insert of mug; MAN's hands leave cash; one person's two hands; consistent",
+    "shot 15: 01:41.00-01:45.96, view out through the window; MAN outside, walking to green truck; WAITRESS reflected in glass, inside; consistent with exit",
+    "shot 16: 01:46.00-01:50.17, WAITRESS inside by the window/booth, watching; MAN outside at the truck cab; consistent",
+    "shot 17: 01:50.21-~01:58, wide in golden light; WAITRESS seated on a stool, customer side; ~01:51 she stands and leans over the counter; ~01:51.8 a second identical waitress appears at the back by A3 while the first moves right onto the service side; both are visible until ~01:56, then one remains"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress (duplicate instance)",
+      "invariant_violated": "single instance of a person / no duplicate",
+      "description": "In the final wide shot the waitress gets up from a customer-side stool (01:50.2-01:51.5). By ~01:51.8 a second figure in the same blue uniform and white apron is standing at the back near the kitchen pass, while the original walks right along the service side to the coffee machines. Both are visible at once from ~01:52 to ~01:56 (frames 113-117). This is the same character duplicated, not a new person entering.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "Waitress, crossing the counter",
+      "invariant_violated": "opposite side of anchor with no visible crossing",
+      "description": "The waitress starts on a customer-side stool at 01:50.2. Within about 1 s she is behind the counter on the service side at the right (01:52-01:53). She never walks round the counter end: in the 01:51.8-01:52.3 frames her legs are still in front of the counter base while her torso is already behind the counter top, so she passes through the counter.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:21",
+      "entity": "Waitress, crossing the counter",
+      "invariant_violated": "opposite side of anchor with no visible crossing",
+      "description": "In the continuous wide shot that starts at 01:17.6, the waitress stands on the service side of the counter facing the man (01:18-01:20). By ~01:21-01:22 she is seated beside him on the customer side, with her feet down by the stools (frame 84). The dense 4 fps samples show her sliding sideways into his position with no walk round the counter end, and there is no cut to explain the move. Shot 12 (01:26.8) then shows them both seated on the customer side, so the impossible crossing carries on into the next shot.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "Man seated at counter",
+      "invariant_violated": "body overlapping fixed geometry (counter)",
+      "description": "In the wide shot that starts at 00:36.46, the man's jeans and legs show in front of and below the counter's front panel on the customer side, yet his torso, arms and mug sit behind the counter top, with the plate between him and the camera. No stool is visible under him, and the stool row stops to his left. He looks embedded in the counter rather than seated at it, unlike shot 3 (00:24-00:27), where he clearly sits on a stool in front of the counter.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "01:17",
+      "entity": "Waitress, pose and orientation across cut-009",
+      "invariant_violated": "action continuity across cut",
+      "description": "Just before the cut (01:17.54, medium) the waitress has her back to the camera and is walking away toward the back counter. Just after it (01:17.58, wide) she is at the counter right beside the man, turned toward him and leaning on the counter, without the distance she had just covered. The two shots are a matched continuation, so no elapsed time accounts for the change.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

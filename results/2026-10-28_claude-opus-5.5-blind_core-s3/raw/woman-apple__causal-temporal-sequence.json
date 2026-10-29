@@ -1,0 +1,42 @@
+{
+  "ledger": [
+    "Main woman (navy cardigan, umbrella, red apple) | walking toward camera through market at 00:00, apple cupped in both hands at chest | standing/slow, seen from behind at 09:75, hands still at chest, no apple visible | continuous forward walk 00:00-04:50; camera orbits from front to profile (06:00-08:75) to rear (09:00-09:75); smile persists throughout with no triggering event required",
+    "Red apple in woman's hands | full red apple held at chest 00:00-07:25 | absent from hands by 08:00 onward | apple progressively shrinks into the cupped hands 07:25-07:90 while hands keep the same cupped pose; no release, pocketing, bite or drop motion observed (12 fps check)",
+    "Umbrella | open above woman, shaft descending to her hands 00:00 | still open above her at 09:75 | no changes in state; moves with her and camera orbit",
+    "Light-blue-shirt woman with shoulder bag | enters foreground left at 00:75 | walking away on right, behind subject, 04:25 | walks away from camera continuously, passes behind subject's left then to her right; motion continuous and forward",
+    "White-shirt man | enters foreground left 02:50 | walking away background right 05:75 | continuous walk away from camera, passes behind subject; plausible",
+    "Red-shirt woman (background) | walking toward camera 00:00 | still approaching 04:75 | steady distance consistent with camera dollying back with subject; plausible",
+    "Blue-T-shirt man | enters left 05:75 | exits right behind subject 07:75 | continuous lateral walk relative to orbiting camera; plausible",
+    "Light-blue polo man with glasses | appears left 08:00 | at subject's right 09:75 | walk consistent with camera orbit; plausible",
+    "Camera | dollying backward ahead of walking subject 00:00-04:50 | orbiting to her rear 09:75 | smooth continuous motion, no freezes or repeated beats observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple held in woman's hands",
+      "invariant_violated": "effect-without-cause (object disappearance with no causal action)",
+      "description": "From 07:25 to ~07:90 the apple held in her cupped hands shrinks and vanishes while her hands stay in the same cupped pose; there is no release, drop, pocketing or bite motion to cause it to leave her hands, and from 08:00 onward her hands hold nothing. The apple dissolves rather than being acted on.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "woman-apple.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-13__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-13.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-13__causal-temporal-sequence.json",
+  "frozen_source_sha256": "c32553e3567730a32d54ff7f5eb31dccf5c67853074fba56feb5b6a488925faa",
+  "key": "woman-apple__causal-temporal-sequence",
+  "parseOk": true
+}

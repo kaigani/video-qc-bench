@@ -1,0 +1,56 @@
+{
+  "ledger": [
+    "real man (foreground, back to camera) | holds small straight razor at chin, head tilted up | holds razor near temple/eye at 09:75 | strokes chin->upper lip (0-1.5s), moves to temple/forehead/hairline (1.75-4.0s), back to nose/upper lip/chin (4.25-7.0s), cheek/jaw (7.5-9.25s), temple again (9.75s)",
+    "mirror reflection of man | should mirror real man's hand/razor action with zero delay | razor at upper lip/nose at 09:75 | mostly tracks real action, but at 02:25-04:00 and 09:00-09:25 the reflected razor position/contact differs from the real hand",
+    "razor stroke -> skin/hair effect | dry strokes on already clean-shaven skin, no foam | no visible change to stubble, skin or hairline at end | no hair removed, no foam, no nicks; strokes across eyebrow/forehead/hairline produce no change",
+    "cause-effect pair: real hand moves razor -> reflection moves razor | t=0.00-1.50 | reflection simultaneous | plausible",
+    "cause-effect pair: real hand at side of head/hairline (01:75-04:00) -> reflection razor drawn horizontally across center forehead/eyebrow | t=02:25-04:00 | position and object appearance do not correspond (real object appears dark comb-like in hair, reflection shows white blade on forehead) | implausible",
+    "cause-effect pair: real razor held vertically away from jaw, not in contact (09:00-09:25) -> reflection razor pressed against jaw/cheek | simultaneous | effect without matching cause | implausible",
+    "temporal flow | continuous motion within single shot, no cuts | ends mid-stroke at 09:75 | stroke cycle chin->upper lip->chin repeats near-identically at 00:00-01:50 and 05:00-06:50; plausible for repetitive shaving"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "mirror reflection vs real hand/razor",
+      "invariant_violated": "effect-without-cause (reflection must mirror real action)",
+      "description": "At 00:09.00 the real hand near the chin shows pinched fingers with no razor touching the face, and at 00:09.25 the real razor is held vertically away from the jaw with no contact; in the mirror at the same instants the reflected razor is pressed diagonally against the cheek/jaw in an active shaving stroke. The reflected contact has no corresponding real action.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "mirror reflection vs real hand/razor",
+      "invariant_violated": "effect mismatch to cause (reflection direction/position)",
+      "description": "From 00:02.25 to 00:04.00 the real man's hand is raised to the side of his head, with a dark comb-like object running through the hair above the ear. In the reflection, the hand is at the center of the forehead, drawing a white razor horizontally across the eyebrow/forehead. The reflected action does not follow the real hand's position or motion.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "razor strokes on face/hairline",
+      "invariant_violated": "cause-without-effect",
+      "description": "Repeated dry razor strokes across chin, lip, eyebrow/forehead and hairline (00:02.25-00:04.00 especially) leave no visible effect. No hair is removed, no stubble changes, and there is no foam, residue or skin reaction. The eyebrow and hairline strokes should visibly alter hair if the blade is really contacting it.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__causal-temporal-sequence__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-07__causal-temporal-sequence.json",
+  "frozen_source_sha256": "96f61be4c4a08bc450536f01943ed3a6523759721312f5ef68752535572a9f0a",
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "parseOk": true
+}

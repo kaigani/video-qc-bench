@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Background woman | 00:00: dark hair, navy-blue short-sleeve top, blue jeans, dark shoes; carrying a large red tote/box bag in her right hand (screen-left of body), walking away from camera across paved plaza beyond the railing, upper-center/right of frame | ~00:03: same clothing and hair, small at top of frame walking away, right hand hanging empty, no bag visible, then exits behind phone/frame top | walks steadily away and slightly screen-left from 00:00 to 00:03 with continuous gait; red bag visibly shrinks and vanishes from her hand ~00:02.0-00:02.4 with no set-down action",
+    "Foreground phone user (hands only) | 00:00: medium-brown skin, left thumb at lower-left, right hand gripping right edge of phone, thumb near screen edge; single continuous handheld shot over railing/stairs | 00:09.0-00:09.75: same hands, right hand fingers spread over lower phone, phone lowered out of frame revealing stairs | hands consistent in skin tone and grip throughout; right thumb taps/swipes ~00:06.5-00:08.75 with continuous motion; no cuts observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Background woman's carried red bag (her accessory)",
+      "invariant_violated": "identity/accessory continuity",
+      "description": "The woman carries a large red bag in her right hand from 00:00 through ~00:02.0 while walking continuously away. Between ~00:02.0 and ~00:02.4 the bag progressively shrinks and disappears while her arm keeps swinging; by 00:02.25 her right hand hangs empty with no set-down or hand-off action visible, and she remains in continuous view.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-08.mp4",
+  "role": "character-continuity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__character-continuity__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

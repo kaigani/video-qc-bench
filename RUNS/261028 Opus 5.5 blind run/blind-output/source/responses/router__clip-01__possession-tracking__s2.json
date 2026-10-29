@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "00:10-00:18 waitress's wiping rag: in waitress's hand on counter, wiping; stays in hand throughout",
+    "00:24-00:27 coffee pot: waitress's right hand, pouring toward counter in front of seated man",
+    "00:27 white mug (man's): held in man's right hand under coffee pot (close-up)",
+    "00:28-00:32 white mug: released onto counter; man's hand rests to the left; pot (waitress's hand) pours into it; folded rag stays on counter at right",
+    "00:32-00:36 plate with toast and fried egg + fork/knife: on counter (insert); 00:36-00:44 same plate in front of man with mug in his hands",
+    "00:45-00:51 waitress's rag: in her hand wiping back counter; separate white mug stays on back counter at left edge",
+    "01:09 plate of food: waitress's hand sets it on counter in front of man; man's white mug on counter at his left",
+    "01:10-01:12 second white mug: appears in waitress's hand near plate; man's mug in man's hands",
+    "01:12-01:13 waitress moves second mug toward man's mug; both mugs touch and merge into a single mug held by both hands",
+    "01:14-01:17 single mug remains in man's hands; waitress lifts plate back off counter and carries it away (exits right/back)",
+    "01:27-01:35 two-shot: man's mug in man's hands; waitress (now seated on customer side) holds her own mug; napkin dispenser/salt/pepper static",
+    "01:37 close-up: white mug alone on counter",
+    "01:37.6-01:38.6 cash: man's left hand slides folded bill(s) onto counter beside mug; right hand (plaid cuff) enters and touches bills",
+    "01:39 left hand withdraws; bills now a fanned stack of ~3 notes with top note curled up; right hand withdraws",
+    "01:39.6-01:40.9 bills stay on counter next to mug, unmoved",
+    "01:41-01:50 man exits to truck empty-handed (no tracked small object); condiment bottles static on window ledge",
+    "01:50-01:58 waitress handling mugs/cup on counter in wide shot; no close custody detail visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "second white coffee mug held by waitress",
+      "invariant_violated": "transfer completeness / object persistence",
+      "description": "Waitress holds a second white mug beside the man's mug (man gripping his own mug). As she pushes it toward his, the two mugs overlap and fuse into a single mug held by both hands (~01:12.5-01:13). From 01:13 onward only one mug exists; the second mug is never set down, taken back, or shown elsewhere. It vanishes by merging into the other.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:39",
+      "entity": "cash bills left on counter",
+      "invariant_violated": "transfer completeness",
+      "description": "Under the man's left hand at 01:38 the money is a thin, flat bill (one or two layers). When the hand lifts at ~01:39 it has become a fanned stack of about three notes with the top note curled upward. No extra bills are visibly added: the right hand only brushes the edge. This looks like an unexplained change in note count or form, though occlusion by the fingers might be hiding it.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

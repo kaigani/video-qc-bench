@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "dancer (real, back to camera) | black sports bra, black leggings, ponytail, tattoos on both upper arms, barefoot, arm extending to side | right arm raised overhead in curved fifth, right leg pointed back on toe | arm port de bras 0-4s, hand placed behind back on hip/buttock ~5.0-5.75s, second port de bras 6-9.75s",
+    "dancer reflection in mirror | facing camera, same outfit, arm extending to side | raised arm on matching image side, pointed back foot on matching side | mostly tracks real dancer; hand placement ~5.0-5.75s appears on front of pelvis instead of behind body",
+    "studio environment | wall mirror panels, black door with window, exit signs, ballet barres, blue bin, wall plaque, wood floor | unchanged | static, slight handheld camera drift"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "dancer's hand vs. mirror reflection",
+      "invariant_violated": "mirror reflection consistency",
+      "description": "From ~5.0s to ~5.75s the real dancer (seen from behind) places her hand flat on the back of her hip/buttock, clearly on the rear of her body. In the mirror, which shows her front, the reflected hand is instead visible resting on the front of her pelvis/groin rather than being hidden behind her body. The reflection does not match the real pose.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-03.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-03__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

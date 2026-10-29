@@ -1,0 +1,75 @@
+{
+  "ledger": [
+    "small glass pouring bowl | holds only green olives | empty clear glass held above jar | refilled from steel bowl ~05.5s; later contents include dark olives",
+    "large glass jar | empty | ~2/3 full, predominantly dark purple/grey olives | fills from pouring bowl",
+    "steel bowl | full of green olives | few green olives plus brown nuts/pits | handful taken ~05.0s",
+    "ceramic bowl (front right) | green olives | green olives | unchanged",
+    "small glass bottle (counter right) | absent | present | appears ~04.5s"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured into jar",
+      "invariant_violated": "object color/identity",
+      "description": "The pouring bowl contains only green olives (00:00.000), yet dark purple/black olives land in the jar from 00:00.500 onward, and by 00:01.750 about half the jar contents are dark olives. Dark olives come out of a bowl that showed only green ones.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "jar olive count",
+      "invariant_violated": "quantity conservation",
+      "description": "Between 00:01.000 (about 3 olives in jar) and 00:01.750 (about 15 olives), the jar gains more olives than the small bowl visibly held or poured. The jar keeps filling at 00:02–00:03 while the bowl is still shown with olives in it.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small glass bottle on counter",
+      "invariant_violated": "object permanence (pop-in)",
+      "description": "A small clear glass bottle appears on the counter to the right of the steel bowl at 00:04.500. That spot is empty in 00:04.250 and in all earlier frames, which share roughly the same framing. Nobody places it there.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "steel bowl contents",
+      "invariant_violated": "quantity conservation / object appearance",
+      "description": "At 00:04.750 the steel bowl is full of green olives. After a single one-hand scoop it is nearly empty by 00:05.250, and brown nut/pit-like objects suddenly show in it. The handful shown is too small to explain how much the bowl lost.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "pouring glass bowl",
+      "invariant_violated": "prop continuity",
+      "description": "At 00:04.5–00:05.0 the hand picks olives straight from the steel bowl and no glass container is visible. At 00:05.500 the hands suddenly hold a filled glass bowl. The container reappears already full, with no visible pickup.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives in pouring bowl",
+      "invariant_violated": "object color/identity",
+      "description": "At 00:05.5–00:06.250 the refilled pouring bowl holds green olives scooped from a green-olive bowl. By 00:06.750–00:07.500 it holds several dark purple/black olives, which it was never filled with.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "jar fill level and composition",
+      "invariant_violated": "quantity/composition conservation",
+      "description": "After pouring one small bowl of mostly green olives (00:07.5–00:08.75), the jar at 00:09.000 is much fuller (about 2/3) and now mostly dark purple/grey olives. Both the number added and the color mix are inconsistent with what was poured.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "grey olives in jar",
+      "invariant_violated": "material rendering",
+      "description": "Several olives in the jar are a flat, semi-translucent blue-grey, unlike real olives. They read as ghostly or partly rendered objects next to the solid green and purple olives.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

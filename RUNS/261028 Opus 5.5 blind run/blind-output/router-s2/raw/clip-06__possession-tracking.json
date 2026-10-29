@@ -1,0 +1,46 @@
+{
+  "ledger": [
+    "Objects tracked: 4 steel cups (front-left, middle, right, back), gold coin in front-left cup, stack of embossed gold coins in middle cup, coins on table, coin held by second (left) hand; audio unassessed",
+    "00:00-01:00 front-left cup holds one gold coin inside; right hand holds a separate gold coin above the table at left",
+    "00:00-02:50 middle cup holds a stack of embossed gold coins (cross/crest design visible at 02:25 and 02:50); no hand touches the middle cup",
+    "01:25-02:25 right hand reaches into front-left cup; 02:25 hand lifts a gold coin out over the rim; 02:50 front-left cup is visibly empty and the coin is in the right hand (consistent)",
+    "02:75 middle cup contents now show a single pale silver coin with no gold stack, although no hand touched the cup",
+    "03:00-03:25 right hand holds gold coin above front-left cup; left hand holds a second gold coin near back cup (could be palmed, given this is a performance)",
+    "03:50-03:75 right hand lowers gold coin into front-left cup (coin at inner rim); left hand lowers coin toward back cup",
+    "04:25-05:00 front-left cup: coin face visible on the cup's outer front wall below the rim, held by fingertips; back cup: coin held at outer rim by left hand",
+    "05:00-09:75 camera pulls back to a wide shot; performer keeps fingertips on the cups with coins pinched at the cup rims in both hands; cups stay in a row; no release or reveal is shown",
+    "Table coins (gold and pale coins in the central green area): positions are roughly stable through 00:00-05:00; slight change in one coin's tint, not attributed to a hand"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "stack of embossed gold coins inside the middle cup",
+      "invariant_violated": "placement persistence / object identity",
+      "description": "Between 02:50 and 02:75 the middle cup's visible stack of embossed gold coins (crest design clearly shown) becomes a single plain pale-silver coin. No hand touches or covers the middle cup during this time, because the hand is working the front-left cup. Palming cannot explain the change since nothing touches that cup, and the object changes kind and colour.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "gold coin placed into the front-left cup",
+      "invariant_violated": "container containment",
+      "description": "At 03:50-03:75 the gold coin is lowered inside the front-left cup's rim. By 04:50-05:00 the same coin's face is visible flat against the outside front wall of the cup, below the rim, with the fingertips above it. Nothing shows the coin being lifted back over the rim, so it seems to pass from inside the cup to the outside of its wall or to merge into it.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-06.mp4",
+  "role": "possession-tracking",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__possession-tracking__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

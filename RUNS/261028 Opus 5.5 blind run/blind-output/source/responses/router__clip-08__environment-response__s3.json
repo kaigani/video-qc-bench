@@ -1,0 +1,28 @@
+{
+  "ledger": [
+    "Sunlight (hard directional sun, warm low angle): evidence = bright wall, sunlit paving, hard baluster shadows striping the stair treads at 09.5-09.75, warm-lit hands. Should affect: phone screen, hands, thumb (cast shadows), railing, foliage. Does: hands are steadily sunlit throughout; railing casts hard shadows onto the steps.",
+    "Sunlit/glare patch on the phone screen: absent 00.0-00.9; appears abruptly about 01.0 as a hard-edged bright band along the right side of the screen; grows into a large irregular silhouette-shaped bright region 03.25-06.5; the thumb casts a dark shadow inside it, so it reads as direct sunlight, not a reflection.",
+    "Dense 12 fps check 06.4-07.6: the bright patch jumps in shape and position between consecutive 1/12 s frames, vanishes completely (about 06.75, 07.25, 07.5), reappears (07.0, 08.0) and vanishes again (08.25 onward), while the phone and holding hand barely move and the adjacent sunlit hands show no matching change in light.",
+    "Wind: no evidence. Foliage in the planter behind the railing stays still, and the walking woman's clothing and red bag only move with her gait. No airflow is implied, so there is nothing to check for consistency.",
+    "Gravity/motion: the walking woman's red bag swings with her stride, which is consistent. The phone is handheld with small drift, and the camera pans down to the stairs at 09.25-09.75, giving apparent background motion only.",
+    "Audio unassessed (frames only); not relevant to this role."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "sunlight patch on phone screen",
+      "invariant_violated": "effect without cause (illumination onset)",
+      "description": "From 00.0 to 00.9 the screen is uniformly in shade while the hands next to it are sunlit. Around 01.0 a hard-edged bright band suddenly appears down the right side of the screen. There is no matching change in phone pose, hand lighting or any visible occluder, so the onset of the sunlit area has no cause.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "sunlight patch on phone screen",
+      "invariant_violated": "inconsistent illumination over time / no occluder",
+      "description": "Between about 06.4 and 08.25, the large hard-edged sunlit region on the screen, which contains a thumb cast shadow and so is direct sun rather than glare, changes shape and position drastically from one 1/12 s frame to the next. It disappears entirely (about 06.75, 07.25-07.5), reappears (07.0, 08.0), then vanishes for good (08.25 onward). The phone and the holding hand barely move, the sunlit hands right next to the screen keep constant lighting, and no moving occluder is visible. The screen's light and shadow pattern flickers with no physical cause.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

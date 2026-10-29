@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "woman in blue top and jeans | walking away across plaza, carrying large red bag in her right hand | walking away, both hands empty, no bag | red bag shrinks/fades and vanishes between ~2.0s and ~2.5s with no hand-off or drop",
+    "red bag | large red tote carried by woman | absent | dissolves out of existence at ~2.25s",
+    "smartphone held in two hands | teal screen with large '742'-style code, blurred foreground | teal screen with garbled glyphs 'Ā7·42', 'A‾A', 'x2', 'AZ-12' | text glyphs change form as focus racks; sunlight glare patch moves around screen; lowered out of frame at ~9.5s",
+    "camera | over-shoulder POV looking down stairs/plaza | tilts down to staircase | rack focus from background to phone at ~3.0s, pan down at ~9.25s"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red bag carried by woman walking away",
+      "invariant_violated": "object permanence",
+      "description": "The woman carries a large, clearly visible red bag in her right hand from 0:00 to 0:02.0. Between ~0:02.0 and ~0:02.5 the bag shrinks, turns pinkish and fades away while still at her side; by 0:02.5 both of her hands are visibly empty. She does not set it down, drop it, or pass it behind her body — it simply dissolves.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "phone screen text/UI",
+      "invariant_violated": "illegible / garbled generated text",
+      "description": "Once the phone comes into focus, the on-screen content is nonsensical pseudo-text: a large 'Ā7·42' with a stray macron-like mark, a header 'A‾A', a status-bar '7.42' / '4.49', a stray 'x2' and 'AZ-12'. Glyph shapes also mutate between frames (e.g. '742' reading as 'λ742' early on, the 'A' gaining a hooked overline later). This reads as AI text artifacts rather than a real app UI.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "sunlight glare/shadow on phone screen",
+      "invariant_violated": "lighting consistency",
+      "description": "The bright sun patch on the screen jumps in position and shape between adjacent frames (e.g. 0:04.5 → 0:04.75, 0:06.5 → 0:06.75 where it disappears almost entirely, then returns at 0:07.0 and 0:08.0) without corresponding large phone or hand movement, giving a flickering, unstable lighting look.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "performer left hand + coin | 00:00 holds a single gold coin edge-on above the table at frame left | 00:09.75 still holding a coin edge-on above the rear cups, never released | 00:00-00:00.5 coin held; 00:00.75-00:02 hand passes over the front cup; from 00:03.25 a coin is pinched above the far/rear cup and stays hovering for the rest of the clip without dropping",
+    "performer right hand + coin | 00:00.75 enters frame and reaches into the front-left cup | 00:09.75 still pinching a coin at the rim of the front cup | 00:01-00:02 fingers inside the front-left cup (cause); 00:02.25 a gold coin is lifted out of the cup (effect follows the reach, plausible); 00:02.5-00:09.75 the coin stays pressed at or just above the cup rim and is never dropped or withdrawn",
+    "front-left steel cup | contains coin(s) at 00:00 | appears empty at 00:02.5 onward | coin removed by the right hand at 00:02.25, so the change has a visible cause",
+    "center steel cup with coin stack | coin stack visible inside at 00:00 | still holds coins at mid-clip | no interaction visible that would change it",
+    "camera | close top-down push at 00:00 | wide low orbit around the seated performer at 00:09.75 | continuous move with no frozen or repeated frames; the hands' action stalls while the camera keeps moving",
+    "performer face/attention | not visible at 00:00-00:04 | gaze down at the cups from 00:04.5 | no event to react to, so none expected"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "performer's hands and the coins held over the cups",
+      "invariant_violated": "initiated action must complete or be visibly interrupted",
+      "description": "After the right hand lifts a coin out of the front cup at 00:02.25, both hands bring coins to the cup rims, as if to drop or insert them (right hand at the front cup, left hand at the rear cup from about 00:03.25). For the remaining ~6.5 s the hands stay in that poised pose and no coin is released, inserted or withdrawn, while the camera keeps orbiting. The drop or insert action is set up and then never resolves. This could be an intentional held pose, so confidence is low.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-06.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__causal-temporal-sequence__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

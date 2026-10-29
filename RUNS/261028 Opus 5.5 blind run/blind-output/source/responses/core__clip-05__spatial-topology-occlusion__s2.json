@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "camera path | 00:00 in light-oak kitchen facing a doorway that opens onto a corridor ending in a white paned exterior door | 00:09.75 entering a different kitchen through a bedroom doorway | continuous handheld follow of the woman: kitchen -> corridor/hallway (00:01-00:03.5) -> bedroom (00:03.75-00:07) -> camera pans left and walks out through a bedroom doorway (00:07-00:09.75)",
+    "kitchen A (start) | light-oak upper/lower cabinets, multicolour tile backsplash, countertop stainless microwave with bread board on top, range with hood and red kettle and sink under window on the corridor's left side | not revisited | fixed reference for the house layout",
+    "blue-flower framed painting | on grey wall right of the kitchen doorway (00:00), then on corridor/hallway right wall with a small orange frame to its right (00:01.5-00:04) | 00:07-00:08.5 on the grey wall LEFT of a doorway INSIDE the bedroom | established as hallway decor outside the bedroom; reappears on the bedroom's interior wall",
+    "small orange framed picture | right of blue-flower painting on hallway wall, left of bedroom doorway (00:01.75-00:04.5) | not seen inside bedroom | consistent while in hallway",
+    "hallway end door | white paneled door with window lights and sheer curtain, at end of corridor (00:00-00:03.25) | similar white paned door seen through bedroom doorway (00:06.5-00:08) | consistent within hallway",
+    "bedroom doorway (entry) | entered from hallway at 00:03.75-00:04.5, small frame and switch on hallway wall to its left | behind camera after entry | geometry consistent on entry",
+    "bedroom | bed centered on back wall, headboard, lamp on left nightstand, painting above bed, gold chandelier, window with curtains right of bed, wooden chair(s) at foot of bed (00:04.5-00:05.25); second window left of bed revealed by left pan (00:05.5-00:06) with side table and framed photo | 00:06.5-00:07.25 a doorway with white door beyond appears left of the left window; abstract red/green painting right of it above side table | layout of bed/lamps/windows consistent through the pan",
+    "exit doorway (bedroom, 00:06.5-00:09.75) | opening showing a white paned door, pendant light, pale room beyond | 00:09-00:09.75 beyond it is a kitchen with dark cherry cabinets, over-range stainless microwave, gas range with control panel, window on right wall, small framed picture | space beyond does not match the established kitchen A or the hallway",
+    "occlusion (woman vs scene) | woman correctly occludes cabinets, paintings, doorframes and bed throughout | same at end | no depth-ordering errors observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "blue-flower framed painting",
+      "invariant_violated": "scene layout consistency / fixed-object location",
+      "description": "The blue-flower painting was established on the hallway/corridor wall outside the bedroom (00:01.5-00:04, beside the small orange frame and left of the bedroom entrance). After the camera pans around inside the bedroom, the same painting is mounted on the bedroom's interior grey wall immediately left of a bedroom doorway (00:07-00:08.5), with no small orange frame beside it. A fixed wall object cannot be both on the hallway face of the wall and on the bedroom interior; the decor has been relocated/duplicated.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "room beyond the bedroom exit doorway (kitchen)",
+      "invariant_violated": "connectivity / background through opening must match established layout",
+      "description": "Walking out of the bedroom, the doorway opens directly into a kitchen with dark cherry cabinets, an over-range stainless microwave, a gas range and a window on the right wall. The house was established as kitchen A (light-oak cabinets, tile backsplash, countertop microwave, hood over range) connected to the bedroom only via a corridor/hallway with an exterior paned door and the flower painting. Whether this is the entry doorway (which should show the hallway) or a new door, the room it connects to contradicts the established floor plan and kitchen geometry.",
+      "severity": "severe",
+      "confidence": 0.7
+    }
+  ]
+}

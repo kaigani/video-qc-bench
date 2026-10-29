@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior wide shots of diner and truck; no hand-object handling",
+    "00:10-00:19 waitress's right hand holds a cloth, wiping the counter; cloth stays in hand throughout; dispensers/napkin holders stay on the counter",
+    "00:19-00:27 man enters and sits; waitress lifts a coffee pot from the machine (00:24) and pours toward the man's mug on the counter",
+    "00:27-00:32 close-up: man's hand grips the white mug (00:27), then rests as a fist beside it (00:28-00:32); waitress's hand pours from the pot into the mug, then lifts the pot away (00:31-00:32); folded cloth stays on the counter at right",
+    "00:32-00:36 cutaway: plate of toast and egg with fork and knife on a table; no hands",
+    "00:36-00:45 man at counter, hand on mug, plate in front of him; static",
+    "00:45-00:51 waitress wipes counter with cloth in right hand; a mug stays on the counter at left of frame throughout",
+    "00:51-01:00 empty counter; no handling",
+    "01:00-01:09 man seated at counter with mug; waitress works at the back counter",
+    "01:09-01:11 waitress sets a plate in front of the man; man's mug on the counter, then in his hand; a second white mug stands near the dispenser",
+    "01:11.5-01:12.5 waitress picks up the second mug and holds it next to the man's mug; two separate mugs side by side in contact (01:12.5)",
+    "01:12.7-01:13 the two mugs overlap and resolve into one mug in the man's hand; the waitress's hand is still extended but empty",
+    "01:13-01:17 one mug only at the man's hand; waitress lifts the plate and walks away with it",
+    "01:26-01:35 man and waitress side by side, each holding a white mug; static",
+    "01:37 close-up: one mug on the counter",
+    "01:37.5-01:39.5 man's left hand slides folded bills onto the counter; right hand pats them flat; hands withdraw",
+    "01:39.5-01:41 bills stay on the counter left of the mug",
+    "01:41-01:50 man walks to the truck with empty hands; the silver cylinder near him is the truck's fuel tank; waitress watches through the window",
+    "01:50-01:58 waitress at the counter with a cup and saucer and a mug, then works behind the counter; bills not shown again (no contradiction)"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "second white coffee mug (held by waitress) / man's mug",
+      "invariant_violated": "transfer completeness / object permanence",
+      "description": "Within one continuous shot (no cut between 01:09.08 and 01:17.5), the waitress holds a second white mug right next to the mug in the man's hand. At ~01:12.5 two distinct mugs are visible side by side. Over the next ~0.3 s they overlap and become a single mug in the man's hand. The waitress's hand stays extended but is visibly empty, and from 01:13 on only one mug is on the counter. One mug vanishes and nothing visible accounts for it: it is not set down, not taken away, and not handed off as a separate object.",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-01__possession-tracking.json",
+  "frozen_source_sha256": "a24ed5662f7ea98fb3a3a6fef4c14d19fd43008351cf36db62f20c713fb1f26e",
+  "key": "_long-scene__possession-tracking",
+  "parseOk": true
+}

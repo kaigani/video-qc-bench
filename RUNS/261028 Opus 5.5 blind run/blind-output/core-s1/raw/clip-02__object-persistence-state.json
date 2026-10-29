@@ -1,0 +1,60 @@
+{
+  "ledger": [
+    "glass mixing bowl | on wooden table center, upright, contains 8 balls (2 red, 3 yellow, 3 green) at 00:00 | still on table, upright, child's left hand on rim; contents now a jumbled mostly-red set | not moved; only contents change",
+    "red balls in bowl | 2 red balls in bowl at 00:00 | ~5 red balls visible at 00:09.50 | a 3rd red appears between 00:00.25 and 00:00.75 while both original reds remain in bowl; red count keeps rising during stirring 00:07.50-00:09.75",
+    "held red ball | not present at 00:00 | lifted by child's hands 00:00.75-00:02.00, dropped back into bowl ~00:02.25 | origin unexplained: the two original reds stay in the bowl while it is held",
+    "yellow balls in bowl | 3 yellow in bowl at 00:00 | ~1 yellow visible at 00:09.50 | count drops during stirring with no ball leaving the bowl",
+    "green balls in bowl | 3 green in bowl at 00:00 | 1-2 green visible at 00:09.50-00:09.75 | count fluctuates during stirring",
+    "loose balls on table (right edge) | red/green/yellow balls on table at right edge, partially in frame 00:00-00:03.75 | out of frame after camera push-in | no unexplained change while visible",
+    "small metal pot with white egg/leaf decoration | on table right of bowl, upright | still in place when last visible ~00:04.00 | no change",
+    "balls during stirring (00:05.00-00:09.75) | rigid glossy spheres | blobby, smeared, elongated shapes | shape deformation beyond motion blur; balls stretch and merge"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "red ball (lifted by child)",
+      "invariant_violated": "count persistence / no spontaneous duplication",
+      "description": "At 00:00 the bowl holds exactly 2 red balls (plus 3 yellow, 3 green). By 00:00.75-00:01.00 the child is holding a red ball above the bowl while both original red balls are still visible in the bowl in the same positions, and all 8 original balls are still present. A third red ball appeared with no visible source (nothing was taken from the table or elsewhere).",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "balls in bowl (overall count)",
+      "invariant_violated": "count persistence / no vanishing",
+      "description": "At 00:05.25 about 8-9 balls are visible in the bowl; at 00:05.75 only ~5 are visible (green, 2 yellow, green, one red under the fingertips) although the hand covers only a small region and no ball is seen leaving the bowl. Several balls vanish during the stir.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "balls in bowl (color composition)",
+      "invariant_violated": "identity persistence / no color or count transformation",
+      "description": "The starting set is ~3 red, 3 yellow, 3 green. During stirring from ~00:07.50 to 00:09.75 the red count grows to ~4-5 visible while yellow drops to ~1 and green to 1-2; nothing is added or removed from the bowl. Balls appear to change color or turn into other balls.",
+      "severity": "severe",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "balls in bowl (shape)",
+      "invariant_violated": "rigid object shape persistence",
+      "description": "From ~00:07.00 through 00:09.75 the rigid spheres become blobby, elongated and smeared together (e.g., 00:09.00 and 00:09.25 show balls stretched into irregular lumps and merging), which goes beyond normal motion blur.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,29 @@
+{
+  "ledger": [
+    "camera | 00:00 low close view of cups from the performer's right/front-right, hands entering from frame left | 00:09.75 wider view from performer's front-left, performer on frame right facing left | single continuous pull-back and orbit of roughly 90+ degrees through a frontal view at ~00:06.5-00:07.5; no hard cuts",
+    "round table with red cloth, cream inner oval and ring of decorative coins/chips | fills frame, cream oval centered under cups | performer seated at table edge, cream oval to his front-left | table perimeter and cream oval stay consistent with the orbit",
+    "four metal cups | diamond/cluster: back cup top-left, middle cup with coin stack, right cup, front-left cup (00:00-00:04.0) | compact cluster of cups to performer's front-left, only 3 clearly visible at 00:09.5-00:09.75 | evenly spaced straight row of four cups parallel to performer's chest at 00:05.0-00:08.0 with no repositioning by the hands",
+    "loose coins on cream area (two large coins front, smaller gold coin near right cup) | in front of and right of cup group | largely hidden/compressed by low angle later | consistent with camera move as far as visible",
+    "performer (seated) | only hands/sleeve visible at frame left 00:00-00:03.0 | seated in chair on frame right facing left 00:09.0+ | position relative to table consistent with camera orbit from his right side through front to his left side",
+    "room background: windows, framed picture, wooden chairs, seated/standing bystanders | windows behind table at 00:03-00:04.5 | windows to left and behind, framed picture on wall above sideboard 00:08.5+ | parallax compatible with orbit",
+    "occlusion: hands vs cups, cups vs each other | fingers enter cup rims from above, near cups occlude far ones | same | no depth-ordering inversions observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "four metal cups (arrangement on table)",
+      "invariant_violated": "scene layout consistency across viewpoints",
+      "description": "In the opening view the cups form a non-collinear diamond/cluster (one cup well behind, one to the right, the coin-stack cup in the middle, one front-left). As the camera orbits continuously toward the performer's front, the same cups become an evenly spaced straight row of four of equal apparent size parallel to his chest (00:05-00:08), then collapse back into a compact 2x2-style cluster at 00:09. The hands only touch individual cups and never slide them, so a fixed 2D arrangement should not re-project from a diamond into a clean line and back during a smooth orbit.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09.5",
+      "entity": "fourth metal cup",
+      "invariant_violated": "object persistence under viewpoint change / occlusion",
+      "description": "From 00:09.0 four cups are visible in a cluster; by 00:09.5-00:09.75 only three cups are visible with clear table surface around them and no hand or other cup positioned to occlude the missing one.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

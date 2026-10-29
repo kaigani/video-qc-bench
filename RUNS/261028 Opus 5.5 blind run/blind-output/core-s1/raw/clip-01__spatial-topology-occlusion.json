@@ -1,0 +1,70 @@
+{
+  "ledger": [
+    "Diner exterior (00:00-00:10) | single-storey flat-roof box, glass front with centre door, windows wrapping right corner; flat open lot and distant tree line, no neighbouring buildings | same | static establishing shot, no camera move",
+    "Parked truck (exterior) | white tractor parked left of the diner, facing right | same through 00:10 | not visible through interior windows in the night wide shots; at 01:41-01:50 a truck is parked broadside just outside a booth-side window",
+    "Interior wide master (camera at front end looking toward back) | booths and big windows along LEFT wall; end wall holds a window with OPEN neon (left) and kitchen pass-through (centre) with clock to its right; long curved counter on RIGHT with stools on its aisle (left) side; back-bar with coffee machine and microwaves on right wall | same layout at 18s, 59s, 77s, 110s | layout itself stays consistent across all master-shot returns",
+    "Interior close angle (00:10-00:18, 00:51-01:00, 01:35-01:37) | counter enters from right, stools in lower left, pass-through centre, door and coffee machine right, window sliver on far-left edge | same | consistent with the master shot's back wall",
+    "Reverse angle from behind service counter (00:45-00:51) | foreground straight service counter with plate shelf; background: short counter with stools on its near side, fridges, EXIT glass door at far end, booths and windows on RIGHT | same | booths on the right fit a reversal of the master, but the man sits on the far/service side of that counter, facing this camera",
+    "Window views from interior | gabled building close outside the OPEN window, parked cars outside the left windows | same in night and day masters | the exterior establishing shot shows no such building or cars next to the diner",
+    "Man (customer) | enters 00:20, walks down the aisle between booths and stools, sits on an aisle-side stool facing right toward the waitress (00:24-00:27) | seated aisle-side 00:59-01:26, leaves through the lot 01:41-01:46 | 00:36-00:44: torso behind the counter top facing the master camera while his legs show in front of the counter panel",
+    "Waitress | behind the counter (service side) 00:10-00:27, 00:59-01:17 | sits aisle-side on the stool beyond the man 01:21-01:26 (deeper in frame than him); stools at 01:50, then walks behind the counter 01:52 | 01:52: torso on the service side while one leg shows in front of the counter panel",
+    "Two-shot reverse (01:26.792-01:35) | camera across the counter facing both seated customers; booth windows behind | waitress frame-left, man frame-right | in the master the waitress sits deeper (toward the pass-through), which should put her frame-right in this reverse",
+    "Booth window shot (01:46-01:50) | waitress in a booth by the side windows; truck outside, man walking to the cab | same | geometry plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Man seated at counter vs counter top / front panel",
+      "invariant_violated": "depth ordering / impossible body placement relative to fixed counter",
+      "description": "In the master wide shot (00:36-00:44) the man faces the camera with the counter top in front of his torso, and his mug and plate sit on the near edge, so his upper body is on the far side of the counter. Yet his jeans and legs show in front of the counter's front panel, on the aisle side below the counter top. His body sits on both sides of the solid counter at once. It also contradicts 00:24-00:27, where he sat on an aisle-side stool facing right toward the waitress, and no stool is under him here.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress walking from stool to back-bar vs counter",
+      "invariant_violated": "solid-object occlusion / passing through fixed geometry",
+      "description": "At 01:51 the waitress stands on the aisle side by the stools. At 01:52 her torso is behind the counter top at the back-bar coffee machine (service side), while her trailing leg shows in front of the counter's front panel on the aisle side. There is no gap or flap there. She crosses through the solid counter instead of going around its end.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:44",
+      "entity": "Man's seat position in reverse angle vs master shot",
+      "invariant_violated": "viewpoint consistency across a reverse cut",
+      "description": "In the reverse from behind the service counter (00:44.958-00:51), the man sits on the far side of a short counter next to the fridges, with the stools on the opposite (near) side, and he faces this camera. In the opposing master shot just before (00:36-00:44) he also faces the camera, which looks the other way down the room. One seated man cannot face both opposite cameras. His position on the non-stool side also conflicts with the stool-side seating set up at 00:25-00:27. The counter here is a short peninsula ending at fridges and an EXIT door, not the long curved counter running to the pass-through in the master.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "01:26",
+      "entity": "Man and waitress seated side by side (reverse two-shot)",
+      "invariant_violated": "left/right consistency across reverse angle",
+      "description": "In the master (01:21-01:26) the waitress sits on the stool beyond the man, deeper toward the pass-through. The 01:26.792 two-shot looks back at them from across the counter. Their order along the counter should therefore put the man frame-left and the waitress frame-right. Instead the waitress is frame-left and the man frame-right, a mirrored seating order.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:18",
+      "entity": "Exterior seen through diner windows",
+      "invariant_violated": "connectivity / background through openings matches established layout",
+      "description": "From the first interior master (00:18.708) onward, the OPEN-sign window shows a gabled building just outside, and the left windows show parked cars. The exterior establishing shot (00:00-00:10) shows the diner alone on a flat open lot with only a distant tree line and a single truck to its left. At 01:41 a side window looks onto an empty field. The view through the windows does not match the exterior that was established.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

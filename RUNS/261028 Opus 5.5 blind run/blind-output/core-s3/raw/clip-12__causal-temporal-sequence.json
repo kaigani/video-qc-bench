@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "hand | holds/twists leftmost cube at 00:00, one cube held at a time | presses top of first two cubes at 09:00-09:75 | never leaves frame to fetch a cube, yet the row grows from 2 to 8 cubes; moves right along the row 00:00-07:75, lifts out at 08:00, sweeps back left 08:25-09:00",
+    "cube row | 2 cubes (green 2, green 2) at 00:00 | 8 cubes (2,3,2,2,3,5,2,6) at 09:75 | a new cube appears beside the held cube at about 01:00, 03:00-03:25, 04:00, 05:00, 06:00, 06:75 and 07:50, with no cube carried in",
+    "held cube 1 (left) | green 2, twisted by fingers 00:00-00:75 | blue 2, at rest | twisting fits the hand motion; a second cube (3) splits off its right side at 00:58-01:25 while the hand keeps holding it",
+    "held cube (3rd position) | green 2 settled at 02:00 | green 2 at 03:50 | turned by the hand 02:25-02:75 (2 to 3 to 2); a 4th cube (3) grows out of its right side at 03:00-03:25 with no source",
+    "held cube (6th position) | green 3 placed at 05:50-05:75 | green 5 at 06:00 | a 7th cube emerges from its right face at 06:00 with no hand transport",
+    "placed cubes | each settles after release | stay at rest after release | no cube moves after the hand lets go; reach and settle timing is plausible",
+    "hand sweep 08:00-09:00 | lifts away from the right end | fingertips touch the tops of the left cubes | contact causes no displacement, which is consistent with a light press"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "second cube (blue 3) next to the held leftmost cube",
+      "invariant_violated": "effect-without-cause: object appears without being placed",
+      "description": "The hand is holding and twisting a single cube. From about 00:58 to 01:25, a second cube splits off the held cube's right side and settles on the table. The hand never brought a second cube into frame and never released the first.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "fourth cube (green 3) spawned from the third cube",
+      "invariant_violated": "effect-without-cause: object appears without being placed",
+      "description": "Around 03:00-03:25 the hand twists the green cube in position 3, and a new cube emerges from that cube's right face. It slides into position 4 although no cube was carried in. The hand stays in contact with the original cube the whole time.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "cube row growth (cubes 5-8)",
+      "invariant_violated": "effect-without-cause: repeated spawning with no supply action",
+      "description": "Each new cube appears out of the cube the hand is already touching, at about 04:00, 05:00, 06:00 (from the green cube, which also turns from 3 to 5), 06:75 and 07:50. The row grows to 8 cubes, but the hand never leaves frame or picks up a cube from anywhere. Nothing visible causes the added objects.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

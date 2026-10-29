@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "red fruit (apple/tomato) | held cupped in woman's hands at chest, whole, fist-sized, 00:00 | absent at 00:08.25-00:09.75; hands hold only the umbrella shaft | held continuously 00:00-00:07.25; visible size shrinks 00:07.5-00:07.75 (only a sliver plus a stem showing), only the stem visible at 00:08.0, then gone with no drop, pocketing, hand-off, or bite",
+    "blue umbrella | open, held by woman's hand at chest via shaft, canopy overhead, 00:00 | open, still held in her hands at shoulder height, 00:09.75 | stays open and in her possession throughout; canopy looks darker under the stall roof (lighting, not counted)",
+    "woman's wristwatch / ring | on her left wrist and finger, intact | same | no change",
+    "market produce crates and stall displays | stacked fruit in crates along both sides of the aisle | same; background changes as the camera tracks | no object-state changes noted beyond the camera moving"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red fruit held in the woman's hands",
+      "invariant_violated": "object permanence / no unexplained disappearance",
+      "description": "The fist-sized red fruit she holds in cupped hands from 00:00 to 00:07.25 shrinks while still in her hands from 00:07.5 (only a sliver shows at 00:07.75, only a stem at 00:08.0). By 00:08.25 it is completely gone, and her hands close around the bare umbrella shaft. She doesn't drop it, pocket it, pass it to anyone, or eat it, and her hands are too tightly clasped around the shaft to hide a whole fruit. It never reappears through 00:09.75.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-13.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-13__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

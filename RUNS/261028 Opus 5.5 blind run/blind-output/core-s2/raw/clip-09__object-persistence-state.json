@@ -1,0 +1,68 @@
+{
+  "ledger": [
+    "large glass jar (spout/handle at right) | empty, upright on butcher-block board, center | upright, same spot, filled ~3/5 with mixed green and dark olives | filled by two pours from small glass cup (00:00-03:00 and 06:25-08:75); never moved",
+    "small glass cup | held tilted over jar mouth, contains only green olives | held near jar, nearly empty with greenish tint at 00:09.75 | pours green olives 00:00-03:00 yet appears full throughout; carried to steel bowl 04:00-05:00, refilled by hand; shows dark olives among green from ~06:75; poured again 07:25-08:75, empty at 08:75",
+    "green olives (cup -> jar) | in cup only | mixed in jar | fall from cup into jar 00:00.5-03:00 and 07:25-08:75",
+    "dark/purple olives | not present anywhere at 00:00 (cup, steel bowl, white bowl all green) | majority of jar contents at 09:00+ | appear in jar from 00:00.5 (one) and as ~6 at 00:01.75; appear in cup at ~06:75 although source steel bowl holds only green olives and nuts",
+    "steel bowl (back, right of jar) | ~9-10 green olives | ~4-5 green olives plus brown nut-like items and debris | hand scoops olives into cup 04:50-05:25; brown items revealed after scoop (plausibly hidden under olives)",
+    "white/grey ceramic bowl (front right) | full of green olives | full of green olives, unchanged | never touched; count stable",
+    "small clear glass bottle (counter, right of steel bowl) | absent at 00:00-03:75 | present 04:50-09:75 | appears at 04:50 with no visible placement",
+    "background items (stove, canisters on counter) | static | static | camera reframing only"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01.75",
+      "entity": "dark/purple olives in jar",
+      "invariant_violated": "identity/count conservation (objects from no source)",
+      "description": "The cup being poured contains only green olives (00:00-01:75), and the jar was empty at 00:00. A dark olive first appears on the jar floor at 00:00.5, vanishes at 00:01.0 (only three green olives present), reappears at 00:01.25, and by 00:01.75 the jar holds about six dark olives plus green ones. No dark olives exist in the cup or any bowl, so these olives materialize/change identity with no source.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:01.50",
+      "entity": "small glass cup contents",
+      "invariant_violated": "quantity conservation (source never depletes)",
+      "description": "Between 00:00 and 03:00 the jar goes from empty to ~25 olives poured from the small cup, yet the cup stays visibly full of green olives throughout the pour; its contents do not diminish in proportion to what lands in the jar.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:04.50",
+      "entity": "small clear glass bottle on counter",
+      "invariant_violated": "persistence (object appears without placement)",
+      "description": "A small clear glass bottle stands on the counter right of the steel bowl from 00:04.50 onward; at 00:03.75 the same counter area is empty. Hands were busy with the cup and steel bowl and nothing placed it there.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06.75",
+      "entity": "olives in small glass cup",
+      "invariant_violated": "identity/state (contents differ from source)",
+      "description": "The cup was refilled from the steel bowl, which contains only green olives (plus brown nut-like items). At 00:06.75-00:07.25 the cup holds several dark purple olives among the green ones, which could not have come from that bowl.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09.00",
+      "entity": "jar contents after second pour",
+      "invariant_violated": "quantity/composition conservation",
+      "description": "The second pour comes from a cup holding ~8-10 mostly green olives, yet the jar goes from ~25 olives (00:06.00) to roughly double, with dark olives now the majority. The amount and color mix added far exceed what the cup held.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "object-persistence-state",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__object-persistence-state__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

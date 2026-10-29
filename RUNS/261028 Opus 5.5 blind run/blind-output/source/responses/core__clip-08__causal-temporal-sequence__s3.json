@@ -1,0 +1,27 @@
+{
+  "ledger": [
+    "background pedestrian (blue top, jeans, red bag) | walking away up paved path behind railing at 00:00 | small/distant near top of frame by ~00:03, then out of frame | continuous forward walking; gait and recession consistent with time flowing forward, no repeats",
+    "camera/phone framing | wide over-shoulder shot, phone soft in foreground, background sharp | close-up with phone screen in focus | smooth push-in and focus pull 00:03-00:04; at 00:09.25-00:09.75 phone is swung down out of frame revealing steps (motion blur consistent with the move)",
+    "sunlit patch on phone screen | large bright wedge on right side of screen 00:01-00:04 | bright patch largely gone by 00:08.5-00:09 | from ~00:04.5 to ~00:08.25 the patch jumps position/shape and flickers on/off between adjacent frames (1/12-1/4 s) while the phone and hand stay nearly still; no visible moving occluder or source change",
+    "right thumb on screen | resting on right edge of screen 00:03-00:06.25 | lifted/hovering at lower right 00:09 | swipe/tap gestures across lower screen at ~00:06.5, 00:07.0, 00:07.75, 00:08.0, 00:08.25, 00:08.75",
+    "on-screen UI ('A742' / 'AZ-12' display) | static numeric display | identical static display | repeated thumb swipes/taps produce no scroll, page change or UI response; legibility changes only with the light patch"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "sunlit patch on phone screen",
+      "invariant_violated": "light change without cause",
+      "description": "Between ~00:04.5 and ~00:08.25 the bright sunlight patch on the screen repeatedly jumps to different positions (top vs lower half of screen), changes shape, and vanishes/reappears between consecutive frames (e.g. present at 00:07.0, gone at 00:06.75 and 00:07.25, back at 00:08.0, gone at 00:08.25) while the phone, hands and background remain essentially stationary and no occluder or light-source change is visible to cause it.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "thumb gestures vs on-screen UI",
+      "invariant_violated": "cause without effect",
+      "description": "The right thumb makes several swipe/tap motions across the lit touchscreen (~00:06.5, 00:07.0, 00:07.75-00:08.25, 00:08.75), but the displayed content ('A742', 'AZ-12') never scrolls, changes or responds in any way.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

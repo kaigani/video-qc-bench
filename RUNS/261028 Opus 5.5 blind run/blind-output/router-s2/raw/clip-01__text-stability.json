@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "00:00-00:09 exterior dusk diner wide: no legible text; window signage unlit/too small",
+    "00:10.167 exterior wide (cut-000-before): small red neon in window, ~20px, too small/blurred to read (likely the OPEN sign switching on); not judged",
+    "00:10-00:18 & 00:51-00:59 & 01:35-01:37 counter/pass-window shots: wall posters/menu frames present but text too small/soft to read; not judged",
+    "00:18.7-00:44.9 night interior wide: right window neon reads 'OPEN' at every legible moment (00:19, 00:20, 00:22, 00:26, 00:36, 00:41, 00:44) - stable",
+    "00:18.7-00:44.9 night interior wide: second neon sign in left window reads as a red bar + occluded glyph + 'O' ('|?O'); partially behind a mullion; same appearance at 00:20 and 00:41 - stable but not coherent",
+    "00:36-00:44 dark board above pass window: small white lettering, illegible at source resolution; not judged",
+    "00:45-00:51 reverse angle: red 'EXIT' sign over door, tiny; consistent where visible",
+    "00:59.9-01:17.5 daytime interior wide: window neon reads 'OPEN' at 00:59.9, 01:00, 01:02, 01:04, 01:06, 01:08 - stable",
+    "01:09-01:17.5 medium two-shot: foreground neon reads 'OPEN' at 01:09, 01:10, 01:11, 01:12, 01:14, 01:16, 01:17 - stable, crisp",
+    "01:17.6-01:26.7 daytime wide: neon 'OPEN' stable",
+    "01:38-01:40.9 close-up of banknotes: corner numerals read '100' (01:39, 01:40); portrait/seal present; header, signature and microprint lines are glyph-like non-words",
+    "01:41-01:50 truck through window: cab door script lettering ~25px, illegible at every frame (glyph shapes shift but never readable); not judged",
+    "01:50-01:58 sunlit interior wide: neon 'OPEN' (unlit/washed out) reads 'OPEN' at 01:50, 01:51, 01:53, 01:56, 01:58 - stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:40",
+      "entity": "$100 banknotes in insert close-up",
+      "invariant_violated": "legible text must be coherent",
+      "description": "In the static close-up of the bills (01:39-01:40.9), the '100' numerals render correctly but the header line, Treasury/signature text and serial-number areas, which are large enough to be resolved, are pseudo-glyph scribbles rather than real words ('THE UNITED STATES OF AMERICA', 'FEDERAL RESERVE NOTE' etc. absent).",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:20",
+      "entity": "second neon window sign left of the 'OPEN' sign (night interior wide)",
+      "invariant_violated": "legible text must be coherent",
+      "description": "The lit neon sign in the left window consistently reads as a red vertical bar, an occluded glyph and an 'O' ('|?O') in every night wide shot (00:18.7-00:44.9). Part of it sits behind a window mullion, but the visible letters do not make a plausible word.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "text-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__text-stability__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,35 @@
+{
+  "ledger": [
+    "skatepark terrain (near camera) | 0-7.75s: flat concrete deck with shallow hips/banks; distant bowls and ramps on the left at horizon level | 8.25-9.75s: deep bowl with tiled floor and steel coping running just in front of the camera, skater riding the bowl transition | ground directly between the camera and the skater changes from flat deck (7.5-8.0) to bowl (8.25 on) while the camera heading stays about the same",
+    "round concrete bench/planter | 0.0-0.25s right of skater on the deck | leaves frame by 0.5s as the camera pans | exit is consistent with the pan",
+    "short light pole on concrete base behind skater | 1.5-3.25s mid-frame behind skater/board, base on deck | board and legs occlude it correctly in 2.0-3.0 | depth order consistent",
+    "tall light poles / distant lamp masts | left and right background throughout | parallax consistent with camera motion | none",
+    "tall pole + ledge/quarterpipe at right | 4.5-7.25s right background, ledge base behind skater | stays on the right side while the camera follows | consistent",
+    "tree line + grass + gazebo/shelter | background throughout; gazebo appears right of center at 8.25-9.75 | consistent with heading | none",
+    "skater vs. camera occlusion | skater always in front of background elements; board in front of the pole and its base during the airs | no reversed depth seen | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.25",
+      "entity": "ground/terrain between camera and skater (deck vs. bowl)",
+      "invariant_violated": "scene layout consistency",
+      "description": "From 7.5-8.0s the skater rides toward the camera on flat deck, with no coping or bowl edge between them. Bowls show only far off at the horizon on the left. Between 8.0 and 8.25s, while the heading stays about the same (lamp masts on the left, tree line on the right), a deep tiled bowl with steel coping appears just in front of the camera. The skater is now airborne over it and lands on the bowl transition at 9.5s. Where the skater had just been rolling on flat ground is now a bowl, and the coping appears with no earlier sign of it in front of the camera. This reads as the terrain layout changing, not the camera revealing hidden geometry.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-10.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

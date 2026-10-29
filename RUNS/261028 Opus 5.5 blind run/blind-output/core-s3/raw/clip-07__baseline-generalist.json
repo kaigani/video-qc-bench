@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "man (real, foreground, seen from behind) | white shirt, dark hair, right hand holding razor near chin | white shirt, right hand holding silver razor near cheek/temple | 01:75-04:00 hand moves up to temple/hairline area holding a dark comb-like object",
+    "man (mirror reflection) | white shirt sleeves rolled, razor (white blade) on chin | razor at upper lip/cheek | 01:75-04:00 razor pressed flat against centre of forehead",
+    "razor / held tool | white/silver straight-razor blade | silver razor | in real space appears dark comb-like at 02:25-04:00 while reflection shows white blade"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection vs real man (razor contact)",
+      "invariant_violated": "reflection_mismatch",
+      "description": "Throughout the clip the reflection does not match the real subject's pose: e.g. at 00:00.25 the real man's razor is held several centimetres away from his face below the jaw, while the reflection shows the blade pressed against his chin; razor positions in reflection and reality repeatedly disagree frame to frame.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "held tool (razor vs comb) in real space vs reflection",
+      "invariant_violated": "object_identity_inconsistency",
+      "description": "From ~00:02.25 to 00:04.00 the real man holds a dark comb-like object up in the hair above his ear, while the mirror simultaneously shows a white razor blade pressed flat across the centre of his forehead. The object, its location on the head, and the action (combing vs scraping forehead) differ between subject and reflection.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "mirror reflection action",
+      "invariant_violated": "implausible_action",
+      "description": "Reflection shows the man scraping a straight razor across his forehead/brow with a clenched fist for ~2 seconds, a nonsensical shaving action, then the razor returns to the face at 00:04.25.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "real man head/hand pose vs reflection",
+      "invariant_violated": "reflection_mismatch",
+      "description": "At ~00:04.25-00:04.75 the real man's hand is at his temple/eye area at the side of his head, while the reflection shows the razor at the nose/upper lip with the face looking straight ahead; head angle and hand position do not correspond.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "shaving",
+      "invariant_violated": "physical_plausibility",
+      "description": "Man shaves with a straight razor on completely dry skin with no lather, water, or visible hair removal, and the blade appears as a white plastic-like stick in many reflection frames rather than metal.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,61 @@
+{
+  "ledger": [
+    "Exterior diner building | single-storey flat-roof box, lit glass front with centre door and right-side windows, chimney on roof, white semi cab parked to its left | same wide static view through 00:10 | brief exterior frame at 00:10.167 between interior frames (editorial, layout unchanged)",
+    "Interior layout (wide from front, facing kitchen, 00:18.7-00:44.9, 00:59.9-01:26.7, 01:50-01:58) | left wall = continuous windows with booths beneath; back wall = window with OPEN neon (left) then kitchen pass-through, clock above-right; right side = long curved counter with stools on the left/customer side, back bar with coffee machine and wall-mounted ovens on the right | layout identical in all wide shots | stable",
+    "Close counter angle (00:10-00:18.6, 00:51-00:59.8, 01:35-01:37.4) | window at left edge, framed menu, pass-through window with warm light, clock top-right, door to right of pass-through, coffee machine right, counter curving in from bottom-left with stools at left | same composition each time | compatible with the wide (pass-through, clock, door, coffee machine order matches)",
+    "Reverse from kitchen through pass-through (00:44.958-00:51.3) | plates on left shelf, waitress on dining side of pass-through sill, counter running away to man seated mid-distance, stools on screen-right of counter, windows and booths on screen-right | stable | consistent with mirrored view of the established wide (window wall appears on right when facing the front)",
+    "Medium over man's shoulder (01:09-01:17.5) | OPEN window behind man screen-left, pass-through centre, clock above, coffee machine screen-right, booths behind man left | stable | consistent with wide layout",
+    "Man (customer) | enters from front of diner, walks along stools, sits at near end of counter on customer side (00:24-00:27) | in 00:36-00:44.9 wide shown further down counter, torso over the counter top facing camera with legs below in front of the counter face | 01:00-01:26 seated on customer-side stool facing counter; 01:41 walks out to truck outside window",
+    "Waitress | behind counter (server side) wiping, pouring coffee 00:10-01:20 | at 01:21-01:26 seated on customer side to man's left (farther from camera); in 01:26.8 reverse close-up she appears on man's screen-left (his right) | 01:20 and 01:52 crosses counter without using an end gap; 01:46-01:50 at window; 01:50 seated customer side then behind counter",
+    "Counter (fixed) | long curved counter, customer side toward booths/windows, server side toward back bar | unchanged | used as solid barrier test for character paths",
+    "Truck outside | white semi cab left of building in exterior opening | green box truck immediately outside a dining-room window 01:41-01:50 | vehicle change out of scope; position outside window plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "waitress vs. counter",
+      "invariant_violated": "solid-object occlusion / impossible path",
+      "description": "In the static wide shot the waitress stands behind the counter (server side). Between ~01:20.2 and 01:21 her white apron and legs appear below the counter edge on the customer side while her torso is still over/behind the counter top; she ends up seated on the customer side beside the man without walking around either end of the counter. She passes through the solid counter.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress vs. counter",
+      "invariant_violated": "solid-object occlusion / impossible path",
+      "description": "At 01:51 the waitress leans over the counter from the customer side beside the stools. Around 01:52 her legs stride in front of the counter face while her upper body is above/behind the counter top, and by 01:53 she is behind the counter on the server side with her back to camera. There is no gap at that point of the counter, so she walks through it.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "01:26",
+      "entity": "seating order of man and waitress",
+      "invariant_violated": "viewpoint consistency (left/right across cut)",
+      "description": "In the wide shot from 01:21 to 01:26 the waitress sits at the man's left, farther from camera toward the kitchen end. The 01:26.792 reverse close-up is shot from the server side, showing their faces with the booths and window wall behind them. From there she should appear screen-right of the man. Instead she appears screen-left, which puts her at his right side. The seating order is mirrored across the cut.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "man vs. counter",
+      "invariant_violated": "depth ordering / interpenetration",
+      "description": "In the wide shot from 00:36 to 00:44.9 the man faces the camera with his jacket hem and torso inside the counter-top area, between the far edge and the chrome near edge, beside his plate. His jeans show below the near edge, in front of the counter's front panel. His body occupies the counter volume rather than sitting on a stool beside it, and he faces along the counter instead of across it, which contradicts the customer-side seating shown at 00:26 and 01:00.",
+      "severity": "moderate",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__spatial-topology-occlusion__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

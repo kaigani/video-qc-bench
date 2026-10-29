@@ -1,0 +1,60 @@
+{
+  "ledger": [
+    "Waitress (older woman, grey-brown hair in low bun, light-blue short-sleeve uniform, white bib apron, reading glasses hanging on apron) | 0:10 behind counter in diner, wiping counter, facing left/down; 0:19-0:31 behind counter at right of wide shot, pours coffee for trucker facing him across counter | 1:57 single figure behind counter at back in sunlit wide shot | wardrobe stable throughout; not seen in 0:36-0:44 wide; 0:45-0:51 reverse shot wiping counter facing camera with trucker in background; 1:09-1:17 opposite trucker across counter serving plate, then walks away to back; 1:17.6-1:21 behind counter facing trucker, then at ~1:21.25 abruptly appears on customer side seated/standing beside him (and reads smaller in scale); 1:26.8-1:35 CU seated beside him on his left (screen-left), holding mug; 1:46-1:50 standing at booth window watching him leave; 1:50.2 seated on counter stool; 1:51 rises and leans over counter; ~1:52 a second identical waitress appears at back-left while the first walks behind counter on the right; by ~1:57 only one remains",
+    "Trucker (middle-aged/older man, grey hair, stubble, tan/brown canvas work jacket with dark corduroy collar, plaid flannel shirt, jeans) | 0:19 enters through back, walks toward camera along stools, 0:24-0:27 sits at counter curve facing right toward waitress | 1:41-1:46 walks out to green truck cab, back to camera | wardrobe stable throughout; 0:36.5-0:44 wide shot shows him repositioned at the inner curve of the counter, torso on the service side facing camera with legs on the stool side; 0:45-0:51 seen in background seated at counter end near door; 0:59.9-1:09 seated on stool facing right; 1:09-1:17 medium two-shot facing waitress; 1:26.8-1:35 CU seated with waitress to his screen-left; 1:37-1:40 hands leave cash; exits",
+    "Relative placement | trucker on customer (stool) side, waitress on service side across counter through 0:31 and 1:09-1:21 | 1:21 onward waitress on customer side next to trucker; 1:46 waitress inside at window, trucker outside at truck | the 1:21 side-swap occurs within ~0.25 s without a visible path around the counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "single-identity / character duplication",
+      "description": "In the continuous sunlit wide shot (1:50.2 onward) there is only one waitress, who rises from a stool and leans over the counter at 1:51. At ~1:52 a second figure with identical wardrobe (light-blue uniform, white apron, hair in bun) materialises at the back-left end of the counter while the first waitress simultaneously walks behind the counter on the right; both are visible together through ~1:55, after which one fades away. No cut and no entrance explains a second identical person.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:21",
+      "entity": "Waitress",
+      "invariant_violated": "movement continuity / teleport across counter",
+      "description": "Within the single wide shot starting 1:17.6, the waitress stands behind the counter (service side) facing the trucker at 1:20-1:21.0. By 1:21.25 she is on the customer side directly beside him, with legs visible on the stool side, having passed through the counter in ~0.25 s with no path around it. She then also reads noticeably smaller/childlike in scale next to him (1:22-1:26) compared with her earlier standing size.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "Trucker",
+      "invariant_violated": "placement/facing across cut",
+      "description": "At 0:27 in the same wide camera setup the trucker sits on a stool on the customer side at the counter curve, facing screen-right toward the waitress. After the food inserts, the 0:36.5 wide shot shows him at a different spot further right, facing straight to camera with his torso on the service side of the counter and his legs on the stool side, i.e., straddling/inside the counter where the waitress had stood; the stools beside him are empty. His position and facing change without visible movement and the new placement is physically implausible.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "placement across cut",
+      "description": "At 1:50.167 the waitress is standing at a booth window (ketchup/mustard on the table) looking down, with the trucker still at his truck outside; at the 1:50.208 cut she is instead seated on a counter stool across the room with a mug, with no intervening shot to cover the move. Possible intended time-skip, but the cut gives no cue of elapsed time.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "character-continuity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__character-continuity__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-01__character-continuity.json",
+  "frozen_source_sha256": "6730b56329617d989e0c1dafb78b6f5d2fe836c8aef5b7152ba4f0e3dc2693ab",
+  "key": "_long-scene__character-continuity",
+  "parseOk": true
+}

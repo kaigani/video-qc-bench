@@ -1,0 +1,53 @@
+{
+  "ledger": [
+    "Material type: discrete coins/tokens dropped by hand into small stainless-steel cups with copper/red exteriors; no liquid pour. Audio UNASSESSED.",
+    "00:00 Cup A (front-left): steel cup, one gold coin visible at bottom. Cup B (center): gold embossed coin stack filling nearly to rim. Cup C (right): empty. Cup D (back): empty/interior not visible. Total 4 cups.",
+    "00:00-00:01 Hand holds bronze coin over table, moves to Cup A.",
+    "00:01.5-00:02.25 Hand reaches into Cup A and lifts a gold coin out (visible removal at 00:02.25); Cup B gold stack unchanged near rim; Cup C empty.",
+    "00:02.5 Cup A interior empty/dark; hand holds gold coin above it. Cup B top coin still gold-toned but appears slightly lower.",
+    "00:02.75 Cup B top coin now pale silver-toned, sitting lower in cup than the gold stack seen at 00:02.0; no hand contact with Cup B.",
+    "00:03.0-00:03.25 Cup B shows a single silver/white disc lower in cup; Cup A receives gold coin from right hand; second hand holds coin by Cup D.",
+    "00:03.5-00:04.25 Camera arcs; Cup B shows silver disc; hands drop coins into Cup A and Cup D; Cup C empty.",
+    "00:04.5-00:06.0 Low wide angle: 4 cups in a row; left hand drops gold coin into leftmost cup, right hand drops gold coin into rightmost cup; interiors not visible.",
+    "00:06.25-00:08.75 Wide shots from front: 4 cups consistently visible, hands placing coins; interiors not visible.",
+    "00:09.0 Side angle: 4 cups visible (back, left, middle-front, right-front); hand drops coin.",
+    "00:09.25-00:09.75 Side angle: only 3 cups visible (back, left, front-right) with no hand covering the group; fourth cup no longer visible."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Center cup (Cup B) coin stack",
+      "invariant_violated": "source contents / fill-level monotonicity",
+      "description": "Center cup holds a gold embossed coin stack nearly to the rim through 00:02.25; by 00:02.75-00:03.25 its top is a pale silver disc sitting noticeably lower in the cup. No hand touches this cup and no coins are removed from it, so both the material color and the fill level change without cause.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Fourth steel cup in the group",
+      "invariant_violated": "container identity / persistence",
+      "description": "Four cups are visible at 00:09.0 (back, left, two front), but from 00:09.25-00:09.75 only three cups remain with a clear view of the group and no visible removal. Could partly be perspective occlusion behind the left cup during the camera move, so confidence is limited.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__pour-conservation__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-06__pour-conservation.json",
+  "frozen_source_sha256": "85116fd7887661f0e2ec2aadfa09c533a58b51dca0018faf65cb84525de49ec6",
+  "key": "man-cups__pour-conservation",
+  "parseOk": true
+}

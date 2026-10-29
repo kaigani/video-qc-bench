@@ -1,0 +1,101 @@
+{
+  "ledger": [
+    "cube A (leftmost) | green, face '2', held by hand | blue, face '2', leftmost in row | green->blue color change while handled 00:00.25-00:00.75",
+    "cube B | absent | blue, face '3', 2nd in row | appears out of nowhere beside cube A at 00:01.0",
+    "cube C (original right green) | green, face '2' | green, face '2', 3rd in row | face flips to '3' at 00:02.5, then a duplicate splits off at 00:03.0",
+    "cube D | absent | beige/orange, face '2' | splits off cube C as green '3' at 00:03.0-00:03.5, becomes beige '2' at 00:03.75",
+    "cube E | absent | pale grey, face '3' | appears blue at 00:04.0, turns grey/white by 00:04.75",
+    "cube F | absent | green, face '5' | appears blue '3' at 00:05.0, turns green 00:05.5, shows '5' by 00:06.0",
+    "cube G | absent | green, face '2' | appears green '3' at 00:06.0, shows '2' by 00:06.75",
+    "cube H | absent | blue, face '6' | appears blue '3' at 00:06.75, face becomes '6' at 00:07.75",
+    "hand | manipulating cubes at left | touching cubes A/B at left | never fetches new cubes from off-screen"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "first (left) cube held by hand",
+      "invariant_violated": "object color permanence",
+      "description": "The cube the hand is turning is green with a '2' at 00:00.0; while being rotated it morphs into a blue cube by 00:00.75 (00:00.5 shows a green/blue hybrid). Rotating a solid cube cannot change its body color.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "blue '3' cube (2nd position)",
+      "invariant_violated": "object spawning",
+      "description": "A second blue cube with '3' materializes directly beside the first blue cube at 00:01.0-00:01.25; the hand only ever held one cube and no new cube is brought into frame.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "originally right-hand green '2' cube",
+      "invariant_violated": "object duplication / numeral change",
+      "description": "The static green '2' cube shows '3' on its front at 00:02.5-00:02.75 while being nudged, then at 00:03.0-00:03.5 a second green cube ('3') splits off it while the original reverts to showing '2'. One cube becomes two.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "4th cube (split-off green '3')",
+      "invariant_violated": "object color/label permanence",
+      "description": "The split-off green cube showing '3' at 00:03.5 becomes a beige/orange cube showing '2' by 00:03.75 without any rotation that could explain it.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "5th cube",
+      "invariant_violated": "object spawning and color change",
+      "description": "A blue cube appears from nowhere next to the beige cube at 00:04.0 (no cube fetched from off-screen), then its color shifts from saturated blue to pale grey/white by 00:04.75.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "6th cube",
+      "invariant_violated": "object spawning and color/label change",
+      "description": "Another blue '3' cube appears from nowhere at 00:05.0-00:05.25, turns green by 00:05.5-00:05.75, and its front face reads '5' at 00:06.0.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "7th cube",
+      "invariant_violated": "object spawning and label change",
+      "description": "A green cube showing '3' appears next to the '5' cube at 00:06.0-00:06.5 and then shows '2' at 00:06.75 when it settles in the row.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "8th cube (blue)",
+      "invariant_violated": "object spawning and numeral change",
+      "description": "A blue '3' cube appears at the right end at 00:06.75 with no source, and its front numeral changes from '3' to '6' at 00:07.75 without rotation.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "cube count / row",
+      "invariant_violated": "object count conservation",
+      "description": "Scene begins with two cubes and the hand never brings any cubes in from off-screen, yet the row grows to eight cubes by 00:07.75. The repeated pattern (touch a cube, a new one buds off) is a generative 'cloning' artifact.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

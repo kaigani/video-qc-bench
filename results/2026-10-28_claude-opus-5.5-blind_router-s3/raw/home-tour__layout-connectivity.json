@@ -1,0 +1,67 @@
+{
+  "ledger": [
+    "Space A (00:00-01:25): kitchen 1 \u2014 light oak/honey cabinets, multicolor tile backsplash, countertop (non-built-in) microwave, gray walls; galley run on left with freestanding stove, sink under window, range hood",
+    "Opening A->B (00:00-02:75): cased doorway from kitchen 1 into gray-walled hallway; hallway far end shows white paneled door with curtained window; flower-portrait painting + small orange painting on right gray wall",
+    "Traversal 1 (00:00-03:00): woman walks from kitchen 1 through doorway into hallway B \u2014 consistent",
+    "Space B hallway (02:50-04:00): gray walls, flower-portrait painting, small orange painting, light switches; bedroom doorway on right wall past paintings",
+    "Opening B->C (03:50-04:50): bedroom doorway; from hallway side it shows bedroom with chandelier, bed, lamp, window \u2014 consistent",
+    "Traversal 2 (04:00-04:75): woman enters bedroom C \u2014 consistent",
+    "Space C bedroom (04:50-06:50): gray walls, gold chandelier, bed with headboard, lamp/nightstand, windows on left and right of bed wall, dresser on right, small side table with framed photo; two wooden side chairs placed at foot of bed facing it",
+    "Opening C->? (06:50-08:75): woman turns and walks to a doorway in bedroom wall flanked by the flower-portrait painting (left), green/red landscape painting (right) and an exterior window; through it: cream/beige-walled space with ceiling fixture, white paneled door with window lites, small framed picture \u2014 not the gray hallway B",
+    "Traversal 3 (08:50-09:75): woman exits bedroom through that doorway and arrives directly in kitchen 2 \u2014 dark cherry cabinets, over-range stainless microwave, gas range, beige walls, window on right, white door at end",
+    "Kitchen 2 vs kitchen 1: different cabinet finish, microwave type/position, backsplash, wall color; no second kitchen established in layout"
+  ],
+  "findings": [
+    {
+      "timestamp": "09:00",
+      "entity": "bedroom exit doorway / kitchen",
+      "invariant_violated": "traversal must match established floor plan",
+      "description": "Bedroom C was reached from kitchen 1 via gray hallway B. Walking back out of the bedroom (08:50-09:75), the woman steps directly into a kitchen with dark cherry cabinets, an over-range microwave and gas range, beige walls and a right-side window \u2014 a different kitchen from the established light-oak kitchen 1 with countertop microwave and tile backsplash. The bedroom door leads into a second, inconsistent copy of the kitchen rather than the hallway she came through.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "view through bedroom doorway",
+      "invariant_violated": "view through opening must match established far side",
+      "description": "From inside the bedroom the doorway shows a bright cream/beige-walled space with a white door with window lites and a small framed picture, not the gray-walled hallway with flower-portrait painting that adjoins the bedroom. The bedroom's only established neighbor (hallway B) is not what the opening shows, and the doorway wall carries an exterior-facing window directly beside it.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "07:00",
+      "entity": "flower-portrait painting",
+      "invariant_violated": "fixture placement consistent with floor plan",
+      "description": "The distinctive flower-portrait painting established on the hallway wall outside the bedroom (02:00-04:00) now hangs on the bedroom side of the wall beside the doorway (07:00-08:50), effectively duplicating/relocating the hallway's wall art inside the bedroom.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "05:00",
+      "entity": "wooden chairs at foot of bed",
+      "invariant_violated": "functional furniture arrangement",
+      "description": "Two wooden dining-style side chairs are pushed up against the foot of the bed facing it, arranged as if the bed were a dining table/desk (visible 04:50-06:00). Seating tucked to a bed is not a functional arrangement.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "home-tour.mp4",
+  "role": "layout-connectivity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-05__layout-connectivity__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-05.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-05__layout-connectivity.json",
+  "frozen_source_sha256": "6b54e1d75a2deb06b50904cf689d1df134c7eb94d0258b73834b89110a383991",
+  "key": "home-tour__layout-connectivity",
+  "parseOk": true
+}

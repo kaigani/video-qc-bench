@@ -1,0 +1,73 @@
+{
+  "ledger": [
+    "woman | short highlighted bob, open teal V-neck cardigan over white camisole, 3/4 sleeves, earrings, in light-oak kitchen | dark brown updo-like bob from behind, closed teal jewel-neck top, walking into dark-cherry kitchen | walks kitchen -> hallway -> bedroom, turns, walks out through a doorway into a different kitchen",
+    "start kitchen | light oak cabinets, multicolor tile backsplash, countertop stainless microwave with bread on top, grey granite counters | not revisited | -",
+    "end kitchen | - | dark cherry cabinets, over-the-range microwave, gas range, brown counters, cream walls, window on right | appears at 00:09 as the room she 'returns' to",
+    "hallway blue-flower portrait | beside kitchen opening (00:00), hallway wall with small orange painting to its right | reappears on bedroom wall beside exit doorway (00:07) | depicted figure changes between frames",
+    "bedroom | chandelier, bed with nightstand lamp, window right of bed (00:04.5) | windows on both sides, doorway with paned door on left, side table with photo (00:06.5-00:08) | layout reshuffles during pan"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen / spatial continuity",
+      "invariant_violated": "location continuity",
+      "description": "In one continuous tracking shot the woman walks from a kitchen with light-oak cabinets, tiled backsplash and a countertop microwave, through the hall to the bedroom, then turns and exits back through a doorway into a completely different kitchen: dark cherry cabinets, an over-the-range microwave, a gas range, brown counters and cream walls. Nothing explains the room changing.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "blue-flower framed portrait",
+      "invariant_violated": "prop teleport / duplication",
+      "description": "The framed blue-flower portrait hung on the hallway wall outside the bedroom (00:01.5-00:04). When she turns to leave the bedroom, the same portrait is on the bedroom's interior wall beside the exit doorway, next to a new green/red painting and a side table with a photo that were never on the hallway side. The geometry of the room around the doorway does not add up.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "woman's top",
+      "invariant_violated": "wardrobe continuity",
+      "description": "At 00:00 she wears an open teal V-neck cardigan over a visible white camisole. By 00:03-00:03.25, in front/side view, it is a closed jewel-neck fitted top with no V opening and no camisole.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:01.5",
+      "entity": "hallway framed portrait artwork",
+      "invariant_violated": "object appearance stability",
+      "description": "The picture inside the frame keeps changing. At 00:00 it is a small figure above a blue flower; at 00:01.5-00:02.75 it is a woman's head over a blue flower; at 00:03.25 it reads as a seated dark-haired figure holding a blue object; at 00:07.5 it is a woman's head again. This is generative morphing of the artwork.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom layout",
+      "invariant_violated": "spatial consistency",
+      "description": "During the pan the bedroom reconfigures. At 00:04.5-00:05 there is one window to the right of the bed and a lamp and nightstand on the left. By 00:05.5-00:06 there is also a large curtained window on the left near the headboard. At 00:06.5 a doorway with a paned exterior-style door and a side table appear on that same wall, and the bed/lamp arrangement shifts so it no longer matches the earlier view.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00.75",
+      "entity": "woman's hair",
+      "invariant_violated": "hairstyle/color continuity",
+      "description": "At 00:00 it is a light blonde layered bob with visible fringe. From behind (00:00.75 onward) it reads as a darker brown, pinned-up twist or low updo, then as a loose bob again in profile views. Colour and style drift beyond what the lighting change explains.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-05.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

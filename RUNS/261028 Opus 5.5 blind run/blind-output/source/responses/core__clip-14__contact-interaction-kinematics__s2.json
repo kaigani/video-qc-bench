@@ -1,0 +1,19 @@
+{
+  "ledger": [
+    "Woman (denim jacket) | torso upright directly in front of windshield at the cowl, forearms crossed and resting on the hood/fender top near driver-side A-pillar, no legs or lower body visible | same pose, forearms still crossed on hood, camera pushed in close | contact of forearms with hood established at 00:00 and never released; left hand tucked under right biceps, right hand cupping left elbow throughout; no grip changes, no handedness swap",
+    "Woman's forearms <-> car hood/fender | forearms lie flat on painted hood surface, slight shadow under arms | forearms still resting on hood, shadow present | continuous support contact 00:00-09:75; no visible floating gap",
+    "Woman's torso <-> car body (cowl/hood/fender) | torso occupies space in front of windshield glass and behind hood edge, while the fender side panel and woodgrain below her are fully unoccluded | unchanged spatial relationship through the push-in | body appears to occupy the car's solid cowl/engine-bay volume for entire clip",
+    "Car (cream/woodgrain station wagon) | stationary on desert roadside, wheels on asphalt | stationary | no object motion; camera dolly/arc only",
+    "Hair | blowing in wind from ~00:05 onward | still blowing | no contact events"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman's torso vs. car hood/cowl",
+      "invariant_violated": "solidity / body pass-through (no physical support)",
+      "description": "The woman's upper body rises directly out of the cowl area in front of the windshield, between the hood and the glass, with the driver-side A-pillar and door mirror behind/right of her. She cannot be standing beside the car: the front fender side panel and woodgrain trim directly below her crossed arms are fully visible and unoccluded, so there is no place for her legs/lower torso except inside the solid hood/engine-bay volume. Her body effectively clips through the car body while her arms rest on the hood. The impossible placement persists unchanged through the whole camera push-in (clearly visible at 00:00, 00:02, 00:05 and 00:08).",
+      "severity": "severe",
+      "confidence": 0.72
+    }
+  ]
+}

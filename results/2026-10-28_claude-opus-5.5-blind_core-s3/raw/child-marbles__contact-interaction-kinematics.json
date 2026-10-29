@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "child right hand | 00:00 descending into glass bowl of colored balls | 09:75 stirring balls at bowl bottom, heavily motion-blurred | 00:00.5 fingers contact balls; ~00:01.0 lifts a red ball with both hands (fingers wrap ball, visible contact); 00:02.25 returns red ball into bowl (contact maintained until release among balls); 00:02.5-00:04.75 fingers rest on/press balls; 00:05.0 onward vigorous stirring",
+    "child left hand | 00:00 helping pick up ball | 09:75 hooked over far bowl rim | 00:01.0-00:02.0 cups red ball together with right hand; 00:02.5 lifts away from ball, hovers over bowl; ~00:03.75 fingers settle on far rim, thumb outside, fingers inside; contact with rim held through end",
+    "red ball (lifted) | in bowl at 00:00 | back in bowl ~00:02.5 | lifted with two-hand grip ~00:01.0 (good finger contact), held at chest height 00:01.0-00:02.0, lowered into bowl 00:02.25 while still gripped",
+    "balls in bowl (red/yellow/green) | resting in bottom of bowl, rigid spheres | tumbling under hand stirring | from 00:05.0 they roll and bounce when struck by right hand; from ~00:06.5 shapes become irregular and overlapping under blur",
+    "glass bowl | resting on wooden table | resting on table, steady | supports balls throughout; left hand grips rim from ~00:03.75; bowl does not slide",
+    "child torso/arms | standing at table edge, leaning slightly | leaning over bowl | weight supported by standing posture; no impossible joint motion observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07.50",
+      "entity": "balls in bowl during stirring",
+      "invariant_violated": "object solidity / no inter-object pass-through",
+      "description": "During stirring the rigid balls lose their spherical form and visibly overlap/fuse: at 00:07.50 two red balls appear merged into one elongated blob and at 00:06.75-00:07.25 and 00:09.25-00:09.75 balls stretch and interpenetrate neighbours (green and red masses blending into one another) rather than colliding as solid spheres. Motion blur explains some smearing but not balls occupying the same space.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09.00",
+      "entity": "child right hand vs balls",
+      "invariant_violated": "hand-object solidity",
+      "description": "At 00:09.00-00:09.25 the stirring fingers appear translucent and balls (red, yellow, green) show through and merge into the finger shapes instead of being pushed by them; finger outlines dissolve into ball surfaces, suggesting hand and balls passing through each other.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:08.25",
+      "entity": "yellow ball near left fingertips",
+      "invariant_violated": "weight & support",
+      "description": "A yellow ball sits high on the steep inner wall of the bowl directly under the left fingertips, well above the other balls, without visible contact from either hand; at 00:09.25 a red ball is similarly suspended high under the left fingers. Could be a ball flung mid-bounce, so support violation is uncertain.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__contact-interaction-kinematics__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-02__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "88fa0d9d4c7701a9aae2f6d1bb3ce21fb23e03e554162bc360384853c9212b0c",
+  "key": "child-marbles__contact-interaction-kinematics",
+  "parseOk": true
+}

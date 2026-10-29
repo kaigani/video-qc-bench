@@ -1,0 +1,58 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior night shots of the diner and truck; no pour containers visible",
+    "00:10-00:18 interior counter, waitress wiping; steel thermos/carafes and condiment jars on the counter, static; no transfer",
+    "00:24-00:27 wide shot: waitress holds a glass coffee carafe (dark coffee, roughly half full) tilted over the counter near the seated man's spot; the mug isn't readable at this scale",
+    "00:27.125 close-up after cut: same glass carafe with a black handle, upright, dark coffee filling about the lower half of the globe; white ceramic diner mug held in the man's hand; mug contents not visible",
+    "00:27.5 the mug now stands on the counter with no hand on it; the man's hand rests in a fist at frame left",
+    "00:28-00:30.75 carafe tilted, steady dark-brown stream into the white mug; stream color matches the carafe contents; mug interior not visible from this low angle",
+    "00:31-00:32.29 stream stops and the carafe lifts away; coffee in the carafe still fills about the lower half of the globe, little visible drop from before the pour (camera angle and tilt differ)",
+    "00:32.3-00:36.4 plate of toast and egg close-up; no coffee containers",
+    "00:36-00:45 wide shot: man holds a white mug next to the plate; mug contents not visible",
+    "00:45-00:51 reverse angle: one white mug on the back counter in the foreground, static",
+    "01:09 one white mug at the man's place; waitress sets down a plate",
+    "01:10-01:11 a second white mug appears near the waitress beside the plate; the man's mug stays in front of him",
+    "01:12 two mugs visible: man's hand on his mug, waitress's hand on the second mug",
+    "01:13-01:17 only one mug visible, in the man's hands, with the waitress's hand on it; the second mug is gone",
+    "01:26-01:35 two-shot: man and waitress each hold a white mug; contents not visible",
+    "01:37-01:41 close-up of one white mug on the counter with cash beside it; contents not visible",
+    "Destination fill level (the mug) is never visible at any point, so mug fill monotonicity can't be checked"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "two white coffee mugs at the counter (man's mug and the mug the waitress is sliding over)",
+      "invariant_violated": "container identity / count",
+      "description": "At 01:12 two separate white mugs are on the counter: one held by the man and one held by the waitress just beside it. By 01:13 in the same continuous shot only one mug remains, held by both of them. No mug is lifted away or set aside, so one container vanishes or the two merge into one.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:31",
+      "entity": "glass coffee carafe (source)",
+      "invariant_violated": "conservation / source fill-level monotonicity",
+      "description": "Before the pour (00:27.1) the carafe holds dark coffee in about the lower half of its globe. After roughly three seconds of steady pouring into a full-size mug (00:28-00:30.75), the carafe at 00:31 looks just as full, with no clear drop. The camera angle and carafe tilt differ between these frames, so this is low confidence.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "pour-conservation",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__pour-conservation__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-01__pour-conservation.json",
+  "frozen_source_sha256": "f207c73ec6a1b00273a1ceb1cebf3c8bcbd8435c31923626d58d7136c1b71cef",
+  "key": "_long-scene__pour-conservation",
+  "parseOk": true
+}

@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "Wind: no evidence of wind anywhere 00:00-09:75 \u2014 planter foliage below the railing is still, the walker's hair and clothing do not flutter; nothing implies airflow, so the absence is consistent",
+    "Gravity / gait 00:00-02:75: the background walker's red bag swings and hangs with her stride and her legs alternate naturally as she walks away; consistent",
+    "Low hard sunlight, constant: the patio pavers, beige wall and railing stay evenly sunlit, and the railing casts dark bar shadows on the stairs (09:50-09:75); background illumination does not change anywhere in the clip",
+    "Sun patch on the phone screen 00:01-03:00: a bright sunlit wedge with a domed shadow edge (it looks like the shadow of the holder's head or body) sits on the screen's right side and grows as the phone tilts; the thumb casts a dark shadow inside it; plausible so far",
+    "Sun patch 03:25-06:25: the large white patch drifts across the screen and changes shape while the phone and hands move only slightly; the text inside it washes out, as glare would; mostly plausible, though it moves more than the phone does",
+    "Sun patch 06:25-08:50 (dense 12 fps check): the patch switches fully on and off between consecutive frames (~0.08 s) \u2014 for example present at 06:50, gone at 06:75, back at 07:00, gone 07:25-07:75, back at 08:00, gone at 08:25. Phone pose, hand position, background sunlight and railing shadows stay the same in each pair, and no occluder enters or leaves the light path",
+    "Hand shadows: the thumb or finger casts a shadow only when the sun patch is present; in the frames without the patch the hands look evenly shaded. This is consistent with the patch, but it means the hands' lighting flips along with it",
+    "Camera tilt to stairs 09:25-09:75: motion blur during the pan; railing shadows fall consistently on the steps"
+  ],
+  "findings": [
+    {
+      "timestamp": "06:50",
+      "entity": "sunlit patch / cast shadow on the phone screen",
+      "invariant_violated": "lighting change without a cause",
+      "description": "From about 06:25 to 08:50 a large bright sun patch on the phone screen turns fully on and off between consecutive frames (on at 06:50, off at 06:75, on at 07:00, off 07:25-07:75, on at 08:00, off at 08:25). The phone's angle, the hands' positions, the steady background sunlight and the railing shadows do not change across these cuts, and no object moves into or out of the light path. A shadow cast by a fixed occluder cannot appear and disappear like this. The flicker is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.72
+    },
+    {
+      "timestamp": "04:75",
+      "entity": "sunlit patch shape and position on the phone screen",
+      "invariant_violated": "effect does not track its cause",
+      "description": "Between 04:50 and 05:75 the bright patch with a domed shadow edge jumps around the screen: it is high and to the left at 04:50, drops to the lower middle at 04:75, moves back up at 05:00, and is low again at 05:50. It also changes outline, while the phone moves only a few degrees and the background light is constant. The shadow does not move the way a fixed occluder and a nearly still phone would make it move.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "video": "phone.mp4",
+  "role": "environment-response",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-08__environment-response__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-08__environment-response.json",
+  "frozen_source_sha256": "26875fd885d8cee40a79be66e2bad0d50250229bd64ccfd6cc151547ab844dd1",
+  "key": "phone__environment-response",
+  "parseOk": true
+}

@@ -1,0 +1,25 @@
+{
+  "ledger": [
+    "Exit sign A (real wall, above left black door, green illuminated): ~15-20px wide in 1280x704 source, angled; sharpest crops at 00:00.000, 00:06.000, 00:09.750 all render the same two-glyph green blob (reads roughly 'EXIT'-shaped but too small to read letter-by-letter); appearance consistent in every frame 00:00-00:09.750",
+    "Exit sign B (reflection in mirror, above mirrored door): mirror-reversed green sign, reads as reversed lettering (roughly '\u018eX'/'TIX\u018e' fragment) at 00:00.000, 00:06.000, 00:09.750; consistent; mirror reversal is expected, not a defect",
+    "Exit sign C (deeper reflection, above second mirrored door near dancer's head): green sign reading roughly 'TIX'/'EXIT' fragment; partially occluded by dancer's head/arm at times (e.g. 00:02.000-00:03.000, 00:07.000-00:09.750); visible portions consistent when unoccluded",
+    "Framed dark artwork on right back wall (in mirror): decorative mask/crest-like image with no legible lettering at any sampled moment (checked crops at 00:00.000 and 00:09.750); not readable text",
+    "Small wall plates/thermostat boxes beside doors: no legible text at this resolution",
+    "No captions, overlays, screens, or other large steady text present in any of the 40 sampled frames (00:00.000-00:09.750)"
+  ],
+  "findings": [],
+  "video": "clip-03.mp4",
+  "role": "text-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-03__text-stability__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

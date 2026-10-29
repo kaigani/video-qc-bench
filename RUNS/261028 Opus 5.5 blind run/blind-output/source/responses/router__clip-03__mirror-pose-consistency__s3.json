@@ -1,0 +1,28 @@
+{
+  "ledger": [
+    "True mirror verified: wall-length dance-studio mirror with barre; dancer (back to camera) and her frontal reflection both visible in every frame 00:00-00:09.75",
+    "00:00.00-00:00.25: subject R arm down/out to side, L arm down; reflection R arm low at side, matches",
+    "00:00.50: subject R arm ~horizontal, slightly drooped; reflection R arm angled ~20 deg below horizontal (slightly lower)",
+    "00:00.75: subject R arm horizontal/slightly up; reflection R arm horizontal",
+    "00:01.00: subject R arm ~35-40 deg above horizontal, wrist above head height; reflection R arm ~5-10 deg above horizontal at shoulder level",
+    "00:01.25: subject R arm ~40 deg up, hand well above head; reflection R arm ~15 deg up, hand below head height",
+    "00:01.50: subject R arm ~65 deg up, near vertical; reflection R arm ~45 deg up",
+    "00:01.75-00:03.00: subject R arm vertical overhead; reflection R arm vertical overhead, matches",
+    "00:03.25-00:04.25: subject R arm lowers through bent/side position to bent across chest; reflection follows, matches",
+    "00:04.50-00:05.75: subject R arm bent, hand at hip/behind waist, L leg steps out; reflection shows R hand at hip and L foot out, matches",
+    "00:06.00-00:06.75: second arm-raise pass; subject R arm low -> horizontal -> ~40 deg -> vertical; reflection matches angle in each frame (e.g. 06.50 both ~40 deg)",
+    "00:07.00-00:09.75: subject R arm curved overhead, R leg extends to pointed tendu from 08.50; reflection R arm curved overhead and R foot pointed, matches",
+    "Tattoos: subject R upper-arm tattoo and L upper-arm/forearm tattoo; reflection shows L-arm tattoo on its image-left arm and R-arm ink on its image-right arm, correctly mirrored",
+    "No props held; no clothing asymmetry issue; denser 12fps check of 00:00.8-00:01.8 shows reflection arm consistently ~20-25 deg lower than subject arm through the rise (~0.2-0.25 s behind)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "mirror reflection of dancer's raised right arm",
+      "invariant_violated": "reflection synchronized with subject (no lag)",
+      "description": "During the first arm raise (00:00.50-00:01.50) the reflected right arm trails the real arm by roughly 0.2-0.25 s: at 00:01.00 the subject's arm is ~35-40 deg above horizontal with the wrist above head height while the reflection's arm is near shoulder level (~5-10 deg); at 00:01.25 subject ~40 deg vs reflection ~15 deg; at 00:01.50 subject ~65 deg vs reflection ~45 deg. The reflection reaches each angle about one sample later. Viewing geometry does not explain it: in the second, near-identical arm raise (00:06.25-00:06.75), from essentially the same camera angle, subject and reflection angles match frame for frame. Confirmed on sharp frames at 12 fps.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

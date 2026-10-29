@@ -1,0 +1,48 @@
+{
+  "ledger": [
+    "Group: colored plastic balls in glass bowl (red/yellow/green), child's hands manipulating them; extra red/green balls lie on the table at the right edge, out of reach.",
+    "00:00.00 (sharp): bowl holds 8 balls = 3 green, 3 yellow, 2 red; child's hands raised above bowl, no ball visibly held.",
+    "00:00.25: hands enter bowl; bowl still shows 2 red, 3 yellow, 3 green (one red partly under fingers).",
+    "00:00.75: child lifts a red ball out of the bowl, yet the bowl still shows 2 red, 3 yellow, 3 green underneath -> total 9 (3 red) with no visible ball added.",
+    "00:01.00-00:02.00 (sharp): held red + bowl 2 red, 3 yellow, 3 green = 9 total; table balls at right edge unchanged.",
+    "00:02.25-00:03.00: held red returned into bowl; partially hand-occluded; consistent with 3R/3Y/3G = 9.",
+    "00:03.00-00:04.75: camera pushes in; visible ~3 yellow, 3 green, 2-3 red, some under hand (occlusion, not disappearance).",
+    "00:05.00-00:06.00: stirring with heavy motion blur; counts not reliable (blur).",
+    "00:06.75 (semi-sharp): reds visibly increase (~3-4 red), yellow reduced to ~1-2 visible.",
+    "00:07.75 (semi-sharp): ~5 red, 1 green, 1-2 yellow visible; nothing added from outside the bowl, no ball carried in.",
+    "00:09.25-00:09.75: ~5-6 red, 2 green, 1 yellow visible; balls look deformed/blobby (partly motion blur).",
+    "Net: red rises from 3 to ~5-6 and yellow falls from 3 to ~1 with no balls added or removed; only cause visible is stirring."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "red ball (third red)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:00.00 the bowl holds 8 balls (2 red, 3 yellow, 3 green) and the child's hands appear empty. By 00:00.75-00:01.00 the child holds a red ball lifted from the bowl, but the bowl still contains 2 red, 3 yellow, 3 green, so the total jumps from 8 to 9 with no ball visibly added from the table or a hand.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "red and yellow balls in bowl",
+      "invariant_violated": "per-color counts change without add/remove (kind transformation)",
+      "description": "Before stirring the bowl holds 3 red, 3 yellow and 3 green balls. During stirring (00:06.75-00:09.75) no ball enters or leaves the bowl, yet up to ~5-6 distinct red balls appear (sharp-ish reds at 00:07.75 and 00:09.50) while yellows drop to ~1. Yellow balls appear to have become red, or reds have multiplied, with no mechanism.",
+      "severity": "severe",
+      "confidence": 0.65
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "count-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__count-stability__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

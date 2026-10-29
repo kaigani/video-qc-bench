@@ -1,0 +1,60 @@
+{
+  "ledger": [
+    "Man (real body, seen from behind, frame left) | dark short slicked hair, long sideburns, white open-collar dress shirt, right hand holding a small white/silver razor at jaw, head tilted up toward mirror | same wardrobe and position at frame left facing mirror; razor raised to temple/eye area at 09.75 | single continuous shot, no cuts; hand moves jaw -> nose -> temple/hairline (01.75-04.25) -> jaw (05.0-09.25) -> temple (09.75); back-of-head hair looks slick early, noticeably tousled/fluffy around 02.25-04.25",
+    "Man (mirror reflection, frame right, facing camera) | same face, slicked dark hair, white shirt with rolled sleeves, razor at chin, chin raised | same face/wardrobe, razor across upper lip/nose at 09.75 | reflection hairstyle shifts (slick 00.0 -> fuller swept 01.75 -> forward-falling lock with head bowed 02.25-04.0 -> high pompadour, eyes up 04.25); reflection pose repeatedly decouples from the real body",
+    "Relative placement | real man at frame left in front of mirror, reflection at right inside gilt frame, door behind | unchanged throughout | no cuts; only one character present"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man - mirror reflection vs real body",
+      "invariant_violated": "reflection must match the character's real pose",
+      "description": "From ~02.25 to ~04.0 the real man keeps his head upright and holds the razor at the side of his head/hairline above the ear, but his reflection shows the head bowed with eyes looking down and the razor pressed horizontally across the center of the forehead. The reflected head angle and hand placement do not correspond to the real body's pose.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Man - mirror reflection head/gaze",
+      "invariant_violated": "movement continuity of head pose",
+      "description": "Between 04.0 and 04.25 the reflection snaps from head bowed, eyes down, with hair falling forward to head raised, staring straight at the camera with a tall swept-back pompadour. This happens in a quarter second while the real man's head barely changes angle, so the reflection's head motion and hairstyle change have no matching movement.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Man - hairstyle",
+      "invariant_violated": "identity/appearance consistency (hair)",
+      "description": "With no grooming action, the man's hairstyle keeps changing. The reflection goes from short slicked hair (00.0-01.5) to a fuller swept style (01.75), then a forward-falling lock (02.25-04.0), then a high pompadour (04.25). The back of the real head also goes from smooth and slicked to visibly tousled around 02.25-04.25.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Man - mirror reflection vs real body",
+      "invariant_violated": "reflection must match the character's real pose",
+      "description": "At 09.75 the real man holds the razor up at his temple/outer eye with his head turned, but his reflection holds it horizontally across the upper lip and nose with the face square to camera. The hand and razor positions do not mirror each other.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__character-continuity__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-07__character-continuity.json",
+  "frozen_source_sha256": "a410e54b80e624ace01f9647724f091f96772367fb49a91ccc670ed448a050d9",
+  "key": "man-in-mirror__character-continuity",
+  "parseOk": true
+}

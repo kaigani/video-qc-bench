@@ -1,0 +1,57 @@
+{
+  "ledger": [
+    "shot 1: 00:00-00:10.17, static exterior wide of diner at dusk, truck parked left; no people visible",
+    "shot 2: 00:10.21-00:18.67, interior medium on counter/pass-through/coffee machine; waitress behind (server side of) counter wiping, faces left",
+    "shot 3: 00:18.71-00:27.08, wide from front of diner looking at back wall (OPEN window, kitchen pass-through), booths left, counter+stools right; waitress server side; man enters via back door at 00:19 behind counter end, rounds counter end by 00:20, walks toward camera on customer side, sits on stool ~00:24 facing counter (screen-right); waitress pours coffee across counter",
+    "shot 4: 00:27.13-00:32.29, CU insert coffee pour; man's hand customer side, pot from server side",
+    "shot 5: 00:32.33-00:36.42, CU insert plate of toast/egg; no people",
+    "shot 6: 00:36.46-00:44.92, wide from front (same axis as shot 3), dusk; man alone, faces camera, hands on counter top, plate in front; stools are to his left; his torso sits beyond the counter edge while his jeans show where the counter front panel should be; waitress not visible",
+    "shot 7: 00:44.96-00:51.33, reverse from server side behind counter; waitress foreground server side wiping; man small in background seated at far counter section, customer side",
+    "shot 8: 00:51.38-00:59.83, empty interior medium (same set-up as shot 2), no people",
+    "shot 9: 00:59.88-01:09.04, wide from front, daylight/overcast; man on stool customer side facing counter; waitress server side at back counter, moves toward pass-through",
+    "shot 10: 01:09.08-01:17.54, medium two-shot across counter: man customer side screen-left, waitress server side screen-right serving plate, then turns away to back counter - consistent with shot 9",
+    "shot 11: 01:17.58-01:26.75, wide from front; 01:17-01:20 waitress server side behind counter near pass-through facing man; 01:21 onward waitress appears on man's side of counter, seated between man and counter edge, no visible route",
+    "shot 12: 01:26.79-01:35.21, CU two-shot from server side: waitress and man seated side by side customer side, windows behind",
+    "shot 13: 01:35.25-01:37.38, empty interior medium (shot 2 set-up), sunlight",
+    "shot 14: 01:37.42-01:40.96, CU mug on counter, hands place cash; no faces",
+    "shot 15: 01:41.00-01:45.96, through-window exterior: man walks from frame-left away from camera to truck cab",
+    "shot 16: 01:46.00-01:50.17, OTS waitress at booth window watching man at truck cab door (consistent with end of shot 15)",
+    "shot 17: 01:50.21-01:58.00, wide from front, sunlight: waitress seated on stool customer side (01:50), stands and leans over counter (01:51), at 01:52 a second identical waitress appears behind counter near pass-through while first one lunges right across the counter line; 01:53-01:56 two waitresses both server side; merge to one by 01:57-01:58",
+    "anchors: counter (customer side = stools/booth side, server side = back-bar/coffee machine side), stools, kitchen pass-through on back wall, OPEN-sign window",
+    "cuts at 00:27, 00:32, 01:09, 01:17, 01:35, 01:46 checked: placements consistent; 00:44.96 waitress appearance plausibly occluded by man in shot 6; 01:50.21 waitress relocation from window to stool accepted as implied elapsed time"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress",
+      "invariant_violated": "duplicate instance of a person",
+      "description": "In the sunlit wide shot, the single waitress who had just stood up from a stool is suddenly shown twice: one copy wiping the counter behind it near the kitchen pass-through (screen-left background) and another in the foreground lunging right along the counter. Both copies persist on the server side through 01:53-01:56 before merging into one figure by 01:57.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:51",
+      "entity": "waitress (foreground instance)",
+      "invariant_violated": "body passing through fixed geometry / side-of-anchor change without crossing",
+      "description": "At 01:50-01:51 the waitress is on the customer side (sitting, then standing on the stool side leaning over the counter). By 01:52 her leg is drawn over the counter's front panel while her torso is beyond the counter top, and by 01:53 she stands on the server side with her back to camera. This happens mid-counter, with no counter end or gap, so she passes through the counter.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "01:21",
+      "entity": "waitress",
+      "invariant_violated": "opposite side of anchor without visible crossing / overlapping counter",
+      "description": "At 01:20 the waitress stands on the server side behind the counter facing the seated man. One second later (01:21-01:26) she is on the customer side right beside him, sitting with no stool, wedged between the man and the counter edge, her legs overlapping the counter front. There is no visible trip around the counter and no plausible space to sit there. The following CU (01:26.8) keeps her on the customer side.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "man",
+      "invariant_violated": "body overlapping fixed geometry (seated through counter)",
+      "description": "After the cut back to the front wide, the man is no longer on a stool on the customer side facing the counter, as he was in shot 3 (00:24-00:27). Instead he faces the camera, to the right of the stool row. His torso is beyond the counter top edge while his jeans appear where the counter's front panel should be, so he looks seated inside or through the counter body. The waitress has also vanished from the server side.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+This video shows a subject in a larger environment with implied physical forces — motion, wind, gravity, weather (confirmed by a prior inventory pass). You are a forensic environment-response checker:
+- a physical influence must affect everything it should: wind that moves hair must also move other light things exposed to it (loose clothing, foliage, flags); motion that streams one element back must affect comparable elements equally
+- an effect must have a visible or plausible cause: hair/clothing streaming implies airflow from somewhere — moving vehicle, wind, fan; if the implied cause is contradicted (rigid foliage, a limp flag, a stationary vehicle), the effect is unexplained
+- environmental elements must respond consistently over time: the same wind cannot animate an element in one shot and leave it inert in the next equivalent shot
+Confounds to rule out: materials differ (hair responds to less wind than a branch does) — compare like materials; gusts are intermittent — judge across several seconds, not single frames; camera motion creates apparent background motion — anchor judgments to object deformation (bending, fluttering), not screen displacement.
+
+TASK: Ledger = each implied physical influence: its evidence, what it should affect, what it does/doesn't affect. Then report every inconsistent or cause-less environmental response.
+
+OUTPUT FORMAT — respond with ONLY a single JSON object, no markdown fences, no prose before or after:
+{
+  "ledger": [
+    // one entry per entity/moment you tracked, as a short string
+  ],
+  "findings": [
+    {
+      "timestamp": "mm:ss",
+      "entity": "what is affected",
+      "invariant_violated": "short name of the rule that was broken",
+      "description": "precise description of what changed and why it is unexplained",
+      "severity": "minor" | "moderate" | "severe",
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+If you find no violations, return "findings": [] — an empty list is a valid and expected answer.
+Do NOT pad the findings list. Only report violations you can tie to specific visual evidence.
+
+MEDIA AND TOOL INSTRUCTIONS (neutral):
+Your only assigned video is /tmp/video-qc-opus55-blind-261028/inputs/clip-06.mp4. Work solely under /tmp/video-qc-opus55-blind-261028. Do not inspect any other directory, other videos, the protocol, other prompt or response files, prior evaluations, or sibling predictions. No web search or web fetch. Do not spawn subagents or delegate.
+Native video input and honest audio perception/transcription are unavailable in this harness. Actual visual input is timestamped extracted JPEG frames. Audio is UNASSESSED, not absent: do not invent hearing audio or infer speech absence. For scene inventory, spoken_dialogue must be true because uncertain booleans fail open. For an audio-only role, follow its instruction to return empty findings with an audio-unassessed reason in ledger.
+Sampling: 4 fps uniformly; short-clip uniform sampling. View every contact sheet listed below with the Read tool, in chronological order. Each sheet contains six timestamped frames, at most 640x360 per thumbnail. The full-resolution originals and timestamp mapping are in /tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/extraction.json. You may view individual original frames with the Read tool, and extract denser frames from your assigned MP4 with ffmpeg if needed; put any additional media only in /tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/router__clip-06__environment-response__s3. Inspect images, not just file metadata.
+Contact sheets:
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-001.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-002.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-003.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-004.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-005.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-006.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-06/sheet-007.jpg
+Write your single strict JSON object, matching the role's exact ledger/findings contract (or the feature-inventory object for the inventory role), to /tmp/video-qc-opus55-blind-261028/output/source/responses/router__clip-06__environment-response__s3.json using the Write tool. This is your sole prediction output path. Do not read or write other prediction files. Do not perform a second evaluation, self-verification pass, or retraction pass. After writing the file, reply with only: DONE router__clip-06__environment-response__s3

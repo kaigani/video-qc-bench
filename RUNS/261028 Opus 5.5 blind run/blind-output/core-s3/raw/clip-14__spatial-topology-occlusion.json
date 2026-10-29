@@ -1,0 +1,43 @@
+{
+  "ledger": [
+    "camera | front-left 3/4 wide of station wagon, full grille/plate STE 97 visible | close side-profile of woman beside left A-pillar, hood at frame bottom | single continuous shot; slow push-in and orbit toward car's left side, no cuts",
+    "station wagon (cream, woodgrain sides, roof rack) | nose toward screen-left, left (woodgrain) side facing camera, parked on asphalt | only hood, cowl, A-pillar, side window and roof rack edge visible | body geometry stays consistent with orbit; grille and hood ornament exit frame left by ~3.5s",
+    "windshield / wipers / left A-pillar / left door mirror | windshield behind cowl, mirror on door just right of near A-pillar | wipers and A-pillar still behind woman; side window and seat visible behind her right side | mirror exits frame right ~4.5s",
+    "antenna | rises from far-side cowl/fender, left of windshield | still at cowl left of windshield, base on hood | parallax consistent",
+    "woman (arms crossed) | torso rises from hood/cowl just forward of near A-pillar and left of door mirror, head occluding windshield | same placement, arms resting on hood/fender edge in front of A-pillar | no lower body ever visible below hood line; never appears in door window opening",
+    "road / background | desert scrub, mountains, plain pavement band at left with no lane markings near car | two-lane road with yellow center dashes and white edge dashes running to horizon, utility poles at left | lane markings appear ~3.5s, poles ~4.5s as camera orbits",
+    "occlusion | woman over windshield/wipers, hood over her lower body, car over background | same ordering | hair (wind-blown later) stays in front of window/glass; no background-over-foreground rendering seen"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman relative to car body (hood/cowl/A-pillar/door mirror)",
+      "invariant_violated": "impossible position / depth placement",
+      "description": "The woman's torso emerges from the hood/cowl directly in front of the windshield, forward of the near A-pillar and to the left of (in front of) the door-mounted side mirror, with arms crossed on the hood. She is neither inside the cabin leaning out the door window (the A-pillar and mirror would then be in front of/beside her and her arms would rest on the door sill behind the mirror) nor standing beside the fender (her legs/body would be visible, not hidden by the hood). Her body occupies the engine-bay/cowl volume, and this impossible placement persists throughout the orbit (e.g. 04:50, 06:00), where the side window and seat appear behind her rather than around her.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "road layout next to car",
+      "invariant_violated": "layout consistency across viewpoint",
+      "description": "At 00:00 the pavement to the left of the car's nose is a plain band with no lane markings, and the background beyond the hood is open desert scrub. By ~03.5s-04.5s, with only a modest orbit, a marked two-lane road with yellow center dashes and white edge dashes appears immediately beyond the hood and runs straight to the horizon, implying the car sits in or beside a travel lane not compatible with the opening view.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -100,6 +100,31 @@ Frozen raw predictions and the original 48-label reference remain in
 `RUNS/261027 GPT6 Astra blind audit/`; standard per-run classifications are in
 `results/2026-10-27_gpt-6-astra-blind_{core,router-s1,router-s2,router-s3}/`.
 
+## Claude Opus 5.5 blind evaluation (28 October 2026)
+
+[Report and review queue](DELIVERABLES/261028%20Opus%205.5%20QC%20Review/Report.md). A
+fresh, memory-less dispatcher thread ran the full 2.0 protocol with Opus 5.5 (effort high): core ×3
+and router ×3, one fresh delegated task per call, 482 calls. It used the same opaque clips, extracted
+frames, contact sheets, prompts and router as the Astra run above. Like Astra, this is an agent
+evaluation on still frames with audio unassessed, not a native-video model ranking.
+
+| Layer | Samples | Detection | Defects | FP/sample | FP total |
+|---|---|---|---|---|---|
+| Core (single samples) | 1 | 89–101/147 | 27–32/50 | 39–46 | — |
+| Router (single samples) | 1 | 77–87/147 | 23–27/50 | 7–13 | — |
+| Core union | 3 | 106/147 | 34/50 | 41.7 | 125 |
+| Router union | 3 | 92/147 | 29/50 | 9.3 | 28 |
+| Combined union | 6 | **109/147** | **35/50** | 25.5 | 153 |
+
+35/50 is the most defects found by any configuration on this benchmark. Gemini 4 Argon's six-sample
+union found 33/50 but has higher detection (113/147), because Opus misses LONG-10 (P0) and APPL-1 (P1).
+Opus is the first system to find DANC-4. On identical frames, its Astra-equivalent configuration
+(core ×1 + router ×3) found 32/50 against Astra's 18/50, with far more false positives (74 vs 2).
+The two runs were adjudicated by different processes. Eight new claims corroborated across samples
+await review. Frozen predictions are in `RUNS/261028 Opus 5.5 blind run/`; per-sample runs are in
+`results/2026-10-28_claude-opus-5.5-blind_*`; the writeup is
+`results/2026-10-28_claude-opus-5.5-blind_2.0-protocol.md`.
+
 ## Repo layout
 
 ```

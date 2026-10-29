@@ -1,0 +1,70 @@
+{
+  "ledger": [
+    "00:00.000 small clear glass bowl (hand-held, source): ~6-8 green olives only, no dark olives visible; tall glass jar with hinge tab (destination): empty",
+    "00:00.000 steel bowl (counter, mid): ~10 green olives; ceramic speckled bowl (counter, right): ~10 larger green olives",
+    "00:00.500 glass bowl tipping, green olive falling; jar: one dark/purple olive already blurred at bottom",
+    "00:01.000 jar: ~3 green olives + falling dark object; source still visibly holds only green olives",
+    "00:01.500-00:01.750 jar: ~12-14 olives, roughly half dark purple/black, half green; source bowl small and still pouring",
+    "00:02.000-00:02.750 jar: ~18-22 mixed green/dark olives, level rising; source bowl still shows green olives",
+    "00:03.000-00:04.000 jar: ~25 mixed olives, level stable after pour ends; small glass bowl lifted away",
+    "00:04.500-00:05.000 hand reaches into steel bowl (~10 green olives) and scoops green olives",
+    "00:05.250 steel bowl: ~2 green olives plus brown pit/nut-like items not previously visible; hand holds green olives",
+    "00:05.750 small glass bowl re-filled with green olives (from steel bowl scoop); steel bowl ~3 green + brown items; jar ~25 olives",
+    "00:06.000-00:06.250 camera angle shift; jar level comparable; glass bowl contains green olives",
+    "00:06.750-00:07.250 glass bowl now shows dark purple olives alongside green; steel bowl ~4-5 green + brown items",
+    "00:07.500-00:08.750 pouring from glass bowl into jar; dark and green olives fall; jar level rises substantially; steel bowl ~5 green + brown items",
+    "00:08.750-00:09.000 glass bowl appears empty",
+    "00:09.000-00:09.750 jar ~40+ mixed olives, roughly 2/3 full; steel bowl ~6 green olives + brown items; glass bowl held up showing greenish contents at 09.750",
+    "Ceramic bowl: ~10 green olives throughout, untouched, consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "jar contents vs. small glass bowl source (first pour)",
+      "invariant_violated": "source contents",
+      "description": "The source bowl visibly holds only green olives, yet dark purple/black olives appear in the jar from 00:00.5 onward (a dark olive is already at the jar bottom before any dark olive is seen in or leaving the bowl); by 00:01.75 roughly half the jar's olives are dark. Material arriving does not match the source.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "jar fill level vs. small glass bowl capacity (first pour)",
+      "invariant_violated": "conservation",
+      "description": "A small hand-held bowl holding roughly 6-8 olives yields ~25 olives in the jar by 00:03 while the bowl still appears to contain olives; the amount arriving far exceeds what the source could hold.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "small glass bowl contents (second pour)",
+      "invariant_violated": "source contents",
+      "description": "The bowl is loaded at 00:05.0-00:05.75 with green olives scooped from the steel bowl, which contained only green olives, but by 00:06.75-00:07.25 it contains dark purple olives that are then poured into the jar. No dark-olive source was used.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "jar fill level vs. small glass bowl capacity (second pour)",
+      "invariant_violated": "conservation",
+      "description": "The jar grows from ~25 olives (00:05.75) to ~40+ olives (00:09.5) from a single small bowl of roughly 8 olives; the increase exceeds what the source held.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "steel bowl contents",
+      "invariant_violated": "source contents",
+      "description": "After olives are scooped at 00:05.0, brown pit/nut-like objects appear in the steel bowl at 00:05.25 that were not visible before (it held only green olives at 00:04.75). They could have been hidden under olives, so confidence is limited.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "steel bowl fill level",
+      "invariant_violated": "refill without cause",
+      "description": "The steel bowl is nearly emptied to ~2-3 green olives at 00:05.25-00:05.75, then holds ~5 green olives by 00:08.0 and ~6 by 00:09.75 with nothing added to it. Camera angle changes partly confound the count.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "ledger": [
+    "dancer (real, seen from behind) | standing facing mirror, right arm low to side | standing in tendu-like stance, right arm curved overhead, weight shifting to relevé | arm sweeps side->overhead (0:00-0:02), bends and lowers across body (0:03-0:04.25), steps/turns with hand on hip (0:04.5-0:05.75), arm sweeps side->overhead again (0:06-0:07.5), held overhead with foot pointing (0:07.5-0:10)",
+    "mirror reflection of dancer | must mirror real dancer instantaneously (cause = real body pose, effect = reflected pose, zero delay) | matches final overhead pose | during the first arm raise (0:00.5-0:01.5) the reflected arm appears consistently lower than the real arm by roughly one sample step (~0.125-0.25 s), then catches up by 0:01.75; later movements (0:03.5-0:04.25 lowering, 0:06-0:07 raise, legs 0:04.5-0:05.75) appear in sync within sampling",
+    "arm raise #1 | cause: shoulder abducts starting ~0:00.25 | effect: arm reaches vertical ~0:01.75-0:02.0 | continuous, completes, plausible",
+    "arm lowering / port de bras | cause: elbow bends ~0:03.25 | effect: hand passes in front of chest ~0:04.25, arm to hip ~0:05 | continuous, completes",
+    "step / weight transfer | cause: left foot slides back ~0:04.75 | effect: stance widens, hips turn ~0:05-0:05.75 | plausible order and timing",
+    "arm raise #2 | cause: arm lifts from side ~0:06.0 | effect: curved overhead by ~0:07.25 and held to end | continuous, completes",
+    "camera / lighting | static camera, constant fluorescent lighting | unchanged | no uncaused light changes; no frozen or repeated beats observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00.50",
+      "entity": "mirror reflection of dancer's raised right arm",
+      "invariant_violated": "effect lags cause (reflection must be simultaneous)",
+      "description": "During the first side-to-overhead arm raise, the reflected arm trails the real arm: at ~0:00.50 the real arm is horizontal while the reflected arm still angles downward; at ~0:01.25 the real arm is raised ~45-60 deg while the reflection is roughly horizontal; at ~0:01.50 the real arm is near vertical while the reflection is ~45 deg. The reflection reaches the matching pose only ~0.125-0.25 s later (synced by ~0:01.75). A mirror image cannot lag its source; perspective may account for part of the angle difference, so the lag is suggestive rather than certain.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

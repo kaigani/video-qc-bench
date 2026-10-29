@@ -1,0 +1,21 @@
+{
+  "ledger": [
+    "Group: red apple/tomato held by the woman with the blue umbrella (single tracked countable object). 00:00.0-00:07.0: count 1, clearly visible in her left hand / both cupped hands at chest height in every frame, steady size.",
+    "00:07.25: count 1, still visible but partly occluded by fingers; apparent size starting to shrink.",
+    "00:07.5 (dense 12fps check 7.2-8.4s): count 1, visibly smaller red sliver between cupped palms.",
+    "00:07.75: count ambiguous ~1, only a tiny red fragment/stem visible between fingers.",
+    "00:08.0-00:09.75: count 0. Both hands now grip the umbrella shaft with fingers wrapped closely; no bulge or red visible between hands, no fruit in any other position; no drop, pocketing, hand-off, or bite seen in the dense frames.",
+    "Background market produce piles (oranges, limes, apples, teal/purple crates): uncountable bulk displays, change continuously with camera pan/cuts in framing; not individually tracked.",
+    "Umbrella: count 1 throughout. Pedestrians: not a countable-object group for this check."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple/tomato held in the woman's hands",
+      "invariant_violated": "object count change without visible cause",
+      "description": "The single red fruit she holds continuously from 00:00 progressively shrinks between ~00:07.2 and ~00:07.8 while her hands stay cupped in place, and from 00:08.0 onward it is gone: both hands simply grip the umbrella shaft with no room for a fruit-sized object and no red visible. No drop, placement, pocketing, hand-off, or eating is shown; the fruit melts away within the grip (count 1 -> 0). Not a staged magic trick context (casual market walk).",
+      "severity": "moderate",
+      "confidence": 0.8
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "ledger": [
+    "camera | static, low angle, fixed framing on wooden tabletop with dark background band | unchanged at 09:75 | no cuts or camera moves; whole clip is one continuous view",
+    "tabletop / background | wood table filling lower frame, dark wall/chair band along top edge | unchanged | horizon line and background stay fixed throughout",
+    "row of cubes (layout) | 00:00: two cubes, left cube at ~x=90 (thumbnail px) and a green '2' cube at ~x=240 with a gap between | 09:75: eight cubes in a contiguous left-to-right row ending at ~x=585 | cubes are added one at a time on the right end (plus one insertion into the initial gap at ~01:25); left anchor and green slot-3 position stay consistent",
+    "slot 3 cube | green '2' at ~x=240, fixed from 00:00 | green '2' at slot 3 at end | 02:50-02:90 the slot-3 cube is handled, shows '3' and slides right into slot 4; ~03:00 a green '2' cube is present again at slot 3 with no cube placed there",
+    "slot 7 cube | green '3' placed at ~06:25 | green '2' at slot 7, blue cube at slot 8 | ~06:50-06:75 the placed cube slides right toward slot 8 and a green '2' is present at slot 7 with no cube placed there",
+    "hand | enters from top/right, fingers occlude tops of the cube being handled | ends resting on slots 1-2 at 09:75 | fingers consistently in front of cubes; no background-over-foreground rendering of the hand observed",
+    "occlusion between adjacent cubes | cubes sit side by side with small gaps, near faces fully visible | same at end | at ~03:00-03:10 the slid cube in slot 4 overlaps the reappeared slot-3 cube's right edge"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "cube row, slot 3/slot 4",
+      "invariant_violated": "layout continuity / no object appearing in a vacated position",
+      "description": "Between 02:50 and 02:90 the hand slides the slot-3 green cube (now showing '3') to the right into slot 4, leaving slot 3 vacated. At ~03:00 slot 3 is occupied again by a green '2' cube that nothing placed there, so the row grows by one cube with no placement. For a moment the slid cube overlaps the right edge of the reappeared cube, as if the two share the same space.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "cube row, slot 7/slot 8",
+      "invariant_violated": "layout continuity / no object appearing in a vacated position",
+      "description": "Same pattern as 00:03. The green '3' cube placed at slot 7 (~06:25-06:50) is pushed right toward slot 8. By ~06:75 slot 7 holds a green '2' cube that was never placed, and slot 8 holds a cube. The row gains a cube without any placement, so the fixed layout changes on its own.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

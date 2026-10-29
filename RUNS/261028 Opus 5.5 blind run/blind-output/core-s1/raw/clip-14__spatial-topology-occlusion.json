@@ -1,0 +1,42 @@
+{
+  "ledger": [
+    "camera | 0:00 wide low 3/4 front view of station wagon, car facing frame-left | 0:09.75 tight close-up of woman's face with hood/windshield edge visible | single continuous push-in with slight rightward drift/orbit, no cuts",
+    "station wagon body (hood, grille, wood-panel side, roof rack, antenna on left front fender) | hood ornament, grille, plate STE 97, antenna left of windshield, roof rack, near-side side mirror on door right of A-pillar | hood, antenna, wipers, A-pillar, roof rack still present in consistent arrangement | front end exits frame-left as camera pushes in; side mirror leaves frame around 4.0-4.5s",
+    "windshield / near-side A-pillar / near-side door window | windshield spans center, A-pillar near x~910 (full-res), side glass to its right, mirror at door | windshield and A-pillar remain to right of woman, seats visible through glass behind her | consistent framing relationship",
+    "woman (leaning, arms crossed) | torso rises in front of the near A-pillar/windshield corner with crossed arms resting on hood/cowl top, left of the side mirror | same impossible spot: arms on hood, body occluding windshield base, interior seat visible directly behind her | position relative to car does not change; she never sits in the door window opening",
+    "background: road and desert | 0:00 desert scrub directly behind car, gray paved/dirt strip only in lower-left foreground, no lane markings, no utility poles, distant mountains | 4.5s+ long two-lane highway with yellow center dashes receding to horizon behind the hood, wooden utility poles and a roadside sign | road markings appear ~3.5s, poles ~4.5s, multiple poles by 6.5s",
+    "occlusion ordering | woman occludes windshield, wiper area and A-pillar base; hood occludes nothing of her lower body (lower body absent) | same | no background-over-foreground render errors observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman relative to car body (hood/cowl, windshield, A-pillar, door window)",
+      "invariant_violated": "impossible geometry / body-through-solid placement",
+      "description": "The woman's torso emerges from the top of the hood/cowl in front of the near-side A-pillar and windshield base, to the left (forward) of the door-mounted side mirror, with crossed arms resting on the hood. There is no opening at that location: she is not in the door window (which is behind the mirror) and she is outside the windshield glass, yet the car's interior seats show directly behind her as if she were seated inside leaning out a window. Her lower body would have to occupy the engine bay/cowl. This placement persists through the whole push-in (clearly visible 0:00-6:00).",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "background road layout and utility poles",
+      "invariant_violated": "background layout consistency across camera move",
+      "description": "At 0:00 the area behind the car shows only desert scrub, with a plain gray strip in the lower-left foreground and no lane markings or poles. During a continuous push-in with only modest drift, a two-lane highway with yellow center dashes appears receding to the horizon behind the hood (~3.5s), and wooden utility poles plus a roadside sign appear (~4.5-6.5s) in regions of the scene that were previously visible as open desert. A narrowing push-in should not reveal new background structures in already-seen areas.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

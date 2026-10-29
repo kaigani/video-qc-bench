@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "00:00.00 bowl (clear glass, on table) contains 8 balls: 2 red, 3 yellow, 3 green; child's hands blurred in the air above, no ball clearly visible in them",
+    "00:00.25-00:00.50 both hands enter bowl among balls",
+    "00:00.75 hands lift a red ball out; bowl still shows red(left), red(center), 3 yellow, 3 green = 8 in bowl + 1 red in hand = 9 balls",
+    "00:01.00-00:02.00 red ball held in both hands above bowl; bowl contents stable at 8 (2R/3Y/3G)",
+    "00:02.25 red ball released back into bowl (hand -> bowl); bowl now 9 balls (3R/3Y/3G)",
+    "00:02.50-00:04.75 right hand rests in bowl touching red balls at front-left; visible contents consistent with ~9 balls (3R/3Y/3G), some partly under fingers",
+    "00:05.00-00:05.25 right hand begins stirring balls in bowl (motion blur)",
+    "00:05.75 bowl visibly sparse: 2 green, 2 yellow, 1-2 red under fingers (~5-6 balls) with no ball seen leaving the bowl",
+    "00:06.00-00:07.25 stirring continues; balls blurred and smeared, colors shifting",
+    "00:07.75 bowl shows ~5 red, ~1 green, ~2 yellow",
+    "00:09.25 bowl shows ~4-5 red, ~4 green, no yellow visible",
+    "00:09.50-00:09.75 bowl shows ~5 red, 1-2 green, 1 yellow",
+    "Loose balls on tabletop at right edge (red, green, yellow) remain on table throughout and are never touched",
+    "Small metal egg cup with decorated egg on table: untouched, stays in place"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red and yellow balls in glass bowl",
+      "invariant_violated": "object identity / count conservation",
+      "description": "Before stirring the bowl holds about 9 balls, 3 red, 3 yellow, 3 green (00:02.25-00:04.75). Nothing is added or taken out, yet during and after stirring the bowl shows about 5 red balls (00:07.75, 00:09.50) while the yellows drop to 0-1 (none at 00:09.25, one at 00:09.75). Balls seem to change from yellow to red, or reds appear from nowhere, which cannot happen even with hidden handling.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "balls in glass bowl",
+      "invariant_violated": "placement persistence / chain of custody",
+      "description": "At 00:05.75 the bowl suddenly holds only about 5-6 visible balls (2 green, 2 yellow, 1-2 red under the fingers) instead of the 9 seen at 00:04.75. Most of the bowl is visibly empty glass, so the one stirring hand cannot be hiding 3+ balls, and no ball is seen leaving the bowl. A moment later (00:07.75-00:09.75) the bowl is full again with 8+ balls.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "red ball lifted from bowl",
+      "invariant_violated": "chain of custody (unexplained extra object)",
+      "description": "At 00:00 the bowl holds 8 balls (2 red, 3 yellow, 3 green). At 00:00.75-00:01.00 the child holds a red ball above the bowl while both original reds and all 6 other balls are still visible in the bowl, making 9. The hands were blurred in the air at 00:00, so they may have brought the ball in, but no ball is visible in them.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-02__possession-tracking.json",
+  "frozen_source_sha256": "4a5927485c829da1a3ff464d4ffb0a3ca6596d4f90581e1ba6d829b69fbee223",
+  "key": "child-marbles__possession-tracking",
+  "parseOk": true
+}

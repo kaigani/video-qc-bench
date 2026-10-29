@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "man (real, back to camera) | white open-collar shirt, dark pomaded hair, right hand raising small razor/blade to chin | same shirt and hair, right hand near chin | moves hand to hairline 2.0-4.25s holding a dark comb-like object, then back to chin/jaw",
+    "man (mirror reflection) | same shirt/hair, holding white blade at upper lip/chin | holding white blade at jaw/upper lip | holds white blade flat against forehead 2.0-4.25s instead of a comb; hand position frequently disagrees with real man",
+    "handheld tool | small white/silver razor-like blade | small razor-like blade | appears as dark comb in real-space 2.25-4.0s but as white blade in reflection",
+    "set | gilt-framed mirror, wooden door with brass knob, white door frame, shelving with bottles | unchanged | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld object (real man vs. reflection)",
+      "invariant_violated": "mirror reflection consistency",
+      "description": "From ~2.0s to ~4.25s the real man is drawing a dark comb-like object through the hair above his temple, while his reflection holds a small white blade pressed flat across the forehead, lower than the real hand and as a different-coloured object. A mirror cannot show a different object or a different contact point.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "man's right hand / razor",
+      "invariant_violated": "mirror reflection consistency",
+      "description": "At ~9.0s the real hand hangs below the chin, seemingly empty and not touching the face, while the reflection presses the razor against the jaw. At several other points (e.g. 0.0s, 1.0s, 7.0s) the real hand is at the chin or jaw while the reflection's razor is at the upper lip or nose. The reflection's hand pose does not track the real hand.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "man's grooming action",
+      "invariant_violated": "implausible action",
+      "description": "In the reflection the man appears to scrape a blade across his forehead and brow from ~2.0s to ~4.25s, which isn't a plausible shaving motion. Throughout the clip he 'shaves' dry, with no lather and no change to his stubble, so the action reads as nonsensical.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior wide of diner and truck; no hand-object manipulation",
+    "00:10-00:18.7 waitress wipes counter with cloth in right hand; cloth stays in hand; condiment caddies, napkin holder, thermos stay on counter",
+    "00:20-00:27 man enters and sits; waitress takes coffee pot (hand) and pours; folded rag lies on counter by caddy",
+    "00:27.1-00:27.6 close-up: man's right hand grips white mug on counter, pot held above by waitress",
+    "00:27.6-00:32.3 man's hand releases mug to fist beside it (continuous, visible); coffee poured into mug; pot lifted; mug stays on counter; rag stays on counter",
+    "00:32.3-00:36.4 insert: plate with toast and fried egg, fork and knife on counter; static",
+    "00:36.4-00:45 man seated holding mug in both hands; plate with egg/toast in front; mug stays in hands",
+    "00:45-00:51.3 reverse angle: waitress wipes counter with grey cloth in right hand; white mug stays at left foreground on counter shelf; ketchup bottle on far counter",
+    "00:51.4-01:00 empty counter; static props",
+    "01:00-01:09 wide: man at counter, mug on counter; waitress at back station",
+    "01:09-01:11 waitress sets plate with food on counter; man's mug A on counter near him; second mug B placed by waitress near plate",
+    "01:11-01:12.5 man holds mug A in both hands; waitress right hand on mug B, left hand on plate",
+    "01:12.5-01:13 waitress slides mug B toward man; both mugs adjacent at man's hands, then only one mug visible",
+    "01:14-01:17.5 one mug on counter at man's hands; waitress picks up plate and carries it to back counter (plate in hand, no mug)",
+    "01:17.6-01:26.7 wide: man at counter, waitress joins and sits beside him",
+    "01:26.8-01:35.2 two-shot: waitress holds her mug in both hands, man holds his mug; napkin dispenser, shakers static",
+    "01:35.2-01:37.4 empty counter",
+    "01:37.4 close-up: single white mug on counter, nothing else",
+    "01:38 man's left hand lays bill(s) on counter, right hand reaches in",
+    "01:39 right hand fans/presses small stack of bills beside mug",
+    "01:40-01:41 hands withdrawn; small stack of bills remains on counter beside mug",
+    "01:41-01:50.2 exterior/through-window: man walks to truck, empty hands; waitress watches",
+    "01:50.2-01:51.5 waitress seated at counter with cup/saucer in hands and a mug beside; stands and leans to wipe/handle cup on counter",
+    "01:52-01:58 waitress moves to back station; counter caddies static"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:13",
+      "entity": "man's original coffee mug (mug A) vs. newly placed mug (mug B)",
+      "invariant_violated": "placement persistence / object count",
+      "description": "From 01:10 to 01:12.5 two distinct white mugs are on the counter: mug A held in the man's hands and mug B under the waitress's right hand. As the waitress slides mug B toward him, the two mugs converge and by 01:13-01:14 only one mug remains at the man's hands. The waitress's hands hold only the plate afterward (01:15-01:17) and the man's hands hold one mug, so nothing visibly removes the second mug; one mug effectively merges into/disappears into the other.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-01__possession-tracking.json",
+  "frozen_source_sha256": "5804bb8c106036fc62b0ca7a8e9d40809df8cda433c1a35cadcd763fd3a25e2b",
+  "key": "_long-scene__possession-tracking",
+  "parseOk": true
+}

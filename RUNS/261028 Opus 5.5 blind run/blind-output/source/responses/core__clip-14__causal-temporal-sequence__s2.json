@@ -1,0 +1,20 @@
+{
+  "ledger": [
+    "camera | 00:00 wide 3/4 front view of wood-panel station wagon parked on desert road shoulder | 00:09.75 tight profile close-up of woman | continuous smooth push-in/orbit to the left around the front of the car; background (road, yellow lines, telephone poles, mountains) parallaxes consistently with camera motion; no cuts, no frozen or repeated frames observed",
+    "station wagon | stationary, parked, no wheel/road motion blur | stationary | no visible motion of the car at any point; background change is explained by camera orbit, not vehicle travel",
+    "woman (driver window) | leaning out of driver window, arms crossed on door sill, calm smile, hair resting with slight movement | same pose, smiling, gazing off to the left | small head turns and smile changes, gradual and continuous; no actions initiated and left incomplete; no reactions to unseen events",
+    "woman's hair (cause: wind) | 00:00-00:05 hair mostly at rest with slight stirring | 00:05.5-00:09.75 hair strongly streaming backward/toward camera-right as if in a strong headwind | onset of strong blowing at ~00:05.5 with no change in visible cause: car remains parked, desert scrub/grass does not visibly move, no gust indicator in environment",
+    "lighting / sun flare | bright midday sun | sun flare grows near windshield/antenna base as camera moves | flare changes track camera angle relative to sun; no unexplained light change",
+    "desert scrub / roadside grass | static | static (soft focus later) | no visible wind response to match the hair motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "effect-without-cause (wind onset)",
+      "description": "From ~00:05.5 the hair transitions from nearly still to strongly streaming back as if in a strong headwind or moving-car airflow, yet the car remains parked (no vehicle motion, background change is due to camera orbit only) and the surrounding desert scrub shows no corresponding wind response. The escalating wind effect has no visible cause and is disproportionate to the static environment.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

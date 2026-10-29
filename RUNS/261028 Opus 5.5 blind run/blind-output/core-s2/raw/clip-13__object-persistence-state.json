@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "red apple | whole, shiny red, held cupped in both hands at chest level in front of umbrella shaft (00:00) | absent: hands still cupped around umbrella shaft with nothing between them (00:08.0-00:09.75) | stays whole and in hand 00:00-00:07.25; shrinks to a small red sliver at 00:07.5, a tiny red fleck with stem at 00:07.75, gone by 00:08.0 with no drop, pocket, hand-off, or bite visible",
+    "blue umbrella | open, held by woman via shaft at chest, canopy overhead (00:00) | open, held by woman, canopy overhead (00:09.75) | stays open and in her grip throughout; no state change",
+    "market stall produce crates/displays | filled crates of apples, limes, oranges along both sides of street | filled crates continue in background | change only with camera travel/parallax; no clear unexplained count/state change attributable to an action",
+    "shoulder bags carried by passers-by (light-blue-shirt woman, red-shirt woman) | carried on shoulder | carried on shoulder while visible | no unexplained change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple held in woman's hands",
+      "invariant_violated": "object persistence / no vanishing",
+      "description": "The whole red apple held cupped in her hands for the first 7 seconds progressively shrinks (00:07.25 full apple, 00:07.5 partially visible sliver, 00:07.75 tiny red fleck with stem) and is completely gone by 00:08.0, while her hands stay in the same cupped pose around the umbrella shaft. No drop, placement, pocketing, hand-off, or eating is shown; the apple simply dissolves out of existence.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-13.mp4",
+  "role": "object-persistence-state",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-13__object-persistence-state__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

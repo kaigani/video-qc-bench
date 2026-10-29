@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "building wall | left edge of frame, cream blocks with brick/orange base strip, runs alongside stairs | still at left edge in 09.25-09.75 downward view with same orange base strip | consistent left-side position through tilt-down at 09.25",
+    "staircase | lower-left of frame beside wall, steps between camera and plaza | fills lower/center frame in 09.50-09.75 with wall on left and railing on right | geometry compatible with camera tilting down along the same stairs",
+    "metal railing | dark bars on planter-side (right) edge of stairs; rail sweeps from far end near plaza (left/center) toward camera (upper right) | same orientation at 09.75: far terminal post with white cap at plaza level, rail rising toward camera at upper right | perspective shift with camera motion only, no layout change",
+    "planter with shrubs | right of/behind railing, white stone ledge, at top of stairs next to plaza | still right of railing beyond bars at 09.50-09.75 | consistent",
+    "paved plaza | upper portion of frame beyond stairs and planter, background fence at far edge visible ~02.50 | still at top of frame at 09.75 | consistent",
+    "woman with red bag (moving) | on plaza behind railing at 00.00, bars correctly occlude bag/legs | walks away up-left toward far end of plaza, small by 03.00, leaves frame as focus pulls to phone | occlusion by railing bars and by foreground phone correct and smooth",
+    "phone + hands (foreground) | nearest object, occludes stairs/railing/plaza at all times 00.00-09.25 | lowered out of frame by 09.75 revealing stairs | motion blur at 09.25 but depth ordering correct; railing bars never render over hand or phone"
+  ],
+  "findings": [],
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__spatial-topology-occlusion__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-08__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "85b301b276adab730cf27ff89ac044968c815d33a1509d653825bdbf99669b65",
+  "key": "phone__spatial-topology-occlusion",
+  "parseOk": true
+}

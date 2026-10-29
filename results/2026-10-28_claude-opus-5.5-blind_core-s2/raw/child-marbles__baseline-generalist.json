@@ -1,0 +1,77 @@
+{
+  "ledger": [
+    "child | blue zip hoodie, dark hair, standing at wooden table, both hands at glass bowl | same hoodie, framing pushed in so only hands/forearms visible | continuous camera push-in from wide to tight on bowl",
+    "glass bowl | ~8-9 glossy spheres: roughly 3 red, 3 yellow, 3 green, neatly settled | crowded with blurred, deformed balls dominated by red, few yellow | right hand begins stirring ~4.75s; content changes thereafter",
+    "loose balls on table (right edge) | red/green balls at table edge | out of frame after push-in | leave frame ~4.0s due to camera move",
+    "small silver cup with leaf-print item | on table right of bowl | out of frame | leaves frame ~4.25s due to camera move"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "balls in glass bowl (count)",
+      "invariant_violated": "object permanence / count conservation",
+      "description": "Before stirring the bowl holds ~8-9 balls (about 3 red, 3 yellow, 3 green). Within ~0.5s of the hand starting to stir (5.25-5.75s) the bowl shows only ~5-6 balls (e.g. at 5.75s: 1 green, 2 yellow, 1 green, 1 red) with no balls seen leaving the bowl; balls vanish.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "balls in glass bowl (color distribution)",
+      "invariant_violated": "object identity / color conservation",
+      "description": "From ~7.5s onward the bowl contains 4-6 red balls with only one or two yellow, whereas it started with ~3 red and ~3 yellow; red balls multiply and yellow ones disappear while nothing is added or removed. Count and color mix keep fluctuating frame to frame through 9.75s.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "balls in glass bowl (shape)",
+      "invariant_violated": "rigid-body shape consistency",
+      "description": "The hard glossy spheres become lumpy, smeared, pepper/blob-like shapes (e.g. 6.0s, 6.75s, 9.0-9.75s), with stretched streaks and soft edges that read as generative morphing rather than motion blur; spheres should stay round.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "child's right hand / balls",
+      "invariant_violated": "hand-object interpenetration / anatomy",
+      "description": "At 9.0-9.75s the stirring hand smears into and merges with the balls; fingers dissolve into red/green blobs and a ball appears to pass through the hand, with no clear finger count or contact boundary.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "background behind bowl",
+      "invariant_violated": "background consistency",
+      "description": "At 9.0-9.25s a flat beige/pinkish panel shape appears at the top edge behind the bowl, between the child's forearms, where previously only blue hoodie and paving were visible; it has no plausible source.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "overall image quality",
+      "invariant_violated": "progressive degradation / blur",
+      "description": "Starting ~5s the stirring region becomes heavily smeared and the overall image loses detail (table grain and hand texture soften) as the camera pushes in, worsening to 9.75s; the end of the clip is not publishable quality.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-02__baseline-generalist.json",
+  "frozen_source_sha256": "9b8726d21791114e384a31b6fbbdb473f6eaa0a1760fcc687cfffb1a526b8525",
+  "key": "child-marbles__baseline-generalist",
+  "parseOk": true
+}

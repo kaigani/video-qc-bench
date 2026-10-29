@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "child right hand | 00:00 reaching into glass bowl from top-left, motion-blurred | 09:75 fingers splayed down among balls stirring vigorously | 00:25-00:75 reaches in, fingertips contact red ball; 01:00-02:00 holds red ball jointly with left hand (fingertips wrapped, plausible); 02:25 releases red ball back into bowl; 02:50-04:75 fingers rest on/among balls at bowl bottom; 05:00-09:75 rapid stirring with heavy motion blur, fingers repeatedly overlap balls",
+    "child left hand | 00:00 raised, blurred | 09:75 draped over far bowl rim, fingers hanging inside bowl | 00:75-02:00 co-holds red ball with right hand (contact visible); 02:50 onward fingers hooked over far rim of bowl, rim passes between palm and fingers consistently; no clipping through glass observed",
+    "red ball (picked) | 00:00 resting in bowl cluster | 02:50 back in bowl | lifted 00:75 only after fingertip contact, held in two-hand grip 01:00-02:00 with visible finger contact, lowered/released 02:25 (ball looks partially translucent through fingers at 02:25)",
+    "balls in bowl (red/yellow/green) | 00:00 resting stacked on bowl bottom, supported by each other and glass | 09:75 scattered, several at mid-height of bowl near left fingertips, deformed by blur | stable and supported 00:00-04:75; agitated from 05:00; from ~08:25 several balls hover in open space inside the bowl without visible support",
+    "glass bowl | 00:00 resting on wooden table | 09:75 resting on table, camera much closer | does not move from hand contact on rim; no pass-through of hands through glass detected",
+    "child body/torso | standing at table, arms forward | same | no foot/leg visibility; no support issues"
+  ],
+  "findings": [
+    {
+      "timestamp": "08:25",
+      "entity": "balls inside bowl (yellow at 08:25, green at 08:50, red at 09:25)",
+      "invariant_violated": "weight without support",
+      "description": "During stirring, individual balls sit suspended in open space at mid-height of the bowl just below the left hand's fingertips (yellow at 08:25, green at 08:50, red at 09:25), not touching the fingers, glass wall, or other balls, and they appear in similar hovering positions across consecutive frames rather than as a brief bounce arc. The stirring right hand is not in contact with them.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "09:00",
+      "entity": "right hand fingers vs balls",
+      "invariant_violated": "solidity / clipping",
+      "description": "While the right hand stirs, fingers and balls blend into each other: at 09:00 and 09:25 fingertips merge into the red and green balls with no clear occlusion boundary, and at 09:75 the index finger appears to pass into the green ball. Heavy motion blur makes this partly ambiguous.",
+      "severity": "moderate",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "02:25",
+      "entity": "red ball held by right hand",
+      "invariant_violated": "solidity / clipping",
+      "description": "As the red ball is lowered back into the bowl, it looks semi-transparent and partly merged with the right hand's fingers instead of being cleanly occluded by them or occluding them.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "ledger": [
+    "camera | wide 3/4 front view of a parked wood-panel station wagon on a desert road shoulder at 00:00 | tight profile close-up of the woman at 00:09.75 | continuous push-in/arc toward the driver window across the single shot; no cuts; motion is smooth and forward with no repeated or frozen beats",
+    "station wagon | parked, wheels static, on asphalt beside desert scrub at 00:00 | still parked at 00:09.75 (only hood/window visible) | no driving motion visible; apparent background shift is consistent with camera parallax as the camera arcs; sun flare on windshield/antenna appears ~00:04.75 as the camera angle changes, which plausibly causes it",
+    "woman | leaning out of driver window, arms crossed on the door sill, hair mostly at rest, slight smile at 00:00 | same pose, arms crossed, hair strongly streaming toward the rear of the car, gazing ahead at 00:09.75 | small head turns and smile changes are continuous; arms stay crossed throughout (no started-but-unfinished action)",
+    "woman's hair (wind effect) | nearly still with slight stirring 00:00-00:05.00 | heavily windblown rearward 00:05.50-00:09.75 | onset ramps over ~0.5 s (00:05.25 -> 00:05.50) and then sustains; cause is not visible (car stationary, no visible gust indicators such as moving scrub or dust), though an ambient desert gust is a plausible invisible cause",
+    "background (road, poles, scrub, mountains) | road and scrub in sharp-ish focus at 00:00 | blurred road and scrub behind the woman at 00:09.75 | changes consistent with camera move and depth of field; no independent motion detected"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair / wind",
+      "invariant_violated": "effect-without-visible-cause (wind onset)",
+      "description": "Hair is nearly still for the first ~5 s, then within ~0.5 s becomes strongly and continuously blown toward the rear of the car, as if the parked car were driving at speed. The car shows no motion, and nothing else in frame (scrub, dust) indicates a matching gust, so the wind's strength and sudden onset have no visible cause. An off-screen gust could plausibly explain it, so this is weak evidence.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-14__causal-temporal-sequence.json",
+  "frozen_source_sha256": "b711d9613fdc41627c6dcac5c08a2ce51eab2a095fe15fd2dd19f73a60c2fdc6",
+  "key": "woman-car__causal-temporal-sequence",
+  "parseOk": true
+}

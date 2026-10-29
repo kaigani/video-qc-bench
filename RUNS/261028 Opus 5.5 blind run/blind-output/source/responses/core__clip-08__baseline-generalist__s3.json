@@ -1,0 +1,42 @@
+{
+  "ledger": [
+    "woman in blue top and jeans | walking away across plaza holding red shopping bag in her left hand | walking away, no bag visible | bag fades to translucent at 00:02.25 and is gone by 00:02.50",
+    "smartphone screen | teal screen, large blurred '?742' code, small status-bar text | 'A742' with 'x2' and 'AZ-12' beneath, then 'AZ-X' at 00:09.00 | glyphs morph as focus racks; secondary text changes at 00:09.00",
+    "light patch on phone screen | bright sun patch on right half of screen | patch jumps around erratically from 00:03 to 00:08 | shape and position jump between neighboring frames while the hand stays steady",
+    "camera/phone framing | over-the-shoulder view with phone foreground and woman in background | phone drops out of frame and the view shows the empty staircase | fast downward whip at 00:09.25-00:09.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red shopping bag carried by the woman",
+      "invariant_violated": "object permanence",
+      "description": "The woman carries a solid red bag in her left hand from 00:00 to 00:02.0. At 00:02.25 the bag becomes faint and translucent pink, and by 00:02.50 it is gone, with her arm swinging empty. She never sets it down or hands it off; it just dissolves.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "text on phone screen",
+      "invariant_violated": "garbled/illegible rendered text",
+      "description": "The phone UI text is malformed. The main code reads as 'λ742'/'3742' while blurred and then as 'Ā7·42' with stray accent marks. The secondary lines ('x2', 'AZ-12'), the status bar ('7.42', 'A‾A') and the clock ('4:4?') are pseudo-glyphs rather than coherent UI text.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "secondary text on phone screen",
+      "invariant_violated": "on-screen text continuity",
+      "description": "The line below the main code reads 'AZ-12' consistently from 00:06 to 00:08.75, then changes to 'AZ-X' at 00:09.00. The status-bar text 'A‾A' also changes to a different glyph, with no screen interaction to explain either change.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "sunlight patch on phone screen",
+      "invariant_violated": "lighting/reflection consistency",
+      "description": "The bright light patch on the screen jumps position and shape between neighboring frames (large at 00:04.50, shifted down at 00:04.75, back up at 00:05.00, down again at 00:05.50, then gone or reappearing from 00:06 to 00:08). The phone and hand barely move, so the flicker is not explained by the motion.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

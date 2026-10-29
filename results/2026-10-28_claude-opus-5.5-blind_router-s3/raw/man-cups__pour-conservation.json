@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "00:00 setup: four steel-lined copper-colored cups on red/cream table; transferred material is coins (no liquid). Cup A (front-left) holds ~1 gold coin at bottom; Cup B (center) holds a gold coin stack near the rim, top coin gold with embossed cross/emblem; Cup C (right) appears empty; Cup D (small, back) appears empty. Loose gold coins on cloth.",
+    "00:00-00:01.25 hand holds a gold coin above table left, then reaches down into Cup A.",
+    "00:01.50-00:02.25 hand grips inside Cup A and lifts out a gold coin (visible at rim at 00:02.25). Cup B still shows gold embossed top coin near rim at 00:02.25.",
+    "00:02.50 Cup A appears empty; hand holds gold coin above it. Cup B top coin still gold.",
+    "00:02.75-00:03.00 Cup B top coin now reads silver/white, not gold; no hand contacted Cup B. Hand at 00:03.00 holds two coins (gold plus a second edge-on coin).",
+    "00:03.25-00:04.25 camera orbits left; hand drops gold coin into Cup A; Cup B contents now show a pale/silver disc; Cups C and D unchanged externally.",
+    "00:04.50-00:07.25 wider orbit reveals man in blue suit; four cups now read as a row; he places gold coins at/into the leftmost and rightmost cups. Cup interiors no longer legible.",
+    "00:07.50-00:08.75 four cups visible in row (leftmost pair overlapping in depth), same copper/steel design.",
+    "00:09.00 four cups visible (back-left, back, front, front-right).",
+    "00:09.25-00:09.75 only three cups visible (left, back, front); fourth (front-right) cup no longer seen though nothing occludes that area."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Center cup (Cup B) coin stack",
+      "invariant_violated": "source contents / identity of material",
+      "description": "Through 00:02.25 the top coin in the center cup is a gold coin embossed with a cross emblem sitting near the rim; by 00:02.75-00:03.00 the top coin is a plain silver/white disc. The hand only interacted with the front-left cup in this interval; no coin was removed from or added to the center cup, so the contents changed kind/color without cause.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Coins held in hand after extraction from front-left cup",
+      "invariant_violated": "conservation",
+      "description": "Only one gold coin is lifted out of the front-left cup (00:02.25) and the hand holds a single coin at 00:02.50-00:02.75, but at 00:03.00 the hand holds two coins (a gold coin plus a second coin edge-on) with no visible pickup from the table or cups.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:09.5",
+      "entity": "Front-right cup",
+      "invariant_violated": "container identity / persistence",
+      "description": "At 00:09.00 four cups are on the felt; at 00:09.50-00:09.75 only three cups remain visible and the front-right cup is gone from an unoccluded area, with no visible removal. Camera orbit could partly explain it, so confidence is moderate.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__pour-conservation__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-06__pour-conservation.json",
+  "frozen_source_sha256": "0fff7fee326fbd05a8b160dcbc64772dc8e87ca51bf747e3047169c2d876e221",
+  "key": "man-cups__pour-conservation",
+  "parseOk": true
+}

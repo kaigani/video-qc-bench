@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "background wall | plain off-white wall filling all space behind the seated person | same plain off-white wall | no openings, doors or windows ever shown; consistent across all shots",
+    "chair behind subject | light grey chair-back edge visible at frame right behind subject's left shoulder (00:00-03:50) | light chair-back edge at right plus dark chair frame/armrest visible behind subject's right elbow at frame left once framing lowers (06:50-09:75) | change in visible parts follows reframing (lower/wider framing exposes more of chair); left/right placement stays consistent",
+    "table/work surface | not visible in first two shots | dark table edge appears at bottom of frame (~09:25-09:75) as framing is low | appears only when camera framing includes the lower area; plausible, no layout conflict",
+    "camera setups | shot A 00:00-03:75 tight frontal on hands/chest with tweezers work; shot B ~04:50-06:25 frontal, hands centred, chin cropped; shot C ~06:50-09:75 slightly lower/wider frontal | all frontal from the same side of the subject | cuts/reframes are geometrically compatible; subject stays centred against same wall/chair arrangement",
+    "hands vs torso / watch-held object occlusion | hands and held watch always in front of shirt; held object between fingers, tweezers in front of torso | same ordering at end, frame-left hand works tool in front of watch held by frame-right hand | motion-blurred hand moves at 03:75 and 04:50 keep correct depth order; no background rendering over hands",
+    "hair vs shirt/neck | hair falls in front of shoulders and collar, necklace pendant on chest visible between hair strands | unchanged ordering | consistent occlusion throughout"
+  ],
+  "findings": [],
+  "video": "watchmaker.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-11__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-11.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-11__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "8f75ac5908401afbe96e466ce396b1af52bdbf182d1f5b8274c938ec20cedefe",
+  "key": "watchmaker__spatial-topology-occlusion",
+  "parseOk": true
+}

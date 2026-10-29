@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "Lower-right plain gold coin on green field (single inscription line, ring of dots): 00:00.00 reads approx 'PREVENT'/'PREZVNT'; 00:02.00 reads approx 'TREVNT'; 00:02.75 reads approx 'RICVICY'/'PICVICY' — coin static, camera nearly static, sharp in all three",
+    "Upper gold coin right of cups on green field (script inscription): 00:00.00 reads approx 'Etavao'/'Eravao'; 00:02.00 reads approx 'Bnioj'/'Anioj'; 00:02.75 faint, approx 'Brxone' — not a real word in any reading",
+    "Gold coins on red border, left side (cursive inscription): 00:00.00 approx 'Tecuns'/'Tiszo' cursive; 00:02.00 approx 'Teczi'/'Tnzi' — illegible pseudo-script, soft focus",
+    "Coin stack face inside center cup (emblem with glyph-like characters): 00:00.00 and 00:02.00 shows cross/bar emblem with flanking pseudo-glyphs; glyph shapes on left side differ between readings, but this reads as decorative emblem, not text",
+    "Silver coins on red border right side: small embossed rim text, too small/blurred to read at any moment",
+    "00:03.00 onward: camera pulls back/low angle; all coin inscriptions too small or out of focus to read; no signs, screens, or other text in room (framed picture on wall at 00:08.50–00:09.75 has no legible text)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Lower-right plain gold coin on green field (single-line inscription)",
+      "invariant_violated": "text stability across legible moments",
+      "description": "The same stationary coin's inscription is legible in sharp frames at 00:00.00 (approx 'PREVENT'), 00:02.00 (approx 'TREVNT') and 00:02.75 (approx 'RICVICY'); the letterforms change between readings with no action touching the coin, and none of the readings is a coherent word.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Upper gold coin right of cups on green field (script inscription)",
+      "invariant_violated": "text stability / legibility",
+      "description": "Coin's inscription reads approx 'Etavao' at 00:00.00 and approx 'Bnioj' at 00:02.00 although the coin is untouched and similarly sharp; the inscription is pseudo-text that morphs between frames.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Gold coins on left red border (cursive inscriptions)",
+      "invariant_violated": "legibility (garbled glyphs)",
+      "description": "Large gold coins in the foreground carry cursive inscriptions rendered as non-word pseudo-script ('Tecuns'/'Teczi'-like) whose shapes also shift between 00:00 and 00:02; soft focus limits certainty.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

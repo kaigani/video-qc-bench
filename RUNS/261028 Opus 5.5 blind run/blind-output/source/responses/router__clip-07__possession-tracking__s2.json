@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "Single tracked object: small white/silver handheld grooming tool (razor/blade-like), held in the man's raised hand; seen both directly (real hand, from behind) and in the wall mirror reflection.",
+    "00:00-01:50 tool in real hand at chin/jaw; reflection shows matching white blade at chin/upper lip. Consistent.",
+    "01:75-02:00 tool raised to nose/cheek; real tool light-coloured, reflection white blade at nose. Consistent.",
+    "02:25-04:00 hand raised to brow/hairline; reflection consistently shows a flat white blade lying across the forehead/brow, while the real hand shows a dark grey, comb-like object pushed into the hair at the temple (03:00, 03:25, 03:75, 04:00) or no visible object in the fist (03:50).",
+    "04:25-04:75 tool returns to cheek/nose; real object light again, reflection white blade. Consistent.",
+    "05:00-08:75 tool at chin, jaw, upper lip, cheek in both real view and reflection. Consistent.",
+    "09:00 real hand at chin with fingers pinched together and no object visible; reflection simultaneously shows white blade held against jaw.",
+    "09:25 real hand again holds silver tool, pointing straight up and away from the face, while reflection shows tool angled and touching jaw.",
+    "09:50-09:75 tool at lip/cheek in both views. Consistent.",
+    "No surfaces, containers, or hand-to-hand transfers involved; tool never set down or leaves frame."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "handheld grooming tool (real hand vs mirror reflection)",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "From 00:02.25 to 00:04.00, the reflection shows a flat white blade lying across the forehead. In the same frames, the real hand holds a dark grey, comb-like object pushed into the hair at the temple. The same object is shown as two different kinds of object, in different places, at the same moment. Before and after this stretch, both views show the same light-coloured tool.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "continuous chain of custody (mirror correspondence)",
+      "description": "At 00:09.00 the real hand at the chin has its fingers pinched together and holds no visible object, while the reflection clearly shows a white blade in that hand against the jaw. At 00:09.25 the tool is back in the real hand, now pointing straight up and away from the face, while the reflection shows it touching the jaw. The tool briefly disappears from the real hand and its pose does not match the reflection.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

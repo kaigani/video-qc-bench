@@ -1,0 +1,35 @@
+{
+  "ledger": [
+    "Spaces: (A) exterior desert roadside/two-lane highway with yellow centerline, telephone poles, distant mountains; (B) interior cabin of a cream woodgrain-panel station wagon (front bench/bucket seats, steering wheel, rear-view mirror).",
+    "Openings between A and B: windshield (glass, closed), driver-side front door window, rear side windows, all seen from the exterior. No open door or open hood.",
+    "View through openings: windshield and side windows show the cabin seats and, through the far-side glass, desert scrub \u2014 consistent with the established exterior throughout 00:00-00:09.75.",
+    "Car placement: parked on the road shoulder; camera dollies/orbits from front-3/4 view (00:00) toward the driver-side front fender (00:04-00:09.75); highway with centerline revealed behind the car on the left by 00:03.5 \u2014 consistent with camera move, no layout break.",
+    "Fixtures: hood ornament, antenna on far front fender, wipers at cowl, driver-side mirror on door (visible until ~00:03.75, then out of frame as camera moves in) \u2014 positions stable.",
+    "Person: woman in denim jacket, arms crossed resting on the hood/fender just ahead of the driver-side A-pillar, from 00:00 to 00:09.75; no traversal between spaces occurs.",
+    "Person position vs openings: her torso rises out of the cowl/fender junction directly in front of the windshield; the near-side fender, door and front wheel below her are fully unoccluded (00:00-00:02.75), and in close views (00:05-00:09.75) the cabin seat is visible directly behind her through the windshield/side glass \u2014 she occupies the boundary between interior and exterior where no opening exists."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman leaning on station wagon hood / driver-side A-pillar region",
+      "invariant_violated": "body position inconsistent with vehicle openings (interior/exterior interpenetration)",
+      "description": "The woman's torso emerges from the cowl/fender area in front of the driver-side windshield edge, arms crossed on the hood. If she were standing outside beside the car, her body and legs would occlude the near-side fender, door and front wheel, but those panels are completely unobstructed below her (clearly at 00:00-00:02.75). In the closer views (00:05-00:09.75) the cabin seat back sits directly behind her through the glass, implying she is inside the cabin yet projecting through the closed windshield/cowl where no opening exists. No position \u2014 inside or outside \u2014 is consistent with the established car body and its openings; this persists for the whole clip.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "layout-connectivity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-router__clip-14__layout-connectivity__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,103 @@
+{
+  "ledger": [
+    "00:00.00 Block A (green, '2') held by hand at left of table; Block B (green, '2') resting on table to its right",
+    "00:00.25-00:00.75 Block A is rotated in hand and is shown blue with '2' (was green); no swap visible",
+    "00:01.00-00:01.25 a second blue block ('3', Block C) appears right next to Block A, beneath the same fingers; it has no visible source on the table or in the hand",
+    "00:01.50-00:02.25 row on table: A blue 2, C blue 3, B green 2; hand releases and moves to B",
+    "00:02.50-00:02.75 hand turns B, which now shows '3' and moves right",
+    "00:03.00-00:03.25 B shows '2' in place and a new green '3' block (D) appears to its right, emerging from B under the fingers",
+    "00:03.50 hand slides D (green 3) right",
+    "00:03.75 D is now tan/orange showing '2' (was green 3)",
+    "00:04.00-00:04.25 a new blue block (E, '3') appears to the right of D under the fingers",
+    "00:04.50-00:04.75 E placed; it now reads pale grey/white '3' (was saturated blue)",
+    "00:05.00-00:05.25 a new blue '3' block (F) appears to the right of E under the fingers",
+    "00:05.50-00:05.75 F shifts from blue to teal to green while held",
+    "00:06.00 F rests in row and shows green '5'; another green block (G) emerges to its right under the fingers",
+    "00:06.25-00:06.50 G (green '3') moved right",
+    "00:06.75 G shows green '2'; a new blue '3' block (H) appears to its right",
+    "00:07.00-00:07.50 H (blue '3') held at right end",
+    "00:07.75 H placed; its face now reads '6'",
+    "00:08.00-00:09.75 final row A blue 2, C blue 3, B green 2, D tan 2, E grey 3, F green 5, G green 2, H blue 6; hand touches D/B then A/C, nothing moves",
+    "Count: 2 blocks at start, 8 blocks at end; no block enters from off-frame, a pile, or a container"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Block A (leftmost block held by hand)",
+      "invariant_violated": "object identity / transfer completeness",
+      "description": "The held block is green with '2' at 00:00.00 and blue with '2' by 00:00.50-00:00.75. It never leaves the fingers and is not swapped, so the same object changes color.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Block C (blue '3')",
+      "invariant_violated": "continuous chain of custody (object from nowhere)",
+      "description": "A second blue block appears beside Block A beneath the same fingers that were holding only one block. It comes from no hand, pile, container, or frame edge, and the block appears to split off Block A. Concealed palming can't explain it because the hand was visibly holding one cube.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Block D (green '3', later tan '2')",
+      "invariant_violated": "continuous chain of custody (object from nowhere)",
+      "description": "After Block B is turned to show '3' and moved, B shows '2' again in place and a new green '3' block emerges from its right side under the fingertips. There is no visible source for the new block.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Block D",
+      "invariant_violated": "object identity (color/number change)",
+      "description": "Block D is green '3' at 00:03.50 and tan/orange '2' at 00:03.75 while it stays under the same fingers. It is not rotated in a way that would show a different face, and the body color can't change by rotation.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Block E (blue '3' then pale grey '3')",
+      "invariant_violated": "continuous chain of custody / object identity",
+      "description": "A blue block appears next to Block D under the fingers with no source (00:04.00). After it is set down, its color shifts from saturated blue to pale grey/white (00:04.50-00:04.75).",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Block F (blue '3' to green '5')",
+      "invariant_violated": "continuous chain of custody / object identity",
+      "description": "A blue '3' block appears beside Block E with no source (00:05.00). While held it changes from blue to teal to green (00:05.25-00:05.75), and at rest it reads '5' instead of '3' (00:06.00).",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Block G (green '3' to green '2') and Block H (blue '3')",
+      "invariant_violated": "continuous chain of custody / object identity",
+      "description": "A green block emerges from Block F's side (00:06.00) and shows '3' (00:06.25-00:06.50). By 00:06.75 it reads '2', and another blue '3' block has appeared beyond it with no source.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Block H (end block)",
+      "invariant_violated": "object identity (number change)",
+      "description": "Block H shows '3' through 00:07.50. At 00:07.75, when it is set down with the same face toward the camera, it reads '6'.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-12__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

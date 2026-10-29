@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "glass jar (hinge/spout on its right side) | centered on butcher-block cutting board, foreground | same spot on board, foreground | camera drifts lower/right from ~6.0s, jar stays nearest object and correctly occludes person, oven and arm throughout",
+    "cutting board | spans lower frame, back edge diagonal toward right, white marble counter beyond its right edge | back edge visible with white counter behind at 8-9.75s | geometry consistent with camera move",
+    "steel bowl | behind-right of jar on white marble counter, right of board edge | directly right of jar on marble | relative position consistent under camera move",
+    "white speckled bowl | front-right of steel bowl, far right frame | bottom-right corner, front-right of steel bowl | consistent",
+    "range/oven | behind jar to the right; left edge ~behind jar (handle and left edge visible through glass), wood cabinet on its right | stove fully right of jar with wood cabinet on its left, 3 knobs left of display | parallax consistent with camera moving right; knobs hidden behind jar early are revealed at 5.75s",
+    "back counter/background | white counter + stacked bowls upper right; yellow wall above stove; left counter with white canister and cabinets revealed when person shifts at 4.25s | same elements | occlusion reveal consistent",
+    "small glass bottle on right counter | absent at 0.00-4.25s (wood cabinet/white counter visible at that spot) | present behind white bowl from 4.50s to end | pops into a fixed-camera view with no one placing it",
+    "person/arms vs jar | person behind jar, arms above/behind jar opening, reaching to steel bowl behind jar's right side | same | depth ordering of arm vs jar hinge correct (jar in front)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "small glass bottle on white counter behind white bowl (right of steel bowl)",
+      "invariant_violated": "scene layout persistence of fixed objects",
+      "description": "Between 4.25s and 4.50s, with the camera essentially static (jar, board, bowls in identical image positions), a small clear glass bottle appears on the counter at the right edge (~x1175, y270-380 full-res) where the previous frames clearly showed bare white counter and the wood cabinet face. Nobody places it there (both hands are at the steel bowl/jar) and it is not revealed by any occluder moving away; it simply materializes and stays for the rest of the clip.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

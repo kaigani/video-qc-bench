@@ -1,0 +1,43 @@
+{
+  "ledger": [
+    "woman with umbrella | navy button cardigan, light grey skirt/shorts, silver watch on left wrist, red apple cupped in both hands, blue umbrella shaft gripped at chest | same outfit and watch, both hands gripping bare umbrella shaft, no apple | apple shrinks and vanishes ~7.5-8.0s with no pocketing/handoff action",
+    "red apple | held in both hands at chest height | absent | progressively occluded/shrinks 7.5-7.9s, gone by 8.0s",
+    "umbrella | light/medium blue canopy over subject | light blue canopy | appears dark navy while under awnings 4.5-6s, light again at 9s",
+    "background market | open-air street market, red awnings, dense crowd walking toward camera | covered market hall with white crates and purple trays, sparse shoppers | gradual change as camera orbits subject",
+    "passers-by | light-blue-shirt woman, white-shirt man, blue-tee man pass foreground | light-blue polo man with glasses, woman in white top | sequential passers, no obvious identity swap"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple in woman's hands",
+      "invariant_violated": "object permanence",
+      "description": "The red apple she has held in both hands since 00:00 gets smaller and fades between ~7.5s and ~7.9s. By 8.0s it is gone, and her hands just hold the bare umbrella shaft. Her hands never move to a pocket, bag or another person, so nothing explains the disappearance.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "produce in market crates",
+      "invariant_violated": "implausible content",
+      "description": "From about 4.0s, crates in the foreground stall hold uniform spheres in saturated teal/cyan, and later in purple trays. These don't look like real fruit or vegetables and read as generated filler produce.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "background environment",
+      "invariant_violated": "setting continuity",
+      "description": "The setting starts as an open-air street market with red awnings and a dense crowd walking down the lane. As the camera orbits, it gradually turns into a covered market hall with white crates, purple trays and only a few shoppers. The geometry doesn't match the original street layout, so the location seems to morph rather than being revealed by the camera move.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "woman's ponytail",
+      "invariant_violated": "appearance continuity",
+      "description": "Earlier her ponytail is mostly dark brown with a little lighter tone. From about 8.5s to 9.75s it shows a strongly golden/blonde ombre lower half. The change is larger than lighting alone would explain.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

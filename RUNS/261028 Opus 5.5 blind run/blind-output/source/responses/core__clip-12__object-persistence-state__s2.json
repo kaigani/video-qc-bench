@@ -1,0 +1,87 @@
+{
+  "ledger": [
+    "Cube A (left) | green, face '2', held by hand at left, on table | blue, face '2', leftmost in row of 8 | 00:00.50-00:00.75 entire cube turns from green to blue while being turned in hand; no repaint or swap visible",
+    "Cube B | does not exist at start | blue, face '3', 2nd position | 00:00.92-00:01.00 appears under the fingers right next to Cube A; never picked up or brought into frame",
+    "Cube C (right) | green, face '2', alone at right, on table | green, face '2', 3rd position | 00:02.50 hand turns it to show '3'; 00:03.00 it shows '2' again while a second green cube showing '3' comes out of it",
+    "Cube D | does not exist before ~00:03.00 | cream/orange, face '2', 4th position | splits off Cube C as a green '3' cube (00:03.00-00:03.25); 00:03.75 turns from green '3' into a cream '2' cube",
+    "Cube E | does not exist before ~00:04.00 | pale blue/white, face '3', 5th position | 00:04.00 appears as a blue cube at the right end of the row; 00:04.50-00:04.75 turns from medium blue to pale grey-white",
+    "Cube F | does not exist before ~00:05.00 | green, face '5', 6th position | 00:05.00 appears as a blue '3' cube; 00:05.50 turns green '3'; 00:06.00 shows '5'",
+    "Cube G | does not exist before ~00:06.00 | green, face '2', 7th position | 00:06.00 a green cube appears to the right of F; shows '3' up to 00:06.50, then '2' at 00:06.75",
+    "Cube H | does not exist before ~00:06.75 | blue, face '6', 8th position (rightmost) | 00:06.75 a blue '3' cube appears to the right of G; 00:07.75 the face shows '6'",
+    "Table / row | 2 cubes at start | 8 cubes in a line at end | the count goes 2→3→4→5→6→7→8 with no cube ever brought in from off-screen; 00:08.25-00:09.75 the hand hovers over or touches cubes with no further state changes"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Cube A (left cube)",
+      "invariant_violated": "identity/color persistence",
+      "description": "The left cube is green with a '2' face at 00:00.0. While the hand turns it (00:00.5-00:00.75), the whole cube body turns blue. A uniformly green cube cannot become a blue cube by being turned.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "Cube B (blue '3')",
+      "invariant_violated": "object count / no spontaneous appearance",
+      "description": "Between 00:00.83 and 00:01.00 a second blue cube with a '3' face appears right next to Cube A under the same fingers. The hand only ever held one cube, and nothing is brought in from off-screen.",
+      "severity": "severe",
+      "confidence": 0.92
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Cube C (green) / new green '3' cube",
+      "invariant_violated": "no duplication",
+      "description": "At 00:02.75 the hand turns the right green cube to show '3'. At 00:03.0-00:03.25 that cube shows '2' again and a second green cube showing '3' comes out from its right side. One cube becomes two.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "Cube D (green '3' → cream '2')",
+      "invariant_violated": "identity/color persistence",
+      "description": "Between 00:03.5 and 00:03.75 the green '3' cube in the hand becomes a cream/orange cube with a '2' face. Both its color and its number change in a quarter second, with no swap.",
+      "severity": "severe",
+      "confidence": 0.88
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Cube E",
+      "invariant_violated": "object count / no spontaneous appearance",
+      "description": "At 00:04.0 a blue cube appears at the right end of the row next to the cream cube. The hand had just placed Cube D and brought nothing in from off-screen.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Cube E (blue → pale grey-white '3')",
+      "invariant_violated": "color persistence",
+      "description": "Between 00:04.5 and 00:04.75 Cube E changes from medium blue to a pale grey-white body while it is only being set down.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "Cube F (blue '3' → green '3' → green '5')",
+      "invariant_violated": "spontaneous appearance + color/identity change",
+      "description": "At 00:05.0 another blue cube appears at the right end. By 00:05.5 it is green, and by 00:06.0 it shows '5', with no visible full roll to a new face.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Cube G (green)",
+      "invariant_violated": "object count / no spontaneous appearance",
+      "description": "At 00:06.0 a seventh cube (green, '3') appears to the right of Cube F out of nowhere. By 00:06.75 it shows '2'.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Cube H (blue '3' → '6')",
+      "invariant_violated": "spontaneous appearance + face change",
+      "description": "At 00:06.75 an eighth cube (blue, '3') appears to the right of Cube G. At 00:07.75 its front face reads '6' with no visible roll of the cube.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "Setting: outdoor patio, child at wooden table with glass bowl of red/yellow/green balls; background potted plants on brick paving. No visible wind evidence (hair, hoodie fabric, distant foliage static throughout 00:00-03:00 wide shots) and none implied; no wind-driven effect to check.",
+    "Gravity on balls 00:00-04:75: balls rest in a settled pile on the bowl floor; balls lifted by the child (red ball 00:01-00:02) are supported by fingers; consistent.",
+    "Hand-stirring force 05:00-05:75: right hand sweeps through the pile; balls displace and roll in the hand's direction, ripple/reflection of bowl base visible; response consistent with cause.",
+    "Hand-stirring force 06:00-07:75: vigorous stirring, balls scatter with motion blur; several balls appear up on the sloped bowl wall (e.g. yellow near upper rim at 06:00), plausibly kicked up by the hand.",
+    "Gravity on balls 08:00-09:75: across ~2 s of continuous frames multiple balls repeatedly sit mid-height or near the rim of the sloped glass wall, apparently unsupported and not near the stirring fingers (yellow at 08:25 beside left fingers, green at 08:50, green/red at 09:25), never rolling back to the floor between frames.",
+    "Bowl as rigid body: left hand rests on rim throughout; bowl stays put on the table despite stirring; consistent with a heavy glass bowl being steadied.",
+    "Camera motion: progressive push-in and slight reframing; background displacement attributed to camera, not environmental motion."
+  ],
+  "findings": [
+    {
+      "timestamp": "08:25",
+      "entity": "balls in the glass bowl (yellow at 08:25, green at 08:50, red/green at 09:25)",
+      "invariant_violated": "gravity must act consistently on loose objects",
+      "description": "From about 08:00 to 09:75, balls keep appearing high on the steep glass wall or near the rim, away from the stirring fingers, and frame after frame they don't fall or roll back to the bottom. One or two balls thrown up by the stirring would be plausible. Here several balls stay up across roughly 2 s of frames, which looks like they hover unsupported instead of reacting to gravity.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "environment-response",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__environment-response__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-02__environment-response.json",
+  "frozen_source_sha256": "59a6662b0e3b195aa0ef77d491119d81bc7888690931aeb2de451edb0558b44e",
+  "key": "child-marbles__environment-response",
+  "parseOk": true
+}

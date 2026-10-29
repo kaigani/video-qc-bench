@@ -1,0 +1,109 @@
+{
+  "ledger": [
+    "cube1 (leftmost) | green, digit 2, held by hand | blue, digit 2 | turns green->blue while being rotated in hand (00:00.5-00:00.75)",
+    "cube2 | absent | blue, digit 3 | materializes beside cube1 under fingers at 00:01.0 with no visible pickup/placement",
+    "cube3 | green, digit 2 (standing alone at start) | green, digit 2 | shows 3 at 00:02.5-00:02.75, back to 2 at 00:03.0 while a new cube splits off it",
+    "cube4 | absent | beige/orange, digit 2 | appears as green 3 at 00:03.0-00:03.5, becomes beige 2 at 00:03.75",
+    "cube5 | absent | pale grey/white, digit 3 | appears blue 3 at 00:04.0, becomes pale grey 3 by 00:04.75",
+    "cube6 | absent | green, digit 5 | appears blue 3 at 00:05.0, green 3 at 00:05.75, green 5 at 00:06.0",
+    "cube7 | absent | green, digit 2 | appears green 3 at 00:06.0-00:06.5, green 2 at 00:06.75",
+    "cube8 | absent | blue, digit 6 | appears blue 3 at 00:06.75, becomes blue 6 at 00:07.75",
+    "hand | holding cube1 at left | resting on cubes 1-2 at left | only ever touches cube tops; jumps from right edge to centre-left between 00:08.0 and 00:08.25"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "first cube (held in hand)",
+      "invariant_violated": "object color permanence",
+      "description": "The green cube with a '2' that the hand picks up turns blue while being rotated (green at 00:00.25, mixed green/blue at 00:00.5, fully blue at 00:00.75). A rotation cannot change the cube's color; all faces were green at the start.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "blue '3' cube",
+      "invariant_violated": "object spawning / count conservation",
+      "description": "A second blue cube showing '3' appears adjacent to the first cube at 00:01.0-00:01.25, seemingly splitting out from the cube under the fingers. The hand never picks up or brings in a new cube; the cube count goes from 2 to 3 out of nowhere.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "green cube (originally standing alone, digit 2)",
+      "invariant_violated": "digit/face identity and object splitting",
+      "description": "When touched, the green '2' cube shows '3' at 00:02.5-00:02.75, then at 00:03.0 reverts to '2' while a second green cube with '3' emerges from its right side. The face digit flips without a rotation and one cube becomes two.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "4th cube (green 3 -> beige 2)",
+      "invariant_violated": "object color and digit permanence",
+      "description": "The newly spawned green '3' cube (00:03.25-00:03.5) becomes a beige/orange cube showing '2' at 00:03.75 while only being nudged, changing both color and number.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "5th cube (blue 3 -> pale grey 3)",
+      "invariant_violated": "object spawning / color permanence",
+      "description": "A blue '3' cube materializes from under the hand at 00:04.0 with no source, then its color shifts to pale grey/white by 00:04.75.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "6th cube (blue 3 -> green 3 -> green 5)",
+      "invariant_violated": "object color and digit permanence",
+      "description": "Another cube appears from nowhere at 00:05.0 as blue '3', turns green at 00:05.5-00:05.75, and then displays '5' at 00:06.0 without being rotated to a different face.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "7th and 8th cubes",
+      "invariant_violated": "object spawning / digit permanence",
+      "description": "At 00:06.0 a further cube spawns beside the green '5'; it shows green '3' (00:06.25-00:06.5) then green '2' at 00:06.75, at which moment yet another blue '3' cube appears to its right. Cubes continuously multiply out of the hand's grip.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "last blue cube (3 -> 6)",
+      "invariant_violated": "digit permanence",
+      "description": "The rightmost blue cube shows '3' through 00:07.5 and then '6' at 00:07.75 while merely being set down, with no rotation that would expose a different face.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "hand",
+      "invariant_violated": "motion continuity",
+      "description": "The hand is at the upper-right edge (blurred) at 00:08.0 and is suddenly over the centre/left cubes at 00:08.25, then sweeps further left; the jump across the frame in one sample interval is abrupt and the fingers appear to pass over/through cube tops without contact effects.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "leftmost blue '2' cube",
+      "invariant_violated": "shape stability",
+      "description": "While the finger presses the first two cubes at 00:09.0-00:09.75, the leftmost cube's silhouette and its connector shift/warp slightly and its position wobbles between frames, suggestive of generative deformation.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

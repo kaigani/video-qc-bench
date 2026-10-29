@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "Foreground left hand | thumb pad on lower-left phone edge, fingers behind phone supporting it | same grip at 00:09.0 | contact continuous; phone lowered out of frame 00:09.25-00:09.75 with hand still attached",
+    "Foreground right hand | fingers wrap right phone edge, thumb resting near screen edge | same grip, thumb tapping screen | thumb lifts and taps screen around 00:06.5-00:07.0, 00:07.75-00:08.0, 00:08.5-00:08.75 (motion-blurred but continuous, fingertip meets glass); no visible pass-through of the phone body",
+    "Phone | held two-handed, supported throughout | tilted down and lowered at 00:09.25-00:09.75 | moves only with both hands; no floating or effect-before-contact",
+    "Background walker (woman, blue top/jeans) | carrying red bag in right hand by its handle, walking away on paving | walking away, right hand empty | feet plant alternately with plausible gait; bag in grip through about 00:02.25, then gone from the hand by 00:02.375 with no release or drop",
+    "Red bag | hangs from walker's right hand, swings with stride | not present | disappears from hand around 00:02.25-00:02.375"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "background walker's right hand / red bag",
+      "invariant_violated": "grip continuity (held object leaves hand without release)",
+      "description": "The walker carries the red bag by its handle in her right hand through about 00:02.25. By 00:02.375 her right hand swings empty and is fully visible, not hidden by the phone, and the bag is nowhere in frame. No release, drop or hand-off happens. The bag dissolves out of an active grip.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-08.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__contact-interaction-kinematics__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

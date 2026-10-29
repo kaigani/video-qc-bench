@@ -1,0 +1,79 @@
+{
+  "ledger": [
+    "glass jar | empty, small spout/tab at right shoulder | filled ~3/4 with mixed green and dark olives | fills progressively from pours",
+    "small glass pouring bowl | full of green olives only | emptied, appears to hold green contents again at 09:75 | emptied 00:00-03:75, refilled ~05:50-06:00, dark olives appear in it ~06:75",
+    "steel mixing bowl | ~12 green olives | few green olives plus brown items (nuts/pits) | hand scoops at 05:00; brown items appear 05:25",
+    "white ceramic bowl | full of green olives | full of green olives | unchanged",
+    "olives in jar | none | mix of bright green, purple-brown and slate-gray olives | dark olives appear though only green olives were poured",
+    "background/camera | white backsplash, stove knobs, wood cabinets | closer framing, yellow backsplash, gas grates, dropper bottle on counter | framing drifts/jumps ~04:50 and ~06:00"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "dark olives in jar",
+      "invariant_violated": "object materialization / color continuity",
+      "description": "The pouring bowl visibly contains only green olives and only green olives are seen falling, yet a dark purple olive appears at the bottom of the empty jar at 00:00.5 and by 01:75 roughly half the olives in the jar are dark purple/black. The dark olives have no source.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "olive count in jar vs pouring bowl",
+      "invariant_violated": "quantity conservation",
+      "description": "The small glass bowl holds roughly 10 olives, but within ~1.5 s the jar contains ~25 olives, more than the bowl could have held; the jar fills faster than the pour supplies.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "05:25",
+      "entity": "steel mixing bowl contents",
+      "invariant_violated": "object identity / contents change",
+      "description": "The steel bowl held only green olives; after one hand scoop it shows a few green olives plus several brown nut/pit-like items that were never present or added.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "06:00",
+      "entity": "small glass pouring bowl contents",
+      "invariant_violated": "quantity conservation / object materialization",
+      "description": "The bowl is refilled to full with green olives from a steel bowl that had only a few left, and then dark olives appear inside it by 06:75 although only green olives were in it at 06:00-06:50 and the source bowl had no dark olives.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "04:75",
+      "entity": "dropper bottle / background set dressing",
+      "invariant_violated": "scene continuity",
+      "description": "A small glass dropper bottle appears on the counter beside the steel bowl, and the backsplash shifts to yellow with condiment jars and gas grates visible, none of which were present in the earlier framing of the same area; framing jumps again around 06:00 with no clear cut.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "03:00",
+      "entity": "dark olives in jar",
+      "invariant_violated": "color/appearance consistency",
+      "description": "Dark olives render inconsistently as purple-brown in some places and flat slate-gray in others, with gray olives looking artificial and shifting tone between frames.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-09__baseline-generalist.json",
+  "frozen_source_sha256": "a836760de3c55305ec049e56e5011247fce4fc5d79f1a4a570f83b3da3fa69a5",
+  "key": "pouring-olives__baseline-generalist",
+  "parseOk": true
+}

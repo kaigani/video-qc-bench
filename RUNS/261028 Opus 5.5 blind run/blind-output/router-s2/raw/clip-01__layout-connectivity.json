@@ -1,0 +1,70 @@
+{
+  "ledger": [
+    "00:00-00:10 EXTERIOR: single-storey flat-roof diner on open flat lot at deep dusk; front facade = window bank left, glazed entry door center-left, window bank right, small side window; white semi tractor parked left of building; red neon sign appears in a right-hand front window at 00:10.167",
+    "00:10-00:18 INTERIOR medium: counter with red stools at left/front edge, kitchen pass-through on back wall, side door with glass panel behind counter at right, coffee machines on right wall; window at far left frame",
+    "00:10-00:18 window at far left shows bright overcast daylight/blown white while the exterior and the following wide shot of the same continuous action are deep dusk blue",
+    "00:18.7-00:27 INTERIOR wide (dusk): left wall = continuous window bank with booths beneath; back wall = window with OPEN neon (view: dusk sky, road, house with gable roof, cars) + kitchen pass-through + clock; right side = long curved counter, stools on customer (left) side, staff aisle behind counter, back service door right of pass-through",
+    "00:19-00:23 traversal: man appears from the back service/kitchen area behind the counter, walks around the back (open) end of the counter onto customer side, then forward along the stools and sits; route surprising (not via front door) but physically possible via back door/open counter end",
+    "00:27-00:36 close-ups: coffee pour at counter; plate of toast and egg with booth and window behind (consistent with booths along window wall)",
+    "00:36-00:45 wide: man seated at counter near stool line, turned toward camera; same layout",
+    "00:45-00:51 reverse shot from service side behind pass-through/counter: waitress foreground, man at counter mid-ground, booths and window bank on RIGHT (mirror of wide shot = consistent), front wall with glazed door + EXIT sign at far end (consistent with facade entry door)",
+    "00:51-00:59 empty medium counter shot; left window now orange sunset glow (time-of-day progression)",
+    "00:59.9-01:09 wide (pale dawn/daylight, time skip): man on stool customer side, waitress behind counter; same OPEN window, booths, counter",
+    "01:09-01:17 over-shoulder: man at counter, waitress behind counter, OPEN sign window behind on left with booths - consistent",
+    "01:17.6-01:26 wide: waitress behind counter at 01:19-01:20 leaning over; by 01:21 she is seated on a stool on the CUSTOMER side beside the man with legs visible below the counter - no path around counter end used (dense frames 01:19.5-01:22 show her body moving directly through the counter position)",
+    "01:26.8-01:35 frontal two-shot: man and waitress seated side by side at counter, booths + window bank behind with low sun, glass-door fridge at left",
+    "01:35-01:40 empty counter in warm sun; mug + cash on counter",
+    "01:41-01:46 POV through front window: man walks out to a dark-green box truck with conventional cab in daylight lot; reflection of waitress in glass",
+    "01:46-01:50 waitress standing in booth area at window watching truck (booths along windows - consistent)",
+    "01:50.2-01:58 wide: waitress seated on stool customer side at 01:50.2, rises and leans over counter, then at ~01:52 is in the staff aisle BEHIND the counter in foreground while a faint second waitress figure remains at back customer side",
+    "Functional arrangement: stools along counter edge, booths with tables along windows, coffee station on back-bar wall - all functionally sensible; no seating under non-tables"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "waitress / lunch counter",
+      "invariant_violated": "traversal must respect solid barriers (counter)",
+      "description": "At 01:19-01:20 the waitress is behind the counter in the staff aisle leaning across it; within ~1 s (01:21) she is seated on a stool on the customer side next to the man. Dense frames show no walk around the counter's open back end - her body passes directly through the counter location. Route from staff side to customer side is impossible given the established counter layout.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress / lunch counter",
+      "invariant_violated": "traversal must respect solid barriers (counter)",
+      "description": "At 01:50-01:51 the waitress is on the customer side (seated on a stool, then standing and leaning over the counter); by ~01:52 she is moving in the staff aisle behind the counter in the foreground, having passed through the counter rather than around its end, while a ghost duplicate figure remains at the back on the customer side.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:11",
+      "entity": "left-side window view in interior medium shot",
+      "invariant_violated": "view through opening must match established exterior",
+      "description": "During the continuous wiping action 00:10-00:18 the window at frame left shows bright white overcast daylight, but the established exterior (00:00-00:10) and the wide shot of the same moment (00:18.7 onward) show deep blue dusk through the same window wall. No time skip separates these shots.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "truck seen through front window",
+      "invariant_violated": "view through opening must match established exterior",
+      "description": "The establishing exterior shows a white cab-over/conventional semi tractor parked beside the diner; the view out the window when the man leaves shows a dark-green box truck with a different cab parked in the lot. The vehicle the man walks to does not match the established exterior truck (time skip to day explains lighting but not the different vehicle).",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "layout-connectivity",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__layout-connectivity__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

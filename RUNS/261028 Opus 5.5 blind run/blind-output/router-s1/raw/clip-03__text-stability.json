@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "Real-wall green exit sign above the left door (~25x18 px native, upper-left): sharpest readings at 00:00.5, 00:03.0, 00:05.5, 00:08.0 all show the same glyph pattern, approximately '2\u03a0' / '\u018e\u03a0' (a curled left glyph plus two/three vertical strokes) rather than a clean 'EXIT'; reading identical in every legible frame 00:00.0-00:09.75",
+    "Mirror reflection of exit sign over the reflected door (center-left, ~00:00-00:09.75): reads approximately '5R'/'\u01a7R' consistently in every legible frame; tiny (~20 px wide), consistent with a blurred mirrored 'EXIT'",
+    "Second reflected exit sign above the far reflected door (center, partially occluded by dancer's head/arm at times): reads approximately '1H'/'TH' when visible (e.g. 00:06.0, 00:07.75, 00:08.0, 00:09.5); consistent between legible moments; occlusion changes visibility only",
+    "Framed dark poster on far wall (right, reflected): decorative emblem, no legible lettering at this resolution; not assessed as text",
+    "Wall-mounted thermostat/panel and door hardware: no legible text",
+    "No text element changes its characters between any two legible moments; camera drift and dancer occlusion only alter visibility"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Green exit sign above the left door (real wall)",
+      "invariant_violated": "legible text must be coherent",
+      "description": "In the sharpest steady frames (00:00.5, 00:05.5) the exit sign's lettering resolves to a curled '2/\u018e'-like glyph followed by a '\u03a0'-like pair of strokes, not the expected four letters 'EXIT'; the malformed glyph pattern is constant throughout the clip. The sign is very small (~25 px wide), so compression blur may account for some of this, hence low confidence.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-03.mp4",
+  "role": "text-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-03__text-stability__s1-a2",
+  "parse_status": "valid",
+  "error_status": null
+}

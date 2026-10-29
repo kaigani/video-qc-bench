@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "camera | static locked-off wide shot, slight handheld-like reframing/zoom drift across 0:00-0:09.75, single continuous take, no cuts | same framing family at end | no cuts; viewpoint changes are small drifts only",
+    "far (left) wall | single dark door with one vertical window and lever handle on its left, one green EXIT sign above, white box above sign, thermostat/control panel just left of door frame, outlet low at far left; wall recedes toward a right-side vanishing point (~x=2075 on horizon) | unchanged | stable",
+    "room corner | far wall meets mirrored right wall at ~x=280-300 | unchanged | stable",
+    "mirror wall | full-height mirror panels with vertical seams, black base trim running diagonally from corner (~290,440) to lower right (~1050,704) | unchanged | stable",
+    "mirror reflection of far wall | near corner: a dark door leaf with window and an EXIT sign (~x=355-380) whose position matches projected reflection of the real door/sign; further right: a SECOND dark door leaf with window (~x=465-560), a second EXIT sign (~x=495-520) with white box above, and thermostat panel (~x=560-578) | identical arrangement throughout | reflected world contains two doors and two EXIT signs vs one door and one EXIT sign in the real room",
+    "mirror reflection of room interior | ceiling troffer lights, framed dark artwork on reflected wall, ballet barres on brackets, blue bin at base of reflected wall | unchanged | stable",
+    "dancer (real) | standing left-centre in front of mirror, back to camera, ~1-2 m from mirror; occludes part of mirror including reflected door region | small weight shifts, arm port de bras, ends in tendu with right arm overhead | body always correctly occludes mirror and reflected doors behind her; no background bleed-through",
+    "dancer (reflection) | right of real dancer at x~430-500 (sheet) / ~880-980 (full res), facing camera, scaled smaller consistent with virtual distance | tracks real dancer's limb positions and side (raised right arm appears on viewer-right of reflection) | reflection position/scale consistent with mirror plane vanishing geometry; no lag or side swap observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection of far wall (doorway / EXIT signage)",
+      "invariant_violated": "reflection must match established room layout (connectivity of doorways)",
+      "description": "The real far wall to the left of the mirror shows exactly one door (single leaf, one window) with one EXIT sign and a thermostat beside it, and blank wall with an outlet further left. The mirror, which should show that same wall continuing in mirrored order from the corner, instead shows two separate door leaves with windows and two EXIT signs (e.g. frame 37: reflected signs at ~x=380 and ~x=520, door leaves ~305-430 and ~465-560, real sign at ~x=210 only). Projecting the real wall through the mirror using the scene's vanishing points places the real door's reflection at ~x=300-440 and its EXIT sign at ~x=382 (matching the first reflected door), so the second reflected door, EXIT sign, white box and panel correspond to a region of real wall (~x=0-130) that is plain wall. The mirrored room therefore contains a doorway that does not exist in the real room; constant for the whole clip.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "dancer-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-03__spatial-topology-occlusion__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-03.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-03__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "8c585f1b73b68ec71c583a44925b7fc2a3d8572a780238d0bcc788ed538fd86c",
+  "key": "dancer-mirror__spatial-topology-occlusion",
+  "parseOk": true
+}

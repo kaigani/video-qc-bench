@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "woman's hair | 00:00-00:04 shoulder-length, mostly at rest with only slight lift | 00:05.5-00:09.75 strongly streaming back toward the rear of the car, as if in high wind or a moving vehicle | wind effect builds from about 00:04.5 and is strong by 00:05.5; no visible cause appears at the same time (desert shrubs and grass stay still, the car shows no sign of driving)",
+    "station wagon (cream with woodgrain panels) | parked on desert road shoulder, wheels static, front 3/4 view | same car, close view of hood and A-pillar | the camera dollies and pushes in continuously; the background parallax matches camera movement, not the car driving; no motion blur on the road surface under the car",
+    "woman (denim jacket, arms crossed on door sill) | leaning out of the driver's window, slight smile | same pose, head turned slightly toward frame left, smile held | no action starts and then fails to finish; small continuous head and expression changes; reacts to nothing",
+    "camera | wide front 3/4 view | close-up profile of the woman | smooth continuous push-in and orbit with no cuts; time flows forward without frozen or repeated frames",
+    "sun glare and lens flare | none at start | starburst on windshield or antenna edge from about 00:04.75 to 00:08 | caused by the camera angle changing against a low sun; plausible",
+    "background (road, lane markings, telephone poles, shrubs) | road visible at left | road ahead with poles | positions shift smoothly with camera parallax; vegetation shows no wind movement throughout"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "effect-without-cause / proportionality",
+      "description": "From about 00:04.5 the hair begins streaming strongly backward. By 00:05.5 to 00:09.75 it is whipping as hard as it would in a moving car or a strong gust. In the first 4 seconds it was nearly still. The car appears parked, with no road blur and only camera-driven parallax. The desert shrubs and grass show no wind movement at any point. So a sudden, sustained strong-wind effect appears with no visible cause, and it is out of proportion to the calm environment.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-14__causal-temporal-sequence.json",
+  "frozen_source_sha256": "c4b53c7412da99182ed16aa17dd96c13d90bc508a2c76e9160d82b7746ec14b2",
+  "key": "woman-car__causal-temporal-sequence",
+  "parseOk": true
+}

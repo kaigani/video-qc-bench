@@ -1,0 +1,71 @@
+{
+  "ledger": [
+    "man (real, back-to-camera) | white shirt, chin tilted up, right hand holding small white razor at jaw | same pose at 09:75, razor raised to cheek/temple | 00:00-01:50 chin strokes; 01:75-04:25 hand rises to temple/eyebrow/forehead with razor; 04:50-09:75 returns to repeated chin/upper-lip strokes; at 09:00 real fingers appear empty while reflection holds razor",
+    "mirror reflection of man | facing camera, razor at chin/upper lip | razor at upper lip/cheek at 09:75 | should mirror real pose instantaneously; at 01:75 real razor at temple vs reflection razor on nose; at 04:25 real razor at temple/brow vs reflection at eye/nose; at 09:00 reflection holds razor that real hand lacks",
+    "razor strokes on face (cause) -> skin/stubble change (effect) | dry unlathered skin with light stubble at 00:00 | same stubble, no lather, no cut hair, no skin change at 09:75 | ~35+ stroke contacts across chin, lip, cheek, temple, forehead with no visible effect on skin or hair",
+    "razor on eyebrow/forehead (02:25-04:00) | blade drawn repeatedly across brow/forehead | no change to eyebrow or hairline | cause without effect",
+    "background (door, knob, shelves, light switch) | static, lit warmly | unchanged | no causal events; lighting stable with no source changes",
+    "head tilt (cause) -> reflection head tilt (effect) | chin-up at 00:00-00:25 mirrored | generally mirrored at chin-stroke phases | sync broadly OK except temple/brow phase noted above"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "face/stubble under razor strokes",
+      "invariant_violated": "cause-without-effect (shaving produces no result)",
+      "description": "The razor is drawn repeatedly across dry, unlathered chin, upper lip, cheeks, temple and forehead for the full 10 s, yet the stubble, skin and eyebrows show no change at any point \u2014 no hair removed, no lather displaced, no skin drag or reddening. The stroking action never produces its expected effect; the razor reads as hovering/miming rather than acting on the skin.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "01:75",
+      "entity": "mirror reflection vs real man",
+      "invariant_violated": "reflection must be simultaneous with its cause",
+      "description": "At 01:75 the real man's razor hand is raised to his temple/beside the eye, while the reflection shows the razor against the bridge of the nose with eyes closed and head lowered; at 04:25 the real razor is at the temple/brow while the reflection shows it at the eye/nose with face fully frontal. The reflected motion does not track the real motion that should cause it, as if the two were animated independently or out of phase.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "09:00",
+      "entity": "razor in real hand vs reflection",
+      "invariant_violated": "effect-without-cause (reflected object with no real counterpart)",
+      "description": "At 09:00 the real man's right-hand fingers are pinched together near his jaw with no razor visible, while the reflection clearly shows a razor held against the cheek; at 09:25 the razor reappears in the real hand. The reflection depicts an action/object that the real scene is not producing.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "05:00",
+      "entity": "shaving stroke cycle",
+      "invariant_violated": "temporal flow \u2014 repeated beats",
+      "description": "The chin-up stroke sequence from 00:00-01:50 (razor at upper lip -> chin tilt -> stroke down jaw) recurs almost pose-for-pose at 05:00-07:25 and again around 08:50-09:50, with no progression in the task (no area completed, no rinse, no change in face). The action loops rather than advancing.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "02:25",
+      "entity": "razor on eyebrow/forehead",
+      "invariant_violated": "initiated action without purpose/effect",
+      "description": "From 02:25 to 04:00 the razor is dragged repeatedly across the eyebrow and forehead (no stubble there), then the hand simply returns to the chin; the eyebrow and hairline are unchanged. The action is neither completed nor visibly interrupted and produces no effect.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-07__causal-temporal-sequence.json",
+  "frozen_source_sha256": "68b673254b7f9b835d207c58d8eb46e710ce847aa1701e9eaae6a437d07eddcb",
+  "key": "man-in-mirror__causal-temporal-sequence",
+  "parseOk": true
+}

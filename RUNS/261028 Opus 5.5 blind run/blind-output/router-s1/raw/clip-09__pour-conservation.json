@@ -1,0 +1,85 @@
+{
+  "ledger": [
+    "00:00.000-00:00.250 glass jar (tall clear swing-top style jar with side wire loop): empty",
+    "00:00.000-00:00.250 small glass bowl in hand (shallow, rounded): ~8-10 olives, all visibly bright green; no dark olives visible",
+    "00:00.000-00:04.250 steel bowl (counter, middle): ~10 green olives, no other items visible",
+    "00:00.000-00:09.750 speckled ceramic bowl (counter, right): ~12 green olives, level unchanged throughout",
+    "00:00.500-00:01.250 jar: first olives arrive; a dark purple/black olive lands at 00:00.500 alongside green ones",
+    "00:01.750 jar: ~12-14 olives, roughly half dark purple, half green",
+    "00:02.500-00:03.000 jar: ~20-24 olives, mixed dark and green; glass bowl still tipped over mouth",
+    "00:03.000-00:04.250 jar: level stable (~20-24 olives); glass bowl withdrawn, nothing visibly poured",
+    "00:04.500-00:05.000 steel bowl: hand scoops a handful of green olives",
+    "00:05.250-00:05.500 steel bowl: ~2 green olives plus brown items (nuts/pits) now visible",
+    "00:05.750-00:06.250 glass bowl: refilled, ~8-10 green olives visible",
+    "00:06.000-00:06.250 jar: ~20-24 olives (new camera angle, level comparable)",
+    "00:06.750-00:07.250 glass bowl: now contains dark purple olives along with green ones",
+    "00:06.750-00:09.750 steel bowl: ~5-6 green olives plus brown items",
+    "00:07.500-00:08.500 pour from glass bowl into jar; olives falling",
+    "00:08.750-00:09.000 glass vessel in hand: now empty, appears as taller straight-sided cylindrical tumbler",
+    "00:09.000-00:09.750 jar: ~40+ olives, filled near the shoulder, majority dark purple"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives arriving in glass jar vs small glass bowl source",
+      "invariant_violated": "source contents",
+      "description": "At 00:00.250 the source glass bowl clearly holds only bright green olives, yet from 00:00.500 onward dark purple/black olives fall into the jar, and by 00:01.750 roughly half the jar's olives are dark. No dark olives were ever visible in the source.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "glass jar fill vs small glass bowl capacity",
+      "invariant_violated": "conservation",
+      "description": "The small shallow glass bowl holds roughly 8-10 olives at 00:00.250 and is never refilled during the first pour, yet the jar accumulates ~20-24 olives by 00:02.750-00:03.000. More olives arrive than the source could have held.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "glass bowl contents during second pour",
+      "invariant_violated": "source contents",
+      "description": "The glass bowl was refilled from a handful scooped out of the steel bowl, which contained only green olives (00:04.500-00:05.000). At 00:06.750-00:07.250 the glass bowl now contains dark purple olives that were never in the steel bowl.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "glass jar fill level after second pour",
+      "invariant_violated": "conservation",
+      "description": "Before the second pour the jar held ~20-24 olives; the glass bowl added at most ~10. By 00:09.000 the jar holds ~40+ olives filled to near the shoulder, with the majority now dark purple, which is more than the transfer can explain. The camera angle changed at ~00:06, so this is lower confidence.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "steel bowl on counter",
+      "invariant_violated": "refill without cause",
+      "description": "After the scoop the steel bowl shows ~2 green olives (00:05.250), but from 00:06.750 it shows ~5-6 green olives with no visible refill. Brown items also appear that were not visible before the scoop.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "handheld glass pouring vessel",
+      "invariant_violated": "container identity",
+      "description": "The pouring vessel starts as a shallow, round-bottomed small glass bowl (00:00.250) but by 00:08.750-00:09.000 it is a taller straight-sided cylindrical tumbler. Its shape and proportions changed between shots.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "pour-conservation",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__pour-conservation__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

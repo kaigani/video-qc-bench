@@ -1,0 +1,38 @@
+{
+  "ledger": [
+    "Driver's truck, sighting 1 (00:00-00:10, exterior establishing wide, dusk): white/light-colored conventional tractor with an aerodynamic sloped hood, tall integrated sleeper/roof fairing, no visible exhaust stacks; parked idling at left of the diner with exhaust/steam; no legible markings or plate",
+    "Driver's truck, sighting 2 (01:41-01:50, seen through diner window, sunrise): dark green/teal classic square long-hood day cab (W900-style) pulling a box/straight-truck body, white horizontal stripe along cab and box, twin tall chrome exhaust stacks, roof amber marker lights, chrome mirrors, chrome bumper and fuel tank; script badge on hood side not legible; the man in the brown jacket walks to it and opens its cab door at 01:49-01:50, which ties it to him",
+    "No other appearance of the driver's truck between 00:10 and 01:41; interior shots show only indistinct parked cars through windows (too small/blurred to track identity or markings)",
+    "Background vehicle 01:30-01:33: white trailer/truck body passing on the road behind the window in the two-shot; it is moving, and too blurred to match to sighting 1, so it is not tracked as a recurring vehicle",
+    "Elapsed story time dusk -> sunrise could allow a vehicle change, but no second truck, swap, or arrival of a different vehicle is shown; the only truck shown at the diner changes body type"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "Driver's truck (the semi parked at the diner in the opening, which the man walks to and boards at the end)",
+      "invariant_violated": "identity: body type/configuration",
+      "description": "At 00:00-00:10 the only truck at the diner is a white aerodynamic sleeper-cab tractor with a sloped hood, a tall roof fairing and no exhaust stacks. At 01:41-01:50 the truck the man walks out to and climbs into is a dark green classic square long-hood day cab with twin chrome stacks, roof marker lights and a white stripe, and it is attached to a box/straight-truck body. The hood shape, cab/sleeper configuration, stacks and box body all differ, so this is not only a lighting or color shift. No second truck, swap, or departure/arrival is shown.",
+      "severity": "severe",
+      "confidence": 0.8
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "vehicle-identity",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__vehicle-identity__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-01__vehicle-identity.json",
+  "frozen_source_sha256": "2f5f0eddf8fe61f1b1360cf69d2391173fdff83aa4845941a0025959b334452b",
+  "key": "_long-scene__vehicle-identity",
+  "parseOk": true
+}

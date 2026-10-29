@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "skater feet <-> skateboard deck (trick 1) | both red shoes planted on deck, rolling at 00:00 | landed back on deck rolling by ~00:03.75 | front foot slides toward nose and tail pops ~00:01.25-01.50 (board stands near-vertical under front foot, tail on ground); feet release, board flips beneath tucked legs 00:01.75-00:02.75; front foot re-contacts deck ~00:03.00; at 00:03.25-00:03.40 deck turns blurry/translucent and rear foot passes down through the deck plane before board solidifies under both feet at 00:03.50",
+    "skateboard wheels/tail <-> ground | wheels on concrete at 00:00 | wheels on concrete at end | tail strikes ground at pop ~00:01.50; airborne 00:01.75-00:03.00; wheels re-contact ~00:03.40-00:03.50",
+    "skater feet <-> skateboard deck (trick 2) | both feet on deck pushing/rolling 00:04.00-00:07.75 | both feet on deck, landing roll at 00:09.75 | rear foot pops tail ~00:08.00 with front foot sliding up; board flips under tucked legs 00:08.25-00:08.75 with no foot contact (expected for flip trick); front foot re-contact ~00:09.00, both feet on bolts by 00:09.25-00:09.50",
+    "skater hands/arms | free, no object contact throughout | free, extended for balance | arms swing for balance; no grabs or touches of board or environment observed",
+    "skater body weight/support | supported by board/ground at start | supported by board at end | crouch before each pop, airborne phases consistent with pop timing, knees flex on landings"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "skater rear (right) foot and skateboard deck during first landing",
+      "invariant_violated": "solidity / no pass-through",
+      "description": "Around 00:03.25-00:03.40 the deck becomes smeared and semi-transparent beneath the feet while the rear red shoe extends down past the deck plane toward the ground, appearing to pass through the board rather than landing on top of it; the board then re-solidifies under both feet at 00:03.50. The foot-deck interface is not physically resolved at touchdown.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-10.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

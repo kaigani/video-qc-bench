@@ -1,0 +1,17 @@
+{
+  "ledger": [
+    "Woman pedestrian (background) | 00:00 dark-haired, navy-blue short-sleeve top, blue jeans, dark sneakers, carrying a large red tote-style bag; upper right of frame on the paved plaza, walking toward frame-left | 00:03 far up the walkway near the top of frame, back to camera, same navy top/jeans, no bag visible; exits view behind phone after ~00:03 | turns from leftward walk to walking straight away from camera (smooth, visible); red bag shrinks from a large tote (00:00) to a small boxy bag (00:00.5-00:01.75), is a faint pinkish sliver at 00:02.25, and is gone from her hand by 00:02.5 while she is in clear view",
+    "Phone holder (foreground, hands only) | 00:00 two medium-brown hands holding a phone in portrait/diagonal, left thumb lower-left, right fingers on right edge, standing at top of outdoor stairs by a railing | 00:09.5 phone lowered out of frame; 00:09.75 only stairs visible | right thumb moves across screen 00:06.5-00:09 (visible motion); camera pushes in on the phone 00:03-00:06; consistent skin tone and hand placement throughout; phone lowered smoothly at the end",
+    "Relative placement | single continuous shot, no cuts; pedestrian always ahead/beyond the phone holder on the plaza beyond the stair railing | same | no relative-position inconsistencies"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Woman pedestrian's carried red bag (accessory)",
+      "invariant_violated": "accessory persistence / identity",
+      "description": "The woman carries a clearly visible red bag at her side from 00:00 to 00:02.0; it shrinks across frames (large tote at 00:00 to small box by 00:00.5), becomes a faint pinkish sliver at 00:02.25, and is entirely absent from her hand at 00:02.5 while she remains fully in view walking away with both arms swinging. No set-down or hand-off motion is visible in this continuous shot.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "ledger": [
+    "glass bowl | clear glass, upright on wooden table in front of child, holds 8 balls | same bowl, same place, camera now close-up, holds mixed balls | stays stationary throughout; only the camera reframes and zooms in",
+    "balls in bowl (colored plastic spheres) | 0:00: 8 balls in the bowl: 2 red, 3 green, 3 yellow, at rest | 0:09.75: roughly 7-8 balls visible, about 4-5 red, 1-2 green, 1 yellow, blurred and lumpy | 0:00.75 a red ball is lifted out while the bowl still shows its original 2 red; 0:02.25 the held red ball goes back in; from 0:05.25 the right hand stirs the balls fast; from 0:09.0 the color counts and the round shapes drift",
+    "held red ball | not present at 0:00 (the 8 in the bowl are fully visible and the hands are above the bowl) | back in the bowl by 0:02.5 | appears in the child's hands at 0:00.75-0:01.0 while both original reds stay visible in the bowl; held in both hands until 0:02.0; released into the bowl at 0:02.25",
+    "small metal pot with white leaf-patterned egg/ornament and green leaves | on the table to the right of the bowl, upright | out of frame from about 0:04.5 because of the zoom | does not move or change while visible",
+    "loose balls on the table at the right edge (red, green, yellow) | partly visible at the right frame edge from 0:00.25 | out of frame after about 0:04 | no change apart from camera framing"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "red ball held by child / ball count in bowl",
+      "invariant_violated": "object count conservation (duplication)",
+      "description": "At 0:00 the bowl holds 8 fully visible balls: 2 red, 3 green, 3 yellow. At 0:00.75-0:01.0 the child lifts a red ball out of the bowl, but the bowl still shows the same 8 balls, both reds included, in their original places. That makes 9 balls and 3 reds. Nothing was added from outside the bowl, so the extra red ball has no visible source. It is effectively a duplicate.",
+      "severity": "severe",
+      "confidence": 0.72
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "balls in bowl (color distribution)",
+      "invariant_violated": "object identity / color persistence",
+      "description": "Before the stirring there were about 3 red, 3 green and 3 yellow balls. In the final frames (0:09.25-0:09.75) about 4-5 distinct red balls are visible, only 1-2 green and 1 yellow. Stirring cannot add red balls or remove yellow ones (no balls leave the bowl), so balls seem to change color or identity during the mix.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "balls in bowl (shape)",
+      "invariant_violated": "rigid object shape persistence",
+      "description": "From 0:09.0 to 0:09.75 the rigid round balls look lumpy and squashed, even blocky (e.g. the green ball at the bottom centre at 0:09.75). Motion blur alone does not explain this. The balls were clean spheres earlier, and nothing visible deforms them.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

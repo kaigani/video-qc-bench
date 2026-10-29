@@ -1,0 +1,43 @@
+{
+  "ledger": [
+    "Group A: olives in glass jar. 00:00.000 = 0 (empty). Cause of all increases: olives poured from small glass bowl held by hand (00:00-03:50, 06:00-09:00).",
+    "00:00.000-00:00.250: small pouring bowl contains only green olives; jar empty.",
+    "00:00.500: green olive falling from bowl, but a DARK purple olive is already at jar bottom; no dark olive seen in the bowl or in flight.",
+    "00:01.250: jar ~4 (1 dark, 3 green); 00:01.500: jar ~8 incl. 4 dark olives while the poured stream and bowl show only green.",
+    "00:01.750-00:02.000: jar ~14, about half dark/purple-grey; pour source still visibly green-only.",
+    "00:03.000-00:05.750: jar stable at ~22-24 visible (mixed green and dark); no pour, count stable.",
+    "Group B: olives in back metal bowl. 00:00-00:04.750 ~10-12 green olives. 00:05.000 hand scoops olives into small glass bowl (visible removal); 00:05.250 ~2 green + 2 brown nut-like items visible; 06:00-09:75 ~3-5 green + brown items (camera angle changes, rim occludes part of contents).",
+    "Group C: olives in front white/speckled bowl: ~12-14 green throughout, partly cropped at frame edge after 07:50; no unexplained change.",
+    "06:00-06:750: small glass bowl (refilled from metal bowl) mostly green; a dark olive partly visible behind greens at 06:500, more visible at 06:750 (occlusion, accepted).",
+    "06:500-08:750: pour into jar; jar rises from ~24 to ~40+ (visible cause: pouring). 09:00-09:750: jar ~40+ stable, bowl empty."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured into glass jar (green olives in pouring bowl vs dark olives landing in jar)",
+      "invariant_violated": "kind transformation without cause",
+      "description": "The pouring bowl and falling stream contain only green olives (00:00.000-00:02.000), yet dark purple/black olives appear in the jar starting at 00:00.500 (one dark olive at the bottom before any green lands) and by 00:01.500-00:02.000 roughly half the jar's olives are dark. No dark olive is ever seen in the bowl or in flight during this pour, so green olives effectively become dark olives (or dark olives materialize) with no visible mechanism.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "count-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__count-stability__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-09__count-stability.json",
+  "frozen_source_sha256": "d5e2f69fe5745a12d76553c53d2a2ea336a187bb174f3d09bcec14ae567d127f",
+  "key": "pouring-olives__count-stability",
+  "parseOk": true
+}

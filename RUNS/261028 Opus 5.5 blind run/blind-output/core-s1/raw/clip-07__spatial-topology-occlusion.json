@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "camera | static over-the-shoulder, behind the man's left/back, man occupies frame left, wall mirror frame right | same framing at 09:75 | no cuts; minor drift only",
+    "wall mirror (gold frame) | left frame edge ~x=460-500, bottom edge slopes slightly down to the right (right side marginally nearer camera), right edge ~x=1200 | identical at end | stable throughout",
+    "beige wall left of mirror | visible between man's head and mirror left edge | same | stable",
+    "reflected wooden door + brass knob | left part of mirror, knob ~x=680,y=485 | same position at end | knob briefly occluded by the real man's forearm, consistent with arm being nearer",
+    "reflected white door casing + wall light switch | center of mirror, switch ~x=850,y=290 | same | stable, no drift",
+    "reflected dark shelving with bottles | right part of mirror behind reflection's shoulder | same | stable",
+    "real man (foreground) | seen from behind-left, head turned up/right toward mirror, right hand raised with razor at jaw | same pose family at end | hand moves jaw->upper lip->forehead/hairline (02:00-04:25)->jaw; forearm overlaps mirror frame bottom correctly (nearer occludes farther)",
+    "man's reflection | centered at ~x=950 in mirror, nearly frontal to camera, raised hand on frame-right side (correct mirror handedness) | same at end | follows real hand gestures; stays far right of the real head across the whole clip",
+    "occlusion relationships | real head/arm always in front of mirror frame and reflected scene; reflection always behind mirror frame edges | same | no background-over-foreground rendering observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "man's mirror reflection vs real man",
+      "invariant_violated": "mirror reflection geometry / viewpoint consistency",
+      "description": "The real man stands at the far left of frame close to the camera, angled toward the mirror, yet his reflection appears far to the right of center in the mirror (~x=950 vs real head ~x=200), nearly frontal to the camera with both shoulders squared. For a near-frontoparallel mirror and a camera directly behind his shoulder, the reflection should appear close to (and partly hidden behind) his own head and be seen at an oblique three-quarter angle matching his body orientation. The reflection behaves like a separate person facing the camera rather than a geometrically consistent mirror image; this persists for the entire clip.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,67 @@
+{
+  "ledger": [
+    "Semi truck (exterior, 00:00-00:10) | parked, exhaust drifting | parked | no body contact interactions",
+    "Waitress hand + rag on counter (00:10-00:18.7, 00:44.9-00:51.3) | palm flat on rag on countertop | rag still under palm | continuous contact while wiping; no clipping observed",
+    "Man walking in / sitting on stool (00:19-00:27) | walking, feet planted alternately on floor | seated on stool, forearms on counter | weight transfer and sit-down look supported",
+    "Waitress hand + coffee pot / man's hand + mug (00:24-00:31.9) | she grips pot handle; at 00:27.1 man's hand wraps the mug and slides it under pot | pour lands in mug at 00:28-00:30 | at ~00:27.65-00:27.9 man's gripping hand jumps from mug to resting far left and the mug snaps to a new position/scale",
+    "Man seated with mug (00:36.5-00:44.9) | right hand around mug on counter | unchanged | static, contact maintained",
+    "Waitress plate + mugs with man (01:09-01:17.5) | she sets plate down (contact ok), slides a second mug toward the man | she lifts plate from counter with fingers under rim and carries it off | at ~01:12.9-01:13.15 the mug she pushes and the mug the man holds collide and merge into one",
+    "Waitress moving from behind counter to seat beside man (01:17.6-01:26.7) | behind counter, hands on counter top | seated on stool on customer side next to man | crosses the solid counter at ~01:20.25-01:20.75 with no gap/hinge",
+    "Man's hands + banknotes + mug (01:37.4-01:41) | left hand flat on bills, right hand approaching | bills left on counter by mug | contact precedes motion of bills; no violation",
+    "Man walking to truck (01:41-01:50) | walking on gravel with alternating foot contact | at cab door, hand on door | no clear violation at sampled density",
+    "Waitress at counter (01:50.2-01:58) | seated on stool on customer side, hands on counter | standing behind counter with back to camera | body passes through counter front at ~01:52.2-01:52.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress / diner counter",
+      "invariant_violated": "solidity (body pass-through)",
+      "description": "Seated on a stool on the customer side, she stands, leans over the counter, then moves right. Between ~01:52.2 and ~01:52.75 her legs and hips blur through the counter's front panel, and she ends up behind the counter, back to camera. She never walks around the end of the counter or through a gap; her lower body passes straight through the solid counter.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:20",
+      "entity": "Waitress / diner counter",
+      "invariant_violated": "solidity (body pass-through)",
+      "description": "At 01:20.0 she stands behind the counter. By 01:20.25-01:20.75 her apron and lower body show on the customer side below the counter edge while her torso is still at the counter, and from 01:21 she sits on a stool beside the man. She does not walk around the counter end within the shot, so her body crosses through the solid counter in under a second.",
+      "severity": "severe",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "01:13",
+      "entity": "Two coffee mugs (man's held mug and the mug the waitress slides over)",
+      "invariant_violated": "solidity (object interpenetration)",
+      "description": "At ~01:12.65 there are two separate mugs: one inside the man's grip and one the waitress pushes toward him. At ~01:12.9 they touch, and by ~01:13.15 only one mug is left, with both people's hands on it. One mug passes into the other and merges with it instead of stopping on contact.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:27",
+      "entity": "Man's right hand / mug under coffee pot",
+      "invariant_violated": "limb trajectory continuity / contact release",
+      "description": "In the close-up, the man's hand wraps the mug and slides it under the pot (00:27.15-00:27.65). By 00:27.9 the hand rests far left on the counter, and the mug is in a new position at a much larger scale under the spout. No release or withdrawal motion appears between these frames: the hand and mug snap to new positions.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-01__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "273b3f0775491ceeb08149c570ea21797f3168ec5f22832e175766b48c787112",
+  "key": "_long-scene__contact-interaction-kinematics",
+  "parseOk": true
+}

@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "woman in navy pinstripe shirt | holding small round metal object with tweezers, gold pendant necklace, watch on left wrist | handling object with a small pin/tool | jump cuts at ~04.5s and ~06.5s change framing",
+    "right hand ring (viewer left) | silver band on index finger at 00:00-03:50 | ring obscured 06.5-09.75 | appears on middle finger in 04.75-06.25 shot",
+    "left hand ring (viewer right) | silver ring on ring finger at 00:00 | ring finger at 06.5-09.75 | appears on middle finger at 04.75-05.0",
+    "tweezers | held in right hand 00:00-03:50 | absent after 04:00 | swept away at 03.75; replaced by a small pin tool from 06.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "ring on subject's right hand (viewer left)",
+      "invariant_violated": "accessory placement continuity",
+      "description": "From 00:00 to 03.5s the plain silver ring sits on the right index finger (frame at 00:00, ring at base of the finger pinching the tweezers). After the cut at ~4.5s (frames 04.75-06.25) the same ring is on the middle finger, below the index finger. Ring changing fingers across the edit is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "ring on subject's left hand (viewer right)",
+      "invariant_violated": "accessory placement continuity",
+      "description": "The stone-set ring on the left hand is on the ring finger at 00:00 and again from 06.5s on, but in frames 04.75-05.0 it appears on the middle finger (next to the index finger) before returning to a lower finger by 05.75. The ring seems to jump between fingers.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-11.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-11__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

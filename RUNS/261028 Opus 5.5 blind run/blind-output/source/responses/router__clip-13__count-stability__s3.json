@@ -1,0 +1,21 @@
+{
+  "ledger": [
+    "Handheld red apple (single object held in woman's cupped hands alongside umbrella pole): count 1 at 00:00-00:07.25, clearly visible and full-sized in every sampled frame",
+    "Apple at 00:07.50: still 1 but noticeably smaller and only partly visible between fingers",
+    "Apple at 00:07.75 (full-res frame-00032): reduced to a small red sliver with stem between fingertips, far smaller than the fist-sized apple of earlier frames",
+    "Apple at 00:08.00 (full-res frame-00033): count 0 — only a tiny green stem remains above loosely closed fingers; no red visible; hands not placed in pocket, no handoff, nothing dropped",
+    "Apple at 00:08.25-00:09.75: count 0 — hands wrapped only around umbrella pole, no apple anywhere in frame; no visible cause (not put away, not passed, not eaten, not dropped)",
+    "Market produce piles in stall crates: too numerous to count individually; scene changes with camera motion only, no countable group changes tracked",
+    "Hanging red fruit bunches above stalls: background, change only with camera parallax/reframing; not a reliable count group"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple held in woman's hands",
+      "invariant_violated": "object count change without visible cause (vanishing)",
+      "description": "The single fist-sized apple held continuously from 00:00 shrinks between 00:07.25 and 00:07.75 to a small sliver, and by 00:08.00 only a stem remains; from 00:08.25 to the end her hands hold only the umbrella pole. Her loosely cupped fingers are too small to conceal a full apple, and no action (pocketing, handing off, dropping, eating) is shown. The apple goes from 1 to 0 with no visible cause.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ]
+}

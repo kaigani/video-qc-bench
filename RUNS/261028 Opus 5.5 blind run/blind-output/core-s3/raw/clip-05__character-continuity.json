@@ -1,0 +1,29 @@
+{
+  "ledger": [
+    "Woman (sole character) | 00:00: short layered honey-blonde bob, drop earrings, dark teal open V-neck button cardigan with white camisole visible at the chest, 3/4 pushed sleeves, dark trousers; in kitchen, right of frame, facing left | 00:09.75: same short bob (tucked/piecey at nape seen from behind), dark teal fitted top with 3/4 sleeves, walking away from camera into a kitchen | Single continuous follow/steadicam shot with no cuts; she turns away at 00:00.5 and walks through hallway (00:01.5-00:03.5), enters bedroom (00:04-00:06.75), turns and exits back toward a doorway/kitchen (00:07-00:09.75). Earrings persist (00:00.25, 00:02.25, 00:03.25, 00:05.25, 00:06). At 00:03.0-00:03.25 in side profile the top reads as a seamless high crew-neck knit pullover with no V opening, buttons or white camisole, unlike the open V-neck cardigan over a camisole at 00:00. Hair reads slightly darker in the bedroom, which is consistent with the lighting change. No other characters, so no relative-position checks apply."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "Woman's top (wardrobe)",
+      "invariant_violated": "wardrobe identity",
+      "description": "At 00:00 she wears an open, buttoned V-neck cardigan with a white camisole clearly visible underneath. In the same continuous shot, with no cut and no on-screen change of clothes, her side profile at 00:03.0-00:03.25 shows a seamless high crew-neck fitted knit top with no V opening, no buttons and no white camisole. The garment changed style without explanation.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "clip-05.mp4",
+  "role": "character-continuity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-05__character-continuity__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    "Background shelf bottles/jars (inside mirror, upper right): ~3 bottles on top shelf, ~3-4 jars/boxes on middle shelf, ~4 dark/green bottles on lower shelf; arrangement stable 00:00-00:09.75, no count change observed",
+    "Handheld grooming tool, real man (foreground): 1 pale/silver straight-razor-like blade 00:00-00:02.00 (shaving chin/upper lip)",
+    "Handheld grooming tool, real man: 00:02.25-00:04.00 the object in his hand reads as a dark comb-like tool pushed into hair at temple (frames 10-17), no visible handoff or pickup",
+    "Handheld grooming tool, mirror reflection 00:02.25-00:04.00: 1 pale/white blade held at forehead/eyebrow, not a dark comb",
+    "Handheld grooming tool, real man: 00:04.25-00:08.75 back to 1 pale/silver blade, count 1, matches reflection",
+    "Handheld grooming tool 00:09.00: reflection shows 1 pale blade at chin; real hand at chin shows pinched fingers with no blade visible (possible occlusion by fingers)",
+    "Handheld grooming tool 00:09.25-00:09.75: 1 silver blade visible in real hand and 1 in reflection",
+    "Persons: 1 man + 1 mirror reflection throughout; door knob 1; light switch plate 1; stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld grooming tool in the real man's hand (vs. its mirror reflection)",
+      "invariant_violated": "kind transformation without visible mechanism",
+      "description": "At 00:02.00 the real man holds a pale/silver straight-razor-like blade. From 00:02.25 to 00:04.00 the object in his real hand becomes a dark comb-like tool pushed into his hair at the temple, while the mirror reflection simultaneously shows a pale white blade at his forehead/eyebrow. At 00:04.25 the real-hand object is a pale blade again. No swap, put-down, or pickup is visible; the tool changes kind and disagrees with its own reflection.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "razor blade (real hand vs. reflection)",
+      "invariant_violated": "count mismatch between object and its reflection",
+      "description": "At 00:09.00 the reflection clearly shows one pale blade held against the chin, but the real hand at the chin shows only pinched fingers with no blade visible; at 00:09.25 the blade is visible again in the real hand. Could be finger occlusion, so lower confidence.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "count-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-07__count-stability__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

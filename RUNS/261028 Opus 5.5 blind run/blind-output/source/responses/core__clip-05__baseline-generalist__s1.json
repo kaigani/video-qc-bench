@@ -1,0 +1,74 @@
+{
+  "ledger": [
+    "woman | short highlighted bob, open blue cardigan over white camisole, earrings | blue fitted crew-neck long-sleeve top, hair in tucked low twist/updo from behind | top neckline/undergarment gone by ~00:03; hair alternates between loose bob and pinned updo",
+    "hallway framed print | blue flower with small figure, left of kitchen doorway | portrait of a person holding blue flower; same print later appears inside bedroom | artwork content morphs 00:00->00:01.5; duplicated into bedroom ~00:07",
+    "kitchen | light oak cabinets, tile backsplash, countertop microwave | dark cherry cabinets, over-range microwave, plain walls (kitchen reached through bedroom door) | different kitchen at end",
+    "bedroom | chandelier, bed, one chair at foot, abstract print over bed | two chairs at foot, extra prints beside door, photo frame on side table | furniture/prints added and changed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "woman's clothing",
+      "invariant_violated": "wardrobe continuity",
+      "description": "At 00:00 she wears an open V-neck blue cardigan with a white camisole clearly visible underneath. By 00:03.0-00:03.25 the front shows a high crew-neck fitted blue top with no V opening and no white layer. The garment changes type with no cut and no action that would explain it.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "hallway framed print",
+      "invariant_violated": "object appearance morph",
+      "description": "The framed print on the hallway wall at 00:00 shows a blue flower with a small figure on top. From about 00:01.5 it shows a person (a man in a suit) holding or merging with a large blue flower. The artwork content changes as the camera moves.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen / house layout",
+      "invariant_violated": "spatial continuity",
+      "description": "She walks from the kitchen down the hall into the bedroom, then out through a different bedroom door that leads straight back into a kitchen. That kitchen does not match the opening one: dark cherry cabinets and an over-range microwave at 00:09-00:09.75, against light oak cabinets, a tile backsplash and a countertop microwave at 00:00. The house geometry is impossible or inconsistent.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "hallway print duplicated in bedroom",
+      "invariant_violated": "object duplication",
+      "description": "When the camera turns back toward the bedroom doorway at 00:07.0-00:08.25, the same blue-flower portrait print from the hallway hangs inside the bedroom, left of the door. A second landscape print with a red stripe has also appeared right of the door, where a small colourful picture hung at 00:06.5.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "bedroom chairs",
+      "invariant_violated": "object count change",
+      "description": "On entry at 00:04.5-00:04.75 there is a single wooden chair at the foot of the bed. By 00:05.25-00:05.75 there are two chairs side by side in that spot.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "woman's hair",
+      "invariant_violated": "hairstyle continuity",
+      "description": "Her hair alternates between a loose, jaw-length highlighted bob in side views (00:00, 00:02.25-00:03.25, 00:05.75) and a pinned or twisted low updo with curled ends seen from behind (00:00.75, 00:04.0-00:04.5, 00:07.0-00:08.75). Hair length and volume are inconsistent across the walk.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "side-table photo frame",
+      "invariant_violated": "object appearance morph",
+      "description": "The small frame on the bedroom side table shows a colourful object or still life at 00:06.0-00:06.5. At 00:07.5-00:08.75 it shows a photo of a seated person.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "woman's face",
+      "invariant_violated": "identity consistency",
+      "description": "The face in profile at 00:03.0-00:03.25 looks noticeably older and fuller than the younger face at 00:00, with a different nose and jaw. This suggests identity drift.",
+      "severity": "moderate",
+      "confidence": 0.35
+    }
+  ]
+}

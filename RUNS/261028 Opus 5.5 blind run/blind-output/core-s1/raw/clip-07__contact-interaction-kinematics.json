@@ -1,0 +1,57 @@
+{
+  "ledger": [
+    "Real man's right hand + grooming tool | pinch grip on slim pale tool, tip near chin/jaw at 00:00 | pinch grip on tool, tip at temple/eyebrow at 09.750 | tool tip often hovers off the skin (00:00.250, 01.750, 09.250); 02.25-04.00 hand pushes a dark tool into the hair on top of head; at 09.000 the fingers pinch empty air and the tool is gone; it reappears at 09.250",
+    "Reflected man's hand + tool | pinch grip, white tool tip touching chin/moustache at 00:00 | tool touching nose/upper lip at 09.750 | the reflected tool touches the face continuously: chin -> nose (01.75-02.0) -> forehead/brow (02.25-04.0) -> nose/moustache -> chin/cheek; it holds the tool at the cheek at 09.000, when the real hand holds nothing",
+    "Real man's head/neck | head tilted up, chin raised at 00:00 | head turned slightly toward the mirror at 09.750 | head dips forward during the forehead/hair stroke (02.25-04.0), then tilts back up; motion is continuous",
+    "Real man's right arm/elbow | elbow down, forearm raised to the chin | elbow raised to the head | the arm lifts smoothly to the head (02.0-04.0) and lowers (04.25-05.0); joint directions look plausible, with no snapping",
+    "Body support | seated or standing at the mirror, torso stable | same | no stepping or weight shifts in frame; nothing checkable for support"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "real man's right hand / grooming tool",
+      "invariant_violated": "holding without object / object vanishes from grip",
+      "description": "At 00:09.000 the real right hand is still in a pinch-grip pose under the jaw, but nothing is between the fingers: the tool is gone. In the mirror at the same instant, the hand holds the white tool against the cheek. The tool is back in the real hand at 00:09.250. The grip is shown as holding while there is no object in it.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "real man's right hand / tool vs. reflected hand / tool",
+      "invariant_violated": "contact point inconsistent between body and reflection",
+      "description": "From about 02.25 to 04.00, the real hand pushes a dark tool into the hair on the crown or top of the head. In the mirror, the hand presses a white tool flat against the forehead and brow, well below the hairline. One action cannot touch both places at once, so the real contact and the reflected contact are physically incompatible.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "real man's tool tip vs. face",
+      "invariant_violated": "missing contact (stroke without touching skin)",
+      "description": "In several frames the reflection shows the blade touching the skin while the real tool tip floats a few centimetres off the face: 00:00.250, where the tip is in the air in front of the jaw while the reflection is on the chin; 00:01.750, where the tool is held in the air at cheek level while the reflection is on the nose; and 00:09.250, where the tip is pointing up in front of the jaw while the reflection is on the chin. The shaving or grooming contact exists only in the reflection.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "real man's tool vs. reflected tool",
+      "invariant_violated": "contact point inconsistent between body and reflection",
+      "description": "At 09.750 the real tool is at the temple or eyebrow beside the eye, while in the mirror the tool rests under the nose on the moustache. The two contact locations disagree.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

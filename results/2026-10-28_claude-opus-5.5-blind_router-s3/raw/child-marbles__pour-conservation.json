@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "Container A (clear glass mixing bowl, round, blue-tinted rim) on a wooden table; it stays the same vessel throughout. The camera pushes in from about 00:04 so the bowl looks bigger, but its shape, rim and glass are consistent",
+    "Container B (small metal pedestal cup holding a white/green egg-like object, right of the bowl): visible 00:00-00:04, contents unchanged, not involved in any transfer",
+    "Loose balls on the table at the right edge (reds, green, yellow, light-blue): visible 00:00-00:04 and never seen being picked up or moved into the bowl",
+    "00:00.000 bowl A: about 9 balls (red, green and yellow, roughly 3 of each). The child's hands are entering",
+    "00:00.500-00:01.250 the child lifts one red ball out of bowl A, leaving 8 in the bowl and 1 red in hand (3R/3G/3Y in total)",
+    "00:02.000 (frame 9, full res) bowl A has 8 balls (2 red, 3 green, 3 yellow) plus 1 red in hand, 9 in total",
+    "00:02.250-00:03.000 the red ball goes back into bowl A, which now holds 9 balls",
+    "00:03.000-00:04.750 the hand pushes the balls around inside the bowl. About 8-9 are visible (yellow, red, green, yellow, green, yellow, red, green, partly hidden by fingers), and no ball leaves the bowl",
+    "00:05.000-00:05.250 fast stirring with motion blur. Up to 9 balls still visible (green, red, red, yellow, green, yellow, plus others)",
+    "00:05.750 (frame 24, full res) bowl A shows only about 5 balls (2 green, 2 yellow, 1 red under a fingertip). The hand is small and covers only the lower-left area, no ball is seen leaving the bowl, and none is on the table nearby",
+    "00:06.000-00:07.250 stirring under heavy blur. The count and colors swing from frame to frame (several yellows, a few reds and greens)",
+    "00:07.500-00:08.750 bowl A is mostly red and green: at least 4-5 distinct reds and 3-4 greens, with only 1-2 yellows",
+    "00:09.000-00:09.750 (frame 39, full res) bowl A shows about 5-6 red balls, 1 green and 1 yellow. Frame 40 shows about 5 reds, 2 greens and 1 yellow",
+    "Over the whole clip no ball is seen entering the bowl from outside (the table balls stay put and the hand stays in the bowl) and none is seen leaving"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "balls in glass bowl A (total count)",
+      "invariant_violated": "conservation (material disappears)",
+      "description": "From 00:05.250 to 00:05.750 the bowl goes from about 9 visible balls to about 5 (2 green, 2 yellow, 1 red). Neither hand removes a ball, nothing goes over the rim or onto the table, and the small hand cannot be covering 4 balls in the clear glass bowl, so about 4 balls vanish.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red and yellow balls in glass bowl A (color composition)",
+      "invariant_violated": "conservation / source contents (balls appear and change color)",
+      "description": "Early on the bowl holds about 3 red, 3 green and 3 yellow balls (00:02 full-resolution frame). Between 00:07.5 and 00:09.75 it shows about 5-6 red balls but only about 1 yellow (00:09.5: ~6 red, 1 green, 1 yellow). No red ball is added from outside (the table reds stay where they were and the hand never leaves the bowl), and no yellow ball is taken out. Reds appear from nowhere while yellows disappear, so the contents change kind with no transfer to explain it.",
+      "severity": "severe",
+      "confidence": 0.7
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "pour-conservation",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__pour-conservation__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-02__pour-conservation.json",
+  "frozen_source_sha256": "b41af172956a2c8e2c5fac447cdc66b339bf0bed4020273292edaae9cc61dde2",
+  "key": "child-marbles__pour-conservation",
+  "parseOk": true
+}

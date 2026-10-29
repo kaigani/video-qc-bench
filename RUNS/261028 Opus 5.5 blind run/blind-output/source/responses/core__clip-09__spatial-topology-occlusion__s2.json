@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "camera | single continuous handheld shot, front-on, slightly high, jar center-left | drifted closer and slightly reframed by 6.0-10.0s, stove fills upper right, white bowl partly out of frame right | gradual push/drift 5.5-6.25s and 7.25-8.5s, no hard cuts",
+    "butcher-block cutting board | foreground, spans lower frame, jar sits on it center-left | same | consistent throughout; its right edge meets white stone counter behind/right of jar",
+    "glass jar with side handle/clasp | on board center-left, handle on its right side, opening up | same position, handle still on right | stable; background (oven handle, stove front) visible through glass at correct depth",
+    "steel mixing bowl | on white counter right of jar, behind white bowl | same relative spot right of jar | consistent left-right/depth ordering throughout",
+    "white speckled bowl of green olives | lower right, nearest-right, in front of steel bowl | same, partly cropped by right frame edge late | consistent",
+    "small clear glass bottle | absent on counter between/behind the two bowls 0.0-4.25s | present behind steel/white bowls 4.5-9.0s | pops into existence at 4.5s while camera is near-static",
+    "stove/range | behind person, upper center-right, knobs + display panel, oven door window below | same range, closer, wider portion visible | knob count left of display appears to go from ~1 (6.0-7.0s) to 3 (7.5-8.5s); partly attributable to hand occlusion and camera move",
+    "wood-front cabinets | right of stove (early) and left of person (late) | consistent | appear where expected as framing widens",
+    "person (torso/arms) | behind jar, between jar and stove | same | hands/bowl correctly occlude stove and are in front of/above jar opening; jar glass correctly in front of torso",
+    "pouring olives | stream from bowl over jar opening falls inside jar behind front glass | same | depth ordering of falling olives vs jar walls consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04.500",
+      "entity": "small clear glass bottle on counter behind the two bowls",
+      "invariant_violated": "scene layout consistency (fixed object appears)",
+      "description": "At 4.25s and all earlier frames the white counter space between/behind the steel bowl and the white bowl is empty; at 4.5s, with the camera essentially static (bowls and jar at the same screen positions), a small clear glass bottle is suddenly standing there and persists for the rest of the clip. No hand places it and nothing occluded that spot in the prior frame.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:07.500",
+      "entity": "stove control panel (knobs/display arrangement)",
+      "invariant_violated": "fixed-object geometry consistency across viewpoints",
+      "description": "At 6.0-7.0s the range shows roughly one knob between the oven door's left edge and the central display with four knobs to its right; by 7.5-8.5s the same range shows three knobs left of the display and the display sits proportionally farther from the oven-door edge, implying the control panel layout rearranged during the camera drift. Hand occlusion of the left knobs at 6.5-7.0s makes this partly ambiguous.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

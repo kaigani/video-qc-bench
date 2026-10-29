@@ -1,0 +1,60 @@
+{
+  "ledger": [
+    "woman | shoulder-length wavy blonde hair, calm; teal denim jacket; arms crossed resting on hood at cowl in front of A-pillar | same outfit, hair strongly windblown, arms still crossed on hood; framed in close profile-ish 3/4 | hair goes from still to heavily blown ~5.25-5.5s; camera pushes in",
+    "station wagon | cream/beige body, tan hood, woodgrain side panels, roof rack, plate 'STE 97', antenna on fender | pale off-white/mint hood and body dominate frame, little woodgrain visible | camera orbit/push-in; color grade brightens",
+    "background | flat desert scrub with mountains, asphalt under car, no visible road markings | two-lane highway with yellow center dashes and telephone poles beside car | road and poles revealed as camera moves"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman / car hood",
+      "invariant_violated": "physical impossibility / object interpenetration",
+      "description": "The woman's torso sits on the cowl directly in front of the windshield and A-pillar, with the wipers and windshield glass behind and beside her and her arms folded on the hood. There is no place a standing or seated person could physically occupy there. Her body appears to come out of the hood/engine bay. This holds for the whole clip and is clearest at 04:50-06:75, where the windshield glass and dashboard are visible behind her body.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "unmotivated physics change",
+      "description": "For the first ~5s the hair hangs nearly still. Starting around 5.25-5.5s it suddenly blows strongly back as if in high wind, but the car is parked and the scrub/brush in the background shows no matching wind. This looks like an abrupt, unmotivated change in environmental force.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "license plate",
+      "invariant_violated": "garbled text",
+      "description": "The front plate reads 'STE 97' (or 'STE|97') with malformed glyphs and an odd format that is not a plausible plate legend. This is a typical generated-text artifact.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "background road",
+      "invariant_violated": "environment continuity",
+      "description": "At the start the area beyond the hood is open desert scrub, with no road or markings. As the camera moves, a two-lane highway with yellow center dashes and telephone poles appears right beside the car where scrub had been, and the car's apparent position relative to the road shifts. The camera move only partly explains this.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-14__baseline-generalist.json",
+  "frozen_source_sha256": "bb9e7ed968b95175fc255f633cb66494611517ad29e553edb5565e0ef6266d80",
+  "key": "woman-car__baseline-generalist",
+  "parseOk": true
+}

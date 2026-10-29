@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "child right hand reach -> grasp red ball | 00:00.25 hand descends into bowl | 00:00.75 red ball lifted between fingers | order and delay plausible; grasp completes",
+    "red ball held/manipulated | 00:01.00 held above bowl in both hands | 00:02.00 still held, turned in fingers | continuous hold, no unexplained motion",
+    "release of red ball -> ball back in bowl | 00:02.25 hands lower into bowl with ball | 00:02.50 red ball resting among others | effect follows cause, plausible timing",
+    "right hand pushes/rolls balls | 00:02.75-00:04.75 fingers press on red ball at bowl front | balls shift slightly around contact | proportional, small motions match gentle push",
+    "camera push-in | 00:04.25 framing tightens on bowl | 00:04.50 close framing | camera move, no causal implication",
+    "right hand starts stirring | 00:05.00 hand sweeps with motion blur | 00:05.25-00:05.75 balls scatter and roll in sweep direction | cause precedes effect, plausible",
+    "continuous stirring -> ball agitation | 00:06.00-00:09.75 hand moves rapidly in bowl | balls tumble, blur and bounce around bowl | broadly consistent with vigorous stirring; agitation persists only while hand stirs",
+    "left hand on bowl rim | 00:04.50 fingers resting on rim | 00:09.75 still on rim | static, bowl does not slide despite stirring (plausible, held)",
+    "child gaze | 00:01.50-00:03.75 looking down at bowl/ball in hands | gaze follows own actions | reaction consistent with perceivable events"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.25",
+      "entity": "balls on far side of bowl during stirring",
+      "invariant_violated": "proportionality of effect to cause",
+      "description": "During the stirring phase several balls on the side of the bowl away from the stirring hand (e.g. yellow ball high near the right rim at 00:08.25, green ball near the rim at 00:08.50) show strong motion blur and appear lifted/flung while the hand is contacting balls elsewhere; the overall agitation looks somewhat more violent and decoupled from the hand's sweep than the visible contact explains. Could be plausible secondary bounces, so low confidence.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

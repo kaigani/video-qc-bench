@@ -1,0 +1,50 @@
+{
+  "ledger": [
+    "man (foreground, back to camera) | dark hair, white shirt, holding small white/metal razor-like tool at chin with right hand | holding small razor near cheek/temple | 00:02.25-00:04.0 holds a dark comb in hair, hair becomes tousled; 00:09.0 hand open with no visible object",
+    "mirror reflection of man | frontal face, white shirt, white blade at chin | white blade at nose/cheek | head pose, hand position and held object repeatedly disagree with the foreground man",
+    "held tool | white/silver razor blade, no shaving cream | silver razor | appears as a dark comb in the real view during 00:02.25-00:04.0 while the reflection shows a white blade",
+    "set | gilt mirror, wood door with brass knob, white door frame, shelves with bottles | unchanged | stable"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02.25",
+      "entity": "held object (real vs reflection)",
+      "invariant_violated": "mirror reflection object mismatch",
+      "description": "From 00:02.25 to about 00:04.0 the foreground man runs a dark comb through his hair above his ear. In the mirror at the same moments he holds a small white blade against his eyebrow or forehead. The reflection shows a different object at a different place on the head.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01.75",
+      "entity": "man's head pose and hand position vs reflection",
+      "invariant_violated": "mirror geometry inconsistency",
+      "description": "The reflection often fails to match the real body. At 00:01.75 the real hand holds the tool up at the temple or eye with the head turned in profile, while the reflection holds it at the nose with the face frontal and eyes closed. Throughout the clip the real man tilts his head up in profile, but the reflection shows a near-frontal face, often looking down. Given the over-the-shoulder camera angle, the mirror cannot show these poses.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09.00",
+      "entity": "razor in right hand",
+      "invariant_violated": "reflection/object disappearance",
+      "description": "At 00:09.0 the foreground right hand is open in a pinch near the jaw with no razor visible, while the reflection presses a razor against the jaw. At 00:09.25 the real hand holds the razor upright, away from the face, while the reflection still has the blade on the cheek.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:02.25",
+      "entity": "man's hair",
+      "invariant_violated": "hair state inconsistency",
+      "description": "During the combing section the real man's hair looks messy and pushed up, while the reflection's hair stays neatly slicked back. Afterwards the real hair returns to its earlier neat state with no explanation.",
+      "severity": "minor",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:02.25",
+      "entity": "grooming action",
+      "invariant_violated": "action/prop implausibility",
+      "description": "The man shaves dry skin with no shaving cream, using a small white sliver of a tool. Midway the action jumps from shaving to combing his hair (only in the real view) and then back to shaving. The tool changes between a white plastic-looking blade, a dark comb and a silver razor.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ]
+}

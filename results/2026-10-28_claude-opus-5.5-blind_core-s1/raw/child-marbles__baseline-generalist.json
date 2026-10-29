@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "glass bowl of balls | ~10 rigid glossy spheres in bowl (approx 4 red incl. one held, 3 yellow, 3 green) | mostly red and green lumpy blobs, yellow nearly absent (0-1 visible at 9.25-9.75s) | colour mix and count drift during fast stirring from ~5.5s onward",
+    "child in blue zip hoodie | picks up red ball, examines it, places hands in bowl | right hand stirring balls, left hand gripping bowl rim | camera progressively pushes in until only hands and bowl visible",
+    "small metal cup with leaf-pattern lid and loose balls on table right | present at right edge | out of frame after push-in | consistent while visible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09.25",
+      "entity": "balls in the bowl (colour composition)",
+      "invariant_violated": "object count / colour persistence",
+      "description": "Before stirring the bowl holds roughly 3 yellow, 3 green and 3-4 red balls (clear at 01.00 and 04.50). By 09.25 no yellow ball is visible and ~4-5 red and ~4 green appear; at 09.50 about 5-6 red, 1 yellow and 1 green are visible. Yellow balls vanish and red balls multiply without any ball being added or removed from the bowl.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06.00",
+      "entity": "balls in the bowl (shape)",
+      "invariant_violated": "rigid object shape stability",
+      "description": "During stirring the hard glossy spheres become lumpy, squashed and blob-like (e.g. irregular yellow lumps at 06.00, misshapen red/green blobs at 08.50-09.75, green ball melting into adjacent shapes at 09.25) in ways beyond motion blur; rigid plastic balls should stay spherical.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09.00",
+      "entity": "child's stirring hand",
+      "invariant_violated": "hand anatomy / merging",
+      "description": "The stirring right hand smears and merges with the balls; at 09.00-09.25 fingers are indistinct and appear to blend into ball shapes, giving an implausible hand-object merge.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-02__baseline-generalist.json",
+  "frozen_source_sha256": "68692848d598779574918c9f29458b6d12c1bde894beffa21d7c5a58bb33db7c",
+  "key": "child-marbles__baseline-generalist",
+  "parseOk": true
+}

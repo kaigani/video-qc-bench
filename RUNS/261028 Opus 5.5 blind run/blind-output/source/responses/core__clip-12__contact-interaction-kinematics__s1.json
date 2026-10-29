@@ -1,0 +1,63 @@
+{
+  "ledger": [
+    "right hand | at 00:00 index on top + thumb on front of left cube, pinching it on the table | at 09:75 index on top of cube 1, thumb pressed on front face of cube 2 | moves rightward along the row, pinching each end cube in turn (00:00-01:25 cube 1/2, 02:25-03:50 cube 3/4, 03:75-04:50 cube 4/5, 05:00-05:75 cube 6, 06:00-07:75 cube 7/8); releases and lifts at 02:00, 04:75 and 08:00; returns at 08:25, tapping the tops of cubes 3-4 with fingertips then gripping cubes 1-2 from 09:00",
+    "cube 1 (left end) | pinched by hand at 00:00 | resting at row start, index fingertip on its top at 09:00-09:75 | deforms/warps while pinched at 00:25-00:50; a second cube comes out of its right side at 00:75-01:00 instead of being carried in by the hand",
+    "cube 2 | not present at 00:00 | resting, in contact with cube 1 | comes out of cube 1's volume at ~01:00 while the hand is still pinching cube 1; fingers shift onto it at 01:25 and it settles flush by 01:50",
+    "cube 3 (originally the standalone right cube) | resting alone at 00:00 | resting in row | stays stationary until the fingers grip its top at 02:25-02:75; a new cube emerges overlapping its right face at 03:00",
+    "cube 4 | emerges from cube 3 at 03:00 | resting | interpenetrates cube 3 at 03:00, is held by the thumb at 03:25-03:50, lands at 03:75",
+    "cube 5 | emerges from the right side of cube 4 at 04:00 | resting | the blurred cube overlaps cube 4 at 04:00-04:25, the thumb holds it at 04:50, released at 04:75",
+    "cube 6 | emerges at 05:00 overlapping cube 5's right face | resting | the hand grips it 05:25-05:75 and it lands by 06:00",
+    "cube 7 / cube 8 | cube 7 emerges overlapping cube 6 at 06:00 | resting at the row's end | held 06:25-06:50; cube 8 comes out of cube 7 at ~06:75 and is held at its top/right edge until 07:75; the hand leaves at 08:00",
+    "table/support | all cubes rest on the tabletop, with contact shadows throughout | consistent | no floating cubes once released"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00.250",
+      "entity": "cube 1 held between index finger and thumb",
+      "invariant_violated": "rigid-body solidity under grip",
+      "description": "As the fingers pinch the rigid plastic cube, its faces warp and smear (they bend and bulge out of a cube shape) at 00:25-00:50. A light pinch should not deform a hard cube.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:01.000",
+      "entity": "cube 2 / cube 1",
+      "invariant_violated": "object pass-through / motion without contact",
+      "description": "A second cube appears coming out of cube 1's right side and overlapping it (00:75-01:00). No hand ever carried it into the frame. Both of the hand's fingers are on cube 1, so the new cube moves into place with no grip.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:03.000",
+      "entity": "cube 4 / cube 3",
+      "invariant_violated": "object pass-through / motion without contact",
+      "description": "While the fingers pinch the green cube 3, a new cube pushes out of cube 3's right face, with the two volumes overlapping (frame 00:03.000 at full resolution). Nothing brings it in from outside; it is generated out of the held cube.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:04.000",
+      "entity": "cube 5 / cube 4",
+      "invariant_violated": "object pass-through / motion without contact",
+      "description": "A blurred cube comes out of the right side of the just-placed cube 4, overlapping it, while the fingers rest on cube 4's top. It enters the row without being carried in.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:05.000",
+      "entity": "cube 6 / cube 5",
+      "invariant_violated": "object pass-through",
+      "description": "The new blue cube appears overlapping the right face of cube 5, with its silhouette merged into cube 5's edge. The index fingertip is on top of cube 5, not on the new cube, when it appears.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:06.000",
+      "entity": "cube 7 / cube 6",
+      "invariant_violated": "object pass-through / motion without contact",
+      "description": "A new green cube comes out of the right face of the just-released cube 6, with their volumes overlapping. The hand only reaches it after it has already appeared.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ]
+}

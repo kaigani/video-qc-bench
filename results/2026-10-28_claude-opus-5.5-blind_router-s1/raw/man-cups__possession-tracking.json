@@ -1,0 +1,60 @@
+{
+  "ledger": [
+    "Cups: four steel/copper cups on the green field at 00:00 (back, middle, right, front-left); stay four through 00:09.25",
+    "Middle cup: holds a near-rim stack of coins 00:00-00:02.75; no hand touches it afterward",
+    "Front-left cup: holds a gold coin 00:00-00:02; the hand reaches in at 00:01-00:02 and lifts the gold coin out at 00:02.25; the cup is empty at 00:02.5",
+    "Coin A (gold, held at fingertips): in the operator's hand at 00:00-00:00.5, occluded by both hands at 00:00.75-00:02, then in the same hand with coin B at 00:03.0-00:03.25",
+    "Coin B (gold, from the front-left cup): hand at 00:02.25-00:03.25; held at the front-left cup's rim at 00:03.5, then pressed against its outer wall by the near hand from 00:04.0 to about 00:08.0; still at the cup in the near hand at 00:08.5",
+    "Second coin (small gold): far hand at the back/right cup from 00:03.5 to about 00:06.75; the far hand stays at the right end of the row of cups",
+    "00:05-00:08: the camera pulls back and rotates; the four cups stand in a row; the operator keeps one coin in each hand at the ends of the row",
+    "00:08.75-00:09.25: the left hand holds a coin above the back cups; the right hand rests on the table beside the right cup; four cups are visible (00:09.0 frame and the dense 9.0-9.25 frames)",
+    "00:09.33-00:09.75: only three cups are visible (back, left, front); no hand lifted or carried a cup",
+    "Loose table coins in the green field (gold and silver near the cups): visible 00:00-00:05; few or none visible from about 00:07 on while the camera moves",
+    "Audio UNASSESSED (frames only)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "one of the four cups",
+      "invariant_violated": "placement persistence / chain of custody",
+      "description": "Four cups are visible in the row/cluster up to about 00:09.25, and only three from about 00:09.33. Through this window the left hand holds a coin in the air above the cups and the right hand rests flat on the table beside them. Neither hand grips, lifts, nests, or removes a cup, and no cup leaves the frame. A whole cup disappears, which concealed palming cannot explain.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "coin stack inside the middle cup",
+      "invariant_violated": "placement persistence",
+      "description": "From 00:00 to 00:02.75 the middle cup holds a coin stack almost up to the rim, topped by an embossed gold/silver coin. At 00:03.0 the top coin looks like a different plain white/silver disc, and by 00:03.75-00:04.25 the contents sit noticeably lower or are no longer visible. No hand touches the middle cup during this time.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "loose gold/silver coins on the green field near the cups",
+      "invariant_violated": "placement persistence",
+      "description": "Several loose gold and silver coins lie on the green field in front of the cups through about 00:05. In the wider shots from about 00:07 to 00:09.75 the green field around the cups is nearly empty, and no hand is seen collecting these coins. The camera move makes this less certain.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "possession-tracking",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__possession-tracking__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-06__possession-tracking.json",
+  "frozen_source_sha256": "90fa49438018aafeaf05c92d1093c99197cba7fd4eba620f96d8f7ba2cd06f9b",
+  "key": "man-cups__possession-tracking",
+  "parseOk": true
+}

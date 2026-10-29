@@ -1,0 +1,27 @@
+{
+  "ledger": [
+    "Cut detection: ffmpeg scene scores across all 241 frames peak at ~0.088; no hard cut found. Visible framing changes (00:00.25 tighter handheld, 00:01.50 wider reveal of patio/plant pots, 00:04.25 onward progressive push-in to the bowl) read as continuous handheld camera moves or zooms, not edits",
+    "shot 1: 00:00-00:10, continuous handheld high angle over a wooden table. Starts medium-close on the child and glass bowl, eases wider around 00:01.5-00:03.0, then pushes steadily into a close-up of the bowl and hands (00:04.5-00:10)",
+    "Anchors: A1 = clear glass bowl of red/yellow/green balls on the table; A2 = small metal cup with a green/white item, right of the bowl (visible 00:00-00:04.25); A3 = table's front edge and plank seam; A4 = loose balls on the table at right frame edge",
+    "Child (blue zip hoodie): present the whole time, standing behind the table's front edge (A3) and facing the bowl and camera-forward. Bowl A1 sits in front of the child's torso, cup A2 to camera-right of the bowl, throughout",
+    "00:00-00:01.25: both hands go into the bowl and pick up a red ball. 00:01.25-00:02.5: the red ball is held in both hands above the bowl, with no break across the framing change at 00:01.5",
+    "00:02.5-00:04.5: the child's right hand reaches into the bowl and the left hand rests open near the far rim. Same pose before and after the push-in",
+    "00:04.5-00:10: close-up. The right hand stirs and mixes the balls while the left hand grips the far bowl rim. The hand roles stay the same the whole time; the hand never appears to pass through the glass",
+    "Diff result: no shot boundary to diff across. Inside the continuous take, the child's presence, side of the anchors, facing and the hand carrying each action stay consistent. No duplicate person and no body passing through table or bowl geometry"
+  ],
+  "findings": [],
+  "video": "clip-02.mp4",
+  "role": "cross-cut-placement",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__cross-cut-placement__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

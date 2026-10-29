@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior dusk, parked white semi cab beside diner: exhaust/smoke plumes pulse intermittently from behind the cab (rising and drifting up-left) and from low near the front bumper; plume dissipates by ~00:07. Consistent with an idling engine; drift direction stays leftward across the shot. No foliage, flags or loose cloth visible to cross-check wind. Camera locked off. No violation judged (front-bumper ground-level puffs are an unusual source but intermittent exhaust is plausible).",
+    "00:10-01:35 diner interior (multiple shots): no wind, weather or airflow implied; hair, aprons and cloths static except when handled. Window exteriors show static trees/poles. Consistent.",
+    "00:27-00:31 coffee pour close-up (gravity on liquid): carafe held level, coffee surface inside stays horizontal, yet a stream of coffee descends from an internal dark neck, through the liquid body and out the bottom of the glass globe into the mug. Checked at 3 fps.",
+    "00:32-00:36 plate of toast and egg: faint steam wisps rise gently upward behind plate; consistent with hot food in still indoor air.",
+    "01:09-01:17 coffee mugs at counter: faint steam wisps rise from mug; consistent still-air behaviour.",
+    "01:35-01:58 low sun through windows: dust-lit shafts of light; static, no implied airflow; consistent.",
+    "01:41-01:50 exterior through window: green box truck parked at sunset, man walks to cab and opens door; no exhaust, no wind cues (field grass and trees far and static, man's jacket hangs normally). Consistent; engine plausibly off.",
+    "Audio UNASSESSED (not available in this harness); no sound-based environmental cues evaluated."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "coffee stream from glass carafe into mug",
+      "invariant_violated": "effect must have a plausible cause (gravity pour requires tilt/spout)",
+      "description": "From ~00:28 to ~00:30 the carafe is held upright and level (liquid surface inside remains horizontal), but a continuous stream of coffee falls from a dark neck inside the globe, passing through the coffee body and the closed glass bottom into the mug. There is no tilt or spout outlet to drive the flow; the pour has no physically plausible cause, and the stream stops at ~00:31 without any change in the carafe's angle.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "environment-response",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__environment-response__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-01__environment-response.json",
+  "frozen_source_sha256": "43efe64ac0658d74aa904919ce46ccb681c738598fd9721e89a2aef4317a4c44",
+  "key": "_long-scene__environment-response",
+  "parseOk": true
+}

@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "Glass bowl (clear, round, teal-tinted rim): same vessel throughout 00:00-00:09.75; camera pushes in from ~00:04.25 but rim/shape/material consistent",
+    "00:00.000 bowl contents: ~8 balls (2 red, 3 yellow, 3 green); loose red/green balls on table at right; small metal cup with white/green ball at right",
+    "00:00.750-00:02.000 child holds one extra red ball above bowl (picked up during 00:00-00:00.75 hand motion); bowl still shows 8 balls: 2 red, 3 yellow, 3 green (frame-00006 full-res verified)",
+    "00:02.250-00:02.750 red ball lowered into bowl; expected bowl total 9: 3 red, 3 yellow, 3 green",
+    "00:03.000-00:04.500 bowl visible with hand inside: yellow, red, green, yellow, red (under fingers), yellow, green, green partially hidden; consistent with 3R/3Y/3G",
+    "00:05.000-00:07.250 child stirs vigorously with right hand, left hand on rim; heavy motion blur; no ball added from or removed to table; balls visible in mixed colors",
+    "00:07.750 bowl (frame-00032): at least 4-5 red balls, 1-2 yellow, 1 green visible",
+    "00:09.250 bowl (frame-00038): ~4 red and ~4 green visible, no clear yellow visible",
+    "00:09.500 bowl (frame-00039): ~5 red, 1 yellow, 1 green visible",
+    "00:09.750 bowl (frame-00040): ~4-5 red, 1 yellow, 2 green visible",
+    "Source (table balls at right): out of frame after camera push-in ~00:04.25; no visible transfer from table to bowl after 00:02.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07.750",
+      "entity": "balls inside glass bowl (color composition)",
+      "invariant_violated": "conservation / source contents",
+      "description": "Bowl held 3 red, 3 yellow, 3 green after the single red ball was placed at ~00:02.5. During stirring, with no balls added (left hand stays on rim, right hand only stirs), the bowl shows 4-5 red balls by 00:07.75 and ~5 red with only 1 yellow by 00:09.5. Red count grows beyond what entered the bowl while yellows disappear, i.e. balls change color/type during the mixing.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09.250",
+      "entity": "yellow and green balls in bowl",
+      "invariant_violated": "conservation (count by kind)",
+      "description": "At 00:09.25 roughly 4 red and 4 green balls are visible and no yellow, whereas the bowl contained only 3 green and 3 yellow; green exceeds its starting count and the three yellow balls are unaccounted for with nothing removed from the bowl. Motion blur may duplicate/smear some balls, lowering certainty.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

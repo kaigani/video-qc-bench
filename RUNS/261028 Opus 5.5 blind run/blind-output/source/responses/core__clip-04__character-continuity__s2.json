@@ -1,0 +1,24 @@
+{
+  "ledger": [
+    "Man (sole character) | 00:00 slim young man, dark short hair neatly combed with side part, clean-shaven, green-and-cream vertical-striped button shirt over white crew-neck undershirt; standing center frame in front of panelled wooden door, coat hook with navy jacket screen-left of him, framed 'V' horse print screen-right; facing camera/slightly screen-left, talking with animated expressions through 06:75 | 09:75 same striped shirt, short dark hair, seen from behind/three-quarter right, standing at a panelled door with hands raised to its surface, navy jacket on hook now screen-right of him | 07:00-08:00 single continuous move (no hard cut): he lowers head, turns screen-left and walks toward the door while the camera orbits/follows; during 07:25-07:50 his hair reads as a tall rolled pompadour with much more volume than the flat side-parted hair at 06:75 and 09:75, facial structure looks heavier-jawed, and the undershirt reads grey rather than white",
+    "Spatial relation man vs. coat hook (character placement) | coat hook screen-left of man 00:00-07:50 | coat hook screen-right of man 08:00-09:75 | swap occurs during continuous walk+camera orbit, motion visible, consistent with him walking past it"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Man - hair",
+      "invariant_violated": "identity: hairstyle consistency",
+      "description": "At 06:75 his hair is short, side-parted and lying fairly flat; in the turning frames at 07:25-07:50 the hair suddenly reads as a tall, rolled pompadour/quiff with clearly more height and volume, then returns to the short neat style by 08:25-09:75. No hand touches the hair; the change coincides with the head turn and camera swing, suggesting a generative morph of the hairstyle (partly but not fully explainable by the change in viewing angle).",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Man - face",
+      "invariant_violated": "identity: facial features",
+      "description": "During the quick turn at 07:25-07:50 the face in profile looks noticeably different from the frontal face of 00:00-06:75 (heavier brow and jaw, fuller cheeks), briefly resembling a different actor before the back-of-head view takes over. Motion blur and profile angle may account for some of it.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ]
+}

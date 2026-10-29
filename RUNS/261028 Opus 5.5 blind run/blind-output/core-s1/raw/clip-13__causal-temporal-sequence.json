@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "woman in navy cardigan (protagonist) | walking forward toward camera through wet street market, blue umbrella open, red apple cupped in both hands at chest, smiling | standing/slowly turning, seen from behind-left as camera orbits, both hands holding umbrella shaft, no apple | 00:00-05:00 walking with continuous leg motion consistent with forward travel; 05:00-09:75 camera orbits from front to side to rear while she stays roughly in place; smile/gaze steady, no external event to react to",
+    "red apple | held in both hands at chest 00:00 | absent from hands 08:00 onward | 07:25-07:90 apple shrinks and fades between her stationary hands without any eating, placing, pocketing or dropping action (dense 12fps check); no cause for removal",
+    "blue umbrella | open over woman, shaft resting in/against her hands | open, held by both hands | no opening/closing events; tilts with camera orbit only; consistent",
+    "woman in light-blue tee with shoulder bag | enters frame left at 00:50 walking away from camera | walking ahead in background at 04:00-05:00 | crosses camera then continues down aisle; motion direction continuous, no reversal",
+    "man in white shirt | enters frame left at 02:50 walking away from camera | walking ahead into background at 05:00-05:75 | passes camera and moves up aisle at plausible walking speed; continuous",
+    "man in blue t-shirt | enters frame left ~05:75 | exits frame right behind woman ~07:75 | passes camera/woman, continuous motion",
+    "man in light-blue shirt with glasses | appears left ~08:00 | walks past woman's right side ~09:75 | continuous walking, plausible",
+    "background pedestrians (red top woman, green tee man, others) | walking toward camera in aisle | still walking | gait continuous, no frozen or repeated beats observed",
+    "ambient light / environment | bright overcast street with red awnings, wet ground | darker covered market interior with hanging bulbs | brightness drop 03:00-05:00 coincides with camera/subject moving under awnings into covered hall; plausible cause"
+  ],
+  "findings": [
+    {
+      "timestamp": "07:25",
+      "entity": "red apple held by the woman",
+      "invariant_violated": "effect-without-cause (object disappears with no causal action)",
+      "description": "The apple she has cupped in both hands since 00:00 progressively shrinks and fades out between 07:25 and ~07:90 while her hands remain stationary around the umbrella shaft; no bite, hand-off, pocketing, drop, or other action precedes or accompanies its removal, and from 08:00 onward her hands hold only the umbrella shaft.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-13.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-13__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

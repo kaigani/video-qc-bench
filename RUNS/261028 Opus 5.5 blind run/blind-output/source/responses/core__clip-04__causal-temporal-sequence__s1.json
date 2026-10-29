@@ -1,0 +1,21 @@
+{
+  "ledger": [
+    "man in green/white striped shirt (speech) | 00:00 facing camera-right toward off-screen listener, mouth moving | 00:06.75 closed-mouth smirk | speaking beats 00:00-01:50, pause/smirk 01:75-02:25, resumes 02:50-05:50, closed-lip smirk 05:75-06:75; mouth shapes change continuously, no frozen or repeated beats",
+    "man (turn and exit) | 00:06.75 standing, looking at listener | 00:07.75 walking toward rear door | cause: glances down at ~00:07.0, turns head left then body rotates and he steps toward the door 00:07.25-00:07.75; camera follows; motion continuous and plausibly timed",
+    "man (reach at door) | 00:08.25 arriving at door, arms at sides | 00:10.0 (clip end) both hands raised in front of door panel | right arm swings forward ~00:08.5, hands come up near door surface by ~00:08.75 and hover/fidget there through 00:10.0; no visible knob grasp, knock, or door movement before clip ends; doorknob sits lower-left, well below hands",
+    "door | closed at 00:07.75 | closed at 00:10.0 | no opening or motion; consistent with no applied force visible",
+    "man's shadow on door | appears as he approaches 00:08.0 | present at 00:10.0 | moves with his head/body in sync; no lag or lead",
+    "coat on hook | hanging still 00:00 | hanging still 00:10.0 | no disturbance; man never contacts it, so stillness is consistent",
+    "camera | static medium shot 00:00-00:07.0 | handheld-style follow to door 00:07.25-00:10.0 | pan/follow begins as the man starts moving; reframing follows the cause"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "man's hands reaching toward door",
+      "invariant_violated": "action completion (reach must arrive or stop)",
+      "description": "Starting ~00:08.5 the man swings his arm forward toward the door, but from ~00:08.75 to the end of the clip (00:10.0) both hands just hover and fidget in front of the door panel at chest/waist height, above the doorknob, without grasping the knob, knocking, or producing any door movement. The initiated reach neither completes nor clearly stops; it may simply be truncated by the clip end.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

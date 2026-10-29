@@ -1,0 +1,83 @@
+{
+  "ledger": [
+    "00:00-00:10 EXTERIOR (night): an isolated single-storey flat-roof building in an empty dark gravel lot. Front facade faces camera: left window bank, glazed entrance door, centre-right window bank; right side wall also glazed. White semi tractor (no trailer) parked to the left of the building. No neighbouring buildings or parked cars close by.",
+    "00:00-00:10 view INTO the building through the front windows: a cool white-walled, brightly lit room with a low counter/kitchen line and stainless equipment directly behind the centre-right window. Orange/tan low seating. No high-backed booths visible.",
+    "~00:10 a red neon OPEN sign lights in the centre-right front window. From outside it reads correctly ('OPEN').",
+    "00:10-00:18 INTERIOR close angle: counter with stools and a kitchen pass-through on the back wall. A door with a window sits to the right of the pass-through, on the staff side behind the counter, next to the coffee machine.",
+    "00:18.7+ INTERIOR wide angle looking down the counter: high-backed booths along the left window wall, counter and stools on the right. Far wall: a window with the OPEN sign, then a solid wall with the kitchen pass-through, then the staff door. No customer entrance door is visible on the far wall or the left wall.",
+    "Interior view OUT the far (OPEN) window and the left windows: parked cars, street lights, and a large gabled-roof building close by.",
+    "From inside, the OPEN neon in the far window also reads correctly ('OPEN'). A second sign in the left window shows as 'HO' (seen reversed).",
+    "00:19-00:23 traversal: the man first appears at the staff door right of the pass-through (behind the counter). He walks past the back end of the counter into the customer aisle and comes down the stools to sit near the front. This is the only entrance route ever shown.",
+    "00:44.9-00:51 reverse angle from inside the kitchen, looking out through the pass-through: the waitress is behind the counter and the man sits at the counter end. Behind them are a glazed EXIT door, a drinks fridge, windows, and booths on the right. This is consistent with the wide-shot mirror geometry (front wall unseen in the wide).",
+    "00:59.8-01:26 overcast day wide shot: same layout, with the same gabled building and parked cars through the far window. ~01:20 the waitress moves from behind the counter to the customer side via the back-end gap and sits by the man (the gap is consistent with the man's 00:20 route).",
+    "01:26-01:35 close angle from behind the counter: man and waitress seated with booths, a fridge and sunrise windows behind them. Consistent.",
+    "01:41-01:46 view OUT a window: a sunlit gravel lot and fields with a dark-green box truck parked close. The man walks to it. The truck is not the white semi tractor established in the exterior shot.",
+    "01:46-01:50 the waitress sits in a booth by the window watching the man and truck (her reflection is in the glass). Consistent with booths lining the windows.",
+    "01:50-01:53 sunrise wide shot: the waitress sits on a customer-side stool, stands, and within ~0.5 s is behind the counter in the foreground with the counter edge in front of her legs. There is no gap at the front curve of the counter. A second waitress figure simultaneously appears at the back end of the counter.",
+    "01:53-01:58 the waitress works behind the counter at the back. End of clip."
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress / front curved end of the counter",
+      "invariant_violated": "traversal must respect solid fixtures",
+      "description": "At ~01:51.3 the waitress stands from a customer-side stool between the stools and the counter. By ~01:52.0 she is on the staff side of the counter in the foreground, with the counter edge cutting across her legs. The front of the counter is a continuous curved run with no opening, and the only established passage is the gap at the far back end. She effectively passes through the counter. At the same moment a second waitress figure materialises at the back end of the counter.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "view into the building through the front windows",
+      "invariant_violated": "view through opening must match established far side",
+      "description": "From outside, the front windows show a cool, white-walled, brightly lit room. A stainless kitchen line and low counter sit directly behind the centre-right (OPEN) window, with low orange seating behind the others. The established interior is a warm-toned diner: high-backed booths line every window wall, and the kitchen is only reachable through a pass-through set into a solid wall. The space seen through the glass is a different room from the one the windows supposedly open onto.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:19",
+      "entity": "customer entrance / man's entry route",
+      "invariant_violated": "entrance must exist where the exterior places it",
+      "description": "The exterior places a glazed entrance door in the front facade right beside the OPEN-sign window. The interior wall holding the OPEN window has only windows, a solid wall and the kitchen pass-through, with no door. The man's entry is shown only as him emerging from the staff-side door behind the counter, next to the pass-through, and walking round the counter end into the dining area. The customer route and the front door are irreconcilable with the facade as shown.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:19",
+      "entity": "neon OPEN sign in the window",
+      "invariant_violated": "fixture oriented to serve its function / one-sided sign",
+      "description": "The same neon OPEN sign reads correctly from outside (00:09-00:10 exterior). It also reads correctly, not mirrored, from inside (00:19-01:58 wide shots, 01:09 close shot). A single window sign cannot read the right way from both sides. Inside, it is oriented to serve the diners rather than the street. Meanwhile the adjacent left-window sign does appear reversed ('HO'), showing the scene knows signs should mirror.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:59",
+      "entity": "view out of the far (OPEN) window",
+      "invariant_violated": "view through opening must match established exterior",
+      "description": "Through the OPEN-sign window and the left windows, a large gabled-roof building and several parked cars appear immediately outside. The exterior establishing shot looks at that same facade from the lot and shows an empty, flat, dark lot with only a semi tractor and no adjacent building or cars. The window looks out toward the camera's own position in the exterior shot, so this cannot be explained as off-screen surroundings.",
+      "severity": "moderate",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "truck seen through the window",
+      "invariant_violated": "view through opening must match established exterior",
+      "description": "The lot seen through the window holds a dark-green straight box truck parked close to the diner, and the man walks to it as his vehicle. The established exterior had a white semi tractor with no trailer parked left of the building. The vehicle seen through the window does not match the established exterior.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "layout-connectivity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__layout-connectivity__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

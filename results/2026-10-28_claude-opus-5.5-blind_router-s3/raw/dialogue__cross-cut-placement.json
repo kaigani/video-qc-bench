@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "Cut detection: ffmpeg scene scores never exceed ~0.011 across 10.04s; 8fps dense check of 6.9-9.3s shows continuous motion; treated as a single continuous take with a camera move rather than hard cuts",
+    "shot 1: 00:00-00:07, static medium close-up, man in green/white striped shirt facing camera, standing in front of wood door with brass hook + navy coat (screen-left of him) and wheel ornament above hook; green wall with brass box and 'V' framed print at right",
+    "shot 1 (continuous move): 00:07-00:10, man looks down, turns to his right (screen-left) and walks left past the hooked coat; camera pushes in and pans/tracks left to follow him to the adjacent door, where he stands in profile with his hands at the door panel",
+    "Anchors: A1 brass hook + navy coat on the central door; A2 framed lemon/face print on the same door, right of hook; A3 dark gap/door-frame between central and left doors; A4 green wall with brass switch/boxes",
+    "Man 00:00-07:00: present, right of A1 (coat), in front of A2, facing camera, talking/reacting",
+    "Man 07:25-08:00: present, turning screen-left, passing in front of A1 coat; A2 print visible behind/right of his head",
+    "Man 08:25-09:75: present, left of A1 coat and across A3 gap, at left door, facing left door in profile, hands raised at panel; A4 brass boxes now at frame left; crossing of A1 seen on camera, so side change is explained",
+    "Coat: same navy coat on same hook throughout; white stripe on lower coat visible only once framing reveals lower part",
+    "No body/geometry interpenetration, no duplicate person, no disappearing/reappearing person, no hand/action handoff observed"
+  ],
+  "findings": [],
+  "video": "dialogue.mp4",
+  "role": "cross-cut-placement",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-04__cross-cut-placement__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-04.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-04__cross-cut-placement.json",
+  "frozen_source_sha256": "7dc62caf3722e770522e6da39ac9a4a49d151774667a0eb741a692ffd39b7406",
+  "key": "dialogue__cross-cut-placement",
+  "parseOk": true
+}

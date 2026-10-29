@@ -1,0 +1,29 @@
+{
+  "ledger": [
+    "Front license plate (white plate, red characters, below left bumper) 00:00.000-00:00.250: sharpest reading 'STE?97' where the 4th glyph is a fused vertical stroke + '9'-like loop (reads like '|9' / 'l9', not a single standard character)",
+    "Front license plate 00:00.400-00:00.500: reads 'STE|97' with the same malformed fused 4th glyph; characters 'S','T','E','7' clean",
+    "Front license plate 00:00.750: plate partially cropped at bottom frame edge as camera tilts up; legible portion reads 'STE|87' - the loop glyph now appears closed at bottom, '8'-like rather than '9'-like",
+    "Front license plate 00:01.000-00:01.250: mostly cropped by frame bottom; top halves of 'STE|8/9 7' visible, too cut off for a full reading",
+    "Front license plate 00:01.500 onward: out of frame for remainder of clip",
+    "Distant roadside sign near utility poles ~00:06.500-00:07.500: tiny, blurred, no legible text (not assessed)",
+    "No other readable text (no badges/emblems with legible lettering) observed through 00:09.750"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Front license plate 'STE?97'",
+      "invariant_violated": "legibility - malformed glyph on plate",
+      "description": "The plate is large, steady and clearly legible, but its 4th character is a non-standard fused glyph: a vertical stroke joined to a '9'-like loop ('|9'), which is not a real character and makes the plate read as an incoherent string ('STE|97') rather than a plausible plate format.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Front license plate 4th/5th glyph",
+      "invariant_violated": "text stability - characters change between legible readings",
+      "description": "Between 00:00.400 (reads 'STE|97', loop glyph open like a '9') and 00:00.750 (reads 'STE|87', loop glyph closed like an '8'), the same glyph changes shape with no action explaining it; only camera tilt/perspective changes. Partial cropping at 00:00.750 lowers certainty.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "ledger": [
+    "Text elements = large black outlined digits on the front face of toy cubes, read left-to-right by row position (pos1..pos8); all digits are clean, coherent numerals when sharp (no garbled glyphs).",
+    "00:00.000 pos1 green cube held: '2'; separate green cube (later pos3): '2'",
+    "00:00.500-00:00.750 pos1 cube recolors green->blue while held; digit stays '2'",
+    "00:01.000-00:01.250 new blue cube emerges beside pos1 (pos2): '3'; from 00:01.250 row reads 2 3 2",
+    "00:01.500-00:02.420 pos3 green cube: '2' (sharp at 00:02.000, 00:02.250)",
+    "00:02.500-00:02.750 pos3 green cube, same place and orientation, hand on top: '3'",
+    "00:03.000-00:03.250 pos3 green cube reads '2' again; a new green cube with '3' slides out to its right (pos4)",
+    "00:03.500 pos4 green cube held: '3'",
+    "00:03.750-00:04.250 pos4 cube is now beige/orange and reads '2' (still held); pos5 blue cube appears: '3'",
+    "00:04.500-00:05.000 pos5 recolors blue->pale grey-blue, digit '3'",
+    "00:05.250-00:05.750 pos6 cube held, blue->teal->green, digit '3'",
+    "00:06.000-00:06.250 pos6 green cube reads '5'; pos7 green cube appears: '3'",
+    "00:06.500 pos7 green cube held: '3'",
+    "00:06.750-00:07.000 pos7 green cube reads '2'; pos8 blue cube appears: '3'",
+    "00:07.000-00:07.500 pos8 blue cube held: '3' (sharp)",
+    "00:07.750-00:09.750 pos8 blue cube reads '6'",
+    "00:08.000-00:09.750 final row stable and legible: 2 3 2 2 3 5 2 6",
+    "Audio unassessed (not relevant to this role)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "pos3 green cube digit",
+      "invariant_violated": "text stability (digit changed without visible rotation)",
+      "description": "Green cube in pos3 reads a sharp '2' at 00:02.250 (and at 12fps up to ~00:02.42). Next it reads '3' at 00:02.500-00:02.750 in the same place and orientation. The hand only rests on top, and no tumble or face rotation is visible.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "pos3 green cube digit / new pos4 cube",
+      "invariant_violated": "text stability (digit reverts; duplicated block)",
+      "description": "The same pos3 green cube that read '3' at 00:02.750 reads '2' again at 00:03.000-00:03.250. Meanwhile a second green '3' cube slides out of its right side. The digit flips 2->3->2 with no visible reorientation.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "pos4 cube digit",
+      "invariant_violated": "text stability (digit and color change while held)",
+      "description": "Held green cube in pos4 reads '3' at 00:03.500. At 00:03.750 the same held cube is beige/orange and reads '2'. A rotation could show another face, but it cannot change the whole cube's color, so the digit change is unexplained.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "pos6 cube digit",
+      "invariant_violated": "text stability (digit changed without visible action)",
+      "description": "Pos6 cube reads a sharp green '3' at 00:05.750. At 00:06.000 it reads '5' in the same position and orientation, with the hand already moving on to the next cube.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "pos7 cube digit",
+      "invariant_violated": "text stability (digit changed without visible action)",
+      "description": "Pos7 green cube reads '3' at 00:06.250-00:06.500. At 00:06.750 it has settled reading '2' as the hand moves to a new blue cube. No tumble shows a different face being brought forward.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "pos8 blue cube digit",
+      "invariant_violated": "text stability (digit morph while held)",
+      "description": "Pos8 blue cube reads a sharp '3' from 00:07.000 to 00:07.500. Over about 00:07.6 it smears and becomes '6', which it then reads at 00:07.750 and through the end. The cube keeps its orientation, so the digit morphs instead of the cube being turned to another face.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "text-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-12__text-stability__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

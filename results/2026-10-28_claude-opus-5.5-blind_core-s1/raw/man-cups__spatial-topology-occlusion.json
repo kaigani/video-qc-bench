@@ -1,0 +1,48 @@
+{
+  "ledger": [
+    "camera | 00:00 tight high-angle close-up on cups from the performer's left/front | 09:75 wide side-profile view of seated performer at table edge | continuous pull-back and orbit with no hard cuts; drops lower at ~3.0s, reveals the performer at ~4.5s, is frontal ~6.0-7.5s, and orbits to the performer's left side by ~9.0s",
+    "round table / red cloth with medallion ring and pale green inner field | close-ups: large green oval inside a ring of coin medallions | end: small round table, green oval in the centre, ring of medallions around it | green field reads as a narrow strip along the performer at ~5.0-6.25s and as a central oval at ~7.5-9.75s; the apparent table scale shrinks a lot as the camera pulls back",
+    "four metal cups | 0-4s: diamond cluster (back, centre with coin stack, right, front-left) inside the green field | 9.0-9.75s: compact cluster of four (one behind, three in front) left of the performer | ~5.0-7.5s: read as a near-straight left-right row of four between the performer's hands; count stays at 4 throughout",
+    "loose coins on the green field | gold coin beside the right cup, large gold coin bottom-right, small yellow chip at the bottom edge | similar small group of gold/silver coins near the cups | they follow the camera move; no depth-order problems seen",
+    "performer (blue suit) | 0-3s: only hands and a blue sleeve, entering from frame-left | 9.0-9.75s: seated in a black leather chair at the right edge of the table, in profile facing left | revealed at ~4.5s on the left side of the frame, centred behind the table ~6-8s, then in profile; side of the table stays consistent with the hands entering from the left early on",
+    "room background | windows behind the table, blurred onlookers, wooden chairs | windows at frame-left and far right, framed picture and wall sconce centre, chairs, standing onlooker at right | windows stay behind the performer during the frontal phase; picture-frame wall shows up at frame-left at 8.5s and moves to centre by 9.0s, matching the orbit",
+    "occlusion: hands vs cups vs table edge | fingers in front of cup rims, cups in front of the medallions, table edge in front of the performer's lower torso | consistent | no background element drawn over a foreground one was seen"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "four-cup arrangement on the green field",
+      "invariant_violated": "scene layout consistency across viewpoints",
+      "description": "During the close-ups (0-4.0s) the cups form a 2-D diamond cluster with clear depth separation (back cup, centre cup, right cup, front-left cup). By ~5.0-7.5s, seen from the front, they read as an evenly spaced left-to-right row of four sitting along the performer's edge of the green field. By 9.0s, seen from the side, they are a compact cluster again. A diamond seen from the front should still show one cup clearly behind the others. A straight row seen from the side at 9.0s should recede in depth as a line. Neither happens, so the spatial layout of the cups seems to re-form to suit each viewpoint during the continuous camera move.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "table and green inner field",
+      "invariant_violated": "viewpoint-consistent table geometry",
+      "description": "In the close-ups the cups sit well inside a broad green oval surrounded by the medallion ring. At ~6.0-6.25s the green field is a narrow band right at the performer's edge, and a large plain red expanse with no medallions stretches far to the right. By 7.5-9.75s the table is a small round table with a centred green oval and medallions all round. The size of the tabletop and the shape and position of the field relative to the performer do not stay geometrically compatible through the uncut pull-back.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-06__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "8956b2264fae6bfd41212b1eaec7e74f00da537f0870f950f8007158dd3d5a4d",
+  "key": "man-cups__spatial-topology-occlusion",
+  "parseOk": true
+}

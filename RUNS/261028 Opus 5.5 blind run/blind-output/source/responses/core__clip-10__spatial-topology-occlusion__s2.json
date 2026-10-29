@@ -1,0 +1,20 @@
+{
+  "ledger": [
+    "skatepark layout | flat concrete plaza; large pyramid/hump ramp left of skater, concrete cylinder bench right at 00:00 | low fisheye camera rotating around skater; hump and bench leave frame as camera pans | bench exits frame right 00:00.25->00:00.5 consistent with pan",
+    "background light poles & tree line | multiple stadium-style poles on horizon, one tall curved pole right of skater | poles persist on horizon throughout, tall pole drifts right/up with camera tilt | 00:01.5-00:03.25 a pole's lower section is visible beneath the airborne board while its upper part is hidden by the skater; reads as background occluded by foreground, no ordering error clearly visible",
+    "bowl / coping edge | from 00:03.5 a curved coping edge runs to the camera's left of the skater's flat path | 00:08.0-00:09.75 the camera swings so a bowl with coping fills the foreground and the skater appears beyond/over it | flat plaza at 00:07.5 becomes a bowl-dominated view within ~0.75s",
+    "skater (spatial position only) | on flat ground center frame | ends rolling on the far side of a coping edge, on the bowl's sloped surface | ollies at 00:01.5 and 00:08.0; shadow stays on the ground plane each time",
+    "concrete ledge with pole base | appears upper right 00:04.75-00:07.0 behind the skater | pans out of frame by 00:07.5 | stays consistent while visible",
+    "occlusion skater vs background | skater body in front of sky/poles/trees throughout | same | no background elements seen rendering over the skater or board"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.25",
+      "entity": "ground under skater / bowl coping",
+      "invariant_violated": "scene layout consistency under camera move",
+      "description": "Through 00:07.5 the skater rolls on open flat concrete, with the camera low in front and only flat ground between them. During one ollie (00:08.0-00:08.75) a bowl with a coping lip appears between the camera and the skater. By 00:09.0-00:09.75 the skater lands on the far side of that coping, on what looks like the sloped bowl surface. Neither the skater nor the camera moved far enough to explain a bowl suddenly appearing between them, so the terrain under and in front of the skater seems to morph rather than being revealed by the pan.",
+      "severity": "moderate",
+      "confidence": 0.4
+    }
+  ]
+}

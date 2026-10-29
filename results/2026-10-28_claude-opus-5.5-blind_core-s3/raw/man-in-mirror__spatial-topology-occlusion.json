@@ -1,0 +1,48 @@
+{
+  "ledger": [
+    "camera | single continuous over-the-shoulder shot from behind/right of the man, mirror filling center-right of frame | same framing at 09.75 with slight drift/push-in | no cuts; small handheld-style drift only",
+    "wall-mounted gilt-framed mirror | left frame edge ~x230/640, right edge near right of frame, bottom rail lower frame | unchanged position | real arm repeatedly passes in front of bottom rail (02.25-04.25), correctly occluding it",
+    "real room (camera side, outside mirror) | plain beige wall left of mirror | unchanged | consistent",
+    "reflected room behind man | left\u2192right in mirror: dark wood panel door with brass knob, white door trim/casing, beige wall with light switch, dark wood shelving with bottles at far right | same layout and same screen positions at end | door knob briefly hidden behind reflected torso/real arm ~04.00; layout stable throughout",
+    "real man (foreground) | seen 3/4 from behind, right ear and right jaw visible, head at left edge, razor in right hand at chin | same pose family at end, razor at cheek/temple | hand rises to temple/crown 01.75-04.25 then returns to chin",
+    "reflected man | almost fully frontal face and torso, centered in right half of mirror, razor hand on screen-right (correct mirror handedness) | frontal at end, razor at upper lip | hand goes to nose/forehead 01.75-04.25 and back",
+    "occlusion: real head/shoulder vs mirror | real head/shoulder overlap mirror left edge and occlude it | same | consistent nearer-over-farther ordering; no background bleed-through observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "reflected man vs. real man (mirror viewpoint geometry)",
+      "invariant_violated": "mirror reflection viewpoint consistency",
+      "description": "The camera sees the real man in roughly 3/4 rear view (back of head, right ear and right jawline visible, face turned away toward the mirror), which for a planar mirror facing the camera implies the reflection should show his face from a strongly oblique front-right angle. Instead the reflection shows an almost fully frontal face and squared-on torso looking toward the lens throughout the clip (clearest at 01.75 and 03.25). The real and reflected bodies are not geometrically compatible views of the same person in one plane mirror.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "razor hand: real vs. reflection",
+      "invariant_violated": "mirror correspondence of moving element",
+      "description": "From 02.25 to 04.00 the real right hand is raised to the crown/back-top of the head with the razor lying against the hair behind the hairline, while the reflected hand is in front of the face with the razor drawn horizontally across the center of the forehead. Similar offsets at 00.00 (real razor under the chin vs. reflected razor at the upper lip) and 01.75 (real razor at the temple above eye level vs. reflected razor on the nose bridge). The reflected hand position does not correspond to where the real hand is in 3D.",
+      "severity": "moderate",
+      "confidence": 0.4
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-07__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "78aa32c03177ea88b9d816dc2e2c15ade15e63c25fd851cedaf283edd01d2816",
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "parseOk": true
+}

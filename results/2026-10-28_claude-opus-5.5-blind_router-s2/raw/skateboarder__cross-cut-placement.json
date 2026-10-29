@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Shot list: shot 1: 00:00-00:10, single continuous handheld/gimbal follow shot with low wide-angle fisheye framing that orbits the skater (front-low 00:00-01:25, under-trick upward 01:50-03:25, front-low 03:50-04:25, rear/side follow 04:50-06:00, low front-side 06:25-07:25, front-low under second trick 07:50-08:75, side-on at bowl lip 09:00-09:75). Scene-change scores across all 241 frames peak at 0.09; dense 12 fps check of 01:10-02:00 shows smooth continuous motion, so no hard camera cuts were detected",
+    "Fixed anchors: (A) tall light poles with lamp heads / tall angled pole near the skater, (B) quarter-pipe/hip ramp and coping edge, (C) concrete bowl with tiled floor and metal coping (visible 08:25-09:75), (D) concrete trash-can/bollard at 00:00-00:25",
+    "Entity skater (black tee with logo, black pants, green socks, red shoes, dark hair): present in every frame 00:00-09:75 as the only person; rolling 00:00-01:00, kickflip-type trick in the air 01:25-03:00, lands about 03:25-03:50, rolls toward the camera 03:75-04:25, rolls away past the hip ramp 04:50-06:00, rolls toward the camera crouched 06:25-07:25, second flip trick 07:75-08:75, landing near the bowl lip 09:00-09:75",
+    "Skater board-to-body relation: board stays under or near the feet throughout; it flips during both tricks and is caught and landed in continuous motion",
+    "Placement diffs: there are no cuts to diff across. Within the continuous shot, the skater's position relative to the poles, ramps and bowl changes only through visible rolling or camera orbiting. No duplicate figure, no pass-through of the coping or ramp, and no hand or person swap",
+    "Audio not assessed (frames only)"
+  ],
+  "findings": [],
+  "video": "skateboarder.mp4",
+  "role": "cross-cut-placement",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-10__cross-cut-placement__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-10__cross-cut-placement.json",
+  "frozen_source_sha256": "c842dcd664f5ca71b38cb1b75a16352230f33598cb16b93eff8c9f1d3753f161",
+  "key": "skateboarder__cross-cut-placement",
+  "parseOk": true
+}

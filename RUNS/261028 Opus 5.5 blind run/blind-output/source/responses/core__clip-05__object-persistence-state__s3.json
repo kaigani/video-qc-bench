@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "woman (carrier only) | hands empty, walking through kitchen | hands empty, walking into a kitchen | never picks up, carries or moves any object during the 10 s clip",
+    "countertop microwave with round bread/wicker basket on top (start kitchen) | on counter right of hallway opening, basket on top | out of frame after ~01:25 | no interaction; end-of-clip kitchen instead shows an over-range microwave in different cabinetry (treated as a room/set difference, not tracked as an object violation)",
+    "red kettle/pitcher at sink (start kitchen) | on counter by sink window | out of frame after ~02:25 | static, no interaction",
+    "framed blue-flower/woman portrait print (hallway) | hung on hallway wall beside small orange framed picture | an identical print appears on bedroom wall left of the doorway from 07:00 | no one moves it; appears in two places",
+    "small orange framed picture (hallway) | right of blue-flower print on hallway wall | passed at ~04:50 | static",
+    "framed painting above bed (bedroom) | on wall above headboard | out of frame after ~06:25 | static",
+    "bedside lamps, chandelier, chairs at foot of bed | static in bedroom | static | no interaction",
+    "small side table with framed photo (bedroom, between doorway and window) | photo shows a colorful yellow/blue/white image (06:00-06:50) | photo shows a portrait of a seated man in dark jacket (07:50-08:75) | content change with no interaction",
+    "wall picture between doorway and window (bedroom) | small framed colorful green/red/blue block image (06:50-06:75) | larger framed red/green hillside landscape with small figure (07:50-09:25) | content/size change with no interaction",
+    "white door at hallway end | closed | closed | no state change"
+  ],
+  "findings": [
+    {
+      "timestamp": "07:00",
+      "entity": "framed blue-flower portrait print",
+      "invariant_violated": "identity/duplication",
+      "description": "The distinctive print of a woman's head over a blue flower hung on the hallway wall outside the bedroom (02:00-04:25). When the camera turns back toward the bedroom doorway, an identical print is hanging on the bedroom-side wall left of the doorway (07:00-08:50). Nobody moved it, and from inside the bedroom the hallway wall should not be visible in that spot, so the object has been duplicated.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "07:50",
+      "entity": "framed photo on bedroom side table",
+      "invariant_violated": "identity/state persistence",
+      "description": "The framed photo on the small table between the doorway and window shows a colorful yellow/blue/white image at 06:00-06:50. When it is seen again at 07:50 in the same place, it shows a portrait of a seated man in a dark jacket. Nobody touches it.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "07:50",
+      "entity": "wall picture between bedroom doorway and window",
+      "invariant_violated": "identity transformation",
+      "description": "At 06:50-06:75 the wall between the doorway and window holds a small framed colorful block image in green, red and blue. From 07:50 the same spot holds a larger framed landscape of red and green hills with a small figure, in a different frame. There is no action that would swap it.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

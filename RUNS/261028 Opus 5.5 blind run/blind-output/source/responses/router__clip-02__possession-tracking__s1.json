@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "00:00 glass bowl on table holds 8 balls: 2 red, 3 green, 3 yellow; both child hands above bowl, blurred, no ball clearly visible in them; extra red/green balls on table at right frame edge; small metal cup with white ornament on table right",
+    "00:00.25-00:00.50 both hands reach into bowl; bowl contents partly occluded by fingers",
+    "00:00.75 a red ball is held between both hands above the bowl; bowl still shows 2 red, 3 green, 3 yellow (8 balls) — the held red ball is a 9th ball",
+    "00:01.00-00:02.00 red ball held in both hands above bowl; bowl contents unchanged (2R/3G/3Y)",
+    "00:02.25-00:02.75 red ball lowered back into bowl (hand -> bowl); bowl now expected 3R/3G/3Y = 9 balls",
+    "00:03.00-00:04.75 right hand rests in bowl touching balls, left hand on rim; visible balls consistent with ~3R/3G/3Y with some occluded under hand",
+    "00:05.00-00:09.75 right hand stirs balls in bowl with heavy motion blur; no ball visibly leaves bowl, none added from outside; balls appear increasingly lumpy/irregular in shape",
+    "00:07.75 bowl shows ~5 red, 1 green, ~2 yellow distinct objects",
+    "00:09.25 bowl shows ~4 red, 4 green, 0 yellow visible",
+    "00:09.50-00:09.75 bowl shows ~4-5 red, 1-2 green, 1 yellow; cup and table balls out of frame due to camera push-in"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "balls in glass bowl (color composition)",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "The bowl was established with 3 red, 3 green, 3 yellow balls (2R/3G/3Y at 00:00 plus one red returned at 00:02.5) and nothing is added or removed during stirring, yet at 00:07.75 at least 5 distinct red balls are visible, and at 00:09.25 four red and four green balls are visible with no yellow; colour counts exceed what was present, so balls are changing colour/kind or duplicating while being stirred.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "balls in glass bowl (shape)",
+      "invariant_violated": "object identity persistence",
+      "description": "Smooth rigid spherical balls seen clearly at 00:00-00:04.75 become lumpy, irregular, faceted blobs (pepper/berry-like) from about 00:06 through 00:09.75 while only being stirred, beyond what motion blur explains (e.g. frames 00:09.25, 00:09.75 show angular shapes with sharp edges).",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "third red ball",
+      "invariant_violated": "continuous chain of custody",
+      "description": "At 00:00 the bowl holds 2 red balls and the hands appear empty; by 00:00.75 a red ball is in the hands while the bowl still visibly contains both original red balls and all 8 original balls. The 9th red ball's origin is not shown (it may have been concealed in the blurred hand entering frame), so this is a weak custody gap.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

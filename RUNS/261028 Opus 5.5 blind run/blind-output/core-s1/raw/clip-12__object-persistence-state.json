@@ -1,0 +1,95 @@
+{
+  "ledger": [
+    "cube count on table | 2 green cubes, each front face '2', side-by-side with a gap, left one held by hand | 8 cubes in a touching row reading 2-3-2-2-3-5-2-6 (blue, blue, green, peach, pale-blue/white, green, green, blue) | count rises 2->3 (00:01.0), 3->4 (00:03.0-03.25), 4->5 (00:04.0), 5->6 (00:05.0), 6->7 (00:06.0), 7->8 (00:06.75), yet the single hand only ever holds one cube and none is brought in from off-frame",
+    "cube A (initially left green '2') | green, front '2', held by fingertips on top | blue, front '2', leftmost in row, finger resting on top at end | turns from green to blue while merely being rotated (00:00.5-00:00.75); a second blue cube splits off its right side at 00:01.0",
+    "cube B (blue '3', 2nd from left) | does not exist at start | blue, front '3', 2nd position, stays put from 00:01.5 to end | appears out of cube A in the hand at 00:01.0, set down by 00:01.5",
+    "cube C (initially right green '2') | green, front '2', freestanding on table right of cube A | green, front '2', 3rd position | hand turns it so '3' shows (00:02.5-02.75), then it shows '2' again at 00:03.0 while a second green cube buds off its right side",
+    "cube D (peach '2', 4th position) | does not exist at start | peach/orange, front '2' | emerges as green '3' from cube C (00:03.0-03.5), recolors to peach '2' while held (00:03.75)",
+    "cube E (pale-blue/white '3', 5th position) | does not exist at start | pale blue/white, front '3' | emerges as a blue cube beside cube D at 00:04.0, becomes pale blue/white '3' by 00:04.5-00:04.75",
+    "cube F (green '5', 6th position) | does not exist at start | green, front '5' | emerges blue '3' beside cube E (00:05.0-05.25), becomes green '3' (00:05.5-05.75), shows '5' once set down at 00:06.0",
+    "cube G (green '2', 7th position) | does not exist at start | green, front '2' | emerges beside cube F at 00:06.0 as green '3' held in hand, shows green '2' when a further cube appears at 00:06.75",
+    "cube H (blue '6', 8th position) | does not exist at start | blue, front '6', rightmost | emerges blue '3' at 00:06.75, set down, front reads '6' at 00:07.75 and stays to end",
+    "hand | holding/turning one cube at a time throughout | finger resting on leftmost cube top at end | never fetches cubes from outside frame; brief touches of cubes C/D (00:08.25-00:08.75) cause no state change",
+    "table surface | plain wood, empty except for 2 cubes | holds row of 8 cubes | no other objects present"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "cube A (left cube, initially green '2')",
+      "invariant_violated": "object identity / color persistence",
+      "description": "The left cube is green at 00:00.0-00:00.25. While the hand only twists it in place, it becomes a green/blue mixture at 00:00.5 and is fully blue at 00:00.75. A color change across the whole object with no swap or paint action is unexplained.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "cube count (cube A -> cubes A + B)",
+      "invariant_violated": "count conservation / no duplication",
+      "description": "At 00:01.0 the single blue cube held in the hand splits into two adjacent blue cubes ('2' and a blurred one that reads '3' at 00:01.25). No second cube was picked up or brought into frame, so the count rises from 2 to 3 with no cause.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "cube C (right green cube) -> new cube D",
+      "invariant_violated": "count conservation / no duplication",
+      "description": "The hand turns the green cube C to show '3' (00:02.5-02.75). At 00:03.0 it shows '2' again, and a second green cube buds off its right side. By 00:03.25 two separate green cubes ('2' and '3') stand there. The count goes from 3 to 4 with no new cube introduced.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "cube D (held cube)",
+      "invariant_violated": "object identity / color persistence",
+      "description": "The cube in the hand is green with a '3' at 00:03.5. At 00:03.75 it has become a peach/orange cube showing '2', and it stays peach to the end. Rotating a cube cannot change its body color.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "cube E (new 5th cube)",
+      "invariant_violated": "count conservation + color persistence",
+      "description": "At 00:04.0 a blue cube materializes beside the peach cube under the hand, although the hand had only been placing the peach cube (count 4->5). By 00:04.5-00:04.75 that cube has shifted from saturated blue to pale blue/white '3'.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "cube F (new 6th cube)",
+      "invariant_violated": "count conservation + color persistence",
+      "description": "After the pale '3' cube is set down (00:04.75), a blue cube emerges from its right side at 00:05.0, with no fetch action, and is a blue '3' by 00:05.25 (count 5->6). While held it turns green by 00:05.5-00:05.75.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "cubes F/G/H (6th-8th cubes)",
+      "invariant_violated": "count conservation / no duplication",
+      "description": "The held green '3' cube is set down showing '5' at 00:06.0, and at the same moment another green cube is already in the hand beside it (count 6->7). At 00:06.75 that held green '3' sits in place as green '2' while a further blue '3' cube is in the hand (count 7->8). No cubes were taken from a supply.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "cube H (rightmost blue cube)",
+      "invariant_violated": "face/state change without action",
+      "description": "The rightmost cube shows '3' on its front at 00:07.0-00:07.5 while it is being nudged into place. At 00:07.75 the front reads '6', with no visible rotation large enough to bring a different face forward.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "object-persistence-state",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__object-persistence-state__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

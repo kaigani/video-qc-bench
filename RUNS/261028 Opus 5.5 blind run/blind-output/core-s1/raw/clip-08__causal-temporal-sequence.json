@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "woman with red bag (background) | walking away from camera across paved plaza at 00:00 | small, far up frame by ~00:03 then out of view as camera reframes | continuous forward walking 00:00-00:03, stride and recession plausible, no causal issue",
+    "phone held in hand (foreground) | out of focus, screen shows 'A742' at 00:00 | focus pulls onto phone ~00:03.25; phone lowered out of frame 00:09.25-00:09.75 revealing stairs | rack focus and lowering motion continuous; camera motion \u2192 background parallax plausible",
+    "sunlit patch / shadow on phone screen | bright diagonal patch of sunlight on screen from ~00:01 onward | patch present/absent alternately through 00:06.5-00:08.25 | patch appears, vanishes and jumps position within single 1/12-s steps while phone and hand are near-stationary (e.g. present 00:06.5, gone 00:06.75, present 00:07.0, gone 00:07.25, present 00:08.0, gone 00:08.25); no visible occluder or phone tilt causing it",
+    "screen text 'A742' / 'AZ-12' | blurry 'A742' visible | sharp 'A742', 'AZ-12' at end | legibility changes only with focus pull and glare wash-out (glare whitens digits under the patch) \u2013 cause\u2192effect consistent",
+    "right thumb / finger taps | thumb resting on screen edge | thumb sweeps/taps across screen ~00:06.5, 00:07.75, 00:08.0, 00:08.5-00:08.75 | taps produce no visible screen change (static display, plausible no-op); thumb's own shadow appears on screen only in sunlit frames, consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "sunlight patch on phone screen",
+      "invariant_violated": "light change without cause / temporal continuity",
+      "description": "The large bright sunlight patch on the phone screen flickers on and off and jumps location between consecutive 1/12-s samples (e.g. present 00:06.5, absent 00:06.75, present 00:07.0, absent 00:07.25-00:07.75, present 00:08.0, absent 00:08.25) while the phone, hand and camera are essentially stationary and no occluding object is visible; only the small thumb moves, which cannot account for a shadow edge spanning half the screen. Same on/off strip flicker is visible at lower scale during 00:01-00:03.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "clip-08.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

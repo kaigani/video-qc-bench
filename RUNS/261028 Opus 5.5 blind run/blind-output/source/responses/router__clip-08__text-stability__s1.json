@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Phone main large text, center of screen: 00:00-00:03 heavily defocused, reads roughly 'A742' (first glyph smeared into a lambda-like shape by blur); 00:03.25-00:09.00 sharp, reads 'A742' / 'A7.42' with a short stray stroke/overbar above the A; consistent across all legible frames (00:06.75, 00:07.25, 00:08.25, 00:08.75, 00:09.00).",
+    "Phone secondary line below main number: 00:06.00-00:08.75 reads 'AZ-12' (stylized '1', small 'x2'-like glyph above it); at 00:08.90-00:09.00 reads 'AZ-X' (last two characters replaced by an X-like glyph) with no tap or scroll on that region.",
+    "Small glyph above secondary line: 'x2'/'ꭗ2'-like mark, stable 00:06-00:09.",
+    "Header line near top of screen: 00:03.25-00:08.75 reads 'A‾A' / 'A_A' (two A's joined by a bar, not a word or code); at 00:09.00 reads more like 'A7'/'A/' while slightly soft.",
+    "Status bar left: green icon + '7.42'/'742', stable 00:03.25-00:08.75.",
+    "Status bar center clock: '4:49', stable 00:03.25-00:08.75.",
+    "00:09.25-00:09.75: phone swung away with heavy motion blur, then out of frame; no legible text.",
+    "Background (wall, paving, railing, person with red bag): no legible text."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Secondary line on phone screen ('AZ-12')",
+      "invariant_violated": "text stability",
+      "description": "The line below the main number reads 'AZ-12' clearly from 00:06.00 through 00:08.75, then at 00:08.9-00:09.00 (still sharp enough to read) its trailing characters read 'AZ-X'. The thumb is resting on the screen edge with no tap, scroll, or screen transition, so nothing explains the characters changing.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Phone screen header line ('A‾A')",
+      "invariant_violated": "legibility / coherent text",
+      "description": "The header at the top of the app screen, legible in many sharp frames (00:06.75-00:08.75), is rendered as two 'A' glyphs joined by a bar ('A‾A'). That is not a word, code, or recognizable UI label. Together with the stray stroke over the main 'A742' and the 'x2' squiggle above 'AZ-12', the phone UI reads as pseudo-text instead of a real app screen.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ]
+}

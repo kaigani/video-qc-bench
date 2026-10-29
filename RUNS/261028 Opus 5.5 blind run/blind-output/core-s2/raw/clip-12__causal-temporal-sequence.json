@@ -1,0 +1,62 @@
+{
+  "ledger": [
+    "hand | grips/twists leftmost green '2' cube at 00:00 | rests fingertips on cubes 1-2 at left end of row at 09:75 | moves progressively rightward 00:00-07:75 twisting the end cube each time, then lifts (08:00) and moves back left touching orange cube (08:25-08:50) and blue cubes (09:00-09:75)",
+    "twist of cube under hand (00:00-01:25) \u2192 second cube appears adjacent to it (00:75-01:25) | cause: rotation only, no new block fetched | effect: row grows from 2 to 3 cubes | implausible: no source for added cube",
+    "twist of green cube at position 3 (02:25-03:00) \u2192 it shows '3' then splits into green '2' plus a new green '3' cube at position 4 (02:95-03:25) | implausible: added cube emerges out of the rotated cube",
+    "hand twists cube 4 (03:25-03:75) \u2192 cube becomes orange '2' and a new blue cube emerges at position 5 (04:00-04:25) | implausible",
+    "hand releases cube 5 and is empty above table (04:75-04:90) \u2192 within ~0.1-0.2 s a blue cube emerges from the right face of cube 5 under the fingers (04:95-05:25) | effect without cause: hand never reaches off-screen or to a supply",
+    "same twist-spawns-cube pattern repeats at 06:00 (cube 7), 06:50-06:75 (cube 8) | implausible",
+    "cube 8 rotated by hand (07:25-07:75) \u2192 face changes 3\u21926, hand withdraws (08:00) | plausible order",
+    "hand touches orange cube top (08:25-08:50) \u2192 no movement of cube | plausible (light touch)",
+    "hand presses cubes 1-2 (09:00-09:75) \u2192 slight shift/settling of left cubes | plausible",
+    "shadows of hand and cubes | track hand motion consistently throughout | no causal lighting change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "added cube at position 2",
+      "invariant_violated": "effect-without-cause (object addition)",
+      "description": "The hand only grips and twists the single leftmost cube from 00:00-00:75, yet by 01:00-01:25 a second blue '3' cube has emerged beside it under the same fingers; no new block is brought in from outside the frame or picked up from anywhere, so the row growing has no visible cause.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "green cube at position 3 / new cube at position 4",
+      "invariant_violated": "effect-without-cause / disproportionate effect",
+      "description": "The hand twists the green cube at position 3 until it shows '3' (02:50-02:90); continuing the twist causes the cube to split into a green '2' cube left in place plus a new green '3' cube slid out to its right (02:95-03:25). A rotation cannot produce an additional object; the added cube has no source.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "04:95",
+      "entity": "new cube at position 6",
+      "invariant_violated": "effect-without-cause (object addition)",
+      "description": "At 04:75-04:90 the hand has released cube 5 and hovers empty above the table; it never leaves frame or reaches for a supply, yet 0.1-0.2 s later a blue cube is emerging out of cube 5's right face under the fingertips and is set down as cube 6 (05:00-05:25).",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "06:00",
+      "entity": "cubes 7 and 8",
+      "invariant_violated": "effect-without-cause (repeated object spawning)",
+      "description": "The same pattern repeats: each time the hand twists the end cube (05:50-06:00 and 06:50-06:75), an extra cube appears out of it and the row lengthens, with no cube ever being fetched or carried in by the hand.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-12__causal-temporal-sequence__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

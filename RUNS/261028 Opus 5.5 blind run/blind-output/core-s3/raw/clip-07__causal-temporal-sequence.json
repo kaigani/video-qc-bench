@@ -1,0 +1,57 @@
+{
+  "ledger": [
+    "man (real, back to camera) | holding white-handled straight razor at chin, head tilted up | razor raised toward cheek/brow, head turned | strokes chin (0.0-1.5s), lifts to cheek/eye (1.75-2.0s), holds razor flat at forehead/hairline with head bowed (2.25-4.0s), snaps upright to eye/cheek (4.25-4.75s), back to chin strokes (5.0-9.25s), raises to cheek/temple (9.5-9.75s)",
+    "mirror reflection | should mirror real man's hand/razor/head simultaneously | mostly follows but desyncs | at 00:00.25, 00:06.25 and 00:09.25 the real razor is held away from the skin while the reflected razor is pressed against the chin/cheek; at 00:01.75 and 00:04.25 the real razor is at temple/brow while the reflected razor sits on the nose/eye",
+    "razor strokes -> skin/stubble | cause: repeated blade strokes on chin, cheek, forehead throughout 0-10s | effect expected: removal of stubble / shaving residue | no shaving cream, no lather, stubble on chin and upper lip unchanged from 00:00 to 00:09.75 in the reflection",
+    "head pose | tilted up at start | upright/slightly turned at end | bow from 2.0-4.0s, abrupt return to upright between 4.0 and 4.25s together with razor relocating from forehead to eye",
+    "action cycle | chin-stroke pose at 00:00.0 | near-identical chin-stroke pose recurs at 00:01.0, 00:05.0, 00:06.0, 00:06.5, 00:09.0 | cyclic repetition of the same beat without visible progress"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "mirror reflection of razor hand",
+      "invariant_violated": "effect without cause (reflection must be caused by real motion simultaneously)",
+      "description": "At 00:09.25 the real man holds the razor vertically several centimetres away from his jaw, yet the reflection shows the blade pressed against his cheek. Similar desyncs occur at 00:00.25 and 00:06.25 (real razor off the skin below the chin, reflected razor touching chin/lip) and at 00:01.75/00:04.25 (real razor at temple, reflected razor on nose/eye). The reflection performs contact the real body is not performing.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "stubble / skin under razor strokes",
+      "invariant_violated": "cause without effect",
+      "description": "Ten seconds of repeated straight-razor strokes over chin, cheek and forehead produce no visible effect: no lather or residue, no cleared patches, and the stubble on chin and upper lip in the reflection is unchanged from the first frame to the last.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "shaving action sequence",
+      "invariant_violated": "temporal flow (repeated beats)",
+      "description": "The same chin-stroke beat (head tilted up, razor at chin, matching hand and reflection pose) recurs almost identically at 00:00.0, 00:01.0, 00:05.0, 00:06.0, 00:06.5 and 00:09.0, giving a looped feel with no progression of the task.",
+      "severity": "minor",
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "head and razor hand",
+      "invariant_violated": "continuous motion / implausible timing",
+      "description": "Between 00:04.0 and 00:04.25 the head goes from bowed with the razor held flat at the hairline to fully upright with the razor at the eye/cheek in a single sample, with no transitional pose; the razor-on-forehead hold (2.25-4.0s) also ends without any completed stroke.",
+      "severity": "minor",
+      "confidence": 0.25
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__causal-temporal-sequence__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

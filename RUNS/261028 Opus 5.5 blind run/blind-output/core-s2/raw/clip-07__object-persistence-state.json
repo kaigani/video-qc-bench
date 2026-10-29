@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "small handheld grooming tool (white/pale razor-like blade with handle) | 00:00 held in right hand at chin; reflection shows white flat blade at upper lip/chin | 00:09.75 held in right hand near upper lip/cheek, appears silver-grey | moves chin -> cheek/nose (01:75-02:00) -> hairline/forehead (02:25-04:00) -> nose/chin (04:25-06:00) -> chin/lip/cheek (06:00-09:75); never set down; real-side object at hairline renders as dark comb-like tool while reflection shows white strip",
+    "wall mirror with gold/bronze frame | fixed on wall, intact | unchanged | no transitions",
+    "wooden door with brass knob (reflected) | closed, knob at left of reflection | unchanged | no transitions",
+    "light switch plate (reflected) | on wall between door frame and man | unchanged | no transitions",
+    "shelf with bottles/jars (reflected, upper right) | static, count stable | unchanged | no transitions"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "handheld grooming tool (real vs mirror reflection)",
+      "invariant_violated": "identity/position consistency between object and its reflection",
+      "description": "From ~00:02.25 to ~00:04.00 the tool in the real-side hand appears as a dark grey comb-like implement pushed into the hair above the temple, oriented diagonally into the hair, while the mirror reflection at the same moments shows a pale white flat strip held roughly horizontally against the forehead/brow. The reflected object differs in color, shape, and location from the real one, so the reflection does not depict the same object in the same place.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "handheld grooming tool",
+      "invariant_violated": "object presence consistency (reflection vs real)",
+      "description": "At 00:09.00 the real-side right hand is pinched at the chin with no tool visible, while the mirror clearly shows the white blade held against the cheek. At 00:09.25 the tool reappears in the real hand, upright and away from the face. The object may be hidden behind the fingers, so this is low-confidence.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "object-persistence-state",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__object-persistence-state__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,28 @@
+{
+  "ledger": [
+    "straight/pencil razor (real, foreground) | held in man's right hand, small white/silver blade at chin | held in right hand near cheek/upper lip at 09:750 | moves chin -> upper lip -> brow/hairline (02:00-04:25, appears darker/comb-like at temple) -> chin/cheek; not visible in real hand 08:50-09:00 though fingers keep pinch grip, reappears 09:25",
+    "razor (mirror reflection) | white blade in reflected right hand at upper lip/chin | in reflected hand at upper lip at 09:750 | continuously visible all frames; at 02:25-04:00 held flat across forehead/brow while real object sits at temple hairline",
+    "wall mirror with gilt frame | fixed on wall, intact | unchanged | no transitions",
+    "wooden door with brass knob (background/reflection) | closed, knob visible | unchanged | no transitions",
+    "light switch plate (reflection) | on wall right of door | unchanged | no transitions",
+    "shelf of bottles/jars (reflection, back right) | static on shelves | unchanged | no transitions, no count change observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08",
+      "entity": "razor in man's real (foreground) right hand",
+      "invariant_violated": "object persistence / possession",
+      "description": "From ~00:08.5 to 00:09.0 the foreground hand holds a pinch grip at the jaw with no razor visible anywhere in or protruding from the fingers, while the mirror reflection at the same instants clearly shows the white razor blade against the cheek. At 00:08.25 and again at 00:09.25 the razor is visible in the real hand. The object vanishes and reappears with no put-down or pick-up action, and the reflection contradicts its absence.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "razor (real vs reflected)",
+      "invariant_violated": "identity / location consistency",
+      "description": "From ~00:02.25 to 00:04.0 the reflected hand holds a bright white blade flat across the center of the forehead/brow, while the real hand holds a darker, comb-like elongated object angled into the hair at the temple. The same object appears with a different look and a different position and orientation on the two sides of the mirror.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

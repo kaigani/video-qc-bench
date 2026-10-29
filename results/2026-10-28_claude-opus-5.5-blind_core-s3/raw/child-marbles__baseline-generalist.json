@@ -1,0 +1,61 @@
+{
+  "ledger": [
+    "balls in glass bowl | ~10 balls: ~3 red, ~3-4 green, ~3 yellow, rigid glossy spheres | ~7-8 balls dominated by red (4-5 red), 2-3 green, 1 yellow, smeared/deformed shapes | count drops to ~5 at 05.75 then grows back with shifted colour mix during mixing 06.00-09.75",
+    "child | blue zip hoodie, dark hair, both hands at bowl | same hoodie, right hand stirring, left hand on rim | picks up red ball 01.00-02.00 and returns it; mixing from 05.00",
+    "loose balls on table right edge | red/green/yellow balls partly in frame | out of frame after push-in | consistent while visible",
+    "camera | high angle wide on child and table | tight push-in on bowl | continuous gradual zoom"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05.75",
+      "entity": "balls in bowl (count)",
+      "invariant_violated": "object permanence / count conservation",
+      "description": "At 05.25 the bowl holds ~10 balls (3 red, 3-4 green, 3 yellow); at 05.75 only ~5 are visible (2 green, 2 yellow, 1 red under hand) with no balls leaving the bowl, then the count rises again in later frames. Balls vanish and reappear without cause.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07.75",
+      "entity": "balls in bowl (colour composition)",
+      "invariant_violated": "object colour identity drift",
+      "description": "The starting mix of roughly equal red/green/yellow shifts during stirring: by 07.75 and 09.25-09.75 the bowl is dominated by 4-5 red balls with only one yellow visible, though no balls were added or removed. Yellow and green balls appear to turn red.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06.00",
+      "entity": "balls in bowl (shape)",
+      "invariant_violated": "rigid body shape consistency",
+      "description": "While stirring, the hard glossy spheres turn into lumpy, squashed blobs. At 06.00-06.75 they look like melting candy, and at 09.25-09.50 a green ball has a dripping tail. The smearing goes beyond normal motion blur.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:09.00",
+      "entity": "child's right hand",
+      "invariant_violated": "hand anatomy / object interpenetration",
+      "description": "At 09.00-09.75 the stirring hand dissolves into the balls: the fingers become indistinct, merge with the ball shapes and seem to pass through them, so the finger count and the hand's outline can't be read.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-02__baseline-generalist.json",
+  "frozen_source_sha256": "df5bba06c663f842cf96e917a22dc461b2f8801f125ef3f03b80c8983b9b114e",
+  "key": "child-marbles__baseline-generalist",
+  "parseOk": true
+}

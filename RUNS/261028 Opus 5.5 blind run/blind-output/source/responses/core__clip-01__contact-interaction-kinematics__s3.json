@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "Semi truck (exterior 00:00-00:10) | parked beside diner, wheels on ground | same | no body contact interactions",
+    "Waitress + cloth (00:10-00:19, 00:45-00:51) | right hand flat on cloth on counter | same | cloth stays under palm while wiping; contact continuous, no float",
+    "Man walking to stool (00:21-00:26) | walking, feet planted alternately | seated on stool, forearms on counter | hands contact counter edge ~00:24.75 before lowering onto stool ~00:25.25; plausible weight transfer",
+    "Waitress + coffee carafe pour at counter (00:24-00:27) | carafe gripped by handle | pouring into mug | contact maintained",
+    "Man's hand + mug, close-up pour (00:27-00:32) | right hand wrapped around mug 00:27.0-00:27.4 | hand released, resting fist at left 00:28.0 | carafe held above mug; carafe body stays upright/level while stream flows 00:28-00:31; carafe lifted away 00:31.5",
+    "Man + mug (00:36-00:45) | seated, both hands around mug on counter | same | stable grip, no clipping",
+    "Waitress + plate/mug at counter (01:09-01:17) | waitress sets plate, hand on plate rim | lifts plate and walks off holding it | hands meet on mug ~01:12.5-01:13.5; man's hand stays wrapped on mug; contacts visible",
+    "Waitress moving from behind counter to seat beside man (01:19-01:23) | standing behind counter wiping | seated on customer side next to man | lower body/apron passes through counter body 01:20.33-01:21.0",
+    "Hands + banknotes (01:37.6-01:40) | left hand brings bills and pins them flat | bills left folded beside mug | right hand joins 01:38.15, left releases ~01:39.1, right thumb releases ~01:39.6; contact continuous",
+    "Man walking to truck (01:41-01:49) | walking on gravel lot | at cab door, hand on door/handle | gait normal, feet grounded",
+    "Waitress at stool to behind counter (01:50-01:54) | seated on stool customer side | standing behind counter at coffee machines | stands from stool 01:51.1-01:51.9 with hands on counter; torso/legs pass through counter 01:52.1-01:52.7"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "Waitress / diner counter",
+      "invariant_violated": "solidity: body passes through counter",
+      "description": "At 01:20.0 the waitress stands behind the counter. From 01:20.33 her white apron and lower body appear on the customer side in front of the counter face while her upper body is still at/behind the counter top; by 01:21.0 she is seated on the customer side next to the man. She never walks around the counter end; her body moves straight through the solid counter in under one second.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress / diner counter",
+      "invariant_violated": "solidity: body passes through counter",
+      "description": "At 01:51.9 the waitress has risen from the customer-side stool. At 01:52.1-01:52.5 the counter top cuts across her torso while her striding legs remain on the customer side in front of the counter; by 01:52.7 she is standing behind the counter at the coffee machines. There is no gap or counter end in her path, so she passes directly through the counter.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:28",
+      "entity": "Coffee carafe pouring into mug (close-up)",
+      "invariant_violated": "pour without tilt / stream origin inconsistent with vessel",
+      "description": "From 00:28 to 00:31 coffee streams steadily into the mug, but the carafe stays upright: the liquid surface inside the bowl is horizontal (clearly visible at 00:30.9). The stream appears to come down from the neck through the middle of the glass bowl rather than from a tilted spout lip. A carafe this level cannot pour.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

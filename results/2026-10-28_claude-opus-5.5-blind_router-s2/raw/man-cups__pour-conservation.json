@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "Scene: single continuous orbiting shot (no hard cuts) of a man in a blue suit placing/removing coins in small stainless cups with copper-colored exteriors on a red coin-decorated table; transfer material = coins.",
+    "Cup A (front-left, steel rim, copper body) 00:00-00:01.0: one gold coin lying at the bottom; hand holds a separate coin above the table.",
+    "Cup A 00:01.25-00:02.25: hand reaches into cup A and lifts a gold coin/stack out (visible removal at 00:02.25).",
+    "Cup A 00:02.5-00:03.75: appears empty inside; hand hovers/drops a gold coin at the rim repeatedly.",
+    "Cup A 00:04.5-00:09.75: hand presses a gold coin against/into cup A at the rim while camera orbits; contents not clearly visible; same shape/finish throughout.",
+    "Cup B (middle) 00:00-00:02.0: tall stack of large gold coins filling the cup nearly to the rim; top coin gold with embossed design.",
+    "Cup B 00:02.5-00:02.75: top coin still near rim but appears slightly lower; no hand contact with cup B.",
+    "Cup B 00:03.0-00:03.25: top disc now pale/silver-white and sitting below the rim; no hand contact.",
+    "Cup B 00:03.75: single gold coin visible deep inside cup, well below rim; stack no longer visible; no hand contact.",
+    "Cup B 00:04.5-00:09.75: cup appears to have only a low/empty interior from all angles; no visible removal at any point.",
+    "Cup C (back-left) 00:00-00:04.0: empty steel interior; from ~00:03.25 the second hand drops gold coins near/into it.",
+    "Cup D (right) 00:00-00:04.0: empty steel interior; untouched.",
+    "Cups C/D 00:04.5-00:09.75: back cups receive coins from the other hand; four cups remain consistent in shape, size, steel rim and copper body throughout the orbit.",
+    "Cup count: four cups at 00:00, 00:04.5, 00:07.5; arrangement shifts consistently with the orbiting camera at 00:09.0-00:09.75 (some occlusion)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03.0",
+      "entity": "Cup B (middle cup) coin stack",
+      "invariant_violated": "fill-level monotonicity / conservation",
+      "description": "Cup B holds a tall stack of gold coins reaching nearly to the rim from 00:00 to 00:02.0. With no hand ever touching or tipping cup B, the top of the stack drops progressively (00:02.75 near rim, 00:03.25 below rim, 00:03.75 a single coin deep inside) and by 00:04.5 the cup looks essentially empty. Coins vanish from the cup with no visible removal action in a continuous shot.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03.0",
+      "entity": "Cup B top coin",
+      "invariant_violated": "source contents (material changes kind/color)",
+      "description": "The top coin in cup B is gold with an embossed design through 00:02.5, then at 00:03.0-00:03.25 the visible top disc is pale silver/white, and at 00:03.75 it is gold again but much deeper. The contents change color without any coin being added or removed.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "pour-conservation",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__pour-conservation__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-06__pour-conservation.json",
+  "frozen_source_sha256": "1fe3ac0552c2ffd39c1e0eb5af9d623b31bf52f73539674a96fc739c4e4f65d2",
+  "key": "man-cups__pour-conservation",
+  "parseOk": true
+}

@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "woman (denim jacket) | forearms crossed and resting on rear near-side corner of the hood at 00:00, torso upright directly behind hood at the windshield base, between windshield and near-side door mirror; lower body hidden by hood | same crossed-arm lean on hood at 09:75, camera pushed in to close-up | no contact changes: forearms stay planted on hood surface throughout, frame-right hand drapes over the near fender edge from ~05:00; no grip/release events; slight forward lean and head turn only",
+    "woman torso vs car body | torso occupies the cowl/A-pillar region of the near side (in front of windshield, behind hood, inboard of door mirror) | unchanged in close-up, interior seats visible beside/behind her | no visible standing location: no legs/feet beside fender, near-side fender and wood panel unoccluded below her",
+    "station wagon hood | static support surface under forearms | static | bears forearm contact continuously; no deformation or motion"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman's torso vs car cowl / near-side A-pillar",
+      "invariant_violated": "solidity / weight without support",
+      "description": "The woman's upper body rises out of the space where the hood, windshield base and near-side A-pillar meet, between the windshield glass and the door mirror. There is no room there for a standing person: she is not on the near side of the car (fender and wood panel below her are unoccluded, no legs or feet), and she is too far to the near side to be standing beyond the far fender. Her torso therefore appears to pass through the car body, and nothing visible supports her weight except crossed forearms on the hood. The placement holds for the whole clip and is clearest in the wide shots (00:00 to 02:75) and at 05:00.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "woman-car.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-14__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-14.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-14__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "63e65dc4f706816f8579817110cb33dfa04bd07b8c695792ccbbdc518dc8f6fe",
+  "key": "woman-car__contact-interaction-kinematics",
+  "parseOk": true
+}

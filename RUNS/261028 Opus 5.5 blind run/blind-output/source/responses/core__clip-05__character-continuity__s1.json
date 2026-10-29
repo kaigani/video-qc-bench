@@ -1,0 +1,24 @@
+{
+  "ledger": [
+    "Woman (sole character) | 00:00 short light-brown/blonde-highlighted hair worn as a loose chin-length bob, drop earrings, teal V-neck button cardigan with white camisole visible at neckline, 3/4 sleeves; in kitchen, screen-right, facing screen-left, walking | 09:75 hair worn as a low twisted chignon/tucked updo, dark navy fitted seamless top with 3/4 sleeves and puffed shoulders, back to camera, walking away into a different-looking (darker wood) kitchen | one continuous Steadicam-style follow shot (no hard cuts); hair alternates loose bob (00:00-00:25, 02:00-03:50, 05:00-06:50) vs tucked low chignon (00:75-01:75, 04:00-04:75, 07:00-09:75); neckline changes from open V-neck cardigan + white cami (00:00) to closed crew-neck fitted top (03:25); top colour drifts from mid-teal to near-black navy; walks kitchen -> hallway -> bedroom -> turns -> exits back toward kitchen, path continuous with no teleport",
+    "Relative positions | single character only; no inter-character placement to track | n/a | n/a"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Woman - hairstyle",
+      "invariant_violated": "identity/hairstyle persistence",
+      "description": "Hair is a loose chin-length bob at 00:00-00:25, then from behind at 00:75-01:75 reads as a tucked/twisted low chignon with the ends pinned up, then loose bob again at 02:00-03:50 (ends falling freely to the jaw), chignon again at 04:00-04:75, loose bob at 05:00-06:50, and chignon/updo again from 07:00 to the end. Within one continuous take with no hands touching the hair, the hairstyle flickers between two different styles.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Woman - wardrobe (top)",
+      "invariant_violated": "wardrobe continuity",
+      "description": "At 00:00 she wears a mid-teal V-neck button-front cardigan with a white camisole visible in the open neckline. By 03:00-03:25 (side/profile view) the same garment is a closed, high crew-neck fitted dark navy top with no opening and no camisole, and it stays a dark seamless fitted top with puffed shoulders for the rest of the take. The garment changed style and colour during one continuous shot with no undressing on screen.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ]
+}

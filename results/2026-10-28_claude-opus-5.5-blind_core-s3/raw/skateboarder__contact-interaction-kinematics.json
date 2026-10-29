@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "skater feet <-> skateboard deck | 00:00 both red shoes planted on deck, rolling, crouched | 09:75 both feet planted on deck after second landing, rolling | trick 1: pop ~01:25 (back foot on tail, front foot lifts), feet leave deck ~01:50-01:75, board airborne separate from feet ~01:75-02:90, re-contact ~03:00-03:25, both feet settled 03:50; push/roll segment 03:75-07:50 feet stay on deck; trick 2: pop ~07:90-08:00, board flips under feet 08:00-08:50, re-contact ~08:75-09:00, settled 09:25",
+    "skateboard wheels <-> ground | 00:00 wheels on concrete | 09:75 wheels on concrete | airborne ~01:40-03:10 and ~08:00-09:00; tail contacts ground at pop moments; no wheel clipping into ground seen",
+    "skater body/limbs | 00:00 crouched, arms low | 09:75 upright, arm extended for balance | arms swing for balance throughout, knees tuck in air; joint bends anatomically plausible; no hand/object contact interactions",
+    "skater shadow <-> ground | 00:00 shadow attached under board | 09:75 shadow attached under board | shadow separates during airborne phases consistently with height"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01.75",
+      "entity": "skateboard during first trick (and skater airborne phase)",
+      "invariant_violated": "weight & support / unsupported hover",
+      "description": "After the feet leave the deck at ~01:50-01:75, the board hangs in mid-air below and apart from the rider's feet for roughly a full second (01:75-02:75) at nearly constant height and only slowly rotating, with no foot contact guiding it, while the tucked rider also remains aloft; total airtime from pop (~01:40) to re-contact (~03:00-03:25) is ~1.6 s, far longer than gravity allows for an ollie of this height, so the board and rider float without support.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "skateboarder.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__contact-interaction-kinematics__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-10__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "3993b22adcf92a9681998655c6d0160c8f380c4a3db4d3a96e13c6f8d91f9189",
+  "key": "skateboarder__contact-interaction-kinematics",
+  "parseOk": true
+}

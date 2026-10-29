@@ -1,0 +1,56 @@
+{
+  "ledger": [
+    "Scope note: no liquid or granular pour is visible; the only transfer is a child placing and stirring solid plastic balls in a clear glass bowl. Each ball is treated as a discrete conserved unit.",
+    "Container A (clear glass mixing bowl with a thick blue-green rim, on a wooden table): same shape, size, and material at every visible moment from 00:00 to 00:09.75; no identity change.",
+    "Source pile (loose red/green/yellow balls at the right edge of the table, 00:00-00:04): partly visible throughout, never fully in frame, so its count is not tracked.",
+    "00:00.000 Bowl: 8 balls = 2 red, 3 green, 3 yellow. The child's hands are above the bowl.",
+    "00:00.250-00:00.750 A hand reaches into the bowl; one red ball is lifted out or handled. Bowl contents are otherwise consistent.",
+    "00:01.000-00:02.000 The child holds one red ball above the bowl while the bowl still shows 8 balls (2R/3G/3Y). Total accounted for is 9 (3R/3G/3Y); the extra red plausibly came from the side pile while the hands were out of frame at 00:00.",
+    "00:02.250 The held red ball is lowered into the bowl. Bowl = 9 balls (3R/3G/3Y), with fill rising as expected.",
+    "00:02.500-00:04.250 The hand stirs inside the bowl. Visible: about 2-3 red (one under the hand), 3 green, 3 yellow, consistent with 9 balls.",
+    "00:04.500-00:04.750 Close-up. Visible: 1 green (partial), 2 yellow at the top and right, 1 red in the center, 1 red under the fingers, 2 green, and 1 yellow at the bottom left. That makes 8 visible plus about 1 hidden under the hand, consistent with 3R/3G/3Y.",
+    "00:05.000-00:06.000 Vigorous stirring with motion blur. Yellows are still prominent (2-3 yellow visible at 00:06.000).",
+    "00:06.250-00:07.250 Stirring continues. Visible mix about 2-3 red, 2-3 green, 2 yellow. The balls appear smeared or deformed, which is attributable to motion blur.",
+    "00:07.500-00:07.750 Visible: about 5 distinct red balls (top, center, right, lower center, left), 1-2 green, and 1-2 yellow (one at the bottom, one faint at the left).",
+    "00:08.000-00:08.750 Red-dominant mix: about 3-4 red, 2-3 green, 1-2 yellow.",
+    "00:09.000-00:09.750 Visible: about 4-5 red, 2-3 green, and 1 yellow. At 00:09.500, 5 red, 1 yellow, and 1 green are visible. At 00:09.750, 4-5 red, 1 yellow, and 2 green are visible. The total still reads as about 8-9 balls, but the colour proportions have shifted from 3R/3G/3Y to about 5R/2G/1Y.",
+    "No ball leaves the bowl and no new ball is added after 00:02.250, so the bowl's colour inventory should be invariant after that point."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07.750",
+      "entity": "Ball colour inventory in the glass bowl (red vs yellow balls)",
+      "invariant_violated": "source contents / conservation (colour identity of conserved units)",
+      "description": "After the last red ball is added at 00:02.250, the bowl holds 3 red, 3 green, and 3 yellow balls, and no ball is added or removed afterward. From about 00:07.750 to 00:09.750 the same bowl shows about 5 red balls and only 1 yellow (00:09.500: 5 red, 1 yellow, 1 green; 00:09.750: 4-5 red, 1 yellow, 2 green), while the total count stays about the same. Yellow balls appear to have turned red during the stirring, with no visible ball swap or addition to explain it.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09.250",
+      "entity": "Individual balls in the bowl (shape/rigidity)",
+      "invariant_violated": "container/object identity (rigid balls change form)",
+      "description": "The hard, glossy, spherical balls from 00:00-00:04.75 appear lumpy, squashed, and cube-like in the 00:09.000-00:09.750 close-ups, for example the green ball at the bottom center and the red ball at the right at 00:09.750. Heavy motion blur is a strong confound, so this is low confidence. It may only be blur rather than a true change of object form.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "pour-conservation",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__pour-conservation__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-02__pour-conservation.json",
+  "frozen_source_sha256": "7ceb98ccc404affdd703a6669a816e840686f3cf7c308fcc7b9072f5c5c885af",
+  "key": "child-marbles__pour-conservation",
+  "parseOk": true
+}

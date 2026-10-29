@@ -1,0 +1,45 @@
+{
+  "ledger": [
+    "large glass jar (swing-top style, no lid) | on butcher-block counter, empty, upright | on counter, ~2/3 full of mixed green and dark-purple/black olives | fills in pours 0:00-0:03 and 0:06-0:09; contents include dark olives never seen in any source container",
+    "small clear glass bowl | held by right hand above jar, containing only green olives (~8-10) | held above jar, nearly empty with green residue | poured 0:00-0:03; carried away ~0:04, briefly not visible at 0:04.5; refilled from metal bowl ~0:05; poured again 0:06-0:09; at 0:06.75 contains dark olives",
+    "steel mixing bowl (middle right) | on counter, ~10 green olives only | on counter, ~5 green olives plus brown nut/pit-like items | hand scoops olives out ~0:05; brown items first visible at 0:05.25 after olives removed (could have been hidden underneath)",
+    "speckled ceramic bowl (far right) | on counter, full of green olives | on counter, full of green olives | untouched, stable",
+    "small clear glass bottle (right counter) | not present at 0:00-0:04.25 | standing on counter right of steel bowl | first appears at 0:04.5 with no one placing it",
+    "green olives | in small bowl, steel bowl, ceramic bowl | in jar, steel bowl, ceramic bowl | transferred by pouring",
+    "dark/black olives | not present in any container at 0:00 | many in jar and in small bowl | appear in jar from 0:00.5 onward and in small bowl at 0:06.75 without a visible source"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "dark/black olives in jar",
+      "invariant_violated": "identity/transformation - objects appear from no source",
+      "description": "At 0:00 the small glass bowl being poured holds only green olives and the other bowls contain only green olives, yet from 0:00.5 dark purple/black olives land in the jar and by 0:01.5-0:03 roughly half the jar is dark olives. The count in the jar (~20+) also exceeds what the small bowl visibly held (~8-10). The dark olives have no visible origin; green olives effectively turn dark or materialize.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "small glass bowl contents",
+      "invariant_violated": "identity - contents change without a source",
+      "description": "The small bowl is refilled at ~0:05 by scooping from the steel bowl, which held only green olives, but at 0:06.75-0:07.5 it visibly contains several dark/black olives that are then poured into the jar. No dark olives were available in the source bowl.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "small clear glass bottle on right counter",
+      "invariant_violated": "persistence - object pops into existence",
+      "description": "A small clear glass bottle stands on the counter just right of the steel bowl from 0:04.5 onward; at 0:04.0 (frame 17) the same counter area, at a nearly identical framing, is empty white marble. Nobody places it there.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "brown nut/pit-like items in steel bowl",
+      "invariant_violated": "identity - new objects appear in container",
+      "description": "After the olives are scooped out at ~0:05, two or three brown, almond/pit-like objects are visible in the steel bowl (0:05.25 onward). They were never visible before and nothing added them; they may have been hidden under the olives, so confidence is low.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

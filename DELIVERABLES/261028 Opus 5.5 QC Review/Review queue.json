@@ -1,0 +1,153 @@
+{
+  "extras": {
+    "truck-exhaust-plumes-opposite-directions": {
+      "description": "Opening exterior (00:02-00:07): dark plume behind the parked cab drifts up-left while a pale ground-level cloud by the front bumper (no visible exhaust source) drifts right toward the diner at the same moment. Reported by router-s1 and router-s3 (environment-response). Frame crops at 1/2.5/4/5.5/7 s confirm both clouds and the opposite drift; a weak, low-salience defect (wind shear could be argued).",
+      "layers": [
+        "router-s1",
+        "router-s3"
+      ],
+      "promoted_to_extra": true
+    },
+    "phone-screen-sunpatch-flicker": {
+      "description": "phone: the hard-edged sunlit patch on the phone screen jumps position/shape and blinks on and off between consecutive frames (clearest 04:50-08:25, e.g. on 06:50, off 06:75, on 07:00, off 07:25-07:75, on 08:00) while phone, hands and background light are essentially static; reported in all 6 layers (core-s1/s2/s3, router-s1/s2/s3); confirmed in 24 fps frames 06:40-07:40, patch changes from large top-left blob to none to centre blob frame-to-frame.",
+      "layers": [
+        "core-s1",
+        "core-s2",
+        "core-s3",
+        "router-s1",
+        "router-s2",
+        "router-s3"
+      ],
+      "promoted_to_extra": true
+    },
+    "pour-cup-refills-after-empty": {
+      "description": "Glass pouring cup is visibly empty and inverted 8.5-9.5 s, then shows green olive content at 9.75 s with no refill. Reported by core-s1, core-s2, core-s3, router-s1 (4 layers). Frames 35-40 confirm empty cup at 8.5-9.5 and a green olive-like mass in the cup at 9.75 (at frame edge, last frame, so moderate confidence).",
+      "layers": [
+        "core-s1",
+        "core-s2",
+        "core-s3",
+        "router-s1"
+      ],
+      "promoted_to_extra": true
+    },
+    "steel-bowl-olives-regrow": {
+      "description": "After the scoop leaves ~1-2 green olives in the steel bowl (5.25 s), the green count rises to ~3 (6.0-6.75 s) and ~5 (8.25-9.75 s) with nothing added. Reported by router-s1, router-s2 (x2), router-s3 (x2); core-s1 object-persistence|1 also mentions it but was classed OLIV-4 for its main claim. Frames 22/25/28/34/36/40 confirm the increase, though camera angle shifts between 5.25 and 6.0 s.",
+      "layers": [
+        "router-s1",
+        "router-s2",
+        "router-s3"
+      ],
+      "promoted_to_extra": true
+    },
+    "skate-green-face-blob": {
+      "description": "Skateboarder: a saturated green glowing blob sits over the skater's eye/cheek at 0.5-1.0 s and moves with the face, absent before and after. Reported by core-s1 (2 roles) and core-s2. Frames 3-5 clearly show it on the face; the sun is near the head, so a green lens-flare ghost is a possible innocent reading.",
+      "layers": [
+        "core-s1",
+        "core-s2"
+      ],
+      "promoted_to_extra": true
+    },
+    "skate-floaty-airtime": {
+      "description": "Skateboarder: first flat-ground flip trick stays airborne ~1.6-1.8 s (pop ~1.25-1.5 s, touchdown ~3.0-3.25 s) with rider and board hovering at near-constant height ~1.75-2.75 s; second trick ~1.3 s. Reported by all six layers (core-s1/s2/s3, router-s1/s2/s3; 11 findings). Frames confirm the long hang (frames 7-13 all airborne, rider tucked high against the sky); caveat: could be read as a slow-motion beat, though the approach plays at normal speed.",
+      "layers": [
+        "core-s1",
+        "core-s2",
+        "core-s3",
+        "router-s1",
+        "router-s2",
+        "router-s3"
+      ],
+      "promoted_to_extra": true
+    },
+    "skate-deck-underside-color": {
+      "description": "Skateboarder: during the first trick the truck side of the deck is black at 1.75-2.0 s, plain light wood at 2.5 s, dark again at 2.75 s, and grey/white in the second trick (~8.25 s). Reported by core-s1, core-s2, core-s3 (5 findings). Frames show the black-with-trucks / wood-with-trucks / dark sequence; a kickflip rotation could partly explain it. Adjacent to SKAT-1 (same moment, board underside rendered wrong) but a different symptom (colour, not wheel count/placement), so KT may want to fold it into SKAT-1 or reject it.",
+      "layers": [
+        "core-s1",
+        "core-s2",
+        "core-s3"
+      ],
+      "promoted_to_extra": true
+    },
+    "home-tour-cardigan-becomes-crewneck": {
+      "description": "Woman's top changes from an open V-neck cardigan over a white camisole (00:00) to a closed high crew-neck fitted top (00:03.0 onward) in one continuous take; reported by core-s1 (baseline, character-continuity), core-s2 (character-continuity), core-s3 (baseline, character-continuity); frames 1 vs 13 clearly confirm. Caveat: borders KT's rejected 'wardrobe micro-morphs' class, but this is a whole-garment/neckline change, not a seam/earring detail.",
+      "layers": [
+        "core-s1",
+        "core-s2",
+        "core-s3"
+      ],
+      "promoted_to_extra": true
+    }
+  },
+  "single_sample_claims_scored_fp": {
+    "dancer-exit-sign-garbled": {
+      "description": "dancer-mirror: the real green EXIT sign above the left door renders as a two-glyph ƎΠ-like shape rather than EXIT (reflected signs also malformed); single layer (router-s1, conf 0.3); 3x crop of the 05:50 frame supports it, but the sign is ~25 px so compression could contribute. By the corroboration rule this is single-run only.",
+      "layers": [
+        "router-s1"
+      ],
+      "promoted_to_extra": false
+    },
+    "skate-shirt-logo-text": {
+      "description": "Skateboarder: chest logo on the black T-shirt is pseudo-lettering whose shape changes across frames. Single report (core-s1 baseline only). Frames show an unreadable red/green/white logo. Confirmed 'garbled text' class elsewhere, but uncorroborated here.",
+      "layers": [
+        "core-s1"
+      ],
+      "promoted_to_extra": false
+    },
+    "home-tour-garbled-panel-over-bed-painting": {
+      "description": "A smeared, garbled light rectangular panel hangs over the lower part of the painting above the bed (00:04.75-00:05.5); core-s2 baseline only; frames 20-22 show the odd overlapping panel extending below the frame, though it could be read as a chandelier pendant/hanging decoration, so weak and single-layer.",
+      "layers": [
+        "core-s2"
+      ],
+      "promoted_to_extra": false
+    }
+  },
+  "lenient_tp_mappings": [
+    "core-s1|_long-scene|spatial-topology-occlusion|2: reverse-angle (00:45) geography/facing mismatch mapped to LONG-7, following prior gemini v1-s3/router-s2 00:45 TP:LONG-7 labels.",
+    "router-s3|_long-scene|cross-cut-placement|5: man facing/stool position not reconciling across the 00:44.958 reverse, mapped to LONG-7 as above.",
+    "core-s2|_long-scene|baseline-generalist|9: man repositioned square to camera at 00:36 + waitress vanished; could be LONG-6 (woman missing) or LONG-7, mapped LONG-7 (no clipping claim).",
+    "core-s1|_long-scene|spatial-topology-occlusion|4: view through windows (gabled building, parked cars) vs empty lot in establishing shot, mapped to LONG-4 (interior/exterior mismatch).",
+    "router-s3|_long-scene|layout-connectivity|4: same window-view vs establishing-lot mismatch, mapped to LONG-4.",
+    "core-s2|_long-scene|baseline-generalist|4: OPEN sign reads correctly from inside (kimi precedent TP:LONG-4) bundled with the garbled second sign (FP, reflection); mapped LONG-4.",
+    "core-s3|_long-scene|causal-temporal-sequence|2, router-s1|_long-scene|pour-conservation|1, router-s3|_long-scene|pour-conservation|0: carafe level not dropping during pour, mapped to LONG-12 per argon precedent.",
+    "core-s1|dancer-mirror|causal-temporal-sequence|0 and router-s3|dancer-mirror|mirror-pose-consistency|0: reflection arm lags real arm by ~0.2 s during the first arm raise (00:00.5-00:01.75, frame-confirmed). Mapped to DANC-1 as a reflection/in-room pose mismatch, following the argon router-s1 upper-body precedent; DANC-1 itself emphasises the feet.",
+    "man-in-mirror 00:09 razor-vanishes-from-real-hand findings (core-s1 bg|2, causal|2, contact|0, obj|1; core-s2 contact|0, obj|1; core-s3 contact|1, obj|0; router-s1 count|1, poss|0; router-s2 mirror|4, poss|1; router-s3 poss|2): mapped to MIRR-2, following the gemini-4-argon_v1-s2 precedent where the toothbrush vanishing from the hand while it stays visible in the mirror was labelled TP:MIRR-2. Different timestamp (09 vs 01).",
+    "man-in-mirror reflection mismatches outside the 00:02-00:04 window (00:00.25, 01:75, 04:25, 09:00-09:75, and the frontal-vs-profile geometry claims): mapped to MIRR-1, following the precedents for argon 00:00, v1-s2 05-09 decoupling and v1-s2 geometric incompatibility.",
+    "core-s2|man-in-mirror|character-continuity|1: the reflection head snaps from bowed to upright at 04.0-04.25 while the real head barely moves. Mapped to MIRR-1 as a reflection-vs-real mismatch. Its hairstyle-change component falls in the rejected hair micro-morph class.",
+    "man-in-mirror 00:02-00:04 comb-vs-blade findings: these support both MIRR-1 and MIRR-2. Mapped to MIRR-1 when they focus on position/contact mismatch, and to MIRR-2 when they focus on the object changing kind or appearance (object-persistence, count-stability, possession-tracking roles).",
+    "core-s3|phone|baseline-generalist|2, router-s1/s2/s3 text-stability text-morph claims (AZ-12 to AZ-X, header and status glyph drift, clock 4:41 to 4:49): mapped to PHON-1 garbled/unstable text, following the gemini-4-argon_v1-s3 08:00 text-morph precedent.",
+    "core-s1|man-cups|spatial-topology-occlusion|0: cups re-forming diamond->row mapped to CUPS-3 (cup count/arrangement), following prior argon TP for 'staggered cups align into a straight row'",
+    "core-s2|man-cups|baseline-generalist|2: same diamond->row arrangement claim, CUPS-3 per argon precedent",
+    "core-s2|man-cups|spatial-topology-occlusion|0: same diamond->row arrangement claim, CUPS-3 per argon precedent",
+    "router-s2|man-cups|possession-tracking|0: framed as stack->single silver coin (quantity drop), so CUPS-3 like argon's center-cup-coins-vanish; colour-only variants were FP (qwen precedent)",
+    "core-s1|man-cups|baseline-generalist|2: coins-on-centre-vanish part = CUPS-3; the beige-centre morph part alone would be FP",
+    "core-s1|pouring-olives|object-persistence-state|2: dark olives appearing in the cup on the second pour mapped to OLIV-1 (argon's OLIV-1 TP explicitly covered the second pour); same for all second-pour dark-olive findings",
+    "router-s2|pouring-olives|possession-tracking|1: jar colour mix after 2nd pour too dark -> OLIV-1 (colour) rather than OLIV-2 (volume); same for router-s3 count-stability|2",
+    "core-s3|pouring-olives|object-persistence-state|3: brown items appearing in steel bowl after the scoop mapped to OLIV-4 (argon_v1-s3 TP described the bowl turning into brown items); same for router-s1 possession|3, router-s3 possession|3, router-s3 pour|4, core-s2 baseline|2",
+    "core-s1|child-marbles|object-persistence-state|1: ball count dropping 9->~5 at 5.75 s (verified in frames: right half of bowl empty) mapped to MARB-1 'heavy morphing while stirring'; same for core-s2 baseline|0, core-s3 baseline|0, router-s2 possession|0, router-s3 count|2, possession|1, pour|0",
+    "core-s1|child-marbles|baseline-generalist|1: shape-only morph claims (lumpy/blob balls) mapped to MARB-1's 'heavy morphing while stirring', following argon_v1-s2 TP; hand-ball merge claims kept FP (motion blur)",
+    "router-s1|woman-car|environment-response|1: antenna/grass/jacket don't respond to the wind; mapped to CAR-4 like pro's rigid-antenna finding",
+    "router-s2|woman-car|environment-response|1: grass and jacket don't respond while hair streams; CAR-4",
+    "router-s3|woman-car|environment-response|1: only the denim collar/sleeves don't respond; the jacket part is new, but it's the same wind-on-hair-only symptom, so CAR-4",
+    "router-s2|woman-car|text-stability|1 and router-s3|woman-car|text-stability|0: plate glyph flips 9->8; mapped to CAR-2 like qwen's 7->9 glyph-change TP",
+    "core-s2|woman-car|baseline-generalist|0: says the torso passes through the windshield glass, not the hood; same impossible placement, so CAR-1",
+    "router-s1|woman-apple|possession-tracking|1: apple shrinking before it vanishes; the shrinking is how the APPL-2 disappearance happens",
+    "core-s3|woman-apple|baseline-generalist|1: teal/cyan plus purple-tray 'filler produce'; APPL-3",
+    "core-s1|home-tour|baseline-generalist|3: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s1|home-tour|object-persistence-state|2: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s1|home-tour|spatial-topology-occlusion|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s2|home-tour|baseline-generalist|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s2|home-tour|object-persistence-state|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s2|home-tour|spatial-topology-occlusion|0: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s3|home-tour|baseline-generalist|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s3|home-tour|object-persistence-state|0: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "core-s3|home-tour|spatial-topology-occlusion|0: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "router-s1|home-tour|layout-connectivity|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "router-s2|home-tour|layout-connectivity|1: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "router-s3|home-tour|layout-connectivity|2: blue-flower hallway painting reappearing on the bedroom side of the doorway wall is a symptom of the impossible layout loop (argon's equivalent 'floral collage picture appears on bedroom wall' was TP:HOME-1; note oxalpha's near-identical claim was FP, so precedent is split)",
+    "router-s3|home-tour|layout-connectivity|1: view through the bedroom doorway does not match the hallway it was entered from; layout symptom of HOME-1 rather than the second-kitchen reveal itself",
+    "core-s1|watchmaker|baseline-generalist|0: finger-ring jumps fingers / gains a stone at 04.75-05.5; mapped to WATC-1 (small details morph) following pro's prior TP:WATC-1 for 'new ring with a stone materializes in left hand' at 00:04",
+    "core-s1|watchmaker|baseline-generalist|1: finger-ring jumps fingers / gains a stone at 04.75-05.5; mapped to WATC-1 (small details morph) following pro's prior TP:WATC-1 for 'new ring with a stone materializes in left hand' at 00:04",
+    "core-s1|watchmaker|character-continuity|0: finger-ring jumps fingers / gains a stone at 04.75-05.5; mapped to WATC-1 (small details morph) following pro's prior TP:WATC-1 for 'new ring with a stone materializes in left hand' at 00:04",
+    "core-s3|watchmaker|baseline-generalist|0: finger-ring jumps fingers / gains a stone at 04.75-05.5; mapped to WATC-1 (small details morph) following pro's prior TP:WATC-1 for 'new ring with a stone materializes in left hand' at 00:04"
+  ]
+}

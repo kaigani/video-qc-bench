@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "camera | single continuous over-the-shoulder shot from behind the man's right shoulder, small handheld drift, no cuts | same framing at 00:09.75 | slight push/reframe around 00:01.75-00:04.25; no cut, so no need to check cross-shot layout",
+    "wall-mounted mirror (gilt wood frame) | fills the centre-right of frame, left edge about 37% across, bottom edge slopes slightly, faces the camera at a modest angle | unchanged | real man's head and raised arm pass in front of the left frame edge and lower rail; the occlusion is correct throughout",
+    "real beige wall | visible left of the mirror, behind the man's head | unchanged | none",
+    "reflected room: dark wood door with brass knob | inside the mirror, on its left, knob at mid-height near the white door casing | unchanged in every frame | the knob is hidden briefly by the reflected arm/torso around 00:03-00:04; consistent",
+    "reflected room: white door casing + wall with light switch | to the right of the door, switch just left of the reflected head | unchanged | the switch is hidden at times by the reflected head and hand; consistent depth order",
+    "reflected room: dark wood shelving with bottles | upper right of the mirror, behind the reflected head | unchanged | none",
+    "real man (foreground) | lower-left of frame, back three-quarter to the camera, head turned to his right so the right cheek and ear show in near profile, right hand raised to his chin | same position at end | head tilts down and the hand moves to the brow/temple around 00:02-00:04, then back to the chin; his body always occludes the mirror frame and wall behind it correctly",
+    "mirror reflection of man | centre-right of the mirror, torso square to the camera, face near-frontal, right hand (appears on the frame-right side of the reflection) holding the razor | same at end | moves in step with the real man; the handedness of the mirror image is correct"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "mirror reflection of man vs real man's head orientation",
+      "invariant_violated": "viewpoint consistency (reflection geometry)",
+      "description": "The real man is seen from behind with his head turned so his right cheek, ear and nose show in near-full profile, pointing toward frame right, roughly parallel to the mirror surface. The mirror faces the camera at only a modest angle. Given that, his reflection should show a strongly turned or profile face. Instead it shows a near-frontal face with square shoulders looking toward the camera, as if a second camera were in front of him. This persists through most of the clip (e.g. 00:00, 00:05, 00:06.5, 00:08) and does not fit the real man's pose or the camera position.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__spatial-topology-occlusion__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-07__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "53cb9718da88c36804202ec40b41960323876c809c8f38abf2fecd192e2de2f0",
+  "key": "man-in-mirror__spatial-topology-occlusion",
+  "parseOk": true
+}

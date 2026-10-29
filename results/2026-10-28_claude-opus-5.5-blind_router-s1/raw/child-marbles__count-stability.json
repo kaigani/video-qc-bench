@@ -1,0 +1,62 @@
+{
+  "ledger": [
+    "Group: small glossy plastic balls in a clear glass bowl (red/yellow/green). Child stirs them with one hand; nothing is added from outside the bowl after ~1s.",
+    "00:00.000 bowl: 8 balls = 2 red, 3 yellow, 3 green. Child's hand enters from top carrying a ball.",
+    "00:01.000-00:02.000 bowl: same 8 (2R/3Y/3G) plus 1 red held in the child's hands above the bowl = 9 total (3R/3Y/3G). The extra red was visibly brought in.",
+    "00:02.250-00:03.000 the held red ball is lowered into the bowl (visible cause). Bowl total 9 (3R/3Y/3G), some partly occluded by the hand.",
+    "00:03.000-00:04.750 bowl consistent with 9 (3R/3Y/3G); left side partly occluded by the hand, right side shows yellow, red, green, yellow, yellow, green.",
+    "00:05.000-00:05.750 stirring with motion blur; at 05.750 the unoccluded part shows 2 green, 2 yellow, red under the hand. Not counted as a change because of occlusion and blur.",
+    "00:06.000-00:07.250 heavy motion blur; balls start to look lumpy and irregular instead of spherical. Yellow is still prominent (2-3 visible).",
+    "00:07.750 (sharp-ish full frame): ~5 red (top, center, right, under hand, lower-center), 1-2 yellow, 1 green visible. No ball was added from outside.",
+    "00:08.500: 3-4 red, 2 green, 1 yellow visible.",
+    "00:09.250: ~4 red, ~4 green blobs, 0 yellow visible.",
+    "00:09.500: ~5 red, 1 green, 1 yellow visible.",
+    "00:09.750: ~4-5 red, 2 green, 1 yellow visible. By the end, objects look like deformed lumpy red/green shapes (pepper- or jelly-like), not rigid spheres.",
+    "Visible causes of count change: only +1 red at ~00:01-00:02.5 (carried in by hand). No visible removal or addition afterwards."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red balls in bowl",
+      "invariant_violated": "count change without visible cause",
+      "description": "The bowl holds 3 red balls (2 at the start plus 1 visibly added by hand around 00:02). From ~00:07.75 onward, 4-5 distinct red objects are repeatedly visible (00:07.75, 00:09.25, 00:09.50, 00:09.75), even though no red ball is brought in from outside the bowl. The red count grows during stirring with no cause.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "yellow balls in bowl",
+      "invariant_violated": "count change without visible cause / object disappearance",
+      "description": "There are 3 yellow balls clearly visible through 00:05. In the later sharp-ish frames, only 0-1 yellow is visible (1 at 00:08.50, none at 00:09.25, 1 at 00:09.50 and 00:09.75), while the bowl's other contents are largely visible. No yellow ball is lifted out, and the missing yellows seem to be replaced by extra red objects.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "all balls in bowl",
+      "invariant_violated": "object kind/shape transformation without mechanism",
+      "description": "The rigid glossy spheres seen in 00:00-00:05 gradually become lumpy, irregular, soft-looking blobs (pepper- or jelly-like red and green shapes with uneven surfaces) by 00:09-00:09.75. Hard plastic balls being stirred by hand cannot deform like this; it persists across several frames, so it is not motion-blur smear alone.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "count-stability",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__count-stability__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-02__count-stability.json",
+  "frozen_source_sha256": "7857013906f19411ec3e11fc8652432e3a5236a9f5ac06320a85e3d7178f04d5",
+  "key": "child-marbles__count-stability",
+  "parseOk": true
+}

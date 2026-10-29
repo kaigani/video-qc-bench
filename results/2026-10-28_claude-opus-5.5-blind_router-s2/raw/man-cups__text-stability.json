@@ -1,0 +1,47 @@
+{
+  "ledger": [
+    "Silver dotted-rim coin on green felt, right of the cups (00:00.000-00:02.750): the only text element large/sharp enough to attempt a reading. 00:00.000-00:01.000: single embossed word, blurry, reads roughly 'PREMIUM'/'PRESENT'-like but not resolvable to a real word. 00:02.250: same coin, inscription now looks like a Devanagari-style glyph run with a head-bar, not a Latin word. 00:02.750 (sharpest frame): reads as block Latin letters approx 'NOYKY'/'NOVEY', a non-word.",
+    "Gold coin on felt between cups and silver coin (00:00.000-00:02.750): faint embossed script approx 'Jiresse'/'Texas'-like, too small and low-contrast to read reliably; not judged.",
+    "Gold coin at bottom of felt (00:00.000-00:02.750): partially in frame, embossed inscription smeared ('WRONG?'-like strokes at 00:02.750), too blurry to read; not judged.",
+    "Top coin of stack inside centre cup (00:00.000-00:02.750): large stylised emblem with letter-like strokes ('\u0416'/'SIA'-like); the stack is handled and coins are added/removed, so face changes are explained by action; treated as decorative emblem, not text.",
+    "Gold coins inset in red table border, left side (00:00.000-00:02.000): cursive pseudo-script ('Texas'/'Nexa'-like) in decorative engraving; small, angled and blurred; stylised lettering not judged as gibberish.",
+    "Wide shots 00:03.000-00:09.750: camera pulls back, all coin/chip faces become too small and blurred to read; no signage, screens or other text visible in room (framed pictures on wall contain imagery only)."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Silver dotted-rim coin inscription on green felt, right of cups",
+      "invariant_violated": "text stability",
+      "description": "The same stationary coin's single-word inscription changes character set/shape between legible moments: at 00:00-00:01 it reads as a blurry Latin word ('PREMIUM'-like), at 00:02.250 it resembles a Devanagari-style glyph run with a head-bar, and at 00:02.750 it reads as blocky Latin 'NOYKY'/'NOVEY'. The coin is not touched or flipped, so no visible action explains the changing lettering.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:02",
+      "entity": "Silver dotted-rim coin inscription on green felt",
+      "invariant_violated": "legibility (garbled text)",
+      "description": "At its sharpest (00:02.750) the coin's centre inscription is a run of letter-like glyphs forming a non-word ('NOYKY'/'NOVEY'), i.e. pseudo-text where a real denomination/brand word would be expected on a token/coin.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "text-stability",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__text-stability__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-06__text-stability.json",
+  "frozen_source_sha256": "77cb81dd3d1e68cc3d956089913c48428d852240aa7896ebb19064f36a696739",
+  "key": "man-cups__text-stability",
+  "parseOk": true
+}

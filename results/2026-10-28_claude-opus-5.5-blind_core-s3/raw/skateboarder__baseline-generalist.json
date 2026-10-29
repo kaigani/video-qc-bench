@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "skater | black tee with red/green chest logo, black pants, green socks, red shoes, rolling on board | same outfit, landing a trick in bowl area | two airborne tricks (~1.25-3.25s and ~7.75-9.25s)",
+    "skateboard | black griptape top, light/wood underside implied, tan wheels | black grip, light underside | underside renders black at 1.75-2.25s, beige at 2.5s, dark again at 2.75s",
+    "camera/scene | low fisheye angle, sunny skatepark with light poles and trees | low angle near bowl edge | continuous handheld follow, no hard cuts"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02.500",
+      "entity": "skateboard deck underside",
+      "invariant_violated": "object appearance consistency",
+      "description": "During the first airborne trick the board's underside (trucks facing camera) is solid black at 1.75-2.25s, abruptly becomes light beige/wood-coloured at 2.5s, then dark/teal again at 2.75s. The same board's underside is light grey in the second trick (8.0-8.5s), so the black bottom at 2.0-2.25s is inconsistent with the board's identity; no lighting change explains the flip.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:01.500",
+      "entity": "skater and board (first trick)",
+      "invariant_violated": "physical plausibility / gravity",
+      "description": "Skater and board stay airborne from about 1.5s to 3.25s (~1.75s) on near-flat ground, hovering at a constant height with no slow-motion cues (camera moves at normal speed). Real airtime for this kind of flatground flip is roughly 0.5s, so the hang time looks implausible.",
+      "severity": "moderate",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:03.250",
+      "entity": "skateboard at landing",
+      "invariant_violated": "contact/shape integrity",
+      "description": "At the first landing the board is smeared and partially missing: its deck dissolves under the feet, one wheel shows below the front shoe, and the feet don't sit clearly on a solid deck, before it snaps back into an intact board at 3.5s.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-10__baseline-generalist.json",
+  "frozen_source_sha256": "dc522234b4025273df7d4ea3ac74e66a7fdfca65f940eded00251098bed537d4",
+  "key": "skateboarder__baseline-generalist",
+  "parseOk": true
+}

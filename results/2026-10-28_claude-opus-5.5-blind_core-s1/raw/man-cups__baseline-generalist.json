@@ -1,0 +1,54 @@
+{
+  "ledger": [
+    "metal cups | 4 cups on beige center (back, middle w/ gold coin stack, right, front-left) | 3 cups visible at 9.5-9.75s | 4th cup vanishes ~9.25-9.5s with no hand removing it",
+    "middle cup coin stack | tall stack of gold coins filling middle cup 0-2.5s | single silver coin / empty by 3.0s | stack disappears without being touched",
+    "loose coins on beige center | ~3 gold/silver coins in front of cups | beige center empty at end | coins vanish during camera move",
+    "man | hands only, blue sleeve/white cuff | seated, blue suit, red tie, bow tie, yellow pocket square, glasses | camera orbits from beside him to front to his right side",
+    "table | red cloth, large beige oval with swirl pattern, coin/medallion ring | narrower beige band / smaller circle, flat coin decals | layout geometry shifts with camera move"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:03",
+      "entity": "coin stack in middle cup",
+      "invariant_violated": "object permanence",
+      "description": "The middle cup holds a tall stack of gold coins through 2.5s; by 3.0s it shows only a single silver coin near the rim and later appears empty, although the hands only interact with the front-left cup.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "metal cups",
+      "invariant_violated": "object count continuity",
+      "description": "Four cups are present from the start through ~9.0s; at 9.5-9.75s only three cups remain on the table while the man's hands hold only a coin, so one cup disappears without being removed.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "loose coins on beige center / table layout",
+      "invariant_violated": "scene continuity",
+      "description": "The gold and silver coins lying in front of the cups on the beige center (clearly visible at 3-5s) are gone in later wide shots (beige area empty at 9-9.75s), and the beige center morphs from a large swirl-patterned oval to a narrow band/small circle as the camera moves.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "man-cups.mp4",
+  "role": "baseline-generalist",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-06__baseline-generalist__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-06.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-06__baseline-generalist.json",
+  "frozen_source_sha256": "3393150054425bd403d2b723844c4d6144e4420469fe10df81839bc38bc93e4a",
+  "key": "man-cups__baseline-generalist",
+  "parseOk": true
+}

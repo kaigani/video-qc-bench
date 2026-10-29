@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "skateboard | 00:00 under rider's feet on concrete, grip side up, dark grip with wood edges and tan wheels | 00:09.75 under rider's feet rolling near bowl coping | 00:01.25-00:03.25 popped/flip trick: board airborne with dark (black) underside showing trucks toward camera, abruptly turns light wood-colored at ~00:02.58 without rotation, then dark again ~00:02.75; lands 00:03.25; 00:08.0-00:08.9 second flip trick shows light grey underside, lands 00:09.25",
+    "concrete bench/ledge block | 00:00 on ground right of rider | leaves frame by 00:00.75 as camera moves | no transitions",
+    "light poles / park ledges | static set dressing throughout | static | no object-state changes (fisheye camera motion only)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "skateboard (underside/deck surface)",
+      "invariant_violated": "object identity/appearance persistence",
+      "description": "While the airborne board holds a constant orientation (same tilt, trucks at the same ends, same face toward camera), its visible face switches from solid black to light natural wood within a single frame (~00:02.55-00:02.60), then reverts to dark by ~00:02.75. There is no rotation that could expose a different face, so the board's surface swaps appearance spontaneously.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "skateboard (bottom graphic)",
+      "invariant_violated": "object identity consistency across clip",
+      "description": "In the first trick (00:01.75-00:02.5) the truck side of the board is solid black; in the second trick (00:08.25-00:08.75) the truck side of the same board in the same continuous take is light grey/white. The board's underside graphic changed with no cut or board swap shown.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-10.mp4",
+  "role": "object-persistence-state",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__object-persistence-state__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

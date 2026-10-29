@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "Background shelf bottles/jars (in mirror, upper right): roughly 3 on top shelf, 3-4 on middle shelf, 3-4 dark bottles on lower shelf at 00:00-00:09.75; apparent count varies only through occlusion by the reflected head/hair and slight framing shifts; no confirmed unexplained change",
+    "Hand-held grooming tool (real hand + mirror reflection): 1 real, 1 reflected throughout; 00:00-00:01.5 white/pale slim razor-like implement in real hand and reflection",
+    "00:01.75-00:02.0: real-hand tool held at cheek/temple, white implement in reflection",
+    "00:02.25-00:04.0: real-hand tool appears as a dark/black comb pushed through hair at the temple, while reflection shows a pale white/lavender flat blade-like object at the forehead; no visible swap of tools",
+    "00:04.25-00:09.0: real-hand tool again a pale slim implement near cheek/lip; reflection white blade",
+    "00:09.0: real-hand tool barely visible (pinched between fingers, thin profile) while reflection shows it at cheek \u2014 treated as occlusion/thin profile, not disappearance",
+    "00:09.25-00:09.75: tool rendered as silver metallic straight-razor-like object in both real hand and reflection",
+    "Mirror figures: 1 man + 1 reflection constant; door knob 1 constant (hidden by arm at times)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "hand-held grooming tool (real hand vs. mirror reflection)",
+      "invariant_violated": "kind-transformation without visible cause",
+      "description": "The slim white razor-like implement held at the jaw from 00:00-00:01.5 becomes a dark/black comb in the real hand around 00:02.25-00:04.0 (clearly dark-toothed in full-res frames 13 and 17), while the mirror reflection of the same hand at the same moment still shows a pale white/lavender flat blade; it then reverts to the pale implement at 00:04.25. No tool swap, set-down, or pickup is visible, and real object and reflection disagree in kind.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "hand-held grooming tool",
+      "invariant_violated": "kind-transformation without visible cause",
+      "description": "The tool, rendered for most of the clip as a matte white/pale plastic-looking implement, becomes a clearly silver metallic straight razor with a handle at 00:09.25-00:09.75 with no visible exchange of tools.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-07__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-07__count-stability.json",
+  "frozen_source_sha256": "179714f1ab965b7b0636d131369c603631c4db49796f5b8c98de1c544ec1722f",
+  "key": "man-in-mirror__count-stability",
+  "parseOk": true
+}

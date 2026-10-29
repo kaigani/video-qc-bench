@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "Truck sighting A (00:00-00:10, exterior dusk establishing wide, cut at 00:10.167 returns to same view): white/light-colored modern aerodynamic sleeper-cab semi tractor (sloped hood, roof fairing, integrated sleeper), parked in open gravel lot to the left of the diner building, facing right, exhaust/steam billowing at rear and front; no legible plates/badges; no box body, no external chrome stacks visible",
+    "Implied owner: lone male customer in brown canvas work jacket enters diner at ~00:20 (only customer; truck idling at opening implies he just arrived in it)",
+    "Background vehicles through diner windows 00:19-01:26 (parked cars in lot, dusk then daylight) - too small/blurred to track identity; not compared",
+    "01:30-01:34 (sunrise two-shot): large white box shape visible through right window behind the man - possibly a white trailer/vehicle, too blurred to identify",
+    "Truck sighting B (01:41-01:46, exterior through window, sunrise): dark green long-nose conventional cab (square hood, classic Kenworth/Peterbilt-style grille) with a straight-truck dark green box body with a white horizontal stripe, twin tall chrome exhaust stacks, roof amber marker lights, chrome bumper, cursive door/hood badge illegible; man in brown jacket walks to it and climbs into the cab",
+    "Truck sighting B continued (01:46-01:50, from waitress's interior window angle): same dark green box body with white stripe and green cab with chrome stack and mirror; man at driver door - consistent with 01:41-01:45"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:41",
+      "entity": "The man's truck (parked outside the diner)",
+      "invariant_violated": "vehicle identity (body type / configuration / color)",
+      "description": "The truck parked at the diner in the opening (00:00-00:10) is a white modern aerodynamic sleeper-cab semi tractor with a sloped hood and roof fairing and no visible box body. When the man leaves at 01:41, the truck he walks to and enters is a dark green classic long-nose conventional with twin chrome stacks and an attached straight box body with a white stripe. Make style, cab configuration (aero sleeper vs square long-nose day cab), body configuration (tractor vs box straight truck), and color all differ. This is not a lighting effect: the opening frames clearly show a light-colored aero body, and the later frames clearly show a squared hood and external stacks in good light. No swap is shown or implied, and there is no other truck in the scene.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "vehicle-identity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__vehicle-identity__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

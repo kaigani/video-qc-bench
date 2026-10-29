@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "Woman (navy cardigan) \u2013 red apple | apple cupped in her right hand at chest, fingers wrapped around it, left hand alongside (00:00) | no apple anywhere; both hands clasped around umbrella shaft (00:09.0\u201300:09.75) | grip continuous and well-contacted 00:00\u201300:07.25; apple shrinks inside the unchanged grip 00:07.5\u201300:08.0 (only a small red sliver, then just a tiny green stem at the fingertips) and is gone by 00:08.25 with no release, drop, pocketing or hand-off",
+    "Woman \u2013 umbrella shaft | shaft runs down into her hand cluster at chest height, held by the hand next to the apple (00:00) | both hands wrapped around the shaft below the runner (00:09.0\u201300:09.75) | contact holds throughout; the canopy stays stable over her head and never floats free of the grip; the two hands converge onto the shaft once the apple is gone",
+    "Woman \u2013 feet and ground | walking toward camera, alternating steps, feet planted on the wet pavement (00:00\u201300:02.5) | feet out of frame from about 00:03 as the camera tightens to a medium and then over-the-shoulder shot | no foot sliding or floating seen while feet are visible; torso bob matches her walking pace",
+    "Passers-by (light-blue-top woman with shoulder bag, white-shirt man, blue-shirt man, light-blue-shirt man with glasses) | crossing in the foreground or background | exit or keep walking | they pass close to the subject, but no body overlap or clipping is visible; the bag strap stays on the shoulder"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "red apple held in the woman's right hand",
+      "invariant_violated": "object persistence in grip / release without contact event",
+      "description": "From 00:07.5 the apple held in her right hand shrinks inside a grip that does not change. At 00:07.75 only a small red sliver shows between her fingers. At 00:08.0 just a tiny green stem is visible at her fingertips with no apple body. From 00:08.25 the hand is empty. Her fingers never open, the apple is not set down, dropped or passed to the other hand, and her fingers close onto the space it filled. The hands then grip the umbrella shaft together (00:09.0).",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "clip-13.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-13__contact-interaction-kinematics__s1",
+  "parse_status": "valid",
+  "error_status": null
+}

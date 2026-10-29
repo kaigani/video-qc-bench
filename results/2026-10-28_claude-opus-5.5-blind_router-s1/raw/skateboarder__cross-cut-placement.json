@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "Cut detection: ffmpeg scene scores across all 241 frames peak at 0.09 (no hard cut); dense frame checks at 0.2-0.5s and 8.8-9.1s show continuous motion. Treated as one continuous handheld/follow-cam shot with fast pans; candidate segment boundaries below are camera moves, not cuts.",
+    "Shot 1: 00:00-00:10, continuous low-angle wide-lens follow cam circling one skater (black tee, black pants, green socks, red shoes) through a concrete skatepark.",
+    "Sub-segment A 00:00-00:01.25: front-on, skater rolling, crouches; round concrete bollard/seat right of frame at 00:00-00:00.25 then panned out of view.",
+    "Sub-segment B 00:01.5-00:03.0: extreme low angle under skater, kickflip in air, sun top center, light pole right; board under feet throughout.",
+    "Sub-segment C 00:03.25-00:04.25: landing and roll-away, skater on board, coping/bowl edge lower left.",
+    "Sub-segment D 00:04.5-00:05.75: camera tracking alongside at foot level, skater right of bowl coping line, small concrete hip ahead, light pole behind.",
+    "Sub-segment E 00:06.0-00:07.25: camera swings to front, skater crouched on board, tree line right.",
+    "Sub-segment F 00:07.5-00:09.75: pop/flip trick then airborne over bowl edge, landing on bowl transition; coping rail lower right.",
+    "Anchors: bowl coping/rail edge, light poles, small concrete hip/quarter. Skater remains on the flat/platform side of the coping until the final air into the bowl at 00:08.75-00:09.25 (visible crossing).",
+    "Person count: exactly one person in every frame; no disappearance, duplication, or geometry penetration observed; hands/feet continuity consistent (single rider, single board)."
+  ],
+  "findings": [],
+  "video": "skateboarder.mp4",
+  "role": "cross-cut-placement",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-10__cross-cut-placement__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-10__cross-cut-placement.json",
+  "frozen_source_sha256": "23014c2708349a23067fd74345a2c9197e5710a355699f2ff0f04ffc872a5ef1",
+  "key": "skateboarder__cross-cut-placement",
+  "parseOk": true
+}

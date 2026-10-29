@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "woman (torso, lower face) | navy shirt with white pinstripes, gold pendant necklace, shoulder-length auburn hair | same | camera framing drifts upward/closer around 00:04.5",
+    "watch-hand (viewer-right) ring | plain silver band on ring finger (00:00-00:04) | plain silver band on ring finger (00:06-00:10) | 00:04.75-00:05.5 ring appears on the middle finger with a raised/V-shaped setting, then slides to ring finger and becomes plain band around 00:05.6",
+    "other hand (viewer-left) ring | thin silver band on index finger | thin silver band on index finger | none",
+    "wristwatch | white dial, dark strap, on viewer-right wrist | same | none",
+    "tweezers / small round metal object | tweezers in viewer-left hand probing round ornate object | object held in viewer-right hand, worked with a fine pin | tweezers leave frame with fast hand motion ~00:03.75"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "ring on the watch-wearing (viewer-right) hand",
+      "invariant_violated": "accessory continuity / finger identity",
+      "description": "From 00:00-00:04 the watch hand wears a plain silver band on the ring finger. From ~00:04.75 to ~00:05.5 the ring appears one finger higher (middle finger) and shows a raised V/solitaire-like setting; across ~00:05.5-00:05.7 it slides down onto the ring finger and returns to a plain band with no hand action to move it. Looks like a generative morph of ring position and shape.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-11.mp4",
+  "role": "baseline-generalist",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-11__baseline-generalist__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

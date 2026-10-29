@@ -1,0 +1,43 @@
+{
+  "ledger": [
+    "Skater (sole character) | 00:00: young man with short dark hair, light stubble, black short-sleeve tee with red/white/green chest logo, black jogger pants cuffed at ankle, bright green socks, red low-top shoes; riding a skateboard toward camera, slightly crouched, center frame | 00:09.75: same black tee (riding up to expose waist), black pants, green socks, red shoes; landing/rolling away right-to-left in a bowl, head down, short dark hair appears smoother/cap-like | continuous follow-cam handheld shot(s) with no hard cut detected; rider performs a trick 00:01.25-00:03.25 (board flips, lands 00:03.50), rolls on 00:03.75-00:07.75, second kickflip 00:08.00-00:08.75, landing 00:09.00-00:09.75; wardrobe colors stable throughout; bright green blob over left eye/face 00:00.50-00:01.00; head silhouette reads as dark beanie/cap edge at 00:09.25-00:09.75 vs. visible short hair at 00:09.00",
+    "Relative positions | only one character in scene; no multi-character relationships to track | n/a | n/a"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Skater's face (left eye area)",
+      "invariant_violated": "facial identity consistency",
+      "description": "At 00:00.50-00:01.00 a saturated green opaque blob sits over the skater's eye/cheek and travels with the face across frames (frames 3-5), obscuring the eye; it is absent at 00:00.00-00:00.25 and gone afterwards. Because it tracks the face rather than staying fixed relative to the lens/sun, it reads as a generated facial artifact rather than a lens flare.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Skater's head/hair",
+      "invariant_violated": "hair/headwear consistency",
+      "description": "At 00:09.00 the skater shows short tousled dark hair with a visible sideburn; at 00:09.25-00:09.75 the head top renders as a smooth, uniform dark shape with a defined edge across the forehead, resembling a beanie/skull cap, with no action to put one on. Could be hair foreshortening/motion blur, so confidence is limited.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "skateboarder.mp4",
+  "role": "character-continuity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__character-continuity__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-10__character-continuity.json",
+  "frozen_source_sha256": "c696b420f18230ab917163676380fb1fac6f0e56692c90e4c92beefaaa250605",
+  "key": "skateboarder__character-continuity",
+  "parseOk": true
+}

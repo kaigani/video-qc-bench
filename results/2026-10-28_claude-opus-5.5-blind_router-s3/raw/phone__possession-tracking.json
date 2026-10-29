@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "smartphone (dark case, teal screen showing 'A742'): held in foreground person's two hands (left thumb on left edge, right hand/fingers on right edge) continuously 00:00.000-00:09.250; right thumb taps/swipes screen ~00:06.500-00:09.000; phone lowered down and out of frame bottom 00:09.250-00:09.500; absent (exited frame bottom) at 00:09.750",
+    "red shopping bag (with small yellow patch/tag): carried in background woman's right hand 00:00.000-00:02.000 as she walks away along the paved path; clearly visible at her right side at 00:02.000 (frame-00009)",
+    "red shopping bag: at 00:02.250 only a faint pinkish smear remains at her right hand; at 00:02.500 and 00:02.750 her right hand/side is visible and empty, no bag anywhere on path, ground, or her body; not seen again before she exits top of frame ~00:03.000-00:03.250",
+    "background woman: walks away from 00:00.000 until leaving frame top ~00:03.250; no visible set-down, hand-off, or occlusion of her right side by the phone at 00:02.250-00:02.750"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "red shopping bag carried by background woman",
+      "invariant_violated": "continuous chain of custody / object vanishing",
+      "description": "The red bag is plainly held in the woman's right hand at 00:02.000; by 00:02.250 it has dissolved into a faint pink smear and at 00:02.500-00:02.750 her right hand and side are clearly visible and empty, with no bag on the ground, path, or her body, and no set-down motion or occlusion by the foreground phone. The bag fades out of existence mid-stride.",
+      "severity": "severe",
+      "confidence": 0.85
+    }
+  ],
+  "video": "phone.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-08__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-08__possession-tracking.json",
+  "frozen_source_sha256": "40e7801d8a682614788610e8e08de5ff39fe7e6f5ddf5ca7e9e06244ca36f13d",
+  "key": "phone__possession-tracking",
+  "parseOk": true
+}

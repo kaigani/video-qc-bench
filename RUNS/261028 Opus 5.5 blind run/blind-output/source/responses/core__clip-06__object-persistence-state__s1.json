@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "metal cup A (front-left) | 00:00 on cream felt, front-left of cluster, holds one gold coin low inside | 00:09.75 still on felt, part of the cup group | hand reaches into it around 00:01.0-00:02.25 and lifts a coin out; by 00:02.5 it looks empty; coins are lowered back toward it at 00:03.0-00:06.0",
+    "metal cup B (middle) | 00:00 holds a stack of embossed gold coins up to the brim | later only partly visible at low angles | no hand touches it, but by 00:02.5 the stack sits lower with a silver-gold face and at 00:03.0 the top coin looks like a plain silver disc",
+    "metal cup C (right) | 00:00 empty, right of middle cup | stays upright in the group | no state change seen",
+    "metal cup D (back-left) | 00:00 empty, behind the cluster | stays upright; at 00:04.0-00:06.0 the second hand rests on or near it | no state change seen",
+    "cup group count | 4 cups from 00:00 to 00:09.0 | only 3 cups visible from 00:09.25 to 00:09.75 | one cup disappears, see findings",
+    "hand-held gold coin(s) | 00:00 one coin held above the table | 00:09.75 one coin held above the cups | hand holds 1 coin at 00:02.75 and 2 coins at 00:03.0, which an unseen second coin could explain; coins are repeatedly lowered to the cup rims",
+    "loose coins on cream felt | 00:00 small yellow coin, gold coin right of the middle cup, large embossed coin at front, yellow coin at bottom edge | by 00:08-00:09 the cream felt near the cups is mostly clear | the camera moves a lot, so these can't be tracked one by one",
+    "ring of decorative coins/medallions on red cloth | ring of coins around the felt for the whole clip | unchanged apart from perspective | none"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "coin stack inside middle cup (cup B)",
+      "invariant_violated": "state change without cause / object identity",
+      "description": "At 00:00 the middle cup holds a stack of embossed gold coins up to its brim. No hand touches this cup; the hand only works the front-left cup. Yet by 00:02.5 the stack sits clearly lower in the cup, and at 00:03.0 the top coin has changed from an embossed gold coin to a plain silver disc. The contents' level and identity change with no visible action.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09.25",
+      "entity": "metal cups (group count)",
+      "invariant_violated": "object count persistence",
+      "description": "At 00:09.0 four cups stand together on the felt (back, left-rear, front-left, front-right). From 00:09.25 to 00:09.75 only three cups are visible: back, left and front-right. Both hands are beside or above the cups and none lifts or moves one, and nothing in front of the group could hide a cup. One cup seems to vanish.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ]
+}

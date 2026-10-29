@@ -1,0 +1,37 @@
+{
+  "ledger": [
+    "camera/shot | single continuous follow-cam behind woman, no cuts | still continuous at 09:75 | starts in kitchen 00:00, walks down hallway 01:50-03:00, turns right into bedroom 03:50-05:00, pans ~90deg left inside bedroom 05:50-07:00, walks out through a doorway 08:50-09:75",
+    "original kitchen | light-oak upper/lower cabinets, countertop stainless microwave on right counter, multicolor brick backsplash, range hood + stove + sink with red kettle under window on left side of galley | not revisited by geometry; final room at 09:00 should be this kitchen or the hallway | establishes the only kitchen in the mapped layout",
+    "hallway | runs from kitchen toward white end door with curtained window; right wall holds flower-figure painting, small orange-figure painting, light switch, further doorway with framed mirror | left behind at 04:00 | bedroom doorway is on right wall just past the small painting (03:50-04:50)",
+    "flower-figure painting | hallway right wall, left of bedroom doorway (00:00-04:00) | reappears on bedroom INTERIOR wall left of exit doorway (07:00-08:50) | relocated/duplicated to opposite side of wall",
+    "bedroom | entered through doorway facing bed headboard wall with chandelier; window right of bed; second window on left wall; nightstand+lamp left of bed | after pan, exit doorway on side wall left of the left window, abstract green/red painting between door and window, side table with photo | exit doorway not the entry doorway position relative to bed",
+    "view through bedroom exit doorway | bright room with paned white exterior door and small framed picture (06:50-08:75) | becomes a kitchen with dark cherry cabinets, over-range microwave, gas range, window on right (09:00-09:75) | does not match hallway or original kitchen",
+    "occlusion woman vs. doorframes/furniture | woman consistently in front of walls, frames, bed | consistent at end | no depth-ordering errors observed"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "room beyond bedroom exit doorway (kitchen)",
+      "invariant_violated": "connectivity / layout consistency",
+      "description": "Walking out of the bedroom in one continuous shot leads directly into a kitchen with dark cherry cabinets, an over-range microwave, gas range and a window on the right wall. The established kitchen (00:00-02:00) has light-oak cabinets, a countertop microwave, brick backsplash and a range hood, and the bedroom was reached via a hallway, not directly off a kitchen. The house layout changes to a different, unmapped kitchen.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "flower-figure painting",
+      "invariant_violated": "fixed-object position consistency",
+      "description": "The distinctive flower-figure painting hung on the hallway wall outside the bedroom, beside the bedroom doorway (00:00-04:00). After the camera pans inside the bedroom, the same painting appears on the bedroom's interior wall to the left of the exit doorway (07:00-08:50), i.e. on the other side of the wall/room, which is incompatible with the established map.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom exit doorway",
+      "invariant_violated": "viewpoint consistency / doorway connectivity",
+      "description": "She entered facing the headboard wall, so the entry door should be behind her; after only a ~90deg left pan (05:50-06:75) a doorway appears on the side wall next to the left window, and through it is a bright room with a paned exterior door rather than the dim hallway with the paintings she came from. The doorway she exits through does not geometrically correspond to the entry door or the hallway seen beyond it.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ]
+}

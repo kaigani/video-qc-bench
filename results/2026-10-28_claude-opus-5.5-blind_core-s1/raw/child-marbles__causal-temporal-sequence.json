@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "child right hand reach into bowl | 00:00 hands descending into bowl of colored balls | 00:00.75 hand closes on red ball | cause (reach/grasp) precedes effect (ball lifted at 00:00.75-00:01.00); order and delay plausible",
+    "red ball (held) | 00:00.75 lifted from bowl in both hands | 00:02.25-00:02.50 lowered back into bowl as hands descend | ball held steadily 00:01.0-00:02.0 while hands rotate it; released only as hands enter bowl; reach completes, no dissolve",
+    "balls resting in bowl | 00:00-00:04.75 static cluster of red/yellow/green balls | only adjacent balls nudge when fingers touch them (00:03.0-00:04.75) | contact precedes small displacement; plausible",
+    "child right hand stirring | 00:05.0 hand begins sweeping through bowl | 00:09.75 still stirring vigorously | sustained circular stirring motion; left hand rests on rim throughout",
+    "balls during stirring | 00:05.0 begin rolling as hand sweeps | 00:09.75 balls in continuous chaotic motion with heavy blur | onset of ball motion coincides with hand sweep (cause before effect); from ~00:07 onward balls far from the hand also blur and rearrange abruptly between adjacent frames",
+    "camera framing | 00:00 close top-down | 00:01.5 wider, 00:04.5 push-in, 00:09.0 further push-in | camera move only; no causal relevance",
+    "glass bowl | stationary on table throughout | stationary | no response expected to stirring beyond none visible; plausible"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "balls in bowl during stirring",
+      "invariant_violated": "effect proportional to cause / continuous motion",
+      "description": "From about 00:07 to 00:09.75 balls on the side of the bowl away from the child's stirring fingers (e.g. upper-right yellow/red/green balls at 00:07.75, 00:08.25, 00:08.50, 00:09.25) show strong motion blur and swap positions/colors between consecutive frames, jumping rather than rolling continuously. The toddler's slow single-hand stir does not appear to contact them, so their agitation is out of proportion to the cause and the motion lacks temporal continuity.",
+      "severity": "moderate",
+      "confidence": 0.45
+    }
+  ],
+  "video": "child-marbles.mp4",
+  "role": "causal-temporal-sequence",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-02__causal-temporal-sequence__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-02.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-02__causal-temporal-sequence.json",
+  "frozen_source_sha256": "fcb1286991ae56effb30f4eb075b74d5ab1a45ec00e9ae41e1667ffbaa9baac4",
+  "key": "child-marbles__causal-temporal-sequence",
+  "parseOk": true
+}

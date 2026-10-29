@@ -1,0 +1,33 @@
+{
+  "ledger": [
+    "00:00-00:09 exterior dusk, stationary semi cab beside diner: implied influence = engine exhaust/smoke + ambient air. Evidence: dark plume rises from behind the cab and drifts up-LEFT (00:00-00:06); a separate pale cloud billows at ground level by the front bumper/front wheel and drifts RIGHT toward the diner (00:02-00:08). Should affect: a single ambient airflow should carry both plumes the same way; overhead wires/distant foliage are too small to judge. Does: the two plumes drift in opposite directions; the front-wheel cloud has no visible exhaust source",
+    "00:10-00:19 interior counter (waitress wiping): no airflow; no loose elements moving; consistent",
+    "00:18-00:27 wide interior, man enters through door: no draft visible; hair/clothing static; no expectation violated",
+    "00:27-00:32 coffee pour close-up: implied influence = gravity on liquid. Evidence: stream of coffee into mug. Should require carafe tilted so liquid leaves the spout. Does: carafe stays essentially upright, coffee level inside stays flat and unchanged, and the stream appears to fall straight down from inside/under the globe into the mug",
+    "00:32-00:36 plate of toast and egg: steam rises gently and vertically, consistent with still indoor air",
+    "00:36-01:09 seated man / waitress wiping / empty counter: no airflow; static environment; consistent",
+    "01:09-01:17 mug steam at counter rises vertically, consistent with still air",
+    "01:26-01:35 sunrise behind window; no wind cues inside; consistent",
+    "01:37-01:41 cash on counter: bills settle and rest with a slight curl; no airflow; consistent with gravity",
+    "01:41-01:50 exterior through window: man walks to box truck in low sun; no visible wind (his jacket hangs normally, distant grass/trees static); consistent with calm air",
+    "01:50-01:58 interior sunlit haze; waitress moving; no airflow cues; consistent"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:28",
+      "entity": "coffee stream from glass carafe into mug",
+      "invariant_violated": "gravity-driven pour requires tilt / liquid level response",
+      "description": "Across 00:28-00:31 coffee pours in a steady vertical stream while the carafe is held essentially upright directly above the mug; the stream appears to descend from inside/beneath the globe rather than off a tilted spout, and the liquid surface inside the carafe remains level and full without dropping. The pour has no physically plausible cause given the carafe orientation.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "truck exhaust plumes (rear plume vs. front-bumper ground cloud)",
+      "invariant_violated": "consistent ambient airflow / effect needs a cause",
+      "description": "During 00:02-00:07 the dark plume behind the stationary cab drifts up and to the left, while a pale cloud at ground level by the front wheel drifts to the right toward the diner at the same moment. Both are in the same open air yet move in opposite directions, and the front-wheel cloud has no visible source (no exhaust outlet at the front bumper).",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

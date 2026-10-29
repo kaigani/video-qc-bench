@@ -1,0 +1,56 @@
+{
+  "ledger": [
+    "Text elements = single black outlined digits printed on the front face of toy cubes placed left-to-right on a table; side faces carry a ring/circle emblem (decorative, not text)",
+    "Block 1 (leftmost): reads '2' at 00:00.000 (green), 00:00.750 (blue), 00:01.250 through 00:09.750 — digit stable; body colour changes green->blue at 00:00.250-00:00.750 while held (colour, not text)",
+    "Block 2: blurred at 00:01.000, reads '3' from 00:01.250 through 00:09.750 — stable",
+    "Block 3 (green): reads '2' at 00:00.000-00:02.250 (original right-hand cube); reads '3' at ~00:02.450-00:02.900 while gripped with no visible rotation (only three cubes in frame); reads '2' again at 00:03.000 onward when a separate '3' cube appears beside it; stable '2' 00:03.000-00:09.750",
+    "Block 4: green '3' at 00:03.250-00:03.650 while held; motion-blurred tumble ~00:03.650-00:03.750; reads '2' on a cream/orange body from 00:03.750 through 00:09.750 (hand touches it 00:08.250-00:08.500, still '2')",
+    "Block 5: blue '3' blurred at 00:04.250, light-blue/grey '3' at 00:04.500, white/grey '3' 00:04.750-00:09.750 — digit stable, body colour drifts",
+    "Block 6: blue '3' at 00:05.250-00:05.600, green '3' sharp ~00:05.700-00:05.850 while held; reads '5' sharply at ~00:05.930 the instant the hand moves right; '5' from 00:06.000 through 00:09.750",
+    "Block 7: green '3' sharp at 00:06.250-00:06.600 while held; reads '2' sharply at ~00:06.750 as the hand shifts to a new cube; '2' through 00:09.750",
+    "Block 8: blue '3' at 00:06.750-00:07.700 (tilted, partly blurred but clearly a 3 at 00:07.000-00:07.500); reads '6' sharply at ~00:07.780; '6' through 00:09.750",
+    "Final row from 00:08.000: 2 3 2 2 3 5 2 6 — stable through end at 00:09.750"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05.930",
+      "entity": "Block 6 (green cube, 6th position) digit",
+      "invariant_violated": "printed digit must remain constant",
+      "description": "The cube reads a sharp '3' at ~00:05.700-00:05.850 while held upright, then reads a sharp '5' at ~00:05.930 with no rotation or tumble of the cube — the hand simply moves to the right and a new blurred cube appears. A printed face cannot change from 3 to 5 without the cube being turned.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06.750",
+      "entity": "Block 7 (green cube, 7th position) digit",
+      "invariant_violated": "printed digit must remain constant",
+      "description": "The cube reads a sharp '3' at 00:06.250-00:06.600 while held; at ~00:06.750 the same cube, now resting upright in place, reads '2' while a new blue '3' cube appears to its right. No visible rotation explains the 3->2 change.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:07.780",
+      "entity": "Block 8 (blue cube, rightmost) digit",
+      "invariant_violated": "printed digit must remain constant",
+      "description": "Clearly reads '3' at 00:07.000-00:07.500 (tilted toward camera, front face unchanged); at ~00:07.780 it settles upright and reads '6'. Tilting forward/back does not change the front face, so the 3->6 swap is unexplained.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:02.500",
+      "entity": "Block 3 (green cube, 3rd position) digit",
+      "invariant_violated": "printed digit must remain constant",
+      "description": "Green cube reads '2' at 00:02.250; when gripped at ~00:02.450-00:02.900 the same cube in the same place reads '3' with no turning motion; at 00:03.000 the position reads '2' again and a separate '3' cube has split off to the right. The digit flips 2->3->2 on one object without a visible cause.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:03.750",
+      "entity": "Block 4 (cube at 4th position) digit",
+      "invariant_violated": "printed digit must remain constant",
+      "description": "Reads a sharp green '3' at 00:03.250-00:03.650, briefly blurs, then reads '2' on a cream/orange body from 00:03.750. There is a brief blurred tumble that might be a rotation, but the body colour also changes, which suggests a morph rather than a new face being shown.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

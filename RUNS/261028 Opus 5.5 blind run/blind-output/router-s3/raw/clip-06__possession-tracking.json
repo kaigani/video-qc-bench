@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "00:00 setup: 4 steel cups on table (back, middle, right, front-left); middle cup holds a stack of gold coins with an embossed gold top coin; front-left cup holds one gold coin; loose coins on felt: gold coin right of middle cup, large gold 'Trebor' coin lower right, yellow chip bottom",
+    "00:00-00:00.5 hand A (screen-left) holds a single bronze/gold coin upright above the back-left area",
+    "00:00.75-00:02.0 hand A descends onto the front-left cup, fingers enter its rim",
+    "00:02.25-00:02.5 hand A lifts the gold coin out of the front-left cup; front-left cup now visibly empty (consistent removal)",
+    "00:02.5 middle cup stack still shows embossed gold top coin, untouched by any hand",
+    "00:02.75-00:03.0 middle cup top coin now reads silver/white and then plain white disc; no hand contact with middle cup",
+    "00:03.0-00:03.5 hand A holds gold coin over front cup; second coin visible in the other hand reaching in from behind",
+    "00:03.75 hand A lowers gold coin into/against the front cup rim",
+    "00:04.0-00:05.75 hand A pins gold coin against the outside of the front cup; other hand touches back/right cup with a small gold coin",
+    "00:06.0-00:08.75 wide shot: performer with 4 cups in a row; right hand holds/places small gold coin by the far cup, left hand handles the near cup with a coin; cup count stays 4",
+    "00:09.0 4 cups visible (back, left-rear, front-left, front-right); one hand holds a coin upright above cups, other hand rests right of the cups",
+    "00:09.25 4th (left-rear) cup only partially visible behind front-left cup",
+    "00:09.5-00:09.75 only 3 cups remain; neither hand touched or lifted a cup; coin still held aloft and never released"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09.50",
+      "entity": "steel cup (4th cup, left-rear of the group)",
+      "invariant_violated": "placement persistence / object disappearance",
+      "description": "Four cups are present through 00:09.0 (back, left-rear, front-left, front-right). By 00:09.5 only three cups remain. The upper hand is holding a coin aloft and the other hand rests on the felt to the right; no hand lifts, nests, or removes a cup, and the missing cup is not stacked inside another (rims show single cups). The cup vanishes without visible cause.",
+      "severity": "severe",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:02.75",
+      "entity": "coin stack inside middle cup",
+      "invariant_violated": "transfer completeness / object identity",
+      "description": "Through 00:02.5 the middle cup holds a stack of gold coins topped by an embossed gold coin. Between 00:02.75 and 00:03.0 the top of the stack becomes a plain silver/white disc while no hand touches the middle cup (the hand is busy at the front-left cup). Without contact, the contents change to a different-looking object.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-06.mp4",
+  "role": "possession-tracking",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-06__possession-tracking__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

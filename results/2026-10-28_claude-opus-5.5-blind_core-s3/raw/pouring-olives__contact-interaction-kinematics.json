@@ -1,0 +1,47 @@
+{
+  "ledger": [
+    "right/left hands + small glass cup | 00:00 both hands grip a small clear cup of olives above the jar mouth, fingers wrapped around rim/body | 09:75 cup held at top of frame above jar by right hand, left hand open nearby | continuous pour-grip 00:00-03:75; hand carries cup away toward the steel bowl 04:00-04:25 (cup blurred but in hand); 04:50-05:00 cup not visible in or near the hand while fingers pinch/scoop in the bowl; 05:25 cup reappears in hand already filled; re-grip and second pour 05:50-08:75 with left-hand fingers in cup mouth guiding olives; empty cup lifted away 08:75-09:75",
+    "olives (poured stream) | 00:00 in cup, released at cup lip only after tilt | 09:75 settled in jar | olives exit cup lip and fall into jar opening in each pour; no olive moves before cup tilt; falling olives pass through jar mouth, not through glass",
+    "olive pile inside jar | 00:50 first olives land on jar floor | 09:75 jar ~3/4 full | 01:75-03:75 pile of ~13-20 olives holds a tall narrow multi-layer column in the middle of a wide jar floor, with dark olives perched on top, while new olives drop onto it without it shifting or spreading",
+    "glass jar | 00:00 stationary on cutting board, no hand contact | 09:75 stationary on board | never touched; no clipping by hands or cup; cup lip stays above jar rim during pours",
+    "steel bowl of olives | 00:00 resting on counter, untouched | 09:75 resting, mostly emptied | contacted by right hand 04:50-05:00 (fingers into olives); olive count drops when the cup reappears at 05:25; bowl itself does not move",
+    "second ceramic bowl of olives | 00:00 resting on counter | 09:75 resting | never contacted"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:04",
+      "entity": "small glass pouring cup in the presenter's right hand",
+      "invariant_violated": "continuous grip / object held without contact",
+      "description": "Through 04:25 the hand carries the cup away from the jar. At 04:50-05:00 the same hand is in the steel bowl with bare fingers pinching and scooping olives and no cup is visible in the hand or set down anywhere. At 05:25 the cup is suddenly back in the grip, already full of olives. No set-down or pick-up contact is shown, so the cup leaves and re-enters the hand without any visible contact event.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "olive pile inside the jar",
+      "invariant_violated": "weight & support / settling",
+      "description": "From about 01:75 the olives in the jar form a narrow, tall stacked column in the middle of a wide flat jar floor, with dark olives balanced on top of others. Olives dropping onto it (02:25, 02:50) do not make it shift, roll or spread out. Loose rounded olives poured from height should settle into a flatter layer.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__contact-interaction-kinematics__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-09__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "ce066192ef4100153074ca2cccd6863f47c5c2c026de4223864fe25cd41f9b1e",
+  "key": "pouring-olives__contact-interaction-kinematics",
+  "parseOk": true
+}

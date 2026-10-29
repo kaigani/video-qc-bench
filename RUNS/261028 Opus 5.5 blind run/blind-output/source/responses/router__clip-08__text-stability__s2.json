@@ -1,0 +1,47 @@
+{
+  "ledger": [
+    "Phone main large number, 00:00.000-00:02.750: phone out of focus (rack focus on background); reads approx 'λ742'/'3742' through heavy defocus blur, not reliably legible",
+    "Phone main large number, 00:03.000-00:06.250: partly sharpening, sunlight/shadow glare across screen; left glyph 'Ā'/'A' + '742' readable, partial due to glare",
+    "Phone main large number, 00:06.750-00:09.000 (sharp, frames 28, 30, 31, 34, 36, 37): reads 'Ā7·42' (A with stray macron/tick, mid-dot between 7 and 4, small superscript squiggle after the 2) consistently",
+    "Phone lower small line, 00:06.750-00:08.750 (frames 28, 30, 31, 34, 36): small 'x2'-like squiggle above 'AZ-12' (last char ambiguous 1Z/12); stable across these frames",
+    "Phone lower small line, 00:09.000 (frame 37, sharp): reads 'AZ-X'; squiggle above reduced to a dash-like mark",
+    "Phone header line under status bar, 00:04.000-00:08.750: reads 'A‾A' (two A's joined by an overline); at 00:09.000 reads like 'A↗'/'A7' smeared",
+    "Phone status bar top-left (beside green icon), 00:04.000-00:08.750: small text reads '7.42'/'742' at 00:06.750, '7.AZ' at 00:08.750; at 00:09.000 unreadable",
+    "Phone status bar top-center, 00:04.000-00:07.000: reads '4.4ч'/'449'-like glyphs",
+    "00:09.250-00:09.750: phone swings away, motion blur, then exits; no legible text"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Lower text line on phone screen below main number",
+      "invariant_violated": "text stability",
+      "description": "The small line reads 'AZ-12' (with an 'x2' mark above) consistently and legibly from 00:06.750 through 00:08.750 (frames 28-36), then in the sharp frame at 00:09.000 (frame 37) it reads 'AZ-X' and the mark above becomes a dash. No typing or screen change is visible; the phone is simply tilting. The characters morph between two legible moments.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Phone app screen text (main number, header, sublines)",
+      "invariant_violated": "legibility / coherent text",
+      "description": "The phone screen is shown in large, sharp close-up and invites reading, but its text is pseudo-text: the main readout 'Ā7·42' has a stray macron/tick on the A, a misplaced mid-dot and a trailing squiggle; the header reads 'A‾A'; the subline is 'x2' over 'AZ-12'; status bar shows '4.4ч'. Together these don't form a coherent UI (time, code, or label), so they read as AI-garbled glyphs rather than real app content.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "Phone status bar top-left text beside green icon",
+      "invariant_violated": "text stability",
+      "description": "Small status-bar text reads '7.42' at 00:06.750 (frame 28) but '7.AZ' at 00:08.750 (frame 36), both in reasonably sharp frames, with no screen change. The text is small, so blur/compression could contribute.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Phone header text under status bar",
+      "invariant_violated": "text stability",
+      "description": "Header reads 'A‾A' steadily from 00:04.000 to 00:08.750, then at 00:09.000 (frame 37) the glyphs read differently (like 'A↗'/'A7'). Phone motion begins around this frame, so slight blur may be a factor.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

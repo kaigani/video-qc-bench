@@ -1,0 +1,39 @@
+{
+  "ledger": [
+    "Scene: woman with crossed arms leaning out of the driver-side window of a cream woodgrain station wagon on a desert two-lane road; camera slowly orbits and pushes in from a front 3/4 view (00:00) to a close-up of her profile (00:09.75).",
+    "Vehicle motion: the car looks parked throughout. In dense 24fps frames over 00:05.5-00:06.0, the yellow centre dashes and utility poles stay put relative to the hood and antenna base, apart from the slow camera orbit. There is no motion blur or streaming in the road texture or scrub. The car does not move, so it cannot be the source of airflow.",
+    "Hair 00:00-00:04.75: shoulder-length hair is calm and hangs naturally, with at most slight strand movement.",
+    "Hair 00:05.25-00:09.75: hair suddenly streams strongly backward and sideways, lifting off the head and fanning out. The effect gets stronger as the shot goes on and is at its peak by 00:07-00:09.75, like a strong steady wind or highway-speed airflow.",
+    "Whip antenna on the fender (thin, light, should flex in strong wind): stays perfectly straight and rigid the whole time, including 00:05.5-00:09 while the hair is streaming.",
+    "Desert scrub/grass beside the road: no visible bending or swaying in any frame, before or after the hair starts blowing.",
+    "Denim jacket (collar and loose sleeves): no flutter or ripple, even while the hair is blowing hard just above it.",
+    "Dust or sand: none is kicked up off the road or shoulder.",
+    "Camera motion: the orbit and push-in move the background across the screen. I judged wind response by deformation of objects (hair, antenna, scrub, fabric), not by screen displacement."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "effect without cause",
+      "description": "From about 00:05.25 the hair starts streaming hard backward and fans out, and stays that way until 00:09.75. Nothing explains it: the car is parked (road markings stay fixed relative to the hood in the dense frames), no dust is blowing, and nothing else in the scene shows wind.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "fender whip antenna, roadside scrub, denim jacket",
+      "invariant_violated": "wind must affect comparable light elements",
+      "description": "The hair is at peak wind, but the thin whip antenna stays dead straight, the dry grass and scrub do not move, and the loose jacket collar and sleeves never flutter. Wind strong enough to stream hair like this should at least ripple the fabric and bend the light grass or antenna. Only the hair responds.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair (temporal consistency)",
+      "invariant_violated": "consistent environmental response over time",
+      "description": "Through the first ~5 seconds the hair is calm. Then, partway through one continuous camera move, with no gust visible anywhere else and no change in the car's (stationary) state, it switches to sustained strong wind, and the effect keeps growing to the end of the clip instead of varying like real gusts.",
+      "severity": "minor",
+      "confidence": 0.6
+    }
+  ]
+}

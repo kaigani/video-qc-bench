@@ -1,0 +1,50 @@
+{
+  "ledger": [
+    "00:00.000 large glass jar on cutting board: empty; small glass cup in right hand holding green olives only; steel bowl (~10 green olives) and speckled bowl (green olives) on counter",
+    "00:00.250 cup tilted over jar, contents visible: green olives only",
+    "00:00.500 first olive lands in jar: a dark purple olive at jar bottom while only green olives are seen leaving the cup",
+    "00:00.750-00:01.250 green olives falling from cup; jar bottom holds 1 dark + several green olives",
+    "00:01.500-00:01.750 jar suddenly holds ~6-8 dark purple/black olives plus ~6 green; cup still shows green olives",
+    "00:02.000-00:03.750 continued pouring from cup; jar at ~3 layers, mixed green/dark/gray olives; cup emptied",
+    "00:04.000-00:05.000 hand returns to steel bowl and scoops olives with the cup; steel bowl visibly holds only green olives",
+    "00:05.250 steel bowl now shows 1-2 green olives plus small brown items (not previously visible); cup carried toward jar",
+    "00:05.750-00:06.250 cup over jar contains green olives only",
+    "00:06.750-00:07.500 cup now contains several dark/black olives among the green",
+    "00:07.500-00:08.750 cup poured into jar; jar contents rise sharply",
+    "00:09.000-00:09.750 cup empty; jar roughly 2/3 full and now predominantly dark purple/gray olives; steel bowl: few green olives + brown items; speckled bowl unchanged"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured from small cup into jar (first pour)",
+      "invariant_violated": "transfer completeness",
+      "description": "The cup is shown holding only green olives at 00:00.000-00:00.250, yet the first olive to land in the empty jar at 00:00.500 is dark purple, and by 00:01.500-00:01.750 the jar holds roughly 6-8 dark olives. Only green olives are seen leaving the cup; the dark olives arrive with no visible source.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives in small cup (second scoop)",
+      "invariant_violated": "transfer completeness",
+      "description": "The cup was filled from the steel bowl, which held only green olives (00:04.500-00:05.000), and the cup shows only green olives at 00:05.750-00:06.250. By 00:06.750-00:07.250 several dark/black olives are inside the cup, with no visible addition.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "jar contents after second pour",
+      "invariant_violated": "transfer completeness",
+      "description": "One small cup of mostly green olives is poured in 00:07.500-00:08.750, yet the jar goes from about 3-4 layers to about 2/3 full, and the newly added layers are mostly dark purple/gray olives. Both the volume and the color mix that arrive are inconsistent with what left the cup.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "steel bowl contents",
+      "invariant_violated": "placement persistence",
+      "description": "After the scoop at 00:05.000, small brown objects appear in the steel bowl (00:05.250 onward) that were not visible when it held only green olives. They may have been hidden underneath the olives.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

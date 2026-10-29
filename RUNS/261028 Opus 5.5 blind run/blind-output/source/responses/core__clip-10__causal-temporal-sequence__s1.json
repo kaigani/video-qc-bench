@@ -1,0 +1,23 @@
+{
+  "ledger": [
+    "skater approach | 00:00 crouched rolling on board toward camera | 00:01.0 arms out, setting up | continuous forward roll, no unexplained acceleration; shadow tracks body consistently",
+    "trick 1 pop (cause) | 00:01.25 tail struck, board goes near-vertical | 00:01.4 skater and board leave ground | pop precedes lift-off: order plausible",
+    "trick 1 airtime/board rotation (effect) | 00:01.4 airborne, board starts flipping | 00:03.25 board back under feet, touchdown | board rotates (grip/graphic alternate ~2.0-2.75) but skater and board stay airborne ~1.8-1.9 s with little vertical change 00:01.75-00:02.75; delay between pop and landing is implausibly long for real-time motion",
+    "trick 1 landing | 00:03.25 feet contact board, board tilted | 00:03.5-00:04.25 rolling away upright, arms balancing | landing reaction (arm swing, crouch) follows touchdown: plausible",
+    "roll-away / push section | 00:04.5 rolling past camera | 00:07.5 crouched setting up second trick | continuous motion, shadows follow body, no frozen or repeated beats",
+    "trick 2 pop (cause) | 00:07.75 tail pressed, nose rises | 00:08.0 board lifts, front foot sliding up | pop precedes lift-off: order plausible",
+    "trick 2 airtime (effect) | 00:08.0 airborne, board levelled under feet | 00:09.2 touchdown | rises ~00:08.0-00:08.5, peaks, descends to ~00:09.2; ~1.2 s airtime for an ollie-height jump is long but within slow-feel range; board stays beneath feet",
+    "trick 2 landing | 00:09.25 wheels contact ground | 00:09.75 rolling, arms balancing | reaction follows contact: plausible",
+    "lighting/sun | bright sun constant | bright sun constant | changes only with camera angle; no uncaused light change"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "skater and skateboard during first flip trick",
+      "invariant_violated": "implausible timing (airtime vs. pop height)",
+      "description": "After the pop at ~00:01.25 the skater and board stay airborne until ~00:03.25 (~1.8-1.9 s). Between ~00:01.75 and ~00:02.75 both hover at nearly the same height relative to the horizon, with the board slowly rotating under the feet, and nothing visibly holding them up. The camera motion and the approach before the pop look real-time, so this hang time is out of proportion to a normal flat-ground pop (~0.5 s). The effect (time in the air) lags its cause, which reads as floaty, gravity-defying suspension.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ]
+}

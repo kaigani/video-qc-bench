@@ -1,0 +1,40 @@
+This video has spoken dialogue or narration (confirmed by a prior inventory pass — but if the audio track is actually absent or unintelligible to you, report zero findings and say so in your ledger). You are a forensic audio-visual consistency checker:
+- every specific, checkable claim the speech makes about the visible scene — a count, color, name, position, or state of something shown on camera — must match what the visuals show at the relevant moment
+- do NOT flag vague, figurative, or off-screen references; only concrete claims about visible things
+- do NOT flag lip-sync, voice quality, or audio timing — out of scope
+- also note (as a finding) speech that is prominently garbled/non-language in a context clearly meant to be intelligible dialogue
+
+TASK: Ledger = every specific checkable claim in the speech, with timestamp and the visual evidence for/against it. Then report every claim the visuals contradict.
+
+OUTPUT FORMAT — respond with ONLY a single JSON object, no markdown fences, no prose before or after:
+{
+  "ledger": [
+    // one entry per entity/moment you tracked, as a short string
+  ],
+  "findings": [
+    {
+      "timestamp": "mm:ss",
+      "entity": "what is affected",
+      "invariant_violated": "short name of the rule that was broken",
+      "description": "precise description of what changed and why it is unexplained",
+      "severity": "minor" | "moderate" | "severe",
+      "confidence": 0.0-1.0
+    }
+  ]
+}
+If you find no violations, return "findings": [] — an empty list is a valid and expected answer.
+Do NOT pad the findings list. Only report violations you can tie to specific visual evidence.
+
+MEDIA AND TOOL INSTRUCTIONS (neutral):
+Your only assigned video is /tmp/video-qc-opus55-blind-261028/inputs/clip-05.mp4. Work solely under /tmp/video-qc-opus55-blind-261028. Do not inspect any other directory, other videos, the protocol, other prompt or response files, prior evaluations, or sibling predictions. No web search or web fetch. Do not spawn subagents or delegate.
+Native video input and honest audio perception/transcription are unavailable in this harness. Actual visual input is timestamped extracted JPEG frames. Audio is UNASSESSED, not absent: do not invent hearing audio or infer speech absence. For scene inventory, spoken_dialogue must be true because uncertain booleans fail open. For an audio-only role, follow its instruction to return empty findings with an audio-unassessed reason in ledger.
+Sampling: 4 fps uniformly; short-clip uniform sampling. View every contact sheet listed below with the Read tool, in chronological order. Each sheet contains six timestamped frames, at most 640x360 per thumbnail. The full-resolution originals and timestamp mapping are in /tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/extraction.json. You may view individual original frames with the Read tool, and extract denser frames from your assigned MP4 with ffmpeg if needed; put any additional media only in /tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/router__clip-05__audio-visual-claims__s2. Inspect images, not just file metadata.
+Contact sheets:
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-001.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-002.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-003.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-004.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-005.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-006.jpg
+/tmp/video-qc-opus55-blind-261028/output/source/media/clip-05/sheet-007.jpg
+Write your single strict JSON object, matching the role's exact ledger/findings contract (or the feature-inventory object for the inventory role), to /tmp/video-qc-opus55-blind-261028/output/source/responses/router__clip-05__audio-visual-claims__s2.json using the Write tool. This is your sole prediction output path. Do not read or write other prediction files. Do not perform a second evaluation, self-verification pass, or retraction pass. After writing the file, reply with only: DONE router__clip-05__audio-visual-claims__s2

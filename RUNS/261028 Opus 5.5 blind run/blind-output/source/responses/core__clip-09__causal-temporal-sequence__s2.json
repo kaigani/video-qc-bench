@@ -1,0 +1,44 @@
+{
+  "ledger": [
+    "Pour 1 (small glass bowl, green olives only) -> olives falling into jar | cause 00:00.25-00:03.75 | effect: olives land at 00:00.5 onward | order OK, but landed olives include dark purple/black olives never seen in the bowl or in the falling stream",
+    "Jar contents | empty at 00:00.0 | ~45-50 mixed green/dark olives at 00:09.75 | 00:00.5 first object to reach the jar floor is a dark olive while only green olives are falling; 00:01.25 ~4 olives -> 00:01.75 ~12 (half dark) from a stream of a few green olives; 00:08.75 -> 00:09.0 large jump in fill and dark-olive count",
+    "Hand reach to metal bowl -> grabs handful of green olives | reach 00:04.25-00:05.0 | grab completes 00:05.0, bowl depleted to ~2 olives + brown pits/nuts at 00:05.25 | reach completes; depletion roughly matches handful",
+    "Small glass bowl refill -> pour 2 | bowl holds green + a few dark olives 00:05.5-00:07.25 | pour 00:07.5-00:08.5 | bowl empty at 00:08.5-00:09.5 | order OK",
+    "Small glass bowl after pour 2 | empty 00:08.5-00:09.5 | appears holding green contents again at 00:09.75 | no dip/refill action observed",
+    "Camera/lighting | continuous handheld, slight reframing, no unexplained light changes | -"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives landing in jar (dark olives)",
+      "invariant_violated": "effect-without-cause",
+      "description": "The pouring bowl holds only green olives and only green olives are visible in the falling stream, yet the first object to land on the jar floor at 00:00.5 is a dark purple olive, and by 00:01.75 roughly half of the ~12 olives in the jar are dark. Dark olives materialize in the jar with no source being poured.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "jar fill level",
+      "invariant_violated": "proportionality (effect outpaces cause)",
+      "description": "Between 00:01.25 (~4 olives in jar) and 00:01.75 (~12 olives stacked) the jar gains far more olives than the thin stream of 1-2 green olives visible leaving the small bowl in that interval; the fill rate does not match the pour.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "jar fill level after second pour",
+      "invariant_violated": "proportionality (effect outpaces cause)",
+      "description": "The second pour from the small bowl (mostly green olives with a few dark ones) ends at ~00:08.5, yet between 00:08.75 and 00:09.0 the jar's contents grow markedly and become dominated by dark olives, more than the bowl's contents could supply.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "small glass pouring bowl",
+      "invariant_violated": "effect-without-cause",
+      "description": "The small glass bowl is visibly empty from 00:08.5 through 00:09.5 with no dip into any bowl, yet at 00:09.75 it appears to hold green contents again.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ]
+}

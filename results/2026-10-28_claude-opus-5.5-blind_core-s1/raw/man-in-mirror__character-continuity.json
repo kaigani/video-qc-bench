@@ -1,0 +1,36 @@
+{
+  "ledger": [
+    "Man (real body, seen from behind, frame left) | dark short slicked-back hair with sideburns, white long-sleeve button shirt with sleeves rolled, razor in right hand, chin raised toward mirror | same hair, shirt and build; head tilted up, right hand at jaw/cheek | single continuous shot 0:00-0:10, no cuts; hand moves jaw -> cheek -> temple/hairline (1.75-4.25) -> back to jaw/upper lip; no identity or wardrobe change",
+    "Man (mirror reflection, frame right of mirror) | same face, dark pompadour hair, white open-collar shirt, sleeves rolled, razor in raised hand on image-right, face frontal toward camera | identical identity and wardrobe at 0:09.75 | 2.25-4.0: reflection shows head bowed forward/down, eyes lowered, fist with razor pressed to the centre of the forehead/brow, while the real body's head is turned to show the right ear/cheek and the razor sits in the side hairline above the ear; otherwise pose tracks the real body",
+    "Relative placement | real man left foreground facing mirror, reflection right-of-centre in mirror, door behind left | unchanged through end | no positional jumps; camera static"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Man - real body vs mirror reflection",
+      "invariant_violated": "reflection pose must match the person (head orientation / hand placement)",
+      "description": "From about 0:02.0 to 0:04.0 the real man's head is turned so his right ear and cheek profile face the camera, and his hand holds the razor in the side hairline/temple above the ear. Over the same frames the reflection shows the head bowed and facing straight out, eyes lowered, with the fist and razor pressed to the centre of the forehead/eyebrow. The reflection's head orientation and hand placement do not correspond to the body casting it, and nothing on screen explains the difference.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "man-in-mirror.mp4",
+  "role": "character-continuity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__character-continuity__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-07.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-07__character-continuity.json",
+  "frozen_source_sha256": "37c402fcd8ff91cf9adb208e0e4afd1be61c831aab5f0ae8c7447afd14999748",
+  "key": "man-in-mirror__character-continuity",
+  "parseOk": true
+}

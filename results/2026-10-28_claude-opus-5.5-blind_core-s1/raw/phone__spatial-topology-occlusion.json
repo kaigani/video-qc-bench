@@ -1,0 +1,32 @@
+{
+  "ledger": [
+    "camera/shot | single continuous handheld shot from an elevated landing; over-the-shoulder view of phone in hands | same shot, tilts down to look along descending staircase at 09.25-09.75 | no cuts; gradual push-in on phone 03.00-09.00 then whip-tilt down",
+    "cream block wall | frame left, runs away from camera alongside stairs | still frame left beside descending stairs at end | consistent left-side placement throughout",
+    "descending staircase | lower-left of frame, steps going down away from camera between wall and railing | fills lower frame at end, wall left, railing right | consistent with established layout",
+    "dark metal railing (balusters + curved top rail) | right/center, curving along the edge of the landing/plaza | at end runs along right side of stairs with planter beyond | consistent; railing always between stairs and planter/plaza",
+    "green shrub planter | below/behind railing, right side | visible behind railing on right at end | consistent position",
+    "paved plaza | beyond railing, lower level, upper frame | visible at far end (top of frame) beyond stairs when camera tilts down | geometrically compatible with elevated vantage",
+    "woman in blue top with red bag | right side beyond railing at 00.00, walking away | walks left/away toward far plaza, small near top edge by 03.00, then out of frame | behind railing balusters and behind phone; occlusion order correct",
+    "phone + hands | nearest layer, foreground center | still foreground, partially exits bottom at 09.50, gone by 09.75 | always occludes background (woman, railing, wall); no background bleed-through observed"
+  ],
+  "findings": [],
+  "video": "phone.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__spatial-topology-occlusion__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-08__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "1bc9ad861afe8aa542b640d265e1e876b24a2e08d4e566f2f743bd32bd6fc276",
+  "key": "phone__spatial-topology-occlusion",
+  "parseOk": true
+}

@@ -1,0 +1,49 @@
+{
+  "ledger": [
+    "woman | wavy shoulder-length blonde hair, teal denim jacket, arms crossed resting on hood at base of windshield | same outfit, hair blowing strongly, close-up profile | body located inside the car's cowl/hood area throughout; hair goes from calm to strongly windblown ~05:50",
+    "station wagon | cream body, woodgrain side panels, roof rack, front plate 'STE 97' | paint reads pale mint-white, woodgrain mostly out of frame | camera pushes in from wide to close-up",
+    "environment | desert scrub, unmarked roadside/dirt shoulder at left, mountains, no poles | two-lane highway with yellow dashed center line and utility poles at left | road markings and poles appear as camera moves in"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "woman / car body",
+      "invariant_violated": "physical plausibility / body-object interpenetration",
+      "description": "The woman's torso emerges from the car's hood/cowl directly in front of the windshield, with her crossed arms resting on the hood. There is no opening there. She is not seated inside the cabin (she's in front of the windshield glass) and not standing beside the car (the fender and hood run continuously beneath her). Her body is effectively merged into the car's bodywork for the whole clip.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "background road / environment",
+      "invariant_violated": "background continuity",
+      "description": "In the opening wide shot, the area to the left of the car is an unmarked roadside/dirt shoulder and desert scrub with no utility poles. As the camera pushes in, the same area becomes a paved two-lane highway with a yellow dashed center line and a row of wooden utility poles. These elements are not visible in the wide shot, so the car seems to sit on a different road than where it started.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "environmental consistency (wind)",
+      "description": "In the first ~5 s her hair is nearly still. From about 05:50 it suddenly blows strongly sideways, as if in strong wind or a moving car, but the car is parked and the desert scrub shows no matching motion.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "front license plate",
+      "invariant_violated": "text legibility",
+      "description": "The front plate reads as garbled pseudo-text ('STE 97' / 'STEI97') with malformed glyphs typical of generated text.",
+      "severity": "minor",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "car paint color",
+      "invariant_violated": "object color consistency",
+      "description": "The car body goes from a warm cream/pale yellow in the wide shot to a cool pale mint-white in the close-up. The shift is larger than the lighting change from the camera move would explain.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

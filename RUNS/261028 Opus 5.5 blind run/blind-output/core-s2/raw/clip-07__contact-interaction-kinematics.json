@@ -1,0 +1,40 @@
+{
+  "ledger": [
+    "Man (real, seen from behind) right hand + small white razor/blade | 00:00 razor pinched between thumb and fingers, blade on chin/jaw | 00:09.75 razor pinched, blade raised near cheekbone/temple | strokes chin (00:00-01.50), moves up to temple/brow (01.75-04.25), back down to lip/chin/jaw (04.50-08.75); grip continuous and firm except ~00:09.00-09.10 where no razor is visible in the pinched fingers; at 00:09.25-09.50 real blade is held clear of the face",
+    "Man (mirror reflection) right hand + razor | 00:00 blade on upper lip/chin | 00:09.75 blade across upper lip/cheek | tracks real hand closely through most of clip; at ~00:09.00-09.50 reflection keeps the blade in contact with the cheek while the real hand is empty or held away from the face",
+    "Man body/torso | seated or standing upright facing mirror, no weight shifts | unchanged | no stepping, leaning or support changes; no arm/shirt clipping observed; elbow and wrist bend in anatomically normal directions throughout",
+    "Razor-to-skin contact | blade tip touching chin at 00:00 | blade tip touching face at 09.75 | contact made/held during chin strokes, forehead strokes (02.25-04.00 blade flat on brow/hairline), lip/jaw strokes; brief releases between strokes are smooth"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Razor in real (foreground) right hand",
+      "invariant_violated": "object held without contact / tool vanishes from grip",
+      "description": "Around 00:09.00-00:09.10 the foreground man's right hand is in a pinch pose near his chin but no razor is visible between the fingers, while the mirror reflection simultaneously shows the razor held against his cheek; the razor then reappears in the real hand at ~00:09.20, pointing upward and away from the face. The tool momentarily disappears from the grip with no occluding explanation.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Real hand/razor vs. mirror reflection",
+      "invariant_violated": "contact mismatch (reflected contact without real contact)",
+      "description": "At 00:09.25-00:09.50 the real razor is held upright several centimetres off the jaw with no skin contact, yet the reflection shows the blade pressed flat against the cheek/jaw. The same physical hand cannot both touch and not touch the face; the reflected contact is not supported by the real hand's position.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "clip-07.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-07__contact-interaction-kinematics__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

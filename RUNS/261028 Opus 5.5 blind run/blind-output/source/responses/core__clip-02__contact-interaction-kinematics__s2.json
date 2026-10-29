@@ -1,0 +1,27 @@
+{
+  "ledger": [
+    "child right hand (frame-left) | reaching into glass bowl of colored balls at 00:00 | stirring/raking balls at bowl bottom at 00:09.75 | picks red ball 00:00.5-00:00.75 with fingers wrapped; co-holds it with left hand 00:01.0-00:02.0; lowers and releases it back into bowl ~00:02.25-00:02.5; fingers rest on/press balls 00:02.5-00:04.75; fast stirring with heavy motion blur 00:05.0-00:09.75",
+    "child left hand (frame-right) | joins right hand to cup red ball ~00:01.0 | hooked over bowl rim, thumb outside, fingers inside, at 00:09.75 | contact with red ball 00:01.0-00:02.25 with visible fingertip contact; from ~00:02.5 rests/hooks on bowl rim continuously; rim contact stays consistent through stirring",
+    "red ball (picked) | resting in bowl cluster 00:00.25 | back in bowl cluster ~00:02.5 | lifted only after fingers close on it (~00:00.75); held between both hands 00:01.0-00:02.0 with fingertip contact; set down 00:02.25",
+    "glass bowl | static on table, balls settled at bottom | still on table, balls agitated | supported by table throughout; does not slide despite rim grip and stirring",
+    "loose balls during stirring | settled cluster at 00:04.75 | scattered, rolling, blurred at 00:09.75 | motion begins when stirring hand enters (~00:05.0); several balls appear riding high on the far bowl wall near the resting fingers 00:07.75-00:09.25"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:08.25",
+      "entity": "yellow/red balls on far bowl wall",
+      "invariant_violated": "weight & support / effect without contact",
+      "description": "During stirring, balls far from the stirring hand sit high on the steep far wall of the bowl near the rim (yellow ball at 00:08.25, red ball at 00:07.75 and 00:09.25) with no hand contact and no plausible support, appearing to hover/cling rather than rolling back down under gravity; the stirring hand is at the bowl bottom on the opposite side.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:09.25",
+      "entity": "stirring hand fingertips vs balls",
+      "invariant_violated": "solidity / clipping",
+      "description": "At 00:09.25-00:09.75 the stirring hand's fingertips appear to sink into and merge with red and green balls at the bowl bottom rather than resting on their surfaces; finger outlines dissolve into ball color with no clear contact boundary (partly masked by motion blur).",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

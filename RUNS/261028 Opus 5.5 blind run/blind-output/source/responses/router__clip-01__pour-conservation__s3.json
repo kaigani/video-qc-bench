@@ -1,0 +1,27 @@
+{
+  "ledger": [
+    "00:00-00:18 exterior/diner prep shots: no pour or transfer; counter dispensers/carafes static",
+    "00:24-00:27.08 wide shot: waitress holds glass bulb coffee carafe (black lid/handle), dark coffee about half full, tilted toward counter beside seated man; white mug at his place partly occluded",
+    "00:27.125 close-up (after cut-002): same glass bulb carafe, black top, dark brown/black coffee about 55-60% of bulb height, held upright above white ceramic mug (handle on left); man's hand grips mug",
+    "00:27.75-00:28 mug released, man's hand at frame left; carafe tilts and a dark brown coffee stream starts falling into the mug",
+    "00:28-00:30.5 continuous dark brown stream into white mug; color matches carafe contents; mug interior never visible (low camera angle), so mug fill level cannot be tracked",
+    "00:31-00:32.29 pour stops; carafe back upright with coffee still about 55-60% of bulb height, no clear drop versus 00:27.125; carafe lifts out of frame up and right",
+    "00:32.33-00:36.4 plate of toast and egg, no container transfer",
+    "00:36.5-00:45 man holds white mug, interior not visible; carafe absent",
+    "00:45-00:51 waitress wipes counter; white mug on left counter, contents not visible",
+    "01:09-01:17 man's white mug on counter; a second white mug appears near the waitress / is set down (no pour shown; interiors not visible)",
+    "01:26-01:35 waitress and man each hold a white mug; contents not visible",
+    "01:37-01:41 man's white mug beside cash; contents not visible",
+    "01:50-01:58 waitress sits with a cup/mug at counter; no transfer"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:31",
+      "entity": "glass coffee carafe (source) during pour into white mug",
+      "invariant_violated": "conservation / source fill-level monotonicity",
+      "description": "Roughly 3-4 s of continuous coffee stream goes into the mug (00:27.8-00:31), but the carafe's upright fill level after the pour (about 55-60% of the bulb at 00:31.2) looks the same as before it (00:27.125), with no visible drop to account for a mug's worth of coffee leaving. Same close-up framing, so perspective is less likely to explain it, but carafe tilt and distance changes slightly and a single mug from a large carafe would only cause a small drop, so the evidence is weak.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ]
+}

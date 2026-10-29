@@ -1,0 +1,45 @@
+{
+  "ledger": [
+    "Front license plate (white plate, red characters, lower-left on front bumper), legible 00:00-00:01.25 before framing pans up and it exits frame at ~00:01.5",
+    "Plate @00:00.000 (sharpest): 'STE' + fused '1/9' glyph + '7' -> reads 'STE|97' / 'STE 197'; 5th glyph has open 9-like lower stroke, '1' stroke merged into it",
+    "Plate @00:00.250: 'STE|97' - same as 00:00, 9-like open glyph",
+    "Plate @00:00.500: 'STE|87' - 5th glyph now shows a closed lower loop reading as '8'",
+    "Plate @00:00.750: 'STF|87' - closed-loop '8'-like glyph persists; E bottom bar faint (likely softness, not counted)",
+    "Plate @00:01.000-00:01.250: partially cropped by bottom frame edge, reads 'STE|8?7'/'STE|97' ambiguously - not used for comparison",
+    "Hood/fender badges and side marker emblems: no legible text at any moment",
+    "Background roadside sign (small rectangle near utility poles ~00:06.5-00:07.5): too small/distant to read - not assessed",
+    "00:01.5-00:09.75: no legible text elements in frame (woman leaning out of station wagon, desert road)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "Front license plate 'STE|97'",
+      "invariant_violated": "text_stability",
+      "description": "The fifth plate character reads as an open-tailed '9' at 00:00.000 and 00:00.250 but as a closed-loop '8' at 00:00.500 and 00:00.750 ('STE|97' -> 'STE|87') while the plate is legible in both moments and nothing interacts with it; only a slow camera push/pan occurs.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "Front license plate 4th/5th characters",
+      "invariant_violated": "text_legibility",
+      "description": "The plate is rendered large and steady enough to read, but the character between 'STE' and '7' is a malformed fused glyph: a slanted '1'/'|' stroke merges directly into the following 9/8, producing a non-standard character sequence rather than a clean plate string.",
+      "severity": "minor",
+      "confidence": 0.5
+    }
+  ],
+  "video": "clip-14.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-router__clip-14__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

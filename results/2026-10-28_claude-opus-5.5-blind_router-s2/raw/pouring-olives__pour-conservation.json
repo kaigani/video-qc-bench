@@ -1,0 +1,83 @@
+{
+  "ledger": [
+    "00:00.000 small clear glass cup (hand-held): about 8-10 visible olives, all bright/olive green, no dark olives visible",
+    "00:00.000 tall clear glass jar with side spout/lug: empty",
+    "00:00.000 steel bowl (mid-right): about 10 green olives, no dark olives, no brown items visible",
+    "00:00.000 white speckled ceramic bowl (far right): about 10 dark-green olives",
+    "00:00.500 jar: one dark purple/black olive already on jar floor; cup and falling stream show only green olives",
+    "00:01.000 jar: 3-4 green olives plus dark blur; cup still shows green olives only",
+    "00:01.750 jar: ~15 olives, roughly half dark purple/black, half green; cup still appears full of green olives",
+    "00:02.750 jar: ~20 olives, mixed dark and green, fill to ~1/3 height; cup still tipping, green olives visible",
+    "00:03.250 jar: ~25 olives, mixed dark/green, fill ~40% height; cup nearly empty",
+    "00:03.750-00:04.500 jar unchanged (~25 olives); cup carried away empty",
+    "00:04.500-00:05.000 hand scoops olives from steel bowl with cup (visible refill of cup)",
+    "00:05.250 steel bowl: ~2 green olives plus 2-3 brown nut-like items now visible; cup has green olives",
+    "00:05.750-00:06.000 cup: ~8 olives, all green; jar unchanged mixed fill; steel bowl ~3 green olives + brown items",
+    "00:06.750 cup: green olives plus 2-3 dark purple olives now visible",
+    "00:07.000-00:07.500 cup: mixed green and dark olives pouring into jar",
+    "00:08.500-00:08.750 cup empty, clear glass; jar fill risen to ~60-65% height, ~45 olives, majority dark",
+    "00:09.000-00:09.750 jar: ~45+ olives, mixed, mostly dark; steel bowl: ~5 green olives + brown items; white bowl unchanged ~10 dark-green olives",
+    "00:09.750 cup held aloft shows greenish residue/contents again"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "jar contents vs. small glass cup (first pour)",
+      "invariant_violated": "source contents",
+      "description": "The hand-held cup visibly contains only green olives (00:00.000-00:01.250, full-res frames 1 and 3), and the falling stream is green, yet a dark purple/black olive appears on the jar floor at 00:00.500 and by 00:01.750 roughly half of the ~15 olives in the jar are dark purple/black. Dark olives arrive from a source that held only green olives.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:01",
+      "entity": "small glass cup -> jar (first pour)",
+      "invariant_violated": "conservation",
+      "description": "The small cup holds roughly 8-10 olives at 00:00, but continuous pouring from 00:00.5 to 00:03.5 deposits ~25 olives in the jar while the cup still looks full of green olives through ~00:02.75. The amount arriving exceeds what the source could hold, with no visible refill during this pour.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "small glass cup contents after scooping from steel bowl",
+      "invariant_violated": "source contents",
+      "description": "The cup is refilled from the steel bowl, which contained only green olives (plus brown nut-like items revealed after the scoop). At 00:05.75-00:06.0 the cup shows only green olives, but by 00:06.75-00:07.5 several dark purple olives are in the cup and pour into the jar. No dark olives were ever in the steel bowl and none was added to the cup.",
+      "severity": "moderate",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "jar fill vs. second cupful",
+      "invariant_violated": "conservation",
+      "description": "The second cupful holds about 8-10 olives, yet the jar goes from ~25 olives (00:04) to ~45 olives (00:08.75-00:09.0), and the added olives are mostly dark although the scoop came from a bowl of green olives. The increase exceeds the visible source.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "steel bowl",
+      "invariant_violated": "refill without cause",
+      "description": "Right after the scoop (00:05.25) the steel bowl holds about 2 green olives plus brown items. By 00:09.0-00:09.75 it shows about 5 green olives, with nothing visibly added. The camera angle changed in between, so this may be a perspective effect.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "pouring-olives.mp4",
+  "role": "pour-conservation",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__pour-conservation__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-09.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s2/raw/clip-09__pour-conservation.json",
+  "frozen_source_sha256": "510a6962c84ad4d496d3dfa4c88ffb644ea1944b5ca8f6429ed0646fb52b3eed",
+  "key": "pouring-olives__pour-conservation",
+  "parseOk": true
+}

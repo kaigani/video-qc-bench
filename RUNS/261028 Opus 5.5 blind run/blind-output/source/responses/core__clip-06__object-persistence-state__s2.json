@@ -1,0 +1,38 @@
+{
+  "ledger": [
+    "metal cup A (front-left) | 00:00 upright on green felt, contains one gold coin at bottom | 09:75 upright, rearmost/left of group | hand reaches in ~01:00-02:00 and lifts the gold coin out at ~02:25 (explained); later hands hold its rim and drop coins in",
+    "metal cup B (center) | 00:00 upright, filled to rim with a stack of gold coins, top coin gold with embossed emblem | 09:75 upright in group, stack no longer visible near rim | top coin appears pale silver/plain at 03:00 with no hand contact; contents appear lower in cup by 03:50",
+    "metal cup C (right) | 00:00 upright, empty | ~09:00 upright, front-right of group | handled by right hand 04:00-08:75; not clearly visible after 09:00",
+    "metal cup D (back) | 00:00 upright, empty | 09:75 upright | left hand drops coins into it from ~03:25 onward (explained)",
+    "cup count | 4 cups 00:00-09:00 | 3 cups at 09:50-09:75 | drops from 4 to 3 with no lift/removal action",
+    "coin held in hand(s) | 00:00 right hand holds one gold coin | 09:75 left hand holds one coin above cups | coins passed/dropped into cups throughout; second coin in other hand from ~03:00",
+    "loose coins on green felt | 00:00 small gold coin behind cups, large gold coin right, large silver/gold coin bottom | 09:00-09:75 central felt bare of loose coins | coins progressively absent from felt during camera arc 06:75-09:00 with no visible pickup",
+    "border medallions/coins on red cloth | ring of decorative coins/medallions around felt at start | still present at end | static decoration, no change beyond camera perspective"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "metal cup (4th cup of the group, front-right)",
+      "invariant_violated": "object count persistence",
+      "description": "Through 09:00 four metal cups are on the felt (back-left, back, front-middle, front-right next to the right hand). By 09:50-09:75 only three cups remain in a clearly separated, unoccluded group; the right hand rests empty on the felt where the fourth cup stood and nothing lifted or carried it away.",
+      "severity": "severe",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "coin stack inside center cup",
+      "invariant_violated": "state change without cause",
+      "description": "The center cup starts filled to the rim with a stack of gold coins topped by a gold embossed coin (00:00-02:75). At 03:00 the top coin reads as a plain pale-silver disc, and by 03:50 the contents sit well below the rim. No hand touched or removed anything from this cup in between.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "loose coins on central green felt",
+      "invariant_violated": "object persistence / vanishing",
+      "description": "Several loose gold and silver coins lie on the green felt around the cups (e.g., 05:00 and 06:50). By 09:00-09:75 the fully visible central felt is bare. No hand was seen picking these coins up; the hands were busy with the cups and with the coins they already held.",
+      "severity": "moderate",
+      "confidence": 0.35
+    }
+  ]
+}

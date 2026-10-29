@@ -1,0 +1,58 @@
+{
+  "ledger": [
+    "Group: colored balls in glass bowl (red/green/yellow) plus 2 loose balls (red, green) at right table edge",
+    "00:00.00 bowl = 8 (2 red, 3 green, 3 yellow); child's hands above bowl, empty/blurred; edge balls: 1 red, 1 green",
+    "00:00.25 hands enter bowl; 8 still accounted for (centre red partly under fingers)",
+    "00:00.50 right hand grips centre red ball (occluded by hand); left red, 3 yellow, 3 green visible",
+    "00:00.75 a red ball is lifted in the hand above the bowl, yet the bowl again shows 2 red (left + centre) + 3 green + 3 yellow = 8; total 9 balls, no ball was taken from the table edge (edge red/green unchanged)",
+    "00:01.00-00:02.00 child holds the red ball above bowl; bowl sharp and clearly shows 8 (2R,3G,3Y) -> total 9",
+    "00:02.25-00:02.75 red ball lowered back into bowl; bowl partially occluded by hand",
+    "00:03.00-00:04.75 hand resting in bowl; visible 2-3 red, 3 green, 3 yellow, consistent with ~9 allowing occlusion",
+    "00:05.25 camera closer; bowl shows green, red, red, yellow (under hand), green (under hand), yellow, yellow, green ~8 visible + occluded",
+    "00:05.75 bowl shows only green, yellow, yellow, green + red blob under hand (~5-6); large right area of bowl empty; drop may be partly occlusion by hand",
+    "00:06.00-00:07.25 vigorous mixing, heavy motion blur; counts not reliable; balls appear soft/deformed",
+    "00:07.75 sharp-ish frame: at least 4-5 distinct red balls, 1 green, 1 yellow visible",
+    "00:09.50 at least 4-5 red, 1 yellow, 1 green; 00:09.75 ~4 red, 1 yellow, 2 green - red count far above the 2-3 red present at start while yellows/greens dropped from 3 each",
+    "No objects visibly added to or removed from the bowl after 00:02 (edge balls not touched; table-edge balls leave frame only via camera reframing)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "red ball (centre of bowl)",
+      "invariant_violated": "count changes only through visible cause",
+      "description": "At 00:00.50 the child grips the centre red ball; by 00:00.75-00:01.00 a red ball is held up above the bowl while the bowl still contains the same 2 red, 3 green, 3 yellow (8) as at 00:00. Total rises from 8 to 9 with no ball added from outside (the loose red/green on the table edge remain in place). The picked-up red ball is effectively duplicated.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "red vs yellow/green balls in bowl",
+      "invariant_violated": "object kind/identity persistence",
+      "description": "Start composition is 2-3 red, 3 green, 3 yellow. During mixing (00:07.75-00:09.75) sharp-enough frames show 4-5 distinct red balls but only 1 yellow and 1-2 green. Nothing is added or removed, so yellow/green balls have apparently turned red (or reds multiplied) with no mechanism; balls also appear to soften into blob shapes.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "balls in bowl",
+      "invariant_violated": "count changes only through visible cause",
+      "description": "Between 00:05.25 (~8 visible) and 00:05.75 the bowl suddenly shows only ~5-6 balls (2 green, 2 yellow, red under hand) with the right half of the bowl empty; no ball is seen leaving. Hand occlusion may hide some, so this is uncertain.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "clip-02.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-02__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

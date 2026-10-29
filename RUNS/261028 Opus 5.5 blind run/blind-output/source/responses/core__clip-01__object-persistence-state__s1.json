@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "parked truck | 00:00 white semi tractor (white cab, no visible trailer, exhaust smoke) parked left of diner at night | 01:41-01:49 dark green box truck with long-nose cab, chrome stacks, daylight | identity of the only parked vehicle differs between opening and departure shots; no arrival/departure of another vehicle shown",
+    "front-window OPEN neon sign | 00:00-00:09 exterior: window area shows a dark rectangular screen, no lit sign | 00:10.167 exterior: lit red OPEN neon sign in the same window spot; lit throughout interior shots 00:18-01:58 | switches on / replaces dark screen with no visible action",
+    "coffee pot (glass carafe) | 00:24 held by waitress | 00:27-00:32 held by waitress pouring into man's mug | pouring visible, coffee level in mug consistent with pour",
+    "man's white mug (night scenes) | 00:27 held by man under carafe | 00:36-00:44 held in man's hands on counter next to plate | filled by visible pour 00:28-00:31",
+    "plate of toast + fried egg with fork/knife | 00:32-00:36 insert, whole toast, intact egg | 00:36-00:44 on counter in front of man | not shown being delivered (cut ellipsis); absent with man in 00:45-00:51 shot",
+    "waitress-side white mug (foreground lower-left) | 00:44.958 on back counter | 00:51 same position | stable",
+    "condiments (ketchup, sugar dispensers, napkin holders) | stable across shots | stable | no unexplained changes found",
+    "man's mug (dawn scenes) | 00:59.875 on counter in front of man | 01:09 on counter with steam | 01:10 a second mug appears near the plate; 01:12-01:13 the two mugs merge into one",
+    "plate of toast/egg (dawn) | 01:09 held/set by waitress | 01:15-01:17 lifted and carried away by waitress | removal visibly caused by waitress",
+    "mugs at 01:26-01:35 | man holds one mug, waitress (seated beside him) holds another | unchanged | stable",
+    "cash | 01:37.4 not present; hand enters with a bill | 01:39-01:40 stack of several $100 bills curled beside the mug | single flat bill under fingers becomes a multi-bill stack during hand-off",
+    "close-up mug beside cash | 01:37 on counter | 01:40.958 same position | stable",
+    "two mugs at end (01:50) | on counter in front of seated waitress | 01:51 waitress collecting | handled by visible action"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:10",
+      "entity": "coffee mugs on counter (man's mug and a second mug)",
+      "invariant_violated": "object count persistence (spawn then merge)",
+      "description": "At 01:09 only the man's mug is on the counter; the waitress's hands are on the plate and carry no mug. By 01:10 a second white mug is standing behind the plate with no visible placement. The waitress then slides it toward the man (01:12), where it sits beside his own mug, and by 01:13 only one mug remains in his hand. Two mugs have merged into one. Dense frames at 2.5 fps from 69.2 to 73.6s show the extra mug appear and then collapse into the man's mug.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:39",
+      "entity": "cash bills on counter",
+      "invariant_violated": "object count / state persistence",
+      "description": "At 01:38 the hand slides a single flat bill (one visible layer) across the counter under its fingers. By 01:39, with no added bills shown, it has become a curled stack of at least three $100 bills in a different spot and a raised, bent orientation. The money count and form change during the hand-off with no visible action that adds bills.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "01:41",
+      "entity": "parked truck outside diner",
+      "invariant_violated": "identity persistence",
+      "description": "The only vehicle parked at the diner in the opening exterior (00:00-00:10) is a white semi tractor. When the man leaves at 01:41-01:49, he walks to a dark green box truck with a long-nose cab and chrome stacks. The white tractor is never seen leaving and the green truck is never seen arriving, so the parked vehicle has changed identity.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:10",
+      "entity": "OPEN neon sign in diner front window",
+      "invariant_violated": "state change without cause / object substitution",
+      "description": "From 00:00 to 00:09 the right-hand front window shows a dark rectangular screen and no lit sign. At 00:10.167, in the same static exterior shot, a lit red OPEN neon sign is in that position and the dark screen is gone. The sign switches on, replacing the dark object, with no visible action.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:45",
+      "entity": "man's mug and plate of toast/egg",
+      "invariant_violated": "object persistence across cut",
+      "description": "At 00:36-00:44.9 the man holds a mug and has a plate of toast and egg in front of him. In the next shot (00:44.958-00:51) he sits at the counter with only condiments (ketchup, shakers) in front of him; the mug and plate are gone, with no visible removal.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

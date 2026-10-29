@@ -1,0 +1,41 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior: 1 semi-truck cab, 1 diner building; stable",
+    "00:10-00:19 back-counter shot: 3 red counter stools at lower-left, stable throughout; condiment cluster (shakers/syrup jars + 1 steel carafe) at right stable",
+    "00:18.7-00:27 wide diner shot: row of ~6-7 stools stable; 1 waitress; 1 man enters from rear and walks to counter (visible entrance), sits — people count 1->2 explained",
+    "00:27-00:32 close-up: 1 coffee mug, 1 carafe pouring, 1 folded rag; stable",
+    "00:32-00:36 plate: 1 slice of toast, 1 fried egg, 1 fork, 1 knife; stable",
+    "00:36-00:45 wide: 1 man, 1 mug, 1 plate; stools stable",
+    "00:45-00:51 behind-counter: stack of plates on shelf, 1 mug lower-left, 1 man seated in background; stable",
+    "00:51-01:00 empty back-counter shot: 3 stools stable",
+    "00:59.9-01:09 wide: 1 man, 1 waitress, stools stable",
+    "01:09-01:12.5 two-shot: mugs = 2 (man's mug at his hand + a second mug beside waitress's plate, visible from ~01:09.7); waitress slides second mug toward man ~01:11-01:12.5 (2 mugs side by side at 01:12.5)",
+    "01:12.8-01:17 two-shot: mugs = 1 (single mug held by both man's and waitress's hands, then man alone); no visible removal of the other mug",
+    "01:17.6-01:26 wide: 1 man, 1 waitress seated beside him; stools stable",
+    "01:26.8-01:35 close two-shot: 2 mugs (one per person), 1 napkin dispenser, 2 shakers; stable",
+    "01:35-01:37 back-counter shot: 3 stools stable",
+    "01:37-01:41 tabletop: 1 mug; man's hand lays down bills (visible placement) -> small fan of ~3 bills, stable through 01:40.9",
+    "01:41-01:50 exterior through window: 1 truck, 1 man walking; waitress reflection; ketchup + mustard bottles (2) stable",
+    "01:50-01:51.9 wide sunlit diner: 1 waitress (sitting then standing/wiping), stools stable",
+    "01:52.2-01:56 wide: people = 2 waitresses in identical uniform (one foreground right, a second figure at rear-left counter end) — second figure materialises where the first had just been, no entrance",
+    "01:56-01:58 wide: the two waitress figures converge and merge; 1 waitress remains at 01:57-01:58"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "waitress (person count in sunlit wide shot)",
+      "invariant_violated": "count change without visible cause (duplication)",
+      "description": "From 01:50 to 01:51.9 a single waitress is in frame wiping the counter. At ~01:52.2 a second, identically uniformed waitress appears at the rear-left end of the counter, emerging from the spot the first waitress just occupied, with no door entry or walk-in. Both are visible simultaneously through ~01:56, then the two figures converge and merge back into one by 01:57. Person count goes 1 -> 2 -> 1 with no visible entrance or exit.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:12",
+      "entity": "coffee mugs on counter",
+      "invariant_violated": "count change without visible cause (merge)",
+      "description": "At 01:12.5 two mugs are clearly visible side by side: the man's mug in his hand and a second mug the waitress has slid over from beside the plate. By 01:12.8 only a single mug remains, gripped by both the man's and the waitress's hands; no mug is lifted away or carried off, and only one mug persists through 01:14-01:17. The two mugs appear to merge into one.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ]
+}

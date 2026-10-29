@@ -1,0 +1,76 @@
+{
+  "ledger": [
+    "Phone main display (large central text), 00:00-00:03.00: out of focus but legible as 'A742' with a hooked/hand-drawn 'A'; there is no visible dot between 7 and 4 (sharpest at 00:03.00)",
+    "Phone main display, 00:03.25-00:06.50: partly washed out by sun glare/shadow; the visible part matches 'A7_42' with a stray tick/overbar on the 'A'",
+    "Phone main display, 00:06.75-00:09.00 (sharp): reads 'A7\u00b742' with a stray hook/overbar on the 'A', a mid-dot between 7 and 4, and a tiny superscript squiggle after the 2",
+    "Phone secondary line under main display, 00:06.00-00:08.75: small 'x2'/'\u2248' glyph above 'AZ-12' (sharpest at 00:07.25 and 00:08.50; the '1' is drawn as a hooked '\u02e91'-like stroke)",
+    "Phone secondary line, 00:09.00 (sharp): reads 'AZ-X' with a single '=' / '\u2248' glyph above it",
+    "Phone header line (app title area), 00:03.75-00:08.75: reads 'A\u203eA' / 'A_A', two A's joined by a stray bar (not a word)",
+    "Phone header line, 00:09.00: reads roughly 'A7' / 'A/' instead of 'A_A' (partly smeared by motion)",
+    "Phone status bar, left, 00:03.75-00:08.75: green icon plus '742'/'7.42' (00:03.75 reads closer to '3.42'/'342')",
+    "Phone status bar, centre top clock, 00:03.75-00:07.25: '4:41' at 00:03.75-00:04.00, then '4:49'/'4:4\u0b67' from 00:04.25 onward",
+    "Background (stairs, railing, paving, walking woman with red bag): no readable text",
+    "00:09.25-00:09.75: phone swings away and blurs; no legible text"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "Phone secondary line under the main display ('AZ-12')",
+      "invariant_violated": "text stability",
+      "description": "From 00:06.75 to 00:08.75 the line clearly reads 'AZ-12' with a small 'x2' glyph above it (sharp at 00:07.25 and 00:08.50). At 00:09.00, with the screen still sharp and no visible screen change, it reads 'AZ-X' and the 'x2' glyph has become a single '='/'\u2248' mark. The thumb resting near the edge of the screen does not explain the text being rewritten.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "Phone screen text overall (header 'A_A', main 'A7\u00b742', sub 'x2 / AZ-12', status '742')",
+      "invariant_violated": "legibility / coherent text",
+      "description": "The screen is held up to be read and is in sharp focus from 00:06.75 to 00:09.00, but its text is pseudo-text. The header is two A's joined by a stray bar ('A\u203eA'). The main code has a detached hook over the 'A', an odd mid-dot, and a stray superscript squiggle. The subline has a malformed '1' and a meaningless 'x2' glyph. None of these is a coherent app UI label, word or code format.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "Phone header/title line ('A_A')",
+      "invariant_violated": "text stability",
+      "description": "The header reads 'A_A' consistently from 00:03.75 to 00:08.75. At 00:09.00 it reads roughly 'A7'/'A/' with the second A gone. The UI shows no navigation or change. Some motion smear is present in this frame, which lowers confidence.",
+      "severity": "minor",
+      "confidence": 0.4
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "Phone main display code ('A742')",
+      "invariant_violated": "text stability",
+      "description": "In the early soft-focus frames (sharpest at 00:03.00) the code reads 'A742' with plain glyphs and no dot between 7 and 4. From 00:06.75 it reads 'A7\u00b742' with a prominent mid-dot and a detached hook over the 'A'. The difference may partly come from defocus hiding fine detail, so this is only a possible glyph drift.",
+      "severity": "minor",
+      "confidence": 0.3
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "Phone status-bar clock",
+      "invariant_violated": "text stability",
+      "description": "The clock at the top centre reads '4:41' at 00:03.75 to 00:04.00 and '4:49' (with a malformed final 9) from 00:04.25 onward. That is an 8-minute jump within half a second of continuous footage. The digits are small and partly blurred.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ],
+  "video": "phone.mp4",
+  "role": "text-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-08__text-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-08.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-08__text-stability.json",
+  "frozen_source_sha256": "bbf211acd39ee9777da7e76ea9a8888cdc211e94493b2c5f8bbb6e212a277765",
+  "key": "phone__text-stability",
+  "parseOk": true
+}

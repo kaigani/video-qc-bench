@@ -1,0 +1,43 @@
+{
+  "ledger": [
+    "Single continuous static shot 00:00-00:09.75 of one dance studio, no cuts, no time skip; one dancer standing in front of a wall-length mirror, no traversal between spaces",
+    "Space A: studio interior, light hardwood floor, drop ceiling with fluorescent panels, beige walls, black baseboards",
+    "Left (real) wall, from the frame edge toward the mirror corner: stacked white panel and thermostat, then ONE single black door with a narrow glass window offset toward its lever-handle side (left), ONE green EXIT sign above it, a small light switch, then the corner where the mirror wall starts",
+    "Opening 1: the real door window shows the exterior (pale sky, trees or a building, white railing). Consistent across all frames",
+    "Mirror wall (facing the camera, two seams visible) reflects the left wall continuing beyond the corner, plus the camera-side wall (barre, framed poster, blue bin, ceiling lights)",
+    "Expected reflection of the left wall: corner, light switch, the single door mirrored (window and handle on the side away from the corner), then the panel and thermostat farther from the corner, with one EXIT sign",
+    "Observed reflection (e.g. 00:00, 00:02, 00:06, 00:09.75): corner, switch, door R1 with its own EXIT sign, then a SECOND separately framed door R2 with its own EXIT sign, then the panel and thermostat to its right. R2 plus the panel matches the mirrored real door, so R1 is an extra door with no real-world counterpart",
+    "Reflected door windows show exterior-like content (R2 shows a railing and building like the real door; R1 shows a white or red sign). Exterior views themselves are not contradicted",
+    "Dancer reflection: position, facing and pose track the real dancer frame by frame, so the reflection geometry is otherwise plausible",
+    "Furniture and fixtures: barre is wall-mounted at hip height on the wall behind the camera (seen in the reflection), the bin sits on the floor, the poster is on the wall. All functionally sensible for a dance studio"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "left-wall door and EXIT sign as reflected in the studio mirror",
+      "invariant_violated": "reflected or through-opening view must match established layout",
+      "description": "The real left wall shows exactly one single door and one EXIT sign between the mirror corner and the wall panel/thermostat, with only a light switch in the narrow strip next to the corner. The mirror instead shows two separately framed doors, each with its own EXIT sign, between the corner and the reflected panel/thermostat. The door next to the panel (window offset away from the corner) is the correct mirror image of the real door. The extra door next to the corner, with its own EXIT sign, has no counterpart on the real wall, where there is no room for a door. The whole segment of real wall involved is in frame, so an off-screen element cannot explain it. The mistake persists through the whole clip (clearly visible at 00:00, 00:06 and 00:09.75).",
+      "severity": "moderate",
+      "confidence": 0.75
+    }
+  ],
+  "video": "dancer-mirror.mp4",
+  "role": "layout-connectivity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Ac237d34d-8bb4-4527-a0b1-05f20a4e0b34%3Adelegate-task%3Aopus55-blind-261028-router__clip-03__layout-connectivity__s1-a2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-03.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s1/raw/clip-03__layout-connectivity.json",
+  "frozen_source_sha256": "8ce5c0d31e1bde8049a48bdcada85110f8eeaad51abb10d426cb410a82bab927",
+  "key": "dancer-mirror__layout-connectivity",
+  "parseOk": true
+}

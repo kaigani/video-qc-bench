@@ -1,0 +1,51 @@
+{
+  "ledger": [
+    "skater | black logo tee, black pants, green socks, red shoes, bare dark hair | same outfit; dark hair rendered as cap-like dark mass at 09:00-09:25 | green glowing blob on face 00:00.5-00:01.0",
+    "skateboard | intact deck with four wheels under skater | intact deck under skater at end | smeared/partially dissolved at 00:03.25; foot overlaps deck at 00:08.25"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "skater's face",
+      "invariant_violated": "rendering artifact",
+      "description": "A bright green glowing blob shows up over the skater's eye/cheek at 00:00.5-00:01.0 (frames 3-5) and moves with the head. Nothing in the scene explains it; it looks like the green sock colour bleeding onto the face as a generation artifact.",
+      "severity": "moderate",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "skateboard",
+      "invariant_violated": "object integrity",
+      "description": "On landing at 00:03.25 the deck turns into a translucent smear under the feet. One wheel hangs below it, apparently detached, and the board briefly loses its solid shape before it reappears intact at 00:03.5.",
+      "severity": "moderate",
+      "confidence": 0.65
+    },
+    {
+      "timestamp": "00:08",
+      "entity": "skater's left foot / skateboard",
+      "invariant_violated": "interpenetration",
+      "description": "During the second flip trick at 00:08.25 the skater's left red shoe merges into and passes through the blurred deck. The shoe and board overlap with no clear front/back occlusion.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "skateboarder.mp4",
+  "role": "baseline-generalist",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-10__baseline-generalist__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-10.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-10__baseline-generalist.json",
+  "frozen_source_sha256": "0daf364c92a68cc1cee18a8cc066295ca3a31840a030d254c50581b81e2f1185",
+  "key": "skateboarder__baseline-generalist",
+  "parseOk": true
+}

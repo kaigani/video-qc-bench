@@ -1,0 +1,61 @@
+{
+  "ledger": [
+    "00:00-00:10 exterior: 1 truck cab, 1 diner building; no countable small-object group in focus",
+    "00:10-00:18 counter shot: 3 red stools at lower left stable; condiment/sugar dispenser cluster on counter stable; waitress wipes counter, no count changes",
+    "00:18-00:27 wide diner: counter stools ~6 visible, stable across frames; man walks in and sits (stool occluded by body, not a disappearance)",
+    "00:27-00:32 close-up pour: 1 coffee pot, 1 white mug, 1 rag; stable",
+    "00:32-00:36 plate insert: 1 plate, 1 slab of toast, 1 egg, 1 fork, 1 knife; stable",
+    "00:36-00:45 wide: man with 1 mug and 1 plate; stools stable",
+    "00:45-00:51 waitress foreground: 1 mug at lower left; 2 stacks of plates on shelf; stable",
+    "00:51-00:60 empty counter shot: 3 stools, dispenser cluster; stable",
+    "00:60-01:09 wide day: man seated, 1 mug near him; stools stable",
+    "01:09-01:12 medium two-shot: 2 white mugs on counter (man's mug in front of him; second mug behind plate at waitress side, present from shot start) + 1 plate",
+    "01:12 waitress pushes second mug toward man; both mugs visible side by side, touching (01:12.4-01:12.6)",
+    "01:12.7-01:17 only 1 mug remains in man's hands; no mug carried away, set down, or occluded-then-revealed \u2014 count 2 -> 1 with no cause; waitress then removes plate (visible cause)",
+    "01:17-01:27 wide: man + waitress seated beside him; stools stable",
+    "01:27-01:35 two-shot: 2 mugs (one per person), napkin dispenser, salt/pepper shakers; stable",
+    "01:35-01:37 empty counter: 3 stools, dispenser cluster; stable",
+    "01:37-01:41 insert: 1 mug; bills placed by hand (visible cause), small stack of ~2-3 bills stable after placement",
+    "01:41-01:50 exterior through window: 1 truck, 1 man; ketchup + mustard bottles (2) stable",
+    "01:50-01:52 wide: 1 waitress at counter, 1 cup + 1 mug; at ~01:51.8 a second waitress-like figure begins to emerge behind her",
+    "01:52-01:56 wide: 2 waitress figures in identical blue uniform/apron (one at back left counter, one at right) with no entrance shown",
+    "01:56-01:58 the two figures converge and only 1 remains; no exit shown"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:12",
+      "entity": "white coffee mugs on counter (man's mug + mug pushed by waitress)",
+      "invariant_violated": "count change without visible cause (object merge)",
+      "description": "Two distinct white mugs are clearly visible from 01:09-01:12 (man's mug and a second mug the waitress slides toward him). At ~01:12.5 the two mugs touch and by ~01:12.7 only one mug remains in the man's hands; neither mug is lifted away, set aside, or hidden behind an occluder that later moves. The count drops 2 -> 1 and stays at 1 through 01:17, indicating the mugs fused into one.",
+      "severity": "moderate",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress figures in the final wide diner shot",
+      "invariant_violated": "count change without visible cause (duplication then merge)",
+      "description": "The shot begins at 01:50 with one waitress at the counter. Around 01:51.8 a second identically dressed figure emerges behind her, and from 01:52-01:56 two waitresses in the same blue uniform and white apron are visible with no entrance through any door. Around 01:56-01:57 the two figures converge and only one remains, again with no exit. The figure count goes 1 -> 2 -> 1 with no visible cause.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-01__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/router-s3/raw/clip-01__count-stability.json",
+  "frozen_source_sha256": "61c5f44454c7df22348c331d78a43baad0e1907102b2e3b2e80c73f294691284",
+  "key": "_long-scene__count-stability",
+  "parseOk": true
+}

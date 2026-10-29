@@ -1,0 +1,66 @@
+{
+  "ledger": [
+    "00:00.00 - two cubes on the table, nothing else visible: cube A (green, '2', left, gripped by the right hand) and cube B (green, '2', right, untouched)",
+    "00:00.25-00:00.75 - hand twists cube A in place; mid-rotation its whole body (top and sides) turns from green to blue and it now shows '2'",
+    "00:01.00-00:01.25 - a new blue '3' cube (C) emerges from cube A's right side under the same pinch and slots between A and B; no cube is brought in from off-frame",
+    "00:01.50-00:02.25 - row is A blue2 | C blue3 | B green2; hand lifts away, then touches B",
+    "00:02.50-00:02.75 - hand twists B in place; front face now reads '3'",
+    "00:03.00-00:03.50 - a fourth cube (D, green '3') emerges from B's right side; B shows green '2' again",
+    "00:03.75 - D, still in the hand, turns from green '3' to peach/orange '2' (all faces change color)",
+    "00:04.00-00:04.75 - a fifth cube (E) emerges blue from D's right side, settles as pale grey-blue '3'",
+    "00:05.00-00:05.75 - a sixth cube (F) emerges blue '3' from E's right side, then turns green '3' while held",
+    "00:06.00-00:06.50 - F reads green '5'; a seventh cube (G, green '3') emerges from F's right side",
+    "00:06.75-00:07.50 - G reads green '2'; an eighth cube (H, blue '3') emerges from G's right side",
+    "00:07.75 - H reads blue '6'; hand leaves frame top-right",
+    "00:08.00-00:08.75 - hand comes back and touches the peach and green cubes; nothing moves",
+    "00:09.00-00:09.75 - hand rests on A (blue2) and C (blue3); final row is 8 cubes reading 2 3 2 2 3 5 2 6, all on the table"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "cube count (cubes appear from nowhere)",
+      "invariant_violated": "continuous chain of custody / no spontaneous objects",
+      "description": "The scene starts with exactly two cubes on an open table. One hand only ever pinches the end cube of the row, yet new solid cubes keep coming out of the cube it holds: at 00:01.0, 00:03.25, 00:04.0, 00:05.0, 00:06.0 and 00:06.75. The row grows from 2 to 8 cubes. No cube enters from off-frame and none is taken from a pile or container. A visibly pinching hand could not hide six cubes, so this is impossible even if the move involved concealed palming.",
+      "severity": "severe",
+      "confidence": 0.9
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "cube A (left cube)",
+      "invariant_violated": "object identity persistence (object becomes a different object)",
+      "description": "Between 00:00.25 and 00:00.75, while the hand twists it in place, cube A's whole body (top cap area and every visible side) changes from solid green to solid blue. It stays the same cube in the same grip with no swap visible.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "cube D (4th cube)",
+      "invariant_violated": "object identity persistence (object becomes a different object)",
+      "description": "At 00:03.5 the held cube is solid green showing '3'. By 00:03.75, still in the same pinch and position, it is a solid peach/orange cube showing '2'. Its body color changed with no visible swap.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "cube F (6th cube)",
+      "invariant_violated": "object identity persistence (object becomes a different object)",
+      "description": "The held end cube appears blue showing '3' (00:05.25). By 00:05.75 it is green '3', and by 00:06.0 it reads green '5', all in the same grip and position. Its body color changed with no visible swap.",
+      "severity": "moderate",
+      "confidence": 0.65
+    }
+  ],
+  "video": "clip-12.mp4",
+  "role": "possession-tracking",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-12__possession-tracking__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

@@ -1,0 +1,65 @@
+{
+  "ledger": [
+    "00:00.00 small glass bowl (in hand): ~8+ olives, all green; glass jar: empty (0 olives); steel bowl (back): ~9 green olives; ceramic bowl (front right): ~11 green olives",
+    "00:00.50 jar: first olive at bottom appears dark/purple while only green olives are visible leaving the green-only small bowl",
+    "00:01.25 jar: ~4-5 olives (3 green + 1 dark purple) \u2014 pouring from green-only bowl",
+    "00:01.75 jar: ~14 olives, roughly half dark purple/black, half green; small bowl still shows only green olives",
+    "00:03.00 jar: ~21-22 olives \u2014 green, dark purple and slate-grey kinds; increase explained by visible pouring",
+    "00:03.00-00:04.75 jar: stable ~21-22 olives, no change while untouched; ceramic bowl stable ~11 green",
+    "00:04.50 steel bowl: ~8 green olives, no other objects visible; hand reaching into it",
+    "00:05.00 hand scoops olives from steel bowl into small glass bowl (visible removal)",
+    "00:05.25 steel bowl: ~2 green olives + ~2 brown nut/pit-like objects (brown items newly visible)",
+    "00:06.00 small bowl refilled: green olives visible only; steel bowl: ~3-4 green + brown items",
+    "00:06.75-00:07.25 small bowl now shows ~3 dark purple olives among the green ones",
+    "00:06.50-00:08.75 pour into jar (visible addition)",
+    "00:09.00-00:09.75 jar: ~35-40 olives, majority dark purple/grey; steel bowl: ~5 green olives + brown items; ceramic bowl cropped at frame edge (partially visible, not counted as change)"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:00",
+      "entity": "olives poured from small glass bowl into jar (first pour)",
+      "invariant_violated": "kind transformation without cause",
+      "description": "The small glass bowl contains only green olives (00:00-00:01.75), and only green olives are seen falling, yet dark purple/black olives appear in the jar from 00:00.50 onward; by 00:01.75 roughly half of the ~14 olives in the jar are dark purple. Green olives turn into dark olives with no visible source or mechanism.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "olives in small glass bowl (second pour)",
+      "invariant_violated": "kind transformation without cause",
+      "description": "After refilling from the steel bowl, which held only green olives, the small bowl shows only green olives at 00:06.00-00:06.50. At 00:06.75 several dark purple olives appear inside it with no visible addition.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:09",
+      "entity": "dark olives in jar after second pour",
+      "invariant_violated": "count change without visible cause",
+      "description": "Before the second pour, the jar has about 8-9 dark olives of ~22. The small bowl poured in holds mostly green olives with only ~3 dark. By 00:09.00 the jar has roughly 20+ dark purple/grey olives and is mostly dark. That gain in dark olives is far larger than the dark olives the bowl visibly held.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "contents of steel bowl (back)",
+      "invariant_violated": "count change without visible cause",
+      "description": "After the hand scoops out olives, the steel bowl holds ~2 green olives at 00:05.25. That rises to ~3-4 at 00:06.00 and ~5 at 00:09.00 with no olives added. Brown nut/pit-like objects also appear; they could have been hidden under the olives, but no olive is ever put back.",
+      "severity": "minor",
+      "confidence": 0.45
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "count-stability",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3Aa5b3cda2-3e94-4621-828b-bcf9ab165e1c%3Adelegate-task%3Aopus55-blind-261028-router__clip-09__count-stability__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

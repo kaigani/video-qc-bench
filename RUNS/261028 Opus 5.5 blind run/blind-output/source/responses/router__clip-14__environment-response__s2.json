@@ -1,0 +1,31 @@
+{
+  "ledger": [
+    "Single continuous shot (00:00-00:09.75): woman leans out of the driver window of a cream woodgrain station wagon, arms folded on the door; camera arcs and pushes in from a front three-quarter wide to a close-up.",
+    "Implied cause of airflow: the car reads as parked. In 00:00-00:02.75 it sits on the road shoulder with sharp, unblurred desert scrub and a static horizon; later the road, centre dashes and telephone poles shift only in step with the camera arc, and there is no motion blur, dust or wheel-motion cue. Nothing visible changes in the environment, such as vehicle speed or a new gust source.",
+    "Hair 00:00-00:05.0: light shoulder-length hair is mostly at rest, with only slight loose strands. This matches the calm, still scene.",
+    "Hair 00:05.25-00:09.75: the hair suddenly lifts and streams strongly back toward the car's rear and right, and stays fully wind-blown for about 4.5 s in every sampled frame. That makes it a sustained strong airflow, not a brief flicker.",
+    "Desert scrub and dry grass (roadside, 00:00-00:09.75): no visible bending or swaying in any frame, before or after the hair starts streaming. Scrub is stiffer than hair, so this is only weak corroboration.",
+    "Jacket (denim, collar and loose cuffs, 00:05.25-00:09.75): no flutter or ripple while the hair streams hard. Denim is heavy, so this is only a weak cue.",
+    "Radio antenna on the fender: stays straight and still throughout. It is a rigid whip and would not be expected to flex visibly, so it gives no evidence either way.",
+    "Earrings: small studs, stay still. Not informative.",
+    "Gravity and contact: arms rest on the door sill consistently, with no float or penetration observed."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:05",
+      "entity": "woman's hair",
+      "invariant_violated": "effect without cause / temporal consistency of airflow",
+      "description": "Within one continuous shot the hair goes from almost at rest (00:00-00:05.0) to strongly streaming backward (from about 00:05.25), and it stays that way to the end of the clip. Nothing in the scene changes to explain the strong, steady airflow: the car shows no sign of starting to move, and there is no dust, no motion blur and no new gust source. Instead the wind seems to switch on as the camera pushes into the close-up, and it is far too steady for a natural gust.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "roadside desert scrub/grass and jacket fabric vs hair",
+      "invariant_violated": "wind must affect all exposed light elements",
+      "description": "During 00:05.25-00:09.75 the hair is blown hard enough to stream fully sideways, yet the dry grass and scrub along the road show no bending, and the jacket collar and cuffs show no flutter. A wind strong enough to stream the hair that hard should visibly move the light dry grass at least somewhat. The materials differ, so this cue is weaker than the first finding.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ]
+}

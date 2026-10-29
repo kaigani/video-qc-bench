@@ -1,0 +1,34 @@
+{
+  "ledger": [
+    "Man in green/white vertical-striped shirt (only character) | 0:00-6:75: medium front shot, standing centered in front of a wooden door with framed picture, coat hook/navy coat to screen-left; slim face, dark short hair side-parted and flat with a visibly high/receding hairline at the temples; green shirt with broad white vertical stripes, white crew-neck undershirt; facing camera, talking then smirking | 7:00-10:00: turns screen-right then away from camera, walks to a door on the left (camera orbits continuously, no hard cut), seen from behind/three-quarter rear, reaching toward door panel/lock; same striped shirt and undershirt; hair now full and voluminous, swept back into a pompadour with a lower hairline | Hair volume/hairline and facial structure change abruptly during the 7:00-7:25 head turn; wardrobe consistent; body path from right-of-coat to left-of-coat is explained by visible walking during the camera move"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Man in striped shirt (hair and face)",
+      "invariant_violated": "identity consistency (hairstyle/face)",
+      "description": "Through 6.75s the man has flat, side-parted short hair with a clearly receding hairline at the temples. In the next samples (7.0s and especially 7.25s), during one continuous camera move with no cut, his hair becomes markedly fuller, with a lower hairline and a voluminous swept-back pompadour, and his face shape and features look different (longer nose, different jaw). The fuller hairstyle stays for the rest of the clip (7.5-9.75s). No action, such as touching his hair, and no elapsed time explains it, so it reads as generative identity drift during the head turn.",
+      "severity": "moderate",
+      "confidence": 0.7
+    }
+  ],
+  "video": "dialogue.mp4",
+  "role": "character-continuity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-04__character-continuity__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-04.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-04__character-continuity.json",
+  "frozen_source_sha256": "f7c87a9ce9569ca0dbbb1540a33d4af1fafe50d1f0386fc2722bed9aa038d0e8",
+  "key": "dialogue__character-continuity",
+  "parseOk": true
+}

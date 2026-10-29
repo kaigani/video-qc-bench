@@ -1,0 +1,52 @@
+{
+  "ledger": [
+    "waitress hand + rag on counter (0:10-0:18, 0:45-0:51) | palm flat on rag, rag on counter surface | same | continuous wiping strokes, rag stays under palm, no float or clip",
+    "man feet/body walking in and sitting on stool (0:20-0:26) | walking upright, alternating planted feet | seated on stool, forearms on counter | hand braces on counter edge at ~0:24 as he lowers onto stool; seat contact supported",
+    "waitress hand on coffee pot (0:24-0:31) | gripping pot handle | gripping handle while pouring | contact maintained throughout pour; stream into mug",
+    "man hand on mug during pour close-up (0:27.1-0:28) | fingers wrapped around mug | fist resting on counter left of mug | hand slides off mug over ~0.3s continuously; mug stays in place, no effect without contact",
+    "man hand on mug in medium shot (0:36-0:45) | hands cupped around mug on counter | same | stable contact",
+    "waitress hands on second mug and plate (1:09-1:17) | right hand on plate rim, left on mug | carries plate away while turning | mug passed toward man's hand with visible finger contact; plate held at rim when lifted",
+    "waitress body vs counter (1:17.6-1:26.7, single wide shot) | standing BEHIND counter wiping, apron and legs hidden by counter | SEATED on customer-side stool beside man | transitions sides of solid counter within ~0.5s with no walk-around",
+    "man + waitress hands on mugs, close two-shot (1:26.8-1:35) | both hands cupping mugs on counter | same | stable contact",
+    "two hands and bills (1:37.4-1:41) | left hand lays bills on counter under fingers | bills resting by mug, hands gone | right hand (plaid cuff) enters, fingers contact bills before they move, left hand lifts off; bills slide only while touched",
+    "man walking to truck and door (1:41-1:50) | walking, feet alternating on gravel | hand on cab door, stepping up | gait continuous; contact with door before it moves",
+    "waitress rising from customer-side stool and moving (1:50.2-1:58) | seated on stool customer side, hands on counter | standing behind counter at back bar | legs on customer side while torso sweeps behind counter; ends behind counter with no gap/route"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:20",
+      "entity": "waitress body vs diner counter",
+      "invariant_violated": "solidity / no pass-through",
+      "description": "In one continuous wide shot (cut at 1:17.6, next cut 1:26.7), the waitress stands behind the counter wiping it at ~1:20.4; by ~1:21.0 her legs and lower apron appear below the counter on the customer side and she is seated on the stool next to the man. There is no walk around the counter end; her body effectively passes through the solid counter in about half a second.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "waitress body vs diner counter",
+      "invariant_violated": "solidity / no pass-through",
+      "description": "Within the shot starting 1:50.2, the waitress rises from a customer-side stool with legs in front of the counter (visible ~1:51.5-1:52.2), then sweeps rightward and by ~1:52.7-1:53 is standing behind the counter at the back bar. Her legs stay on the customer side while her torso is over/behind the counter top, with no route around it, so she crosses through the solid counter.",
+      "severity": "severe",
+      "confidence": 0.75
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "contact-interaction-kinematics",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__contact-interaction-kinematics__s2",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s2/raw/clip-01__contact-interaction-kinematics.json",
+  "frozen_source_sha256": "c471323b75e598dbf4dca955bfb8b5082d38dc471811f4c053fb7ed95e6ecc0b",
+  "key": "_long-scene__contact-interaction-kinematics",
+  "parseOk": true
+}

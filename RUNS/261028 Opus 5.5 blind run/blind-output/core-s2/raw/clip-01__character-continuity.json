@@ -1,0 +1,55 @@
+{
+  "ledger": [
+    "Waitress (older woman, grey-brown hair in low bun, light-blue short-sleeve polo, white bib apron, reading glasses hanging at collar) | 00:10-00:18 alone behind counter wiping near coffee machine; 00:19-00:27 behind counter right side, pours coffee for man | 01:46-01:50 at window booth watching man leave; 01:50 seated on counter stool, 01:51 stands and wipes counter; 01:52-01:57 TWO identically dressed waitresses visible at once | Wardrobe/face consistent across shots; duplicate instance appears ~01:52; seated beside man on his LEFT in wide (01:21-01:26) but on his RIGHT in close-up (01:26.79+); jumps from window booth to counter stool across 01:50.2 cut",
+    "Trucker (middle-aged man, grey-streaked dark hair, stubble, brown canvas work jacket with dark collar, plaid flannel shirt, jeans) | 00:19-00:22 enters from back of diner and walks along customer side; 00:24-00:27 sits on near-end stool facing screen-right toward waitress | 00:36-00:44 shown mid-counter facing camera with plate; 00:45-00:50 background at counter; 01:00-01:35 on near-end stool facing counter, waitress later sits beside him; 01:41-01:46 walks outside to truck and reaches cab door | Identity/wardrobe consistent; unexplained re-placement/facing change around 00:36; left/right relation with waitress flips at 01:26.79",
+    "Relative placement waitress vs man | 00:24-00:27 waitress behind counter facing man across it; 01:09-01:17 same across-counter relation | 01:21-01:26 wide: waitress seated on stool beyond the man (deeper in room = his left side) | 01:26.79-01:35 close-up: waitress appears on the man's right side, both facing the counter"
+  ],
+  "findings": [
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress",
+      "invariant_violated": "single identity / no duplication",
+      "description": "In the sunset wide shot the waitress was alone at the counter (01:50-01:51). From ~01:52 to ~01:56 two women with identical appearance (light-blue polo, white apron, hair bun) are on screen at once: one walks behind the counter in the foreground near the coffee machine while a second one materialises at the far end of the counter wiping it. No second employee was established anywhere in the video; the character is duplicated, and one copy later vanishes (~01:57).",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "01:26",
+      "entity": "Waitress and man seated together",
+      "invariant_violated": "relative left/right placement",
+      "description": "In the wide shot (01:21-01:26.75) the waitress sits on the stool beyond the man, deeper into the room, i.e. on his left as both face the counter. At the cut to the close two-shot (01:26.79) both still face the counter with the windows behind them, but the waitress is now on the man's right side (screen-left, further from camera while he is nearer). Handedness of their seating arrangement swapped with no movement.",
+      "severity": "moderate",
+      "confidence": 0.55
+    },
+    {
+      "timestamp": "00:36",
+      "entity": "Man (trucker)",
+      "invariant_violated": "placement/facing between shots",
+      "description": "At 00:27 he sits on the near-end stool (close to camera, lower left of frame) facing screen-right toward the waitress across the counter. After a ~4 s food insert, the same wide angle at 00:36 shows him much further along the counter at its bend, turned to face the camera with the counter/plate between him and the lens, and the waitress gone. At 01:00 in a matching wide he is back on the near-end stool facing right. The reposition and 90-degree change of facing are never shown and contradict his adjacent placements.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "01:50",
+      "entity": "Waitress",
+      "invariant_violated": "placement across cut",
+      "description": "Up to 01:50.167 she is seated at a window booth (booth back and condiment bottles on the window table beside her) watching the truck. At 01:50.208, with no elapsed time, she is seated on a counter stool in the middle of the room with a mug in front of her, far from the windows.",
+      "severity": "minor",
+      "confidence": 0.4
+    }
+  ],
+  "video": "clip-01.mp4",
+  "role": "character-continuity",
+  "sample": 2,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A9c112d0c-c7fe-4c11-9ac6-fcdd09c3a5e5%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__character-continuity__s2",
+  "parse_status": "valid",
+  "error_status": null
+}

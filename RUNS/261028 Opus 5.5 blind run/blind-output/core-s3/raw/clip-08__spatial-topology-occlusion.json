@@ -1,0 +1,27 @@
+{
+  "ledger": [
+    "camera/shot | single continuous handheld shot, high vantage at top of an outdoor stair looking down-right past a phone held in foreground | pushes in on phone (~3s-9s), then at 9.25-9.75s phone drops out of frame and camera tilts down the stairs | no cuts; continuous drift and push-in",
+    "cream block wall | frame-left edge, running down alongside the stairs | still frame-left in final stair-down view (9.75s) | consistent left-side position throughout",
+    "stone stairs | lower-left, between wall and railing, descending away from camera | centered in final tilt-down view, still between wall (left) and railing (right) | layout consistent with opening map",
+    "dark metal railing (curved handrail + vertical balusters) | runs diagonally across frame right of the stairs, separating stairs from planter/plaza | still right of stairs at 9.75s, terminating at a pale end post near the lower landing | stays behind phone and hands throughout; bars keep consistent spacing as camera moves",
+    "planter with green shrubs | below/beyond railing, frame-right | still beyond railing at frame-right in final view | consistent",
+    "paved plaza/lower landing | beyond railing at top of frame where walker travels | visible as the landing at the bottom of the stairs in final tilt-down view | geometry compatible between opening and closing views",
+    "walker (blue top, red bag) | beyond railing on paving, top-right, partly behind railing top | walks away up-frame and is lost behind phone/top edge ~3.0s | railing and phone correctly occlude her; no pass-through of bars observed",
+    "phone + hands | foreground, nearest surface, occluding railing and background | phone exits frame bottom at 9.5s | hands/thumb always in front of phone body and background; occlusion edges smooth"
+  ],
+  "findings": [],
+  "video": "clip-08.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-08__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

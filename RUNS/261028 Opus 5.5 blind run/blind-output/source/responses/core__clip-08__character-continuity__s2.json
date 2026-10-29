@@ -1,0 +1,17 @@
+{
+  "ledger": [
+    "Woman walking away (background) | long dark hair, navy/blue short-sleeve top, blue jeans, dark shoes, large red tote/bag with yellow logo carried in her right hand (screen-left side), walking away from camera across paved plaza | same hair/top/jeans, still walking away toward far edge of plaza, now small in frame and partly behind phone at ~03:00; no red bag visible from ~00:02.4 onward | bag stays on her right/screen-left side 00:00-00:02.3 (shrinking with distance, occluded progressively by phone edge); from ~00:02.4-00:03.0 her right hand swings visibly empty above the phone edge with no red bag/handles visible; she exits view behind phone ~03:00-03:25 as camera tilts toward phone",
+    "Phone holder (foreground, hands only) | dark-skinned hands, left thumb on left edge, right thumb/fingers on right edge holding dark-cased phone showing 'A742' screen | same hands and grip; right thumb taps/swipes screen 06:25-08:75; at 09:25-09:75 phone lowered/tilted down out of frame revealing staircase | grip and hand identity consistent throughout; continuous single shot with camera rack focus/drift, no hard cuts observed",
+    "Relative positions | woman always beyond railing, upper/center-right of frame, foreground hands below/in front | woman leaves visible area before 03:25 | no left/right swaps between the two characters"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:02",
+      "entity": "Woman walking away - red tote bag in her right hand",
+      "invariant_violated": "accessory persistence",
+      "description": "The large red bag she carries in her right hand from 00:00 to ~00:02.25 (handles gripped, bag body hanging from hand level) is no longer visible from ~00:02.4 onward: her right hand swings open and empty above the phone edge with no handles or red bag body attached, even though the bag top previously sat right at her hand. No set-down or hand-off action is seen. The foreground phone partially occludes the area below her hand, so occlusion may partly explain it.",
+      "severity": "moderate",
+      "confidence": 0.4
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "ledger": [
+    "Man (single on-screen character, face never shown) | 00:00 navy button-up overshirt with sleeves rolled to forearm over white crew-neck tee, khaki/tan trousers; stands behind butcher-block island facing camera, torso centered-left, hands above glass jar pouring olives from small glass cup; wrists mostly out of frame at top | 09:75 same navy overshirt rolled sleeves, white tee, same position behind island facing camera, hands above jar holding small glass cup | 04:00-05:00 hands leave jar, frame-right arm reaches to steel bowl, silver metal band visible on that wrist (wide link style at 04:50-05:00); 05:50-06:00 camera reframes/pushes in, man remains in same place behind jar; 06:25-07:50 silver band on frame-right wrist reads as thinner chain-link bracelet; no hard cuts observed, framing changes appear continuous",
+    "Hands/arms | hairy forearms, light skin, frame-left hand cups/feeds, frame-right hand tilts cup | same throughout | pouring action continuous across samples; no skipped or restarted gestures beyond the reach to the bowl at 04:00-05:25"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:06",
+      "entity": "Man - wrist accessory on frame-right wrist",
+      "invariant_violated": "accessory identity consistency",
+      "description": "At 04:50-05:00 the frame-right wrist wears a wide, chunky silver link watch-style band; from 06:25-07:25 the same wrist shows what reads as a thinner silver chain-link bracelet. The change is not explained by any on-screen action, though resolution/motion blur may account for the apparent difference.",
+      "severity": "minor",
+      "confidence": 0.3
+    }
+  ],
+  "video": "clip-09.mp4",
+  "role": "character-continuity",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-09__character-continuity__s3",
+  "parse_status": "valid",
+  "error_status": null
+}

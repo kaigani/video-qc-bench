@@ -1,0 +1,35 @@
+{
+  "ledger": [
+    "Man (only character) | short dark side-parted hair, clean-shaven, slim build, green shirt with wide white vertical stripes over white crew-neck undershirt; standing center frame in front of wooden door with navy coat on hook to his right-of-frame-left, facing camera/slightly screen-right while talking (00:00-06:75) | seen from behind/three-quarter profile at screen-left door, facing away/left, reaching hand toward door panel (09:00-09:75); same striped shirt with striped sleeves | 06:75-07:50 turns to his right (screen-left) and walks toward the left door with camera following continuously; at ~07:00-07:25 hair volume and facial structure shift noticeably (flatter side part becomes tall swept pompadour, jaw/face shape changes) during the turn",
+    "Relative placement | single character; no other people present | single character | n/a"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:07",
+      "entity": "Man in green/white striped shirt",
+      "invariant_violated": "identity consistency (hair/face)",
+      "description": "During the continuous head turn at ~07.0-07.25s the character's hairstyle morphs from a neat, relatively flat side part (seen 00:00-06:75) into a markedly taller, swept-back pompadour, and his facial structure (jaw width, nose/brow shape) changes so he reads as a slightly different person; no cut or hand movement to the hair explains the change, and the altered look persists in the following profile shots.",
+      "severity": "moderate",
+      "confidence": 0.5
+    }
+  ],
+  "video": "dialogue.mp4",
+  "role": "character-continuity",
+  "sample": 1,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A59af73e2-9333-48fa-af77-6dc18ec22ab1%3Adelegate-task%3Aopus55-blind-261028-core__clip-04__character-continuity__s1",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-04.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s1/raw/clip-04__character-continuity.json",
+  "frozen_source_sha256": "974729f5f72a0c5e44bb3549da93e29aa0301d9313c265da9550d9c6c38e70ce",
+  "key": "dialogue__character-continuity",
+  "parseOk": true
+}

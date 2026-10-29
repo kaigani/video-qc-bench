@@ -1,0 +1,80 @@
+{
+  "ledger": [
+    "Group: numbered toy cubes (same kind, colored, digit faces, peg on top). Hand enters from top/right throughout and never leaves frame or fetches anything from off-screen.",
+    "00:00.000 - 2 cubes: green '2' (held, left) + green '2' (right, untouched).",
+    "00:00.500-00:00.750 - still 2 cubes; held left cube turns from green to blue while being rotated in place.",
+    "00:01.000-00:01.250 - 3 cubes: blue '2', new blue '3' emerging beside it under the same fingers, green '2'. No cube brought in; count 2->3 unexplained.",
+    "00:01.500-00:02.250 - 3 cubes stable: blue 2, blue 3, green 2.",
+    "00:02.500-00:02.750 - 3 cubes; green cube rotated to show '3' (plausible face turn).",
+    "00:03.000-00:03.250 - 4 cubes: green cube shows '2' again and a second green '3' cube splits off its right side under the fingers. Count 3->4 unexplained.",
+    "00:03.500 - 4 cubes: blue 2, blue 3, green 2, green 3 (held).",
+    "00:03.750 - 4 cubes; held 4th cube now beige/orange '2' (was green '3').",
+    "00:04.000-00:04.250 - 5 cubes: 5th blurred blue cube appears at right edge of held orange cube. Count 4->5 unexplained.",
+    "00:04.500-00:04.750 - 5 cubes: blue 2, blue 3, green 2, orange 2, light-grey/blue 3.",
+    "00:05.000-00:05.250 - 6 cubes: new blue '3' cube emerges from the right of the 5th cube. Count 5->6 unexplained.",
+    "00:05.500-00:05.750 - 6 cubes; held 6th cube shifts blue -> teal -> green '3'.",
+    "00:05.900-00:06.250 - 7 cubes: 6th cube becomes green '5' and a new green cube splits off its right side. Count 6->7 unexplained.",
+    "00:06.500 - 7 cubes: ... grey 3, green 5, green 3 (held).",
+    "00:06.750-00:07.250 - 8 cubes: 7th now green '2', new blue '3' cube appears to its right. Count 7->8 unexplained.",
+    "00:07.500-00:07.750 - 8 cubes; 8th cube face changes '3' -> '6' under the finger.",
+    "00:08.000-00:09.750 - 8 cubes stable: blue 2, blue 3, green 2, orange 2, grey 3, green 5, green 2, blue 6. Hand touches cubes 4, 2, 1-2 with no count change."
+  ],
+  "findings": [
+    {
+      "timestamp": "00:01",
+      "entity": "numbered cubes (left cube held by hand)",
+      "invariant_violated": "count change without visible cause",
+      "description": "Only one cube is in the hand at 00:00.75 (2 cubes total). By 00:01.00 a second blue cube ('3') is present beside the held blue '2', making 3 cubes. The hand never leaves frame or brings a cube in; the new cube emerges from the held one.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:03",
+      "entity": "numbered cubes (green third cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "The held green cube splits into two: at 00:03.0 the green cube shows '2' with a blurred '3' bulging out its right side, and by 00:03.25 there are two separate green cubes (2 and 3). Count 3->4 with no cube added.",
+      "severity": "severe",
+      "confidence": 0.85
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "numbered cubes (fifth cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "Between 00:03.75 and 00:04.0 a fifth blurred blue cube appears at the right of the held orange '2' cube; count 4->5 with no visible source.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:05",
+      "entity": "numbered cubes (sixth cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "Between 00:04.75 (5 cubes, hand resting on grey '3') and 00:05.0-05.25 a new blue '3' cube emerges from the right of the grey cube; count 5->6 without any cube being brought in.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "numbered cubes (seventh cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "Around 00:05.9 the held green '3' cube turns into green '5' and a new green cube splits off its right side; 6->7 cubes by 00:06.0-06.25 with no added cube.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "numbered cubes (eighth cube)",
+      "invariant_violated": "count change without visible cause",
+      "description": "At 00:06.5 there are 7 cubes (last one green '3' held); at 00:06.75 the 7th shows green '2' and an 8th blue '3' cube is present to its right. Count 7->8 with nothing brought in.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "held cubes (colour identity)",
+      "invariant_violated": "object identity/appearance transformation",
+      "description": "Held cubes change body colour while merely being rotated: first cube green->blue (00:00.25-00:00.75), 4th cube green->orange (00:03.5-03.75), 6th cube blue->teal->green (00:05.25-05.75). Cubes appear single-coloured elsewhere, so the colour swaps have no mechanism.",
+      "severity": "moderate",
+      "confidence": 0.6
+    }
+  ]
+}

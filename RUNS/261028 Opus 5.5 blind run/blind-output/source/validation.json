@@ -1,0 +1,120 @@
+{
+  "audited_at": "2026-10-29T05:57:45.071318+00:00",
+  "scope": "Structural and provenance checks only; no scoring, semantic adjudication, deduplication or prediction amendment.",
+  "passed": true,
+  "invocations": 482,
+  "core": 252,
+  "feature": 14,
+  "router": 216,
+  "core_per_sample": {
+    "1": 84,
+    "2": 84,
+    "3": 84
+  },
+  "router_per_sample": {
+    "1": 72,
+    "2": 72,
+    "3": 72
+  },
+  "triggered_roles_per_clip": {
+    "clip-01": 9,
+    "clip-02": 7,
+    "clip-03": 4,
+    "clip-04": 6,
+    "clip-05": 3,
+    "clip-06": 7,
+    "clip-07": 5,
+    "clip-08": 5,
+    "clip-09": 5,
+    "clip-10": 3,
+    "clip-11": 3,
+    "clip-12": 4,
+    "clip-13": 6,
+    "clip-14": 5
+  },
+  "audio_checks_unassessed": 42,
+  "inventory_normalization_changed_payloads": [],
+  "checks": {
+    "protocol_unchanged": 1,
+    "router_unchanged": 1,
+    "unique_key": 1,
+    "unique_taskId": 1,
+    "unique_prompt_path": 1,
+    "unique_response_path": 1,
+    "unique_raw_path": 1,
+    "input_video_unchanged": 14,
+    "frozen_inventory_unchanged": 14,
+    "deterministic_routing": 14,
+    "exact_architecture_coverage": 1,
+    "total_invocations": 1,
+    "completed_terminal_status": 482,
+    "requested_model_options": 482,
+    "final_provider_receipt": 482,
+    "unmodified_payload": 482,
+    "prediction_hash_matches_manifest": 482,
+    "raw_metadata": 482,
+    "exact_role_prompt": 482,
+    "inventory_booleans": 14,
+    "inventory_people_count": 14,
+    "inventory_legible_text_present": 14,
+    "inventory_camera_motion": 14,
+    "inventory_setting": 14,
+    "inventory_entities": 14,
+    "audio_fail_open_routing": 14,
+    "ledger_schema": 468,
+    "findings_list": 468,
+    "finding_text_fields": 780,
+    "timestamp_mm_ss": 780,
+    "severity_enum": 780,
+    "confidence_range": 780,
+    "audio_limitation_recorded": 42
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-07__causal-temporal-sequence__s1:finding-1",
+      "value": "01:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-09__baseline-generalist__s1:finding-1",
+      "value": "01:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-09__object-persistence-state__s1:finding-2",
+      "value": "06:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-09__object-persistence-state__s1:finding-3",
+      "value": "09:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-06__baseline-generalist__s2:finding-1",
+      "value": "02:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-09__baseline-generalist__s2:finding-4",
+      "value": "04:75"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-12__causal-temporal-sequence__s2:finding-2",
+      "value": "04:95"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "core__clip-10__causal-temporal-sequence__s3:finding-0",
+      "value": "01:90"
+    },
+    {
+      "check": "timestamp_nonstandard",
+      "context": "router__clip-08__environment-response__s2:finding-1",
+      "value": "04:75"
+    }
+  ]
+}

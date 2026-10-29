@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "woman | short highlighted bob, teal-navy 3/4-sleeve top, drop earrings, in light-oak kitchen | same outfit, walking away into a dark-wood kitchen | walks kitchen -> hallway -> bedroom -> back out through a doorway; hair reads as loose bob in side views but pinned/tucked updo in rear views",
+    "start kitchen | light oak cabinets, multicolor brick-tile backsplash, countertop microwave with round loaf on top, granite counter | not revisited | -",
+    "hallway artwork | framed blue-flower/figure print with small orange framed picture to its right, on hall wall outside bedroom | same flower print reappears on bedroom wall at 00:07 beside a doorway, without the small orange picture | unexplained duplication/relocation",
+    "bedroom | chandelier, bed with nightstand+lamp on left, colorful painting above bed, windows, dresser, chairs at foot of bed | layout shifts during pan (nightstand/lamp missing at 00:06, lamp appears right of bed) | room geometry unstable",
+    "end kitchen | dark cherry cabinets, over-range microwave, stainless gas range, side window | - | appears through bedroom doorway; does not match start kitchen"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:09",
+      "entity": "kitchen / house layout",
+      "invariant_violated": "spatial continuity",
+      "description": "The woman leaves the bedroom through a doorway and enters a kitchen that is completely different from the opening kitchen: dark cherry cabinets with an over-the-range microwave and stainless gas range, versus the light-oak cabinets, brick-tile backsplash and countertop microwave seen at 00:00-00:01. In a single continuous take the geometry of the house does not hold together.",
+      "severity": "severe",
+      "confidence": 0.75
+    },
+    {
+      "timestamp": "00:07",
+      "entity": "framed blue-flower print",
+      "invariant_violated": "object duplication/relocation",
+      "description": "The distinctive blue-flower print that hung on the hallway wall (with a small orange picture beside it, 00:01.5-00:04.5) reappears on the bedroom wall next to a different doorway at 00:07.0-00:08.5, without its neighbouring small picture and alongside a new red/green abstract print. The same artwork appears to be in two places, or the room has morphed.",
+      "severity": "moderate",
+      "confidence": 0.6
+    },
+    {
+      "timestamp": "00:06",
+      "entity": "bedroom furniture layout",
+      "invariant_violated": "scene layout consistency",
+      "description": "At 00:05-00:05.5 the bed has a nightstand with a lit lamp on its left and a window on the left wall. As the camera pans left at 00:06-00:06.25, the nightstand and lamp are gone from that side and the bed sits beside the window; a lamp then appears to the right of the bed below the painting, and a small side table with a photo appears that was not there before. The furniture rearranges as the camera moves.",
+      "severity": "moderate",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "woman's hairstyle",
+      "invariant_violated": "character appearance consistency",
+      "description": "In side and three-quarter views (00:00, 00:02.25-00:03.25, 00:05.25-00:06.25) the hair is a loose short layered bob. In rear views (00:00.75-00:01.25, 00:04-00:04.75, 00:07-00:09.75) it looks like a pinned, twisted low updo with curled tendrils. The hairstyle changes with camera angle.",
+      "severity": "moderate",
+      "confidence": 0.45
+    },
+    {
+      "timestamp": "00:00",
+      "entity": "loaf/dish on top of microwave",
+      "invariant_violated": "object permanence",
+      "description": "A round loaf/dish sits on top of the countertop microwave at 00:00.0, is missing at 00:00.25 (only a small indistinct shape), then is back at 00:00.5-00:00.75.",
+      "severity": "minor",
+      "confidence": 0.35
+    },
+    {
+      "timestamp": "00:04",
+      "entity": "bedroom painting above bed",
+      "invariant_violated": "rendering artifact",
+      "description": "A smeared, garbled rectangular panel hangs over the lower part of the colourful painting above the bed (00:04.5-00:05.5). It reads as a generation artifact, not a real object.",
+      "severity": "minor",
+      "confidence": 0.35
+    }
+  ]
+}

@@ -40,6 +40,7 @@ const LABELS = {
   nemotron35: 'Nemotron 3.5 Super VL',
   astra: 'GPT-6 Astra (frame-assisted agent)',
   argon: 'Gemini 4 Argon',
+  opus55: 'Claude Opus 5.5 (frame-assisted agent)',
 };
 
 // 2.0 protocol (v1 harness × N samples + feature router × N samples). Each run needs a
@@ -49,6 +50,11 @@ const PROTOCOL_2_0 = {
     v1: ['2026-10-27_gemini-4-argon', '2026-10-27_gemini-4-argon_v1-s2', '2026-10-27_gemini-4-argon_v1-s3'],
     router: ['2026-10-27_gemini-4-argon_router-s1', '2026-10-27_gemini-4-argon_router-s2', '2026-10-27_gemini-4-argon_router-s3'],
     note: 'Core ×3 + router ×3 on Google AI Studio flex tier (half price), reasoning_effort high. Native video and audio.',
+  },
+  opus55: {
+    v1: ['2026-10-28_claude-opus-5.5-blind_core-s1', '2026-10-28_claude-opus-5.5-blind_core-s2', '2026-10-28_claude-opus-5.5-blind_core-s3'],
+    router: ['2026-10-28_claude-opus-5.5-blind_router-s1', '2026-10-28_claude-opus-5.5-blind_router-s2', '2026-10-28_claude-opus-5.5-blind_router-s3'],
+    note: 'Blind agent run: core ×3 + router ×3, effort high, one fresh delegated Opus 5.5 task per call. Same extracted frames and contact sheets as Astra (4 fps; 1 fps + shot boundaries on the long clip); audio unassessed.',
   },
   astra: {
     v1: ['2026-10-27_gpt-6-astra-blind_core'],

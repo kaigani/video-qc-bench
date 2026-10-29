@@ -1,0 +1,59 @@
+{
+  "ledger": [
+    "Diner exterior (00:00-00:10) | single-storey box building, glazed front with central glass door, wrap-around windows on right side; semi tractor parked off the building's left corner, cab facing right toward building | same framing at 00:10.167 | static locked shot; layout stable",
+    "Interior close angle on pass-through (00:10-00:18, 00:51-01:00, 01:35-01:37) | left: window strip on left edge; center: kitchen pass-through with clock above-right; right of pass-through: back door, then coffee machines; counter runs diagonally from left-center to right foreground; three stools at lower left | identical layout on every return to this angle | consistent",
+    "Interior wide master from front end (00:18.7-00:44.9, 00:59.9-01:09, 01:17.6-01:26.7, 01:50-01:58) | left wall: windows over booth row; back wall: window with OPEN sign at left, pass-through center, clock, doorway; right wall: coffee machines, microwave/radio cabinet; counter curving from back-center to right foreground with stools on its LEFT (customer) side, worker aisle on its RIGHT | same in all instances | architecture consistent across all wide shots",
+    "Reverse angle from behind back counter (00:44.9-00:51.3) | foreground back counter with plate shelf, waitress; background: windows/booths on camera-right, glass front door with EXIT sign and fridge center, stools to right of a counter segment | consistent with master mirrored (windows switch to right when looking toward front) | OK",
+    "Medium two-shot over counter (01:09-01:17.5) | man foreground-left on stool side, waitress behind counter right, OPEN-sign window left of pass-through behind man, coffee machine right | consistent with master",
+    "Close two-shot of seated pair facing camera (01:26.8-01:35.2) | waitress camera-left, man camera-right, backed by booth row + sunset windows, refrigerated case camera-left | stable within shot | compare with master ordering (see findings)",
+    "Man (customer) | enters from front/left aisle 00:20, walks along stools, sits on stool on customer side with back to master camera 00:24-00:27 | reappears 00:36.4 facing camera with torso BEHIND counter top but legs in front of counter apron; later 00:59.9+ back on customer-side stool | exits to parking lot 01:41 walking from window to truck",
+    "Waitress | behind counter (worker side) 00:10-00:27, 00:45-00:51, 01:00-01:17; seated on customer-side stool next to man 01:21-01:26; at booth window 01:46-01:50; on customer-side stool 01:50-01:51 | crosses to worker side at ~01:52 | crossing passes through solid counter (see findings)",
+    "Counter (solid, continuous apron, no visible gate/flap in the stool-side span) | occludes lower bodies of anyone on the worker side | used as depth reference for all occlusion checks",
+    "Truck through window (01:41-01:50) | parked parallel outside window, cab facing right; man walks from left foreground away from camera toward cab, occluded correctly by window frame and overlaid by glass reflection | no depth errors in walk-out"
+  ],
+  "findings": [
+    {
+      "timestamp": "00:36",
+      "entity": "Man seated at counter (master wide shot)",
+      "invariant_violated": "depth ordering / impossible body geometry vs counter",
+      "description": "After the cut at 00:36.458 the man faces the camera with his torso, hands, mug and plate on the far (worker) side of the counter top, yet his jeans-clad legs are rendered in front of the counter's front apron on the stool/customer side. A solid counter cannot sit between his torso and his legs. This also contradicts 00:24-00:27, where in the same master angle he sat on a customer-side stool with his back to camera; the reverse at 00:45 likewise places him on the worker side of a counter segment. Persists through 00:44.9.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:52",
+      "entity": "Waitress crossing from stool side to worker side of counter",
+      "invariant_violated": "occlusion / passing through solid geometry",
+      "description": "At ~01:51.5 the waitress stands on the customer side among the stools leaning on the counter; between ~01:52.0 and 01:52.5 she moves straight through the counter: her torso is above/behind the counter top while one leg is still rendered in front of the counter apron, and by 01:53 she is fully in the worker aisle with her back to camera. There is no gap or flap in that stretch of counter and the camera never cuts, so she passes through solid geometry.",
+      "severity": "severe",
+      "confidence": 0.8
+    },
+    {
+      "timestamp": "01:26",
+      "entity": "Seated man and waitress, left/right ordering across the cut",
+      "invariant_violated": "viewpoint consistency / screen-side ordering",
+      "description": "In the master at 01:21-01:26.7 the waitress sits on the far side of the man (deeper in the room, toward the back wall and pass-through), i.e. on his left as both face the counter. In the reverse close two-shot from behind the counter at 01:26.792 she sits on his right (camera-left), with the refrigerated case (located near the front of the diner in the 00:45 reverse) also camera-left, which puts her on the front side. Their ordering is mirrored relative to the established layout.",
+      "severity": "moderate",
+      "confidence": 0.55
+    }
+  ],
+  "video": "_long-scene.mp4",
+  "role": "spatial-topology-occlusion",
+  "sample": 3,
+  "model": "claude-opus-5-5",
+  "options": {
+    "effort": "high",
+    "fastMode": false
+  },
+  "providerInstanceId": "claudeAgent",
+  "actual_input_modality": "timestamped JPEG frames viewed with the Read tool, grouped six per contact sheet; original video available for denser extraction",
+  "audio_assessed": false,
+  "taskId": "node:delegated-task:command%3Amcp%3A649ac82b-14ef-436f-aa86-747bae64f3d6%3Adelegate-task%3Aopus55-blind-261028-core__clip-01__spatial-topology-occlusion__s3",
+  "parse_status": "valid",
+  "error_status": null,
+  "blind_video": "clip-01.mp4",
+  "frozen_source": "RUNS/261028 Opus 5.5 blind run/blind-output/core-s3/raw/clip-01__spatial-topology-occlusion.json",
+  "frozen_source_sha256": "8fdfac24972f6f2497bb202db4cfbb55774855c5cd774d066cdb8d957f9b3f46",
+  "key": "_long-scene__spatial-topology-occlusion",
+  "parseOk": true
+}
